@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Momentum — paper-trading dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Momentum <span class="badge paper">PAPER</span></h1>
+    <p class="sub">News + momentum theme-rotation bot. Read-only. Runs every 15 minutes.</p>
+    <p class="sub" id="meta">Loading…</p>
+  </header>
+
+  <main>
+    <section id="account-section" class="card">
+      <h2>Account</h2>
+      <div id="account" class="kv-grid"></div>
+    </section>
+
+    <section id="themes-section" class="card">
+      <h2>Theme scores</h2>
+      <p class="hint">Score = 40% momentum + 30% sentiment + 20% volume + 10% policy − volatility penalty. Confidence scales final allocation.</p>
+      <div id="themes" class="theme-grid"></div>
+    </section>
+
+    <section id="positions-section" class="card">
+      <h2>Positions</h2>
+      <table id="positions"><thead><tr><th>Symbol</th><th>Qty</th><th>Avg entry</th><th>Last</th><th>Mkt value</th><th>P/L</th><th>Weight</th></tr></thead><tbody></tbody></table>
+    </section>
+
+    <section id="decisions-section" class="card">
+      <h2>Decisions (this cycle)</h2>
+      <table id="decisions"><thead><tr><th>Action</th><th>Symbol</th><th>Theme</th><th>Δ$</th><th>Reason</th><th>Factors</th></tr></thead><tbody></tbody></table>
+    </section>
+
+    <section id="notes-section" class="card hidden">
+      <h2>Notes</h2>
+      <ul id="notes"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Source: <a href="https://github.com/chewythechoochoo/Momentum">github.com/chewythechoochoo/Momentum</a>.
+      No real-money trading. No financial advice. For research and education only.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
