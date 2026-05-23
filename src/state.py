@@ -11,16 +11,18 @@ from .config import SETTINGS
 
 
 _DEFAULT_STATE: dict[str, Any] = {
-    "schema_version": 1,
+    "schema_version": 2,
     "last_run_iso": None,
     "last_success_iso": None,
     "cycle_count": 0,
     "consecutive_errors": 0,
     "equity_high_water": None,
-    "decision_log": [],   # ring buffer of last 200 decisions
+    "decision_log": [],     # ring buffer of last 200 decisions
+    "equity_history": [],   # ring buffer of {"t": iso_utc, "v": equity}
 }
 
 _MAX_DECISION_LOG = 200
+_MAX_EQUITY_HISTORY = 2000
 
 
 def load_state() -> dict[str, Any]:
@@ -70,3 +72,16 @@ def mark_run_success(state: dict[str, Any], equity: float | None = None) -> None
 
 def mark_run_error(state: dict[str, Any]) -> None:
     state["consecutive_errors"] = int(state.get("consecutive_errors", 0)) + 1
+
+
+def append_equity(state: dict[str, Any], equity: float | None) -> None:
+    """Append (now_utc, equity) to equity_history, trimming to the ring-buffer cap."""
+    if equity is None or equity <= 0:
+        return
+    hist = state.setdefault("equity_history", [])
+    hist.append({
+        "t": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "v": round(float(equity), 2),
+    })
+    if len(hist) > _MAX_EQUITY_HISTORY:
+        del hist[: len(hist) - _MAX_EQUITY_HISTORY]

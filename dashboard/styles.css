@@ -116,6 +116,51 @@ button { font: inherit; color: inherit; }
 .highlight.up   .h-pill { background: rgba(21,153,77,0.10); color: var(--green); }
 .highlight.down .h-pill { background: rgba(210,48,48,0.10); color: var(--red); }
 
+/* ---------- equity pane (hero line chart) ---------- */
+.equity-pane {
+  position: relative;
+  padding: 18px 28px 26px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg);
+}
+.equity-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 10px;
+}
+.equity-header h2 {
+  margin: 0; font-size: 11px; font-weight: 600;
+  letter-spacing: 0.18em; color: var(--ink);
+}
+.equity-header h2 .muted {
+  font-weight: 400; color: var(--faint); letter-spacing: 0.12em;
+  margin-left: 12px;
+}
+.equity-chart { width: 100%; height: 340px; }
+.equity-chart svg { width: 100%; height: 100%; display: block; }
+.equity-empty {
+  height: 320px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; letter-spacing: 0.2em; color: var(--muted);
+  border: 1px dashed var(--hair);
+}
+.eq-grid-line { stroke: #ececec; stroke-width: 0.5; }
+.eq-grid-zero { stroke: #c8c8c8; stroke-width: 0.5; }
+.eq-x-tick { stroke: #f3f3f3; stroke-width: 0.5; }
+.eq-y-label, .eq-x-label {
+  font-family: var(--mono); font-size: 10px; fill: var(--ink);
+}
+.eq-x-label { fill: var(--muted); letter-spacing: 0.08em; }
+.eq-baseline { stroke: #bdbdbd; stroke-width: 1; stroke-dasharray: 5 4; }
+.eq-baseline-label { font-family: var(--mono); font-size: 9px; fill: var(--faint); letter-spacing: 0.12em; }
+.eq-line { fill: none; stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; }
+.eq-pill { fill-opacity: 1; }
+.eq-pill-text { fill: white; font-family: var(--mono); font-size: 11px; font-weight: 600; }
+.eq-pill-connector { stroke-width: 1.3; }
+.eq-watermark {
+  font-family: var(--serif); font-style: italic;
+  font-size: 16px; fill: #d8d8d8;
+}
+
 /* ---------- main split ---------- */
 main {
   display: grid;

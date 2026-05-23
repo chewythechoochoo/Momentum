@@ -36,8 +36,9 @@ const titleize = (k) => (k || "").replace(/_/g, " ").toUpperCase();
 const state = {
   data: null,
   tab: "decisions",
-  mode: "score",      // score | weight
+  mode: "score",         // score | weight
   actionFilter: "ALL",
+  equityRange: "all",    // all | 72h | 24h
 };
 
 async function load() {
@@ -57,6 +58,7 @@ function renderAll() {
   renderMeta();
   renderTicker();
   renderHighlight();
+  renderEquityChart();
   renderChart();
   renderFeed();
 }
@@ -120,6 +122,145 @@ function renderHighlight() {
       <span class="h-pill">TARGET ${fmtPct(bot.weight)} · ${(bot.band || "").toUpperCase()}</span>
     </div>
   `;
+}
+
+/* ---------- equity line chart (SVG, vanilla) ---------- */
+const EQUITY_COLOR = "#7B5CFF";
+
+function renderEquityChart() {
+  const root = $("#equity-chart");
+  const meta = $("#equity-meta");
+  const raw = state.data.equity_history || [];
+  const all = raw
+    .map(h => ({ t: new Date(h.t), v: Number(h.v) }))
+    .filter(p => !isNaN(p.t) && !isNaN(p.v))
+    .sort((a, b) => a.t - b.t);
+
+  let points = all;
+  if (state.equityRange === "72h" || state.equityRange === "24h") {
+    const hrs = state.equityRange === "72h" ? 72 : 24;
+    const cutoff = (all.length ? all[all.length - 1].t.getTime() : Date.now()) - hrs * 3600_000;
+    points = all.filter(p => p.t.getTime() >= cutoff);
+  }
+
+  if (points.length < 2) {
+    root.innerHTML =
+      `<div class="equity-empty">EQUITY HISTORY WILL APPEAR AFTER A FEW CYCLES &nbsp;·&nbsp; CURRENT: ${all.length} POINT${all.length === 1 ? "" : "S"}</div>`;
+    meta.textContent = "";
+    return;
+  }
+
+  // viewBox layout
+  const W = 1400, H = 340;
+  const padL = 84, padR = 168, padT = 24, padB = 44;
+  const innerW = W - padL - padR;
+  const innerH = H - padT - padB;
+
+  const t0 = points[0].t.getTime();
+  const t1 = points[points.length - 1].t.getTime();
+  const tSpan = Math.max(1, t1 - t0);
+
+  const vMin = Math.min(...points.map(p => p.v));
+  const vMax = Math.max(...points.map(p => p.v));
+  const vPad = Math.max((vMax - vMin) * 0.18, vMax * 0.005);
+  const niceStep = niceTickStep((vMax + vPad - (vMin - vPad)) / 5);
+  const yMin = Math.floor((vMin - vPad) / niceStep) * niceStep;
+  const yMax = Math.ceil((vMax + vPad) / niceStep) * niceStep;
+  const ySpan = Math.max(yMax - yMin, niceStep);
+
+  const x = (t) => padL + ((t.getTime() - t0) / tSpan) * innerW;
+  const y = (v) => padT + (1 - (v - yMin) / ySpan) * innerH;
+
+  // Tick lines
+  const yTicks = [];
+  for (let v = yMin; v <= yMax + 0.001; v += niceStep) yTicks.push(Math.round(v));
+  const xTicks = [];
+  const xCount = 5;
+  for (let i = 0; i <= xCount; i++) xTicks.push(new Date(t0 + (tSpan * i) / xCount));
+
+  const path = points.map((p, i) =>
+    `${i ? "L" : "M"}${x(p.t).toFixed(1)},${y(p.v).toFixed(1)}`).join(" ");
+
+  const startV = points[0].v;
+  const startY = y(startV);
+  const last = points[points.length - 1];
+  const lastX = x(last.t);
+  const lastY = y(last.v);
+  const pillW = 120, pillH = 26;
+  const pillX = Math.min(lastX + 14, W - padR + 30);
+  const pillY = clamp(lastY - pillH / 2, padT, H - padB - pillH);
+
+  const delta = last.v - startV;
+  const pct = (delta / startV) * 100;
+  const deltaCls = delta >= 0 ? "pos" : "neg";
+
+  meta.innerHTML = `· LATEST <strong>${fmtUsd(last.v)}</strong> · Δ <span style="color:${delta >= 0 ? "#15994d" : "#d23030"}">${fmtUsdSigned(delta)} (${fmtPctSignedDirect(pct)})</span> · ${points.length} POINTS`;
+
+  const svg = `
+    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">
+      <!-- y grid + labels -->
+      ${yTicks.map(v => `
+        <line class="eq-grid-line" x1="${padL}" x2="${W - padR}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}"/>
+        <text class="eq-y-label" x="${padL - 10}" y="${(y(v) + 3.5).toFixed(1)}" text-anchor="end">$${v.toLocaleString()}</text>
+      `).join("")}
+
+      <!-- x grid + labels -->
+      ${xTicks.map((d, i) => {
+        const xp = padL + (i / xCount) * innerW;
+        return `
+          <line class="eq-x-tick" x1="${xp.toFixed(1)}" x2="${xp.toFixed(1)}" y1="${padT}" y2="${H - padB}"/>
+          <text class="eq-x-label" x="${xp.toFixed(1)}" y="${H - padB + 18}" text-anchor="middle">${fmtAxisDate(d)}</text>
+        `;
+      }).join("")}
+
+      <!-- baseline (starting equity) -->
+      <line class="eq-baseline" x1="${padL}" x2="${W - padR}" y1="${startY.toFixed(1)}" y2="${startY.toFixed(1)}"/>
+      <text class="eq-baseline-label" x="${(W - padR - 6).toFixed(1)}" y="${(startY - 4).toFixed(1)}" text-anchor="end">START $${Math.round(startV).toLocaleString()}</text>
+
+      <!-- watermark (sits below the line) -->
+      <text class="eq-watermark" x="${padL + 8}" y="${(H - padB - 8).toFixed(1)}">Momentum</text>
+
+      <!-- equity trace -->
+      <path class="eq-line" d="${path}" stroke="${EQUITY_COLOR}"/>
+
+      <!-- connector + end-of-line pill -->
+      <line class="eq-pill-connector" x1="${lastX.toFixed(1)}" y1="${lastY.toFixed(1)}" x2="${pillX.toFixed(1)}" y2="${(pillY + pillH / 2).toFixed(1)}" stroke="${EQUITY_COLOR}"/>
+      <rect class="eq-pill" x="${pillX.toFixed(1)}" y="${pillY.toFixed(1)}" rx="13" ry="13" width="${pillW}" height="${pillH}" fill="${EQUITY_COLOR}"/>
+      <text class="eq-pill-text" x="${(pillX + pillW / 2).toFixed(1)}" y="${(pillY + pillH / 2 + 4).toFixed(1)}" text-anchor="middle">${fmtUsd(last.v)}</text>
+    </svg>
+  `;
+
+  root.innerHTML = svg;
+}
+
+function niceTickStep(rough) {
+  if (rough <= 0) return 1;
+  const exp = Math.floor(Math.log10(rough));
+  const f = rough / Math.pow(10, exp);
+  const niceFactor = f < 1.5 ? 1 : f < 3 ? 2 : f < 7 ? 5 : 10;
+  return niceFactor * Math.pow(10, exp);
+}
+
+function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+function fmtAxisDate(d) {
+  const day = d.toLocaleDateString("en-US", { month: "short", day: "numeric" }).toUpperCase();
+  const hm = d.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false });
+  return `${day} ${hm}`;
+}
+
+function fmtUsdSigned(v) {
+  if (v == null || isNaN(v)) return "—";
+  const sign = v > 0 ? "+" : v < 0 ? "−" : "";
+  return sign + "$" + Math.abs(v).toLocaleString("en-US", {
+    maximumFractionDigits: 2, minimumFractionDigits: 2,
+  });
+}
+
+function fmtPctSignedDirect(p) {
+  if (p == null || isNaN(p)) return "—";
+  const sign = p > 0 ? "+" : "";
+  return sign + p.toFixed(2) + "%";
 }
 
 /* ---------- chart ---------- */
@@ -340,6 +481,13 @@ document.addEventListener("click", (e) => {
     document.querySelectorAll("#mode-toggle button")
       .forEach(b => b.classList.toggle("active", b === tog));
     renderChart();
+  }
+  const eqt = e.target.closest("#equity-range button");
+  if (eqt) {
+    state.equityRange = eqt.dataset.range;
+    document.querySelectorAll("#equity-range button")
+      .forEach(b => b.classList.toggle("active", b === eqt));
+    renderEquityChart();
   }
 });
 

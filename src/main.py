@@ -28,6 +28,7 @@ from .scoring import score_theme
 from .sentiment import analyze
 from .state import (
     append_decisions,
+    append_equity,
     load_state,
     mark_run_error,
     mark_run_start,
@@ -79,6 +80,9 @@ def run_cycle() -> int:
     except Exception as e:  # noqa: BLE001
         log_event(log, "account_fetch_failed", error=str(e))
         notes.append(f"account fetch failed: {e}")
+
+    if account is not None:
+        append_equity(state, account.equity)
 
     # --- Score every theme ---
     symbols = all_tickers()
@@ -133,6 +137,7 @@ def run_cycle() -> int:
         cycle_count=state.get("cycle_count", 0),
         last_success_iso=state.get("last_success_iso"),
         notes=notes,
+        equity_history=state.get("equity_history", []),
     )
     path = write_dashboard(payload)
     log_event(log, "dashboard_written", path=path)

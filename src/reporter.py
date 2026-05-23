@@ -25,6 +25,7 @@ def build_payload(
     cycle_count: int,
     last_success_iso: str | None,
     notes: list[str],
+    equity_history: list[dict] | None = None,
 ) -> dict[str, Any]:
     return {
         "schema_version": _SCHEMA_VERSION,
@@ -82,6 +83,7 @@ def build_payload(
         ],
         "decisions": [d.to_dict() for d in decisions],
         "executions": execution_results,
+        "equity_history": (equity_history or [])[-500:],
         "notes": notes,
     }
 
