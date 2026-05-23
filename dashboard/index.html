@@ -3,51 +3,85 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Momentum — paper-trading dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Momentum — paper-trading theme-rotation agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Momentum <span class="badge paper">PAPER</span></h1>
-    <p class="sub">News + momentum theme-rotation bot. Read-only. Runs every 15 minutes.</p>
-    <p class="sub" id="meta">Loading…</p>
-  </header>
 
-  <main>
-    <section id="account-section" class="card">
-      <h2>Account</h2>
-      <div id="account" class="kv-grid"></div>
-    </section>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-word"><em>Momentum</em></span>
+    <span class="brand-by">by trading-news-agent</span>
+  </div>
+  <nav class="nav">
+    <a href="#chart" class="active">LIVE</a><span class="sep">│</span>
+    <a href="#chart">THEMES</a><span class="sep">│</span>
+    <a href="#feed">DECISIONS</a><span class="sep">│</span>
+    <a href="https://github.com/chewythechoochoo/Momentum#readme" target="_blank" rel="noopener">README.TXT</a>
+  </nav>
+  <div class="topbar-right">
+    <a href="https://app.alpaca.markets/paper/dashboard/overview" target="_blank" rel="noopener">PAPER ACCOUNT ↗</a>
+    <a href="https://github.com/chewythechoochoo/Momentum" target="_blank" rel="noopener">ABOUT ↗</a>
+  </div>
+</header>
 
-    <section id="themes-section" class="card">
-      <h2>Theme scores</h2>
-      <p class="hint">Score = 40% momentum + 30% sentiment + 20% volume + 10% policy − volatility penalty. Confidence scales final allocation.</p>
-      <div id="themes" class="theme-grid"></div>
-    </section>
+<div class="meta-strip" id="meta-strip">LOADING…</div>
 
-    <section id="positions-section" class="card">
-      <h2>Positions</h2>
-      <table id="positions"><thead><tr><th>Symbol</th><th>Qty</th><th>Avg entry</th><th>Last</th><th>Mkt value</th><th>P/L</th><th>Weight</th></tr></thead><tbody></tbody></table>
-    </section>
+<div class="ticker-row" id="ticker-row"></div>
 
-    <section id="decisions-section" class="card">
-      <h2>Decisions (this cycle)</h2>
-      <table id="decisions"><thead><tr><th>Action</th><th>Symbol</th><th>Theme</th><th>Δ$</th><th>Reason</th><th>Factors</th></tr></thead><tbody></tbody></table>
-    </section>
+<div class="highlight-band" id="highlight-band"></div>
 
-    <section id="notes-section" class="card hidden">
-      <h2>Notes</h2>
-      <ul id="notes"></ul>
-    </section>
-  </main>
+<main>
+  <section class="chart-pane" id="chart">
+    <div class="chart-header">
+      <h2>THEME SCORES <span class="muted">— SORTED HIGH → LOW</span></h2>
+      <div class="toggle" id="mode-toggle">
+        <button class="active" data-mode="score">SCORE</button>
+        <button data-mode="weight">WEIGHT</button>
+      </div>
+    </div>
 
-  <footer>
-    <p>
-      Source: <a href="https://github.com/chewythechoochoo/Momentum">github.com/chewythechoochoo/Momentum</a>.
-      No real-money trading. No financial advice. For research and education only.
-    </p>
-  </footer>
+    <div class="chart-grid" id="theme-chart">
+      <div class="grid-vertical">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
 
-  <script src="app.js"></script>
+    <div class="x-axis">
+      <span>0</span><span>25</span><span>50</span><span>75</span><span>100</span>
+    </div>
+    <div class="x-axis-label" id="x-axis-label">THEME SCORE (0–100)</div>
+
+    <div class="watermark-l">Momentum</div>
+    <div class="watermark-r">github.com/chewythechoochoo/Momentum</div>
+  </section>
+
+  <aside class="feed-pane" id="feed">
+    <div class="tabs" id="tabs">
+      <div class="tab active" data-tab="decisions">DECISIONS</div>
+      <div class="tab" data-tab="positions">POSITIONS</div>
+      <div class="tab" data-tab="executions">EXECUTIONS</div>
+      <div class="tab" data-tab="readme">README.TXT</div>
+    </div>
+    <div class="feed-filter">
+      <span>FILTER:</span>
+      <select id="filter-action">
+        <option value="ALL">ALL ACTIONS</option>
+        <option value="BUY">BUY</option>
+        <option value="SELL">SELL</option>
+        <option value="REDUCE">REDUCE</option>
+        <option value="HOLD">HOLD</option>
+        <option value="SKIP">SKIP</option>
+      </select>
+      <span class="feed-count" id="feed-count"></span>
+    </div>
+    <div class="feed-body" id="feed-body"></div>
+  </aside>
+</main>
+
+<script src="app.js"></script>
 </body>
 </html>

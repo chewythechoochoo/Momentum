@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-22T20:00:00",
+  "generated_at_utc": "2026-05-23T14:00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 0,
-  "last_success_utc": null,
-  "market_open": false,
+  "cycle_count": 132,
+  "last_success_utc": "2026-05-23T13:45:00",
+  "market_open": true,
   "config": {
     "weights": {"momentum": 0.4, "sentiment": 0.3, "volume": 0.2, "policy": 0.1},
     "risk": {
@@ -23,75 +23,87 @@
   },
   "account": {
     "equity": 100000.00,
-    "cash": 100000.00,
-    "buying_power": 100000.00,
+    "cash": 64500.00,
+    "buying_power": 64500.00,
     "portfolio_value": 100000.00
   },
-  "positions": [],
-  "themes": [
+  "positions": [
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 72.4,
-      "raw_score": 78.4,
-      "band": "strong_buy",
-      "weight": 0.18,
-      "confidence": 0.92,
-      "components": {
-        "momentum": 82.1,
-        "sentiment": 71.0,
-        "volume": 76.5,
-        "policy": 60.0,
-        "volatility_penalty": 6.0
-      }
+      "symbol": "NVDA", "qty": 12.5,
+      "avg_entry_price": 480.00, "current_price": 501.20,
+      "market_value": 6265.00, "unrealized_pl": 265.00,
+      "unrealized_plpc": 0.0440, "weight": 0.0626
     },
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 58.0,
-      "raw_score": 60.0,
-      "band": "buy",
-      "weight": 0.12,
-      "confidence": 0.78,
-      "components": {
-        "momentum": 60.0, "sentiment": 55.0, "volume": 58.0, "policy": 70.0, "volatility_penalty": 2.0
-      }
+      "symbol": "LMT", "qty": 8.0,
+      "avg_entry_price": 460.00, "current_price": 472.30,
+      "market_value": 3778.40, "unrealized_pl": 98.40,
+      "unrealized_plpc": 0.0267, "weight": 0.0378
     }
+  ],
+  "themes": [
+    {"key": "ai_compute", "name": "AI & Compute", "score": 72.42, "raw_score": 78.42, "band": "strong_buy", "weight": 0.18, "confidence": 0.92,
+      "components": {"momentum": 82.1, "sentiment": 71.0, "volume": 76.5, "policy": 60.0, "volatility_penalty": 6.0}},
+    {"key": "defense", "name": "Defense & Aerospace", "score": 58.00, "raw_score": 60.00, "band": "buy", "weight": 0.12, "confidence": 0.78,
+      "components": {"momentum": 60.0, "sentiment": 55.0, "volume": 58.0, "policy": 70.0, "volatility_penalty": 2.0}},
+    {"key": "semiconductors_ex_ai", "name": "Semiconductors (Broad)", "score": 54.30, "raw_score": 57.30, "band": "starter", "weight": 0.09, "confidence": 0.71,
+      "components": {"momentum": 55.0, "sentiment": 53.0, "volume": 65.0, "policy": 50.0, "volatility_penalty": 3.0}},
+    {"key": "biotech", "name": "Biotech & Pharma", "score": 49.80, "raw_score": 50.80, "band": "starter", "weight": 0.07, "confidence": 0.66,
+      "components": {"momentum": 50.0, "sentiment": 46.0, "volume": 52.0, "policy": 55.0, "volatility_penalty": 1.0}},
+    {"key": "cybersecurity", "name": "Cybersecurity", "score": 48.50, "raw_score": 49.50, "band": "starter", "weight": 0.06, "confidence": 0.62,
+      "components": {"momentum": 47.0, "sentiment": 50.0, "volume": 50.0, "policy": 50.0, "volatility_penalty": 1.0}},
+    {"key": "financials", "name": "Financials & Rates", "score": 44.20, "raw_score": 46.20, "band": "starter", "weight": 0.05, "confidence": 0.74,
+      "components": {"momentum": 45.0, "sentiment": 44.0, "volume": 48.0, "policy": 50.0, "volatility_penalty": 2.0}},
+    {"key": "consumer_discretionary", "name": "Consumer Discretionary", "score": 41.30, "raw_score": 43.30, "band": "starter", "weight": 0.04, "confidence": 0.60,
+      "components": {"momentum": 40.0, "sentiment": 43.0, "volume": 47.0, "policy": 50.0, "volatility_penalty": 2.0}},
+    {"key": "ev_clean_transport", "name": "EV & Clean Transport", "score": 36.80, "raw_score": 42.80, "band": "hold_small", "weight": 0.025, "confidence": 0.58,
+      "components": {"momentum": 38.0, "sentiment": 40.0, "volume": 55.0, "policy": 55.0, "volatility_penalty": 6.0}},
+    {"key": "clean_energy", "name": "Clean Energy", "score": 33.40, "raw_score": 36.40, "band": "exit_or_avoid", "weight": 0.0, "confidence": 0.55,
+      "components": {"momentum": 30.0, "sentiment": 36.0, "volume": 42.0, "policy": 50.0, "volatility_penalty": 3.0}},
+    {"key": "oil_gas", "name": "Oil & Gas", "score": 28.10, "raw_score": 32.10, "band": "exit_or_avoid", "weight": 0.0, "confidence": 0.69,
+      "components": {"momentum": 25.0, "sentiment": 30.0, "volume": 38.0, "policy": 45.0, "volatility_penalty": 4.0}}
   ],
   "decisions": [
-    {
-      "symbol": "NVDA",
-      "action": "BUY",
-      "target_weight": 0.06,
-      "current_weight": 0.0,
-      "notional_delta": 6000.0,
-      "reason": "new position — theme 'AI & Compute' score 72.4 (strong_buy), contribution 78.1",
+    {"symbol": "NVDA", "action": "BUY", "target_weight": 0.07, "current_weight": 0.0626, "notional_delta": 740.00,
+      "reason": "underweight by 0.74% vs target — add",
       "factors": ["ret_5d=4.20%", "rel_vol_5d=1.35", "vol_ann=42.10%"],
-      "theme_key": "ai_compute"
-    }
+      "theme_key": "ai_compute"},
+    {"symbol": "AMD", "action": "BUY", "target_weight": 0.055, "current_weight": 0.0, "notional_delta": 5500.00,
+      "reason": "new position — theme 'AI & Compute' score 72.4 (strong_buy), contribution 76.5",
+      "factors": ["ret_5d=3.10%", "rel_vol_5d=1.22", "vol_ann=48.30%"],
+      "theme_key": "ai_compute"},
+    {"symbol": "LMT", "action": "HOLD", "target_weight": 0.04, "current_weight": 0.0378, "notional_delta": 0.0,
+      "reason": "within 50bps of target — no trade",
+      "factors": ["unrealized_pl=2.67%", "theme=Defense & Aerospace"],
+      "theme_key": "defense"},
+    {"symbol": "RTX", "action": "SKIP", "target_weight": 0.035, "current_weight": 0.0, "notional_delta": 0.0,
+      "reason": "deferred — already at max 2 new buys this cycle (theme 'Defense' score 58.0 (buy))",
+      "factors": ["ret_5d=1.80%", "rel_vol_5d=1.08", "vol_ann=22.40%"],
+      "theme_key": "defense"},
+    {"symbol": "TSLA", "action": "REDUCE", "target_weight": 0.012, "current_weight": 0.024, "notional_delta": -1200.00,
+      "reason": "theme score 36.8 < reduce threshold 35.0 — halve position",
+      "factors": ["unrealized_pl=-3.20%", "theme=EV & Clean Transport"],
+      "theme_key": "ev_clean_transport"},
+    {"symbol": "XOM", "action": "SELL", "target_weight": 0.0, "current_weight": 0.018, "notional_delta": -1800.00,
+      "reason": "theme score 28.1 < exit threshold 25.0 — fully exit",
+      "factors": ["unrealized_pl=-1.10%", "theme=Oil & Gas"],
+      "theme_key": "oil_gas"}
   ],
   "executions": [
-    {
-      "symbol": "NVDA",
-      "action": "BUY",
-      "target_weight": 0.06,
-      "current_weight": 0.0,
-      "notional_delta": 6000.0,
-      "reason": "new position — theme 'AI & Compute' score 72.4 (strong_buy)",
-      "factors": ["ret_5d=4.20%", "rel_vol_5d=1.35"],
-      "theme_key": "ai_compute",
-      "executed": true,
-      "order": {
-        "id": "sample-order-id",
-        "symbol": "NVDA",
-        "notional": 6000.0,
-        "side": "OrderSide.BUY",
-        "status": "OrderStatus.ACCEPTED",
-        "submitted_at": "2026-05-22T20:00:01"
-      }
-    }
+    {"symbol": "NVDA", "action": "BUY", "target_weight": 0.07, "current_weight": 0.0626, "notional_delta": 740.00,
+      "reason": "underweight by 0.74% vs target — add", "theme_key": "ai_compute",
+      "executed": true, "order": {"id": "0d2a-…-9f", "symbol": "NVDA", "notional": 740.00, "status": "OrderStatus.ACCEPTED"}},
+    {"symbol": "AMD", "action": "BUY", "target_weight": 0.055, "current_weight": 0.0, "notional_delta": 5500.00,
+      "reason": "new position — theme 'AI & Compute' score 72.4 (strong_buy)", "theme_key": "ai_compute",
+      "executed": true, "order": {"id": "0d2b-…-1a", "symbol": "AMD", "notional": 5500.00, "status": "OrderStatus.ACCEPTED"}},
+    {"symbol": "TSLA", "action": "REDUCE", "target_weight": 0.012, "current_weight": 0.024, "notional_delta": -1200.00,
+      "reason": "theme score 36.8 < reduce threshold 35.0 — halve position", "theme_key": "ev_clean_transport",
+      "executed": true, "order": {"id": "0d2c-…-77", "symbol": "TSLA", "notional": 1200.00, "status": "OrderStatus.ACCEPTED"}},
+    {"symbol": "XOM", "action": "SELL", "target_weight": 0.0, "current_weight": 0.018, "notional_delta": -1800.00,
+      "reason": "theme score 28.1 < exit threshold 25.0 — fully exit", "theme_key": "oil_gas",
+      "executed": true, "order": {"id": "0d2d-…-c4", "symbol": "XOM", "notional": 1800.00, "status": "OrderStatus.ACCEPTED"}}
   ],
   "notes": [
-    "Sample/seed file — replaced on first successful run."
+    "Sample / seed file — replaced on first successful cycle."
   ]
 }
