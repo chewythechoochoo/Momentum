@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-24T15:19:21+00:00",
+  "generated_at_utc": "2026-05-24T16:31:40+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 11,
-  "last_success_utc": "2026-05-24T13:56:52+00:00",
+  "cycle_count": 12,
+  "last_success_utc": "2026-05-24T15:19:21+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -40,14 +40,14 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 72.26,
-      "raw_score": 72.26,
+      "score": 71.65,
+      "raw_score": 71.65,
       "band": "strong_buy",
-      "weight": 0.1538,
+      "weight": 0.1527,
       "confidence": 1.0,
       "components": {
         "momentum": 74.65,
-        "sentiment": 90.91,
+        "sentiment": 88.89,
         "volume": 50.64,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -72,16 +72,16 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 60.82,
-      "raw_score": 62.85,
+      "score": 59.32,
+      "raw_score": 61.35,
       "band": "buy",
-      "weight": 0.1194,
+      "weight": 0.1144,
       "confidence": 1.0,
       "components": {
         "momentum": 45.1,
         "sentiment": 85.72,
         "volume": 50.48,
-        "policy": 90.0,
+        "policy": 75.0,
         "volatility_penalty": 2.03
       }
     },
@@ -102,6 +102,22 @@
       }
     },
     {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 56.3,
+      "raw_score": 65.32,
+      "band": "buy",
+      "weight": 0.0887,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 75.15,
+        "sentiment": 70.0,
+        "volume": 43.81,
+        "policy": 55.0,
+        "volatility_penalty": 9.02
+      }
+    },
+    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 55.61,
@@ -118,51 +134,35 @@
       }
     },
     {
-      "key": "oil_gas",
-      "name": "Oil & Gas",
-      "score": 55.16,
-      "raw_score": 56.38,
-      "band": "buy",
-      "weight": 0.0855,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 52.1,
-        "sentiment": 70.0,
-        "volume": 47.7,
-        "policy": 50.0,
-        "volatility_penalty": 1.22
-      }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 53.3,
-      "raw_score": 62.32,
-      "band": "starter",
-      "weight": 0.0778,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 75.15,
-        "sentiment": 60.0,
-        "volume": 43.81,
-        "policy": 55.0,
-        "volatility_penalty": 9.02
-      }
-    },
-    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
       "score": 50.54,
       "raw_score": 51.12,
       "band": "starter",
-      "weight": 0.0702,
-      "confidence": 0.65,
+      "weight": 0.0724,
+      "confidence": 0.7,
       "components": {
         "momentum": 54.4,
         "sentiment": 50.0,
         "volume": 46.8,
         "policy": 50.0,
         "volatility_penalty": 0.59
+      }
+    },
+    {
+      "key": "oil_gas",
+      "name": "Oil & Gas",
+      "score": 49.16,
+      "raw_score": 50.38,
+      "band": "starter",
+      "weight": 0.0664,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 52.1,
+        "sentiment": 50.0,
+        "volume": 47.7,
+        "policy": 50.0,
+        "volatility_penalty": 1.22
       }
     },
     {
@@ -187,8 +187,8 @@
       "score": 44.6,
       "raw_score": 51.4,
       "band": "starter",
-      "weight": 0.0637,
-      "confidence": 0.95,
+      "weight": 0.0653,
+      "confidence": 1.0,
       "components": {
         "momentum": 54.87,
         "sentiment": 50.0,
@@ -202,10 +202,10 @@
     {
       "symbol": "GS",
       "action": "BUY",
-      "target_weight": 0.0528,
+      "target_weight": 0.0524,
       "current_weight": 0.0,
-      "notional_delta": 5280.0,
-      "reason": "new position \u2014 theme 'Financials & Rates' score 72.3 (strong_buy), contribution 83.7",
+      "notional_delta": 5240.0,
+      "reason": "new position \u2014 theme 'Financials & Rates' score 71.7 (strong_buy), contribution 83.1",
       "factors": [
         "ret_5d=5.09%",
         "rel_vol_5d=1.13",
@@ -216,10 +216,10 @@
     {
       "symbol": "MS",
       "action": "BUY",
-      "target_weight": 0.0507,
+      "target_weight": 0.0504,
       "current_weight": 0.0,
-      "notional_delta": 5070.0,
-      "reason": "new position \u2014 theme 'Financials & Rates' score 72.3 (strong_buy), contribution 80.5",
+      "notional_delta": 5040.0,
+      "reason": "new position \u2014 theme 'Financials & Rates' score 71.7 (strong_buy), contribution 79.9",
       "factors": [
         "ret_5d=4.43%",
         "rel_vol_5d=1.04",
@@ -230,10 +230,10 @@
     {
       "symbol": "BAC",
       "action": "SKIP",
-      "target_weight": 0.0503,
+      "target_weight": 0.0499,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 72.3 (strong_buy), contribution 79.8)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 71.7 (strong_buy), contribution 79.2)",
       "factors": [
         "ret_5d=4.08%",
         "rel_vol_5d=1.10",
@@ -286,10 +286,10 @@
     {
       "symbol": "LLY",
       "action": "SKIP",
-      "target_weight": 0.0441,
+      "target_weight": 0.0424,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 60.8 (buy), contribution 79.9)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.3 (buy), contribution 78.4)",
       "factors": [
         "ret_5d=5.98%",
         "rel_vol_5d=0.87",
@@ -300,10 +300,10 @@
     {
       "symbol": "PFE",
       "action": "SKIP",
-      "target_weight": 0.0395,
+      "target_weight": 0.0378,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 60.8 (buy), contribution 71.5)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.3 (buy), contribution 70.0)",
       "factors": [
         "ret_5d=2.25%",
         "rel_vol_5d=0.83",
@@ -314,10 +314,10 @@
     {
       "symbol": "VRTX",
       "action": "SKIP",
-      "target_weight": 0.0358,
+      "target_weight": 0.0342,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 60.8 (buy), contribution 64.7)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.3 (buy), contribution 63.2)",
       "factors": [
         "ret_5d=-0.56%",
         "rel_vol_5d=1.21",
@@ -368,6 +368,48 @@
       "theme_key": "clean_energy"
     },
     {
+      "symbol": "ASML",
+      "action": "SKIP",
+      "target_weight": 0.0321,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 56.3 (buy), contribution 67.9)",
+      "factors": [
+        "ret_5d=8.73%",
+        "rel_vol_5d=0.94",
+        "vol_ann=52.51%"
+      ],
+      "theme_key": "semiconductors_ex_ai"
+    },
+    {
+      "symbol": "LRCX",
+      "action": "SKIP",
+      "target_weight": 0.0313,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 56.3 (buy), contribution 66.3)",
+      "factors": [
+        "ret_5d=7.25%",
+        "rel_vol_5d=0.92",
+        "vol_ann=56.09%"
+      ],
+      "theme_key": "semiconductors_ex_ai"
+    },
+    {
+      "symbol": "MU",
+      "action": "SKIP",
+      "target_weight": 0.0252,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 56.3 (buy), contribution 53.4)",
+      "factors": [
+        "ret_5d=3.63%",
+        "rel_vol_5d=0.98",
+        "vol_ann=79.59%"
+      ],
+      "theme_key": "semiconductors_ex_ai"
+    },
+    {
       "symbol": "RTX",
       "action": "SKIP",
       "target_weight": 0.0305,
@@ -410,93 +452,9 @@
       "theme_key": "defense"
     },
     {
-      "symbol": "SLB",
-      "action": "SKIP",
-      "target_weight": 0.0343,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 70.4)",
-      "factors": [
-        "ret_5d=3.43%",
-        "rel_vol_5d=1.06",
-        "vol_ann=27.98%"
-      ],
-      "theme_key": "oil_gas"
-    },
-    {
-      "symbol": "CVX",
-      "action": "SKIP",
-      "target_weight": 0.0279,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 57.2)",
-      "factors": [
-        "ret_5d=0.17%",
-        "rel_vol_5d=1.04",
-        "vol_ann=28.76%"
-      ],
-      "theme_key": "oil_gas"
-    },
-    {
-      "symbol": "XOM",
-      "action": "SKIP",
-      "target_weight": 0.0232,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 47.6)",
-      "factors": [
-        "ret_5d=-1.90%",
-        "rel_vol_5d=1.03",
-        "vol_ann=33.37%"
-      ],
-      "theme_key": "oil_gas"
-    },
-    {
-      "symbol": "ASML",
-      "action": "SKIP",
-      "target_weight": 0.0283,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 53.3 (starter), contribution 64.9)",
-      "factors": [
-        "ret_5d=8.73%",
-        "rel_vol_5d=0.94",
-        "vol_ann=52.51%"
-      ],
-      "theme_key": "semiconductors_ex_ai"
-    },
-    {
-      "symbol": "LRCX",
-      "action": "SKIP",
-      "target_weight": 0.0276,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 53.3 (starter), contribution 63.3)",
-      "factors": [
-        "ret_5d=7.25%",
-        "rel_vol_5d=0.92",
-        "vol_ann=56.09%"
-      ],
-      "theme_key": "semiconductors_ex_ai"
-    },
-    {
-      "symbol": "MU",
-      "action": "SKIP",
-      "target_weight": 0.022,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 53.3 (starter), contribution 50.4)",
-      "factors": [
-        "ret_5d=3.63%",
-        "rel_vol_5d=0.98",
-        "vol_ann=79.59%"
-      ],
-      "theme_key": "semiconductors_ex_ai"
-    },
-    {
       "symbol": "HD",
       "action": "SKIP",
-      "target_weight": 0.026,
+      "target_weight": 0.0268,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.5 (starter), contribution 71.3)",
@@ -510,7 +468,7 @@
     {
       "symbol": "NKE",
       "action": "SKIP",
-      "target_weight": 0.0231,
+      "target_weight": 0.0238,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.5 (starter), contribution 63.2)",
@@ -524,7 +482,7 @@
     {
       "symbol": "MCD",
       "action": "SKIP",
-      "target_weight": 0.0211,
+      "target_weight": 0.0217,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.5 (starter), contribution 57.7)",
@@ -534,6 +492,48 @@
         "vol_ann=18.54%"
       ],
       "theme_key": "consumer_discretionary"
+    },
+    {
+      "symbol": "SLB",
+      "action": "SKIP",
+      "target_weight": 0.0272,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 49.2 (starter), contribution 64.4)",
+      "factors": [
+        "ret_5d=3.43%",
+        "rel_vol_5d=1.06",
+        "vol_ann=27.98%"
+      ],
+      "theme_key": "oil_gas"
+    },
+    {
+      "symbol": "CVX",
+      "action": "SKIP",
+      "target_weight": 0.0216,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 49.2 (starter), contribution 51.2)",
+      "factors": [
+        "ret_5d=0.17%",
+        "rel_vol_5d=1.04",
+        "vol_ann=28.76%"
+      ],
+      "theme_key": "oil_gas"
+    },
+    {
+      "symbol": "XOM",
+      "action": "SKIP",
+      "target_weight": 0.0176,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 49.2 (starter), contribution 41.6)",
+      "factors": [
+        "ret_5d=-1.90%",
+        "rel_vol_5d=1.03",
+        "vol_ann=33.37%"
+      ],
+      "theme_key": "oil_gas"
     },
     {
       "symbol": "GM",
@@ -580,7 +580,7 @@
     {
       "symbol": "AMD",
       "action": "SKIP",
-      "target_weight": 0.0226,
+      "target_weight": 0.0232,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'AI & Compute' score 44.6 (starter), contribution 52.4)",
@@ -594,7 +594,7 @@
     {
       "symbol": "SMCI",
       "action": "SKIP",
-      "target_weight": 0.0212,
+      "target_weight": 0.0217,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'AI & Compute' score 44.6 (starter), contribution 49.0)",
@@ -608,7 +608,7 @@
     {
       "symbol": "MSFT",
       "action": "SKIP",
-      "target_weight": 0.0199,
+      "target_weight": 0.0204,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'AI & Compute' score 44.6 (starter), contribution 46.0)",
@@ -624,10 +624,10 @@
     {
       "symbol": "GS",
       "action": "BUY",
-      "target_weight": 0.0528,
+      "target_weight": 0.0524,
       "current_weight": 0.0,
-      "notional_delta": 5280.0,
-      "reason": "new position \u2014 theme 'Financials & Rates' score 72.3 (strong_buy), contribution 83.7",
+      "notional_delta": 5240.0,
+      "reason": "new position \u2014 theme 'Financials & Rates' score 71.7 (strong_buy), contribution 83.1",
       "factors": [
         "ret_5d=5.09%",
         "rel_vol_5d=1.13",
@@ -641,10 +641,10 @@
     {
       "symbol": "MS",
       "action": "BUY",
-      "target_weight": 0.0507,
+      "target_weight": 0.0504,
       "current_weight": 0.0,
-      "notional_delta": 5070.0,
-      "reason": "new position \u2014 theme 'Financials & Rates' score 72.3 (strong_buy), contribution 80.5",
+      "notional_delta": 5040.0,
+      "reason": "new position \u2014 theme 'Financials & Rates' score 71.7 (strong_buy), contribution 79.9",
       "factors": [
         "ret_5d=4.43%",
         "rel_vol_5d=1.04",
@@ -658,10 +658,10 @@
     {
       "symbol": "BAC",
       "action": "SKIP",
-      "target_weight": 0.0503,
+      "target_weight": 0.0499,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 72.3 (strong_buy), contribution 79.8)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 71.7 (strong_buy), contribution 79.2)",
       "factors": [
         "ret_5d=4.08%",
         "rel_vol_5d=1.10",
@@ -726,10 +726,10 @@
     {
       "symbol": "LLY",
       "action": "SKIP",
-      "target_weight": 0.0441,
+      "target_weight": 0.0424,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 60.8 (buy), contribution 79.9)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.3 (buy), contribution 78.4)",
       "factors": [
         "ret_5d=5.98%",
         "rel_vol_5d=0.87",
@@ -743,10 +743,10 @@
     {
       "symbol": "PFE",
       "action": "SKIP",
-      "target_weight": 0.0395,
+      "target_weight": 0.0378,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 60.8 (buy), contribution 71.5)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.3 (buy), contribution 70.0)",
       "factors": [
         "ret_5d=2.25%",
         "rel_vol_5d=0.83",
@@ -760,10 +760,10 @@
     {
       "symbol": "VRTX",
       "action": "SKIP",
-      "target_weight": 0.0358,
+      "target_weight": 0.0342,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 60.8 (buy), contribution 64.7)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.3 (buy), contribution 63.2)",
       "factors": [
         "ret_5d=-0.56%",
         "rel_vol_5d=1.21",
@@ -826,6 +826,57 @@
       "note": "market_closed_or_no_account"
     },
     {
+      "symbol": "ASML",
+      "action": "SKIP",
+      "target_weight": 0.0321,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 56.3 (buy), contribution 67.9)",
+      "factors": [
+        "ret_5d=8.73%",
+        "rel_vol_5d=0.94",
+        "vol_ann=52.51%"
+      ],
+      "theme_key": "semiconductors_ex_ai",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "LRCX",
+      "action": "SKIP",
+      "target_weight": 0.0313,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 56.3 (buy), contribution 66.3)",
+      "factors": [
+        "ret_5d=7.25%",
+        "rel_vol_5d=0.92",
+        "vol_ann=56.09%"
+      ],
+      "theme_key": "semiconductors_ex_ai",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "MU",
+      "action": "SKIP",
+      "target_weight": 0.0252,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 56.3 (buy), contribution 53.4)",
+      "factors": [
+        "ret_5d=3.63%",
+        "rel_vol_5d=0.98",
+        "vol_ann=79.59%"
+      ],
+      "theme_key": "semiconductors_ex_ai",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
       "symbol": "RTX",
       "action": "SKIP",
       "target_weight": 0.0305,
@@ -877,111 +928,9 @@
       "note": "market_closed_or_no_account"
     },
     {
-      "symbol": "SLB",
-      "action": "SKIP",
-      "target_weight": 0.0343,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 70.4)",
-      "factors": [
-        "ret_5d=3.43%",
-        "rel_vol_5d=1.06",
-        "vol_ann=27.98%"
-      ],
-      "theme_key": "oil_gas",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "CVX",
-      "action": "SKIP",
-      "target_weight": 0.0279,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 57.2)",
-      "factors": [
-        "ret_5d=0.17%",
-        "rel_vol_5d=1.04",
-        "vol_ann=28.76%"
-      ],
-      "theme_key": "oil_gas",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "XOM",
-      "action": "SKIP",
-      "target_weight": 0.0232,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 47.6)",
-      "factors": [
-        "ret_5d=-1.90%",
-        "rel_vol_5d=1.03",
-        "vol_ann=33.37%"
-      ],
-      "theme_key": "oil_gas",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "ASML",
-      "action": "SKIP",
-      "target_weight": 0.0283,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 53.3 (starter), contribution 64.9)",
-      "factors": [
-        "ret_5d=8.73%",
-        "rel_vol_5d=0.94",
-        "vol_ann=52.51%"
-      ],
-      "theme_key": "semiconductors_ex_ai",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "LRCX",
-      "action": "SKIP",
-      "target_weight": 0.0276,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 53.3 (starter), contribution 63.3)",
-      "factors": [
-        "ret_5d=7.25%",
-        "rel_vol_5d=0.92",
-        "vol_ann=56.09%"
-      ],
-      "theme_key": "semiconductors_ex_ai",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "MU",
-      "action": "SKIP",
-      "target_weight": 0.022,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 53.3 (starter), contribution 50.4)",
-      "factors": [
-        "ret_5d=3.63%",
-        "rel_vol_5d=0.98",
-        "vol_ann=79.59%"
-      ],
-      "theme_key": "semiconductors_ex_ai",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
       "symbol": "HD",
       "action": "SKIP",
-      "target_weight": 0.026,
+      "target_weight": 0.0268,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.5 (starter), contribution 71.3)",
@@ -998,7 +947,7 @@
     {
       "symbol": "NKE",
       "action": "SKIP",
-      "target_weight": 0.0231,
+      "target_weight": 0.0238,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.5 (starter), contribution 63.2)",
@@ -1015,7 +964,7 @@
     {
       "symbol": "MCD",
       "action": "SKIP",
-      "target_weight": 0.0211,
+      "target_weight": 0.0217,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.5 (starter), contribution 57.7)",
@@ -1025,6 +974,57 @@
         "vol_ann=18.54%"
       ],
       "theme_key": "consumer_discretionary",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "SLB",
+      "action": "SKIP",
+      "target_weight": 0.0272,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 49.2 (starter), contribution 64.4)",
+      "factors": [
+        "ret_5d=3.43%",
+        "rel_vol_5d=1.06",
+        "vol_ann=27.98%"
+      ],
+      "theme_key": "oil_gas",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "CVX",
+      "action": "SKIP",
+      "target_weight": 0.0216,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 49.2 (starter), contribution 51.2)",
+      "factors": [
+        "ret_5d=0.17%",
+        "rel_vol_5d=1.04",
+        "vol_ann=28.76%"
+      ],
+      "theme_key": "oil_gas",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "XOM",
+      "action": "SKIP",
+      "target_weight": 0.0176,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 49.2 (starter), contribution 41.6)",
+      "factors": [
+        "ret_5d=-1.90%",
+        "rel_vol_5d=1.03",
+        "vol_ann=33.37%"
+      ],
+      "theme_key": "oil_gas",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1083,7 +1083,7 @@
     {
       "symbol": "AMD",
       "action": "SKIP",
-      "target_weight": 0.0226,
+      "target_weight": 0.0232,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'AI & Compute' score 44.6 (starter), contribution 52.4)",
@@ -1100,7 +1100,7 @@
     {
       "symbol": "SMCI",
       "action": "SKIP",
-      "target_weight": 0.0212,
+      "target_weight": 0.0217,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'AI & Compute' score 44.6 (starter), contribution 49.0)",
@@ -1117,7 +1117,7 @@
     {
       "symbol": "MSFT",
       "action": "SKIP",
-      "target_weight": 0.0199,
+      "target_weight": 0.0204,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'AI & Compute' score 44.6 (starter), contribution 46.0)",
@@ -1176,6 +1176,10 @@
     {
       "t": "2026-05-24T15:19:19+00:00",
       "v": 100000.0
+    },
+    {
+      "t": "2026-05-24T16:31:37+00:00",
+      "v": 100000.0
     }
   ],
   "breaking_news": [
@@ -1184,7 +1188,7 @@
       "summary": "Now that the U.S. government must refund most tariffs, Walmart says it might put its refund money toward lowering store prices. Executives say the cost of gas has shoppers increasingly under stress.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/21/nx-s1-5829712/walmart-price-cuts-gas-tariff-refunds",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:40+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -1193,7 +1197,7 @@
       "summary": "Ahead of a much anticipated IPO, SpaceX is carrying out a critical test of its giant, stainless steel rocket. Investors will be watching closely.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/21/nx-s1-5823583/spacex-starship-musk-ipo",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1202,7 +1206,7 @@
       "summary": "The national average for a gallon of gasoline is $4.55, as America heads into one of the busiest travel weekends of the year. What can you do to cut your costs?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5831223/memorial-day-gas-prices-save-money-iran",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1211,7 +1215,7 @@
       "summary": "Everlane's finances have faltered in recent years. But will the merger alienate Everlane's existing shoppers \u2014 or sway droves of Shein fans to trade up?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5825872/shein-buys-everlane",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1220,7 +1224,7 @@
       "summary": "The search giant is updating its famously minimalist homepage. But what looks like a tiny design change is a very big deal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5829915/google-search-box-ai",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1229,7 +1233,7 @@
       "summary": "Surging food costs and <a href=\"https://www.npr.org/2026/05/12/nx-s1-5818279/inflation-cpi-gas-prices-housing-fuel-iran-war\" target=\"_blank\">fuel prices</a> are pummeling Maine's struggling groundfishing industry. But a pandemic-era program",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/23/nx-s1-5756374/food-fish-maine-portland-donations",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1238,7 +1242,7 @@
       "summary": "The temperature is climbing, and so are people's utility bills. Rising electricity prices and hotter-than-usual weather could make it especially costly to stay cool this summer.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/23/nx-s1-5823767/summer-heat-electric-bills-cost",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1247,16 +1251,7 @@
       "summary": "At a time when hopes are dim for resolving the Israeli-Palestinian conflict, some Arab and Jewish entrepreneurs are partnering across the divide, hoping to prove what's possible.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/24/nx-s1-5806030/palestinian-israeli-startups-50-50-northeastern",
-      "published_utc": "2026-05-24T15:19:21+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "One killed and many feared trapped under collapsed building in Philippines",
-      "summary": "A Malaysian man has died and about 20 people are feared trapped at the site near Manila, officials say.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cgqpklv42jeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1265,25 +1260,34 @@
       "summary": "Security forces were met by resistance while attempting to clear highway barriers, amid unrest over the government's economic policies.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/ce3pdw1z59do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "California declares emergency as fire crews race to contain toxic leak",
-      "summary": "Thousands have been evacuated as officials warn a tank containing about 7,000 gallons of methyl methacrylate could explode.",
+      "headline": "One killed and many feared trapped under collapsed building in Philippines",
+      "summary": "A Malaysian man has died and about 20 people are feared trapped at the site near Manila, officials say.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c3w2l249j8go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "url": "https://www.bbc.com/news/articles/cgqpklv42jeo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-24T16:31:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "Man killed in shark attack off Australia's north-east coast",
-      "summary": "The 39-year-old was fatally injured while swimming out at a shoal off the Cassowary Coast in Queensland.",
+      "summary": "The 39-year-old was fatally injured at a shoal off the Cassowary Coast in Queensland, apparently while spearfishing.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cn9pq5l2d14o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:39+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Turkish riot police storm opposition offices after leaders ousted",
+      "summary": "Officers forced their way into the building days after the party vowed to defy a court ruling removing its leaders.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c87qwrqre83o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-24T16:31:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1292,7 +1296,7 @@
       "summary": "Officials say the train had been transporting military personnel home for Eid when it was attacked by armed separatists.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cm2pkd58xldo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1301,7 +1305,7 @@
       "summary": "At least 82 people have been killed after a gas explosion at the Liushenyu mine in China.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/videos/c809m33yjz7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1310,7 +1314,7 @@
       "summary": "The Oreshnik missile, which reportedly travels over 10 times the speed of sound, was used, Russia has confirmed.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/clyp6831yp5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1319,7 +1323,7 @@
       "summary": "Officials say a suspect approached a checkpoint near the building and opened fire, and that a bystander was wounded.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cjwp82ye4y3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:21+00:00",
+      "published_utc": "2026-05-24T16:31:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1328,7 +1332,7 @@
       "summary": "It said difficulties had been exacerbated by \"significant cost increases resulting from government policy choices\".",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c3623ny298xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:20+00:00",
+      "published_utc": "2026-05-24T16:31:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1337,7 +1341,7 @@
       "summary": "The US president piled major pressure on Kevin Warsh's predecessor to cut interest rates.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvgz311dq3ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:20+00:00",
+      "published_utc": "2026-05-24T16:31:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1346,7 +1350,7 @@
       "summary": "Frustration with fake dating profiles has spurred new dating services with different approaches.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cnvpme6811do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:20+00:00",
+      "published_utc": "2026-05-24T16:31:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1355,7 +1359,7 @@
       "summary": "Researchers hope the work will help identify affordable, effective drugs to treat conditions like MND.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cdrp3zzzp71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T15:19:20+00:00",
+      "published_utc": "2026-05-24T16:31:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
