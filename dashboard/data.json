@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-24T21:15:14+00:00",
+  "generated_at_utc": "2026-05-24T22:15:35+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 16,
-  "last_success_utc": "2026-05-24T20:15:09+00:00",
+  "cycle_count": 17,
+  "last_success_utc": "2026-05-24T21:15:14+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -70,6 +70,22 @@
       }
     },
     {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 59.77,
+      "raw_score": 61.8,
+      "band": "buy",
+      "weight": 0.1159,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 45.1,
+        "sentiment": 88.89,
+        "volume": 50.48,
+        "policy": 70.0,
+        "volatility_penalty": 2.03
+      }
+    },
+    {
       "key": "clean_energy",
       "name": "Clean Energy",
       "score": 59.57,
@@ -99,22 +115,6 @@
         "volume": 43.81,
         "policy": 55.0,
         "volatility_penalty": 9.02
-      }
-    },
-    {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 58.1,
-      "raw_score": 60.14,
-      "band": "buy",
-      "weight": 0.1103,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 45.1,
-        "sentiment": 83.34,
-        "volume": 50.48,
-        "policy": 70.0,
-        "volatility_penalty": 2.03
       }
     },
     {
@@ -284,6 +284,48 @@
       "theme_key": "financials"
     },
     {
+      "symbol": "LLY",
+      "action": "BUY",
+      "target_weight": 0.0429,
+      "current_weight": 0.0,
+      "notional_delta": 4290.0,
+      "reason": "new position \u2014 theme 'Biotech & Pharma' score 59.8 (buy), contribution 78.9",
+      "factors": [
+        "ret_5d=5.98%",
+        "rel_vol_5d=0.87",
+        "vol_ann=38.90%"
+      ],
+      "theme_key": "biotech"
+    },
+    {
+      "symbol": "PFE",
+      "action": "SKIP",
+      "target_weight": 0.0383,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.8 (buy), contribution 70.5)",
+      "factors": [
+        "ret_5d=2.25%",
+        "rel_vol_5d=0.83",
+        "vol_ann=20.11%"
+      ],
+      "theme_key": "biotech"
+    },
+    {
+      "symbol": "VRTX",
+      "action": "SKIP",
+      "target_weight": 0.0347,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.8 (buy), contribution 63.7)",
+      "factors": [
+        "ret_5d=-0.56%",
+        "rel_vol_5d=1.21",
+        "vol_ann=23.88%"
+      ],
+      "theme_key": "biotech"
+    },
+    {
       "symbol": "FSLR",
       "action": "BUY",
       "target_weight": 0.0429,
@@ -366,48 +408,6 @@
         "vol_ann=79.59%"
       ],
       "theme_key": "semiconductors_ex_ai"
-    },
-    {
-      "symbol": "LLY",
-      "action": "BUY",
-      "target_weight": 0.0409,
-      "current_weight": 0.0,
-      "notional_delta": 4090.0,
-      "reason": "new position \u2014 theme 'Biotech & Pharma' score 58.1 (buy), contribution 77.2",
-      "factors": [
-        "ret_5d=5.98%",
-        "rel_vol_5d=0.87",
-        "vol_ann=38.90%"
-      ],
-      "theme_key": "biotech"
-    },
-    {
-      "symbol": "PFE",
-      "action": "SKIP",
-      "target_weight": 0.0365,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 58.1 (buy), contribution 68.8)",
-      "factors": [
-        "ret_5d=2.25%",
-        "rel_vol_5d=0.83",
-        "vol_ann=20.11%"
-      ],
-      "theme_key": "biotech"
-    },
-    {
-      "symbol": "VRTX",
-      "action": "SKIP",
-      "target_weight": 0.0329,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 58.1 (buy), contribution 62.0)",
-      "factors": [
-        "ret_5d=-0.56%",
-        "rel_vol_5d=1.21",
-        "vol_ann=23.88%"
-      ],
-      "theme_key": "biotech"
     },
     {
       "symbol": "RTX",
@@ -724,6 +724,57 @@
       "note": "market_closed_or_no_account"
     },
     {
+      "symbol": "LLY",
+      "action": "BUY",
+      "target_weight": 0.0429,
+      "current_weight": 0.0,
+      "notional_delta": 4290.0,
+      "reason": "new position \u2014 theme 'Biotech & Pharma' score 59.8 (buy), contribution 78.9",
+      "factors": [
+        "ret_5d=5.98%",
+        "rel_vol_5d=0.87",
+        "vol_ann=38.90%"
+      ],
+      "theme_key": "biotech",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "PFE",
+      "action": "SKIP",
+      "target_weight": 0.0383,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.8 (buy), contribution 70.5)",
+      "factors": [
+        "ret_5d=2.25%",
+        "rel_vol_5d=0.83",
+        "vol_ann=20.11%"
+      ],
+      "theme_key": "biotech",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "VRTX",
+      "action": "SKIP",
+      "target_weight": 0.0347,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.8 (buy), contribution 63.7)",
+      "factors": [
+        "ret_5d=-0.56%",
+        "rel_vol_5d=1.21",
+        "vol_ann=23.88%"
+      ],
+      "theme_key": "biotech",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
       "symbol": "FSLR",
       "action": "BUY",
       "target_weight": 0.0429,
@@ -821,57 +872,6 @@
         "vol_ann=79.59%"
       ],
       "theme_key": "semiconductors_ex_ai",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "LLY",
-      "action": "BUY",
-      "target_weight": 0.0409,
-      "current_weight": 0.0,
-      "notional_delta": 4090.0,
-      "reason": "new position \u2014 theme 'Biotech & Pharma' score 58.1 (buy), contribution 77.2",
-      "factors": [
-        "ret_5d=5.98%",
-        "rel_vol_5d=0.87",
-        "vol_ann=38.90%"
-      ],
-      "theme_key": "biotech",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "PFE",
-      "action": "SKIP",
-      "target_weight": 0.0365,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 58.1 (buy), contribution 68.8)",
-      "factors": [
-        "ret_5d=2.25%",
-        "rel_vol_5d=0.83",
-        "vol_ann=20.11%"
-      ],
-      "theme_key": "biotech",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "VRTX",
-      "action": "SKIP",
-      "target_weight": 0.0329,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 58.1 (buy), contribution 62.0)",
-      "factors": [
-        "ret_5d=-0.56%",
-        "rel_vol_5d=1.21",
-        "vol_ann=23.88%"
-      ],
-      "theme_key": "biotech",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1196,6 +1196,10 @@
     {
       "t": "2026-05-24T21:15:12+00:00",
       "v": 100000.0
+    },
+    {
+      "t": "2026-05-24T22:15:31+00:00",
+      "v": 100000.0
     }
   ],
   "breaking_news": [
@@ -1204,7 +1208,7 @@
       "summary": "Now that the U.S. government must refund most tariffs, Walmart says it might put its refund money toward lowering store prices. Executives say the cost of gas has shoppers increasingly under stress.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/21/nx-s1-5829712/walmart-price-cuts-gas-tariff-refunds",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -1213,7 +1217,7 @@
       "summary": "Ahead of a much anticipated IPO, SpaceX is carrying out a critical test of its giant, stainless steel rocket. Investors will be watching closely.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/21/nx-s1-5823583/spacex-starship-musk-ipo",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1222,7 +1226,7 @@
       "summary": "The national average for a gallon of gasoline is $4.55, as America heads into one of the busiest travel weekends of the year. What can you do to cut your costs?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5831223/memorial-day-gas-prices-save-money-iran",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1231,7 +1235,7 @@
       "summary": "Everlane's finances have faltered in recent years. But will the merger alienate Everlane's existing shoppers \u2014 or sway droves of Shein fans to trade up?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5825872/shein-buys-everlane",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1240,7 +1244,7 @@
       "summary": "The search giant is updating its famously minimalist homepage. But what looks like a tiny design change is a very big deal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5829915/google-search-box-ai",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1249,7 +1253,7 @@
       "summary": "Surging food costs and <a href=\"https://www.npr.org/2026/05/12/nx-s1-5818279/inflation-cpi-gas-prices-housing-fuel-iran-war\" target=\"_blank\">fuel prices</a> are pummeling Maine's struggling groundfishing industry. But a pandemic-era program",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/23/nx-s1-5756374/food-fish-maine-portland-donations",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1258,7 +1262,7 @@
       "summary": "The temperature is climbing, and so are people's utility bills. Rising electricity prices and hotter-than-usual weather could make it especially costly to stay cool this summer.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/23/nx-s1-5823767/summer-heat-electric-bills-cost",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1267,7 +1271,7 @@
       "summary": "At a time when hopes are dim for resolving the Israeli-Palestinian conflict, some Arab and Jewish entrepreneurs are partnering across the divide, hoping to prove what's possible.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/24/nx-s1-5806030/palestinian-israeli-startups-50-50-northeastern",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1276,7 +1280,7 @@
       "summary": "The 39-year-old was fatally injured at a shoal off the Cassowary Coast in Queensland, apparently while spearfishing.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cn9pq5l2d14o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1285,7 +1289,7 @@
       "summary": "Officials say a suspect approached a checkpoint near the building and opened fire, and that a bystander was wounded.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cjwp82ye4y3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1294,7 +1298,7 @@
       "summary": "Officials say the train had been transporting military personnel home for Eid when it was attacked by armed separatists.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cm2pkd58xldo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1303,7 +1307,7 @@
       "summary": "At least 82 people have been killed after a gas explosion at the Liushenyu mine in China.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/videos/c809m33yjz7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1312,7 +1316,7 @@
       "summary": "Nearly five years on from the school ban, young women say they have waved goodbye to their dreams.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/ce3pgn48wnqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -1321,7 +1325,7 @@
       "summary": "Officers forced their way into the building days after the party vowed to defy a court ruling removing its leaders.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c87qwrqre83o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1330,7 +1334,7 @@
       "summary": "The Oreshnik missile, which reportedly travels over 10 times the speed of sound, was used, Russia has confirmed.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/clyp6831yp5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1339,7 +1343,7 @@
       "summary": "The deal under discussion would involve a 60-day ceasefire extension during which the Strait of Hormuz would be reopened, according to US media.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/clyp0040x7po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1348,7 +1352,7 @@
       "summary": "It said difficulties had been exacerbated by \"significant cost increases resulting from government policy choices\".",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c3623ny298xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1357,7 +1361,7 @@
       "summary": "The US president piled major pressure on Kevin Warsh's predecessor to cut interest rates.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvgz311dq3ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1366,7 +1370,7 @@
       "summary": "Frustration with fake dating profiles has spurred new dating services with different approaches.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cnvpme6811do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1375,7 +1379,7 @@
       "summary": "Researchers hope the work will help identify affordable, effective drugs to treat conditions like MND.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cdrp3zzzp71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T21:15:14+00:00",
+      "published_utc": "2026-05-24T22:15:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
