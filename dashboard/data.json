@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-24T06:58:27+00:00",
+  "generated_at_utc": "2026-05-24T09:04:54+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 6,
-  "last_success_utc": "2026-05-24T06:28:53+00:00",
+  "cycle_count": 7,
+  "last_success_utc": "2026-05-24T06:49:15+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -40,14 +40,14 @@
     {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 73.65,
-      "raw_score": 82.95,
+      "score": 73.43,
+      "raw_score": 82.73,
       "band": "strong_buy",
-      "weight": 0.1561,
+      "weight": 0.1557,
       "confidence": 1.0,
       "components": {
         "momentum": 100.0,
-        "sentiment": 88.23,
+        "sentiment": 87.5,
         "volume": 57.38,
         "policy": 50.0,
         "volatility_penalty": 9.29
@@ -67,22 +67,6 @@
         "volume": 50.48,
         "policy": 90.0,
         "volatility_penalty": 2.03
-      }
-    },
-    {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 60.11,
-      "raw_score": 60.11,
-      "band": "buy",
-      "weight": 0.117,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 66.15,
-        "sentiment": 66.66,
-        "volume": 43.23,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
       }
     },
     {
@@ -120,17 +104,33 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 52.16,
-      "raw_score": 53.38,
-      "band": "starter",
-      "weight": 0.0747,
-      "confidence": 0.65,
+      "score": 55.16,
+      "raw_score": 56.38,
+      "band": "buy",
+      "weight": 0.0855,
+      "confidence": 0.7,
       "components": {
         "momentum": 52.1,
-        "sentiment": 60.0,
+        "sentiment": 70.0,
         "volume": 47.7,
         "policy": 50.0,
         "volatility_penalty": 1.22
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 52.11,
+      "raw_score": 52.11,
+      "band": "starter",
+      "weight": 0.0746,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 66.15,
+        "sentiment": 40.0,
+        "volume": 43.23,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -202,10 +202,10 @@
     {
       "symbol": "CRWD",
       "action": "BUY",
-      "target_weight": 0.0535,
+      "target_weight": 0.0534,
       "current_weight": 0.0,
-      "notional_delta": 5350.0,
-      "reason": "new position \u2014 theme 'Cybersecurity' score 73.7 (strong_buy), contribution 77.2",
+      "notional_delta": 5340.0,
+      "reason": "new position \u2014 theme 'Cybersecurity' score 73.4 (strong_buy), contribution 77.0",
       "factors": [
         "ret_5d=11.68%",
         "rel_vol_5d=1.25",
@@ -216,10 +216,10 @@
     {
       "symbol": "PANW",
       "action": "SKIP",
-      "target_weight": 0.0523,
+      "target_weight": 0.0522,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 73.7 (strong_buy), contribution 75.4)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 73.4 (strong_buy), contribution 75.2)",
       "factors": [
         "ret_5d=7.31%",
         "rel_vol_5d=1.05",
@@ -230,10 +230,10 @@
     {
       "symbol": "OKTA",
       "action": "SKIP",
-      "target_weight": 0.0502,
+      "target_weight": 0.0501,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 73.7 (strong_buy), contribution 72.4)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 73.4 (strong_buy), contribution 72.2)",
       "factors": [
         "ret_5d=11.44%",
         "rel_vol_5d=1.15",
@@ -282,48 +282,6 @@
         "vol_ann=23.88%"
       ],
       "theme_key": "biotech"
-    },
-    {
-      "symbol": "RTX",
-      "action": "SKIP",
-      "target_weight": 0.041,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 60.1 (buy), contribution 67.4)",
-      "factors": [
-        "ret_5d=3.41%",
-        "rel_vol_5d=0.90",
-        "vol_ann=26.17%"
-      ],
-      "theme_key": "defense"
-    },
-    {
-      "symbol": "LMT",
-      "action": "SKIP",
-      "target_weight": 0.0408,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 60.1 (buy), contribution 67.1)",
-      "factors": [
-        "ret_5d=3.34%",
-        "rel_vol_5d=0.90",
-        "vol_ann=26.04%"
-      ],
-      "theme_key": "defense"
-    },
-    {
-      "symbol": "GD",
-      "action": "SKIP",
-      "target_weight": 0.0352,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 60.1 (buy), contribution 57.8)",
-      "factors": [
-        "ret_5d=2.51%",
-        "rel_vol_5d=0.55",
-        "vol_ann=27.76%"
-      ],
-      "theme_key": "defense"
     },
     {
       "symbol": "GS",
@@ -412,10 +370,10 @@
     {
       "symbol": "SLB",
       "action": "SKIP",
-      "target_weight": 0.0303,
+      "target_weight": 0.0343,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 52.2 (starter), contribution 67.4)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 70.4)",
       "factors": [
         "ret_5d=3.43%",
         "rel_vol_5d=1.06",
@@ -426,10 +384,10 @@
     {
       "symbol": "CVX",
       "action": "SKIP",
-      "target_weight": 0.0244,
+      "target_weight": 0.0279,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 52.2 (starter), contribution 54.2)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 57.2)",
       "factors": [
         "ret_5d=0.17%",
         "rel_vol_5d=1.04",
@@ -440,16 +398,58 @@
     {
       "symbol": "XOM",
       "action": "SKIP",
-      "target_weight": 0.02,
+      "target_weight": 0.0232,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 52.2 (starter), contribution 44.6)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 47.6)",
       "factors": [
         "ret_5d=-1.90%",
         "rel_vol_5d=1.03",
         "vol_ann=33.37%"
       ],
       "theme_key": "oil_gas"
+    },
+    {
+      "symbol": "RTX",
+      "action": "SKIP",
+      "target_weight": 0.0263,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 52.1 (starter), contribution 59.4)",
+      "factors": [
+        "ret_5d=3.41%",
+        "rel_vol_5d=0.90",
+        "vol_ann=26.17%"
+      ],
+      "theme_key": "defense"
+    },
+    {
+      "symbol": "LMT",
+      "action": "SKIP",
+      "target_weight": 0.0262,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 52.1 (starter), contribution 59.1)",
+      "factors": [
+        "ret_5d=3.34%",
+        "rel_vol_5d=0.90",
+        "vol_ann=26.04%"
+      ],
+      "theme_key": "defense"
+    },
+    {
+      "symbol": "GD",
+      "action": "SKIP",
+      "target_weight": 0.0221,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 52.1 (starter), contribution 49.8)",
+      "factors": [
+        "ret_5d=2.51%",
+        "rel_vol_5d=0.55",
+        "vol_ann=27.76%"
+      ],
+      "theme_key": "defense"
     },
     {
       "symbol": "HD",
@@ -582,10 +582,10 @@
     {
       "symbol": "CRWD",
       "action": "BUY",
-      "target_weight": 0.0535,
+      "target_weight": 0.0534,
       "current_weight": 0.0,
-      "notional_delta": 5350.0,
-      "reason": "new position \u2014 theme 'Cybersecurity' score 73.7 (strong_buy), contribution 77.2",
+      "notional_delta": 5340.0,
+      "reason": "new position \u2014 theme 'Cybersecurity' score 73.4 (strong_buy), contribution 77.0",
       "factors": [
         "ret_5d=11.68%",
         "rel_vol_5d=1.25",
@@ -599,10 +599,10 @@
     {
       "symbol": "PANW",
       "action": "SKIP",
-      "target_weight": 0.0523,
+      "target_weight": 0.0522,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 73.7 (strong_buy), contribution 75.4)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 73.4 (strong_buy), contribution 75.2)",
       "factors": [
         "ret_5d=7.31%",
         "rel_vol_5d=1.05",
@@ -616,10 +616,10 @@
     {
       "symbol": "OKTA",
       "action": "SKIP",
-      "target_weight": 0.0502,
+      "target_weight": 0.0501,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 73.7 (strong_buy), contribution 72.4)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 73.4 (strong_buy), contribution 72.2)",
       "factors": [
         "ret_5d=11.44%",
         "rel_vol_5d=1.15",
@@ -677,57 +677,6 @@
         "vol_ann=23.88%"
       ],
       "theme_key": "biotech",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "RTX",
-      "action": "SKIP",
-      "target_weight": 0.041,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 60.1 (buy), contribution 67.4)",
-      "factors": [
-        "ret_5d=3.41%",
-        "rel_vol_5d=0.90",
-        "vol_ann=26.17%"
-      ],
-      "theme_key": "defense",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "LMT",
-      "action": "SKIP",
-      "target_weight": 0.0408,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 60.1 (buy), contribution 67.1)",
-      "factors": [
-        "ret_5d=3.34%",
-        "rel_vol_5d=0.90",
-        "vol_ann=26.04%"
-      ],
-      "theme_key": "defense",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "GD",
-      "action": "SKIP",
-      "target_weight": 0.0352,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 60.1 (buy), contribution 57.8)",
-      "factors": [
-        "ret_5d=2.51%",
-        "rel_vol_5d=0.55",
-        "vol_ann=27.76%"
-      ],
-      "theme_key": "defense",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -837,10 +786,10 @@
     {
       "symbol": "SLB",
       "action": "SKIP",
-      "target_weight": 0.0303,
+      "target_weight": 0.0343,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 52.2 (starter), contribution 67.4)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 70.4)",
       "factors": [
         "ret_5d=3.43%",
         "rel_vol_5d=1.06",
@@ -854,10 +803,10 @@
     {
       "symbol": "CVX",
       "action": "SKIP",
-      "target_weight": 0.0244,
+      "target_weight": 0.0279,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 52.2 (starter), contribution 54.2)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 57.2)",
       "factors": [
         "ret_5d=0.17%",
         "rel_vol_5d=1.04",
@@ -871,16 +820,67 @@
     {
       "symbol": "XOM",
       "action": "SKIP",
-      "target_weight": 0.02,
+      "target_weight": 0.0232,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 52.2 (starter), contribution 44.6)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 55.2 (buy), contribution 47.6)",
       "factors": [
         "ret_5d=-1.90%",
         "rel_vol_5d=1.03",
         "vol_ann=33.37%"
       ],
       "theme_key": "oil_gas",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "RTX",
+      "action": "SKIP",
+      "target_weight": 0.0263,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 52.1 (starter), contribution 59.4)",
+      "factors": [
+        "ret_5d=3.41%",
+        "rel_vol_5d=0.90",
+        "vol_ann=26.17%"
+      ],
+      "theme_key": "defense",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "LMT",
+      "action": "SKIP",
+      "target_weight": 0.0262,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 52.1 (starter), contribution 59.1)",
+      "factors": [
+        "ret_5d=3.34%",
+        "rel_vol_5d=0.90",
+        "vol_ann=26.04%"
+      ],
+      "theme_key": "defense",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "GD",
+      "action": "SKIP",
+      "target_weight": 0.0221,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Defense & Aerospace' score 52.1 (starter), contribution 49.8)",
+      "factors": [
+        "ret_5d=2.51%",
+        "rel_vol_5d=0.55",
+        "vol_ann=27.76%"
+      ],
+      "theme_key": "defense",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1063,6 +1063,10 @@
     {
       "t": "2026-05-24T06:49:10+00:00",
       "v": 100000.0
+    },
+    {
+      "t": "2026-05-24T09:04:48+00:00",
+      "v": 100000.0
     }
   ],
   "breaking_news": [
@@ -1071,7 +1075,7 @@
       "summary": "Pratt, a former reality TV star, is flooding social media with edgy humor, AI slop and combative rhetoric as a way of grabbing attention and winning the vote of the very online. It's a strategy some political experts see as the future of on",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/21/nx-s1-5827724/spencer-pratt-los-angeles-mayor-ai-slop-manosphere",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1080,7 +1084,7 @@
       "summary": "Now that the U.S. government must refund most tariffs, Walmart says it might put its refund money toward lowering store prices. Executives say the cost of gas has shoppers increasingly under stress.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/21/nx-s1-5829712/walmart-price-cuts-gas-tariff-refunds",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -1089,7 +1093,7 @@
       "summary": "Ahead of a much anticipated IPO, SpaceX is carrying out a critical test of its giant, stainless steel rocket. Investors will be watching closely.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/21/nx-s1-5823583/spacex-starship-musk-ipo",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1098,7 +1102,7 @@
       "summary": "The national average for a gallon of gasoline is $4.55, as America heads into one of the busiest travel weekends of the year. What can you do to cut your costs?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5831223/memorial-day-gas-prices-save-money-iran",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1107,7 +1111,7 @@
       "summary": "Everlane's finances have faltered in recent years. But will the merger alienate Everlane's existing shoppers \u2014 or sway droves of Shein fans to trade up?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5825872/shein-buys-everlane",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1116,7 +1120,7 @@
       "summary": "The search giant is updating its famously minimalist homepage. But what looks like a tiny design change is a very big deal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5829915/google-search-box-ai",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1125,7 +1129,7 @@
       "summary": "Surging food costs and <a href=\"https://www.npr.org/2026/05/12/nx-s1-5818279/inflation-cpi-gas-prices-housing-fuel-iran-war\" target=\"_blank\">fuel prices</a> are pummeling Maine's struggling groundfishing industry. But a pandemic-era program",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/23/nx-s1-5756374/food-fish-maine-portland-donations",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1134,7 +1138,34 @@
       "summary": "The temperature is climbing, and so are people's utility bills. Rising electricity prices and hotter-than-usual weather could make it especially costly to stay cool this summer.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/23/nx-s1-5823767/summer-heat-electric-bills-cost",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "French mum and partner held until trial after sons abandoned by road in Portugal",
+      "summary": "The couple, who allegedly left the woman's sons on a roadside in southern Portugal, will remain in custody.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/cq5p75l7n17o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-24T09:04:54+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Red Cross volunteers die from suspected Ebola in DR Congo",
+      "summary": "They are thought to have caught the virus before the outbreak was identified, the Red Cross says.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c759knxln0wo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-24T09:04:54+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Man killed in shark attack off Australia's north-east coast",
+      "summary": "The 39-year-old was fatally injured while swimming out at a shoal off the Cassowary Coast in Queensland.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/cn9pq5l2d14o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1143,25 +1174,16 @@
       "summary": "Thousands have been evacuated as officials warn a tank containing about 7,000 gallons of methyl methacrylate could explode.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c3w2l249j8go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "One dead, multiple injured after Russia launches wave of strikes on Ukraine",
-      "summary": "Twenty-one people have been injured, including a 15-year-old boy, with damage reported across all districts of Kyiv.",
+      "headline": "Large-scale Russian attack on Ukraine leaves four dead and dozens injured",
+      "summary": "The Oreshnik missile, which reportedly travels over 10 times the speed of sound, was used, according to Volodymyr Zelensky.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/clyp6831yp5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
-      "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Red Cross volunteers die from suspected Ebola in DR Congo",
-      "summary": "They are thought to have caught the virus before the outbreak was identified, the Red Cross says.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c759knxln0wo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1170,16 +1192,7 @@
       "summary": "The blast in Shanxi province constitutes the country's worst mining disaster in 16 years.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c5y0ve18qlko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "I survived a missile strike in the Strait of Hormuz, but my friend has not been found",
-      "summary": "Sunil Puniya was on his first sea job when a missile struck the oil tanker Skylight at the start of the Iran war.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/ce8pn63q771o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1188,16 +1201,7 @@
       "summary": "Eighteen people were killed and 42 others injured in the strike on the town in Russian-occupied eastern Ukraine.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgz05jyrrpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Trump says Iran deal 'largely negotiated' including reopening Strait of Hormuz",
-      "summary": "Tehran also signals progress on talks but says the key issue of nuclear weapons is not part of an initial framework it is working on.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/crmp121z3z8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1206,49 +1210,48 @@
       "summary": "Officials say a suspect approached a checkpoint near the building and opened fire, and that a bystander was wounded.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cjwp82ye4y3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
-    },
-    {
-      "headline": "Why thousands of stock trades tied to Trump are raising eyebrows",
-      "summary": "The BBC's Michelle Fleury looks at trades disclosed by the president.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.com/news/videos/cd6pzg7z319o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "UK sees hottest day of year as bank holiday travellers face queues",
-      "summary": "Temperatures hit 28.4C in parts of England on Friday, while delays have been reported at the Port of Dover and Birmingham Airport ahead of the bank holiday weekend.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.com/news/articles/cpqpygjwywjo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Love factually: Dating start-ups promise to cut the cheats",
-      "summary": "Frustration with fake dating profiles has spurred new dating services with different approaches.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.com/news/articles/cnvpme6811do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
     },
     {
       "headline": "Morrisons planning to close 100 stores in next few months",
       "summary": "It said difficulties had been exacerbated by \"significant cost increases resulting from government policy choices\".",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c3623ny298xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-24T06:49:15+00:00",
+      "published_utc": "2026-05-24T09:04:54+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Trump wants new Fed chair to be 'totally independent'",
+      "summary": "The US president piled major pressure on Kevin Warsh's predecessor to cut interest rates.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.com/news/articles/cvgz311dq3ko?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-24T09:04:54+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": true
+    },
+    {
+      "headline": "Love factually: Dating start-ups promise to cut the cheats",
+      "summary": "Frustration with fake dating profiles has spurred new dating services with different approaches.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.com/news/articles/cnvpme6811do?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-24T09:04:54+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "AI may speed up search for drugs to treat brain conditions",
+      "summary": "Researchers hope the work will help identify affordable, effective drugs to treat conditions like MND.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.com/news/articles/cdrp3zzzp71o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-24T09:04:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
   ],
   "notes": [
-    "Last cycle was 552s ago; minimum interval is 10m. Sleep 47s before retrying.",
     "Market is closed \u2014 decisions are advisory; no orders placed."
   ]
 }
