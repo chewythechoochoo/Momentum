@@ -569,3 +569,49 @@ document.addEventListener("change", (e) => {
 });
 
 load();
+
+/* ---------- silent auto-refresh ---------------------------------------
+ * Poll the static data.json roughly every 90 s. That's ~10× more often
+ * than the GH Actions cron, so the dashboard catches new data within a
+ * minute or two of it landing. Re-renders are skipped when nothing has
+ * changed (matched on generated_at_utc) so the marquee doesn't visibly
+ * jump and the tab stays cheap. Polling pauses when the tab is hidden.
+ * ------------------------------------------------------------------ */
+const REFRESH_MS = 90_000;
+let refreshTimer = null;
+
+async function refreshIfChanged() {
+  try {
+    const r = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) return;
+    const fresh = await r.json();
+    if (state.data && fresh.generated_at_utc === state.data.generated_at_utc) return;
+    state.data = fresh;
+    renderAll();
+  } catch (_) {
+    /* silent — next interval will retry */
+  }
+}
+
+function startAutoRefresh() {
+  if (refreshTimer) return;
+  refreshTimer = setInterval(refreshIfChanged, REFRESH_MS);
+}
+
+function stopAutoRefresh() {
+  if (!refreshTimer) return;
+  clearInterval(refreshTimer);
+  refreshTimer = null;
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    stopAutoRefresh();
+  } else {
+    // Immediate check when the user comes back, then resume polling.
+    refreshIfChanged();
+    startAutoRefresh();
+  }
+});
+
+startAutoRefresh();
