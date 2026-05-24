@@ -11,11 +11,13 @@ Flow:
 
 from __future__ import annotations
 
+import json
 import sys
 import traceback
 from datetime import datetime, timezone
 
 from .alpaca_client import AlpacaPaperClient
+from .config import SETTINGS
 from .allocator import build_targets
 from .decisions import build_decisions
 from .executor import apply_decisions
@@ -169,17 +171,40 @@ def run_cycle() -> int:
 
 
 def _write_minimal_dashboard(notes: list[str]) -> None:
-    payload = {
-        "schema_version": 1,
-        "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "mode": "PAPER",
-        "account": None,
-        "positions": [],
-        "themes": [],
-        "decisions": [],
-        "executions": [],
-        "notes": notes,
-    }
+    """Append a note to the dashboard without nuking the previous cycle's data.
+
+    Loads the existing dashboard payload (themes, equity_history, breaking_news,
+    positions, etc.) and just refreshes the generated timestamp and notes list.
+    If no payload exists yet (very first run), writes an empty skeleton.
+    """
+    existing: dict | None = None
+    try:
+        with open(SETTINGS.dashboard_data_path, "r", encoding="utf-8") as f:
+            existing = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        existing = None
+
+    if existing:
+        payload = dict(existing)
+        payload["generated_at_utc"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        # Merge new notes onto the front; keep previous notes for context.
+        prior_notes = payload.get("notes") or []
+        payload["notes"] = list(notes) + list(prior_notes)
+    else:
+        payload = {
+            "schema_version": 1,
+            "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "mode": "PAPER",
+            "endpoint": "alpaca-paper",
+            "account": None,
+            "positions": [],
+            "themes": [],
+            "decisions": [],
+            "executions": [],
+            "equity_history": [],
+            "breaking_news": [],
+            "notes": notes,
+        }
     try:
         write_dashboard(payload)
     except Exception:  # noqa: BLE001
