@@ -67,8 +67,10 @@ jobs:
 
       - name: Commit dashboard data
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Attribute auto-refresh commits to the repo owner so the contributor
+          # list stays clean (no github-actions[bot] in the sidebar).
+          git config user.name  "Chu Pei"
+          git config user.email "81550987+chewythechoochoo@users.noreply.github.com"
           git add dashboard/data.json data/state.json
           if git diff --staged --quiet; then
             echo "No dashboard changes to commit."
