@@ -39,7 +39,11 @@ const state = {
   mode: "score",         // score | weight
   actionFilter: "ALL",
   equityRange: "all",    // all | 72h | 24h
+  newsIndex: 0,
+  newsTimer: null,
 };
+
+const NEWS_ROTATION_MS = 6000;
 
 async function load() {
   try {
@@ -56,6 +60,7 @@ async function load() {
 
 function renderAll() {
   renderMeta();
+  renderNewsStrip();
   renderTicker();
   renderHighlight();
   renderEquityChart();
@@ -122,6 +127,71 @@ function renderHighlight() {
       <span class="h-pill">TARGET ${fmtPct(bot.weight)} · ${(bot.band || "").toUpperCase()}</span>
     </div>
   `;
+}
+
+/* ---------- breaking-news strip (rotating headlines) ---------- */
+function renderNewsStrip() {
+  const strip = $("#news-strip");
+  const items = (state.data.breaking_news || []).slice(0, 20);
+  if (!items.length) {
+    strip.hidden = true;
+    clearNewsTimer();
+    return;
+  }
+  strip.hidden = false;
+  state.newsIndex = 0;
+  paintNewsItem(items, 0);
+  $("#news-counter").textContent = `1 / ${items.length}`;
+  startNewsRotation(items);
+}
+
+function paintNewsItem(items, idx) {
+  const it = items[idx];
+  if (!it) return;
+  const link = $("#news-link");
+  const sentEl = $("#news-sentiment");
+  link.classList.add("fading");
+  // Brief fade then swap content
+  setTimeout(() => {
+    link.href = it.url || "#";
+    $("#news-source").textContent = (it.source || "").toUpperCase();
+    $("#news-headline").textContent = it.headline || "";
+    $("#news-time").textContent = timeAgo(it.published_utc);
+    $("#news-policy").hidden = !it.is_policy;
+    const s = Number(it.sentiment_score || 0);
+    sentEl.classList.remove("pos", "neg", "neu");
+    sentEl.classList.add(s > 0.05 ? "pos" : s < -0.05 ? "neg" : "neu");
+    sentEl.title = `sentiment ${s.toFixed(2)}`;
+    link.classList.remove("fading");
+  }, 200);
+}
+
+function startNewsRotation(items) {
+  clearNewsTimer();
+  if (items.length < 2) return;
+  state.newsTimer = setInterval(() => advanceNews(items, +1), NEWS_ROTATION_MS);
+}
+
+function clearNewsTimer() {
+  if (state.newsTimer) { clearInterval(state.newsTimer); state.newsTimer = null; }
+}
+
+function advanceNews(items, dir) {
+  if (!items.length) return;
+  state.newsIndex = (state.newsIndex + dir + items.length) % items.length;
+  paintNewsItem(items, state.newsIndex);
+  $("#news-counter").textContent = `${state.newsIndex + 1} / ${items.length}`;
+}
+
+function timeAgo(iso) {
+  if (!iso) return "";
+  const t = new Date(iso).getTime();
+  if (isNaN(t)) return "";
+  const sec = Math.max(0, (Date.now() - t) / 1000);
+  if (sec < 60)     return `${Math.floor(sec)}S AGO`;
+  if (sec < 3600)   return `${Math.floor(sec / 60)}M AGO`;
+  if (sec < 86400)  return `${Math.floor(sec / 3600)}H AGO`;
+  return `${Math.floor(sec / 86400)}D AGO`;
 }
 
 /* ---------- equity line chart (SVG, vanilla) ---------- */
@@ -413,44 +483,58 @@ function executionCard(e) {
 }
 
 function readmeBlock(d) {
-  const r = d.config?.risk || {};
   const w = d.config?.weights || {};
-  const fmtR = (v, d = 0) => v == null ? "—" : (v * 100).toFixed(d) + "%";
   return `<div class="readme-card"><span class="prompt">$</span> cat README.TXT
 
-MOMENTUM — paper-trading news + momentum theme-rotation agent.
-Runs every 15 minutes on GitHub Actions. Refuses any live-money config.
+MOMENTUM — a conservative paper-trading research bot.
 
-SCORING (weights from data.json)
-  theme_score = ${w.momentum}·momentum + ${w.sentiment}·sentiment + ${w.volume}·volume + ${w.policy}·policy
-                − volatility_penalty (0..30)
-  confidence  = 0.6·valid_feature_share + 0.4·min(1, news_count/8)
-  final_weight = band_target_weight × (0.5 + 0.5·confidence)
+WHAT IT DOES
+  Every 15 minutes, scores ~10 equity themes from price, volume, news,
+  and policy signals, then rotates a paper portfolio across the strongest
+  themes via Alpaca's PAPER trading API. Output is this read-only
+  dashboard. No live trading, no margin, no shorting, no options.
 
-SCORE BANDS → TARGET WEIGHT PER THEME
-  70+      strong_buy      15–20 %
-  55–69    buy             10–15 %
-  40–54    starter          5–10 %
-  35–39    hold_small       2–5 %
-  <35      exit_or_avoid    0 %
+SCORING FORMULA (per theme, 0..100)
+  theme_score = ${w.momentum}·momentum
+              + ${w.sentiment}·sentiment
+              + ${w.volume}·volume
+              + ${w.policy}·policy_catalyst
+              − volatility_penalty            (0..30)
 
-RISK CAPS
-  max theme weight ......... ${fmtR(r.max_theme_weight)}
-  max ticker weight ........ ${fmtR(r.max_ticker_weight)}
-  max new buys per cycle ... ${r.max_new_buys_per_cycle ?? "—"}
-  stop-loss range .......... ${fmtR(r.stop_loss_pct_range?.[0])} – ${fmtR(r.stop_loss_pct_range?.[1])}
-  min price ................ $${r.min_price ?? "—"}
-  min avg daily volume ..... ${(r.min_avg_daily_volume ?? 0).toLocaleString()}
-  reduce below score ....... ${r.reduce_below_score ?? "—"}
-  exit below score ......... ${r.exit_below_score ?? "—"}
-  cash buffer .............. ${fmtR(r.cash_buffer_pct)}
+  - momentum         blend of 1d/5d/20d returns of constituents
+  - sentiment        positive vs negative keyword hits in 24h news
+  - volume           5-day avg / 20-day avg, log-shaped
+  - policy_catalyst  hits for Fed, EPA, FDA, tariff, exec order, ...
+  - vol_penalty      max(0, ann_vol − 0.30) × 35, capped at 30
+
+  confidence   = 0.6·valid_feature_share + 0.4·min(1, news_count/8)
+  final_weight = band_target × (0.5 + 0.5·confidence)
+
+RANKING — SCORE BAND → TARGET WEIGHT PER THEME
+  70 – 100   strong_buy       15 – 20 %
+  55 – 69    buy              10 – 15 %
+  40 – 54    starter           5 – 10 %
+  35 – 39    hold_small        2 –  5 %
+  <  35      exit_or_avoid             0 %
+
+  Inside a theme, the top 3 tickers split its weight by ticker-level
+  contribution score (same formula, per-ticker inputs).
+
+RISK CAPS (hard)
+  ≤ 20 % per theme · ≤ 7 % per ticker · ≤ 2 new buys/cycle
+  5 – 8 % stop-loss · reduce at theme < 35 · exit at < 25
+  ≥ 5 % cash buffer · halt new buys if drawdown > 15 %
+
+DATA SOURCES
+  prices / bars / clock   Alpaca Market Data + Paper Trading APIs
+  per-theme news          Alpaca News  →  Yahoo Finance RSS  →  NewsAPI
+  breaking-news ticker    Yahoo Finance · MarketWatch · BBC · NPR (RSS)
+  sentiment + policy      keyword matching in src/sentiment.py (no API)
 
 SAFETY
-  - PAPER endpoint only. ALPACA_PAPER=true required.
-  - ALPACA_BASE_URL containing 'api.alpaca.markets' or 'live' is rejected.
-  - 'AK…' prefixed keys are rejected (live keys).
-  - ${d.config?.min_run_interval_minutes ?? 14}-minute cycle floor enforced server-side.
-  - No margin, no shorts, no options, no penny stocks, no illiquid tickers.
+  ALPACA_PAPER must be 'true'. Any URL containing 'api.alpaca.markets'
+  or 'live' is rejected; keys prefixed 'AK…' are rejected.
+  ${d.config?.min_run_interval_minutes ?? 14}-minute interval floor enforced server-side.
 
 SOURCE
   github.com/chewythechoochoo/Momentum
@@ -489,7 +573,23 @@ document.addEventListener("click", (e) => {
       .forEach(b => b.classList.toggle("active", b === eqt));
     renderEquityChart();
   }
+  // News strip prev/next + pause-on-hover handled here
+  if (e.target.id === "news-prev" || e.target.id === "news-next") {
+    const items = (state.data?.breaking_news || []).slice(0, 20);
+    advanceNews(items, e.target.id === "news-next" ? +1 : -1);
+    startNewsRotation(items);  // reset timer
+  }
 });
+
+document.addEventListener("mouseenter", (e) => {
+  if (e.target && e.target.id === "news-strip") clearNewsTimer();
+}, true);
+document.addEventListener("mouseleave", (e) => {
+  if (e.target && e.target.id === "news-strip") {
+    const items = (state.data?.breaking_news || []).slice(0, 20);
+    startNewsRotation(items);
+  }
+}, true);
 
 document.addEventListener("change", (e) => {
   if (e.target.id === "filter-action") {

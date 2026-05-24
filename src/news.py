@@ -153,3 +153,62 @@ def fetch_news_for_symbols(symbols: list[str], keywords: str = "") -> list[NewsI
         items = fetch_newsapi(keywords)
         log_event(log, "news_source_used", source="newsapi", count=len(items), symbols=symbols)
     return items
+
+
+# ---------------------------------------------------------------------------
+# Breaking-news ticker — broad market + macro headlines from free RSS feeds.
+# No API keys. Used by the dashboard's rotating news strip.
+# ---------------------------------------------------------------------------
+_BREAKING_FEEDS: tuple[tuple[str, str], ...] = (
+    ("Yahoo Finance",
+     "https://feeds.finance.yahoo.com/rss/2.0/headline?s=^GSPC,^DJI,^IXIC&region=US&lang=en-US"),
+    ("MarketWatch",
+     "https://feeds.content.dowjones.io/public/rss/mw_topstories"),
+    ("BBC Business",
+     "https://feeds.bbci.co.uk/news/business/rss.xml"),
+    ("BBC World",
+     "https://feeds.bbci.co.uk/news/world/rss.xml"),
+    ("NPR Business",
+     "https://feeds.npr.org/1006/rss.xml"),
+)
+
+
+def fetch_breaking_news(limit: int = 20, per_feed: int = 8) -> list[NewsItem]:
+    """Aggregate market + macro headlines from a few free RSS feeds.
+
+    Returns the most recent items across all feeds, deduped by URL.
+    Best-effort: any feed that 4xx/5xx is logged and skipped.
+    """
+    items: list[NewsItem] = []
+    for source_name, url in _BREAKING_FEEDS:
+        try:
+            feed = feedparser.parse(url)
+        except Exception as e:  # noqa: BLE001
+            log_event(log, "breaking_feed_failed", source=source_name, error=str(e))
+            continue
+        for entry in feed.entries[:per_feed]:
+            link = entry.get("link", "") or ""
+            if not link:
+                continue
+            items.append(
+                NewsItem(
+                    headline=(entry.get("title", "") or "").strip(),
+                    summary=(entry.get("summary", "") or "").strip(),
+                    source=source_name,
+                    url=link,
+                    symbols=[],
+                    published_utc=_safe_dt(entry.get("published")
+                                           or entry.get("updated")),
+                )
+            )
+
+    # Dedupe by URL — keep the first occurrence (preserves source ordering).
+    seen: dict[str, NewsItem] = {}
+    for it in items:
+        if it.url not in seen:
+            seen[it.url] = it
+
+    ranked = sorted(seen.values(), key=lambda x: x.published_utc, reverse=True)
+    log_event(log, "breaking_news_fetched",
+              raw=len(items), deduped=len(ranked), kept=min(limit, len(ranked)))
+    return ranked[:limit]

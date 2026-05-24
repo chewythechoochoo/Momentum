@@ -21,7 +21,7 @@ from .decisions import build_decisions
 from .executor import apply_decisions
 from .logger import get_logger, log_event
 from .market_data import compute_features
-from .news import fetch_news_for_symbols
+from .news import fetch_breaking_news, fetch_news_for_symbols
 from .reporter import build_payload, write_dashboard
 from .safety import SafetyError, assert_min_interval, redact
 from .scoring import score_theme
@@ -102,6 +102,24 @@ def run_cycle() -> int:
             news_count=len(news),
         )
 
+    # --- Breaking news strip (market + macro headlines, free RSS) ---
+    breaking_items = []
+    try:
+        for n in fetch_breaking_news(limit=20):
+            text = (n.headline or "") + ". " + (n.summary or "")
+            s = analyze([text])
+            breaking_items.append({
+                "headline": n.headline,
+                "summary": (n.summary or "")[:240],
+                "source": n.source,
+                "url": n.url,
+                "published_utc": n.published_utc.isoformat(timespec="seconds"),
+                "sentiment_score": s.score,
+                "is_policy": s.policy_hits > 0,
+            })
+    except Exception as e:  # noqa: BLE001
+        log_event(log, "breaking_news_skipped", error=str(e))
+
     # --- Allocate ---
     targets, theme_summary = build_targets(theme_scores, features)
 
@@ -138,6 +156,7 @@ def run_cycle() -> int:
         last_success_iso=state.get("last_success_iso"),
         notes=notes,
         equity_history=state.get("equity_history", []),
+        breaking_news=breaking_items,
     )
     path = write_dashboard(payload)
     log_event(log, "dashboard_written", path=path)
