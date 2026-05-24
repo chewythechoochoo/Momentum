@@ -39,11 +39,9 @@ const state = {
   mode: "score",         // score | weight
   actionFilter: "ALL",
   equityRange: "all",    // all | 72h | 24h
-  newsIndex: 0,
-  newsTimer: null,
 };
 
-const NEWS_ROTATION_MS = 6000;
+const NEWS_PIXELS_PER_SECOND = 70;   // marquee scroll speed
 
 async function load() {
   try {
@@ -129,58 +127,43 @@ function renderHighlight() {
   `;
 }
 
-/* ---------- breaking-news strip (rotating headlines) ---------- */
+/* ---------- breaking-news strip (continuous marquee) ---------- */
 function renderNewsStrip() {
   const strip = $("#news-strip");
+  const track = $("#news-track");
   const items = (state.data.breaking_news || []).slice(0, 20);
   if (!items.length) {
     strip.hidden = true;
-    clearNewsTimer();
+    track.innerHTML = "";
     return;
   }
   strip.hidden = false;
-  state.newsIndex = 0;
-  paintNewsItem(items, 0);
-  $("#news-counter").textContent = `1 / ${items.length}`;
-  startNewsRotation(items);
-}
 
-function paintNewsItem(items, idx) {
-  const it = items[idx];
-  if (!it) return;
-  const link = $("#news-link");
-  const sentEl = $("#news-sentiment");
-  link.classList.add("fading");
-  // Brief fade then swap content
-  setTimeout(() => {
-    link.href = it.url || "#";
-    $("#news-source").textContent = (it.source || "").toUpperCase();
-    $("#news-headline").textContent = it.headline || "";
-    $("#news-time").textContent = timeAgo(it.published_utc);
-    $("#news-policy").hidden = !it.is_policy;
+  // Build one rendered pass of all headlines, then duplicate it so the
+  // CSS animation can loop seamlessly by translating -50%.
+  const renderPass = () => items.map(it => {
     const s = Number(it.sentiment_score || 0);
-    sentEl.classList.remove("pos", "neg", "neu");
-    sentEl.classList.add(s > 0.05 ? "pos" : s < -0.05 ? "neg" : "neu");
-    sentEl.title = `sentiment ${s.toFixed(2)}`;
-    link.classList.remove("fading");
-  }, 200);
-}
+    const sentCls = s > 0.05 ? "pos" : s < -0.05 ? "neg" : "neu";
+    return `
+      <a class="news-item" href="${escapeHtml(it.url || "#")}" target="_blank" rel="noopener">
+        <span class="news-source">${escapeHtml(it.source || "")}</span>
+        <span class="news-headline">${escapeHtml(it.headline || "")}</span>
+        ${it.is_policy ? `<span class="news-policy">POLICY</span>` : ""}
+        <span class="news-sentiment ${sentCls}" title="sentiment ${s.toFixed(2)}"></span>
+        <span class="news-time">${timeAgo(it.published_utc)}</span>
+      </a>
+      <span class="news-sep" aria-hidden="true">·</span>
+    `;
+  }).join("");
+  track.innerHTML = renderPass() + renderPass();
 
-function startNewsRotation(items) {
-  clearNewsTimer();
-  if (items.length < 2) return;
-  state.newsTimer = setInterval(() => advanceNews(items, +1), NEWS_ROTATION_MS);
-}
-
-function clearNewsTimer() {
-  if (state.newsTimer) { clearInterval(state.newsTimer); state.newsTimer = null; }
-}
-
-function advanceNews(items, dir) {
-  if (!items.length) return;
-  state.newsIndex = (state.newsIndex + dir + items.length) % items.length;
-  paintNewsItem(items, state.newsIndex);
-  $("#news-counter").textContent = `${state.newsIndex + 1} / ${items.length}`;
+  // Calibrate animation duration so scroll speed is roughly constant
+  // regardless of how many headlines landed in this cycle.
+  requestAnimationFrame(() => {
+    const halfWidth = track.scrollWidth / 2;
+    const seconds = Math.max(40, Math.round(halfWidth / NEWS_PIXELS_PER_SECOND));
+    track.style.setProperty("--news-duration", `${seconds}s`);
+  });
 }
 
 function timeAgo(iso) {
@@ -573,23 +556,7 @@ document.addEventListener("click", (e) => {
       .forEach(b => b.classList.toggle("active", b === eqt));
     renderEquityChart();
   }
-  // News strip prev/next + pause-on-hover handled here
-  if (e.target.id === "news-prev" || e.target.id === "news-next") {
-    const items = (state.data?.breaking_news || []).slice(0, 20);
-    advanceNews(items, e.target.id === "news-next" ? +1 : -1);
-    startNewsRotation(items);  // reset timer
-  }
 });
-
-document.addEventListener("mouseenter", (e) => {
-  if (e.target && e.target.id === "news-strip") clearNewsTimer();
-}, true);
-document.addEventListener("mouseleave", (e) => {
-  if (e.target && e.target.id === "news-strip") {
-    const items = (state.data?.breaking_news || []).slice(0, 20);
-    startNewsRotation(items);
-  }
-}, true);
 
 document.addEventListener("change", (e) => {
   if (e.target.id === "filter-action") {
