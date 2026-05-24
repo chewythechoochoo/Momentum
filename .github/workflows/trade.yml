@@ -2,10 +2,13 @@ name: trade-cycle
 
 on:
   schedule:
-    # Every 15 minutes. GitHub may queue or skip cron runs during heavy load;
-    # the bot's own min-interval guardrail (MIN_RUN_INTERVAL_MINUTES) prevents
-    # accidental faster loops.
-    - cron: "*/15 * * * *"
+    # Every 15 minutes, offset by 7 minutes from the top of the hour.
+    # GitHub Actions deprioritises crons that line up with minutes 0/15/30/45
+    # (the most contested slots in the runner pool), so the literal */15
+    # often gets delivered hourly. 7/22/37/52 sit in a much quieter band.
+    # The bot's own min-interval floor (MIN_RUN_INTERVAL_MINUTES) prevents
+    # any accidentally faster delivery from creating a tight loop.
+    - cron: "7,22,37,52 * * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -60,7 +63,9 @@ jobs:
           ALPACA_API_SECRET_KEY: ${{ secrets.ALPACA_API_SECRET_KEY }}
           ALPACA_PAPER: "true"
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
-          MIN_RUN_INTERVAL_MINUTES: "14"
+          # Floor is 10 min so legit 15-min cron deliveries never trip the
+          # guard. Anything closer than 10 min is treated as a misfire.
+          MIN_RUN_INTERVAL_MINUTES: "10"
           TRADING_ENABLED: "true"
           LOG_LEVEL: "INFO"
         run: python -m src.main
