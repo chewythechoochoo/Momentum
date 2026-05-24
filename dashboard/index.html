@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="live">
 
 <header class="topbar">
   <div class="brand">
@@ -17,9 +17,9 @@
     <span class="brand-by">by trading-news-agent</span>
   </div>
   <nav class="nav" id="nav">
-    <a href="#live"   data-view="live"   class="active">LIVE</a>
+    <a href="./"          class="active">LIVE</a>
     <span class="sep">│</span>
-    <a href="#themes" data-view="themes">THEMES</a>
+    <a href="themes.html">THEMES</a>
   </nav>
   <div class="topbar-right">
     <a href="https://app.alpaca.markets/paper/dashboard/overview" target="_blank" rel="noopener">PAPER ACCOUNT ↗</a>
@@ -41,79 +41,47 @@
 <div class="highlight-band" id="highlight-band"></div>
 
 <main>
-  <!-- LIVE — equity chart hero + feed of decisions/positions/etc below it -->
-  <section class="view" id="view-live">
-
-    <section class="equity-pane" id="equity">
-      <div class="equity-header">
-        <h2>T O T A L   A C C O U N T   V A L U E <span class="muted" id="equity-meta"></span></h2>
+  <section class="equity-pane" id="equity">
+    <div class="equity-header">
+      <h2>T O T A L   A C C O U N T   V A L U E <span class="muted" id="equity-meta"></span></h2>
+    </div>
+    <div class="equity-chart" id="equity-chart"></div>
+    <div class="equity-slider" id="equity-slider">
+      <div class="slider-labels">
+        <span class="slider-from" id="slider-from">—</span>
+        <span class="slider-hint">drag to zoom · double-click to reset</span>
+        <span class="slider-to"   id="slider-to">—</span>
       </div>
-      <div class="equity-chart" id="equity-chart"></div>
-      <div class="equity-slider" id="equity-slider">
-        <div class="slider-labels">
-          <span class="slider-from" id="slider-from">—</span>
-          <span class="slider-hint">drag to zoom · double-click to reset</span>
-          <span class="slider-to"   id="slider-to">—</span>
-        </div>
-        <div class="slider-track" id="slider-track">
-          <svg class="slider-spark" id="slider-spark" preserveAspectRatio="none"></svg>
-          <div class="slider-range" id="slider-range"></div>
-          <div class="slider-thumb" id="slider-left"  data-handle="left"  tabindex="0" aria-label="Start of range"></div>
-          <div class="slider-thumb" id="slider-right" data-handle="right" tabindex="0" aria-label="End of range"></div>
-        </div>
+      <div class="slider-track" id="slider-track">
+        <svg class="slider-spark" id="slider-spark" preserveAspectRatio="none"></svg>
+        <div class="slider-range" id="slider-range"></div>
+        <div class="slider-thumb" id="slider-left"  data-handle="left"  tabindex="0" aria-label="Start of range"></div>
+        <div class="slider-thumb" id="slider-right" data-handle="right" tabindex="0" aria-label="End of range"></div>
       </div>
-    </section>
-
-    <aside class="feed-pane" id="feed">
-      <div class="tabs" id="tabs">
-        <div class="tab active" data-tab="decisions">DECISIONS</div>
-        <div class="tab" data-tab="positions">POSITIONS</div>
-        <div class="tab" data-tab="executions">EXECUTIONS</div>
-        <div class="tab" data-tab="readme">README.TXT</div>
-      </div>
-      <div class="feed-filter">
-        <span>FILTER:</span>
-        <select id="filter-action">
-          <option value="ALL">ALL ACTIONS</option>
-          <option value="BUY">BUY</option>
-          <option value="SELL">SELL</option>
-          <option value="REDUCE">REDUCE</option>
-          <option value="HOLD">HOLD</option>
-          <option value="SKIP">SKIP</option>
-        </select>
-        <span class="feed-count" id="feed-count"></span>
-      </div>
-      <div class="feed-body" id="feed-body"></div>
-    </aside>
-
+    </div>
   </section>
 
-  <!-- THEMES — full-width theme score bars -->
-  <section class="view hidden" id="view-themes">
-    <section class="chart-pane" id="chart">
-      <div class="chart-header">
-        <h2>THEME SCORES <span class="muted">— SORTED HIGH → LOW</span></h2>
-        <div class="toggle" id="mode-toggle">
-          <button class="active" data-mode="score">SCORE</button>
-          <button data-mode="weight">WEIGHT</button>
-        </div>
-      </div>
-
-      <div class="chart-grid" id="theme-chart">
-        <div class="grid-vertical">
-          <span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <div class="x-axis">
-        <span>0</span><span>25</span><span>50</span><span>75</span><span>100</span>
-      </div>
-      <div class="x-axis-label" id="x-axis-label">THEME SCORE (0–100)</div>
-
-      <div class="watermark-l">Momentum</div>
-      <div class="watermark-r">github.com/chewythechoochoo/Momentum</div>
-    </section>
-  </section>
+  <aside class="feed-pane" id="feed">
+    <div class="tabs" id="tabs">
+      <div class="tab active" data-tab="decisions">DECISIONS</div>
+      <div class="tab" data-tab="positions">POSITIONS</div>
+      <div class="tab" data-tab="executions">EXECUTIONS</div>
+      <div class="tab" data-tab="readme">README.TXT</div>
+    </div>
+    <div class="feed-filter">
+      <span>FILTER:</span>
+      <select id="filter-action">
+        <option value="ALL">ALL ACTIONS</option>
+        <option value="BUY">BUY</option>
+        <option value="SELL">SELL</option>
+        <option value="REDUCE">REDUCE</option>
+        <option value="HOLD">HOLD</option>
+        <option value="SKIP">SKIP</option>
+      </select>
+      <span class="feed-count" id="feed-count"></span>
+    </div>
+    <div class="feed-body" id="feed-body"></div>
+  </aside>
 </main>
 
 <script src="app.js"></script>

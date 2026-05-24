@@ -35,7 +35,6 @@ const titleize = (k) => (k || "").replace(/_/g, " ").toUpperCase();
 
 const state = {
   data: null,
-  view: "live",           // live | themes
   tab: "decisions",
   mode: "score",          // score | weight
   actionFilter: "ALL",
@@ -187,6 +186,7 @@ const EQUITY_COLOR = "#7B5CFF";
 
 function renderEquityChart() {
   const root = $("#equity-chart");
+  if (!root) return;   // not on this page
   const meta = $("#equity-meta");
   const raw = state.data.equity_history || [];
   const all = raw
@@ -330,8 +330,9 @@ function fmtPctSignedDirect(p) {
 
 /* ---------- chart ---------- */
 function renderChart() {
-  const themes = [...(state.data.themes || [])].sort((a, b) => b.score - a.score);
   const grid = $("#theme-chart");
+  if (!grid) return;   // not on this page
+  const themes = [...(state.data.themes || [])].sort((a, b) => b.score - a.score);
   // Preserve the grid-vertical lines, replace everything else.
   grid.innerHTML =
     `<div class="grid-vertical"><span></span><span></span><span></span><span></span></div>`;
@@ -378,6 +379,7 @@ function renderChart() {
 /* ---------- feed ---------- */
 function renderFeed() {
   const body = $("#feed-body");
+  if (!body) return;   // not on this page
   const d = state.data;
   const filterEl = $("#filter-action");
   filterEl.parentElement.style.display = state.tab === "decisions" ? "" : "none";
@@ -561,11 +563,6 @@ document.addEventListener("click", (e) => {
       .forEach(b => b.classList.toggle("active", b === tog));
     renderChart();
   }
-  const navA = e.target.closest("#nav a[data-view]");
-  if (navA) {
-    e.preventDefault();
-    switchView(navA.dataset.view);
-  }
 });
 
 document.addEventListener("change", (e) => {
@@ -573,32 +570,6 @@ document.addEventListener("change", (e) => {
     state.actionFilter = e.target.value;
     renderFeed();
   }
-});
-
-/* ---------- view switching (LIVE / THEMES) -----------------------------
- * Hash-based: /#live or /#themes. Defaults to live. The two views are
- * just sibling <section> tags that get .hidden toggled.
- * --------------------------------------------------------------------- */
-function switchView(name) {
-  if (!["live", "themes"].includes(name)) name = "live";
-  state.view = name;
-  if (location.hash !== "#" + name) location.hash = name;
-  document.querySelectorAll(".view").forEach(v => {
-    v.classList.toggle("hidden", v.id !== "view-" + name);
-  });
-  document.querySelectorAll("#nav a[data-view]").forEach(a => {
-    a.classList.toggle("active", a.dataset.view === name);
-  });
-  // Re-render the panel we just made visible IF data has been loaded.
-  // The first call to switchView() runs before load() finishes; skipping
-  // here is safe because renderAll() will paint everything once data lands.
-  if (!state.data) return;
-  if (name === "live")   renderEquityChart();
-  if (name === "themes") renderChart();
-}
-
-window.addEventListener("hashchange", () => {
-  switchView((location.hash || "#live").slice(1));
 });
 
 /* ---------- equity-chart slider (two-handle range brush) ---------------
@@ -724,9 +695,9 @@ function updateSliderLabels(points) {
   toEl.textContent   = fmtAxisDate(points[hi].t);
 }
 
-// Wire everything up after the DOM exists.
+// Wire up the slider on the LIVE page (no-op on the THEMES page —
+// initSlider returns early if #slider-track isn't present).
 initSlider();
-switchView((location.hash || "#live").slice(1));
 
 load();
 

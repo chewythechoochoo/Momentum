@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Theme Scores — Momentum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="themes">
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-word"><em>Momentum</em></span>
+    <span class="brand-by">by trading-news-agent</span>
+  </div>
+  <nav class="nav" id="nav">
+    <a href="./">LIVE</a>
+    <span class="sep">│</span>
+    <a href="themes.html" class="active">THEMES</a>
+  </nav>
+  <div class="topbar-right">
+    <a href="https://app.alpaca.markets/paper/dashboard/overview" target="_blank" rel="noopener">PAPER ACCOUNT ↗</a>
+    <a href="https://github.com/chewythechoochoo/Momentum" target="_blank" rel="noopener">ABOUT ↗</a>
+  </div>
+</header>
+
+<div class="meta-strip" id="meta-strip">LOADING…</div>
+
+<div class="news-strip" id="news-strip" hidden>
+  <span class="news-label">BREAKING<span class="news-pulse"></span></span>
+  <div class="news-marquee" id="news-marquee">
+    <div class="news-track" id="news-track" aria-live="off"></div>
+  </div>
+</div>
+
+<div class="ticker-row" id="ticker-row"></div>
+
+<div class="highlight-band" id="highlight-band"></div>
+
+<main>
+  <section class="chart-pane" id="chart">
+    <div class="chart-header">
+      <h2>THEME SCORES <span class="muted">— SORTED HIGH → LOW</span></h2>
+      <div class="toggle" id="mode-toggle">
+        <button class="active" data-mode="score">SCORE</button>
+        <button data-mode="weight">WEIGHT</button>
+      </div>
+    </div>
+
+    <div class="chart-grid" id="theme-chart">
+      <div class="grid-vertical">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="x-axis">
+      <span>0</span><span>25</span><span>50</span><span>75</span><span>100</span>
+    </div>
+    <div class="x-axis-label" id="x-axis-label">THEME SCORE (0–100)</div>
+
+    <div class="watermark-l">Momentum</div>
+    <div class="watermark-r">github.com/chewythechoochoo/Momentum</div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
