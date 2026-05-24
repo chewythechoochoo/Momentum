@@ -35,10 +35,12 @@ const titleize = (k) => (k || "").replace(/_/g, " ").toUpperCase();
 
 const state = {
   data: null,
+  view: "live",           // live | themes
   tab: "decisions",
-  mode: "score",         // score | weight
+  mode: "score",          // score | weight
   actionFilter: "ALL",
-  equityRange: "all",    // all | 72h | 24h
+  sliderStart: 0,         // 0..1, fraction of equity_history shown
+  sliderEnd: 1,
 };
 
 const NEWS_PIXELS_PER_SECOND = 70;   // marquee scroll speed
@@ -192,12 +194,19 @@ function renderEquityChart() {
     .filter(p => !isNaN(p.t) && !isNaN(p.v))
     .sort((a, b) => a.t - b.t);
 
+  // Slider selects a contiguous sub-range. When the user hasn't dragged
+  // (sliderStart=0, sliderEnd=1) this is identity.
   let points = all;
-  if (state.equityRange === "72h" || state.equityRange === "24h") {
-    const hrs = state.equityRange === "72h" ? 72 : 24;
-    const cutoff = (all.length ? all[all.length - 1].t.getTime() : Date.now()) - hrs * 3600_000;
-    points = all.filter(p => p.t.getTime() >= cutoff);
+  if (all.length >= 2) {
+    const lo = Math.floor(state.sliderStart * (all.length - 1));
+    const hi = Math.ceil(state.sliderEnd   * (all.length - 1));
+    points = all.slice(lo, hi + 1);
   }
+
+  // Always re-render the slider scrubber so it tracks the full history,
+  // even when the main chart can't draw a line yet.
+  renderSliderSpark(all);
+  updateSliderLabels(all);
 
   if (points.length < 2) {
     root.innerHTML =
@@ -552,12 +561,10 @@ document.addEventListener("click", (e) => {
       .forEach(b => b.classList.toggle("active", b === tog));
     renderChart();
   }
-  const eqt = e.target.closest("#equity-range button");
-  if (eqt) {
-    state.equityRange = eqt.dataset.range;
-    document.querySelectorAll("#equity-range button")
-      .forEach(b => b.classList.toggle("active", b === eqt));
-    renderEquityChart();
+  const navA = e.target.closest("#nav a[data-view]");
+  if (navA) {
+    e.preventDefault();
+    switchView(navA.dataset.view);
   }
 });
 
@@ -567,6 +574,159 @@ document.addEventListener("change", (e) => {
     renderFeed();
   }
 });
+
+/* ---------- view switching (LIVE / THEMES) -----------------------------
+ * Hash-based: /#live or /#themes. Defaults to live. The two views are
+ * just sibling <section> tags that get .hidden toggled.
+ * --------------------------------------------------------------------- */
+function switchView(name) {
+  if (!["live", "themes"].includes(name)) name = "live";
+  state.view = name;
+  if (location.hash !== "#" + name) location.hash = name;
+  document.querySelectorAll(".view").forEach(v => {
+    v.classList.toggle("hidden", v.id !== "view-" + name);
+  });
+  document.querySelectorAll("#nav a[data-view]").forEach(a => {
+    a.classList.toggle("active", a.dataset.view === name);
+  });
+  // Re-render the panel we just made visible IF data has been loaded.
+  // The first call to switchView() runs before load() finishes; skipping
+  // here is safe because renderAll() will paint everything once data lands.
+  if (!state.data) return;
+  if (name === "live")   renderEquityChart();
+  if (name === "themes") renderChart();
+}
+
+window.addEventListener("hashchange", () => {
+  switchView((location.hash || "#live").slice(1));
+});
+
+/* ---------- equity-chart slider (two-handle range brush) ---------------
+ * Lets the user drag a window over the equity history. Both handles
+ * report 0..1 fractions; renderEquityChart() slices equity_history by
+ * those fractions. A faint sparkline of the full curve sits inside the
+ * track so dragging feels anchored to the data.
+ * --------------------------------------------------------------------- */
+function initSlider() {
+  const track = $("#slider-track");
+  if (!track) return;
+
+  const apply = () => {
+    const left  = $("#slider-left");
+    const right = $("#slider-right");
+    const range = $("#slider-range");
+    left.style.left  = (state.sliderStart * 100) + "%";
+    right.style.left = (state.sliderEnd   * 100) + "%";
+    range.style.left  = (state.sliderStart * 100) + "%";
+    range.style.right = ((1 - state.sliderEnd) * 100) + "%";
+  };
+  apply();
+
+  let activeHandle = null;
+  let trackRect = null;
+
+  const fractionFromEvent = (e) => {
+    if (!trackRect) trackRect = track.getBoundingClientRect();
+    const x = e.clientX - trackRect.left;
+    return Math.max(0, Math.min(1, x / trackRect.width));
+  };
+
+  const onMove = (e) => {
+    if (!activeHandle) return;
+    e.preventDefault();
+    let p = fractionFromEvent(e);
+    const minWidth = 0.02;  // can't crush the range below 2% of history
+    if (activeHandle === "left")  state.sliderStart = Math.min(p, state.sliderEnd  - minWidth);
+    if (activeHandle === "right") state.sliderEnd   = Math.max(p, state.sliderStart + minWidth);
+    apply();
+    renderEquityChart();
+  };
+
+  const onUp = () => {
+    activeHandle = null;
+    trackRect = null;
+    document.removeEventListener("pointermove", onMove);
+    document.removeEventListener("pointerup", onUp);
+    document.removeEventListener("pointercancel", onUp);
+  };
+
+  track.addEventListener("pointerdown", (e) => {
+    const handle = e.target.closest(".slider-thumb");
+    activeHandle = handle ? handle.dataset.handle : null;
+    if (!activeHandle) {
+      // Click on the track body — nudge the nearest handle to the click.
+      trackRect = track.getBoundingClientRect();
+      const p = fractionFromEvent(e);
+      const distLeft  = Math.abs(p - state.sliderStart);
+      const distRight = Math.abs(p - state.sliderEnd);
+      activeHandle = distLeft < distRight ? "left" : "right";
+    }
+    trackRect = track.getBoundingClientRect();
+    document.addEventListener("pointermove", onMove);
+    document.addEventListener("pointerup",   onUp);
+    document.addEventListener("pointercancel", onUp);
+    onMove(e);
+  });
+
+  track.addEventListener("dblclick", () => {
+    state.sliderStart = 0;
+    state.sliderEnd   = 1;
+    apply();
+    renderEquityChart();
+  });
+
+  // Keyboard a11y: arrow keys nudge the focused handle by 2 %.
+  document.querySelectorAll(".slider-thumb").forEach(t => {
+    t.addEventListener("keydown", (e) => {
+      const step = (e.shiftKey ? 0.10 : 0.02) * (e.key === "ArrowLeft" ? -1 : 1);
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      e.preventDefault();
+      if (t.dataset.handle === "left")
+        state.sliderStart = Math.max(0, Math.min(state.sliderEnd - 0.02, state.sliderStart + step));
+      else
+        state.sliderEnd   = Math.max(state.sliderStart + 0.02, Math.min(1, state.sliderEnd + step));
+      apply();
+      renderEquityChart();
+    });
+  });
+}
+
+function renderSliderSpark(points) {
+  const svg = $("#slider-spark");
+  if (!svg) return;
+  if (points.length < 2) { svg.innerHTML = ""; return; }
+  const W = 1000, H = 44;
+  const vMin = Math.min(...points.map(p => p.v));
+  const vMax = Math.max(...points.map(p => p.v));
+  const vSpan = Math.max(vMax - vMin, 1);
+  const t0 = points[0].t.getTime();
+  const t1 = points[points.length - 1].t.getTime();
+  const tSpan = Math.max(1, t1 - t0);
+  const x = (p) => ((p.t.getTime() - t0) / tSpan) * W;
+  const y = (p) => H - 4 - ((p.v - vMin) / vSpan) * (H - 8);
+  const d = points.map((p, i) => `${i ? "L" : "M"}${x(p).toFixed(1)},${y(p).toFixed(1)}`).join(" ");
+  const fill = `M0,${H} L${d.slice(1)} L${W},${H} Z`;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.innerHTML = `<path class="spark-fill" d="${fill}"/><path d="${d}"/>`;
+}
+
+function updateSliderLabels(points) {
+  const fromEl = $("#slider-from");
+  const toEl   = $("#slider-to");
+  if (!fromEl || !toEl || points.length < 2) {
+    if (fromEl) fromEl.textContent = "—";
+    if (toEl)   toEl.textContent   = "—";
+    return;
+  }
+  const lo = Math.floor(state.sliderStart * (points.length - 1));
+  const hi = Math.ceil( state.sliderEnd   * (points.length - 1));
+  fromEl.textContent = fmtAxisDate(points[lo].t);
+  toEl.textContent   = fmtAxisDate(points[hi].t);
+}
+
+// Wire everything up after the DOM exists.
+initSlider();
+switchView((location.hash || "#live").slice(1));
 
 load();
 
