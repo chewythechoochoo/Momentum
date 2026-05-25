@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-25T18:15:27+00:00",
+  "generated_at_utc": "2026-05-25T20:04:13+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 24,
-  "last_success_utc": "2026-05-25T16:36:30+00:00",
+  "cycle_count": 25,
+  "last_success_utc": "2026-05-25T18:15:27+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -37,6 +37,22 @@
   },
   "positions": [],
   "themes": [
+    {
+      "key": "cybersecurity",
+      "name": "Cybersecurity",
+      "score": 75.28,
+      "raw_score": 83.75,
+      "band": "strong_buy",
+      "weight": 0.1588,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 100.0,
+        "sentiment": 90.91,
+        "volume": 57.38,
+        "policy": 50.0,
+        "volatility_penalty": 8.47
+      }
+    },
     {
       "key": "financials",
       "name": "Financials & Rates",
@@ -75,8 +91,8 @@
       "score": 64.59,
       "raw_score": 73.82,
       "band": "buy",
-      "weight": 0.1287,
-      "confidence": 0.95,
+      "weight": 0.132,
+      "confidence": 1.0,
       "components": {
         "momentum": 75.15,
         "sentiment": 100.0,
@@ -99,22 +115,6 @@
         "volume": 44.52,
         "policy": 50.0,
         "volatility_penalty": 7.31
-      }
-    },
-    {
-      "key": "cybersecurity",
-      "name": "Cybersecurity",
-      "score": 63.01,
-      "raw_score": 71.48,
-      "band": "buy",
-      "weight": 0.1045,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 100.0,
-        "sentiment": 50.0,
-        "volume": 57.38,
-        "policy": 50.0,
-        "volatility_penalty": 8.47
       }
     },
     {
@@ -200,6 +200,48 @@
   ],
   "decisions": [
     {
+      "symbol": "CRWD",
+      "action": "SKIP",
+      "target_weight": 0.0544,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 75.3 (strong_buy), contribution 79.1)",
+      "factors": [
+        "ret_5d=11.68%",
+        "rel_vol_5d=1.25",
+        "vol_ann=46.89%"
+      ],
+      "theme_key": "cybersecurity"
+    },
+    {
+      "symbol": "PANW",
+      "action": "SKIP",
+      "target_weight": 0.0533,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 75.3 (strong_buy), contribution 77.4)",
+      "factors": [
+        "ret_5d=7.31%",
+        "rel_vol_5d=1.05",
+        "vol_ann=45.68%"
+      ],
+      "theme_key": "cybersecurity"
+    },
+    {
+      "symbol": "OKTA",
+      "action": "SKIP",
+      "target_weight": 0.0511,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 75.3 (strong_buy), contribution 74.3)",
+      "factors": [
+        "ret_5d=11.44%",
+        "rel_vol_5d=1.15",
+        "vol_ann=57.54%"
+      ],
+      "theme_key": "cybersecurity"
+    },
+    {
       "symbol": "GS",
       "action": "BUY",
       "target_weight": 0.0474,
@@ -286,7 +328,7 @@
     {
       "symbol": "ASML",
       "action": "SKIP",
-      "target_weight": 0.0462,
+      "target_weight": 0.0474,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 76.3)",
@@ -300,7 +342,7 @@
     {
       "symbol": "LRCX",
       "action": "SKIP",
-      "target_weight": 0.0452,
+      "target_weight": 0.0463,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 74.6)",
@@ -314,7 +356,7 @@
     {
       "symbol": "MU",
       "action": "SKIP",
-      "target_weight": 0.0373,
+      "target_weight": 0.0382,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 61.6)",
@@ -366,48 +408,6 @@
         "vol_ann=48.01%"
       ],
       "theme_key": "ev_clean_transport"
-    },
-    {
-      "symbol": "CRWD",
-      "action": "SKIP",
-      "target_weight": 0.036,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 63.0 (buy), contribution 66.8)",
-      "factors": [
-        "ret_5d=11.68%",
-        "rel_vol_5d=1.25",
-        "vol_ann=46.89%"
-      ],
-      "theme_key": "cybersecurity"
-    },
-    {
-      "symbol": "PANW",
-      "action": "SKIP",
-      "target_weight": 0.0351,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 63.0 (buy), contribution 65.1)",
-      "factors": [
-        "ret_5d=7.31%",
-        "rel_vol_5d=1.05",
-        "vol_ann=45.68%"
-      ],
-      "theme_key": "cybersecurity"
-    },
-    {
-      "symbol": "OKTA",
-      "action": "SKIP",
-      "target_weight": 0.0334,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 63.0 (buy), contribution 62.0)",
-      "factors": [
-        "ret_5d=11.44%",
-        "rel_vol_5d=1.15",
-        "vol_ann=57.54%"
-      ],
-      "theme_key": "cybersecurity"
     },
     {
       "symbol": "FSLR",
@@ -496,7 +496,7 @@
     {
       "symbol": "HD",
       "action": "SKIP",
-      "target_weight": 0.0264,
+      "target_weight": 0.0217,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.8 (starter), contribution 71.3)",
@@ -510,7 +510,7 @@
     {
       "symbol": "NKE",
       "action": "SKIP",
-      "target_weight": 0.0233,
+      "target_weight": 0.0192,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.8 (starter), contribution 63.0)",
@@ -524,7 +524,7 @@
     {
       "symbol": "MCD",
       "action": "SKIP",
-      "target_weight": 0.0213,
+      "target_weight": 0.0175,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.8 (starter), contribution 57.7)",
@@ -534,52 +534,61 @@
         "vol_ann=18.68%"
       ],
       "theme_key": "consumer_discretionary"
-    },
-    {
-      "symbol": "LLY",
-      "action": "SKIP",
-      "target_weight": 0.017,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 65.2)",
-      "factors": [
-        "ret_5d=5.98%",
-        "rel_vol_5d=0.87",
-        "vol_ann=38.84%"
-      ],
-      "theme_key": "biotech"
-    },
-    {
-      "symbol": "PFE",
-      "action": "SKIP",
-      "target_weight": 0.0148,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 56.8)",
-      "factors": [
-        "ret_5d=2.25%",
-        "rel_vol_5d=0.83",
-        "vol_ann=19.83%"
-      ],
-      "theme_key": "biotech"
-    },
-    {
-      "symbol": "VRTX",
-      "action": "SKIP",
-      "target_weight": 0.0131,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 50.0)",
-      "factors": [
-        "ret_5d=-0.56%",
-        "rel_vol_5d=1.21",
-        "vol_ann=21.08%"
-      ],
-      "theme_key": "biotech"
     }
   ],
   "executions": [
     {
+      "symbol": "CRWD",
+      "action": "SKIP",
+      "target_weight": 0.0544,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 75.3 (strong_buy), contribution 79.1)",
+      "factors": [
+        "ret_5d=11.68%",
+        "rel_vol_5d=1.25",
+        "vol_ann=46.89%"
+      ],
+      "theme_key": "cybersecurity",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "PANW",
+      "action": "SKIP",
+      "target_weight": 0.0533,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 75.3 (strong_buy), contribution 77.4)",
+      "factors": [
+        "ret_5d=7.31%",
+        "rel_vol_5d=1.05",
+        "vol_ann=45.68%"
+      ],
+      "theme_key": "cybersecurity",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "OKTA",
+      "action": "SKIP",
+      "target_weight": 0.0511,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 75.3 (strong_buy), contribution 74.3)",
+      "factors": [
+        "ret_5d=11.44%",
+        "rel_vol_5d=1.15",
+        "vol_ann=57.54%"
+      ],
+      "theme_key": "cybersecurity",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
       "symbol": "GS",
       "action": "BUY",
       "target_weight": 0.0474,
@@ -684,7 +693,7 @@
     {
       "symbol": "ASML",
       "action": "SKIP",
-      "target_weight": 0.0462,
+      "target_weight": 0.0474,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 76.3)",
@@ -701,7 +710,7 @@
     {
       "symbol": "LRCX",
       "action": "SKIP",
-      "target_weight": 0.0452,
+      "target_weight": 0.0463,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 74.6)",
@@ -718,7 +727,7 @@
     {
       "symbol": "MU",
       "action": "SKIP",
-      "target_weight": 0.0373,
+      "target_weight": 0.0382,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 61.6)",
@@ -779,57 +788,6 @@
         "vol_ann=48.01%"
       ],
       "theme_key": "ev_clean_transport",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "CRWD",
-      "action": "SKIP",
-      "target_weight": 0.036,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 63.0 (buy), contribution 66.8)",
-      "factors": [
-        "ret_5d=11.68%",
-        "rel_vol_5d=1.25",
-        "vol_ann=46.89%"
-      ],
-      "theme_key": "cybersecurity",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "PANW",
-      "action": "SKIP",
-      "target_weight": 0.0351,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 63.0 (buy), contribution 65.1)",
-      "factors": [
-        "ret_5d=7.31%",
-        "rel_vol_5d=1.05",
-        "vol_ann=45.68%"
-      ],
-      "theme_key": "cybersecurity",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "OKTA",
-      "action": "SKIP",
-      "target_weight": 0.0334,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 63.0 (buy), contribution 62.0)",
-      "factors": [
-        "ret_5d=11.44%",
-        "rel_vol_5d=1.15",
-        "vol_ann=57.54%"
-      ],
-      "theme_key": "cybersecurity",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -939,7 +897,7 @@
     {
       "symbol": "HD",
       "action": "SKIP",
-      "target_weight": 0.0264,
+      "target_weight": 0.0217,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.8 (starter), contribution 71.3)",
@@ -956,7 +914,7 @@
     {
       "symbol": "NKE",
       "action": "SKIP",
-      "target_weight": 0.0233,
+      "target_weight": 0.0192,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.8 (starter), contribution 63.0)",
@@ -973,7 +931,7 @@
     {
       "symbol": "MCD",
       "action": "SKIP",
-      "target_weight": 0.0213,
+      "target_weight": 0.0175,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.8 (starter), contribution 57.7)",
@@ -983,57 +941,6 @@
         "vol_ann=18.68%"
       ],
       "theme_key": "consumer_discretionary",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "LLY",
-      "action": "SKIP",
-      "target_weight": 0.017,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 65.2)",
-      "factors": [
-        "ret_5d=5.98%",
-        "rel_vol_5d=0.87",
-        "vol_ann=38.84%"
-      ],
-      "theme_key": "biotech",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "PFE",
-      "action": "SKIP",
-      "target_weight": 0.0148,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 56.8)",
-      "factors": [
-        "ret_5d=2.25%",
-        "rel_vol_5d=0.83",
-        "vol_ann=19.83%"
-      ],
-      "theme_key": "biotech",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "VRTX",
-      "action": "SKIP",
-      "target_weight": 0.0131,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 50.0)",
-      "factors": [
-        "ret_5d=-0.56%",
-        "rel_vol_5d=1.21",
-        "vol_ann=21.08%"
-      ],
-      "theme_key": "biotech",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1135,6 +1042,10 @@
     {
       "t": "2026-05-25T18:15:23+00:00",
       "v": 100000.0
+    },
+    {
+      "t": "2026-05-25T20:04:08+00:00",
+      "v": 100000.0
     }
   ],
   "breaking_news": [
@@ -1143,7 +1054,7 @@
       "summary": "Ahead of a much anticipated IPO, SpaceX is carrying out a critical test of its giant, stainless steel rocket. Investors will be watching closely.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/21/nx-s1-5823583/spacex-starship-musk-ipo",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1152,7 +1063,7 @@
       "summary": "The national average for a gallon of gasoline is $4.55, as America heads into one of the busiest travel weekends of the year. What can you do to cut your costs?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5831223/memorial-day-gas-prices-save-money-iran",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1161,7 +1072,7 @@
       "summary": "Everlane's finances have faltered in recent years. But will the merger alienate Everlane's existing shoppers \u2014 or sway droves of Shein fans to trade up?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5825872/shein-buys-everlane",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1170,7 +1081,7 @@
       "summary": "The search giant is updating its famously minimalist homepage. But what looks like a tiny design change is a very big deal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5829915/google-search-box-ai",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1179,7 +1090,7 @@
       "summary": "Surging food costs and <a href=\"https://www.npr.org/2026/05/12/nx-s1-5818279/inflation-cpi-gas-prices-housing-fuel-iran-war\" target=\"_blank\">fuel prices</a> are pummeling Maine's struggling groundfishing industry. But a pandemic-era program",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/23/nx-s1-5756374/food-fish-maine-portland-donations",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1188,7 +1099,7 @@
       "summary": "The temperature is climbing, and so are people's utility bills. Rising electricity prices and hotter-than-usual weather could make it especially costly to stay cool this summer.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/23/nx-s1-5823767/summer-heat-electric-bills-cost",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1197,7 +1108,7 @@
       "summary": "At a time when hopes are dim for resolving the Israeli-Palestinian conflict, some Arab and Jewish entrepreneurs are partnering across the divide, hoping to prove what's possible.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/24/nx-s1-5806030/palestinian-israeli-startups-50-50-northeastern",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1206,7 +1117,7 @@
       "summary": "Americans are increasingly passing up on dining out. So one restaurant is allowing diners to pay what they like for their food.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/25/nx-s1-5719494/restaurants-dining-food-inflation",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1215,16 +1126,7 @@
       "summary": "Police say a man sprayed a substance at an ATM in the luxury Ginza 6 shopping centre.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cevpp983kmzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
-      "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "'Blistering heat': Indians warned to stay indoors as temperatures soar",
-      "summary": "The BBC's Sumedha Pal described how difficult it was to be standing in the streets of Delhi as temperatures rose to 45C .",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/videos/ckgppxw9239o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -1233,7 +1135,7 @@
       "summary": "Kem Sokha was serving a 27-year sentence on treason charges, which were widely derided as politically motivated.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cm2ppv1r3xzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1242,7 +1144,7 @@
       "summary": "Four people were also injured in the incident inside Murchison Falls National Park, officials say.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/clyppgvd3qzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1251,16 +1153,25 @@
       "summary": "The suspect previously obstructed a White House entry lane in June of 2025 and told Secret Service agents he was Jesus Christ.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c1l22pg12mpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
+    },
+    {
+      "headline": "Netanyahu says Israel will intensify strikes against Hezbollah",
+      "summary": "The Israeli military hits targets in eastern Lebanon after the prime minister announces further strikes.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/cewppdk1187o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-25T20:04:13+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
     },
     {
       "headline": "Russia threatens more Kyiv strikes and tells foreign nationals to leave",
       "summary": "It comes after the Ukrainian capital suffered one of the biggest aerial assaults of the war overnight on Saturday.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c1e22n55zn4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1269,7 +1180,7 @@
       "summary": "The US secretary of state earlier said that an agreement could possibly come on Monday.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cglpp2yk336o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1278,7 +1189,7 @@
       "summary": "The largest and most powerful rocket in history blasted off after its first attempted launch was postponed.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c62d65y16nno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -1287,7 +1198,7 @@
       "summary": "Reforms are needed of the welfare system to tackle the high numbers of young people not in work or education, says Alan Milburn.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/crrpx4p1z71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1296,7 +1207,7 @@
       "summary": "The Moroccan government wants more Western holidaymakers to visit the territory it claims to own.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvgldqk4w95o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1305,7 +1216,7 @@
       "summary": "India Inc spent $18bn on global buyouts in 2025 and the deal value could cross $15bn in the first half of 2026.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cwy21x20q23o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -1314,7 +1225,7 @@
       "summary": "MBS's Vison 2030 project seemed the stuff of science fiction. Now reality has bitten",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cx21g0828reo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T18:15:27+00:00",
+      "published_utc": "2026-05-25T20:04:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
