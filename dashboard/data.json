@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-25T16:36:30+00:00",
+  "generated_at_utc": "2026-05-25T18:15:27+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 23,
-  "last_success_utc": "2026-05-25T14:16:57+00:00",
+  "cycle_count": 24,
+  "last_success_utc": "2026-05-25T16:36:30+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -75,8 +75,8 @@
       "score": 64.59,
       "raw_score": 73.82,
       "band": "buy",
-      "weight": 0.1221,
-      "confidence": 0.85,
+      "weight": 0.1287,
+      "confidence": 0.95,
       "components": {
         "momentum": 75.15,
         "sentiment": 100.0,
@@ -134,6 +134,22 @@
       }
     },
     {
+      "key": "oil_gas",
+      "name": "Oil & Gas",
+      "score": 51.81,
+      "raw_score": 53.02,
+      "band": "starter",
+      "weight": 0.0894,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 52.1,
+        "sentiment": 57.14,
+        "volume": 47.7,
+        "policy": 55.0,
+        "volatility_penalty": 1.21
+      }
+    },
+    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
       "score": 50.84,
@@ -150,29 +166,13 @@
       }
     },
     {
-      "key": "oil_gas",
-      "name": "Oil & Gas",
-      "score": 50.82,
-      "raw_score": 52.03,
-      "band": "starter",
-      "weight": 0.0861,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 52.1,
-        "sentiment": 53.84,
-        "volume": 47.7,
-        "policy": 55.0,
-        "volatility_penalty": 1.21
-      }
-    },
-    {
       "key": "biotech",
       "name": "Biotech & Pharma",
       "score": 46.5,
       "raw_score": 48.14,
       "band": "starter",
-      "weight": 0.0591,
-      "confidence": 0.65,
+      "weight": 0.0609,
+      "confidence": 0.7,
       "components": {
         "momentum": 45.1,
         "sentiment": 50.0,
@@ -184,14 +184,14 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 28.67,
-      "raw_score": 35.4,
+      "score": 33.67,
+      "raw_score": 40.4,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 54.87,
-        "sentiment": 0.0,
+        "sentiment": 16.66,
         "volume": 42.27,
         "policy": 50.0,
         "volatility_penalty": 6.73
@@ -286,7 +286,7 @@
     {
       "symbol": "ASML",
       "action": "SKIP",
-      "target_weight": 0.0439,
+      "target_weight": 0.0462,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 76.3)",
@@ -300,7 +300,7 @@
     {
       "symbol": "LRCX",
       "action": "SKIP",
-      "target_weight": 0.0428,
+      "target_weight": 0.0452,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 74.6)",
@@ -314,7 +314,7 @@
     {
       "symbol": "MU",
       "action": "SKIP",
-      "target_weight": 0.0354,
+      "target_weight": 0.0373,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 61.6)",
@@ -452,6 +452,48 @@
       "theme_key": "clean_energy"
     },
     {
+      "symbol": "SLB",
+      "action": "SKIP",
+      "target_weight": 0.0362,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 51.8 (starter), contribution 67.0)",
+      "factors": [
+        "ret_5d=3.43%",
+        "rel_vol_5d=1.06",
+        "vol_ann=27.85%"
+      ],
+      "theme_key": "oil_gas"
+    },
+    {
+      "symbol": "CVX",
+      "action": "SKIP",
+      "target_weight": 0.0291,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 51.8 (starter), contribution 53.9)",
+      "factors": [
+        "ret_5d=0.17%",
+        "rel_vol_5d=1.04",
+        "vol_ann=28.75%"
+      ],
+      "theme_key": "oil_gas"
+    },
+    {
+      "symbol": "XOM",
+      "action": "SKIP",
+      "target_weight": 0.024,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 51.8 (starter), contribution 44.5)",
+      "factors": [
+        "ret_5d=-1.90%",
+        "rel_vol_5d=1.03",
+        "vol_ann=32.58%"
+      ],
+      "theme_key": "oil_gas"
+    },
+    {
       "symbol": "HD",
       "action": "SKIP",
       "target_weight": 0.0264,
@@ -494,51 +536,9 @@
       "theme_key": "consumer_discretionary"
     },
     {
-      "symbol": "SLB",
-      "action": "SKIP",
-      "target_weight": 0.035,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 50.8 (starter), contribution 66.0)",
-      "factors": [
-        "ret_5d=3.43%",
-        "rel_vol_5d=1.06",
-        "vol_ann=27.85%"
-      ],
-      "theme_key": "oil_gas"
-    },
-    {
-      "symbol": "CVX",
-      "action": "SKIP",
-      "target_weight": 0.028,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 50.8 (starter), contribution 52.9)",
-      "factors": [
-        "ret_5d=0.17%",
-        "rel_vol_5d=1.04",
-        "vol_ann=28.75%"
-      ],
-      "theme_key": "oil_gas"
-    },
-    {
-      "symbol": "XOM",
-      "action": "SKIP",
-      "target_weight": 0.0231,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 50.8 (starter), contribution 43.5)",
-      "factors": [
-        "ret_5d=-1.90%",
-        "rel_vol_5d=1.03",
-        "vol_ann=32.58%"
-      ],
-      "theme_key": "oil_gas"
-    },
-    {
       "symbol": "LLY",
       "action": "SKIP",
-      "target_weight": 0.0208,
+      "target_weight": 0.017,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 65.2)",
@@ -552,7 +552,7 @@
     {
       "symbol": "PFE",
       "action": "SKIP",
-      "target_weight": 0.0181,
+      "target_weight": 0.0148,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 56.8)",
@@ -566,7 +566,7 @@
     {
       "symbol": "VRTX",
       "action": "SKIP",
-      "target_weight": 0.0159,
+      "target_weight": 0.0131,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 50.0)",
@@ -684,7 +684,7 @@
     {
       "symbol": "ASML",
       "action": "SKIP",
-      "target_weight": 0.0439,
+      "target_weight": 0.0462,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 76.3)",
@@ -701,7 +701,7 @@
     {
       "symbol": "LRCX",
       "action": "SKIP",
-      "target_weight": 0.0428,
+      "target_weight": 0.0452,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 74.6)",
@@ -718,7 +718,7 @@
     {
       "symbol": "MU",
       "action": "SKIP",
-      "target_weight": 0.0354,
+      "target_weight": 0.0373,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 64.6 (buy), contribution 61.6)",
@@ -886,6 +886,57 @@
       "note": "market_closed_or_no_account"
     },
     {
+      "symbol": "SLB",
+      "action": "SKIP",
+      "target_weight": 0.0362,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 51.8 (starter), contribution 67.0)",
+      "factors": [
+        "ret_5d=3.43%",
+        "rel_vol_5d=1.06",
+        "vol_ann=27.85%"
+      ],
+      "theme_key": "oil_gas",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "CVX",
+      "action": "SKIP",
+      "target_weight": 0.0291,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 51.8 (starter), contribution 53.9)",
+      "factors": [
+        "ret_5d=0.17%",
+        "rel_vol_5d=1.04",
+        "vol_ann=28.75%"
+      ],
+      "theme_key": "oil_gas",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "XOM",
+      "action": "SKIP",
+      "target_weight": 0.024,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 51.8 (starter), contribution 44.5)",
+      "factors": [
+        "ret_5d=-1.90%",
+        "rel_vol_5d=1.03",
+        "vol_ann=32.58%"
+      ],
+      "theme_key": "oil_gas",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
       "symbol": "HD",
       "action": "SKIP",
       "target_weight": 0.0264,
@@ -937,60 +988,9 @@
       "note": "market_closed_or_no_account"
     },
     {
-      "symbol": "SLB",
-      "action": "SKIP",
-      "target_weight": 0.035,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 50.8 (starter), contribution 66.0)",
-      "factors": [
-        "ret_5d=3.43%",
-        "rel_vol_5d=1.06",
-        "vol_ann=27.85%"
-      ],
-      "theme_key": "oil_gas",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "CVX",
-      "action": "SKIP",
-      "target_weight": 0.028,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 50.8 (starter), contribution 52.9)",
-      "factors": [
-        "ret_5d=0.17%",
-        "rel_vol_5d=1.04",
-        "vol_ann=28.75%"
-      ],
-      "theme_key": "oil_gas",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "XOM",
-      "action": "SKIP",
-      "target_weight": 0.0231,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Oil & Gas' score 50.8 (starter), contribution 43.5)",
-      "factors": [
-        "ret_5d=-1.90%",
-        "rel_vol_5d=1.03",
-        "vol_ann=32.58%"
-      ],
-      "theme_key": "oil_gas",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
       "symbol": "LLY",
       "action": "SKIP",
-      "target_weight": 0.0208,
+      "target_weight": 0.017,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 65.2)",
@@ -1007,7 +1007,7 @@
     {
       "symbol": "PFE",
       "action": "SKIP",
-      "target_weight": 0.0181,
+      "target_weight": 0.0148,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 56.8)",
@@ -1024,7 +1024,7 @@
     {
       "symbol": "VRTX",
       "action": "SKIP",
-      "target_weight": 0.0159,
+      "target_weight": 0.0131,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 46.5 (starter), contribution 50.0)",
@@ -1131,6 +1131,10 @@
     {
       "t": "2026-05-25T16:36:28+00:00",
       "v": 100000.0
+    },
+    {
+      "t": "2026-05-25T18:15:23+00:00",
+      "v": 100000.0
     }
   ],
   "breaking_news": [
@@ -1139,7 +1143,7 @@
       "summary": "Ahead of a much anticipated IPO, SpaceX is carrying out a critical test of its giant, stainless steel rocket. Investors will be watching closely.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/21/nx-s1-5823583/spacex-starship-musk-ipo",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1148,7 +1152,7 @@
       "summary": "The national average for a gallon of gasoline is $4.55, as America heads into one of the busiest travel weekends of the year. What can you do to cut your costs?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5831223/memorial-day-gas-prices-save-money-iran",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1157,7 +1161,7 @@
       "summary": "Everlane's finances have faltered in recent years. But will the merger alienate Everlane's existing shoppers \u2014 or sway droves of Shein fans to trade up?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5825872/shein-buys-everlane",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1166,7 +1170,7 @@
       "summary": "The search giant is updating its famously minimalist homepage. But what looks like a tiny design change is a very big deal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/22/nx-s1-5829915/google-search-box-ai",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1175,7 +1179,7 @@
       "summary": "Surging food costs and <a href=\"https://www.npr.org/2026/05/12/nx-s1-5818279/inflation-cpi-gas-prices-housing-fuel-iran-war\" target=\"_blank\">fuel prices</a> are pummeling Maine's struggling groundfishing industry. But a pandemic-era program",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/23/nx-s1-5756374/food-fish-maine-portland-donations",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1184,7 +1188,7 @@
       "summary": "The temperature is climbing, and so are people's utility bills. Rising electricity prices and hotter-than-usual weather could make it especially costly to stay cool this summer.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/23/nx-s1-5823767/summer-heat-electric-bills-cost",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1193,7 +1197,7 @@
       "summary": "At a time when hopes are dim for resolving the Israeli-Palestinian conflict, some Arab and Jewish entrepreneurs are partnering across the divide, hoping to prove what's possible.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/24/nx-s1-5806030/palestinian-israeli-startups-50-50-northeastern",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1202,16 +1206,7 @@
       "summary": "Americans are increasingly passing up on dining out. So one restaurant is allowing diners to pay what they like for their food.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/25/nx-s1-5719494/restaurants-dining-food-inflation",
-      "published_utc": "2026-05-25T16:36:30+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Anger grows after China's deadliest coal mining disaster in years",
-      "summary": "On China's tightly-controlled internet, people are calling for justice and questioning how this happened.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c893543gn20o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1220,7 +1215,7 @@
       "summary": "Police say a man sprayed a substance at an ATM in the luxury Ginza 6 shopping centre.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cevpp983kmzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -1229,16 +1224,16 @@
       "summary": "The BBC's Sumedha Pal described how difficult it was to be standing in the streets of Delhi as temperatures rose to 45C .",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/videos/ckgppxw9239o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
     {
-      "headline": "Large-scale Russian attack on Ukraine leaves four dead and dozens injured",
-      "summary": "A hypersonic missile, which reportedly travels over 10 times the speed of sound, was used, Russia has confirmed.",
+      "headline": "Cambodia's former opposition leader receives royal pardon for 27-year sentence",
+      "summary": "Kem Sokha was serving a 27-year sentence on treason charges, which were widely derided as politically motivated.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/clyp6831yp5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "url": "https://www.bbc.com/news/articles/cm2ppv1r3xzo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1247,7 +1242,7 @@
       "summary": "Four people were also injured in the incident inside Murchison Falls National Park, officials say.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/clyppgvd3qzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1256,16 +1251,25 @@
       "summary": "The suspect previously obstructed a White House entry lane in June of 2025 and told Secret Service agents he was Jesus Christ.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c1l22pg12mpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
+    },
+    {
+      "headline": "Russia threatens more Kyiv strikes and tells foreign nationals to leave",
+      "summary": "It comes after the Ukrainian capital suffered one of the biggest aerial assaults of the war overnight on Saturday.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c1e22n55zn4o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-25T18:15:27+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
     },
     {
       "headline": "Deal with US not imminent, Iran says",
       "summary": "The US secretary of state earlier said that an agreement could possibly come on Monday.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cglpp2yk336o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1274,7 +1278,7 @@
       "summary": "The largest and most powerful rocket in history blasted off after its first attempted launch was postponed.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c62d65y16nno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -1283,7 +1287,7 @@
       "summary": "Reforms are needed of the welfare system to tackle the high numbers of young people not in work or education, says Alan Milburn.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/crrpx4p1z71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1292,7 +1296,7 @@
       "summary": "The Moroccan government wants more Western holidaymakers to visit the territory it claims to own.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvgldqk4w95o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1301,7 +1305,7 @@
       "summary": "India Inc spent $18bn on global buyouts in 2025 and the deal value could cross $15bn in the first half of 2026.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cwy21x20q23o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -1310,7 +1314,7 @@
       "summary": "MBS's Vison 2030 project seemed the stuff of science fiction. Now reality has bitten",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cx21g0828reo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-25T16:36:30+00:00",
+      "published_utc": "2026-05-25T18:15:27+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
