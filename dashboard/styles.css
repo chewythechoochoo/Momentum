@@ -69,6 +69,11 @@ button { font: inherit; color: inherit; }
   display: inline-block; padding: 2px 8px; border: 1px solid var(--ink);
   color: var(--ink); letter-spacing: 0.2em; font-weight: 600; font-size: 9px;
 }
+.meta-strip .market-state {
+  font-weight: 600; letter-spacing: 0.18em;
+}
+.meta-strip .market-state.open  { color: var(--green); }
+.meta-strip .market-state.closed{ color: var(--red);   }
 
 /* ---------- breaking news strip ---------- */
 .news-strip {
@@ -274,59 +279,36 @@ button { font: inherit; color: inherit; }
   font-size: 16px; fill: #d8d8d8;
 }
 
-/* ---------- equity range slider (two-handle brush) ---------- */
-.equity-slider {
-  margin-top: 14px;
-  user-select: none;
+/* ---------- equity hover crosshair (replaces the old slider) ---------- */
+.equity-chart { cursor: crosshair; touch-action: none; }
+.eq-hover-line { stroke: #888; stroke-width: 0.7; stroke-dasharray: 3 3; }
+.eq-hover-dot  { fill: var(--accent); stroke: #fff; stroke-width: 2; }
+.eq-hover-label {
+  font-family: var(--mono); font-size: 10px; fill: #fff;
+  font-weight: 500;
 }
-.slider-labels {
-  display: flex; justify-content: space-between; align-items: center;
-  font-family: var(--mono); font-size: 10px;
-  letter-spacing: 0.12em; color: var(--muted);
-  margin-bottom: 8px;
+.eq-hover-label-bg { fill: #0a0a0a; }
+
+/* End-of-line pill: same gentle blink as the EQUITY ticker so the
+   chart's "current value" reads as live too. */
+.eq-pill, .eq-pill-text, .eq-pill-connector {
+  animation: pill-pulse 1.9s ease-in-out infinite;
+  transform-origin: center;
 }
-.slider-from, .slider-to { color: var(--ink); font-weight: 500; }
-.slider-hint { color: var(--faint); letter-spacing: 0.16em; font-size: 9px; }
-.slider-track {
-  position: relative;
-  height: 44px;
-  background: #fafafa;
-  border: 1px solid var(--hair);
-  border-radius: 2px;
-  cursor: crosshair;
-  touch-action: none;
+@keyframes pill-pulse {
+  0%, 100% { opacity: 1.0; }
+  50%      { opacity: 0.55; }
 }
-.slider-spark {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  pointer-events: none;
-}
-.slider-spark path { fill: none; stroke: #cdc1ff; stroke-width: 1.2; }
-.slider-spark .spark-fill { fill: rgba(123,92,255,0.10); stroke: none; }
-.slider-range {
-  position: absolute; top: 0; bottom: 0;
-  background: rgba(123,92,255,0.16);
-  border-left:  1px solid var(--accent, #7B5CFF);
-  border-right: 1px solid var(--accent, #7B5CFF);
-  pointer-events: none;
-}
-.slider-thumb {
-  position: absolute; top: -3px;
-  width: 12px; height: calc(100% + 6px);
-  background: #ffffff;
-  border: 1.5px solid #0a0a0a;
-  border-radius: 2px;
-  transform: translateX(-50%);
-  cursor: ew-resize;
-  touch-action: none;
-  display: flex; align-items: center; justify-content: center;
-}
-.slider-thumb::before {
-  content: ""; width: 2px; height: 14px;
-  background: #0a0a0a; border-radius: 1px;
-}
-.slider-thumb:focus { outline: 2px solid var(--accent, #7B5CFF); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) {
-  .slider-thumb { transition: none; }
+  .eq-pill, .eq-pill-text, .eq-pill-connector { animation: none; }
+}
+
+/* Equity-pane header title is now sentence-cased rather than space-tracked. */
+.equity-header h2 {
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 /* ---------- feed pane (now full-width below the chart on LIVE) ---------- */
@@ -538,15 +520,48 @@ main { display: block; min-height: calc(100vh - 240px); }
 .readme-card .prompt { color: var(--green); }
 
 /* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .highlight-band { grid-template-columns: 1fr; }
+  .equity-pane    { padding-left: 16px; padding-right: 16px; }
+  .equity-chart   { height: 280px; }
+  .ticker-row     { gap: 16px; padding-left: 16px; padding-right: 16px; }
+  .ticker         { padding-right: 16px; min-width: 90px; }
+  .ticker .val    { font-size: 14px; }
+}
 @media (max-width: 720px) {
-  .topbar { grid-template-columns: 1fr; gap: 10px; padding: 12px 16px; }
+  .topbar { grid-template-columns: 1fr; gap: 8px; padding: 12px 16px; }
   .nav { justify-content: flex-start; flex-wrap: wrap; gap: 10px; }
   .topbar-right { justify-content: flex-start; }
-  .brand-word { font-size: 34px; }
-  .meta-strip, .ticker-row, .highlight, .chart-pane, .feed-card, .feed-filter, .tabs { padding-left: 16px; padding-right: 16px; }
-  .chart-grid { padding-left: 110px; }
-  .grid-vertical { left: 110px; }
-  .row-label { left: -100px; width: 95px; font-size: 10px; }
-  .row-pill { right: -85px; min-width: 70px; }
-  .x-axis { padding-left: 110px; padding-right: 100px; }
+  .brand-word { font-size: 30px; }
+  .brand-by   { top: -6px; }
+  .meta-strip, .news-strip, .ticker-row, .highlight, .chart-pane,
+  .feed-card, .feed-filter, .tabs {
+    padding-left: 14px; padding-right: 14px;
+  }
+  .meta-strip { gap: 10px; font-size: 9px; }
+  .equity-pane    { padding: 14px; }
+  .equity-chart   { height: 240px; }
+  .equity-header h2 { font-size: 12px; }
+
+  /* Theme bars on the THEMES page need much tighter padding */
+  .chart-pane { padding: 16px 14px 60px; }
+  .chart-grid { padding: 6px 70px 16px 96px; }
+  .grid-vertical { left: 96px; right: 70px; }
+  .row-label  { left: -90px; width: 84px; font-size: 9.5px; }
+  .row-pill   { right: -64px; min-width: 56px; font-size: 10px; padding: 3px 8px; }
+  .row-components { font-size: 9px; gap: 8px; }
+  .x-axis     { padding: 10px 70px 0 96px; font-size: 9px; }
+
+  /* Tabs stay full-width but shrink padding */
+  .tab { padding: 12px 4px; font-size: 9px; letter-spacing: 0.12em; }
+
+  /* Feed cards: 2 cards per row collapse to single column visual */
+  .feed-card .head { flex-direction: column; gap: 4px; align-items: flex-start; }
+  .feed-card .head time { font-size: 8px; }
+}
+@media (max-width: 480px) {
+  .brand-word { font-size: 26px; }
+  .brand-by   { display: block; top: 0; margin-left: 0; }
+  .equity-header h2 { font-size: 11px; }
+  .equity-header h2 .muted { display: block; margin-left: 0; margin-top: 2px; }
 }

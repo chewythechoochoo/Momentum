@@ -38,8 +38,6 @@ const state = {
   tab: "decisions",
   mode: "score",          // score | weight
   actionFilter: "ALL",
-  sliderStart: 0,         // 0..1, fraction of equity_history shown
-  sliderEnd: 1,
 };
 
 const NEWS_PIXELS_PER_SECOND = 70;   // marquee scroll speed
@@ -70,14 +68,15 @@ function renderAll() {
 /* ---------- meta strip ---------- */
 function renderMeta() {
   const d = state.data;
-  const market = d.market_open ? "MARKET OPEN" : "MARKET CLOSED";
+  const stateCls   = d.market_open ? "open" : "closed";
+  const stateWord  = d.market_open ? "OPEN" : "CLOSED";
   $("#meta-strip").innerHTML = `
     <span class="paper-pill">${d.mode || "PAPER"}</span>
     <span>GENERATED <strong>${d.generated_at_utc || "—"}</strong> UTC</span>
     <span class="dot-sep">│</span>
     <span>CYCLE #${d.cycle_count ?? 0}</span>
     <span class="dot-sep">│</span>
-    <span>${market}</span>
+    <span>MARKET <span class="market-state ${stateCls}">${stateWord}</span></span>
     <span class="dot-sep">│</span>
     <span>ENDPOINT ${d.endpoint || "alpaca-paper"}</span>
     <span class="dot-sep">│</span>
@@ -189,35 +188,28 @@ function renderEquityChart() {
   if (!root) return;   // not on this page
   const meta = $("#equity-meta");
   const raw = state.data.equity_history || [];
-  const all = raw
+  const points = raw
     .map(h => ({ t: new Date(h.t), v: Number(h.v) }))
     .filter(p => !isNaN(p.t) && !isNaN(p.v))
     .sort((a, b) => a.t - b.t);
 
-  // Slider selects a contiguous sub-range. When the user hasn't dragged
-  // (sliderStart=0, sliderEnd=1) this is identity.
-  let points = all;
-  if (all.length >= 2) {
-    const lo = Math.floor(state.sliderStart * (all.length - 1));
-    const hi = Math.ceil(state.sliderEnd   * (all.length - 1));
-    points = all.slice(lo, hi + 1);
-  }
-
-  // Always re-render the slider scrubber so it tracks the full history,
-  // even when the main chart can't draw a line yet.
-  renderSliderSpark(all);
-  updateSliderLabels(all);
-
   if (points.length < 2) {
     root.innerHTML =
-      `<div class="equity-empty">EQUITY HISTORY WILL APPEAR AFTER A FEW CYCLES &nbsp;·&nbsp; CURRENT: ${all.length} POINT${all.length === 1 ? "" : "S"}</div>`;
+      `<div class="equity-empty">EQUITY HISTORY WILL APPEAR AFTER A FEW CYCLES &nbsp;·&nbsp; CURRENT: ${points.length} POINT${points.length === 1 ? "" : "S"}</div>`;
     meta.textContent = "";
     return;
   }
 
-  // viewBox layout
-  const W = 1400, H = 340;
-  const padL = 84, padR = 168, padT = 24, padB = 44;
+  // Responsive viewBox — match the container's actual pixel size so text
+  // and ticks render 1:1 instead of scaling tiny on mobile.
+  const containerW = Math.max(280, root.clientWidth || 1200);
+  const isNarrow = containerW < 640;
+  const W = containerW;
+  const H = isNarrow ? 240 : 340;
+  const padL = isNarrow ? 56 : 84;
+  const padR = isNarrow ? 78 : 140;
+  const padT = isNarrow ? 18 : 24;
+  const padB = isNarrow ? 36 : 44;
   const innerW = W - padL - padR;
   const innerH = H - padT - padB;
 
@@ -251,22 +243,22 @@ function renderEquityChart() {
   const last = points[points.length - 1];
   const lastX = x(last.t);
   const lastY = y(last.v);
-  const pillW = 120, pillH = 26;
-  const pillX = Math.min(lastX + 14, W - padR + 30);
+  const pillW = isNarrow ? 78 : 120;
+  const pillH = isNarrow ? 22 : 26;
+  const pillX = Math.min(lastX + 12, W - pillW - 6);
   const pillY = clamp(lastY - pillH / 2, padT, H - padB - pillH);
 
   const delta = last.v - startV;
   const pct = (delta / startV) * 100;
-  const deltaCls = delta >= 0 ? "pos" : "neg";
 
   meta.innerHTML = `· LATEST <strong>${fmtUsd(last.v)}</strong> · Δ <span style="color:${delta >= 0 ? "#15994d" : "#d23030"}">${fmtUsdSigned(delta)} (${fmtPctSignedDirect(pct)})</span> · ${points.length} POINTS`;
 
   const svg = `
-    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" width="100%" height="${H}">
       <!-- y grid + labels -->
       ${yTicks.map(v => `
         <line class="eq-grid-line" x1="${padL}" x2="${W - padR}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}"/>
-        <text class="eq-y-label" x="${padL - 10}" y="${(y(v) + 3.5).toFixed(1)}" text-anchor="end">$${v.toLocaleString()}</text>
+        <text class="eq-y-label" x="${padL - 8}" y="${(y(v) + 3.5).toFixed(1)}" text-anchor="end">${isNarrow ? "$" + Math.round(v / 1000) + "K" : "$" + v.toLocaleString()}</text>
       `).join("")}
 
       <!-- x grid + labels -->
@@ -274,28 +266,101 @@ function renderEquityChart() {
         const xp = padL + (i / xCount) * innerW;
         return `
           <line class="eq-x-tick" x1="${xp.toFixed(1)}" x2="${xp.toFixed(1)}" y1="${padT}" y2="${H - padB}"/>
-          <text class="eq-x-label" x="${xp.toFixed(1)}" y="${H - padB + 18}" text-anchor="middle">${fmtAxisDate(d)}</text>
+          <text class="eq-x-label" x="${xp.toFixed(1)}" y="${H - padB + 16}" text-anchor="middle">${fmtAxisDate(d, isNarrow)}</text>
         `;
       }).join("")}
 
       <!-- baseline (starting equity) -->
       <line class="eq-baseline" x1="${padL}" x2="${W - padR}" y1="${startY.toFixed(1)}" y2="${startY.toFixed(1)}"/>
-      <text class="eq-baseline-label" x="${(W - padR - 6).toFixed(1)}" y="${(startY - 4).toFixed(1)}" text-anchor="end">START $${Math.round(startV).toLocaleString()}</text>
+      ${isNarrow ? "" : `<text class="eq-baseline-label" x="${(W - padR - 6).toFixed(1)}" y="${(startY - 4).toFixed(1)}" text-anchor="end">START $${Math.round(startV).toLocaleString()}</text>`}
 
-      <!-- watermark (sits below the line) -->
-      <text class="eq-watermark" x="${padL + 8}" y="${(H - padB - 8).toFixed(1)}">Momentum</text>
+      <!-- watermark -->
+      ${isNarrow ? "" : `<text class="eq-watermark" x="${padL + 8}" y="${(H - padB - 8).toFixed(1)}">Momentum</text>`}
 
       <!-- equity trace -->
       <path class="eq-line" d="${path}" stroke="${EQUITY_COLOR}"/>
 
-      <!-- connector + end-of-line pill -->
+      <!-- connector + end-of-line pill (pulsing via CSS) -->
       <line class="eq-pill-connector" x1="${lastX.toFixed(1)}" y1="${lastY.toFixed(1)}" x2="${pillX.toFixed(1)}" y2="${(pillY + pillH / 2).toFixed(1)}" stroke="${EQUITY_COLOR}"/>
-      <rect class="eq-pill" x="${pillX.toFixed(1)}" y="${pillY.toFixed(1)}" rx="13" ry="13" width="${pillW}" height="${pillH}" fill="${EQUITY_COLOR}"/>
-      <text class="eq-pill-text" x="${(pillX + pillW / 2).toFixed(1)}" y="${(pillY + pillH / 2 + 4).toFixed(1)}" text-anchor="middle">${fmtUsd(last.v)}</text>
+      <rect class="eq-pill" x="${pillX.toFixed(1)}" y="${pillY.toFixed(1)}" rx="${pillH / 2}" ry="${pillH / 2}" width="${pillW}" height="${pillH}" fill="${EQUITY_COLOR}"/>
+      <text class="eq-pill-text" x="${(pillX + pillW / 2).toFixed(1)}" y="${(pillY + pillH / 2 + 4).toFixed(1)}" text-anchor="middle" style="font-size:${isNarrow ? 10 : 11}px">${isNarrow ? fmtUsdShort(last.v) : fmtUsd(last.v)}</text>
+
+      <!-- hover crosshair group (populated on pointer events) -->
+      <g class="eq-hover" id="eq-hover" style="display:none">
+        <line class="eq-hover-line" x1="0" y1="${padT}" x2="0" y2="${H - padB}"/>
+        <rect class="eq-hover-label-bg" x="0" y="${Math.max(2, padT - 18)}" width="78" height="16" rx="2"/>
+        <text class="eq-hover-label" x="0" y="${Math.max(14, padT - 6)}" text-anchor="middle"></text>
+        <circle class="eq-hover-dot" cx="0" cy="0" r="4"/>
+      </g>
     </svg>
   `;
 
   root.innerHTML = svg;
+  attachHoverCrosshair(root, { points, x, y, padL, padR, padT, padB, W, H, isNarrow });
+}
+
+/* ---------- equity-chart hover crosshair ------------------------------ */
+function attachHoverCrosshair(root, ctx) {
+  const svg = root.querySelector("svg");
+  const group = root.querySelector("#eq-hover");
+  if (!svg || !group) return;
+
+  const line  = group.querySelector(".eq-hover-line");
+  const dot   = group.querySelector(".eq-hover-dot");
+  const text  = group.querySelector(".eq-hover-label");
+  const bg    = group.querySelector(".eq-hover-label-bg");
+
+  const hide = () => { group.style.display = "none"; };
+  const show = () => { group.style.display = ""; };
+
+  const updateFromPointer = (e) => {
+    const rect = svg.getBoundingClientRect();
+    // Convert pointer x (screen px) to viewBox x using the actual rendered width.
+    const xViewBox = ((e.clientX - rect.left) / rect.width) * ctx.W;
+    if (xViewBox < ctx.padL || xViewBox > ctx.W - ctx.padR) { hide(); return; }
+    // Find the closest data point in viewBox coords.
+    let nearest = ctx.points[0];
+    let bestDist = Infinity;
+    for (const p of ctx.points) {
+      const px = ctx.x(p.t);
+      const d = Math.abs(px - xViewBox);
+      if (d < bestDist) { bestDist = d; nearest = p; }
+    }
+    const cx = ctx.x(nearest.t);
+    const cy = ctx.y(nearest.v);
+    line.setAttribute("x1", cx);
+    line.setAttribute("x2", cx);
+    dot.setAttribute("cx", cx);
+    dot.setAttribute("cy", cy);
+
+    const labelText = `${fmtHoverTime(nearest.t)}  ${fmtUsdShort(nearest.v)}`;
+    text.textContent = labelText;
+    // size the bg to fit the text (rough: 6.4px per char + 12 padding)
+    const bgW = Math.max(78, Math.round(labelText.length * 6.4 + 14));
+    bg.setAttribute("width", bgW);
+    // Center the bg around cx, but clamp inside the chart
+    let bgX = cx - bgW / 2;
+    bgX = Math.max(ctx.padL, Math.min(bgX, ctx.W - ctx.padR - bgW));
+    bg.setAttribute("x", bgX);
+    text.setAttribute("x", bgX + bgW / 2);
+    show();
+  };
+
+  svg.addEventListener("pointermove", updateFromPointer);
+  svg.addEventListener("pointerdown", updateFromPointer);
+  svg.addEventListener("pointerleave", hide);
+}
+
+function fmtUsdShort(v) {
+  if (v == null || isNaN(v)) return "—";
+  if (Math.abs(v) >= 1000) return "$" + (v / 1000).toFixed(2) + "K";
+  return "$" + v.toFixed(0);
+}
+
+function fmtHoverTime(d) {
+  const day = d.toLocaleDateString("en-US", { month: "short", day: "numeric" }).toUpperCase();
+  const hm = d.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false });
+  return `${day} ${hm}`;
 }
 
 function niceTickStep(rough) {
@@ -308,8 +373,9 @@ function niceTickStep(rough) {
 
 function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 
-function fmtAxisDate(d) {
+function fmtAxisDate(d, compact = false) {
   const day = d.toLocaleDateString("en-US", { month: "short", day: "numeric" }).toUpperCase();
+  if (compact) return day;
   const hm = d.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false });
   return `${day} ${hm}`;
 }
@@ -572,132 +638,15 @@ document.addEventListener("change", (e) => {
   }
 });
 
-/* ---------- equity-chart slider (two-handle range brush) ---------------
- * Lets the user drag a window over the equity history. Both handles
- * report 0..1 fractions; renderEquityChart() slices equity_history by
- * those fractions. A faint sparkline of the full curve sits inside the
- * track so dragging feels anchored to the data.
- * --------------------------------------------------------------------- */
-function initSlider() {
-  const track = $("#slider-track");
-  if (!track) return;
-
-  const apply = () => {
-    const left  = $("#slider-left");
-    const right = $("#slider-right");
-    const range = $("#slider-range");
-    left.style.left  = (state.sliderStart * 100) + "%";
-    right.style.left = (state.sliderEnd   * 100) + "%";
-    range.style.left  = (state.sliderStart * 100) + "%";
-    range.style.right = ((1 - state.sliderEnd) * 100) + "%";
-  };
-  apply();
-
-  let activeHandle = null;
-  let trackRect = null;
-
-  const fractionFromEvent = (e) => {
-    if (!trackRect) trackRect = track.getBoundingClientRect();
-    const x = e.clientX - trackRect.left;
-    return Math.max(0, Math.min(1, x / trackRect.width));
-  };
-
-  const onMove = (e) => {
-    if (!activeHandle) return;
-    e.preventDefault();
-    let p = fractionFromEvent(e);
-    const minWidth = 0.02;  // can't crush the range below 2% of history
-    if (activeHandle === "left")  state.sliderStart = Math.min(p, state.sliderEnd  - minWidth);
-    if (activeHandle === "right") state.sliderEnd   = Math.max(p, state.sliderStart + minWidth);
-    apply();
-    renderEquityChart();
-  };
-
-  const onUp = () => {
-    activeHandle = null;
-    trackRect = null;
-    document.removeEventListener("pointermove", onMove);
-    document.removeEventListener("pointerup", onUp);
-    document.removeEventListener("pointercancel", onUp);
-  };
-
-  track.addEventListener("pointerdown", (e) => {
-    const handle = e.target.closest(".slider-thumb");
-    activeHandle = handle ? handle.dataset.handle : null;
-    if (!activeHandle) {
-      // Click on the track body — nudge the nearest handle to the click.
-      trackRect = track.getBoundingClientRect();
-      const p = fractionFromEvent(e);
-      const distLeft  = Math.abs(p - state.sliderStart);
-      const distRight = Math.abs(p - state.sliderEnd);
-      activeHandle = distLeft < distRight ? "left" : "right";
-    }
-    trackRect = track.getBoundingClientRect();
-    document.addEventListener("pointermove", onMove);
-    document.addEventListener("pointerup",   onUp);
-    document.addEventListener("pointercancel", onUp);
-    onMove(e);
-  });
-
-  track.addEventListener("dblclick", () => {
-    state.sliderStart = 0;
-    state.sliderEnd   = 1;
-    apply();
-    renderEquityChart();
-  });
-
-  // Keyboard a11y: arrow keys nudge the focused handle by 2 %.
-  document.querySelectorAll(".slider-thumb").forEach(t => {
-    t.addEventListener("keydown", (e) => {
-      const step = (e.shiftKey ? 0.10 : 0.02) * (e.key === "ArrowLeft" ? -1 : 1);
-      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
-      e.preventDefault();
-      if (t.dataset.handle === "left")
-        state.sliderStart = Math.max(0, Math.min(state.sliderEnd - 0.02, state.sliderStart + step));
-      else
-        state.sliderEnd   = Math.max(state.sliderStart + 0.02, Math.min(1, state.sliderEnd + step));
-      apply();
-      renderEquityChart();
-    });
-  });
-}
-
-function renderSliderSpark(points) {
-  const svg = $("#slider-spark");
-  if (!svg) return;
-  if (points.length < 2) { svg.innerHTML = ""; return; }
-  const W = 1000, H = 44;
-  const vMin = Math.min(...points.map(p => p.v));
-  const vMax = Math.max(...points.map(p => p.v));
-  const vSpan = Math.max(vMax - vMin, 1);
-  const t0 = points[0].t.getTime();
-  const t1 = points[points.length - 1].t.getTime();
-  const tSpan = Math.max(1, t1 - t0);
-  const x = (p) => ((p.t.getTime() - t0) / tSpan) * W;
-  const y = (p) => H - 4 - ((p.v - vMin) / vSpan) * (H - 8);
-  const d = points.map((p, i) => `${i ? "L" : "M"}${x(p).toFixed(1)},${y(p).toFixed(1)}`).join(" ");
-  const fill = `M0,${H} L${d.slice(1)} L${W},${H} Z`;
-  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-  svg.innerHTML = `<path class="spark-fill" d="${fill}"/><path d="${d}"/>`;
-}
-
-function updateSliderLabels(points) {
-  const fromEl = $("#slider-from");
-  const toEl   = $("#slider-to");
-  if (!fromEl || !toEl || points.length < 2) {
-    if (fromEl) fromEl.textContent = "—";
-    if (toEl)   toEl.textContent   = "—";
-    return;
-  }
-  const lo = Math.floor(state.sliderStart * (points.length - 1));
-  const hi = Math.ceil( state.sliderEnd   * (points.length - 1));
-  fromEl.textContent = fmtAxisDate(points[lo].t);
-  toEl.textContent   = fmtAxisDate(points[hi].t);
-}
-
-// Wire up the slider on the LIVE page (no-op on the THEMES page —
-// initSlider returns early if #slider-track isn't present).
-initSlider();
+// Re-render the equity chart on window resize so the responsive viewBox
+// recalculates against the new container width.
+let resizeTimer = null;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    if (state.data) renderEquityChart();
+  }, 120);
+});
 
 load();
 

@@ -9,6 +9,7 @@ from .alpaca_client import Position
 from .allocator import TickerTarget
 from .config import RISK
 from .market_data import TickerFeatures
+from .narrate import narrate
 from .risk import passes_liquidity, portfolio_drawdown_ok
 from .scoring import ThemeScore
 
@@ -55,6 +56,7 @@ def build_decisions(
     features: dict[str, TickerFeatures],
     equity: float,
     equity_high_water: float | None,
+    news_by_ticker: dict[str, list[dict]] | None = None,
 ) -> list[Decision]:
     target_map = {t.symbol: t for t in targets}
     theme_map = {t.theme_key: t for t in theme_scores}
@@ -204,6 +206,18 @@ def build_decisions(
                         f"new buys this cycle ({d.reason})")
             d.notional_delta = 0.0
         decisions.append(d)
+
+    # ---- Final pass: enrich every decision's reason with a real-world
+    # narrative pulled from the per-ticker news flow when available.
+    if news_by_ticker:
+        for d in decisions:
+            news = news_by_ticker.get(d.symbol)
+            if not news:
+                continue
+            enriched, extras = narrate(d.action, d.symbol, d.reason, news)
+            d.reason = enriched
+            if extras:
+                d.factors = list(d.factors) + extras
 
     return decisions
 

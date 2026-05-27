@@ -91,6 +91,7 @@ def run_cycle() -> int:
     features = compute_features(client, symbols)
 
     theme_scores = []
+    news_by_ticker: dict[str, list[dict]] = {}   # symbol -> recent enriched news
     for theme in THEMES:
         theme_syms = list(theme.tickers)
         news = fetch_news_for_symbols(theme_syms, keywords=" OR ".join(theme.keywords))
@@ -98,6 +99,28 @@ def run_cycle() -> int:
         sentiment = analyze(texts)
         ts = score_theme(theme, features, sentiment)
         theme_scores.append(ts)
+
+        # Build per-ticker news map: each headline that mentions a ticker
+        # (either via Alpaca's `symbols` field or a substring match in the
+        # headline) gets attached, along with a per-headline sentiment
+        # score. narrate() consumes this to enrich decision reasons.
+        for n in news:
+            per_text = (n.headline or "") + ". " + (n.summary or "")
+            per_score = analyze([per_text]).score
+            mentioned = set(n.symbols or [])
+            if not mentioned:
+                upper = (n.headline or "").upper()
+                mentioned = {s for s in theme_syms if s in upper}
+            for sym in mentioned:
+                news_by_ticker.setdefault(sym, []).append({
+                    "headline": n.headline,
+                    "summary": n.summary,
+                    "source": n.source,
+                    "url": n.url,
+                    "sentiment_score": per_score,
+                    "published_utc": n.published_utc.isoformat(timespec="seconds"),
+                })
+
         log_event(
             log, "theme_scored",
             theme=theme.key, score=ts.score, confidence=ts.confidence,
@@ -131,6 +154,7 @@ def run_cycle() -> int:
         targets, theme_scores, positions, features,
         equity=equity,
         equity_high_water=state.get("equity_high_water"),
+        news_by_ticker=news_by_ticker,
     )
     log_event(log, "decisions_built", count=len(decisions))
 
