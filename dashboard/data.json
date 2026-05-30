@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-30T12:15:13+00:00",
+  "generated_at_utc": "2026-05-30T14:11:39+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 66,
-  "last_success_utc": "2026-05-30T11:04:49+00:00",
+  "cycle_count": 67,
+  "last_success_utc": "2026-05-30T12:15:13+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -279,6 +279,22 @@
       }
     },
     {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 59.11,
+      "raw_score": 60.21,
+      "band": "buy",
+      "weight": 0.1137,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 52.02,
+        "sentiment": 81.82,
+        "volume": 49.3,
+        "policy": 50.0,
+        "volatility_penalty": 1.1
+      }
+    },
+    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 58.44,
@@ -311,22 +327,6 @@
       }
     },
     {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 49.57,
-      "raw_score": 50.67,
-      "band": "starter",
-      "weight": 0.0676,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 52.02,
-        "sentiment": 50.0,
-        "volume": 49.3,
-        "policy": 50.0,
-        "volatility_penalty": 1.1
-      }
-    },
-    {
       "key": "clean_energy",
       "name": "Clean Energy",
       "score": 48.65,
@@ -348,8 +348,8 @@
       "score": 36.03,
       "raw_score": 36.78,
       "band": "hold_small",
-      "weight": 0.0229,
-      "confidence": 0.75,
+      "weight": 0.0223,
+      "confidence": 0.7,
       "components": {
         "momentum": 15.59,
         "sentiment": 50.0,
@@ -454,10 +454,10 @@
     {
       "symbol": "GS",
       "action": "REDUCE",
-      "target_weight": 0.0369,
+      "target_weight": 0.0121,
       "current_weight": 0.0435,
-      "notional_delta": -673.14,
-      "reason": "trimming on mixed news flow \u2014 \"Apollo Says Private Credit Redemptions Could Accelerate Further\" \u00b7 overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -3213.16,
+      "reason": "trimming on mixed news flow \u2014 \"Apollo Says Private Credit Redemptions Could Accelerate Further\" \u00b7 overweight by 3.14% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.59%",
         "theme=Financials & Rates",
@@ -469,15 +469,17 @@
     },
     {
       "symbol": "LLY",
-      "action": "REDUCE",
-      "target_weight": 0.0157,
+      "action": "BUY",
+      "target_weight": 0.0415,
       "current_weight": 0.0277,
-      "notional_delta": -1232.77,
-      "reason": "overweight by 1.20% vs target \u2014 trim",
+      "notional_delta": 1409.67,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes; Nvidia, Tesla Lead 5 Trillion-Dollar Stocks Near Buy Points\" \u00b7 underweight by 1.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.19%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 49.6 (starter), contribution 68.3"
+        "theme 'Biotech & Pharma' score 59.1 (buy), contribution 77.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -514,10 +516,10 @@
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0371,
+      "target_weight": 0.0122,
       "current_weight": 0.0439,
-      "notional_delta": -696.58,
-      "reason": "overweight by 0.68% vs target \u2014 trim",
+      "notional_delta": -3246.85,
+      "reason": "overweight by 3.17% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.36%",
         "theme=Financials & Rates",
@@ -591,15 +593,17 @@
     },
     {
       "symbol": "VRTX",
-      "action": "REDUCE",
-      "target_weight": 0.0146,
+      "action": "BUY",
+      "target_weight": 0.039,
       "current_weight": 0.0252,
-      "notional_delta": -1090.71,
-      "reason": "overweight by 1.06% vs target \u2014 trim",
+      "notional_delta": 1408.34,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes; Nvidia, Tesla Lead 5 Trillion-Dollar Stocks Near Buy Points\" \u00b7 underweight by 1.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 49.6 (starter), contribution 63.6"
+        "theme 'Biotech & Pharma' score 59.1 (buy), contribution 73.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -700,6 +704,22 @@
       "theme_key": "consumer_discretionary"
     },
     {
+      "symbol": "PFE",
+      "action": "SKIP",
+      "target_weight": 0.0331,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes; Nvidia, Tesla Lead 5 Trillion-Dollar Stocks Near Buy Points\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.1 (buy), contribution 62.1)",
+      "factors": [
+        "ret_5d=0.89%",
+        "rel_vol_5d=0.92",
+        "vol_ann=17.77%",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "biotech"
+    },
+    {
       "symbol": "RTX",
       "action": "SKIP",
       "target_weight": 0.0292,
@@ -732,7 +752,7 @@
     {
       "symbol": "WFC",
       "action": "SKIP",
-      "target_weight": 0.0326,
+      "target_weight": 0.0107,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 57.8 (buy), contribution 58.0)",
@@ -742,22 +762,6 @@
         "vol_ann=28.75%"
       ],
       "theme_key": "financials"
-    },
-    {
-      "symbol": "PFE",
-      "action": "SKIP",
-      "target_weight": 0.012,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on mixed news flow \u2014 \"Wall Street's Most Accurate Analysts Give Their Take On 3 Healthcare Stocks Delivering High-Dividend Yields\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 49.6 (starter), contribution 52.5)",
-      "factors": [
-        "ret_5d=0.89%",
-        "rel_vol_5d=0.92",
-        "vol_ann=17.77%",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
-      ],
-      "theme_key": "biotech"
     }
   ],
   "executions": [
@@ -873,10 +877,10 @@
     {
       "symbol": "GS",
       "action": "REDUCE",
-      "target_weight": 0.0369,
+      "target_weight": 0.0121,
       "current_weight": 0.0435,
-      "notional_delta": -673.14,
-      "reason": "trimming on mixed news flow \u2014 \"Apollo Says Private Credit Redemptions Could Accelerate Further\" \u00b7 overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -3213.16,
+      "reason": "trimming on mixed news flow \u2014 \"Apollo Says Private Credit Redemptions Could Accelerate Further\" \u00b7 overweight by 3.14% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.59%",
         "theme=Financials & Rates",
@@ -891,15 +895,17 @@
     },
     {
       "symbol": "LLY",
-      "action": "REDUCE",
-      "target_weight": 0.0157,
+      "action": "BUY",
+      "target_weight": 0.0415,
       "current_weight": 0.0277,
-      "notional_delta": -1232.77,
-      "reason": "overweight by 1.20% vs target \u2014 trim",
+      "notional_delta": 1409.67,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes; Nvidia, Tesla Lead 5 Trillion-Dollar Stocks Near Buy Points\" \u00b7 underweight by 1.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.19%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 49.6 (starter), contribution 68.3"
+        "theme 'Biotech & Pharma' score 59.1 (buy), contribution 77.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -945,10 +951,10 @@
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0371,
+      "target_weight": 0.0122,
       "current_weight": 0.0439,
-      "notional_delta": -696.58,
-      "reason": "overweight by 0.68% vs target \u2014 trim",
+      "notional_delta": -3246.85,
+      "reason": "overweight by 3.17% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.36%",
         "theme=Financials & Rates",
@@ -1037,15 +1043,17 @@
     },
     {
       "symbol": "VRTX",
-      "action": "REDUCE",
-      "target_weight": 0.0146,
+      "action": "BUY",
+      "target_weight": 0.039,
       "current_weight": 0.0252,
-      "notional_delta": -1090.71,
-      "reason": "overweight by 1.06% vs target \u2014 trim",
+      "notional_delta": 1408.34,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes; Nvidia, Tesla Lead 5 Trillion-Dollar Stocks Near Buy Points\" \u00b7 underweight by 1.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 49.6 (starter), contribution 63.6"
+        "theme 'Biotech & Pharma' score 59.1 (buy), contribution 73.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1167,6 +1175,25 @@
       "note": "market_closed_or_no_account"
     },
     {
+      "symbol": "PFE",
+      "action": "SKIP",
+      "target_weight": 0.0331,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes; Nvidia, Tesla Lead 5 Trillion-Dollar Stocks Near Buy Points\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.1 (buy), contribution 62.1)",
+      "factors": [
+        "ret_5d=0.89%",
+        "rel_vol_5d=0.92",
+        "vol_ann=17.77%",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "biotech",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
       "symbol": "RTX",
       "action": "SKIP",
       "target_weight": 0.0292,
@@ -1205,7 +1232,7 @@
     {
       "symbol": "WFC",
       "action": "SKIP",
-      "target_weight": 0.0326,
+      "target_weight": 0.0107,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 57.8 (buy), contribution 58.0)",
@@ -1215,25 +1242,6 @@
         "vol_ann=28.75%"
       ],
       "theme_key": "financials",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "PFE",
-      "action": "SKIP",
-      "target_weight": 0.012,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on mixed news flow \u2014 \"Wall Street's Most Accurate Analysts Give Their Take On 3 Healthcare Stocks Delivering High-Dividend Yields\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 49.6 (starter), contribution 52.5)",
-      "factors": [
-        "ret_5d=0.89%",
-        "rel_vol_5d=0.92",
-        "vol_ann=17.77%",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
-      ],
-      "theme_key": "biotech",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1503,6 +1511,10 @@
     {
       "t": "2026-05-30T12:15:09+00:00",
       "v": 102420.15
+    },
+    {
+      "t": "2026-05-30T14:11:35+00:00",
+      "v": 102420.15
     }
   ],
   "breaking_news": [
@@ -1511,7 +1523,7 @@
       "summary": "It's the second known case of the federal government filing criminal charges against someone who allegedly used insider information to make a large profit on a prediction market site.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/27/nx-s1-5836659/google-polymarket-insider-trading-doj-charges",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1520,7 +1532,7 @@
       "summary": "NPR's Steve Inskeep speaks to Mack Hogan of Inside EVs about the lukewarm consumer response to Ferrari's first electric vehicle.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836496/ferrari-unveiled-its-first-ev-model-the-response-has-been-lukewarm",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1529,7 +1541,7 @@
       "summary": "As part of NPR's Swing Shift project checking in with swing voters, these Americans are split on who is to blame for high gas prices but they all agree it has an impact on their personal finances.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836714/swing-voters-gas-prices-trump-midterms",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1538,7 +1550,7 @@
       "summary": "Suspending the federal gasoline tax could save drivers up to 18.4 cents per gallon. But it would drain the fund meant to cover roadbuilding and repairs \u2014 a fund that's already in trouble.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5835634/gasoline-tax-holiday-trump-potholes",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1547,7 +1559,7 @@
       "summary": "A new report shows that nearly half of U.S. households did not earn enough to cover their necessities in 2024.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836525/affordability-report-brookings-inflation-wages",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1556,7 +1568,7 @@
       "summary": "FIFA has always had a peculiar way to sell tickets to the World Cup. It never faced any major issues \u2014 until prices soared for the 2026 tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836514/2026-world-cup-fifa-ticket-prices",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:39+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -1565,7 +1577,7 @@
       "summary": "The new head of CBS News is flexing her muscles at the network's most storied news program: \"60 Minutes.\" We look at the upheaval.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5837993/bari-weiss-works-to-reinvent-60-minutes-cbs-most-prestigious-program",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1574,7 +1586,7 @@
       "summary": "Sky-high gas prices have drivers going out of their way for discounts at the pump. Oil executives warn that even higher prices might be on the horizon.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5838740/how-stressed-are-americans-about-high-gas-prices-fueling",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1583,7 +1595,7 @@
       "summary": "Israel says it rejects allegations in a new report by the office of the UN secretary general.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cx21le869n1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1592,16 +1604,16 @@
       "summary": "Corruption probes of colleagues and relatives have put Spain's premier into a fight for survival.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c1w21gn340xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Ghana parliament passes anti-LGBTQ+ bill",
+      "headline": "Ghana's parliament passes anti-LGBTQ+ bill",
       "summary": "Same-sex acts are punishable by jail terms under Ghana's new bill targeting those identifying as gay, lesbian or transgender.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c5yedendprko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1610,7 +1622,7 @@
       "summary": "Two of the seven villagers who entered the narrow tunnels in search for gold on 20 May are still missing.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cn4pn4ex0ymo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1619,7 +1631,7 @@
       "summary": "Romania says the Russian drone was likely hit over Ukraine by its air defences and altered its trajectory.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c93x4nxlkjeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1628,7 +1640,7 @@
       "summary": "Kenneth Law admitted charges relating to Canadian victims - but families say he should also be charged in the UK over 79 deaths in Britain.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c70vg7glglyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1637,7 +1649,7 @@
       "summary": "The US defense secretary is questioned about US commitment, including further arms deals, at an Asian security summit in Singapore.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c5ye34k7yejo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -1646,7 +1658,7 @@
       "summary": "The US president met his advisers, after officials confirmed the US and Iran had agreed a framework of a deal.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c0r2d40r91qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1655,7 +1667,7 @@
       "summary": "Sales of the fruity liqueur popular with Canadian students had plummetted north of the border as provinces retaliated against Trump tariffs.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c2l22ypl909o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1664,7 +1676,7 @@
       "summary": "Federal law bars printing images of living people on US currency, but Trump allies in Congress are moving to make an exception.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/clypeyx6nemo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1673,7 +1685,7 @@
       "summary": "BMW is introducing humanoid robots to a car plant in Europe, building on similar projects in the US.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cgmpwzzvxr2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1682,7 +1694,7 @@
       "summary": "The BBC has been hearing from young people who are struggling to find work about how they are tackling the challenge.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/czx2qll4rlyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T12:15:13+00:00",
+      "published_utc": "2026-05-30T14:11:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
