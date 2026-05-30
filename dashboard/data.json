@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-30T15:43:08+00:00",
+  "generated_at_utc": "2026-05-30T16:47:51+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 68,
-  "last_success_utc": "2026-05-30T14:11:39+00:00",
+  "cycle_count": 69,
+  "last_success_utc": "2026-05-30T15:43:08+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -199,6 +199,22 @@
   ],
   "themes": [
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 71.72,
+      "raw_score": 79.3,
+      "band": "strong_buy",
+      "weight": 0.1414,
+      "confidence": 0.85,
+      "components": {
+        "momentum": 84.57,
+        "sentiment": 100.0,
+        "volume": 52.37,
+        "policy": 50.0,
+        "volatility_penalty": 7.58
+      }
+    },
+    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 70.15,
@@ -231,22 +247,6 @@
       }
     },
     {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 69.05,
-      "raw_score": 77.38,
-      "band": "buy",
-      "weight": 0.1432,
-      "confidence": 0.95,
-      "components": {
-        "momentum": 83.89,
-        "sentiment": 100.0,
-        "volume": 44.15,
-        "policy": 50.0,
-        "volatility_penalty": 8.33
-      }
-    },
-    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 68.67,
@@ -263,19 +263,19 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 67.44,
-      "raw_score": 75.02,
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 65.72,
+      "raw_score": 74.05,
       "band": "buy",
-      "weight": 0.1344,
-      "confidence": 0.9,
+      "weight": 0.1323,
+      "confidence": 0.95,
       "components": {
-        "momentum": 84.57,
-        "sentiment": 85.72,
-        "volume": 52.37,
+        "momentum": 83.89,
+        "sentiment": 88.89,
+        "volume": 44.15,
         "policy": 50.0,
-        "volatility_penalty": 7.58
+        "volatility_penalty": 8.33
       }
     },
     {
@@ -284,8 +284,8 @@
       "score": 62.16,
       "raw_score": 62.16,
       "band": "buy",
-      "weight": 0.1208,
-      "confidence": 0.95,
+      "weight": 0.1146,
+      "confidence": 0.85,
       "components": {
         "momentum": 41.59,
         "sentiment": 100.0,
@@ -297,14 +297,14 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 58.57,
-      "raw_score": 59.67,
+      "score": 59.11,
+      "raw_score": 60.21,
       "band": "buy",
-      "weight": 0.1119,
+      "weight": 0.1137,
       "confidence": 1.0,
       "components": {
         "momentum": 52.02,
-        "sentiment": 80.0,
+        "sentiment": 81.82,
         "volume": 49.3,
         "policy": 50.0,
         "volatility_penalty": 1.1
@@ -316,8 +316,8 @@
       "score": 57.77,
       "raw_score": 57.77,
       "band": "buy",
-      "weight": 0.1065,
-      "confidence": 0.95,
+      "weight": 0.1038,
+      "confidence": 0.9,
       "components": {
         "momentum": 67.06,
         "sentiment": 50.0,
@@ -363,14 +363,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.049,
+      "target_weight": 0.0453,
       "current_weight": 0.0488,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Broadcom Stock Attracts A Billionaire Buyer As AI Momentum Accelerates\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.05%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 69.0 (buy), contribution 76.8",
+        "theme 'Semiconductors (Broad)' score 65.7 (buy), contribution 73.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -440,14 +440,14 @@
     {
       "symbol": "GM",
       "action": "HOLD",
-      "target_weight": 0.0476,
+      "target_weight": 0.0499,
       "current_weight": 0.0471,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 67.4 (buy), contribution 81.0"
+        "theme 'EV & Clean Transport' score 71.7 (strong_buy), contribution 85.3"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -469,15 +469,16 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0398,
+      "target_weight": 0.0415,
       "current_weight": 0.0277,
-      "notional_delta": 1235.56,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes, These AI Stocks Struggle; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 1.21% vs target \u2014 add",
+      "notional_delta": 1409.67,
+      "reason": "buying on trial data (positive) \u2014 \"Eli Lilly and Company (LLY): A Long Term Stock to Buy\" \u00b7 underweight by 1.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.19%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.6 (buy), contribution 77.3",
+        "theme 'Biotech & Pharma' score 59.1 (buy), contribution 77.8",
         "news_source=yahoo_rss",
+        "event=trial data",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
@@ -485,14 +486,14 @@
     {
       "symbol": "LRCX",
       "action": "HOLD",
-      "target_weight": 0.0491,
+      "target_weight": 0.0454,
       "current_weight": 0.049,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 69.0 (buy), contribution 77.0"
+        "theme 'Semiconductors (Broad)' score 65.7 (buy), contribution 73.7"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -544,7 +545,7 @@
     {
       "symbol": "NKE",
       "action": "HOLD",
-      "target_weight": 0.0452,
+      "target_weight": 0.0429,
       "current_weight": 0.0442,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"3 Beaten-Down Stocks Primed For A Major Bounceback\" \u00b7 within 50bps of target \u2014 no trade",
@@ -592,26 +593,56 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0374,
+      "target_weight": 0.039,
       "current_weight": 0.0252,
-      "notional_delta": 1244.47,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes, These AI Stocks Struggle; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 1.22% vs target \u2014 add",
+      "notional_delta": 1408.34,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes, These AI Stocks Struggle; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 1.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.6 (buy), contribution 72.6",
+        "theme 'Biotech & Pharma' score 59.1 (buy), contribution 73.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
-      "symbol": "FTNT",
+      "symbol": "F",
       "action": "BUY",
+      "target_weight": 0.0463,
+      "current_weight": 0.0,
+      "notional_delta": 4742.05,
+      "reason": "buying on positive news flow \u2014 \"Benzinga Bulls And Bears: Salesforce, Ford, Autodesk \u2014 And S&P 500 Extends Rally To Ninth Week\" \u00b7 new position \u2014 theme 'EV & Clean Transport' score 71.7 (strong_buy), contribution 79.0",
+      "factors": [
+        "ret_5d=27.58%",
+        "rel_vol_5d=1.32",
+        "vol_ann=56.46%",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ev_clean_transport"
+    },
+    {
+      "symbol": "RIVN",
+      "action": "BUY",
+      "target_weight": 0.0453,
+      "current_weight": 0.0,
+      "notional_delta": 4639.63,
+      "reason": "new position \u2014 theme 'EV & Clean Transport' score 71.7 (strong_buy), contribution 77.3",
+      "factors": [
+        "ret_5d=15.19%",
+        "rel_vol_5d=0.96",
+        "vol_ann=50.42%"
+      ],
+      "theme_key": "ev_clean_transport"
+    },
+    {
+      "symbol": "FTNT",
+      "action": "SKIP",
       "target_weight": 0.0489,
       "current_weight": 0.0,
-      "notional_delta": 5008.35,
-      "reason": "buying on mixed news flow \u2014 \"Watching Fortinet; Hearing Investor Business Daily SwingTrader Buys Stock\" \u00b7 new position \u2014 theme 'Cybersecurity' score 70.2 (strong_buy), contribution 74.7",
+      "notional_delta": 0.0,
+      "reason": "skipping on mixed news flow \u2014 \"Watching Fortinet; Hearing Investor Business Daily SwingTrader Buys Stock\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 70.2 (strong_buy), contribution 74.7)",
       "factors": [
         "ret_5d=6.57%",
         "rel_vol_5d=0.99",
@@ -620,22 +651,6 @@
         "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity"
-    },
-    {
-      "symbol": "TSM",
-      "action": "SKIP",
-      "target_weight": 0.0451,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Broadcom Stock Attracts A Billionaire Buyer As AI Momentum Accelerates\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 69.0 (buy), contribution 70.8)",
-      "factors": [
-        "ret_5d=2.78%",
-        "rel_vol_5d=0.81",
-        "vol_ann=37.90%",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "RTX",
@@ -670,41 +685,25 @@
       "theme_key": "defense"
     },
     {
-      "symbol": "F",
-      "action": "BUY",
-      "target_weight": 0.0439,
+      "symbol": "TSM",
+      "action": "SKIP",
+      "target_weight": 0.0416,
       "current_weight": 0.0,
-      "notional_delta": 4496.24,
-      "reason": "buying on positive news flow \u2014 \"Benzinga Bulls And Bears: Salesforce, Ford, Autodesk \u2014 And S&P 500 Extends Rally To Ninth Week\" \u00b7 new position \u2014 theme 'EV & Clean Transport' score 67.4 (buy), contribution 74.8",
+      "notional_delta": 0.0,
+      "reason": "skipping on positive news flow \u2014 \"Broadcom Stock Attracts A Billionaire Buyer As AI Momentum Accelerates\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 65.7 (buy), contribution 67.4)",
       "factors": [
-        "ret_5d=27.58%",
-        "rel_vol_5d=1.32",
-        "vol_ann=56.46%",
+        "ret_5d=2.78%",
+        "rel_vol_5d=0.81",
+        "vol_ann=37.90%",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
-      "theme_key": "ev_clean_transport"
-    },
-    {
-      "symbol": "RIVN",
-      "action": "SKIP",
-      "target_weight": 0.0429,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on negative news flow \u2014 \"Rivian Stock Climbs Friday: What's Driving The Move?\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 67.4 (buy), contribution 73.1)",
-      "factors": [
-        "ret_5d=15.19%",
-        "rel_vol_5d=0.96",
-        "vol_ann=50.42%",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
-      ],
-      "theme_key": "ev_clean_transport"
+      "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "HD",
       "action": "SKIP",
-      "target_weight": 0.0382,
+      "target_weight": 0.0362,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on mixed news flow \u2014 \"9 Consumer Discretionary Stocks Whale Activity In Today's Session\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 62.2 (buy), contribution 69.9)",
@@ -720,7 +719,7 @@
     {
       "symbol": "AMZN",
       "action": "SKIP",
-      "target_weight": 0.0374,
+      "target_weight": 0.0355,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on positive news flow \u2014 \"The S&P Hit A Record While 8 Of 11 Sectors Fell\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 62.2 (buy), contribution 68.5)",
@@ -736,10 +735,10 @@
     {
       "symbol": "PFE",
       "action": "SKIP",
-      "target_weight": 0.0317,
+      "target_weight": 0.0331,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes, These AI Stocks Struggle; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 58.6 (buy), contribution 61.5)",
+      "reason": "skipping on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes, These AI Stocks Struggle; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.1 (buy), contribution 62.1)",
       "factors": [
         "ret_5d=0.89%",
         "rel_vol_5d=0.92",
@@ -754,14 +753,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.049,
+      "target_weight": 0.0453,
       "current_weight": 0.0488,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Broadcom Stock Attracts A Billionaire Buyer As AI Momentum Accelerates\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.05%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 69.0 (buy), contribution 76.8",
+        "theme 'Semiconductors (Broad)' score 65.7 (buy), contribution 73.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -846,14 +845,14 @@
     {
       "symbol": "GM",
       "action": "HOLD",
-      "target_weight": 0.0476,
+      "target_weight": 0.0499,
       "current_weight": 0.0471,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 67.4 (buy), contribution 81.0"
+        "theme 'EV & Clean Transport' score 71.7 (strong_buy), contribution 85.3"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -881,15 +880,16 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0398,
+      "target_weight": 0.0415,
       "current_weight": 0.0277,
-      "notional_delta": 1235.56,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes, These AI Stocks Struggle; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 1.21% vs target \u2014 add",
+      "notional_delta": 1409.67,
+      "reason": "buying on trial data (positive) \u2014 \"Eli Lilly and Company (LLY): A Long Term Stock to Buy\" \u00b7 underweight by 1.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.19%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.6 (buy), contribution 77.3",
+        "theme 'Biotech & Pharma' score 59.1 (buy), contribution 77.8",
         "news_source=yahoo_rss",
+        "event=trial data",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
@@ -900,14 +900,14 @@
     {
       "symbol": "LRCX",
       "action": "HOLD",
-      "target_weight": 0.0491,
+      "target_weight": 0.0454,
       "current_weight": 0.049,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 69.0 (buy), contribution 77.0"
+        "theme 'Semiconductors (Broad)' score 65.7 (buy), contribution 73.7"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -971,7 +971,7 @@
     {
       "symbol": "NKE",
       "action": "HOLD",
-      "target_weight": 0.0452,
+      "target_weight": 0.0429,
       "current_weight": 0.0442,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"3 Beaten-Down Stocks Primed For A Major Bounceback\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1028,14 +1028,14 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0374,
+      "target_weight": 0.039,
       "current_weight": 0.0252,
-      "notional_delta": 1244.47,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes, These AI Stocks Struggle; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 1.22% vs target \u2014 add",
+      "notional_delta": 1408.34,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes, These AI Stocks Struggle; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 1.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.6 (buy), contribution 72.6",
+        "theme 'Biotech & Pharma' score 59.1 (buy), contribution 73.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1045,12 +1045,48 @@
       "note": "market_closed_or_no_account"
     },
     {
-      "symbol": "FTNT",
+      "symbol": "F",
       "action": "BUY",
+      "target_weight": 0.0463,
+      "current_weight": 0.0,
+      "notional_delta": 4742.05,
+      "reason": "buying on positive news flow \u2014 \"Benzinga Bulls And Bears: Salesforce, Ford, Autodesk \u2014 And S&P 500 Extends Rally To Ninth Week\" \u00b7 new position \u2014 theme 'EV & Clean Transport' score 71.7 (strong_buy), contribution 79.0",
+      "factors": [
+        "ret_5d=27.58%",
+        "rel_vol_5d=1.32",
+        "vol_ann=56.46%",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ev_clean_transport",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "RIVN",
+      "action": "BUY",
+      "target_weight": 0.0453,
+      "current_weight": 0.0,
+      "notional_delta": 4639.63,
+      "reason": "new position \u2014 theme 'EV & Clean Transport' score 71.7 (strong_buy), contribution 77.3",
+      "factors": [
+        "ret_5d=15.19%",
+        "rel_vol_5d=0.96",
+        "vol_ann=50.42%"
+      ],
+      "theme_key": "ev_clean_transport",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "FTNT",
+      "action": "SKIP",
       "target_weight": 0.0489,
       "current_weight": 0.0,
-      "notional_delta": 5008.35,
-      "reason": "buying on mixed news flow \u2014 \"Watching Fortinet; Hearing Investor Business Daily SwingTrader Buys Stock\" \u00b7 new position \u2014 theme 'Cybersecurity' score 70.2 (strong_buy), contribution 74.7",
+      "notional_delta": 0.0,
+      "reason": "skipping on mixed news flow \u2014 \"Watching Fortinet; Hearing Investor Business Daily SwingTrader Buys Stock\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 70.2 (strong_buy), contribution 74.7)",
       "factors": [
         "ret_5d=6.57%",
         "rel_vol_5d=0.99",
@@ -1059,25 +1095,6 @@
         "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "TSM",
-      "action": "SKIP",
-      "target_weight": 0.0451,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Broadcom Stock Attracts A Billionaire Buyer As AI Momentum Accelerates\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 69.0 (buy), contribution 70.8)",
-      "factors": [
-        "ret_5d=2.78%",
-        "rel_vol_5d=0.81",
-        "vol_ann=37.90%",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "semiconductors_ex_ai",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1121,39 +1138,20 @@
       "note": "market_closed_or_no_account"
     },
     {
-      "symbol": "F",
-      "action": "BUY",
-      "target_weight": 0.0439,
+      "symbol": "TSM",
+      "action": "SKIP",
+      "target_weight": 0.0416,
       "current_weight": 0.0,
-      "notional_delta": 4496.24,
-      "reason": "buying on positive news flow \u2014 \"Benzinga Bulls And Bears: Salesforce, Ford, Autodesk \u2014 And S&P 500 Extends Rally To Ninth Week\" \u00b7 new position \u2014 theme 'EV & Clean Transport' score 67.4 (buy), contribution 74.8",
+      "notional_delta": 0.0,
+      "reason": "skipping on positive news flow \u2014 \"Broadcom Stock Attracts A Billionaire Buyer As AI Momentum Accelerates\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 65.7 (buy), contribution 67.4)",
       "factors": [
-        "ret_5d=27.58%",
-        "rel_vol_5d=1.32",
-        "vol_ann=56.46%",
+        "ret_5d=2.78%",
+        "rel_vol_5d=0.81",
+        "vol_ann=37.90%",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
-      "theme_key": "ev_clean_transport",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "RIVN",
-      "action": "SKIP",
-      "target_weight": 0.0429,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on negative news flow \u2014 \"Rivian Stock Climbs Friday: What's Driving The Move?\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 67.4 (buy), contribution 73.1)",
-      "factors": [
-        "ret_5d=15.19%",
-        "rel_vol_5d=0.96",
-        "vol_ann=50.42%",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
-      ],
-      "theme_key": "ev_clean_transport",
+      "theme_key": "semiconductors_ex_ai",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1161,7 +1159,7 @@
     {
       "symbol": "HD",
       "action": "SKIP",
-      "target_weight": 0.0382,
+      "target_weight": 0.0362,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on mixed news flow \u2014 \"9 Consumer Discretionary Stocks Whale Activity In Today's Session\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 62.2 (buy), contribution 69.9)",
@@ -1180,7 +1178,7 @@
     {
       "symbol": "AMZN",
       "action": "SKIP",
-      "target_weight": 0.0374,
+      "target_weight": 0.0355,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on positive news flow \u2014 \"The S&P Hit A Record While 8 Of 11 Sectors Fell\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 62.2 (buy), contribution 68.5)",
@@ -1199,10 +1197,10 @@
     {
       "symbol": "PFE",
       "action": "SKIP",
-      "target_weight": 0.0317,
+      "target_weight": 0.0331,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes, These AI Stocks Struggle; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 58.6 (buy), contribution 61.5)",
+      "reason": "skipping on positive news flow \u2014 \"Dow Jones Futures: Market Hits Highs On Iran Hopes, These AI Stocks Struggle; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 59.1 (buy), contribution 62.1)",
       "factors": [
         "ret_5d=0.89%",
         "rel_vol_5d=0.92",
@@ -1488,6 +1486,10 @@
     {
       "t": "2026-05-30T15:43:02+00:00",
       "v": 102420.15
+    },
+    {
+      "t": "2026-05-30T16:47:46+00:00",
+      "v": 102420.15
     }
   ],
   "breaking_news": [
@@ -1496,7 +1498,7 @@
       "summary": "It's the second known case of the federal government filing criminal charges against someone who allegedly used insider information to make a large profit on a prediction market site.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/27/nx-s1-5836659/google-polymarket-insider-trading-doj-charges",
-      "published_utc": "2026-05-30T15:43:08+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1505,7 +1507,7 @@
       "summary": "NPR's Steve Inskeep speaks to Mack Hogan of Inside EVs about the lukewarm consumer response to Ferrari's first electric vehicle.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836496/ferrari-unveiled-its-first-ev-model-the-response-has-been-lukewarm",
-      "published_utc": "2026-05-30T15:43:08+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1514,7 +1516,7 @@
       "summary": "As part of NPR's Swing Shift project checking in with swing voters, these Americans are split on who is to blame for high gas prices but they all agree it has an impact on their personal finances.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836714/swing-voters-gas-prices-trump-midterms",
-      "published_utc": "2026-05-30T15:43:08+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1523,7 +1525,7 @@
       "summary": "Suspending the federal gasoline tax could save drivers up to 18.4 cents per gallon. But it would drain the fund meant to cover roadbuilding and repairs \u2014 a fund that's already in trouble.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5835634/gasoline-tax-holiday-trump-potholes",
-      "published_utc": "2026-05-30T15:43:08+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1532,7 +1534,7 @@
       "summary": "A new report shows that nearly half of U.S. households did not earn enough to cover their necessities in 2024.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836525/affordability-report-brookings-inflation-wages",
-      "published_utc": "2026-05-30T15:43:08+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1541,7 +1543,7 @@
       "summary": "FIFA has always had a peculiar way to sell tickets to the World Cup. It never faced any major issues \u2014 until prices soared for the 2026 tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836514/2026-world-cup-fifa-ticket-prices",
-      "published_utc": "2026-05-30T15:43:08+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -1550,7 +1552,7 @@
       "summary": "The new head of CBS News is flexing her muscles at the network's most storied news program: \"60 Minutes.\" We look at the upheaval.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5837993/bari-weiss-works-to-reinvent-60-minutes-cbs-most-prestigious-program",
-      "published_utc": "2026-05-30T15:43:08+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1559,17 +1561,8 @@
       "summary": "Sky-high gas prices have drivers going out of their way for discounts at the pump. Oil executives warn that even higher prices might be on the horizon.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5838740/how-stressed-are-americans-about-high-gas-prices-fueling",
-      "published_utc": "2026-05-30T15:43:08+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "US not 'turning back' on Asia allies, but expects them to boost defence, says Hegseth",
-      "summary": "The US defense secretary is questioned about US commitment, including further arms deals, at an Asian security summit in Singapore.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c5ye34k7yejo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
-      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -1577,7 +1570,7 @@
       "summary": "The testimony comes about a month after America's top prosecutor was ousted by US President Donald Trump.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/czj2ldllgwgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -1586,7 +1579,7 @@
       "summary": "Corruption probes of colleagues and relatives have put Spain's premier into a fight for survival.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c1w21gn340xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1595,8 +1588,17 @@
       "summary": "Same-sex acts are punishable by jail terms under Ghana's new bill targeting those identifying as gay, lesbian or transgender.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c5yedendprko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Ebola spread in DR Congo 'alarming', charity warns, as WHO chief visits worst-hit area",
+      "summary": "M\u00e9dicins Sans Fronti\u00e8res says that never before has an Ebola outbreak recorded so many cases so soon after its declaration.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c99ldxykz4zo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-30T16:47:51+00:00",
+      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -1604,7 +1606,7 @@
       "summary": "Two of the seven villagers who entered the narrow tunnels in search for gold on 20 May are still missing.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cn4pn4ex0ymo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1613,7 +1615,7 @@
       "summary": "Local authorities say the cancellation of other West concerts had played a role in the decision.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c3d27x5vnnvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1622,7 +1624,7 @@
       "summary": "The technology, developed under the Aukus military pact, is aimed at protecting undersea cables and boosting naval defence.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c5y8wjvd1ypo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1631,7 +1633,7 @@
       "summary": "The US president met his advisers, after officials confirmed the US and Iran had agreed a framework of a deal.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c0r2d40r91qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1640,7 +1642,7 @@
       "summary": "Sales of the fruity liqueur popular with Canadian students had plummetted north of the border as provinces retaliated against Trump tariffs.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c2l22ypl909o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1649,7 +1651,7 @@
       "summary": "Federal law bars printing images of living people on US currency, but Trump allies in Congress are moving to make an exception.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/clypeyx6nemo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1658,7 +1660,7 @@
       "summary": "BMW is introducing humanoid robots to a car plant in Europe, building on similar projects in the US.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cgmpwzzvxr2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1667,7 +1669,7 @@
       "summary": "The BBC has been hearing from young people who are struggling to find work about how they are tackling the challenge.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/czx2qll4rlyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T15:43:07+00:00",
+      "published_utc": "2026-05-30T16:47:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
