@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-30T07:24:27+00:00",
+  "generated_at_utc": "2026-05-30T09:32:22+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 63,
-  "last_success_utc": "2026-05-30T04:14:36+00:00",
+  "cycle_count": 64,
+  "last_success_utc": "2026-05-30T07:24:27+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -30,10 +30,10 @@
     "min_run_interval_minutes": 10
   },
   "account": {
-    "equity": 102420.17,
-    "cash": 40391.42,
-    "buying_power": 142811.59,
-    "portfolio_value": 102420.17
+    "equity": 102420.15,
+    "cash": 40391.4,
+    "buying_power": 142811.55,
+    "portfolio_value": 102420.15
   },
   "positions": [
     {
@@ -69,11 +69,11 @@
     {
       "symbol": "BA",
       "qty": 15.342660466,
-      "avg_entry_price": 225.7912,
+      "avg_entry_price": 226.4799,
       "current_price": 231.15,
       "market_value": 3546.46,
-      "unrealized_pl": 82.22,
-      "unrealized_plpc": 0.0237,
+      "unrealized_pl": 71.65,
+      "unrealized_plpc": 0.0206,
       "weight": 0.0346
     },
     {
@@ -109,11 +109,11 @@
     {
       "symbol": "LLY",
       "qty": 2.570827313,
-      "avg_entry_price": 1095.4567,
+      "avg_entry_price": 1107.1203,
       "current_price": 1105.0,
       "market_value": 2840.76,
-      "unrealized_pl": 24.53,
-      "unrealized_plpc": 0.0087,
+      "unrealized_pl": -5.45,
+      "unrealized_plpc": -0.0019,
       "weight": 0.0277
     },
     {
@@ -189,11 +189,11 @@
     {
       "symbol": "VRTX",
       "qty": 5.778345832,
-      "avg_entry_price": 448.28,
+      "avg_entry_price": 448.321,
       "current_price": 447.54,
       "market_value": 2586.04,
-      "unrealized_pl": -4.28,
-      "unrealized_plpc": -0.0016,
+      "unrealized_pl": -4.51,
+      "unrealized_plpc": -0.0017,
       "weight": 0.0252
     }
   ],
@@ -295,13 +295,29 @@
       }
     },
     {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 57.77,
+      "raw_score": 57.77,
+      "band": "buy",
+      "weight": 0.1092,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 67.06,
+        "sentiment": 50.0,
+        "volume": 54.72,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "biotech",
       "name": "Biotech & Pharma",
       "score": 49.57,
       "raw_score": 50.67,
       "band": "starter",
-      "weight": 0.0737,
-      "confidence": 0.8,
+      "weight": 0.0696,
+      "confidence": 0.7,
       "components": {
         "momentum": 52.02,
         "sentiment": 50.0,
@@ -324,22 +340,6 @@
         "volume": 54.59,
         "policy": 50.0,
         "volatility_penalty": 13.98
-      }
-    },
-    {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 42.77,
-      "raw_score": 42.77,
-      "band": "starter",
-      "weight": 0.0592,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 67.06,
-        "sentiment": 0.0,
-        "volume": 54.72,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
       }
     },
     {
@@ -413,7 +413,7 @@
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
-        "unrealized_pl=2.37%",
+        "unrealized_pl=2.06%",
         "theme=Defense & Aerospace",
         "theme 'Defense & Aerospace' score 58.4 (buy), contribution 71.3"
       ],
@@ -453,14 +453,15 @@
     },
     {
       "symbol": "GS",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0378,
       "current_weight": 0.0435,
-      "notional_delta": -4452.44,
-      "reason": "exiting on mixed news flow \u2014 \"Apollo Says Private Credit Redemptions Could Accelerate Further\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -580.96,
+      "reason": "trimming on mixed news flow \u2014 \"Apollo Says Private Credit Redemptions Could Accelerate Further\" \u00b7 overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.59%",
         "theme=Financials & Rates",
+        "theme 'Financials & Rates' score 57.8 (buy), contribution 65.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -468,13 +469,13 @@
     },
     {
       "symbol": "LLY",
-      "action": "HOLD",
-      "target_weight": 0.0273,
+      "action": "REDUCE",
+      "target_weight": 0.0146,
       "current_weight": 0.0277,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1345.43,
+      "reason": "overweight by 1.31% vs target \u2014 trim",
       "factors": [
-        "unrealized_pl=0.87%",
+        "unrealized_pl=-0.19%",
         "theme=Biotech & Pharma",
         "theme 'Biotech & Pharma' score 49.6 (starter), contribution 68.3"
       ],
@@ -512,14 +513,15 @@
     },
     {
       "symbol": "MS",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.038,
       "current_weight": 0.0439,
-      "notional_delta": -4496.37,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -604.41,
+      "reason": "overweight by 0.59% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.36%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "theme 'Financials & Rates' score 57.8 (buy), contribution 66.1"
       ],
       "theme_key": "financials"
     },
@@ -589,11 +591,11 @@
     },
     {
       "symbol": "VRTX",
-      "action": "HOLD",
-      "target_weight": 0.0254,
+      "action": "REDUCE",
+      "target_weight": 0.0136,
       "current_weight": 0.0252,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1193.13,
+      "reason": "overweight by 1.16% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=Biotech & Pharma",
@@ -728,9 +730,23 @@
       "theme_key": "defense"
     },
     {
+      "symbol": "WFC",
+      "action": "SKIP",
+      "target_weight": 0.0334,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 57.8 (buy), contribution 58.0)",
+      "factors": [
+        "ret_5d=2.13%",
+        "rel_vol_5d=0.96",
+        "vol_ann=28.75%"
+      ],
+      "theme_key": "financials"
+    },
+    {
       "symbol": "PFE",
       "action": "SKIP",
-      "target_weight": 0.021,
+      "target_weight": 0.0113,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on mixed news flow \u2014 \"Wall Street's Most Accurate Analysts Give Their Take On 3 Healthcare Stocks Delivering High-Dividend Yields\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 49.6 (starter), contribution 52.5)",
@@ -742,50 +758,6 @@
         "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
-    },
-    {
-      "symbol": "FSLR",
-      "action": "SKIP",
-      "target_weight": 0.0248,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 48.6 (starter), contribution 65.4)",
-      "factors": [
-        "ret_5d=23.27%",
-        "rel_vol_5d=1.28",
-        "vol_ann=51.77%"
-      ],
-      "theme_key": "clean_energy"
-    },
-    {
-      "symbol": "RUN",
-      "action": "SKIP",
-      "target_weight": 0.0219,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on mixed news flow \u2014 \"10 Industrials Stocks Whale Activity In Today's Session\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 48.6 (starter), contribution 57.6)",
-      "factors": [
-        "ret_5d=15.75%",
-        "rel_vol_5d=0.92",
-        "vol_ann=62.70%",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
-      ],
-      "theme_key": "clean_energy"
-    },
-    {
-      "symbol": "ENPH",
-      "action": "SKIP",
-      "target_weight": 0.0183,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 48.6 (starter), contribution 48.3)",
-      "factors": [
-        "ret_5d=9.66%",
-        "rel_vol_5d=1.03",
-        "vol_ann=93.11%"
-      ],
-      "theme_key": "clean_energy"
     }
   ],
   "executions": [
@@ -851,7 +823,7 @@
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
-        "unrealized_pl=2.37%",
+        "unrealized_pl=2.06%",
         "theme=Defense & Aerospace",
         "theme 'Defense & Aerospace' score 58.4 (buy), contribution 71.3"
       ],
@@ -900,14 +872,15 @@
     },
     {
       "symbol": "GS",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0378,
       "current_weight": 0.0435,
-      "notional_delta": -4452.44,
-      "reason": "exiting on mixed news flow \u2014 \"Apollo Says Private Credit Redemptions Could Accelerate Further\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -580.96,
+      "reason": "trimming on mixed news flow \u2014 \"Apollo Says Private Credit Redemptions Could Accelerate Further\" \u00b7 overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.59%",
         "theme=Financials & Rates",
+        "theme 'Financials & Rates' score 57.8 (buy), contribution 65.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -918,13 +891,13 @@
     },
     {
       "symbol": "LLY",
-      "action": "HOLD",
-      "target_weight": 0.0273,
+      "action": "REDUCE",
+      "target_weight": 0.0146,
       "current_weight": 0.0277,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1345.43,
+      "reason": "overweight by 1.31% vs target \u2014 trim",
       "factors": [
-        "unrealized_pl=0.87%",
+        "unrealized_pl=-0.19%",
         "theme=Biotech & Pharma",
         "theme 'Biotech & Pharma' score 49.6 (starter), contribution 68.3"
       ],
@@ -971,14 +944,15 @@
     },
     {
       "symbol": "MS",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.038,
       "current_weight": 0.0439,
-      "notional_delta": -4496.37,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -604.41,
+      "reason": "overweight by 0.59% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.36%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "theme 'Financials & Rates' score 57.8 (buy), contribution 66.1"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1063,11 +1037,11 @@
     },
     {
       "symbol": "VRTX",
-      "action": "HOLD",
-      "target_weight": 0.0254,
+      "action": "REDUCE",
+      "target_weight": 0.0136,
       "current_weight": 0.0252,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1193.13,
+      "reason": "overweight by 1.16% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=Biotech & Pharma",
@@ -1229,9 +1203,26 @@
       "note": "market_closed_or_no_account"
     },
     {
+      "symbol": "WFC",
+      "action": "SKIP",
+      "target_weight": 0.0334,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 57.8 (buy), contribution 58.0)",
+      "factors": [
+        "ret_5d=2.13%",
+        "rel_vol_5d=0.96",
+        "vol_ann=28.75%"
+      ],
+      "theme_key": "financials",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
       "symbol": "PFE",
       "action": "SKIP",
-      "target_weight": 0.021,
+      "target_weight": 0.0113,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on mixed news flow \u2014 \"Wall Street's Most Accurate Analysts Give Their Take On 3 Healthcare Stocks Delivering High-Dividend Yields\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 49.6 (starter), contribution 52.5)",
@@ -1243,59 +1234,6 @@
         "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "FSLR",
-      "action": "SKIP",
-      "target_weight": 0.0248,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 48.6 (starter), contribution 65.4)",
-      "factors": [
-        "ret_5d=23.27%",
-        "rel_vol_5d=1.28",
-        "vol_ann=51.77%"
-      ],
-      "theme_key": "clean_energy",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "RUN",
-      "action": "SKIP",
-      "target_weight": 0.0219,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on mixed news flow \u2014 \"10 Industrials Stocks Whale Activity In Today's Session\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 48.6 (starter), contribution 57.6)",
-      "factors": [
-        "ret_5d=15.75%",
-        "rel_vol_5d=0.92",
-        "vol_ann=62.70%",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
-      ],
-      "theme_key": "clean_energy",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "ENPH",
-      "action": "SKIP",
-      "target_weight": 0.0183,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 48.6 (starter), contribution 48.3)",
-      "factors": [
-        "ret_5d=9.66%",
-        "rel_vol_5d=1.03",
-        "vol_ann=93.11%"
-      ],
-      "theme_key": "clean_energy",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1553,6 +1491,10 @@
     {
       "t": "2026-05-30T07:24:25+00:00",
       "v": 102420.17
+    },
+    {
+      "t": "2026-05-30T09:32:20+00:00",
+      "v": 102420.15
     }
   ],
   "breaking_news": [
@@ -1561,7 +1503,7 @@
       "summary": "It's the second known case of the federal government filing criminal charges against someone who allegedly used insider information to make a large profit on a prediction market site.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/27/nx-s1-5836659/google-polymarket-insider-trading-doj-charges",
-      "published_utc": "2026-05-30T07:24:27+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1570,7 +1512,7 @@
       "summary": "NPR's Steve Inskeep speaks to Mack Hogan of Inside EVs about the lukewarm consumer response to Ferrari's first electric vehicle.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836496/ferrari-unveiled-its-first-ev-model-the-response-has-been-lukewarm",
-      "published_utc": "2026-05-30T07:24:27+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1579,7 +1521,7 @@
       "summary": "As part of NPR's Swing Shift project checking in with swing voters, these Americans are split on who is to blame for high gas prices but they all agree it has an impact on their personal finances.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836714/swing-voters-gas-prices-trump-midterms",
-      "published_utc": "2026-05-30T07:24:27+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1588,7 +1530,7 @@
       "summary": "Suspending the federal gasoline tax could save drivers up to 18.4 cents per gallon. But it would drain the fund meant to cover roadbuilding and repairs \u2014 a fund that's already in trouble.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5835634/gasoline-tax-holiday-trump-potholes",
-      "published_utc": "2026-05-30T07:24:27+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1597,7 +1539,7 @@
       "summary": "A new report shows that nearly half of U.S. households did not earn enough to cover their necessities in 2024.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836525/affordability-report-brookings-inflation-wages",
-      "published_utc": "2026-05-30T07:24:27+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1606,7 +1548,7 @@
       "summary": "FIFA has always had a peculiar way to sell tickets to the World Cup. It never faced any major issues \u2014 until prices soared for the 2026 tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836514/2026-world-cup-fifa-ticket-prices",
-      "published_utc": "2026-05-30T07:24:27+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -1615,7 +1557,7 @@
       "summary": "The new head of CBS News is flexing her muscles at the network's most storied news program: \"60 Minutes.\" We look at the upheaval.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5837993/bari-weiss-works-to-reinvent-60-minutes-cbs-most-prestigious-program",
-      "published_utc": "2026-05-30T07:24:27+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1624,7 +1566,7 @@
       "summary": "Sky-high gas prices have drivers going out of their way for discounts at the pump. Oil executives warn that even higher prices might be on the horizon.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5838740/how-stressed-are-americans-about-high-gas-prices-fueling",
-      "published_utc": "2026-05-30T07:24:27+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1633,7 +1575,7 @@
       "summary": "Israel says it rejects allegations in a new report by the office of the UN secretary general.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cx21le869n1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1642,7 +1584,7 @@
       "summary": "Corruption probes of colleagues and relatives have put Spain's premier into a fight for survival.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c1w21gn340xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1651,7 +1593,7 @@
       "summary": "Same-sex acts are punishable by jail terms under Ghana's new bill targeting those identifying as gay, lesbian or transgender.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c5yedendprko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1660,7 +1602,7 @@
       "summary": "The bedraggled man was led to safety by rescuers after nine days stranded in the cavern",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgzxjrkvn8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1669,7 +1611,7 @@
       "summary": "Romania says the Russian drone was likely hit over Ukraine by its air defences and altered its trajectory.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c93x4nxlkjeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1678,7 +1620,7 @@
       "summary": "Kenneth Law admitted charges relating to Canadian victims - but families say he should also be charged in the UK over 79 deaths in Britain.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c70vg7glglyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1687,7 +1629,7 @@
       "summary": "The US defense secretary is questioned about US commitment, including further arms deals, at an Asian security summit in Singapore.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c5ye34k7yejo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -1696,7 +1638,7 @@
       "summary": "The US president met his advisers, after officials confirmed the US and Iran had agreed a framework of a deal.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c0r2d40r91qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1705,7 +1647,7 @@
       "summary": "Sales of the fruity liqueur popular with Canadian students had plummetted north of the border as provinces retaliated against Trump tariffs.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c2l22ypl909o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1714,7 +1656,7 @@
       "summary": "Federal law bars printing images of living people on US currency, but Trump allies in Congress are moving to make an exception.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/clypeyx6nemo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1723,7 +1665,7 @@
       "summary": "BMW is introducing humanoid robots to a car plant in Europe, building on similar projects in the US.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cgmpwzzvxr2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1732,7 +1674,7 @@
       "summary": "The BBC has been hearing from young people who are struggling to find work about how they are tackling the challenge.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/czx2qll4rlyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T07:24:26+00:00",
+      "published_utc": "2026-05-30T09:32:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
