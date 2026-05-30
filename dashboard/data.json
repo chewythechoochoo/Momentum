@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-30T20:41:21+00:00",
+  "generated_at_utc": "2026-05-30T21:46:06+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 72,
-  "last_success_utc": "2026-05-30T19:39:52+00:00",
+  "cycle_count": 73,
+  "last_success_utc": "2026-05-30T20:41:21+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -199,22 +199,6 @@
   ],
   "themes": [
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 69.05,
-      "raw_score": 75.53,
-      "band": "buy",
-      "weight": 0.1395,
-      "confidence": 0.9,
-      "components": {
-        "momentum": 73.39,
-        "sentiment": 100.0,
-        "volume": 55.89,
-        "policy": 50.0,
-        "volatility_penalty": 6.48
-      }
-    },
-    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 68.94,
@@ -247,19 +231,19 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 62.72,
-      "raw_score": 70.3,
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 62.66,
+      "raw_score": 62.66,
       "band": "buy",
-      "weight": 0.1069,
-      "confidence": 0.7,
+      "weight": 0.1255,
+      "confidence": 1.0,
       "components": {
-        "momentum": 84.57,
-        "sentiment": 70.0,
-        "volume": 52.37,
-        "policy": 50.0,
-        "volatility_penalty": 7.58
+        "momentum": 41.59,
+        "sentiment": 100.0,
+        "volume": 52.59,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -295,6 +279,22 @@
       }
     },
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 59.72,
+      "raw_score": 67.3,
+      "band": "buy",
+      "weight": 0.0955,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 84.57,
+        "sentiment": 60.0,
+        "volume": 52.37,
+        "policy": 50.0,
+        "volatility_penalty": 7.58
+      }
+    },
+    {
       "key": "financials",
       "name": "Financials & Rates",
       "score": 57.77,
@@ -308,6 +308,22 @@
         "volume": 54.72,
         "policy": 50.0,
         "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 54.05,
+      "raw_score": 60.53,
+      "band": "starter",
+      "weight": 0.0896,
+      "confidence": 0.85,
+      "components": {
+        "momentum": 73.39,
+        "sentiment": 50.0,
+        "volume": 55.89,
+        "policy": 50.0,
+        "volatility_penalty": 6.48
       }
     },
     {
@@ -327,32 +343,16 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 50.16,
-      "raw_score": 50.16,
-      "band": "starter",
-      "weight": 0.0692,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 41.59,
-        "sentiment": 60.0,
-        "volume": 52.59,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 41.03,
-      "raw_score": 41.78,
+      "score": 40.44,
+      "raw_score": 41.19,
       "band": "starter",
-      "weight": 0.0534,
+      "weight": 0.0515,
       "confidence": 1.0,
       "components": {
         "momentum": 15.59,
-        "sentiment": 66.66,
+        "sentiment": 64.7,
         "volume": 52.71,
         "policy": 50.0,
         "volatility_penalty": 0.75
@@ -363,10 +363,10 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0292,
+      "target_weight": 0.0138,
       "current_weight": 0.0488,
-      "notional_delta": -2010.05,
-      "reason": "overweight by 1.96% vs target \u2014 trim",
+      "notional_delta": -3587.32,
+      "reason": "overweight by 3.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.05%",
         "theme=Semiconductors (Broad)",
@@ -389,15 +389,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "HOLD",
-      "target_weight": 0.0462,
+      "action": "REDUCE",
+      "target_weight": 0.0297,
       "current_weight": 0.0486,
-      "notional_delta": 0.0,
-      "reason": "holding on earnings beat (mixed) \u2014 \"Jim Cramer Says Dell's Blowout Quarter Could Mark A Turning Point For AI Stocks Like Nvidia And Intel: 'I Wonder If...'\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1931.77,
+      "reason": "trimming on earnings beat (mixed) \u2014 \"Jim Cramer Says Dell's Blowout Quarter Could Mark A Turning Point For AI Stocks Like Nvidia And Intel: 'I Wonder If...'\" \u00b7 overweight by 1.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.62%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 69.0 (buy), contribution 83.1",
+        "theme 'AI & Compute' score 54.0 (starter), contribution 68.1",
         "news_source=benzinga",
         "event=earnings beat",
         "news_sentiment=+0.00"
@@ -440,14 +440,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.038,
+      "target_weight": 0.034,
       "current_weight": 0.0471,
-      "notional_delta": -929.79,
-      "reason": "overweight by 0.91% vs target \u2014 trim",
+      "notional_delta": -1339.47,
+      "reason": "overweight by 1.31% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 62.7 (buy), contribution 76.3"
+        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 73.3"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -484,10 +484,10 @@
     {
       "symbol": "LRCX",
       "action": "REDUCE",
-      "target_weight": 0.0292,
+      "target_weight": 0.0139,
       "current_weight": 0.049,
-      "notional_delta": -2029.24,
-      "reason": "overweight by 1.98% vs target \u2014 trim",
+      "notional_delta": -3596.27,
+      "reason": "overweight by 3.51% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=Semiconductors (Broad)",
@@ -497,17 +497,15 @@
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0449,
+      "action": "REDUCE",
+      "target_weight": 0.0286,
       "current_weight": 0.0468,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"The S&P Hit A Record While 8 Of 11 Sectors Fell\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1862.02,
+      "reason": "overweight by 1.82% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 69.0 (buy), contribution 80.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'AI & Compute' score 54.0 (starter), contribution 65.7"
       ],
       "theme_key": "ai_compute"
     },
@@ -529,31 +527,33 @@
     },
     {
       "symbol": "MSFT",
-      "action": "HOLD",
-      "target_weight": 0.0483,
+      "action": "REDUCE",
+      "target_weight": 0.0313,
       "current_weight": 0.0505,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"The S&P Hit A Record While 8 Of 11 Sectors Fell\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1971.22,
+      "reason": "trimming on mixed news flow \u2014 \"Nvidia Stock At Key Support Ahead of Big Windows PC Launch\" \u00b7 overweight by 1.92% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.55%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 69.0 (buy), contribution 86.9",
+        "theme 'AI & Compute' score 54.0 (starter), contribution 71.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "NKE",
-      "action": "REDUCE",
-      "target_weight": 0.0075,
+      "action": "HOLD",
+      "target_weight": 0.0469,
       "current_weight": 0.0442,
-      "notional_delta": -3760.51,
-      "reason": "overweight by 3.67% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"QQQ\u2019s Hidden Risk: Why the Fund\u2019s Top 5 Holdings Move Together\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.61%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.2 (starter), contribution 70.7"
+        "theme 'Consumer Discretionary' score 62.7 (buy), contribution 83.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -652,34 +652,36 @@
       "theme_key": "cybersecurity"
     },
     {
-      "symbol": "F",
+      "symbol": "HD",
       "action": "SKIP",
-      "target_weight": 0.0349,
+      "target_weight": 0.0397,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Benzinga Bulls And Bears: Salesforce, Ford, Autodesk \u2014 And S&P 500 Extends Rally To Ninth Week\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 62.7 (buy), contribution 70.0)",
+      "reason": "skipping on positive news flow \u2014 \"QQQ\u2019s Hidden Risk: Why the Fund\u2019s Top 5 Holdings Move Together\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 62.7 (buy), contribution 70.4)",
       "factors": [
-        "ret_5d=27.58%",
-        "rel_vol_5d=1.32",
-        "vol_ann=56.46%",
-        "news_source=benzinga",
+        "ret_5d=1.07%",
+        "rel_vol_5d=1.05",
+        "vol_ann=29.53%",
+        "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
-      "theme_key": "ev_clean_transport"
+      "theme_key": "consumer_discretionary"
     },
     {
-      "symbol": "RIVN",
+      "symbol": "AMZN",
       "action": "SKIP",
-      "target_weight": 0.034,
+      "target_weight": 0.0389,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 62.7 (buy), contribution 68.3)",
+      "reason": "skipping on positive news flow \u2014 \"QQQ\u2019s Hidden Risk: Why the Fund\u2019s Top 5 Holdings Move Together\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 62.7 (buy), contribution 69.0)",
       "factors": [
-        "ret_5d=15.19%",
-        "rel_vol_5d=0.96",
-        "vol_ann=50.42%"
+        "ret_5d=0.81%",
+        "rel_vol_5d=1.02",
+        "vol_ann=25.77%",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
-      "theme_key": "ev_clean_transport"
+      "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "FSLR",
@@ -749,6 +751,36 @@
       "theme_key": "biotech"
     },
     {
+      "symbol": "F",
+      "action": "SKIP",
+      "target_weight": 0.0311,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on positive news flow \u2014 \"Benzinga Bulls And Bears: Salesforce, Ford, Autodesk \u2014 And S&P 500 Extends Rally To Ninth Week\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 59.7 (buy), contribution 67.0)",
+      "factors": [
+        "ret_5d=27.58%",
+        "rel_vol_5d=1.32",
+        "vol_ann=56.46%",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ev_clean_transport"
+    },
+    {
+      "symbol": "RIVN",
+      "action": "SKIP",
+      "target_weight": 0.0303,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 59.7 (buy), contribution 65.3)",
+      "factors": [
+        "ret_5d=15.19%",
+        "rel_vol_5d=0.96",
+        "vol_ann=50.42%"
+      ],
+      "theme_key": "ev_clean_transport"
+    },
+    {
       "symbol": "WFC",
       "action": "SKIP",
       "target_weight": 0.0284,
@@ -765,7 +797,7 @@
     {
       "symbol": "TSM",
       "action": "SKIP",
-      "target_weight": 0.0263,
+      "target_weight": 0.0125,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on mixed news flow \u2014 \"Bill Gates Once Said He Wouldn't Want To Be The Nvidia CEO: 'Jensen Doesn't Even Make His Own Chip...'\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 54.0 (starter), contribution 55.8)",
@@ -777,46 +809,16 @@
         "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
-    },
-    {
-      "symbol": "HD",
-      "action": "SKIP",
-      "target_weight": 0.0062,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.2 (starter), contribution 57.9)",
-      "factors": [
-        "ret_5d=1.07%",
-        "rel_vol_5d=1.05",
-        "vol_ann=29.53%"
-      ],
-      "theme_key": "consumer_discretionary"
-    },
-    {
-      "symbol": "AMZN",
-      "action": "SKIP",
-      "target_weight": 0.006,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"The S&P Hit A Record While 8 Of 11 Sectors Fell\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.2 (starter), contribution 56.5)",
-      "factors": [
-        "ret_5d=0.81%",
-        "rel_vol_5d=1.02",
-        "vol_ann=25.77%",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "consumer_discretionary"
     }
   ],
   "executions": [
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0292,
+      "target_weight": 0.0138,
       "current_weight": 0.0488,
-      "notional_delta": -2010.05,
-      "reason": "overweight by 1.96% vs target \u2014 trim",
+      "notional_delta": -3587.32,
+      "reason": "overweight by 3.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.05%",
         "theme=Semiconductors (Broad)",
@@ -845,15 +847,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "HOLD",
-      "target_weight": 0.0462,
+      "action": "REDUCE",
+      "target_weight": 0.0297,
       "current_weight": 0.0486,
-      "notional_delta": 0.0,
-      "reason": "holding on earnings beat (mixed) \u2014 \"Jim Cramer Says Dell's Blowout Quarter Could Mark A Turning Point For AI Stocks Like Nvidia And Intel: 'I Wonder If...'\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1931.77,
+      "reason": "trimming on earnings beat (mixed) \u2014 \"Jim Cramer Says Dell's Blowout Quarter Could Mark A Turning Point For AI Stocks Like Nvidia And Intel: 'I Wonder If...'\" \u00b7 overweight by 1.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.62%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 69.0 (buy), contribution 83.1",
+        "theme 'AI & Compute' score 54.0 (starter), contribution 68.1",
         "news_source=benzinga",
         "event=earnings beat",
         "news_sentiment=+0.00"
@@ -905,14 +907,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.038,
+      "target_weight": 0.034,
       "current_weight": 0.0471,
-      "notional_delta": -929.79,
-      "reason": "overweight by 0.91% vs target \u2014 trim",
+      "notional_delta": -1339.47,
+      "reason": "overweight by 1.31% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 62.7 (buy), contribution 76.3"
+        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 73.3"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -958,10 +960,10 @@
     {
       "symbol": "LRCX",
       "action": "REDUCE",
-      "target_weight": 0.0292,
+      "target_weight": 0.0139,
       "current_weight": 0.049,
-      "notional_delta": -2029.24,
-      "reason": "overweight by 1.98% vs target \u2014 trim",
+      "notional_delta": -3596.27,
+      "reason": "overweight by 3.51% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=Semiconductors (Broad)",
@@ -974,17 +976,15 @@
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0449,
+      "action": "REDUCE",
+      "target_weight": 0.0286,
       "current_weight": 0.0468,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"The S&P Hit A Record While 8 Of 11 Sectors Fell\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1862.02,
+      "reason": "overweight by 1.82% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 69.0 (buy), contribution 80.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'AI & Compute' score 54.0 (starter), contribution 65.7"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1012,17 +1012,17 @@
     },
     {
       "symbol": "MSFT",
-      "action": "HOLD",
-      "target_weight": 0.0483,
+      "action": "REDUCE",
+      "target_weight": 0.0313,
       "current_weight": 0.0505,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"The S&P Hit A Record While 8 Of 11 Sectors Fell\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1971.22,
+      "reason": "trimming on mixed news flow \u2014 \"Nvidia Stock At Key Support Ahead of Big Windows PC Launch\" \u00b7 overweight by 1.92% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.55%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 69.0 (buy), contribution 86.9",
+        "theme 'AI & Compute' score 54.0 (starter), contribution 71.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1031,15 +1031,17 @@
     },
     {
       "symbol": "NKE",
-      "action": "REDUCE",
-      "target_weight": 0.0075,
+      "action": "HOLD",
+      "target_weight": 0.0469,
       "current_weight": 0.0442,
-      "notional_delta": -3760.51,
-      "reason": "overweight by 3.67% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"QQQ\u2019s Hidden Risk: Why the Fund\u2019s Top 5 Holdings Move Together\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.61%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.2 (starter), contribution 70.7"
+        "theme 'Consumer Discretionary' score 62.7 (buy), contribution 83.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1159,37 +1161,39 @@
       "note": "market_closed_or_no_account"
     },
     {
-      "symbol": "F",
+      "symbol": "HD",
       "action": "SKIP",
-      "target_weight": 0.0349,
+      "target_weight": 0.0397,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Benzinga Bulls And Bears: Salesforce, Ford, Autodesk \u2014 And S&P 500 Extends Rally To Ninth Week\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 62.7 (buy), contribution 70.0)",
+      "reason": "skipping on positive news flow \u2014 \"QQQ\u2019s Hidden Risk: Why the Fund\u2019s Top 5 Holdings Move Together\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 62.7 (buy), contribution 70.4)",
       "factors": [
-        "ret_5d=27.58%",
-        "rel_vol_5d=1.32",
-        "vol_ann=56.46%",
-        "news_source=benzinga",
+        "ret_5d=1.07%",
+        "rel_vol_5d=1.05",
+        "vol_ann=29.53%",
+        "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
-      "theme_key": "ev_clean_transport",
+      "theme_key": "consumer_discretionary",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
     },
     {
-      "symbol": "RIVN",
+      "symbol": "AMZN",
       "action": "SKIP",
-      "target_weight": 0.034,
+      "target_weight": 0.0389,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 62.7 (buy), contribution 68.3)",
+      "reason": "skipping on positive news flow \u2014 \"QQQ\u2019s Hidden Risk: Why the Fund\u2019s Top 5 Holdings Move Together\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 62.7 (buy), contribution 69.0)",
       "factors": [
-        "ret_5d=15.19%",
-        "rel_vol_5d=0.96",
-        "vol_ann=50.42%"
+        "ret_5d=0.81%",
+        "rel_vol_5d=1.02",
+        "vol_ann=25.77%",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
-      "theme_key": "ev_clean_transport",
+      "theme_key": "consumer_discretionary",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1274,6 +1278,42 @@
       "note": "market_closed_or_no_account"
     },
     {
+      "symbol": "F",
+      "action": "SKIP",
+      "target_weight": 0.0311,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on positive news flow \u2014 \"Benzinga Bulls And Bears: Salesforce, Ford, Autodesk \u2014 And S&P 500 Extends Rally To Ninth Week\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 59.7 (buy), contribution 67.0)",
+      "factors": [
+        "ret_5d=27.58%",
+        "rel_vol_5d=1.32",
+        "vol_ann=56.46%",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ev_clean_transport",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "RIVN",
+      "action": "SKIP",
+      "target_weight": 0.0303,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 59.7 (buy), contribution 65.3)",
+      "factors": [
+        "ret_5d=15.19%",
+        "rel_vol_5d=0.96",
+        "vol_ann=50.42%"
+      ],
+      "theme_key": "ev_clean_transport",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
       "symbol": "WFC",
       "action": "SKIP",
       "target_weight": 0.0284,
@@ -1293,7 +1333,7 @@
     {
       "symbol": "TSM",
       "action": "SKIP",
-      "target_weight": 0.0263,
+      "target_weight": 0.0125,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on mixed news flow \u2014 \"Bill Gates Once Said He Wouldn't Want To Be The Nvidia CEO: 'Jensen Doesn't Even Make His Own Chip...'\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 54.0 (starter), contribution 55.8)",
@@ -1305,42 +1345,6 @@
         "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "HD",
-      "action": "SKIP",
-      "target_weight": 0.0062,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.2 (starter), contribution 57.9)",
-      "factors": [
-        "ret_5d=1.07%",
-        "rel_vol_5d=1.05",
-        "vol_ann=29.53%"
-      ],
-      "theme_key": "consumer_discretionary",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "AMZN",
-      "action": "SKIP",
-      "target_weight": 0.006,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"The S&P Hit A Record While 8 Of 11 Sectors Fell\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 50.2 (starter), contribution 56.5)",
-      "factors": [
-        "ret_5d=0.81%",
-        "rel_vol_5d=1.02",
-        "vol_ann=25.77%",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "consumer_discretionary",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1634,6 +1638,10 @@
     {
       "t": "2026-05-30T20:41:16+00:00",
       "v": 102420.15
+    },
+    {
+      "t": "2026-05-30T21:46:02+00:00",
+      "v": 102420.15
     }
   ],
   "breaking_news": [
@@ -1642,7 +1650,7 @@
       "summary": "It's the second known case of the federal government filing criminal charges against someone who allegedly used insider information to make a large profit on a prediction market site.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/27/nx-s1-5836659/google-polymarket-insider-trading-doj-charges",
-      "published_utc": "2026-05-30T20:41:21+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1651,7 +1659,7 @@
       "summary": "NPR's Steve Inskeep speaks to Mack Hogan of Inside EVs about the lukewarm consumer response to Ferrari's first electric vehicle.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836496/ferrari-unveiled-its-first-ev-model-the-response-has-been-lukewarm",
-      "published_utc": "2026-05-30T20:41:21+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1660,7 +1668,7 @@
       "summary": "As part of NPR's Swing Shift project checking in with swing voters, these Americans are split on who is to blame for high gas prices but they all agree it has an impact on their personal finances.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836714/swing-voters-gas-prices-trump-midterms",
-      "published_utc": "2026-05-30T20:41:21+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1669,7 +1677,7 @@
       "summary": "Suspending the federal gasoline tax could save drivers up to 18.4 cents per gallon. But it would drain the fund meant to cover roadbuilding and repairs \u2014 a fund that's already in trouble.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5835634/gasoline-tax-holiday-trump-potholes",
-      "published_utc": "2026-05-30T20:41:21+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1678,7 +1686,7 @@
       "summary": "A new report shows that nearly half of U.S. households did not earn enough to cover their necessities in 2024.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836525/affordability-report-brookings-inflation-wages",
-      "published_utc": "2026-05-30T20:41:21+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1687,7 +1695,7 @@
       "summary": "FIFA has always had a peculiar way to sell tickets to the World Cup. It never faced any major issues \u2014 until prices soared for the 2026 tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836514/2026-world-cup-fifa-ticket-prices",
-      "published_utc": "2026-05-30T20:41:21+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -1696,7 +1704,7 @@
       "summary": "The new head of CBS News is flexing her muscles at the network's most storied news program: \"60 Minutes.\" We look at the upheaval.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5837993/bari-weiss-works-to-reinvent-60-minutes-cbs-most-prestigious-program",
-      "published_utc": "2026-05-30T20:41:21+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1705,26 +1713,8 @@
       "summary": "Sky-high gas prices have drivers going out of their way for discounts at the pump. Oil executives warn that even higher prices might be on the horizon.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5838740/how-stressed-are-americans-about-high-gas-prices-fueling",
-      "published_utc": "2026-05-30T20:41:21+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Spain's S\u00e1nchez digs in after eight years as PM as wave of scandals threatens survival",
-      "summary": "Corruption probes of colleagues and relatives have put Spain's premier into a fight for survival.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c1w21gn340xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Ebola spread in DR Congo 'alarming', charity warns, as WHO chief visits worst-hit area",
-      "summary": "M\u00e9dicins Sans Fronti\u00e8res says that never before has an Ebola outbreak recorded so many cases so soon after its declaration.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c99ldxykz4zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
-      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -1732,8 +1722,26 @@
       "summary": "Two of the seven villagers who entered the narrow tunnels in search for gold on 20 May are still missing.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cn4pn4ex0ymo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Ecuador accused of meddling in Colombian election with tariff vow",
+      "summary": "Ecuadorian leader Daniel Noboa offers to cancel tariffs after speaking to a right-wing presidential candidate ahead of Sunday's vote.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/czx2zndk7elo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-30T21:46:06+00:00",
+      "sentiment_score": -0.2,
+      "is_policy": true
+    },
+    {
+      "headline": "Ebola spread in DR Congo 'deeply alarming', MSF warns",
+      "summary": "The medical charity's comments come as the head of the World Health Organization visits the region worst-hit by the virus outbreak.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c99ldxykz4zo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-30T21:46:06+00:00",
+      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -1741,7 +1749,7 @@
       "summary": "The film editor and ex-wife of director George Lucas was widely recognised as a pivotal creative force behind the original space trilogy.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgzy64j9l1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1750,7 +1758,7 @@
       "summary": "People have just begun returning to check on their homes in the block that was hit early on Friday morning.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgzyp93jq1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1759,7 +1767,7 @@
       "summary": "Local authorities say the cancellation of other West concerts had played a role in the decision.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c3d27x5vnnvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1768,7 +1776,7 @@
       "summary": "The US president met his advisers, after officials confirmed the US and Iran had agreed a framework of a deal.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c0r2d40r91qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1777,7 +1785,7 @@
       "summary": "The technology, developed under the Aukus military pact, is aimed at protecting undersea cables and boosting naval defence.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c5y8wjvd1ypo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1786,7 +1794,7 @@
       "summary": "Sales of the fruity liqueur popular with Canadian students had plummetted north of the border as provinces retaliated against Trump tariffs.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c2l22ypl909o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1795,7 +1803,7 @@
       "summary": "Federal law bars printing images of living people on US currency, but Trump allies in Congress are moving to make an exception.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/clypeyx6nemo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1804,7 +1812,7 @@
       "summary": "BMW is introducing humanoid robots to a car plant in Europe, building on similar projects in the US.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cgmpwzzvxr2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1813,7 +1821,7 @@
       "summary": "The BBC has been hearing from young people who are struggling to find work about how they are tackling the challenge.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/czx2qll4rlyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-30T20:41:20+00:00",
+      "published_utc": "2026-05-30T21:46:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
