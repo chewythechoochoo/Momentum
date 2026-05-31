@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-31T09:36:39+00:00",
+  "generated_at_utc": "2026-05-31T11:20:15+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 78,
-  "last_success_utc": "2026-05-31T06:34:29+00:00",
+  "cycle_count": 79,
+  "last_success_utc": "2026-05-31T09:36:39+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -217,14 +217,14 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 65.85,
-      "raw_score": 72.53,
+      "score": 68.85,
+      "raw_score": 75.53,
       "band": "buy",
-      "weight": 0.1225,
-      "confidence": 0.8,
+      "weight": 0.1352,
+      "confidence": 0.85,
       "components": {
         "momentum": 73.39,
-        "sentiment": 90.0,
+        "sentiment": 100.0,
         "volume": 55.89,
         "policy": 50.0,
         "volatility_penalty": 6.68
@@ -295,22 +295,6 @@
       }
     },
     {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 57.77,
-      "raw_score": 57.77,
-      "band": "buy",
-      "weight": 0.0901,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 67.06,
-        "sentiment": 50.0,
-        "volume": 54.72,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
       "score": 53.95,
@@ -324,6 +308,22 @@
         "volume": 44.15,
         "policy": 50.0,
         "volatility_penalty": 8.43
+      }
+    },
+    {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 52.27,
+      "raw_score": 52.27,
+      "band": "starter",
+      "weight": 0.0773,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 67.06,
+        "sentiment": 30.0,
+        "volume": 54.72,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -345,14 +345,14 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 44.63,
-      "raw_score": 45.46,
+      "score": 43.44,
+      "raw_score": 44.28,
       "band": "starter",
-      "weight": 0.0654,
+      "weight": 0.0615,
       "confidence": 1.0,
       "components": {
         "momentum": 15.59,
-        "sentiment": 78.94,
+        "sentiment": 75.0,
         "volume": 52.71,
         "policy": 50.0,
         "volatility_penalty": 0.83
@@ -389,15 +389,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.0406,
+      "action": "HOLD",
+      "target_weight": 0.0448,
       "current_weight": 0.0486,
-      "notional_delta": -815.39,
-      "reason": "overweight by 0.80% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.62%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 65.8 (buy), contribution 80.0"
+        "theme 'AI & Compute' score 68.8 (buy), contribution 83.0"
       ],
       "theme_key": "ai_compute"
     },
@@ -448,14 +448,14 @@
     {
       "symbol": "GS",
       "action": "REDUCE",
-      "target_weight": 0.0312,
+      "target_weight": 0.0268,
       "current_weight": 0.0435,
-      "notional_delta": -1256.93,
-      "reason": "overweight by 1.23% vs target \u2014 trim",
+      "notional_delta": -1707.58,
+      "reason": "overweight by 1.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.59%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 57.8 (buy), contribution 65.7"
+        "theme 'Financials & Rates' score 52.3 (starter), contribution 60.2"
       ],
       "theme_key": "financials"
     },
@@ -491,29 +491,29 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.0394,
+      "action": "HOLD",
+      "target_weight": 0.0435,
       "current_weight": 0.0468,
-      "notional_delta": -755.89,
-      "reason": "overweight by 0.74% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 65.8 (buy), contribution 77.6"
+        "theme 'AI & Compute' score 68.8 (buy), contribution 80.6"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0314,
+      "target_weight": 0.027,
       "current_weight": 0.0439,
-      "notional_delta": -1280.38,
-      "reason": "trimming on mixed news flow \u2014 \"XRP Price Shows Some Bottoming Signs As ETFs Clocks Best Month Of 2026\" \u00b7 overweight by 1.25% vs target \u2014 trim",
+      "notional_delta": -1731.03,
+      "reason": "trimming on mixed news flow \u2014 \"XRP Price Shows Some Bottoming Signs As ETFs Clocks Best Month Of 2026\" \u00b7 overweight by 1.69% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.36%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 57.8 (buy), contribution 66.1",
+        "theme 'Financials & Rates' score 52.3 (starter), contribution 60.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -521,15 +521,15 @@
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0425,
+      "action": "HOLD",
+      "target_weight": 0.0469,
       "current_weight": 0.0505,
-      "notional_delta": -824.11,
-      "reason": "trimming on positive news flow \u2014 \"Nvidia's N1X AI PCs Could Ship 10 Million Units, But Windows Is Real Test, Says Ming-Chi Kuo: 'If The Goal Is A Real Upgrade Cycle\u2026'\" \u00b7 overweight by 0.80% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Nvidia's N1X AI PCs Could Ship 10 Million Units, But Windows Is Real Test, Says Ming-Chi Kuo: 'If The Goal Is A Real Upgrade Cycle\u2026'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.55%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 65.8 (buy), contribution 83.7",
+        "theme 'AI & Compute' score 68.8 (buy), contribution 86.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -538,10 +538,10 @@
     {
       "symbol": "NKE",
       "action": "REDUCE",
-      "target_weight": 0.0227,
+      "target_weight": 0.0228,
       "current_weight": 0.0442,
-      "notional_delta": -2203.72,
-      "reason": "overweight by 2.15% vs target \u2014 trim",
+      "notional_delta": -2193.48,
+      "reason": "overweight by 2.14% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.61%",
         "theme=Consumer Discretionary",
@@ -734,20 +734,6 @@
       "theme_key": "cybersecurity"
     },
     {
-      "symbol": "WFC",
-      "action": "SKIP",
-      "target_weight": 0.0276,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 57.8 (buy), contribution 58.0)",
-      "factors": [
-        "ret_5d=2.13%",
-        "rel_vol_5d=0.96",
-        "vol_ann=29.13%"
-      ],
-      "theme_key": "financials"
-    },
-    {
       "symbol": "TSM",
       "action": "SKIP",
       "target_weight": 0.0262,
@@ -764,9 +750,23 @@
       "theme_key": "semiconductors_ex_ai"
     },
     {
+      "symbol": "WFC",
+      "action": "SKIP",
+      "target_weight": 0.0234,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 52.3 (starter), contribution 52.5)",
+      "factors": [
+        "ret_5d=2.13%",
+        "rel_vol_5d=0.96",
+        "vol_ann=29.13%"
+      ],
+      "theme_key": "financials"
+    },
+    {
       "symbol": "HD",
       "action": "SKIP",
-      "target_weight": 0.0186,
+      "target_weight": 0.0187,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 49.7 (starter), contribution 57.4)",
@@ -780,7 +780,7 @@
     {
       "symbol": "AMZN",
       "action": "SKIP",
-      "target_weight": 0.0181,
+      "target_weight": 0.0182,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on positive news flow \u2014 \"Box CEO Says AI Efficiency Gains Are Fueling Hiring And Business Growth: 'Reinvesting Efficiency Savings Back\u2026'\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 49.7 (starter), contribution 56.0)",
@@ -830,15 +830,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.0406,
+      "action": "HOLD",
+      "target_weight": 0.0448,
       "current_weight": 0.0486,
-      "notional_delta": -815.39,
-      "reason": "overweight by 0.80% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.62%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 65.8 (buy), contribution 80.0"
+        "theme 'AI & Compute' score 68.8 (buy), contribution 83.0"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -901,14 +901,14 @@
     {
       "symbol": "GS",
       "action": "REDUCE",
-      "target_weight": 0.0312,
+      "target_weight": 0.0268,
       "current_weight": 0.0435,
-      "notional_delta": -1256.93,
-      "reason": "overweight by 1.23% vs target \u2014 trim",
+      "notional_delta": -1707.58,
+      "reason": "overweight by 1.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.59%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 57.8 (buy), contribution 65.7"
+        "theme 'Financials & Rates' score 52.3 (starter), contribution 60.2"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -953,15 +953,15 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.0394,
+      "action": "HOLD",
+      "target_weight": 0.0435,
       "current_weight": 0.0468,
-      "notional_delta": -755.89,
-      "reason": "overweight by 0.74% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 65.8 (buy), contribution 77.6"
+        "theme 'AI & Compute' score 68.8 (buy), contribution 80.6"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -971,14 +971,14 @@
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0314,
+      "target_weight": 0.027,
       "current_weight": 0.0439,
-      "notional_delta": -1280.38,
-      "reason": "trimming on mixed news flow \u2014 \"XRP Price Shows Some Bottoming Signs As ETFs Clocks Best Month Of 2026\" \u00b7 overweight by 1.25% vs target \u2014 trim",
+      "notional_delta": -1731.03,
+      "reason": "trimming on mixed news flow \u2014 \"XRP Price Shows Some Bottoming Signs As ETFs Clocks Best Month Of 2026\" \u00b7 overweight by 1.69% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.36%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 57.8 (buy), contribution 66.1",
+        "theme 'Financials & Rates' score 52.3 (starter), contribution 60.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -989,15 +989,15 @@
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0425,
+      "action": "HOLD",
+      "target_weight": 0.0469,
       "current_weight": 0.0505,
-      "notional_delta": -824.11,
-      "reason": "trimming on positive news flow \u2014 \"Nvidia's N1X AI PCs Could Ship 10 Million Units, But Windows Is Real Test, Says Ming-Chi Kuo: 'If The Goal Is A Real Upgrade Cycle\u2026'\" \u00b7 overweight by 0.80% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Nvidia's N1X AI PCs Could Ship 10 Million Units, But Windows Is Real Test, Says Ming-Chi Kuo: 'If The Goal Is A Real Upgrade Cycle\u2026'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.55%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 65.8 (buy), contribution 83.7",
+        "theme 'AI & Compute' score 68.8 (buy), contribution 86.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1009,10 +1009,10 @@
     {
       "symbol": "NKE",
       "action": "REDUCE",
-      "target_weight": 0.0227,
+      "target_weight": 0.0228,
       "current_weight": 0.0442,
-      "notional_delta": -2203.72,
-      "reason": "overweight by 2.15% vs target \u2014 trim",
+      "notional_delta": -2193.48,
+      "reason": "overweight by 2.14% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.61%",
         "theme=Consumer Discretionary",
@@ -1244,23 +1244,6 @@
       "note": "market_closed_or_no_account"
     },
     {
-      "symbol": "WFC",
-      "action": "SKIP",
-      "target_weight": 0.0276,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 57.8 (buy), contribution 58.0)",
-      "factors": [
-        "ret_5d=2.13%",
-        "rel_vol_5d=0.96",
-        "vol_ann=29.13%"
-      ],
-      "theme_key": "financials",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
       "symbol": "TSM",
       "action": "SKIP",
       "target_weight": 0.0262,
@@ -1280,9 +1263,26 @@
       "note": "market_closed_or_no_account"
     },
     {
+      "symbol": "WFC",
+      "action": "SKIP",
+      "target_weight": 0.0234,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Financials & Rates' score 52.3 (starter), contribution 52.5)",
+      "factors": [
+        "ret_5d=2.13%",
+        "rel_vol_5d=0.96",
+        "vol_ann=29.13%"
+      ],
+      "theme_key": "financials",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
       "symbol": "HD",
       "action": "SKIP",
-      "target_weight": 0.0186,
+      "target_weight": 0.0187,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 49.7 (starter), contribution 57.4)",
@@ -1299,7 +1299,7 @@
     {
       "symbol": "AMZN",
       "action": "SKIP",
-      "target_weight": 0.0181,
+      "target_weight": 0.0182,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on positive news flow \u2014 \"Box CEO Says AI Efficiency Gains Are Fueling Hiring And Business Growth: 'Reinvesting Efficiency Savings Back\u2026'\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 49.7 (starter), contribution 56.0)",
@@ -1628,6 +1628,10 @@
     {
       "t": "2026-05-31T09:36:33+00:00",
       "v": 102420.15
+    },
+    {
+      "t": "2026-05-31T11:20:12+00:00",
+      "v": 102420.15
     }
   ],
   "breaking_news": [
@@ -1636,7 +1640,7 @@
       "summary": "It's the second known case of the federal government filing criminal charges against someone who allegedly used insider information to make a large profit on a prediction market site.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/27/nx-s1-5836659/google-polymarket-insider-trading-doj-charges",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1645,7 +1649,7 @@
       "summary": "NPR's Steve Inskeep speaks to Mack Hogan of Inside EVs about the lukewarm consumer response to Ferrari's first electric vehicle.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836496/ferrari-unveiled-its-first-ev-model-the-response-has-been-lukewarm",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1654,7 +1658,7 @@
       "summary": "As part of NPR's Swing Shift project checking in with swing voters, these Americans are split on who is to blame for high gas prices but they all agree it has an impact on their personal finances.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836714/swing-voters-gas-prices-trump-midterms",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1663,7 +1667,7 @@
       "summary": "Suspending the federal gasoline tax could save drivers up to 18.4 cents per gallon. But it would drain the fund meant to cover roadbuilding and repairs \u2014 a fund that's already in trouble.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5835634/gasoline-tax-holiday-trump-potholes",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1672,7 +1676,7 @@
       "summary": "A new report shows that nearly half of U.S. households did not earn enough to cover their necessities in 2024.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836525/affordability-report-brookings-inflation-wages",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1681,7 +1685,7 @@
       "summary": "FIFA has always had a peculiar way to sell tickets to the World Cup. It never faced any major issues \u2014 until prices soared for the 2026 tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836514/2026-world-cup-fifa-ticket-prices",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -1690,7 +1694,7 @@
       "summary": "The new head of CBS News is flexing her muscles at the network's most storied news program: \"60 Minutes.\" We look at the upheaval.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5837993/bari-weiss-works-to-reinvent-60-minutes-cbs-most-prestigious-program",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1699,7 +1703,7 @@
       "summary": "Sky-high gas prices have drivers going out of their way for discounts at the pump. Oil executives warn that even higher prices might be on the horizon.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5838740/how-stressed-are-americans-about-high-gas-prices-fueling",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1708,8 +1712,17 @@
       "summary": "Performers Young MC, Poison frontman Bret Michaels and country singer Martina McBride raised concerns the event will be political.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cy02j1n87wlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "South Africa made to look like fools after World Cup visa issues, says minister",
+      "summary": "According to media reports, the team's departure for Mexico on Sunday has been delayed due to an \"administrative bungle\".",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c86dxvql3qno?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-31T11:20:15+00:00",
+      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -1717,16 +1730,7 @@
       "summary": "The film editor and ex-wife of director George Lucas was widely recognised as a pivotal creative force behind the original space trilogy.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgzy64j9l1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:39+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Italy bans Kanye West and Travis Scott concerts over security concerns",
-      "summary": "Local authorities say the cancellation of other West concerts had played a role in the decision.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c3d27x5vnnvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1735,7 +1739,7 @@
       "summary": "The election is held after months of public recrimination between current left-wing President Gustavo Petro and his US counterpart Donald Trump.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c2027g423glo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1744,7 +1748,7 @@
       "summary": "People have just begun returning to check on their homes in the block that was hit early on Friday morning.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgzyp93jq1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1753,7 +1757,7 @@
       "summary": "The medical charity's comments come as the head of the World Health Organization visits the region worst-hit by the virus outbreak.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c99ldxykz4zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -1762,16 +1766,16 @@
       "summary": "Shinjiro Koizumi makes some of Tokyo's most pointed remarks yet in the dispute over Japan's military build-up.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cp8p4ejy8ppo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Hundreds arrested in France after wild Champions League celebrations",
-      "summary": "Thousands of officers tried to quell unrest as crowds of fans - some firing flares - celebrated PSG's victory over Arsenal.",
+      "headline": "Hundreds arrested and dozens of police injured after Champions League riots in France",
+      "summary": "Nearly 800 people were arrested after clashes with police which saw 219 people injured, including 57 police officers.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cg7pk5j7nyjo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:39+00:00",
+      "url": "https://www.bbc.com/news/articles/c0r2ejg1w9xo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1780,7 +1784,7 @@
       "summary": "The music giant said Pershing Square's offer fundamentally undervalued the business.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cn8pnd9yj4eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:38+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1789,7 +1793,7 @@
       "summary": "Royal Mail says its service is improving and that it is on track to hit the regulator Ofcom's reduced targets",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cy02jyxz26po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:38+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1798,7 +1802,7 @@
       "summary": "BMW is introducing humanoid robots to a car plant in Europe, building on similar projects in the US.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cgmpwzzvxr2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:38+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1807,7 +1811,7 @@
       "summary": "Marc Bolland will advise on getting young people into work after a review warned of a \"lost generation\".",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cg5p9y25qj1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T09:36:38+00:00",
+      "published_utc": "2026-05-31T11:20:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
