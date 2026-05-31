@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-05-31T12:55:47+00:00",
+  "generated_at_utc": "2026-05-31T14:54:33+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 80,
-  "last_success_utc": "2026-05-31T11:20:15+00:00",
+  "cycle_count": 81,
+  "last_success_utc": "2026-05-31T12:55:47+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -199,6 +199,22 @@
   ],
   "themes": [
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 71.91,
+      "raw_score": 79.3,
+      "band": "strong_buy",
+      "weight": 0.1455,
+      "confidence": 0.9,
+      "components": {
+        "momentum": 84.57,
+        "sentiment": 100.0,
+        "volume": 52.37,
+        "policy": 50.0,
+        "volatility_penalty": 7.39
+      }
+    },
+    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 68.94,
@@ -220,8 +236,8 @@
       "score": 68.85,
       "raw_score": 75.53,
       "band": "buy",
-      "weight": 0.1352,
-      "confidence": 0.85,
+      "weight": 0.1425,
+      "confidence": 0.95,
       "components": {
         "momentum": 73.39,
         "sentiment": 100.0,
@@ -231,67 +247,67 @@
       }
     },
     {
-      "key": "cybersecurity",
-      "name": "Cybersecurity",
-      "score": 68.57,
-      "raw_score": 83.97,
+      "key": "clean_energy",
+      "name": "Clean Energy",
+      "score": 63.95,
+      "raw_score": 77.7,
       "band": "buy",
-      "weight": 0.1452,
+      "weight": 0.1298,
       "confidence": 1.0,
       "components": {
+        "momentum": 79.28,
+        "sentiment": 95.24,
+        "volume": 54.59,
+        "policy": 65.0,
+        "volatility_penalty": 13.75
+      }
+    },
+    {
+      "key": "cybersecurity",
+      "name": "Cybersecurity",
+      "score": 62.02,
+      "raw_score": 77.42,
+      "band": "buy",
+      "weight": 0.1111,
+      "confidence": 0.8,
+      "components": {
         "momentum": 89.52,
-        "sentiment": 95.84,
+        "sentiment": 74.0,
         "volume": 72.06,
         "policy": 50.0,
         "volatility_penalty": 15.4
       }
     },
     {
-      "key": "clean_energy",
-      "name": "Clean Energy",
-      "score": 63.27,
-      "raw_score": 77.02,
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 55.95,
+      "raw_score": 64.38,
       "band": "buy",
-      "weight": 0.1276,
-      "confidence": 1.0,
+      "weight": 0.0877,
+      "confidence": 0.7,
       "components": {
-        "momentum": 79.28,
-        "sentiment": 91.31,
-        "volume": 54.59,
-        "policy": 70.0,
-        "volatility_penalty": 13.75
+        "momentum": 83.89,
+        "sentiment": 56.66,
+        "volume": 44.15,
+        "policy": 50.0,
+        "volatility_penalty": 8.43
       }
     },
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 57.85,
-      "raw_score": 59.0,
-      "band": "buy",
-      "weight": 0.1095,
+      "score": 54.52,
+      "raw_score": 55.67,
+      "band": "starter",
+      "weight": 0.0984,
       "confidence": 1.0,
       "components": {
         "momentum": 52.02,
-        "sentiment": 77.78,
+        "sentiment": 66.66,
         "volume": 49.3,
         "policy": 50.0,
         "volatility_penalty": 1.15
-      }
-    },
-    {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 56.91,
-      "raw_score": 64.3,
-      "band": "buy",
-      "weight": 0.0904,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 84.57,
-        "sentiment": 50.0,
-        "volume": 52.37,
-        "policy": 50.0,
-        "volatility_penalty": 7.39
       }
     },
     {
@@ -327,22 +343,6 @@
       }
     },
     {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 47.95,
-      "raw_score": 56.38,
-      "band": "starter",
-      "weight": 0.065,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 83.89,
-        "sentiment": 30.0,
-        "volume": 44.15,
-        "policy": 50.0,
-        "volatility_penalty": 8.43
-      }
-    },
-    {
       "key": "oil_gas",
       "name": "Oil & Gas",
       "score": 44.94,
@@ -363,14 +363,14 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0168,
+      "target_weight": 0.0302,
       "current_weight": 0.0488,
-      "notional_delta": -3280.06,
-      "reason": "overweight by 3.20% vs target \u2014 trim",
+      "notional_delta": -1907.63,
+      "reason": "overweight by 1.86% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.05%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 55.7"
+        "theme 'Semiconductors (Broad)' score 56.0 (buy), contribution 63.7"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -390,14 +390,16 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0448,
+      "target_weight": 0.0472,
       "current_weight": 0.0486,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Top 3 S&P 500 Stocks To Watch Next Week: PANW, AVGO, CRWD\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.62%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 68.8 (buy), contribution 83.0"
+        "theme 'AI & Compute' score 68.8 (buy), contribution 83.0",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -419,31 +421,35 @@
     },
     {
       "symbol": "CRWD",
-      "action": "HOLD",
-      "target_weight": 0.0486,
+      "action": "REDUCE",
+      "target_weight": 0.0372,
       "current_weight": 0.046,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -902.04,
+      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (May 25-29): Dell, IBM, CrowdStrike, Meta Lead Big Tech AI Push\" \u00b7 overweight by 0.88% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.53%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 68.6 (buy), contribution 75.3",
-        "news_source=yahoo_rss",
+        "theme 'Cybersecurity' score 62.0 (buy), contribution 68.8",
+        "news_source=benzinga",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0324,
+      "action": "HOLD",
+      "target_weight": 0.0515,
       "current_weight": 0.0471,
-      "notional_delta": -1503.34,
-      "reason": "overweight by 1.47% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on earnings beat (positive) \u2014 \"Consumer Tech News (May 25-29): Dell, IBM, CrowdStrike, Meta Lead Big Tech AI Push\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 56.9 (buy), contribution 70.5"
+        "theme 'EV & Clean Transport' score 71.9 (strong_buy), contribution 85.5",
+        "news_source=benzinga",
+        "event=earnings beat",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -464,14 +470,14 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0401,
+      "target_weight": 0.0362,
       "current_weight": 0.0277,
-      "notional_delta": 1266.28,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 1.24% vs target \u2014 add",
+      "notional_delta": 866.85,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 0.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.19%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 57.9 (buy), contribution 76.6",
+        "theme 'Biotech & Pharma' score 54.5 (starter), contribution 73.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -480,28 +486,31 @@
     {
       "symbol": "LRCX",
       "action": "REDUCE",
-      "target_weight": 0.0168,
+      "target_weight": 0.0302,
       "current_weight": 0.049,
-      "notional_delta": -3299.25,
-      "reason": "overweight by 3.22% vs target \u2014 trim",
+      "notional_delta": -1926.82,
+      "reason": "overweight by 1.88% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 55.9"
+        "theme 'Semiconductors (Broad)' score 56.0 (buy), contribution 63.9"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0435,
+      "target_weight": 0.0459,
       "current_weight": 0.0468,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on earnings beat (positive) \u2014 \"Consumer Tech News (May 25-29): Dell, IBM, CrowdStrike, Meta Lead Big Tech AI Push\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 68.8 (buy), contribution 80.6"
+        "theme 'AI & Compute' score 68.8 (buy), contribution 80.6",
+        "news_source=benzinga",
+        "event=earnings beat",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -524,30 +533,30 @@
     {
       "symbol": "MSFT",
       "action": "HOLD",
-      "target_weight": 0.0469,
+      "target_weight": 0.0494,
       "current_weight": 0.0505,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Nvidia's N1X AI PCs Could Ship 10 Million Units, But Windows Is Real Test, Says Ming-Chi Kuo: 'If The Goal Is A Real Upgrade Cycle\u2026'\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on earnings beat (positive) \u2014 \"Consumer Tech News (May 25-29): Dell, IBM, CrowdStrike, Meta Lead Big Tech AI Push\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.55%",
         "theme=AI & Compute",
         "theme 'AI & Compute' score 68.8 (buy), contribution 86.7",
         "news_source=benzinga",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "NKE",
-      "action": "REDUCE",
-      "target_weight": 0.0267,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0442,
-      "notional_delta": -1794.04,
-      "reason": "overweight by 1.75% vs target \u2014 trim",
+      "notional_delta": -4528.66,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.61%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 49.7 (starter), contribution 70.2"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -557,46 +566,76 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -3.23,
-      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dell, Snowflake, And Okta Are Among Top 10 Large-Cap Gainers Last Week (May 25-May 29): Are the Others in Your Portfolio?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=29.76%",
         "theme=Cybersecurity",
-        "news_source=yahoo_rss",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0494,
+      "action": "REDUCE",
+      "target_weight": 0.0379,
       "current_weight": 0.0496,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1196.76,
+      "reason": "trimming on mixed news flow \u2014 \"Top 3 S&P 500 Stocks To Watch Next Week: PANW, AVGO, CRWD\" \u00b7 overweight by 1.17% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=9.06%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 68.6 (buy), contribution 76.7",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Cybersecurity' score 62.0 (buy), contribution 70.1",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity"
     },
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0376,
+      "target_weight": 0.0339,
       "current_weight": 0.0252,
-      "notional_delta": 1264.96,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 1.24% vs target \u2014 add",
+      "notional_delta": 886.0,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 0.87% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 57.9 (buy), contribution 72.0",
+        "theme 'Biotech & Pharma' score 54.5 (starter), contribution 68.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
+    },
+    {
+      "symbol": "F",
+      "action": "BUY",
+      "target_weight": 0.0475,
+      "current_weight": 0.0,
+      "notional_delta": 4864.96,
+      "reason": "buying on positive news flow \u2014 \"Dell, Snowflake, And Okta Are Among Top 10 Large-Cap Gainers Last Week (May 25-May 29): Are the Others in Your Portfolio?\" \u00b7 new position \u2014 theme 'EV & Clean Transport' score 71.9 (strong_buy), contribution 78.8",
+      "factors": [
+        "ret_5d=27.58%",
+        "rel_vol_5d=1.32",
+        "vol_ann=57.03%",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ev_clean_transport"
+    },
+    {
+      "symbol": "RIVN",
+      "action": "SKIP",
+      "target_weight": 0.0465,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 71.9 (strong_buy), contribution 77.3)",
+      "factors": [
+        "ret_5d=15.19%",
+        "rel_vol_5d=0.96",
+        "vol_ann=50.55%"
+      ],
+      "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "RTX",
@@ -631,28 +670,12 @@
       "theme_key": "defense"
     },
     {
-      "symbol": "FTNT",
-      "action": "BUY",
-      "target_weight": 0.0472,
-      "current_weight": 0.0,
-      "notional_delta": 4834.23,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 new position \u2014 theme 'Cybersecurity' score 68.6 (buy), contribution 73.2",
-      "factors": [
-        "ret_5d=6.57%",
-        "rel_vol_5d=0.99",
-        "vol_ann=59.79%",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "cybersecurity"
-    },
-    {
       "symbol": "FSLR",
       "action": "BUY",
-      "target_weight": 0.0472,
+      "target_weight": 0.048,
       "current_weight": 0.0,
-      "notional_delta": 4834.23,
-      "reason": "buying on analyst upgrade (positive) \u2014 \"GLJ Research Upgrades First Solar (FSLR) to Buy\" \u00b7 new position \u2014 theme 'Clean Energy' score 63.3 (buy), contribution 79.7",
+      "notional_delta": 4916.17,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"GLJ Research Upgrades First Solar (FSLR) to Buy\" \u00b7 new position \u2014 theme 'Clean Energy' score 64.0 (buy), contribution 80.4",
       "factors": [
         "ret_5d=23.27%",
         "rel_vol_5d=1.28",
@@ -666,10 +689,10 @@
     {
       "symbol": "RUN",
       "action": "SKIP",
-      "target_weight": 0.0427,
+      "target_weight": 0.0434,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"XLU Investors: Watch PJM\u2019s March 2027 Data Center Framework Decision\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 63.3 (buy), contribution 72.2)",
+      "reason": "skipping on positive news flow \u2014 \"XLU Investors: Watch PJM\u2019s March 2027 Data Center Framework Decision\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 64.0 (buy), contribution 72.8)",
       "factors": [
         "ret_5d=15.75%",
         "rel_vol_5d=0.92",
@@ -682,26 +705,58 @@
     {
       "symbol": "ENPH",
       "action": "SKIP",
-      "target_weight": 0.0377,
+      "target_weight": 0.0384,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"XLU Investors: Watch PJM\u2019s March 2027 Data Center Framework Decision\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 63.3 (buy), contribution 63.7)",
+      "reason": "skipping on earnings beat (positive) \u2014 \"Assessing Enphase Energy (ENPH) Valuation After Q1 Earnings Beat And PowerMatch Rollout\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 64.0 (buy), contribution 64.4)",
       "factors": [
         "ret_5d=9.66%",
         "rel_vol_5d=1.03",
         "vol_ann=90.16%",
         "news_source=yahoo_rss",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
     },
     {
-      "symbol": "PFE",
+      "symbol": "FTNT",
       "action": "SKIP",
-      "target_weight": 0.0318,
+      "target_weight": 0.036,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 57.9 (buy), contribution 60.9)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 62.0 (buy), contribution 66.6)",
+      "factors": [
+        "ret_5d=6.57%",
+        "rel_vol_5d=0.99",
+        "vol_ann=59.79%"
+      ],
+      "theme_key": "cybersecurity"
+    },
+    {
+      "symbol": "TSM",
+      "action": "SKIP",
+      "target_weight": 0.0273,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on earnings beat (positive) \u2014 \"Consumer Tech News (May 25-29): Dell, IBM, CrowdStrike, Meta Lead Big Tech AI Push\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 56.0 (buy), contribution 57.6)",
+      "factors": [
+        "ret_5d=2.78%",
+        "rel_vol_5d=0.81",
+        "vol_ann=38.26%",
+        "news_source=benzinga",
+        "event=earnings beat",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "semiconductors_ex_ai"
+    },
+    {
+      "symbol": "PFE",
+      "action": "SKIP",
+      "target_weight": 0.0284,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 54.5 (starter), contribution 57.5)",
       "factors": [
         "ret_5d=0.89%",
         "rel_vol_5d=0.92",
@@ -710,34 +765,6 @@
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
-    },
-    {
-      "symbol": "F",
-      "action": "SKIP",
-      "target_weight": 0.0294,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 56.9 (buy), contribution 63.9)",
-      "factors": [
-        "ret_5d=27.58%",
-        "rel_vol_5d=1.32",
-        "vol_ann=57.03%"
-      ],
-      "theme_key": "ev_clean_transport"
-    },
-    {
-      "symbol": "RIVN",
-      "action": "SKIP",
-      "target_weight": 0.0286,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 56.9 (buy), contribution 62.3)",
-      "factors": [
-        "ret_5d=15.19%",
-        "rel_vol_5d=0.96",
-        "vol_ann=50.55%"
-      ],
-      "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "WFC",
@@ -752,66 +779,20 @@
         "vol_ann=29.13%"
       ],
       "theme_key": "financials"
-    },
-    {
-      "symbol": "HD",
-      "action": "SKIP",
-      "target_weight": 0.0219,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 49.7 (starter), contribution 57.4)",
-      "factors": [
-        "ret_5d=1.07%",
-        "rel_vol_5d=1.05",
-        "vol_ann=29.29%"
-      ],
-      "theme_key": "consumer_discretionary"
-    },
-    {
-      "symbol": "AMZN",
-      "action": "SKIP",
-      "target_weight": 0.0213,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Box CEO Says AI Efficiency Gains Are Fueling Hiring And Business Growth: 'Reinvesting Efficiency Savings Back\u2026'\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 49.7 (starter), contribution 56.0)",
-      "factors": [
-        "ret_5d=0.81%",
-        "rel_vol_5d=1.02",
-        "vol_ann=25.98%",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "consumer_discretionary"
-    },
-    {
-      "symbol": "TSM",
-      "action": "SKIP",
-      "target_weight": 0.0149,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on mixed news flow \u2014 \"Bill Gates Once Said He Wouldn't Want To Be The Nvidia CEO: 'Jensen Doesn't Even Make His Own Chip...'\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 49.6)",
-      "factors": [
-        "ret_5d=2.78%",
-        "rel_vol_5d=0.81",
-        "vol_ann=38.26%",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
-      ],
-      "theme_key": "semiconductors_ex_ai"
     }
   ],
   "executions": [
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0168,
+      "target_weight": 0.0302,
       "current_weight": 0.0488,
-      "notional_delta": -3280.06,
-      "reason": "overweight by 3.20% vs target \u2014 trim",
+      "notional_delta": -1907.63,
+      "reason": "overweight by 1.86% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.05%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 55.7"
+        "theme 'Semiconductors (Broad)' score 56.0 (buy), contribution 63.7"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -837,14 +818,16 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0448,
+      "target_weight": 0.0472,
       "current_weight": 0.0486,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Top 3 S&P 500 Stocks To Watch Next Week: PANW, AVGO, CRWD\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.62%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 68.8 (buy), contribution 83.0"
+        "theme 'AI & Compute' score 68.8 (buy), contribution 83.0",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -872,16 +855,17 @@
     },
     {
       "symbol": "CRWD",
-      "action": "HOLD",
-      "target_weight": 0.0486,
+      "action": "REDUCE",
+      "target_weight": 0.0372,
       "current_weight": 0.046,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -902.04,
+      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (May 25-29): Dell, IBM, CrowdStrike, Meta Lead Big Tech AI Push\" \u00b7 overweight by 0.88% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.53%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 68.6 (buy), contribution 75.3",
-        "news_source=yahoo_rss",
+        "theme 'Cybersecurity' score 62.0 (buy), contribution 68.8",
+        "news_source=benzinga",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
@@ -891,15 +875,18 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0324,
+      "action": "HOLD",
+      "target_weight": 0.0515,
       "current_weight": 0.0471,
-      "notional_delta": -1503.34,
-      "reason": "overweight by 1.47% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on earnings beat (positive) \u2014 \"Consumer Tech News (May 25-29): Dell, IBM, CrowdStrike, Meta Lead Big Tech AI Push\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 56.9 (buy), contribution 70.5"
+        "theme 'EV & Clean Transport' score 71.9 (strong_buy), contribution 85.5",
+        "news_source=benzinga",
+        "event=earnings beat",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -926,14 +913,14 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0401,
+      "target_weight": 0.0362,
       "current_weight": 0.0277,
-      "notional_delta": 1266.28,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 1.24% vs target \u2014 add",
+      "notional_delta": 866.85,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 0.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.19%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 57.9 (buy), contribution 76.6",
+        "theme 'Biotech & Pharma' score 54.5 (starter), contribution 73.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -945,14 +932,14 @@
     {
       "symbol": "LRCX",
       "action": "REDUCE",
-      "target_weight": 0.0168,
+      "target_weight": 0.0302,
       "current_weight": 0.049,
-      "notional_delta": -3299.25,
-      "reason": "overweight by 3.22% vs target \u2014 trim",
+      "notional_delta": -1926.82,
+      "reason": "overweight by 1.88% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 55.9"
+        "theme 'Semiconductors (Broad)' score 56.0 (buy), contribution 63.9"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -962,14 +949,17 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0435,
+      "target_weight": 0.0459,
       "current_weight": 0.0468,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on earnings beat (positive) \u2014 \"Consumer Tech News (May 25-29): Dell, IBM, CrowdStrike, Meta Lead Big Tech AI Push\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 68.8 (buy), contribution 80.6"
+        "theme 'AI & Compute' score 68.8 (buy), contribution 80.6",
+        "news_source=benzinga",
+        "event=earnings beat",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -998,15 +988,16 @@
     {
       "symbol": "MSFT",
       "action": "HOLD",
-      "target_weight": 0.0469,
+      "target_weight": 0.0494,
       "current_weight": 0.0505,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Nvidia's N1X AI PCs Could Ship 10 Million Units, But Windows Is Real Test, Says Ming-Chi Kuo: 'If The Goal Is A Real Upgrade Cycle\u2026'\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on earnings beat (positive) \u2014 \"Consumer Tech News (May 25-29): Dell, IBM, CrowdStrike, Meta Lead Big Tech AI Push\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.55%",
         "theme=AI & Compute",
         "theme 'AI & Compute' score 68.8 (buy), contribution 86.7",
         "news_source=benzinga",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
@@ -1016,15 +1007,14 @@
     },
     {
       "symbol": "NKE",
-      "action": "REDUCE",
-      "target_weight": 0.0267,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0442,
-      "notional_delta": -1794.04,
-      "reason": "overweight by 1.75% vs target \u2014 trim",
+      "notional_delta": -4528.66,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.61%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 49.7 (starter), contribution 70.2"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1037,11 +1027,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -3.23,
-      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dell, Snowflake, And Okta Are Among Top 10 Large-Cap Gainers Last Week (May 25-May 29): Are the Others in Your Portfolio?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=29.76%",
         "theme=Cybersecurity",
-        "news_source=yahoo_rss",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
@@ -1051,17 +1041,17 @@
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0494,
+      "action": "REDUCE",
+      "target_weight": 0.0379,
       "current_weight": 0.0496,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1196.76,
+      "reason": "trimming on mixed news flow \u2014 \"Top 3 S&P 500 Stocks To Watch Next Week: PANW, AVGO, CRWD\" \u00b7 overweight by 1.17% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=9.06%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 68.6 (buy), contribution 76.7",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Cybersecurity' score 62.0 (buy), contribution 70.1",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1071,18 +1061,54 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0376,
+      "target_weight": 0.0339,
       "current_weight": 0.0252,
-      "notional_delta": 1264.96,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 1.24% vs target \u2014 add",
+      "notional_delta": 886.0,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 underweight by 0.87% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.17%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 57.9 (buy), contribution 72.0",
+        "theme 'Biotech & Pharma' score 54.5 (starter), contribution 68.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "F",
+      "action": "BUY",
+      "target_weight": 0.0475,
+      "current_weight": 0.0,
+      "notional_delta": 4864.96,
+      "reason": "buying on positive news flow \u2014 \"Dell, Snowflake, And Okta Are Among Top 10 Large-Cap Gainers Last Week (May 25-May 29): Are the Others in Your Portfolio?\" \u00b7 new position \u2014 theme 'EV & Clean Transport' score 71.9 (strong_buy), contribution 78.8",
+      "factors": [
+        "ret_5d=27.58%",
+        "rel_vol_5d=1.32",
+        "vol_ann=57.03%",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ev_clean_transport",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "RIVN",
+      "action": "SKIP",
+      "target_weight": 0.0465,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 71.9 (strong_buy), contribution 77.3)",
+      "factors": [
+        "ret_5d=15.19%",
+        "rel_vol_5d=0.96",
+        "vol_ann=50.55%"
+      ],
+      "theme_key": "ev_clean_transport",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1126,31 +1152,12 @@
       "note": "market_closed_or_no_account"
     },
     {
-      "symbol": "FTNT",
-      "action": "BUY",
-      "target_weight": 0.0472,
-      "current_weight": 0.0,
-      "notional_delta": 4834.23,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 new position \u2014 theme 'Cybersecurity' score 68.6 (buy), contribution 73.2",
-      "factors": [
-        "ret_5d=6.57%",
-        "rel_vol_5d=0.99",
-        "vol_ann=59.79%",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "cybersecurity",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
       "symbol": "FSLR",
       "action": "BUY",
-      "target_weight": 0.0472,
+      "target_weight": 0.048,
       "current_weight": 0.0,
-      "notional_delta": 4834.23,
-      "reason": "buying on analyst upgrade (positive) \u2014 \"GLJ Research Upgrades First Solar (FSLR) to Buy\" \u00b7 new position \u2014 theme 'Clean Energy' score 63.3 (buy), contribution 79.7",
+      "notional_delta": 4916.17,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"GLJ Research Upgrades First Solar (FSLR) to Buy\" \u00b7 new position \u2014 theme 'Clean Energy' score 64.0 (buy), contribution 80.4",
       "factors": [
         "ret_5d=23.27%",
         "rel_vol_5d=1.28",
@@ -1167,10 +1174,10 @@
     {
       "symbol": "RUN",
       "action": "SKIP",
-      "target_weight": 0.0427,
+      "target_weight": 0.0434,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"XLU Investors: Watch PJM\u2019s March 2027 Data Center Framework Decision\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 63.3 (buy), contribution 72.2)",
+      "reason": "skipping on positive news flow \u2014 \"XLU Investors: Watch PJM\u2019s March 2027 Data Center Framework Decision\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 64.0 (buy), contribution 72.8)",
       "factors": [
         "ret_5d=15.75%",
         "rel_vol_5d=0.92",
@@ -1186,15 +1193,16 @@
     {
       "symbol": "ENPH",
       "action": "SKIP",
-      "target_weight": 0.0377,
+      "target_weight": 0.0384,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"XLU Investors: Watch PJM\u2019s March 2027 Data Center Framework Decision\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 63.3 (buy), contribution 63.7)",
+      "reason": "skipping on earnings beat (positive) \u2014 \"Assessing Enphase Energy (ENPH) Valuation After Q1 Earnings Beat And PowerMatch Rollout\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 64.0 (buy), contribution 64.4)",
       "factors": [
         "ret_5d=9.66%",
         "rel_vol_5d=1.03",
         "vol_ann=90.16%",
         "news_source=yahoo_rss",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
@@ -1203,12 +1211,49 @@
       "note": "market_closed_or_no_account"
     },
     {
-      "symbol": "PFE",
+      "symbol": "FTNT",
       "action": "SKIP",
-      "target_weight": 0.0318,
+      "target_weight": 0.036,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 57.9 (buy), contribution 60.9)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Cybersecurity' score 62.0 (buy), contribution 66.6)",
+      "factors": [
+        "ret_5d=6.57%",
+        "rel_vol_5d=0.99",
+        "vol_ann=59.79%"
+      ],
+      "theme_key": "cybersecurity",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "TSM",
+      "action": "SKIP",
+      "target_weight": 0.0273,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on earnings beat (positive) \u2014 \"Consumer Tech News (May 25-29): Dell, IBM, CrowdStrike, Meta Lead Big Tech AI Push\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 56.0 (buy), contribution 57.6)",
+      "factors": [
+        "ret_5d=2.78%",
+        "rel_vol_5d=0.81",
+        "vol_ann=38.26%",
+        "news_source=benzinga",
+        "event=earnings beat",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "semiconductors_ex_ai",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "PFE",
+      "action": "SKIP",
+      "target_weight": 0.0284,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on positive news flow \u2014 \"Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Biotech & Pharma' score 54.5 (starter), contribution 57.5)",
       "factors": [
         "ret_5d=0.89%",
         "rel_vol_5d=0.92",
@@ -1217,40 +1262,6 @@
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "F",
-      "action": "SKIP",
-      "target_weight": 0.0294,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 56.9 (buy), contribution 63.9)",
-      "factors": [
-        "ret_5d=27.58%",
-        "rel_vol_5d=1.32",
-        "vol_ann=57.03%"
-      ],
-      "theme_key": "ev_clean_transport",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "RIVN",
-      "action": "SKIP",
-      "target_weight": 0.0286,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 56.9 (buy), contribution 62.3)",
-      "factors": [
-        "ret_5d=15.19%",
-        "rel_vol_5d=0.96",
-        "vol_ann=50.55%"
-      ],
-      "theme_key": "ev_clean_transport",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1268,61 +1279,6 @@
         "vol_ann=29.13%"
       ],
       "theme_key": "financials",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "HD",
-      "action": "SKIP",
-      "target_weight": 0.0219,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 49.7 (starter), contribution 57.4)",
-      "factors": [
-        "ret_5d=1.07%",
-        "rel_vol_5d=1.05",
-        "vol_ann=29.29%"
-      ],
-      "theme_key": "consumer_discretionary",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "AMZN",
-      "action": "SKIP",
-      "target_weight": 0.0213,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Box CEO Says AI Efficiency Gains Are Fueling Hiring And Business Growth: 'Reinvesting Efficiency Savings Back\u2026'\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 49.7 (starter), contribution 56.0)",
-      "factors": [
-        "ret_5d=0.81%",
-        "rel_vol_5d=1.02",
-        "vol_ann=25.98%",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "consumer_discretionary",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "TSM",
-      "action": "SKIP",
-      "target_weight": 0.0149,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on mixed news flow \u2014 \"Bill Gates Once Said He Wouldn't Want To Be The Nvidia CEO: 'Jensen Doesn't Even Make His Own Chip...'\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 49.6)",
-      "factors": [
-        "ret_5d=2.78%",
-        "rel_vol_5d=0.81",
-        "vol_ann=38.26%",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
-      ],
-      "theme_key": "semiconductors_ex_ai",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -1648,6 +1604,10 @@
     {
       "t": "2026-05-31T12:55:44+00:00",
       "v": 102420.15
+    },
+    {
+      "t": "2026-05-31T14:54:30+00:00",
+      "v": 102420.15
     }
   ],
   "breaking_news": [
@@ -1656,7 +1616,7 @@
       "summary": "It's the second known case of the federal government filing criminal charges against someone who allegedly used insider information to make a large profit on a prediction market site.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/27/nx-s1-5836659/google-polymarket-insider-trading-doj-charges",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1665,7 +1625,7 @@
       "summary": "NPR's Steve Inskeep speaks to Mack Hogan of Inside EVs about the lukewarm consumer response to Ferrari's first electric vehicle.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836496/ferrari-unveiled-its-first-ev-model-the-response-has-been-lukewarm",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1674,7 +1634,7 @@
       "summary": "As part of NPR's Swing Shift project checking in with swing voters, these Americans are split on who is to blame for high gas prices but they all agree it has an impact on their personal finances.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836714/swing-voters-gas-prices-trump-midterms",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1683,7 +1643,7 @@
       "summary": "Suspending the federal gasoline tax could save drivers up to 18.4 cents per gallon. But it would drain the fund meant to cover roadbuilding and repairs \u2014 a fund that's already in trouble.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5835634/gasoline-tax-holiday-trump-potholes",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -1692,7 +1652,7 @@
       "summary": "A new report shows that nearly half of U.S. households did not earn enough to cover their necessities in 2024.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836525/affordability-report-brookings-inflation-wages",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1701,7 +1661,7 @@
       "summary": "FIFA has always had a peculiar way to sell tickets to the World Cup. It never faced any major issues \u2014 until prices soared for the 2026 tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/28/nx-s1-5836514/2026-world-cup-fifa-ticket-prices",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -1710,7 +1670,7 @@
       "summary": "The new head of CBS News is flexing her muscles at the network's most storied news program: \"60 Minutes.\" We look at the upheaval.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5837993/bari-weiss-works-to-reinvent-60-minutes-cbs-most-prestigious-program",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1719,7 +1679,7 @@
       "summary": "Sky-high gas prices have drivers going out of their way for discounts at the pump. Oil executives warn that even higher prices might be on the horizon.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/05/29/nx-s1-5838740/how-stressed-are-americans-about-high-gas-prices-fueling",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1728,7 +1688,7 @@
       "summary": "Maj Gen Rabe Abubakar's kidnapping highlights continuing security challenges facing parts of the country.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cz02zgkgn08o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1737,7 +1697,7 @@
       "summary": "The country's football association says it is working to resolve the problems that have delayed the team's departure to Mexico.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c86dxvql3qno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1746,7 +1706,7 @@
       "summary": "The Israeli military says everyone south of the Zahrani river should leave, after it captured the strategic Beaufort Castle.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cdep04kzz5wo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1755,7 +1715,7 @@
       "summary": "The election is held after months of public recrimination between current left-wing President Gustavo Petro and his US counterpart Donald Trump.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c2027g423glo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1764,7 +1724,7 @@
       "summary": "So far, five men have been freed from the narrow, flooded cave but efforts are ongoing to locate two more.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c8094jdpzv3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1773,7 +1733,7 @@
       "summary": "The medical charity's comments come as the head of the World Health Organization visits the region worst-hit by the virus outbreak.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c99ldxykz4zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -1782,7 +1742,7 @@
       "summary": "Shinjiro Koizumi makes some of Tokyo's most pointed remarks yet in the dispute over Japan's military build-up.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cp8p4ejy8ppo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1791,7 +1751,7 @@
       "summary": "Nearly 800 people were arrested after clashes with police which saw 219 people injured, including 57 police officers.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c0r2ejg1w9xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1800,7 +1760,7 @@
       "summary": "The music giant said Pershing Square's offer fundamentally undervalued the business.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cn8pnd9yj4eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1809,7 +1769,7 @@
       "summary": "Royal Mail says its service is improving and that it is on track to hit the regulator Ofcom's reduced targets",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cy02jyxz26po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1818,7 +1778,7 @@
       "summary": "BMW is introducing humanoid robots to a car plant in Europe, building on similar projects in the US.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cgmpwzzvxr2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -1827,7 +1787,7 @@
       "summary": "Marc Bolland will advise on getting young people into work after a review warned of a \"lost generation\".",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cg5p9y25qj1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-05-31T12:55:47+00:00",
+      "published_utc": "2026-05-31T14:54:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
