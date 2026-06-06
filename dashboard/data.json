@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-06T19:51:30+00:00",
+  "generated_at_utc": "2026-06-06T21:01:45+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 134,
-  "last_success_utc": "2026-06-06T18:19:05+00:00",
+  "cycle_count": 135,
+  "last_success_utc": "2026-06-06T19:51:30+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -431,22 +431,6 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 54.75,
-      "raw_score": 54.75,
-      "band": "starter",
-      "weight": 0.0992,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 28.29,
-        "sentiment": 92.31,
-        "volume": 51.23,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "biotech",
       "name": "Biotech & Pharma",
       "score": 50.56,
@@ -495,19 +479,35 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 38.55,
-      "raw_score": 47.31,
-      "band": "hold_small",
-      "weight": 0.0413,
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 42.67,
+      "raw_score": 50.98,
+      "band": "starter",
+      "weight": 0.0589,
       "confidence": 1.0,
       "components": {
-        "momentum": 21.28,
-        "sentiment": 66.66,
-        "volume": 63.97,
+        "momentum": 29.62,
+        "sentiment": 76.92,
+        "volume": 50.27,
         "policy": 60.0,
-        "volatility_penalty": 8.75
+        "volatility_penalty": 8.31
+      }
+    },
+    {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 38.56,
+      "raw_score": 38.56,
+      "band": "hold_small",
+      "weight": 0.0341,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 28.29,
+        "sentiment": 40.0,
+        "volume": 51.23,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -527,22 +527,6 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 34.09,
-      "raw_score": 42.4,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 29.62,
-        "sentiment": 50.0,
-        "volume": 50.27,
-        "policy": 55.0,
-        "volatility_penalty": 8.31
-      }
-    },
-    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 31.75,
@@ -556,6 +540,22 @@
         "volume": 61.22,
         "policy": 55.0,
         "volatility_penalty": 16.78
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 30.91,
+      "raw_score": 39.66,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 21.28,
+        "sentiment": 42.86,
+        "volume": 63.97,
+        "policy": 55.0,
+        "volatility_penalty": 8.75
       }
     }
   ],
@@ -590,16 +590,16 @@
     },
     {
       "symbol": "AVGO",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.02,
       "current_weight": 0.04,
-      "notional_delta": -3943.35,
-      "reason": "exiting on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1971.68,
+      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -724,28 +724,30 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0097,
+      "action": "HOLD",
+      "target_weight": 0.0225,
       "current_weight": 0.0194,
-      "notional_delta": -955.62,
-      "reason": "theme score 34.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Is It Time To Reassess General Motors (GM) After Its 75% One Year Surge?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.97%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 42.7 (starter), contribution 53.5",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0152,
+      "action": "REDUCE",
+      "target_weight": 0.0096,
       "current_weight": 0.0193,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -951.65,
+      "reason": "trimming on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.5 (hold_small), contribution 45.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -823,33 +825,30 @@
     },
     {
       "symbol": "MCD",
-      "action": "BUY",
-      "target_weight": 0.0387,
+      "action": "REDUCE",
+      "target_weight": 0.0141,
       "current_weight": 0.024,
-      "notional_delta": 1445.52,
-      "reason": "buying on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 underweight by 1.47% vs target \u2014 add",
+      "notional_delta": -981.67,
+      "reason": "overweight by 0.99% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 54.8 (starter), contribution 64.7",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 38.6 (hold_small), contribution 48.5"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0125,
+      "action": "REDUCE",
+      "target_weight": 0.0077,
       "current_weight": 0.0154,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -761.45,
+      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.5 (hold_small), contribution 37.4",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -870,11 +869,11 @@
     },
     {
       "symbol": "MSFT",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0178,
       "current_weight": 0.0356,
-      "notional_delta": -3507.88,
-      "reason": "exiting on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1753.94,
+      "reason": "trimming on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.02%",
         "theme=AI & Compute",
@@ -889,28 +888,25 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-9.46%",
-        "theme=Consumer Discretionary",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0137,
+      "action": "REDUCE",
+      "target_weight": 0.009,
       "current_weight": 0.0181,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -892.32,
+      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.5 (hold_small), contribution 41.1",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -971,14 +967,17 @@
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
-      "target_weight": 0.011,
+      "action": "HOLD",
+      "target_weight": 0.0224,
       "current_weight": 0.022,
-      "notional_delta": -1086.31,
-      "reason": "theme score 34.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"JPMorgan sets jaw-dropping Tesla stock price target\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-7.80%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 42.7 (starter), contribution 53.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.07"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1013,11 +1012,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -3.66,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -1.83,
+      "reason": "theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-11.18%",
         "theme=AI & Compute"
@@ -1083,34 +1082,46 @@
       "theme_key": "oil_gas"
     },
     {
+      "symbol": "TSLA",
+      "action": "SKIP",
+      "target_weight": 0.014,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on mixed news flow \u2014 \"JPMorgan sets jaw-dropping Tesla stock price target\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 42.7 (starter), contribution 33.3)",
+      "factors": [
+        "ret_5d=-10.28%",
+        "rel_vol_5d=0.91",
+        "vol_ann=43.18%",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.07"
+      ],
+      "theme_key": "ev_clean_transport"
+    },
+    {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0314,
+      "target_weight": 0.0106,
       "current_weight": 0.0,
-      "notional_delta": 3098.13,
-      "reason": "buying on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 new position \u2014 theme 'Consumer Discretionary' score 54.8 (starter), contribution 52.6",
+      "notional_delta": 1045.86,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 38.6 (hold_small), contribution 36.4",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
-        "vol_ann=24.70%",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "vol_ann=24.70%"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "SBUX",
       "action": "SKIP",
-      "target_weight": 0.0291,
+      "target_weight": 0.0094,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 54.8 (starter), contribution 48.6)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 38.6 (hold_small), contribution 32.4)",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
-        "vol_ann=26.87%",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "vol_ann=26.87%"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1184,16 +1195,16 @@
     },
     {
       "symbol": "AVGO",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.02,
       "current_weight": 0.04,
-      "notional_delta": -3943.35,
-      "reason": "exiting on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1971.68,
+      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1345,14 +1356,17 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0097,
+      "action": "HOLD",
+      "target_weight": 0.0225,
       "current_weight": 0.0194,
-      "notional_delta": -955.62,
-      "reason": "theme score 34.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Is It Time To Reassess General Motors (GM) After Its 75% One Year Surge?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.97%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 42.7 (starter), contribution 53.5",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1361,15 +1375,14 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0152,
+      "action": "REDUCE",
+      "target_weight": 0.0096,
       "current_weight": 0.0193,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -951.65,
+      "reason": "trimming on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.5 (hold_small), contribution 45.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1465,17 +1478,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "BUY",
-      "target_weight": 0.0387,
+      "action": "REDUCE",
+      "target_weight": 0.0141,
       "current_weight": 0.024,
-      "notional_delta": 1445.52,
-      "reason": "buying on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 underweight by 1.47% vs target \u2014 add",
+      "notional_delta": -981.67,
+      "reason": "overweight by 0.99% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 54.8 (starter), contribution 64.7",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 38.6 (hold_small), contribution 48.5"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1484,17 +1495,16 @@
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0125,
+      "action": "REDUCE",
+      "target_weight": 0.0077,
       "current_weight": 0.0154,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -761.45,
+      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.5 (hold_small), contribution 37.4",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1521,11 +1531,11 @@
     },
     {
       "symbol": "MSFT",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0178,
       "current_weight": 0.0356,
-      "notional_delta": -3507.88,
-      "reason": "exiting on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1753.94,
+      "reason": "trimming on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.02%",
         "theme=AI & Compute",
@@ -1543,12 +1553,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-9.46%",
-        "theme=Consumer Discretionary",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1557,17 +1565,16 @@
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0137,
+      "action": "REDUCE",
+      "target_weight": 0.009,
       "current_weight": 0.0181,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -892.32,
+      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.5 (hold_small), contribution 41.1",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1643,14 +1650,17 @@
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
-      "target_weight": 0.011,
+      "action": "HOLD",
+      "target_weight": 0.0224,
       "current_weight": 0.022,
-      "notional_delta": -1086.31,
-      "reason": "theme score 34.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"JPMorgan sets jaw-dropping Tesla stock price target\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-7.80%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 42.7 (starter), contribution 53.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.07"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1694,11 +1704,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -3.66,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -1.83,
+      "reason": "theme score 30.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-11.18%",
         "theme=AI & Compute"
@@ -1779,18 +1789,35 @@
       "note": "market_closed_or_no_account"
     },
     {
+      "symbol": "TSLA",
+      "action": "SKIP",
+      "target_weight": 0.014,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on mixed news flow \u2014 \"JPMorgan sets jaw-dropping Tesla stock price target\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 42.7 (starter), contribution 33.3)",
+      "factors": [
+        "ret_5d=-10.28%",
+        "rel_vol_5d=0.91",
+        "vol_ann=43.18%",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.07"
+      ],
+      "theme_key": "ev_clean_transport",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0314,
+      "target_weight": 0.0106,
       "current_weight": 0.0,
-      "notional_delta": 3098.13,
-      "reason": "buying on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 new position \u2014 theme 'Consumer Discretionary' score 54.8 (starter), contribution 52.6",
+      "notional_delta": 1045.86,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 38.6 (hold_small), contribution 36.4",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
-        "vol_ann=24.70%",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "vol_ann=24.70%"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1800,16 +1827,14 @@
     {
       "symbol": "SBUX",
       "action": "SKIP",
-      "target_weight": 0.0291,
+      "target_weight": 0.0094,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 54.8 (starter), contribution 48.6)",
+      "reason": "deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 38.6 (hold_small), contribution 32.4)",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
-        "vol_ann=26.87%",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "vol_ann=26.87%"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2391,6 +2416,10 @@
     {
       "t": "2026-06-06T19:51:28+00:00",
       "v": 98666.47
+    },
+    {
+      "t": "2026-06-06T21:01:41+00:00",
+      "v": 98666.47
     }
   ],
   "breaking_news": [
@@ -2399,7 +2428,7 @@
       "summary": "President Trump signed an executive order that puts some 8,000 high-ranking civil servants into a new category of employees who can be fired for any reason.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5742806/trump-federal-employees-civil-service-job-protections-schedule-f",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -2408,7 +2437,7 @@
       "summary": "David Venturella's appointment as acting ICE director is the latest in a pattern: Many former employees of the private prison company GEO Group end up working at the federal agency, and vice versa.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5836625/geo-group-private-prisons-ice-close-ties",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2417,7 +2446,7 @@
       "summary": "Shipping companies are looking for alternative routes as the Strait of Hormuz lockdown drags on.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5828377/as-strait-of-hormuz-stays-shut-companies-seek-new-routes-for-trade",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2426,7 +2455,7 @@
       "summary": "Hurricane season is expected to be milder than usual this year. But that's not stopping cell phone companies from pulling out all the stops.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5830291/2026-hurricane-season-cell-phones",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2435,7 +2464,7 @@
       "summary": "Just 3% of U.S. households pay for AI for personal use. Sign ups are growing \u2014 even though Americans have subscription fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5791661/chatgpt-gemini-claude-subscription-revenue-openai",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2444,7 +2473,7 @@
       "summary": "Collecting Panini stickers is a World Cup tradition beloved in Europe and Latin America. In the U.S., interest has been building steadily, and this summer, the buzz is bigger than ever.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5844319/world-cup-2026-panini-stickers-album",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2453,7 +2482,7 @@
       "summary": "U.S. employers added jobs for the third month in a row in May, while the unemployment rate held steady at 4.3%. But wage gains softened and likely failed to keep pace with rising prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5847669/jobs-labor-market-unemployment-wages-inflation",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2462,16 +2491,16 @@
       "summary": "Amid widespread tech layoffs, some highly skilled workers are making radical career changes. Some laid-off workers are turning to lower paying temp jobs, and some are leaving tech altogether.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5788006/in-the-wake-of-layoffs-some-tech-workers-are-exploring-new-careers",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "Rumours and speculation as fans forecast date of Taylor Swift's wedding",
-      "summary": "Swifties worldwide are looking for clues about the superstar's nuptials to American football star Travis Kelce.",
+      "headline": "Lebanese general among three soldiers killed in Israeli attack on car",
+      "summary": "The Israeli military is investigating the incident in south Lebanon, where it is fighting Hezbollah.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cqjpj80qz1ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "url": "https://www.bbc.com/news/articles/cj0g8jymg92o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2480,7 +2509,7 @@
       "summary": "Teenager Mirra Andreeva fulfils her huge potential with a first Grand Slam title as Polish qualifier Maja Chwalinska is denied a fairytale French Open victory.",
       "source": "BBC World",
       "url": "https://www.bbc.com/sport/tennis/articles/c1dy7grv4y3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2489,7 +2518,7 @@
       "summary": "Iranian officials say technical staff have been denied visas, hours after the US said players could enter the country.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cy8286nqz87o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2498,16 +2527,16 @@
       "summary": "On the first day of his official seven-day tour of Spain, the Pope praises the country's \"active commitment to peace and solidarity among peoples\".",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c8d2pgjy4qgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Lebanese general among three soldiers killed in Israeli attack on car",
-      "summary": "The Israeli military is investigating the incident in south Lebanon, where it is fighting Hezbollah.",
+      "headline": "Funeral held for baby shot dead by Israeli troops in occupied West Bank",
+      "summary": "The seven-month-old boy's shrouded body was wrapped in a Palestinian flag and carried by his father to the graveyard.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cj0g8jymg92o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "url": "https://www.bbc.com/news/articles/cly8lgn0x30o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2516,7 +2545,7 @@
       "summary": "The US defence secretary was speaking in Normandy, 82 years after allied forces launched their operation to liberate Nazi-occupied north-western Europe.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c802e7jk458o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2525,16 +2554,16 @@
       "summary": "The US military strikes Iranian drones and radar sites and Tehran says it has targeted US bases in Kuwait and Bahrain.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgzgyjk2weo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "Ukrainian drones target St Petersburg in attack Russia calls 'unprecedented'",
-      "summary": "The city's governor urges residents to remain indoors for the first time since the beginning of the war.",
+      "summary": "Residents of Russia's second-largest city were urged to stay indoors for the first time since the war started.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cg7498kz808o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2543,7 +2572,7 @@
       "summary": "The charity says it is facing \"an exceptionally challenging trading environment\".",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvgzg48d9q0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2552,7 +2581,7 @@
       "summary": "Despite the Iran war, inflation and debt fears, US markets keep hitting record highs, fueled largely by AI. BBC's Samira Hussain looks into whether that bubble will burst.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/videos/c1m2mr7gr27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2561,7 +2590,7 @@
       "summary": "Instead of throwing away byproducts of food processing, fermentation is making them valuable.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2570,7 +2599,7 @@
       "summary": "It is the third month in a row US jobs figures have beaten expectations.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cdxpx4gel1yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T19:51:30+00:00",
+      "published_utc": "2026-06-06T21:01:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
