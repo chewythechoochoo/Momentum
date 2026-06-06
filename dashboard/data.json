@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-06T14:05:51+00:00",
+  "generated_at_utc": "2026-06-06T15:39:33+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 130,
-  "last_success_utc": "2026-06-06T12:00:38+00:00",
+  "cycle_count": 131,
+  "last_success_utc": "2026-06-06T14:05:51+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -401,14 +401,14 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 66.19,
-      "raw_score": 66.19,
+      "score": 67.69,
+      "raw_score": 67.69,
       "band": "buy",
-      "weight": 0.127,
-      "confidence": 0.85,
+      "weight": 0.1245,
+      "confidence": 0.75,
       "components": {
         "momentum": 70.45,
-        "sentiment": 75.0,
+        "sentiment": 80.0,
         "volume": 52.58,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -428,6 +428,22 @@
         "volume": 45.4,
         "policy": 50.0,
         "volatility_penalty": 1.72
+      }
+    },
+    {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 50.56,
+      "raw_score": 50.56,
+      "band": "starter",
+      "weight": 0.0746,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 28.29,
+        "sentiment": 80.0,
+        "volume": 51.23,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -463,22 +479,6 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 41.56,
-      "raw_score": 41.56,
-      "band": "starter",
-      "weight": 0.0538,
-      "confidence": 0.95,
-      "components": {
-        "momentum": 28.29,
-        "sentiment": 50.0,
-        "volume": 51.23,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "ai_compute",
       "name": "AI & Compute",
       "score": 40.55,
@@ -497,14 +497,14 @@
     {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
-      "score": 37.09,
-      "raw_score": 45.4,
+      "score": 39.09,
+      "raw_score": 47.4,
       "band": "hold_small",
-      "weight": 0.0317,
-      "confidence": 0.95,
+      "weight": 0.0423,
+      "confidence": 0.9,
       "components": {
         "momentum": 29.62,
-        "sentiment": 60.0,
+        "sentiment": 66.66,
         "volume": 50.27,
         "policy": 55.0,
         "volatility_penalty": 8.31
@@ -549,7 +549,7 @@
       "raw_score": 34.43,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.95,
+      "confidence": 0.9,
       "components": {
         "momentum": 43.48,
         "sentiment": 0.0,
@@ -621,16 +621,14 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0424,
+      "target_weight": 0.0415,
       "current_weight": 0.0441,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Think The Cash In Your Brokerage Account Is FDIC-Insured? Think Again\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.44%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 75.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 67.7 (buy), contribution 77.3"
       ],
       "theme_key": "financials"
     },
@@ -723,15 +721,15 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0123,
+      "action": "HOLD",
+      "target_weight": 0.0163,
       "current_weight": 0.0194,
-      "notional_delta": -697.65,
-      "reason": "trimming on mixed news flow \u2014 \"'U.S. Demands Tougher Rules For Car Parts In Mexico Trade Talks; U.S. Wants To Reduce Chinese Supplies From North America's Vehicles While I\" \u00b7 overweight by 0.71% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"'U.S. Demands Tougher Rules For Car Parts In Mexico Trade Talks; U.S. Wants To Reduce Chinese Supplies From North America's Vehicles While I\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.97%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 37.1 (hold_small), contribution 47.9",
+        "theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 49.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -771,14 +769,14 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0417,
+      "target_weight": 0.0409,
       "current_weight": 0.0429,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Monroe Capital Becomes Latest Private Credit Manager To Restrict Withdrawals\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 74.5",
+        "theme 'Financials & Rates' score 67.7 (buy), contribution 76.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -831,15 +829,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0219,
+      "action": "BUY",
+      "target_weight": 0.0294,
       "current_weight": 0.024,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 527.92,
+      "reason": "underweight by 0.54% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 41.6 (starter), contribution 51.5"
+        "theme 'Consumer Discretionary' score 50.6 (starter), contribution 60.5"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -908,13 +906,13 @@
       "target_weight": 0.0172,
       "current_weight": 0.0181,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Marvell Secures Spot In S&P 500 Index Amid AI Chip Boom\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Jensen Huang Personally Reviews Pay For All 42,000 Nvidia Employees \u2014 Here's What He Does '100% Of The Time'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
         "theme 'AI & Compute' score 40.5 (starter), contribution 43.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -976,14 +974,14 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0123,
+      "target_weight": 0.0163,
       "current_weight": 0.022,
-      "notional_delta": -959.02,
-      "reason": "overweight by 0.97% vs target \u2014 trim",
+      "notional_delta": -564.36,
+      "reason": "overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-7.80%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 37.1 (hold_small), contribution 47.7"
+        "theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 49.7"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1061,16 +1059,14 @@
     {
       "symbol": "WFC",
       "action": "HOLD",
-      "target_weight": 0.043,
+      "target_weight": 0.0421,
       "current_weight": 0.0462,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Think The Cash In Your Brokerage Account Is FDIC-Insured? Think Again\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.17%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 76.9",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 67.7 (buy), contribution 78.4"
       ],
       "theme_key": "financials"
     },
@@ -1093,10 +1089,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0168,
+      "target_weight": 0.0235,
       "current_weight": 0.0,
-      "notional_delta": 1657.6,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 41.6 (starter), contribution 39.4",
+      "notional_delta": 2318.66,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 50.6 (starter), contribution 48.4",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1107,10 +1103,10 @@
     {
       "symbol": "SBUX",
       "action": "BUY",
-      "target_weight": 0.0151,
+      "target_weight": 0.0216,
       "current_weight": 0.0,
-      "notional_delta": 1489.86,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 41.6 (starter), contribution 35.4",
+      "notional_delta": 2131.2,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 50.6 (starter), contribution 44.4",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -1121,10 +1117,10 @@
     {
       "symbol": "TSLA",
       "action": "SKIP",
-      "target_weight": 0.0071,
+      "target_weight": 0.0097,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"SpaceX Reportedly Locks Hong Kong, China Out Of Record IPO Citing Arms Rules\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 37.1 (hold_small), contribution 27.7)",
+      "reason": "skipping on positive news flow \u2014 \"SpaceX Reportedly Locks Hong Kong, China Out Of Record IPO Citing Arms Rules\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 29.7)",
       "factors": [
         "ret_5d=-10.28%",
         "rel_vol_5d=0.91",
@@ -1209,16 +1205,14 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0424,
+      "target_weight": 0.0415,
       "current_weight": 0.0441,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Think The Cash In Your Brokerage Account Is FDIC-Insured? Think Again\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.44%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 75.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 67.7 (buy), contribution 77.3"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1332,15 +1326,15 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0123,
+      "action": "HOLD",
+      "target_weight": 0.0163,
       "current_weight": 0.0194,
-      "notional_delta": -697.65,
-      "reason": "trimming on mixed news flow \u2014 \"'U.S. Demands Tougher Rules For Car Parts In Mexico Trade Talks; U.S. Wants To Reduce Chinese Supplies From North America's Vehicles While I\" \u00b7 overweight by 0.71% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"'U.S. Demands Tougher Rules For Car Parts In Mexico Trade Talks; U.S. Wants To Reduce Chinese Supplies From North America's Vehicles While I\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.97%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 37.1 (hold_small), contribution 47.9",
+        "theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 49.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1389,14 +1383,14 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0417,
+      "target_weight": 0.0409,
       "current_weight": 0.0429,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Monroe Capital Becomes Latest Private Credit Manager To Restrict Withdrawals\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 74.5",
+        "theme 'Financials & Rates' score 67.7 (buy), contribution 76.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1461,15 +1455,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0219,
+      "action": "BUY",
+      "target_weight": 0.0294,
       "current_weight": 0.024,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 527.92,
+      "reason": "underweight by 0.54% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 41.6 (starter), contribution 51.5"
+        "theme 'Consumer Discretionary' score 50.6 (starter), contribution 60.5"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1553,13 +1547,13 @@
       "target_weight": 0.0172,
       "current_weight": 0.0181,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Marvell Secures Spot In S&P 500 Index Amid AI Chip Boom\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Jensen Huang Personally Reviews Pay For All 42,000 Nvidia Employees \u2014 Here's What He Does '100% Of The Time'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
         "theme 'AI & Compute' score 40.5 (starter), contribution 43.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1636,14 +1630,14 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0123,
+      "target_weight": 0.0163,
       "current_weight": 0.022,
-      "notional_delta": -959.02,
-      "reason": "overweight by 0.97% vs target \u2014 trim",
+      "notional_delta": -564.36,
+      "reason": "overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-7.80%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 37.1 (hold_small), contribution 47.7"
+        "theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 49.7"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1739,16 +1733,14 @@
     {
       "symbol": "WFC",
       "action": "HOLD",
-      "target_weight": 0.043,
+      "target_weight": 0.0421,
       "current_weight": 0.0462,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Think The Cash In Your Brokerage Account Is FDIC-Insured? Think Again\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.17%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 76.9",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 67.7 (buy), contribution 78.4"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1777,10 +1769,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0168,
+      "target_weight": 0.0235,
       "current_weight": 0.0,
-      "notional_delta": 1657.6,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 41.6 (starter), contribution 39.4",
+      "notional_delta": 2318.66,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 50.6 (starter), contribution 48.4",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1794,10 +1786,10 @@
     {
       "symbol": "SBUX",
       "action": "BUY",
-      "target_weight": 0.0151,
+      "target_weight": 0.0216,
       "current_weight": 0.0,
-      "notional_delta": 1489.86,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 41.6 (starter), contribution 35.4",
+      "notional_delta": 2131.2,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 50.6 (starter), contribution 44.4",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -1811,10 +1803,10 @@
     {
       "symbol": "TSLA",
       "action": "SKIP",
-      "target_weight": 0.0071,
+      "target_weight": 0.0097,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"SpaceX Reportedly Locks Hong Kong, China Out Of Record IPO Citing Arms Rules\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 37.1 (hold_small), contribution 27.7)",
+      "reason": "skipping on positive news flow \u2014 \"SpaceX Reportedly Locks Hong Kong, China Out Of Record IPO Citing Arms Rules\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 29.7)",
       "factors": [
         "ret_5d=-10.28%",
         "rel_vol_5d=0.91",
@@ -2348,6 +2340,10 @@
     {
       "t": "2026-06-06T14:05:47+00:00",
       "v": 98666.47
+    },
+    {
+      "t": "2026-06-06T15:39:32+00:00",
+      "v": 98666.47
     }
   ],
   "breaking_news": [
@@ -2356,7 +2352,7 @@
       "summary": "President Trump signed an executive order that puts some 8,000 high-ranking civil servants into a new category of employees who can be fired for any reason.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5742806/trump-federal-employees-civil-service-job-protections-schedule-f",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -2365,7 +2361,7 @@
       "summary": "David Venturella's appointment as acting ICE director is the latest in a pattern: Many former employees of the private prison company GEO Group end up working at the federal agency, and vice versa.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5836625/geo-group-private-prisons-ice-close-ties",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2374,7 +2370,7 @@
       "summary": "Shipping companies are looking for alternative routes as the Strait of Hormuz lockdown drags on.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5828377/as-strait-of-hormuz-stays-shut-companies-seek-new-routes-for-trade",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2383,7 +2379,7 @@
       "summary": "Hurricane season is expected to be milder than usual this year. But that's not stopping cell phone companies from pulling out all the stops.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5830291/2026-hurricane-season-cell-phones",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2392,7 +2388,7 @@
       "summary": "Just 3% of U.S. households pay for AI for personal use. Sign ups are growing \u2014 even though Americans have subscription fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5791661/chatgpt-gemini-claude-subscription-revenue-openai",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2401,7 +2397,7 @@
       "summary": "Collecting Panini stickers is a World Cup tradition beloved in Europe and Latin America. In the U.S., interest has been building steadily, and this summer, the buzz is bigger than ever.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5844319/world-cup-2026-panini-stickers-album",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2410,7 +2406,7 @@
       "summary": "U.S. employers added jobs for the third month in a row in May, while the unemployment rate held steady at 4.3%. But wage gains softened and likely failed to keep pace with rising prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5847669/jobs-labor-market-unemployment-wages-inflation",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2419,7 +2415,7 @@
       "summary": "Amid widespread tech layoffs, some highly skilled workers are making radical career changes. Some laid-off workers are turning to lower paying temp jobs, and some are leaving tech altogether.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5788006/in-the-wake-of-layoffs-some-tech-workers-are-exploring-new-careers",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2428,7 +2424,7 @@
       "summary": "Swifties worldwide are looking for clues about the superstar's nuptials to American football star Travis Kelce.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cqjpj80qz1ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2437,16 +2433,16 @@
       "summary": "The British actor, who also appeared in Merlin and Little Britain, died of complications from pneumonia.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cd0p0rz4n0mo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Man dies after bitten by shark in Western Australia, police say",
+      "headline": "Man dies after shark attack in Western Australia, police say",
       "summary": "The man was spearfishing off Michaelmas Island with his family, according to local reports.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c74yl98kv37o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2455,7 +2451,7 @@
       "summary": "Iranian officials say technical staff have been denied visas, hours after the US said players could enter the country.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cy8286nqz87o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2464,7 +2460,7 @@
       "summary": "The Israeli military is investigating the incident in south Lebanon, where it is fighting Hezbollah.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cj0g8jymg92o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2473,16 +2469,16 @@
       "summary": "Incumbent Prime Minister Nikol Pashinyan is seeking a third term despite falling domestic support.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c3626n1epd5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "US and Iran exchange strikes in Gulf in latest test of ceasefire",
-      "summary": "The US military says it struck Iranian drones and radar sites. Tehran responds by targeting US bases in Kuwait and Bahrain.",
+      "summary": "The US military strikes Iranian drones and radar sites and Tehran says it has targeted US bases in Kuwait and Bahrain.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgzgyjk2weo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2491,7 +2487,7 @@
       "summary": "The city's governor urges residents to remain indoors for the first time since the beginning of the war.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cg7498kz808o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2500,7 +2496,7 @@
       "summary": "The charity says it is facing \"an exceptionally challenging trading environment\".",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvgzg48d9q0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2509,7 +2505,7 @@
       "summary": "Despite the Iran war, inflation and debt fears, US markets keep hitting record highs, fueled largely by AI. BBC's Samira Hussain looks into whether that bubble will burst.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/videos/c1m2mr7gr27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2518,7 +2514,7 @@
       "summary": "Instead of throwing away byproducts of food processing, fermentation is making them valuable.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2527,7 +2523,7 @@
       "summary": "It is the third month in a row US jobs figures have beaten expectations.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cdxpx4gel1yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T14:05:51+00:00",
+      "published_utc": "2026-06-06T15:39:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
