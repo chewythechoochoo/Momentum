@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-06T22:14:43+00:00",
+  "generated_at_utc": "2026-06-06T23:33:07+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 136,
-  "last_success_utc": "2026-06-06T21:01:45+00:00",
+  "cycle_count": 137,
+  "last_success_utc": "2026-06-06T22:14:43+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -399,22 +399,6 @@
   ],
   "themes": [
     {
-      "key": "oil_gas",
-      "name": "Oil & Gas",
-      "score": 65.28,
-      "raw_score": 65.86,
-      "band": "buy",
-      "weight": 0.1343,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 55.73,
-        "sentiment": 100.0,
-        "volume": 40.35,
-        "policy": 55.0,
-        "volatility_penalty": 0.58
-      }
-    },
-    {
       "key": "financials",
       "name": "Financials & Rates",
       "score": 64.69,
@@ -431,16 +415,32 @@
       }
     },
     {
+      "key": "oil_gas",
+      "name": "Oil & Gas",
+      "score": 63.51,
+      "raw_score": 64.1,
+      "band": "buy",
+      "weight": 0.1284,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 55.73,
+        "sentiment": 94.12,
+        "volume": 40.35,
+        "policy": 55.0,
+        "volatility_penalty": 0.58
+      }
+    },
+    {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 50.56,
-      "raw_score": 52.27,
-      "band": "starter",
-      "weight": 0.0703,
-      "confidence": 0.65,
+      "score": 58.89,
+      "raw_score": 60.61,
+      "band": "buy",
+      "weight": 0.113,
+      "confidence": 1.0,
       "components": {
         "momentum": 57.98,
-        "sentiment": 50.0,
+        "sentiment": 77.78,
         "volume": 45.4,
         "policy": 50.0,
         "volatility_penalty": 1.72
@@ -635,14 +635,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0452,
+      "target_weight": 0.0432,
       "current_weight": 0.0228,
-      "notional_delta": 2205.24,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.24% vs target \u2014 add",
+      "notional_delta": 2007.91,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.04% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 75.3",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 73.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -666,14 +666,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0434,
+      "target_weight": 0.0414,
       "current_weight": 0.0187,
-      "notional_delta": 2437.86,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.47% vs target \u2014 add",
+      "notional_delta": 2240.53,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.27% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 72.2",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 70.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -781,17 +781,17 @@
     },
     {
       "symbol": "LLY",
-      "action": "HOLD",
-      "target_weight": 0.0241,
+      "action": "BUY",
+      "target_weight": 0.0386,
       "current_weight": 0.0273,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Here's How Much $1000 Invested In Eli Lilly 5 Years Ago Would Be Worth Today\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 1113.51,
+      "reason": "buying on positive news flow \u2014 \"Is It Too Late To Consider Eli Lilly (LLY) After Its 48% One-Year Surge?\" \u00b7 underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.14%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.6 (starter), contribution 56.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 58.9 (buy), contribution 64.7",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -952,15 +952,17 @@
     },
     {
       "symbol": "REGN",
-      "action": "HOLD",
-      "target_weight": 0.0251,
+      "action": "BUY",
+      "target_weight": 0.04,
       "current_weight": 0.0271,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1274.84,
+      "reason": "buying on mixed news flow \u2014 \"Eli Lilly makes surprising retreat from major market\" \u00b7 underweight by 1.29% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.6 (starter), contribution 58.8"
+        "theme 'Biotech & Pharma' score 58.9 (buy), contribution 67.1",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
     },
@@ -1038,15 +1040,17 @@
     },
     {
       "symbol": "VRTX",
-      "action": "HOLD",
-      "target_weight": 0.0211,
+      "action": "BUY",
+      "target_weight": 0.0344,
       "current_weight": 0.0223,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1189.08,
+      "reason": "buying on mixed news flow \u2014 \"Eli Lilly makes surprising retreat from major market\" \u00b7 underweight by 1.21% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.88%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.6 (starter), contribution 49.4"
+        "theme 'Biotech & Pharma' score 58.9 (buy), contribution 57.7",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
     },
@@ -1067,14 +1071,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0457,
+      "target_weight": 0.0437,
       "current_weight": 0.023,
-      "notional_delta": 2242.14,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 2044.81,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.07% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 76.1",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 74.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1216,14 +1220,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0452,
+      "target_weight": 0.0432,
       "current_weight": 0.0228,
-      "notional_delta": 2205.24,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.24% vs target \u2014 add",
+      "notional_delta": 2007.91,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.04% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 75.3",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 73.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1253,14 +1257,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0434,
+      "target_weight": 0.0414,
       "current_weight": 0.0187,
-      "notional_delta": 2437.86,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.47% vs target \u2014 add",
+      "notional_delta": 2240.53,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.27% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 72.2",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 70.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1392,17 +1396,17 @@
     },
     {
       "symbol": "LLY",
-      "action": "HOLD",
-      "target_weight": 0.0241,
+      "action": "BUY",
+      "target_weight": 0.0386,
       "current_weight": 0.0273,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Here's How Much $1000 Invested In Eli Lilly 5 Years Ago Would Be Worth Today\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 1113.51,
+      "reason": "buying on positive news flow \u2014 \"Is It Too Late To Consider Eli Lilly (LLY) After Its 48% One-Year Surge?\" \u00b7 underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.14%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.6 (starter), contribution 56.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 58.9 (buy), contribution 64.7",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1599,15 +1603,17 @@
     },
     {
       "symbol": "REGN",
-      "action": "HOLD",
-      "target_weight": 0.0251,
+      "action": "BUY",
+      "target_weight": 0.04,
       "current_weight": 0.0271,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1274.84,
+      "reason": "buying on mixed news flow \u2014 \"Eli Lilly makes surprising retreat from major market\" \u00b7 underweight by 1.29% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.6 (starter), contribution 58.8"
+        "theme 'Biotech & Pharma' score 58.9 (buy), contribution 67.1",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1703,15 +1709,17 @@
     },
     {
       "symbol": "VRTX",
-      "action": "HOLD",
-      "target_weight": 0.0211,
+      "action": "BUY",
+      "target_weight": 0.0344,
       "current_weight": 0.0223,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1189.08,
+      "reason": "buying on mixed news flow \u2014 \"Eli Lilly makes surprising retreat from major market\" \u00b7 underweight by 1.21% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.88%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.6 (starter), contribution 49.4"
+        "theme 'Biotech & Pharma' score 58.9 (buy), contribution 57.7",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1738,14 +1746,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0457,
+      "target_weight": 0.0437,
       "current_weight": 0.023,
-      "notional_delta": 2242.14,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 2044.81,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.07% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 76.1",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 74.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2352,6 +2360,10 @@
     {
       "t": "2026-06-06T22:14:41+00:00",
       "v": 98666.47
+    },
+    {
+      "t": "2026-06-06T23:33:04+00:00",
+      "v": 98666.47
     }
   ],
   "breaking_news": [
@@ -2360,7 +2372,7 @@
       "summary": "President Trump signed an executive order that puts some 8,000 high-ranking civil servants into a new category of employees who can be fired for any reason.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5742806/trump-federal-employees-civil-service-job-protections-schedule-f",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -2369,7 +2381,7 @@
       "summary": "David Venturella's appointment as acting ICE director is the latest in a pattern: Many former employees of the private prison company GEO Group end up working at the federal agency, and vice versa.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5836625/geo-group-private-prisons-ice-close-ties",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2378,7 +2390,7 @@
       "summary": "Shipping companies are looking for alternative routes as the Strait of Hormuz lockdown drags on.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5828377/as-strait-of-hormuz-stays-shut-companies-seek-new-routes-for-trade",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2387,7 +2399,7 @@
       "summary": "Hurricane season is expected to be milder than usual this year. But that's not stopping cell phone companies from pulling out all the stops.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5830291/2026-hurricane-season-cell-phones",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2396,7 +2408,7 @@
       "summary": "Just 3% of U.S. households pay for AI for personal use. Sign ups are growing \u2014 even though Americans have subscription fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5791661/chatgpt-gemini-claude-subscription-revenue-openai",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2405,7 +2417,7 @@
       "summary": "Collecting Panini stickers is a World Cup tradition beloved in Europe and Latin America. In the U.S., interest has been building steadily, and this summer, the buzz is bigger than ever.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5844319/world-cup-2026-panini-stickers-album",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2414,7 +2426,7 @@
       "summary": "U.S. employers added jobs for the third month in a row in May, while the unemployment rate held steady at 4.3%. But wage gains softened and likely failed to keep pace with rising prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5847669/jobs-labor-market-unemployment-wages-inflation",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2423,7 +2435,7 @@
       "summary": "Amid widespread tech layoffs, some highly skilled workers are making radical career changes. Some laid-off workers are turning to lower paying temp jobs, and some are leaving tech altogether.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5788006/in-the-wake-of-layoffs-some-tech-workers-are-exploring-new-careers",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2432,7 +2444,7 @@
       "summary": "The Israeli military is investigating the incident in south Lebanon, where it is fighting Hezbollah.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cj0g8jymg92o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2441,7 +2453,7 @@
       "summary": "Teenager Mirra Andreeva fulfils her huge potential with a first Grand Slam title as Polish qualifier Maja Chwalinska is denied a fairytale French Open victory.",
       "source": "BBC World",
       "url": "https://www.bbc.com/sport/tennis/articles/c1dy7grv4y3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2450,7 +2462,7 @@
       "summary": "Iranian officials say technical staff have been denied visas, hours after the US said players could enter the country.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cy8286nqz87o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2459,7 +2471,7 @@
       "summary": "On the first day of his official seven-day tour of Spain, the Pope praises the country's \"active commitment to peace and solidarity among peoples\".",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c8d2pgjy4qgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2468,7 +2480,7 @@
       "summary": "The seven-month-old boy's shrouded body was wrapped in a Palestinian flag and carried by his father to the graveyard.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cly8lgn0x30o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2477,7 +2489,7 @@
       "summary": "The US defence secretary was speaking in Normandy, 82 years after allied forces launched their operation to liberate Nazi-occupied north-western Europe.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c802e7jk458o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2486,7 +2498,7 @@
       "summary": "The US military strikes Iranian drones and radar sites and Tehran says it has targeted US bases in Kuwait and Bahrain.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgzgyjk2weo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2495,7 +2507,7 @@
       "summary": "Residents of Russia's second-largest city were urged to stay indoors for the first time since the war started.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cg7498kz808o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2504,7 +2516,7 @@
       "summary": "The charity says it is facing \"an exceptionally challenging trading environment\".",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvgzg48d9q0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2513,7 +2525,7 @@
       "summary": "Despite the Iran war, inflation and debt fears, US markets keep hitting record highs, fueled largely by AI. BBC's Samira Hussain looks into whether that bubble will burst.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/videos/c1m2mr7gr27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2522,7 +2534,7 @@
       "summary": "Instead of throwing away byproducts of food processing, fermentation is making them valuable.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2531,7 +2543,7 @@
       "summary": "It is the third month in a row US jobs figures have beaten expectations.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cdxpx4gel1yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T22:14:43+00:00",
+      "published_utc": "2026-06-06T23:33:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
