@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-06T05:39:13+00:00",
+  "generated_at_utc": "2026-06-06T08:18:15+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 126,
-  "last_success_utc": "2026-06-06T01:34:00+00:00",
+  "cycle_count": 127,
+  "last_success_utc": "2026-06-06T05:39:13+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -431,22 +431,6 @@
       }
     },
     {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 48.0,
-      "raw_score": 57.93,
-      "band": "starter",
-      "weight": 0.0767,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 43.48,
-        "sentiment": 80.0,
-        "volume": 52.71,
-        "policy": 60.0,
-        "volatility_penalty": 9.93
-      }
-    },
-    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 47.12,
@@ -463,19 +447,19 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 44.56,
-      "raw_score": 44.56,
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 46.5,
+      "raw_score": 56.43,
       "band": "starter",
-      "weight": 0.0652,
+      "weight": 0.0717,
       "confidence": 1.0,
       "components": {
-        "momentum": 28.29,
-        "sentiment": 60.0,
-        "volume": 51.23,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
+        "momentum": 43.48,
+        "sentiment": 75.0,
+        "volume": 52.71,
+        "policy": 60.0,
+        "volatility_penalty": 9.93
       }
     },
     {
@@ -495,16 +479,32 @@
       }
     },
     {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 41.56,
+      "raw_score": 41.56,
+      "band": "starter",
+      "weight": 0.0552,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 28.29,
+        "sentiment": 50.0,
+        "volume": 51.23,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 40.26,
-      "raw_score": 49.01,
-      "band": "starter",
-      "weight": 0.0509,
+      "score": 39.8,
+      "raw_score": 48.56,
+      "band": "hold_small",
+      "weight": 0.0488,
       "confidence": 1.0,
       "components": {
         "momentum": 21.28,
-        "sentiment": 64.0,
+        "sentiment": 62.5,
         "volume": 63.97,
         "policy": 85.0,
         "volatility_penalty": 8.75
@@ -521,7 +521,7 @@
       "components": {
         "momentum": 29.62,
         "sentiment": 66.66,
-        "volume": 50.28,
+        "volume": 50.27,
         "policy": 55.0,
         "volatility_penalty": 8.31
       }
@@ -530,14 +530,14 @@
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 31.25,
-      "raw_score": 48.04,
+      "raw_score": 48.03,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 0.75,
       "components": {
         "momentum": 39.48,
         "sentiment": 50.0,
-        "volume": 61.23,
+        "volume": 61.22,
         "policy": 50.0,
         "volatility_penalty": 16.78
       }
@@ -563,28 +563,28 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0249,
+      "target_weight": 0.0233,
       "current_weight": 0.0388,
-      "notional_delta": -1374.99,
-      "reason": "overweight by 1.39% vs target \u2014 trim",
+      "notional_delta": -1532.85,
+      "reason": "overweight by 1.55% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.61%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 55.6"
+        "theme 'Semiconductors (Broad)' score 46.5 (starter), contribution 54.1"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.0278,
+      "target_weight": 0.026,
       "current_weight": 0.0397,
-      "notional_delta": -1171.36,
-      "reason": "trimming on positive news flow \u2014 \"What's Going On With Taiwan Semiconductor Stock Friday?\" \u00b7 overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -1348.96,
+      "reason": "trimming on positive news flow \u2014 \"What's Going On With Taiwan Semiconductor Stock Friday?\" \u00b7 overweight by 1.37% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.15%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 62.0",
+        "theme 'Semiconductors (Broad)' score 46.5 (starter), contribution 60.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -742,14 +742,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0186,
+      "target_weight": 0.0179,
       "current_weight": 0.0193,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"SpaceX Signs $920 Million Monthly AI Deal With Google Days Before Blockbuster IPO\u2014 110,000 Nvidia GPUs Locked In Through 2029\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.3 (starter), contribution 47.2",
+        "theme 'AI & Compute' score 39.8 (hold_small), contribution 46.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -834,28 +834,28 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0263,
+      "target_weight": 0.0225,
       "current_weight": 0.024,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 44.6 (starter), contribution 54.5"
+        "theme 'Consumer Discretionary' score 41.6 (starter), contribution 51.5"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0154,
+      "target_weight": 0.0148,
       "current_weight": 0.0154,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Meta Investor Dumps Shares After AI Fundraising Report, Says Shareholders Don't Want 'Drunken Sailors' Spending: 'People Are Not Going To In\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.3 (starter), contribution 39.1",
+        "theme 'AI & Compute' score 39.8 (hold_small), contribution 38.7",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -907,14 +907,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0169,
+      "target_weight": 0.0162,
       "current_weight": 0.0181,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"SpaceX Signs $920 Million Monthly AI Deal With Google Days Before Blockbuster IPO\u2014 110,000 Nvidia GPUs Locked In Through 2029\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Marvell Secures Spot In S&P 500 Index Amid AI Chip Boom\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-8.77%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.3 (starter), contribution 42.8",
+        "theme 'AI & Compute' score 39.8 (hold_small), contribution 42.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1040,14 +1040,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.024,
+      "target_weight": 0.0224,
       "current_weight": 0.0342,
-      "notional_delta": -1011.01,
-      "reason": "trimming on mixed news flow \u2014 \"Momo Aggressively Buys Semiconductor Dip; Big Setback For SpaceX; Blowout Jobs Report\" \u00b7 overweight by 1.02% vs target \u2014 trim",
+      "notional_delta": -1168.88,
+      "reason": "trimming on mixed news flow \u2014 \"Momo Aggressively Buys Semiconductor Dip; Big Setback For SpaceX; Blowout Jobs Report\" \u00b7 overweight by 1.18% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.81%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 53.5",
+        "theme 'Semiconductors (Broad)' score 46.5 (starter), contribution 52.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1102,10 +1102,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0204,
+      "target_weight": 0.0172,
       "current_weight": 0.0,
-      "notional_delta": 2012.8,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 44.6 (starter), contribution 42.4",
+      "notional_delta": 1697.06,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 41.6 (starter), contribution 39.4",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1116,10 +1116,10 @@
     {
       "symbol": "SBUX",
       "action": "BUY",
-      "target_weight": 0.0185,
+      "target_weight": 0.0155,
       "current_weight": 0.0,
-      "notional_delta": 1825.33,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 44.6 (starter), contribution 38.4",
+      "notional_delta": 1529.33,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 41.6 (starter), contribution 35.4",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -1148,14 +1148,14 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0249,
+      "target_weight": 0.0233,
       "current_weight": 0.0388,
-      "notional_delta": -1374.99,
-      "reason": "overweight by 1.39% vs target \u2014 trim",
+      "notional_delta": -1532.85,
+      "reason": "overweight by 1.55% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.61%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 55.6"
+        "theme 'Semiconductors (Broad)' score 46.5 (starter), contribution 54.1"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1165,14 +1165,14 @@
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.0278,
+      "target_weight": 0.026,
       "current_weight": 0.0397,
-      "notional_delta": -1171.36,
-      "reason": "trimming on positive news flow \u2014 \"What's Going On With Taiwan Semiconductor Stock Friday?\" \u00b7 overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -1348.96,
+      "reason": "trimming on positive news flow \u2014 \"What's Going On With Taiwan Semiconductor Stock Friday?\" \u00b7 overweight by 1.37% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.15%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 62.0",
+        "theme 'Semiconductors (Broad)' score 46.5 (starter), contribution 60.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1363,14 +1363,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0186,
+      "target_weight": 0.0179,
       "current_weight": 0.0193,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"SpaceX Signs $920 Million Monthly AI Deal With Google Days Before Blockbuster IPO\u2014 110,000 Nvidia GPUs Locked In Through 2029\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.3 (starter), contribution 47.2",
+        "theme 'AI & Compute' score 39.8 (hold_small), contribution 46.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1473,14 +1473,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0263,
+      "target_weight": 0.0225,
       "current_weight": 0.024,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 44.6 (starter), contribution 54.5"
+        "theme 'Consumer Discretionary' score 41.6 (starter), contribution 51.5"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1490,14 +1490,14 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0154,
+      "target_weight": 0.0148,
       "current_weight": 0.0154,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Meta Investor Dumps Shares After AI Fundraising Report, Says Shareholders Don't Want 'Drunken Sailors' Spending: 'People Are Not Going To In\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.3 (starter), contribution 39.1",
+        "theme 'AI & Compute' score 39.8 (hold_small), contribution 38.7",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1561,14 +1561,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0169,
+      "target_weight": 0.0162,
       "current_weight": 0.0181,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"SpaceX Signs $920 Million Monthly AI Deal With Google Days Before Blockbuster IPO\u2014 110,000 Nvidia GPUs Locked In Through 2029\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Marvell Secures Spot In S&P 500 Index Amid AI Chip Boom\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-8.77%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.3 (starter), contribution 42.8",
+        "theme 'AI & Compute' score 39.8 (hold_small), contribution 42.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1721,14 +1721,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.024,
+      "target_weight": 0.0224,
       "current_weight": 0.0342,
-      "notional_delta": -1011.01,
-      "reason": "trimming on mixed news flow \u2014 \"Momo Aggressively Buys Semiconductor Dip; Big Setback For SpaceX; Blowout Jobs Report\" \u00b7 overweight by 1.02% vs target \u2014 trim",
+      "notional_delta": -1168.88,
+      "reason": "trimming on mixed news flow \u2014 \"Momo Aggressively Buys Semiconductor Dip; Big Setback For SpaceX; Blowout Jobs Report\" \u00b7 overweight by 1.18% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.81%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 48.0 (starter), contribution 53.5",
+        "theme 'Semiconductors (Broad)' score 46.5 (starter), contribution 52.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1795,10 +1795,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0204,
+      "target_weight": 0.0172,
       "current_weight": 0.0,
-      "notional_delta": 2012.8,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 44.6 (starter), contribution 42.4",
+      "notional_delta": 1697.06,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 41.6 (starter), contribution 39.4",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1812,10 +1812,10 @@
     {
       "symbol": "SBUX",
       "action": "BUY",
-      "target_weight": 0.0185,
+      "target_weight": 0.0155,
       "current_weight": 0.0,
-      "notional_delta": 1825.33,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 44.6 (starter), contribution 38.4",
+      "notional_delta": 1529.33,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 41.6 (starter), contribution 35.4",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -2350,6 +2350,10 @@
     {
       "t": "2026-06-06T05:39:11+00:00",
       "v": 98666.55
+    },
+    {
+      "t": "2026-06-06T08:18:13+00:00",
+      "v": 98666.55
     }
   ],
   "breaking_news": [
@@ -2358,7 +2362,7 @@
       "summary": "President Trump signed an executive order that puts some 8,000 high-ranking civil servants into a new category of employees who can be fired for any reason.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5742806/trump-federal-employees-civil-service-job-protections-schedule-f",
-      "published_utc": "2026-06-06T05:39:13+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -2367,7 +2371,7 @@
       "summary": "David Venturella's appointment as acting ICE director is the latest in a pattern: Many former employees of the private prison company GEO Group end up working at the federal agency, and vice versa.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5836625/geo-group-private-prisons-ice-close-ties",
-      "published_utc": "2026-06-06T05:39:13+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2376,7 +2380,7 @@
       "summary": "Shipping companies are looking for alternative routes as the Strait of Hormuz lockdown drags on.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5828377/as-strait-of-hormuz-stays-shut-companies-seek-new-routes-for-trade",
-      "published_utc": "2026-06-06T05:39:13+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2385,7 +2389,7 @@
       "summary": "Hurricane season is expected to be milder than usual this year. But that's not stopping cell phone companies from pulling out all the stops.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5830291/2026-hurricane-season-cell-phones",
-      "published_utc": "2026-06-06T05:39:13+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2394,7 +2398,7 @@
       "summary": "Just 3% of U.S. households pay for AI for personal use. Sign ups are growing \u2014 even though Americans have subscription fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5791661/chatgpt-gemini-claude-subscription-revenue-openai",
-      "published_utc": "2026-06-06T05:39:13+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2403,7 +2407,7 @@
       "summary": "Collecting Panini stickers is a World Cup tradition beloved in Europe and Latin America. In the U.S., interest has been building steadily, and this summer, the buzz is bigger than ever.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5844319/world-cup-2026-panini-stickers-album",
-      "published_utc": "2026-06-06T05:39:13+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2412,7 +2416,7 @@
       "summary": "U.S. employers added jobs for the third month in a row in May, while the unemployment rate held steady at 4.3%. But wage gains softened and likely failed to keep pace with rising prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5847669/jobs-labor-market-unemployment-wages-inflation",
-      "published_utc": "2026-06-06T05:39:13+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2421,70 +2425,61 @@
       "summary": "Amid widespread tech layoffs, some highly skilled workers are making radical career changes. Some laid-off workers are turning to lower paying temp jobs, and some are leaving tech altogether.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5788006/in-the-wake-of-layoffs-some-tech-workers-are-exploring-new-careers",
-      "published_utc": "2026-06-06T05:39:13+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "Norway's crown princess on lung transplant waiting list, palace says",
-      "summary": "Mette-Marit's condition, which stiffens the lungs, making it hard to breathe, has deteriorated, the royal household says.",
+      "headline": "Palestinian baby killed by Israeli gunfire in West Bank, health ministry says",
+      "summary": "The Israeli military says Friday's \"incident is under review\", expressing \"deep sorrow for any harm caused\".",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c9wewqxpq2eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
+      "url": "https://www.bbc.com/news/articles/cy828e64vp8o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Three jailed over heist of ancient golden helmet from Dutch museum",
-      "summary": "The men are sentenced to 47 months each for stealing the 2,500-year-old Romanian Co\u021bofene\u0219ti helmet.",
+      "headline": "Tributes to Buffy and Ted Lasso star Anthony Head after death aged 72",
+      "summary": "The British actor, who also appeared in Merlin and Little Britain, died of complications from pneumonia.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cy020317g1no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
+      "url": "https://www.bbc.com/news/articles/cd0p0rz4n0mo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "US actor James Handy stabbed to death, with girlfriend's son arrested",
-      "summary": "Handy, 81, is known for his roles in films including Jumanji and Top Gun: Maverick.",
+      "headline": "Canada bans Texas cattle over flesh-eating screwworm outbreak in US",
+      "summary": "The ban came as a second infected calf was identified in Texas, and the US state declaring a state of disaster over the outbreak.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/czd2dj24jgdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
-      "sentiment_score": 0.0,
+      "url": "https://www.bbc.com/news/articles/cevpv3r7jmpo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T08:18:15+00:00",
+      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "Nearly 50 people die of thirst in Sahara desert after lorry breaks down",
-      "summary": "Only two survived after trekking more than 50km (30 miles) across the desert to alert the authorities.",
+      "headline": "Iran's football team granted visas to enter US for World Cup, officials say",
+      "summary": "The approval comes just 10 days before the Iranian squad's opening match against New Zealand in Los Angeles.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c62r2ldyejro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Fury in France after child murder suspect's criminal record released",
-      "summary": "A man suspected of murdering an 11-year-old girl had previously been identified as a potential child molester, records show.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c1424v7mk8go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
+      "url": "https://www.bbc.com/news/articles/cy8286nqz87o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
     {
-      "headline": "Astronauts return to ISS after sheltering during air leak repair attempt",
-      "summary": "Russian attempt to repair tunnel area sparks safe-haven procedure for five other astronauts onboard.",
+      "headline": "Armenia braces for election as Russia piles pressure on pro-West government",
+      "summary": "Incumbent Prime Minister Nikol Pashinyan is seeking a third term despite falling domestic support.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c5y7yryg01mo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
+      "url": "https://www.bbc.com/news/articles/c3626n1epd5o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Ukraine strikes cargo ships and admits Romania drone blast",
-      "summary": "Ukraine says it struck five ships carrying illegal cargo in the Sea of Azov and in coastal waters of Russian-occupied territories.",
+      "headline": "Rumours and speculation as fans forecast date of Taylor Swift's wedding",
+      "summary": "Swifties worldwide are looking for clues about the superstar's nuptials to American football star Travis Kelce.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c707098wkzpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
+      "url": "https://www.bbc.com/news/articles/cqjpj80qz1ro?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2493,7 +2488,16 @@
       "summary": "The Russian president's refusal comes after his Ukrainian counterpart wrote an open letter calling for face-to-face talks.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cpqpqx5qe40o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "US and Iran exchange strikes in Gulf in latest test of ceasefire",
+      "summary": "The US military says it struck Iranian drones and radar sites. Tehran responds by targeting US bases in Kuwait and Bahrain.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/cvgzgyjk2weo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2502,7 +2506,7 @@
       "summary": "The charity says it is facing \"an exceptionally challenging trading environment\".",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvgzg48d9q0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2511,7 +2515,7 @@
       "summary": "Despite the Iran war, inflation and debt fears, US markets keep hitting record highs, fueled largely by AI. BBC's Samira Hussain looks into whether that bubble will burst.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/videos/c1m2mr7gr27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2520,7 +2524,7 @@
       "summary": "Instead of throwing away byproducts of food processing, fermentation is making them valuable.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2529,7 +2533,7 @@
       "summary": "It is the third month in a row US jobs figures have beaten expectations.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cdxpx4gel1yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T05:39:12+00:00",
+      "published_utc": "2026-06-06T08:18:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
