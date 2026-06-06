@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-06T18:19:05+00:00",
+  "generated_at_utc": "2026-06-06T19:51:30+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 133,
-  "last_success_utc": "2026-06-06T16:54:38+00:00",
+  "cycle_count": 134,
+  "last_success_utc": "2026-06-06T18:19:05+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -433,16 +433,16 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 54.56,
-      "raw_score": 54.56,
+      "score": 54.75,
+      "raw_score": 54.75,
       "band": "starter",
-      "weight": 0.0985,
+      "weight": 0.0992,
       "confidence": 1.0,
       "components": {
         "momentum": 28.29,
-        "sentiment": 90.0,
+        "sentiment": 92.31,
         "volume": 51.23,
-        "policy": 60.0,
+        "policy": 55.0,
         "volatility_penalty": 0.0
       }
     },
@@ -452,8 +452,8 @@
       "score": 50.56,
       "raw_score": 52.27,
       "band": "starter",
-      "weight": 0.0724,
-      "confidence": 0.7,
+      "weight": 0.0703,
+      "confidence": 0.65,
       "components": {
         "momentum": 57.98,
         "sentiment": 50.0,
@@ -476,6 +476,38 @@
         "volume": 49.81,
         "policy": 50.0,
         "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 44.5,
+      "raw_score": 54.43,
+      "band": "starter",
+      "weight": 0.0553,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 43.48,
+        "sentiment": 70.0,
+        "volume": 52.71,
+        "policy": 55.0,
+        "volatility_penalty": 9.93
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 38.55,
+      "raw_score": 47.31,
+      "band": "hold_small",
+      "weight": 0.0413,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 21.28,
+        "sentiment": 66.66,
+        "volume": 63.97,
+        "policy": 60.0,
+        "volatility_penalty": 8.75
       }
     },
     {
@@ -511,38 +543,6 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 34.05,
-      "raw_score": 42.81,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 21.28,
-        "sentiment": 50.0,
-        "volume": 63.97,
-        "policy": 65.0,
-        "volatility_penalty": 8.75
-      }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 32.5,
-      "raw_score": 42.43,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 43.48,
-        "sentiment": 30.0,
-        "volume": 52.71,
-        "policy": 55.0,
-        "volatility_penalty": 9.93
-      }
-    },
-    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 31.75,
@@ -563,41 +563,43 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0194,
+      "target_weight": 0.0179,
       "current_weight": 0.0388,
-      "notional_delta": -1915.89,
-      "reason": "theme score 32.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2065.65,
+      "reason": "overweight by 2.09% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.61%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 44.5 (starter), contribution 52.1"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.0198,
+      "target_weight": 0.0201,
       "current_weight": 0.0397,
-      "notional_delta": -1957.14,
-      "reason": "theme score 32.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1931.09,
+      "reason": "overweight by 1.96% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.15%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 44.5 (starter), contribution 58.5"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.02,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.04,
-      "notional_delta": -1971.68,
-      "reason": "trimming on negative news flow \u2014 \"Meta Investor Dumps Shares After AI Fundraising Report, Says Shareholders Don't Want 'Drunken Sailors' Spending: 'People Are Not Going To In\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3943.35,
+      "reason": "exiting on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -620,11 +622,13 @@
       "target_weight": 0.0375,
       "current_weight": 0.0441,
       "notional_delta": -655.21,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet\" \u00b7 overweight by 0.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.44%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.7 (buy), contribution 74.3"
+        "theme 'Financials & Rates' score 64.7 (buy), contribution 74.3",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials"
     },
@@ -733,14 +737,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "REDUCE",
-      "target_weight": 0.0096,
+      "action": "HOLD",
+      "target_weight": 0.0152,
       "current_weight": 0.0193,
-      "notional_delta": -951.65,
-      "reason": "trimming on positive news flow \u2014 \"SpaceX Signs $920 Million Monthly AI Deal With Google Days Before Blockbuster IPO\u2014 110,000 Nvidia GPUs Locked In Through 2029\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 38.5 (hold_small), contribution 45.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -765,20 +770,18 @@
       "target_weight": 0.0369,
       "current_weight": 0.0429,
       "notional_delta": -590.7,
-      "reason": "trimming on mixed news flow \u2014 \"Monroe Capital Becomes Latest Private Credit Manager To Restrict Withdrawals\" \u00b7 overweight by 0.60% vs target \u2014 trim",
+      "reason": "overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.7 (buy), contribution 73.0",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 64.7 (buy), contribution 73.0"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0248,
+      "target_weight": 0.0241,
       "current_weight": 0.0273,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Here's How Much $1000 Invested In Eli Lilly 5 Years Ago Would Be Worth Today\" \u00b7 within 50bps of target \u2014 no trade",
@@ -807,11 +810,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.14,
-      "reason": "theme score 32.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.29,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.93%",
         "theme=Semiconductors (Broad)"
@@ -821,14 +824,14 @@
     {
       "symbol": "MCD",
       "action": "BUY",
-      "target_weight": 0.0384,
+      "target_weight": 0.0387,
       "current_weight": 0.024,
-      "notional_delta": 1415.92,
-      "reason": "buying on positive news flow \u2014 \"Starbucks rival targets comeback after dozens of store closures\" \u00b7 underweight by 1.44% vs target \u2014 add",
+      "notional_delta": 1445.52,
+      "reason": "buying on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 underweight by 1.47% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 54.6 (starter), contribution 64.5",
+        "theme 'Consumer Discretionary' score 54.8 (starter), contribution 64.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -836,16 +839,17 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.0077,
+      "action": "HOLD",
+      "target_weight": 0.0125,
       "current_weight": 0.0154,
-      "notional_delta": -761.45,
-      "reason": "trimming on negative news flow \u2014 \"Meta Investor Dumps Shares After AI Fundraising Report, Says Shareholders Don't Want 'Drunken Sailors' Spending: 'People Are Not Going To In\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 38.5 (hold_small), contribution 37.4",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -866,11 +870,11 @@
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0178,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0356,
-      "notional_delta": -1753.94,
-      "reason": "trimming on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3507.88,
+      "reason": "exiting on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.02%",
         "theme=AI & Compute",
@@ -885,7 +889,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Starbucks rival targets comeback after dozens of store closures\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-9.46%",
         "theme=Consumer Discretionary",
@@ -896,14 +900,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "REDUCE",
-      "target_weight": 0.009,
+      "action": "HOLD",
+      "target_weight": 0.0137,
       "current_weight": 0.0181,
-      "notional_delta": -892.32,
-      "reason": "trimming on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 38.5 (hold_small), contribution 41.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -953,16 +958,14 @@
     {
       "symbol": "REGN",
       "action": "HOLD",
-      "target_weight": 0.0259,
+      "target_weight": 0.0251,
       "current_weight": 0.0271,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"U.S. State Dept Announces Nearly $38M In Additional Funding Toward The Department's Ongoing Ebola Response Efforts\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.6 (starter), contribution 58.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 50.6 (starter), contribution 58.8"
       ],
       "theme_key": "biotech"
     },
@@ -1010,11 +1013,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -1.83,
-      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3.66,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.18%",
         "theme=AI & Compute"
@@ -1024,20 +1027,21 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0171,
+      "target_weight": 0.0172,
       "current_weight": 0.0342,
-      "notional_delta": -1689.5,
-      "reason": "theme score 32.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1681.94,
+      "reason": "overweight by 1.70% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.81%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 44.5 (starter), contribution 50.0"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0217,
+      "target_weight": 0.0211,
       "current_weight": 0.0223,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1081,10 +1085,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0312,
+      "target_weight": 0.0314,
       "current_weight": 0.0,
-      "notional_delta": 3078.39,
-      "reason": "buying on positive news flow \u2014 \"Starbucks rival targets comeback after dozens of store closures\" \u00b7 new position \u2014 theme 'Consumer Discretionary' score 54.6 (starter), contribution 52.4",
+      "notional_delta": 3098.13,
+      "reason": "buying on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 new position \u2014 theme 'Consumer Discretionary' score 54.8 (starter), contribution 52.6",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1097,10 +1101,10 @@
     {
       "symbol": "SBUX",
       "action": "SKIP",
-      "target_weight": 0.0289,
+      "target_weight": 0.0291,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Starbucks rival targets comeback after dozens of store closures\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 54.6 (starter), contribution 48.4)",
+      "reason": "skipping on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 54.8 (starter), contribution 48.6)",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -1147,13 +1151,14 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0194,
+      "target_weight": 0.0179,
       "current_weight": 0.0388,
-      "notional_delta": -1915.89,
-      "reason": "theme score 32.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2065.65,
+      "reason": "overweight by 2.09% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.61%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 44.5 (starter), contribution 52.1"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1163,13 +1168,14 @@
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.0198,
+      "target_weight": 0.0201,
       "current_weight": 0.0397,
-      "notional_delta": -1957.14,
-      "reason": "theme score 32.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1931.09,
+      "reason": "overweight by 1.96% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.15%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 44.5 (starter), contribution 58.5"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1178,16 +1184,16 @@
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.02,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.04,
-      "notional_delta": -1971.68,
-      "reason": "trimming on negative news flow \u2014 \"Meta Investor Dumps Shares After AI Fundraising Report, Says Shareholders Don't Want 'Drunken Sailors' Spending: 'People Are Not Going To In\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3943.35,
+      "reason": "exiting on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1216,11 +1222,13 @@
       "target_weight": 0.0375,
       "current_weight": 0.0441,
       "notional_delta": -655.21,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet\" \u00b7 overweight by 0.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.44%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.7 (buy), contribution 74.3"
+        "theme 'Financials & Rates' score 64.7 (buy), contribution 74.3",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1353,14 +1361,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "REDUCE",
-      "target_weight": 0.0096,
+      "action": "HOLD",
+      "target_weight": 0.0152,
       "current_weight": 0.0193,
-      "notional_delta": -951.65,
-      "reason": "trimming on positive news flow \u2014 \"SpaceX Signs $920 Million Monthly AI Deal With Google Days Before Blockbuster IPO\u2014 110,000 Nvidia GPUs Locked In Through 2029\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 38.5 (hold_small), contribution 45.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1391,13 +1400,11 @@
       "target_weight": 0.0369,
       "current_weight": 0.0429,
       "notional_delta": -590.7,
-      "reason": "trimming on mixed news flow \u2014 \"Monroe Capital Becomes Latest Private Credit Manager To Restrict Withdrawals\" \u00b7 overweight by 0.60% vs target \u2014 trim",
+      "reason": "overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.7 (buy), contribution 73.0",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 64.7 (buy), contribution 73.0"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1407,7 +1414,7 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0248,
+      "target_weight": 0.0241,
       "current_weight": 0.0273,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Here's How Much $1000 Invested In Eli Lilly 5 Years Ago Would Be Worth Today\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1442,11 +1449,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.14,
-      "reason": "theme score 32.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.29,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.93%",
         "theme=Semiconductors (Broad)"
@@ -1459,14 +1466,14 @@
     {
       "symbol": "MCD",
       "action": "BUY",
-      "target_weight": 0.0384,
+      "target_weight": 0.0387,
       "current_weight": 0.024,
-      "notional_delta": 1415.92,
-      "reason": "buying on positive news flow \u2014 \"Starbucks rival targets comeback after dozens of store closures\" \u00b7 underweight by 1.44% vs target \u2014 add",
+      "notional_delta": 1445.52,
+      "reason": "buying on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 underweight by 1.47% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 54.6 (starter), contribution 64.5",
+        "theme 'Consumer Discretionary' score 54.8 (starter), contribution 64.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1477,16 +1484,17 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.0077,
+      "action": "HOLD",
+      "target_weight": 0.0125,
       "current_weight": 0.0154,
-      "notional_delta": -761.45,
-      "reason": "trimming on negative news flow \u2014 \"Meta Investor Dumps Shares After AI Fundraising Report, Says Shareholders Don't Want 'Drunken Sailors' Spending: 'People Are Not Going To In\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 38.5 (hold_small), contribution 37.4",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1513,11 +1521,11 @@
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0178,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0356,
-      "notional_delta": -1753.94,
-      "reason": "trimming on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3507.88,
+      "reason": "exiting on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.02%",
         "theme=AI & Compute",
@@ -1535,7 +1543,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Starbucks rival targets comeback after dozens of store closures\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-9.46%",
         "theme=Consumer Discretionary",
@@ -1549,14 +1557,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "REDUCE",
-      "target_weight": 0.009,
+      "action": "HOLD",
+      "target_weight": 0.0137,
       "current_weight": 0.0181,
-      "notional_delta": -892.32,
-      "reason": "trimming on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Marvell Technology CEO Matt Murphy Believes This Is The 'Most Beautiful Thing' One Person Can Do For Another And It Can 'Change Their Life'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 38.5 (hold_small), contribution 41.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1618,16 +1627,14 @@
     {
       "symbol": "REGN",
       "action": "HOLD",
-      "target_weight": 0.0259,
+      "target_weight": 0.0251,
       "current_weight": 0.0271,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"U.S. State Dept Announces Nearly $38M In Additional Funding Toward The Department's Ongoing Ebola Response Efforts\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.6 (starter), contribution 58.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 50.6 (starter), contribution 58.8"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1687,11 +1694,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -1.83,
-      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3.66,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.18%",
         "theme=AI & Compute"
@@ -1704,13 +1711,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0171,
+      "target_weight": 0.0172,
       "current_weight": 0.0342,
-      "notional_delta": -1689.5,
-      "reason": "theme score 32.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1681.94,
+      "reason": "overweight by 1.70% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.81%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 44.5 (starter), contribution 50.0"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1720,7 +1728,7 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0217,
+      "target_weight": 0.0211,
       "current_weight": 0.0223,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1773,10 +1781,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0312,
+      "target_weight": 0.0314,
       "current_weight": 0.0,
-      "notional_delta": 3078.39,
-      "reason": "buying on positive news flow \u2014 \"Starbucks rival targets comeback after dozens of store closures\" \u00b7 new position \u2014 theme 'Consumer Discretionary' score 54.6 (starter), contribution 52.4",
+      "notional_delta": 3098.13,
+      "reason": "buying on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 new position \u2014 theme 'Consumer Discretionary' score 54.8 (starter), contribution 52.6",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1792,10 +1800,10 @@
     {
       "symbol": "SBUX",
       "action": "SKIP",
-      "target_weight": 0.0289,
+      "target_weight": 0.0291,
       "current_weight": 0.0,
       "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"Starbucks rival targets comeback after dozens of store closures\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 54.6 (starter), contribution 48.4)",
+      "reason": "skipping on positive news flow \u2014 \"Is Amazon Stock a Buy Right Now?\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Consumer Discretionary' score 54.8 (starter), contribution 48.6)",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -2379,6 +2387,10 @@
     {
       "t": "2026-06-06T18:19:03+00:00",
       "v": 98666.47
+    },
+    {
+      "t": "2026-06-06T19:51:28+00:00",
+      "v": 98666.47
     }
   ],
   "breaking_news": [
@@ -2387,7 +2399,7 @@
       "summary": "President Trump signed an executive order that puts some 8,000 high-ranking civil servants into a new category of employees who can be fired for any reason.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5742806/trump-federal-employees-civil-service-job-protections-schedule-f",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -2396,7 +2408,7 @@
       "summary": "David Venturella's appointment as acting ICE director is the latest in a pattern: Many former employees of the private prison company GEO Group end up working at the federal agency, and vice versa.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5836625/geo-group-private-prisons-ice-close-ties",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2405,7 +2417,7 @@
       "summary": "Shipping companies are looking for alternative routes as the Strait of Hormuz lockdown drags on.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5828377/as-strait-of-hormuz-stays-shut-companies-seek-new-routes-for-trade",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2414,7 +2426,7 @@
       "summary": "Hurricane season is expected to be milder than usual this year. But that's not stopping cell phone companies from pulling out all the stops.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5830291/2026-hurricane-season-cell-phones",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2423,7 +2435,7 @@
       "summary": "Just 3% of U.S. households pay for AI for personal use. Sign ups are growing \u2014 even though Americans have subscription fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5791661/chatgpt-gemini-claude-subscription-revenue-openai",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2432,7 +2444,7 @@
       "summary": "Collecting Panini stickers is a World Cup tradition beloved in Europe and Latin America. In the U.S., interest has been building steadily, and this summer, the buzz is bigger than ever.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5844319/world-cup-2026-panini-stickers-album",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2441,7 +2453,7 @@
       "summary": "U.S. employers added jobs for the third month in a row in May, while the unemployment rate held steady at 4.3%. But wage gains softened and likely failed to keep pace with rising prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5847669/jobs-labor-market-unemployment-wages-inflation",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2450,7 +2462,7 @@
       "summary": "Amid widespread tech layoffs, some highly skilled workers are making radical career changes. Some laid-off workers are turning to lower paying temp jobs, and some are leaving tech altogether.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5788006/in-the-wake-of-layoffs-some-tech-workers-are-exploring-new-careers",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2459,25 +2471,7 @@
       "summary": "Swifties worldwide are looking for clues about the superstar's nuptials to American football star Travis Kelce.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cqjpj80qz1ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Man dies after shark attack in Western Australia, police say",
-      "summary": "The man was spearfishing off Michaelmas Island with his family, according to local reports.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c74yl98kv37o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Iran says staff blocked from entering US after players given World Cup visas",
-      "summary": "Iranian officials say technical staff have been denied visas, hours after the US said players could enter the country.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cy8286nqz87o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2486,8 +2480,26 @@
       "summary": "Teenager Mirra Andreeva fulfils her huge potential with a first Grand Slam title as Polish qualifier Maja Chwalinska is denied a fairytale French Open victory.",
       "source": "BBC World",
       "url": "https://www.bbc.com/sport/tennis/articles/c1dy7grv4y3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "Iran says staff blocked from entering US after players given World Cup visas",
+      "summary": "Iranian officials say technical staff have been denied visas, hours after the US said players could enter the country.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/cy8286nqz87o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T19:51:30+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Pope begins Spain visit with praise for country's opposition to war and support for migrants",
+      "summary": "On the first day of his official seven-day tour of Spain, the Pope praises the country's \"active commitment to peace and solidarity among peoples\".",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c8d2pgjy4qgo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T19:51:30+00:00",
+      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -2495,16 +2507,16 @@
       "summary": "The Israeli military is investigating the incident in south Lebanon, where it is fighting Hezbollah.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cj0g8jymg92o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Armenia braces for election as Russia piles pressure on pro-West government",
-      "summary": "Incumbent Prime Minister Nikol Pashinyan is seeking a third term despite falling domestic support.",
+      "headline": "Hegseth attacks Europe over 'invasion' of migrants on its beaches in D-Day speech",
+      "summary": "The US defence secretary was speaking in Normandy, 82 years after allied forces launched their operation to liberate Nazi-occupied north-western Europe.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c3626n1epd5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "url": "https://www.bbc.com/news/articles/c802e7jk458o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2513,7 +2525,7 @@
       "summary": "The US military strikes Iranian drones and radar sites and Tehran says it has targeted US bases in Kuwait and Bahrain.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgzgyjk2weo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2522,7 +2534,7 @@
       "summary": "The city's governor urges residents to remain indoors for the first time since the beginning of the war.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cg7498kz808o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2531,7 +2543,7 @@
       "summary": "The charity says it is facing \"an exceptionally challenging trading environment\".",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvgzg48d9q0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2540,7 +2552,7 @@
       "summary": "Despite the Iran war, inflation and debt fears, US markets keep hitting record highs, fueled largely by AI. BBC's Samira Hussain looks into whether that bubble will burst.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/videos/c1m2mr7gr27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2549,7 +2561,7 @@
       "summary": "Instead of throwing away byproducts of food processing, fermentation is making them valuable.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2558,7 +2570,7 @@
       "summary": "It is the third month in a row US jobs figures have beaten expectations.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cdxpx4gel1yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-06T18:19:05+00:00",
+      "published_utc": "2026-06-06T19:51:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
