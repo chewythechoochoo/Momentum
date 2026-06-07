@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-07T06:41:10+00:00",
+  "generated_at_utc": "2026-06-07T09:53:05+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 139,
-  "last_success_utc": "2026-06-07T01:52:42+00:00",
+  "cycle_count": 140,
+  "last_success_utc": "2026-06-07T06:41:10+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -401,14 +401,14 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 65.2,
-      "raw_score": 65.86,
+      "score": 63.43,
+      "raw_score": 64.1,
       "band": "buy",
-      "weight": 0.134,
+      "weight": 0.1281,
       "confidence": 1.0,
       "components": {
         "momentum": 55.73,
-        "sentiment": 100.0,
+        "sentiment": 94.12,
         "volume": 40.35,
         "policy": 55.0,
         "volatility_penalty": 0.67
@@ -479,22 +479,6 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 39.13,
-      "raw_score": 47.67,
-      "band": "hold_small",
-      "weight": 0.0448,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 29.62,
-        "sentiment": 69.23,
-        "volume": 50.27,
-        "policy": 50.0,
-        "volatility_penalty": 8.55
-      }
-    },
-    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
       "score": 38.56,
@@ -543,16 +527,32 @@
       }
     },
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 30.36,
+      "raw_score": 38.9,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 29.62,
+        "sentiment": 40.0,
+        "volume": 50.27,
+        "policy": 50.0,
+        "volatility_penalty": 8.55
+      }
+    },
+    {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 25.85,
-      "raw_score": 34.81,
+      "score": 24.35,
+      "raw_score": 33.31,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 21.28,
-        "sentiment": 25.0,
+        "sentiment": 20.0,
         "volume": 63.97,
         "policy": 60.0,
         "volatility_penalty": 8.95
@@ -590,11 +590,11 @@
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.02,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.04,
-      "notional_delta": -1971.68,
-      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3943.35,
+      "reason": "exiting on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=AI & Compute",
@@ -637,14 +637,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0451,
+      "target_weight": 0.0431,
       "current_weight": 0.0228,
-      "notional_delta": 2195.37,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.23% vs target \u2014 add",
+      "notional_delta": 1998.04,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.03% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 75.2",
+        "theme 'Oil & Gas' score 63.4 (buy), contribution 73.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -668,14 +668,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0433,
+      "target_weight": 0.0414,
       "current_weight": 0.0187,
-      "notional_delta": 2427.99,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.46% vs target \u2014 add",
+      "notional_delta": 2240.53,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.27% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 72.2",
+        "theme 'Oil & Gas' score 63.4 (buy), contribution 70.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -725,27 +725,24 @@
     },
     {
       "symbol": "GM",
-      "action": "HOLD",
-      "target_weight": 0.0173,
+      "action": "REDUCE",
+      "target_weight": 0.0097,
       "current_weight": 0.0194,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"The 4 Best \"Magnificent Seven\" Stocks to Buy Now\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -955.62,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.97%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 50.0",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "GOOGL",
-      "action": "REDUCE",
-      "target_weight": 0.0096,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0193,
-      "notional_delta": -951.65,
-      "reason": "trimming on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1903.29,
+      "reason": "exiting on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
@@ -841,11 +838,11 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.0077,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0154,
-      "notional_delta": -761.45,
-      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1522.89,
+      "reason": "exiting on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
@@ -869,11 +866,11 @@
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0178,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0356,
-      "notional_delta": -1753.94,
-      "reason": "trimming on mixed news flow \u2014 \"Trump AI Adviser Sriram Krishnan To Leave White House, Plans New Role Influencing AI Policy: Report\" \u00b7 theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3507.88,
+      "reason": "exiting on mixed news flow \u2014 \"Trump AI Adviser Sriram Krishnan To Leave White House, Plans New Role Influencing AI Policy: Report\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-6.02%",
         "theme=AI & Compute",
@@ -897,11 +894,11 @@
     },
     {
       "symbol": "NVDA",
-      "action": "REDUCE",
-      "target_weight": 0.009,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0181,
-      "notional_delta": -892.32,
-      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1784.65,
+      "reason": "exiting on negative news flow \u2014 \"Chamath Palihapitiya Says Companies Are Overspending On AI As Cheaper Models Rapidly Close The Gap: 'Burning Through Massive Budgets'\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
@@ -970,17 +967,14 @@
     },
     {
       "symbol": "RIVN",
-      "action": "HOLD",
-      "target_weight": 0.0172,
+      "action": "REDUCE",
+      "target_weight": 0.011,
       "current_weight": 0.022,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"The 4 Best \"Magnificent Seven\" Stocks to Buy Now\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1086.31,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-7.80%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 49.7",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1017,11 +1011,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -1.83,
-      "reason": "theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3.66,
+      "reason": "theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-11.18%",
         "theme=AI & Compute"
@@ -1076,34 +1070,18 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0456,
+      "target_weight": 0.0436,
       "current_weight": 0.023,
-      "notional_delta": 2232.28,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.26% vs target \u2014 add",
+      "notional_delta": 2034.94,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 76.1",
+        "theme 'Oil & Gas' score 63.4 (buy), contribution 74.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
-    },
-    {
-      "symbol": "TSLA",
-      "action": "SKIP",
-      "target_weight": 0.0103,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"The 4 Best \"Magnificent Seven\" Stocks to Buy Now\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 29.8)",
-      "factors": [
-        "ret_5d=-10.28%",
-        "rel_vol_5d=0.91",
-        "vol_ann=43.72%",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "HD",
@@ -1171,11 +1149,11 @@
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.02,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.04,
-      "notional_delta": -1971.68,
-      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3943.35,
+      "reason": "exiting on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=AI & Compute",
@@ -1227,14 +1205,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0451,
+      "target_weight": 0.0431,
       "current_weight": 0.0228,
-      "notional_delta": 2195.37,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.23% vs target \u2014 add",
+      "notional_delta": 1998.04,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.03% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 75.2",
+        "theme 'Oil & Gas' score 63.4 (buy), contribution 73.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1264,14 +1242,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0433,
+      "target_weight": 0.0414,
       "current_weight": 0.0187,
-      "notional_delta": 2427.99,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.46% vs target \u2014 add",
+      "notional_delta": 2240.53,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.27% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 72.2",
+        "theme 'Oil & Gas' score 63.4 (buy), contribution 70.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1333,17 +1311,14 @@
     },
     {
       "symbol": "GM",
-      "action": "HOLD",
-      "target_weight": 0.0173,
+      "action": "REDUCE",
+      "target_weight": 0.0097,
       "current_weight": 0.0194,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"The 4 Best \"Magnificent Seven\" Stocks to Buy Now\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -955.62,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.97%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 50.0",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1352,11 +1327,11 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "REDUCE",
-      "target_weight": 0.0096,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0193,
-      "notional_delta": -951.65,
-      "reason": "trimming on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1903.29,
+      "reason": "exiting on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
@@ -1473,11 +1448,11 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.0077,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0154,
-      "notional_delta": -761.45,
-      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1522.89,
+      "reason": "exiting on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
@@ -1507,11 +1482,11 @@
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0178,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0356,
-      "notional_delta": -1753.94,
-      "reason": "trimming on mixed news flow \u2014 \"Trump AI Adviser Sriram Krishnan To Leave White House, Plans New Role Influencing AI Policy: Report\" \u00b7 theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3507.88,
+      "reason": "exiting on mixed news flow \u2014 \"Trump AI Adviser Sriram Krishnan To Leave White House, Plans New Role Influencing AI Policy: Report\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-6.02%",
         "theme=AI & Compute",
@@ -1541,11 +1516,11 @@
     },
     {
       "symbol": "NVDA",
-      "action": "REDUCE",
-      "target_weight": 0.009,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0181,
-      "notional_delta": -892.32,
-      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1784.65,
+      "reason": "exiting on negative news flow \u2014 \"Chamath Palihapitiya Says Companies Are Overspending On AI As Cheaper Models Rapidly Close The Gap: 'Burning Through Massive Budgets'\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
@@ -1629,17 +1604,14 @@
     },
     {
       "symbol": "RIVN",
-      "action": "HOLD",
-      "target_weight": 0.0172,
+      "action": "REDUCE",
+      "target_weight": 0.011,
       "current_weight": 0.022,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"The 4 Best \"Magnificent Seven\" Stocks to Buy Now\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1086.31,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-7.80%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 49.7",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1685,11 +1657,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -1.83,
-      "reason": "theme score 25.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3.66,
+      "reason": "theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-11.18%",
         "theme=AI & Compute"
@@ -1756,37 +1728,18 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0456,
+      "target_weight": 0.0436,
       "current_weight": 0.023,
-      "notional_delta": 2232.28,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.26% vs target \u2014 add",
+      "notional_delta": 2034.94,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 76.1",
+        "theme 'Oil & Gas' score 63.4 (buy), contribution 74.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
-      "executed": false,
-      "order": null,
-      "note": "market_closed_or_no_account"
-    },
-    {
-      "symbol": "TSLA",
-      "action": "SKIP",
-      "target_weight": 0.0103,
-      "current_weight": 0.0,
-      "notional_delta": 0.0,
-      "reason": "skipping on positive news flow \u2014 \"The 4 Best \"Magnificent Seven\" Stocks to Buy Now\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'EV & Clean Transport' score 39.1 (hold_small), contribution 29.8)",
-      "factors": [
-        "ret_5d=-10.28%",
-        "rel_vol_5d=0.91",
-        "vol_ann=43.72%",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "ev_clean_transport",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -2382,6 +2335,10 @@
     {
       "t": "2026-06-07T06:41:07+00:00",
       "v": 98666.47
+    },
+    {
+      "t": "2026-06-07T09:53:02+00:00",
+      "v": 98666.47
     }
   ],
   "breaking_news": [
@@ -2390,7 +2347,7 @@
       "summary": "President Trump signed an executive order that puts some 8,000 high-ranking civil servants into a new category of employees who can be fired for any reason.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5742806/trump-federal-employees-civil-service-job-protections-schedule-f",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:05+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -2399,7 +2356,7 @@
       "summary": "David Venturella's appointment as acting ICE director is the latest in a pattern: Many former employees of the private prison company GEO Group end up working at the federal agency, and vice versa.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5836625/geo-group-private-prisons-ice-close-ties",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:05+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2408,7 +2365,7 @@
       "summary": "Shipping companies are looking for alternative routes as the Strait of Hormuz lockdown drags on.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5828377/as-strait-of-hormuz-stays-shut-companies-seek-new-routes-for-trade",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:05+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2417,7 +2374,7 @@
       "summary": "Hurricane season is expected to be milder than usual this year. But that's not stopping cell phone companies from pulling out all the stops.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5830291/2026-hurricane-season-cell-phones",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:05+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2426,7 +2383,7 @@
       "summary": "Just 3% of U.S. households pay for AI for personal use. Sign ups are growing \u2014 even though Americans have subscription fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5791661/chatgpt-gemini-claude-subscription-revenue-openai",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:05+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2435,7 +2392,7 @@
       "summary": "Collecting Panini stickers is a World Cup tradition beloved in Europe and Latin America. In the U.S., interest has been building steadily, and this summer, the buzz is bigger than ever.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5844319/world-cup-2026-panini-stickers-album",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:05+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2444,7 +2401,7 @@
       "summary": "U.S. employers added jobs for the third month in a row in May, while the unemployment rate held steady at 4.3%. But wage gains softened and likely failed to keep pace with rising prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5847669/jobs-labor-market-unemployment-wages-inflation",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:05+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2453,7 +2410,7 @@
       "summary": "Amid widespread tech layoffs, some highly skilled workers are making radical career changes. Some laid-off workers are turning to lower paying temp jobs, and some are leaving tech altogether.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5788006/in-the-wake-of-layoffs-some-tech-workers-are-exploring-new-careers",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:05+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2462,16 +2419,7 @@
       "summary": "Yusuf Ali, now 34, struggles with his memories living in Mogadishu surrounded by dark reminders of his past.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c98r7zxdxe7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Pope begins Spain visit with praise for country's opposition to war and support for migrants",
-      "summary": "On the first day of his official seven-day tour of Spain, the Pope praises the country's \"active commitment to peace and solidarity among peoples\".",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c8d2pgjy4qgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2480,7 +2428,7 @@
       "summary": "Fifty years after his debut, Ilaiyaraaja remains one of the most celebrated composers in Indian cinema.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cm2pldw8x9zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2489,7 +2437,7 @@
       "summary": "The seven-month-old boy's shrouded body was wrapped in a Palestinian flag and carried by his father to the graveyard.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cly8lgn0x30o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2498,7 +2446,7 @@
       "summary": "After eight presidents in 10 years, many voters are looking for stability so the next president can focus on tackling crime and inequality.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c9d21184e7yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2507,16 +2455,25 @@
       "summary": "Iranian officials say technical staff have been denied visas, hours after the US said players could enter the country.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cy8286nqz87o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Ukrainian drones target St Petersburg in attack Russia calls 'unprecedented'",
-      "summary": "Residents of Russia's second-largest city were urged to stay indoors for the first time since the war started.",
+      "headline": "Huge crowds throng Madrid streets for Pope's open-air mass",
+      "summary": "The pontiff waved at those gathered from his popemobile as he arrived at the Plaza de Cibeles.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cg7498kz808o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "url": "https://www.bbc.com/news/articles/c4gyejvzx9eo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-07T09:53:04+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Steve Rosenberg: Russia's economic forum overshadowed by drone attacks on St Petersburg",
+      "summary": "The BBC's Russia editor saw Putin's flagship economic event overshadowed by Ukrainian drones attacks.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c9q2gp52rgro?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-07T09:53:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2525,26 +2482,26 @@
       "summary": "The US defence secretary was speaking in Normandy, 82 years after allied forces launched their operation to liberate Nazi-occupied north-western Europe.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c802e7jk458o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "British Heart Foundation plans to close 150 charity shops",
-      "summary": "The charity says it is facing \"an exceptionally challenging trading environment\".",
+      "headline": "Who can buy shares in Elon Musk's SpaceX?",
+      "summary": "From next week individual investors can take a stake in Musk's rockets-to-AI company.",
       "source": "BBC Business",
-      "url": "https://www.bbc.com/news/articles/cvgzg48d9q0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Is there an AI stock market bubble, and is it ready to burst?",
-      "summary": "Despite the Iran war, inflation and debt fears, US markets keep hitting record highs, fueled largely by AI. BBC's Samira Hussain looks into whether that bubble will burst.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.com/news/videos/c1m2mr7gr27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "url": "https://www.bbc.com/news/articles/czx299wpp56o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-07T09:53:04+00:00",
       "sentiment_score": 0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "US stocks slump as fears over Big Tech shake Wall Street",
+      "summary": "The Nasdaq saw its biggest daily fall since early 2025.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.com/news/articles/cwy2yq0dj58o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-07T09:53:04+00:00",
+      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -2552,16 +2509,16 @@
       "summary": "Instead of throwing away byproducts of food processing, fermentation is making them valuable.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "published_utc": "2026-06-07T09:53:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Hospitality jobs boom as US prepares for World Cup",
-      "summary": "It is the third month in a row US jobs figures have beaten expectations.",
+      "headline": "Trump to meet AI leaders to discuss US investment in their companies",
+      "summary": "The US president said on Friday he expects to meet the leaders of top AI companies next week.",
       "source": "BBC Business",
-      "url": "https://www.bbc.com/news/articles/cdxpx4gel1yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T06:41:10+00:00",
+      "url": "https://www.bbc.com/news/articles/c98r8r7dz5no?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-07T09:53:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
