@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-07T17:01:35+00:00",
+  "generated_at_utc": "2026-06-07T18:17:24+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 144,
-  "last_success_utc": "2026-06-07T15:48:16+00:00",
+  "cycle_count": 145,
+  "last_success_utc": "2026-06-07T17:01:35+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -417,14 +417,14 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 63.89,
-      "raw_score": 64.56,
+      "score": 65.2,
+      "raw_score": 65.86,
       "band": "buy",
-      "weight": 0.1296,
+      "weight": 0.134,
       "confidence": 1.0,
       "components": {
         "momentum": 55.73,
-        "sentiment": 95.65,
+        "sentiment": 100.0,
         "volume": 40.35,
         "policy": 55.0,
         "volatility_penalty": 0.67
@@ -449,14 +449,14 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 49.87,
-      "raw_score": 59.93,
+      "score": 52.87,
+      "raw_score": 62.93,
       "band": "starter",
-      "weight": 0.0746,
-      "confidence": 0.8,
+      "weight": 0.0859,
+      "confidence": 0.85,
       "components": {
         "momentum": 43.48,
-        "sentiment": 90.0,
+        "sentiment": 100.0,
         "volume": 52.71,
         "policy": 50.0,
         "volatility_penalty": 10.06
@@ -465,14 +465,14 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 46.96,
-      "raw_score": 46.96,
+      "score": 48.76,
+      "raw_score": 48.76,
       "band": "starter",
-      "weight": 0.0641,
-      "confidence": 0.75,
+      "weight": 0.0713,
+      "confidence": 0.8,
       "components": {
         "momentum": 28.29,
-        "sentiment": 68.0,
+        "sentiment": 74.0,
         "volume": 51.23,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -511,6 +511,22 @@
       }
     },
     {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 36.94,
+      "raw_score": 45.9,
+      "band": "hold_small",
+      "weight": 0.0316,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 21.28,
+        "sentiment": 63.63,
+        "volume": 63.97,
+        "policy": 55.0,
+        "volatility_penalty": 8.95
+      }
+    },
+    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 35.09,
@@ -524,22 +540,6 @@
         "volume": 61.22,
         "policy": 50.0,
         "volatility_penalty": 15.94
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 34.52,
-      "raw_score": 43.47,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 21.28,
-        "sentiment": 55.55,
-        "volume": 63.97,
-        "policy": 55.0,
-        "volatility_penalty": 8.95
       }
     },
     {
@@ -563,28 +563,28 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0243,
+      "target_weight": 0.028,
       "current_weight": 0.0388,
-      "notional_delta": -1434.19,
-      "reason": "overweight by 1.45% vs target \u2014 trim",
+      "notional_delta": -1069.12,
+      "reason": "overweight by 1.08% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.61%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.9 (starter), contribution 57.5"
+        "theme 'Semiconductors (Broad)' score 52.9 (starter), contribution 60.5"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.027,
+      "target_weight": 0.0309,
       "current_weight": 0.0397,
-      "notional_delta": -1250.29,
-      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Calls ASML Europe's 'Greatest Company' Ahead Of Pitch For SpaceX's Terafab Vision: 'Should Be Treasured And Supported'\" \u00b7 overweight by 1.27% vs target \u2014 trim",
+      "notional_delta": -865.49,
+      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Calls ASML Europe's 'Greatest Company' Ahead Of Pitch For SpaceX's Terafab Vision: 'Should Be Treasured And Supported'\" \u00b7 overweight by 0.88% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.15%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.9 (starter), contribution 63.9",
+        "theme 'Semiconductors (Broad)' score 52.9 (starter), contribution 66.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -592,11 +592,11 @@
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.02,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.04,
-      "notional_delta": -1971.68,
-      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3943.35,
+      "reason": "exiting on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=AI & Compute",
@@ -640,14 +640,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0436,
+      "target_weight": 0.0451,
       "current_weight": 0.0228,
-      "notional_delta": 2047.37,
-      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.08% vs target \u2014 add",
+      "notional_delta": 2195.37,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.23% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 73.9",
+        "theme 'Oil & Gas' score 65.2 (buy), contribution 75.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -672,14 +672,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0419,
+      "target_weight": 0.0433,
       "current_weight": 0.0187,
-      "notional_delta": 2289.86,
-      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.32% vs target \u2014 add",
+      "notional_delta": 2427.99,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.46% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 70.9",
+        "theme 'Oil & Gas' score 65.2 (buy), contribution 72.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -745,15 +745,16 @@
     {
       "symbol": "GOOGL",
       "action": "REDUCE",
-      "target_weight": 0.0096,
+      "target_weight": 0.0116,
       "current_weight": 0.0193,
-      "notional_delta": -951.65,
-      "reason": "trimming on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -758.76,
+      "reason": "trimming on mixed news flow \u2014 \"Top Four S&P 500 Stocks To Watch This Week: Oracle, Adobe, Broadcom, Google\" \u00b7 overweight by 0.77% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 36.9 (hold_small), contribution 43.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -835,27 +836,28 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0256,
+      "target_weight": 0.0283,
       "current_weight": 0.024,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 47.0 (starter), contribution 56.9"
+        "theme 'Consumer Discretionary' score 48.8 (starter), contribution 58.6"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.0077,
+      "target_weight": 0.0095,
       "current_weight": 0.0154,
-      "notional_delta": -761.45,
-      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -585.56,
+      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 overweight by 0.59% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 36.9 (hold_small), contribution 36.0",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -878,16 +880,15 @@
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0178,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0356,
-      "notional_delta": -1753.94,
-      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3507.88,
+      "reason": "exiting on positive news flow \u2014 \"Sam Altman Plots Major OpenAI Upgrade As Anthropic Battle Intensifies\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.02%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
@@ -908,15 +909,15 @@
     {
       "symbol": "NVDA",
       "action": "REDUCE",
-      "target_weight": 0.009,
+      "target_weight": 0.0105,
       "current_weight": 0.0181,
-      "notional_delta": -892.32,
-      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -748.65,
+      "reason": "trimming on positive news flow \u2014 \"Sam Altman Plots Major OpenAI Upgrade As Anthropic Battle Intensifies\" \u00b7 overweight by 0.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 36.9 (hold_small), contribution 39.5",
         "news_source=benzinga",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
@@ -1030,11 +1031,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -1.83,
-      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3.66,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.18%",
         "theme=AI & Compute"
@@ -1044,14 +1045,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0234,
+      "target_weight": 0.027,
       "current_weight": 0.0342,
-      "notional_delta": -1070.21,
-      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 overweight by 1.08% vs target \u2014 trim",
+      "notional_delta": -715.01,
+      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 overweight by 0.72% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.81%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.9 (starter), contribution 55.4",
+        "theme 'Semiconductors (Broad)' score 52.9 (starter), contribution 58.4",
         "news_source=benzinga",
         "event=earnings beat",
         "news_sentiment=+0.20"
@@ -1091,14 +1092,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0442,
+      "target_weight": 0.0456,
       "current_weight": 0.023,
-      "notional_delta": 2094.14,
-      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.12% vs target \u2014 add",
+      "notional_delta": 2232.28,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.26% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 74.8",
+        "theme 'Oil & Gas' score 65.2 (buy), contribution 76.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1107,10 +1108,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0201,
+      "target_weight": 0.0225,
       "current_weight": 0.0,
-      "notional_delta": 1983.2,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 47.0 (starter), contribution 44.8",
+      "notional_delta": 2220.0,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 48.8 (starter), contribution 46.6",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1121,10 +1122,10 @@
     {
       "symbol": "SBUX",
       "action": "BUY",
-      "target_weight": 0.0183,
+      "target_weight": 0.0205,
       "current_weight": 0.0,
-      "notional_delta": 1805.6,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 47.0 (starter), contribution 40.8",
+      "notional_delta": 2022.66,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 48.8 (starter), contribution 42.6",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -1153,14 +1154,14 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0243,
+      "target_weight": 0.028,
       "current_weight": 0.0388,
-      "notional_delta": -1434.19,
-      "reason": "overweight by 1.45% vs target \u2014 trim",
+      "notional_delta": -1069.12,
+      "reason": "overweight by 1.08% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.61%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.9 (starter), contribution 57.5"
+        "theme 'Semiconductors (Broad)' score 52.9 (starter), contribution 60.5"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1170,14 +1171,14 @@
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.027,
+      "target_weight": 0.0309,
       "current_weight": 0.0397,
-      "notional_delta": -1250.29,
-      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Calls ASML Europe's 'Greatest Company' Ahead Of Pitch For SpaceX's Terafab Vision: 'Should Be Treasured And Supported'\" \u00b7 overweight by 1.27% vs target \u2014 trim",
+      "notional_delta": -865.49,
+      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Calls ASML Europe's 'Greatest Company' Ahead Of Pitch For SpaceX's Terafab Vision: 'Should Be Treasured And Supported'\" \u00b7 overweight by 0.88% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.15%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.9 (starter), contribution 63.9",
+        "theme 'Semiconductors (Broad)' score 52.9 (starter), contribution 66.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1188,11 +1189,11 @@
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.02,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.04,
-      "notional_delta": -1971.68,
-      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3943.35,
+      "reason": "exiting on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=AI & Compute",
@@ -1245,14 +1246,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0436,
+      "target_weight": 0.0451,
       "current_weight": 0.0228,
-      "notional_delta": 2047.37,
-      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.08% vs target \u2014 add",
+      "notional_delta": 2195.37,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.23% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 73.9",
+        "theme 'Oil & Gas' score 65.2 (buy), contribution 75.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1283,14 +1284,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0419,
+      "target_weight": 0.0433,
       "current_weight": 0.0187,
-      "notional_delta": 2289.86,
-      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.32% vs target \u2014 add",
+      "notional_delta": 2427.99,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.46% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 70.9",
+        "theme 'Oil & Gas' score 65.2 (buy), contribution 72.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1371,15 +1372,16 @@
     {
       "symbol": "GOOGL",
       "action": "REDUCE",
-      "target_weight": 0.0096,
+      "target_weight": 0.0116,
       "current_weight": 0.0193,
-      "notional_delta": -951.65,
-      "reason": "trimming on positive news flow \u2014 \"Top Analyst Explains Why the S&P 500, Nasdaq 100, Dow Jones Are Crashing\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -758.76,
+      "reason": "trimming on mixed news flow \u2014 \"Top Four S&P 500 Stocks To Watch This Week: Oracle, Adobe, Broadcom, Google\" \u00b7 overweight by 0.77% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 36.9 (hold_small), contribution 43.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1479,14 +1481,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0256,
+      "target_weight": 0.0283,
       "current_weight": 0.024,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 47.0 (starter), contribution 56.9"
+        "theme 'Consumer Discretionary' score 48.8 (starter), contribution 58.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1496,13 +1498,14 @@
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.0077,
+      "target_weight": 0.0095,
       "current_weight": 0.0154,
-      "notional_delta": -761.45,
-      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -585.56,
+      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 overweight by 0.59% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 36.9 (hold_small), contribution 36.0",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1531,16 +1534,15 @@
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0178,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0356,
-      "notional_delta": -1753.94,
-      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3507.88,
+      "reason": "exiting on positive news flow \u2014 \"Sam Altman Plots Major OpenAI Upgrade As Anthropic Battle Intensifies\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.02%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
@@ -1567,15 +1569,15 @@
     {
       "symbol": "NVDA",
       "action": "REDUCE",
-      "target_weight": 0.009,
+      "target_weight": 0.0105,
       "current_weight": 0.0181,
-      "notional_delta": -892.32,
-      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -748.65,
+      "reason": "trimming on positive news flow \u2014 \"Sam Altman Plots Major OpenAI Upgrade As Anthropic Battle Intensifies\" \u00b7 overweight by 0.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
+        "theme 'AI & Compute' score 36.9 (hold_small), contribution 39.5",
         "news_source=benzinga",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
@@ -1713,11 +1715,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -1.83,
-      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3.66,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.18%",
         "theme=AI & Compute"
@@ -1730,14 +1732,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0234,
+      "target_weight": 0.027,
       "current_weight": 0.0342,
-      "notional_delta": -1070.21,
-      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 overweight by 1.08% vs target \u2014 trim",
+      "notional_delta": -715.01,
+      "reason": "trimming on earnings beat (positive) \u2014 \"Consumer Tech News (June 1-3): AI Demand Surge Prompts Big Earnings Beat, AI Can Steal Jobs & More\" \u00b7 overweight by 0.72% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.81%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.9 (starter), contribution 55.4",
+        "theme 'Semiconductors (Broad)' score 52.9 (starter), contribution 58.4",
         "news_source=benzinga",
         "event=earnings beat",
         "news_sentiment=+0.20"
@@ -1786,14 +1788,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0442,
+      "target_weight": 0.0456,
       "current_weight": 0.023,
-      "notional_delta": 2094.14,
-      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.12% vs target \u2014 add",
+      "notional_delta": 2232.28,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.26% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 74.8",
+        "theme 'Oil & Gas' score 65.2 (buy), contribution 76.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1805,10 +1807,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0201,
+      "target_weight": 0.0225,
       "current_weight": 0.0,
-      "notional_delta": 1983.2,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 47.0 (starter), contribution 44.8",
+      "notional_delta": 2220.0,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 48.8 (starter), contribution 46.6",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1822,10 +1824,10 @@
     {
       "symbol": "SBUX",
       "action": "BUY",
-      "target_weight": 0.0183,
+      "target_weight": 0.0205,
       "current_weight": 0.0,
-      "notional_delta": 1805.6,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 47.0 (starter), contribution 40.8",
+      "notional_delta": 2022.66,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 48.8 (starter), contribution 42.6",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -2432,6 +2434,10 @@
     {
       "t": "2026-06-07T17:01:34+00:00",
       "v": 98666.47
+    },
+    {
+      "t": "2026-06-07T18:17:21+00:00",
+      "v": 98666.47
     }
   ],
   "breaking_news": [
@@ -2440,7 +2446,7 @@
       "summary": "President Trump signed an executive order that puts some 8,000 high-ranking civil servants into a new category of employees who can be fired for any reason.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5742806/trump-federal-employees-civil-service-job-protections-schedule-f",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -2449,7 +2455,7 @@
       "summary": "David Venturella's appointment as acting ICE director is the latest in a pattern: Many former employees of the private prison company GEO Group end up working at the federal agency, and vice versa.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5836625/geo-group-private-prisons-ice-close-ties",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2458,7 +2464,7 @@
       "summary": "Shipping companies are looking for alternative routes as the Strait of Hormuz lockdown drags on.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5828377/as-strait-of-hormuz-stays-shut-companies-seek-new-routes-for-trade",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2467,7 +2473,7 @@
       "summary": "Hurricane season is expected to be milder than usual this year. But that's not stopping cell phone companies from pulling out all the stops.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5830291/2026-hurricane-season-cell-phones",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2476,7 +2482,7 @@
       "summary": "Just 3% of U.S. households pay for AI for personal use. Sign ups are growing \u2014 even though Americans have subscription fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5791661/chatgpt-gemini-claude-subscription-revenue-openai",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2485,7 +2491,7 @@
       "summary": "Collecting Panini stickers is a World Cup tradition beloved in Europe and Latin America. In the U.S., interest has been building steadily, and this summer, the buzz is bigger than ever.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5844319/world-cup-2026-panini-stickers-album",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2494,7 +2500,7 @@
       "summary": "U.S. employers added jobs for the third month in a row in May, while the unemployment rate held steady at 4.3%. But wage gains softened and likely failed to keep pace with rising prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5847669/jobs-labor-market-unemployment-wages-inflation",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2503,7 +2509,7 @@
       "summary": "Amid widespread tech layoffs, some highly skilled workers are making radical career changes. Some laid-off workers are turning to lower paying temp jobs, and some are leaving tech altogether.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5788006/in-the-wake-of-layoffs-some-tech-workers-are-exploring-new-careers",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2512,7 +2518,7 @@
       "summary": "The suspect opened fire from a car in several locations before being shot dead.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cpwe8e80weyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2521,7 +2527,7 @@
       "summary": "After eight presidents in 10 years, many voters are looking for stability so the next president can focus on tackling crime and inequality.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c9d21184e7yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2530,7 +2536,7 @@
       "summary": "Yusuf Ali, now 34, struggles with his memories living in Mogadishu surrounded by dark reminders of his past.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c98r7zxdxe7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2539,7 +2545,7 @@
       "summary": "The pontiff waved at those gathered from his popemobile as he arrived at the Plaza de Cibeles.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c4gyejvzx9eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2548,7 +2554,7 @@
       "summary": "Incumbent Prime Minister Nikol Pashinyan is seeking a third term despite falling domestic support.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c3626n1epd5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2557,16 +2563,16 @@
       "summary": "The BBC's Russia editor saw Putin's flagship economic event overshadowed by Ukrainian drones attacks.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c9q2gp52rgro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Zelensky criticises 'vile' Chornobyl drone strike ahead of London talks",
-      "summary": "Ukrainian officials say a Russian drone hit a storage facility for spent nuclear fuel near the Chornobyl nuclear plant.",
+      "headline": "Zelensky arrives in UK for Downing Street talks with European leaders",
+      "summary": "Zelensky's meeting with Ukraine's staunchest European allies comes as US President Donald Trump's focus has shifted to the war with Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cr7xr1g3nvvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2575,7 +2581,7 @@
       "summary": "Israel says the attacks on the Lebanese capital were ordered  \"in response to Hezbollah's firing at Israeli territory\".",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c0qyevk8139o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2584,7 +2590,7 @@
       "summary": "Dalston's Pineapple Soda as asking people to throw away affected cans of its pineapple drink over fears they could cause injury.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/ce8j0mxy28do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2593,7 +2599,7 @@
       "summary": "Jack Clark tells BBC's Newsnight AI could get to the point where it develops without human input.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cx2124z7g45o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2602,7 +2608,7 @@
       "summary": "Instead of throwing away byproducts of food processing, fermentation is making them valuable.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2611,7 +2617,7 @@
       "summary": "Fuelled by social media, the market for children's skincare is booming. Experts fear for the long-term impact on girls",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cx212x41evwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T17:01:35+00:00",
+      "published_utc": "2026-06-07T18:17:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
