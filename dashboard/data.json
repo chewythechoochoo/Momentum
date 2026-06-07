@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-07T19:52:06+00:00",
+  "generated_at_utc": "2026-06-07T21:10:22+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 146,
-  "last_success_utc": "2026-06-07T18:17:24+00:00",
+  "cycle_count": 147,
+  "last_success_utc": "2026-06-07T19:52:06+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -433,17 +433,33 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 58.75,
-      "raw_score": 60.61,
+      "score": 56.42,
+      "raw_score": 58.27,
       "band": "buy",
-      "weight": 0.1125,
+      "weight": 0.1047,
       "confidence": 1.0,
       "components": {
         "momentum": 57.98,
-        "sentiment": 77.78,
+        "sentiment": 70.0,
         "volume": 45.4,
         "policy": 50.0,
         "volatility_penalty": 1.85
+      }
+    },
+    {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 53.56,
+      "raw_score": 53.56,
+      "band": "starter",
+      "weight": 0.0857,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 28.29,
+        "sentiment": 90.0,
+        "volume": 51.23,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -463,22 +479,6 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 48.76,
-      "raw_score": 48.76,
-      "band": "starter",
-      "weight": 0.0713,
-      "confidence": 0.8,
-      "components": {
-        "momentum": 28.29,
-        "sentiment": 74.0,
-        "volume": 51.23,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 44.12,
@@ -495,6 +495,22 @@
       }
     },
     {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 43.57,
+      "raw_score": 52.52,
+      "band": "starter",
+      "weight": 0.0619,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 21.28,
+        "sentiment": 85.72,
+        "volume": 63.97,
+        "policy": 55.0,
+        "volatility_penalty": 8.95
+      }
+    },
+    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
       "score": 43.36,
@@ -508,22 +524,6 @@
         "volume": 50.27,
         "policy": 50.0,
         "volatility_penalty": 8.55
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 35.85,
-      "raw_score": 44.81,
-      "band": "hold_small",
-      "weight": 0.0251,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 21.28,
-        "sentiment": 60.0,
-        "volume": 63.97,
-        "policy": 55.0,
-        "volatility_penalty": 8.95
       }
     },
     {
@@ -545,16 +545,16 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 33.1,
-      "raw_score": 49.58,
+      "score": 32.8,
+      "raw_score": 49.27,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 30.2,
-        "sentiment": 81.25,
+        "sentiment": 78.57,
         "volume": 40.62,
-        "policy": 50.0,
+        "policy": 55.0,
         "volatility_penalty": 16.48
       }
     }
@@ -689,7 +689,7 @@
       "target_weight": 0.0142,
       "current_weight": 0.0283,
       "notional_delta": -1397.96,
-      "reason": "trimming on negative news flow \u2014 \"AGQ Crashed 16% Before Anyone Realized What Was Happening\" \u00b7 theme score 33.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"AGQ Crashed 16% Before Anyone Realized What Was Happening\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.46%",
         "theme=Clean Energy",
@@ -742,15 +742,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "REDUCE",
-      "target_weight": 0.0093,
+      "action": "HOLD",
+      "target_weight": 0.0225,
       "current_weight": 0.0193,
-      "notional_delta": -985.69,
-      "reason": "trimming on mixed news flow \u2014 \"Top Four S&P 500 Stocks To Watch This Week: Oracle, Adobe, Broadcom, Google\" \u00b7 overweight by 1.00% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Top Four S&P 500 Stocks To Watch This Week: Oracle, Adobe, Broadcom, Google\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 35.9 (hold_small), contribution 42.9",
+        "theme 'AI & Compute' score 43.6 (starter), contribution 50.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -791,15 +791,16 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0384,
+      "target_weight": 0.0358,
       "current_weight": 0.0273,
-      "notional_delta": 1093.78,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Due Amid Market Rally's First Real Test; SpaceX IPO, Apple, Oracle Ahead\" \u00b7 underweight by 1.11% vs target \u2014 add",
+      "notional_delta": 837.25,
+      "reason": "buying on M&A (positive) \u2014 \"Eli Lilly Expands Beyond Obesity With US$4b Vaccine And Genetic Bets\" \u00b7 underweight by 0.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.14%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.8 (buy), contribution 64.6",
+        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 62.2",
         "news_source=yahoo_rss",
+        "event=M&A",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
@@ -833,31 +834,31 @@
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0283,
+      "action": "BUY",
+      "target_weight": 0.0335,
       "current_weight": 0.024,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 932.46,
+      "reason": "underweight by 0.95% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 48.8 (starter), contribution 58.6"
+        "theme 'Consumer Discretionary' score 53.6 (starter), contribution 63.5"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.0076,
+      "action": "HOLD",
+      "target_weight": 0.019,
       "current_weight": 0.0154,
-      "notional_delta": -773.03,
-      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 overweight by 0.78% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Oracle Stock Analysis And Earnings Preview: Will It Have A Broadcom Moment?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 35.9 (hold_small), contribution 35.0",
+        "theme 'AI & Compute' score 43.6 (starter), contribution 42.7",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -906,17 +907,17 @@
     },
     {
       "symbol": "NVDA",
-      "action": "REDUCE",
-      "target_weight": 0.0083,
+      "action": "HOLD",
+      "target_weight": 0.0205,
       "current_weight": 0.0181,
-      "notional_delta": -965.71,
-      "reason": "trimming on positive news flow \u2014 \"Sam Altman Plots Major OpenAI Upgrade As Anthropic Battle Intensifies\" \u00b7 overweight by 0.98% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Oracle Stock Analysis And Earnings Preview: Will It Have A Broadcom Moment?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 35.9 (hold_small), contribution 38.4",
+        "theme 'AI & Compute' score 43.6 (starter), contribution 46.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -967,15 +968,16 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0398,
+      "target_weight": 0.0371,
       "current_weight": 0.0271,
-      "notional_delta": 1255.11,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Due Amid Market Rally's First Real Test; SpaceX IPO, Apple, Oracle Ahead\" \u00b7 underweight by 1.27% vs target \u2014 add",
+      "notional_delta": 988.71,
+      "reason": "buying on M&A (positive) \u2014 \"Eli Lilly Expands Beyond Obesity With US$4b Vaccine And Genetic Bets\" \u00b7 underweight by 1.00% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.8 (buy), contribution 67.0",
+        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 64.6",
         "news_source=yahoo_rss",
+        "event=M&A",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
@@ -1060,15 +1062,16 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0343,
+      "target_weight": 0.0318,
       "current_weight": 0.0223,
-      "notional_delta": 1179.22,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Due Amid Market Rally's First Real Test; SpaceX IPO, Apple, Oracle Ahead\" \u00b7 underweight by 1.20% vs target \u2014 add",
+      "notional_delta": 932.55,
+      "reason": "buying on M&A (positive) \u2014 \"Eli Lilly Expands Beyond Obesity With US$4b Vaccine And Genetic Bets\" \u00b7 underweight by 0.95% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.88%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.8 (buy), contribution 57.7",
+        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 55.4",
         "news_source=yahoo_rss",
+        "event=M&A",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
@@ -1106,10 +1109,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0225,
+      "target_weight": 0.0271,
       "current_weight": 0.0,
-      "notional_delta": 2220.0,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 48.8 (starter), contribution 46.6",
+      "notional_delta": 2673.86,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 53.6 (starter), contribution 51.4",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1120,10 +1123,10 @@
     {
       "symbol": "SBUX",
       "action": "BUY",
-      "target_weight": 0.0205,
+      "target_weight": 0.025,
       "current_weight": 0.0,
-      "notional_delta": 2022.66,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 48.8 (starter), contribution 42.6",
+      "notional_delta": 2466.66,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 53.6 (starter), contribution 47.4",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -1302,7 +1305,7 @@
       "target_weight": 0.0142,
       "current_weight": 0.0283,
       "notional_delta": -1397.96,
-      "reason": "trimming on negative news flow \u2014 \"AGQ Crashed 16% Before Anyone Realized What Was Happening\" \u00b7 theme score 33.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"AGQ Crashed 16% Before Anyone Realized What Was Happening\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.46%",
         "theme=Clean Energy",
@@ -1367,15 +1370,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "REDUCE",
-      "target_weight": 0.0093,
+      "action": "HOLD",
+      "target_weight": 0.0225,
       "current_weight": 0.0193,
-      "notional_delta": -985.69,
-      "reason": "trimming on mixed news flow \u2014 \"Top Four S&P 500 Stocks To Watch This Week: Oracle, Adobe, Broadcom, Google\" \u00b7 overweight by 1.00% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Top Four S&P 500 Stocks To Watch This Week: Oracle, Adobe, Broadcom, Google\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 35.9 (hold_small), contribution 42.9",
+        "theme 'AI & Compute' score 43.6 (starter), contribution 50.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1425,15 +1428,16 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0384,
+      "target_weight": 0.0358,
       "current_weight": 0.0273,
-      "notional_delta": 1093.78,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Due Amid Market Rally's First Real Test; SpaceX IPO, Apple, Oracle Ahead\" \u00b7 underweight by 1.11% vs target \u2014 add",
+      "notional_delta": 837.25,
+      "reason": "buying on M&A (positive) \u2014 \"Eli Lilly Expands Beyond Obesity With US$4b Vaccine And Genetic Bets\" \u00b7 underweight by 0.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.14%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.8 (buy), contribution 64.6",
+        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 62.2",
         "news_source=yahoo_rss",
+        "event=M&A",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
@@ -1476,15 +1480,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0283,
+      "action": "BUY",
+      "target_weight": 0.0335,
       "current_weight": 0.024,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 932.46,
+      "reason": "underweight by 0.95% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 48.8 (starter), contribution 58.6"
+        "theme 'Consumer Discretionary' score 53.6 (starter), contribution 63.5"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1493,17 +1497,17 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.0076,
+      "action": "HOLD",
+      "target_weight": 0.019,
       "current_weight": 0.0154,
-      "notional_delta": -773.03,
-      "reason": "trimming on negative news flow \u2014 \"Is The AI Bubble About To Burst? Top Experts Deliver Major Warning\" \u00b7 overweight by 0.78% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Oracle Stock Analysis And Earnings Preview: Will It Have A Broadcom Moment?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.88%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 35.9 (hold_small), contribution 35.0",
+        "theme 'AI & Compute' score 43.6 (starter), contribution 42.7",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1564,17 +1568,17 @@
     },
     {
       "symbol": "NVDA",
-      "action": "REDUCE",
-      "target_weight": 0.0083,
+      "action": "HOLD",
+      "target_weight": 0.0205,
       "current_weight": 0.0181,
-      "notional_delta": -965.71,
-      "reason": "trimming on positive news flow \u2014 \"Sam Altman Plots Major OpenAI Upgrade As Anthropic Battle Intensifies\" \u00b7 overweight by 0.98% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Oracle Stock Analysis And Earnings Preview: Will It Have A Broadcom Moment?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-8.30%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 35.9 (hold_small), contribution 38.4",
+        "theme 'AI & Compute' score 43.6 (starter), contribution 46.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1637,15 +1641,16 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0398,
+      "target_weight": 0.0371,
       "current_weight": 0.0271,
-      "notional_delta": 1255.11,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Due Amid Market Rally's First Real Test; SpaceX IPO, Apple, Oracle Ahead\" \u00b7 underweight by 1.27% vs target \u2014 add",
+      "notional_delta": 988.71,
+      "reason": "buying on M&A (positive) \u2014 \"Eli Lilly Expands Beyond Obesity With US$4b Vaccine And Genetic Bets\" \u00b7 underweight by 1.00% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.8 (buy), contribution 67.0",
+        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 64.6",
         "news_source=yahoo_rss",
+        "event=M&A",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
@@ -1748,15 +1753,16 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0343,
+      "target_weight": 0.0318,
       "current_weight": 0.0223,
-      "notional_delta": 1179.22,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures Due Amid Market Rally's First Real Test; SpaceX IPO, Apple, Oracle Ahead\" \u00b7 underweight by 1.20% vs target \u2014 add",
+      "notional_delta": 932.55,
+      "reason": "buying on M&A (positive) \u2014 \"Eli Lilly Expands Beyond Obesity With US$4b Vaccine And Genetic Bets\" \u00b7 underweight by 0.95% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.88%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.8 (buy), contribution 57.7",
+        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 55.4",
         "news_source=yahoo_rss",
+        "event=M&A",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
@@ -1803,10 +1809,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0225,
+      "target_weight": 0.0271,
       "current_weight": 0.0,
-      "notional_delta": 2220.0,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 48.8 (starter), contribution 46.6",
+      "notional_delta": 2673.86,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 53.6 (starter), contribution 51.4",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1820,10 +1826,10 @@
     {
       "symbol": "SBUX",
       "action": "BUY",
-      "target_weight": 0.0205,
+      "target_weight": 0.025,
       "current_weight": 0.0,
-      "notional_delta": 2022.66,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 48.8 (starter), contribution 42.6",
+      "notional_delta": 2466.66,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 53.6 (starter), contribution 47.4",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -2438,6 +2444,10 @@
     {
       "t": "2026-06-07T19:52:02+00:00",
       "v": 98666.47
+    },
+    {
+      "t": "2026-06-07T21:10:17+00:00",
+      "v": 98666.47
     }
   ],
   "breaking_news": [
@@ -2446,7 +2456,7 @@
       "summary": "President Trump signed an executive order that puts some 8,000 high-ranking civil servants into a new category of employees who can be fired for any reason.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5742806/trump-federal-employees-civil-service-job-protections-schedule-f",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -2455,7 +2465,7 @@
       "summary": "David Venturella's appointment as acting ICE director is the latest in a pattern: Many former employees of the private prison company GEO Group end up working at the federal agency, and vice versa.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5836625/geo-group-private-prisons-ice-close-ties",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2464,7 +2474,7 @@
       "summary": "Shipping companies are looking for alternative routes as the Strait of Hormuz lockdown drags on.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5828377/as-strait-of-hormuz-stays-shut-companies-seek-new-routes-for-trade",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2473,7 +2483,7 @@
       "summary": "Hurricane season is expected to be milder than usual this year. But that's not stopping cell phone companies from pulling out all the stops.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5830291/2026-hurricane-season-cell-phones",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2482,7 +2492,7 @@
       "summary": "Just 3% of U.S. households pay for AI for personal use. Sign ups are growing \u2014 even though Americans have subscription fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5791661/chatgpt-gemini-claude-subscription-revenue-openai",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2491,7 +2501,7 @@
       "summary": "Collecting Panini stickers is a World Cup tradition beloved in Europe and Latin America. In the U.S., interest has been building steadily, and this summer, the buzz is bigger than ever.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5844319/world-cup-2026-panini-stickers-album",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2500,7 +2510,7 @@
       "summary": "U.S. employers added jobs for the third month in a row in May, while the unemployment rate held steady at 4.3%. But wage gains softened and likely failed to keep pace with rising prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5847669/jobs-labor-market-unemployment-wages-inflation",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2509,16 +2519,16 @@
       "summary": "Amid widespread tech layoffs, some highly skilled workers are making radical career changes. Some laid-off workers are turning to lower paying temp jobs, and some are leaving tech altogether.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5788006/in-the-wake-of-layoffs-some-tech-workers-are-exploring-new-careers",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "One dead, five injured after shooting in Israel",
-      "summary": "The suspect opened fire from a car in several locations before being shot dead.",
+      "headline": "Last-minute visas and moving training camp: Iran's road to the World Cup",
+      "summary": "Iran's participation has become one of the most complex stories of the tournament.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cpwe8e80weyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "url": "https://www.bbc.com/news/articles/cgmpmp89dvro?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2527,7 +2537,7 @@
       "summary": "Israel says the attacks on the Lebanese capital were ordered  \"in response to Hezbollah's firing at Israeli territory\".",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c0qyevk8139o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2536,16 +2546,7 @@
       "summary": "After eight presidents in 10 years, many voters are looking for stability so the next president can focus on tackling crime and inequality.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c9d21184e7yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Last-minute visas and moving training camp: Iran's road to the World Cup",
-      "summary": "Iran's participation has become one of the most complex stories of the tournament.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cgmpmp89dvro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2554,7 +2555,7 @@
       "summary": "The pontiff waved at those gathered from his popemobile as he arrived at the Plaza de Cibeles.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c4gyejvzx9eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2563,7 +2564,7 @@
       "summary": "Christian Eriksen collapsed during Denmark's friendly against Ukraine but is now conscious, says the Danish Football Association.",
       "source": "BBC World",
       "url": "https://www.bbc.com/sport/football/articles/czrxgd2nljno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2572,7 +2573,16 @@
       "summary": "Incumbent Prime Minister Nikol Pashinyan is seeking a third term despite falling domestic support.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c3626n1epd5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Trump abruptly ends NBC interview after clash over 'rigged election' claim",
+      "summary": "During the interview, the president was repeatedly challenged on several points by the show's presenter Kristen Welker.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/ce8k1xx6yzjo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2581,7 +2591,7 @@
       "summary": "Zelensky's meeting with Ukraine's staunchest European allies comes as US President Donald Trump's focus has shifted to the war with Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cr7xr1g3nvvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2590,7 +2600,7 @@
       "summary": "Dalston's Pineapple Soda as asking people to throw away affected cans of its pineapple drink over fears they could cause injury.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/ce8j0mxy28do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2599,7 +2609,7 @@
       "summary": "Jack Clark tells BBC's Newsnight AI could get to the point where it develops without human input.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cx2124z7g45o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2608,7 +2618,7 @@
       "summary": "Instead of throwing away byproducts of food processing, fermentation is making them valuable.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2617,7 +2627,7 @@
       "summary": "Fuelled by social media, the market for children's skincare is booming. Experts fear for the long-term impact on girls",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cx212x41evwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T19:52:06+00:00",
+      "published_utc": "2026-06-07T21:10:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
