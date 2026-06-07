@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-07T09:53:05+00:00",
+  "generated_at_utc": "2026-06-07T12:01:02+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 140,
-  "last_success_utc": "2026-06-07T06:41:10+00:00",
+  "cycle_count": 141,
+  "last_success_utc": "2026-06-07T09:53:05+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -401,14 +401,14 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 63.43,
-      "raw_score": 64.1,
+      "score": 63.53,
+      "raw_score": 64.2,
       "band": "buy",
-      "weight": 0.1281,
+      "weight": 0.1284,
       "confidence": 1.0,
       "components": {
         "momentum": 55.73,
-        "sentiment": 94.12,
+        "sentiment": 94.44,
         "volume": 40.35,
         "policy": 55.0,
         "volatility_penalty": 0.67
@@ -436,8 +436,8 @@
       "score": 58.69,
       "raw_score": 58.69,
       "band": "buy",
-      "weight": 0.0926,
-      "confidence": 0.65,
+      "weight": 0.0955,
+      "confidence": 0.7,
       "components": {
         "momentum": 70.45,
         "sentiment": 50.0,
@@ -449,14 +449,14 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 44.37,
-      "raw_score": 54.43,
+      "score": 47.37,
+      "raw_score": 57.43,
       "band": "starter",
-      "weight": 0.0549,
-      "confidence": 0.7,
+      "weight": 0.0652,
+      "confidence": 0.75,
       "components": {
         "momentum": 43.48,
-        "sentiment": 70.0,
+        "sentiment": 80.0,
         "volume": 52.71,
         "policy": 55.0,
         "volatility_penalty": 10.06
@@ -529,14 +529,14 @@
     {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
-      "score": 30.36,
-      "raw_score": 38.9,
+      "score": 24.36,
+      "raw_score": 32.9,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.65,
+      "confidence": 0.75,
       "components": {
         "momentum": 29.62,
-        "sentiment": 40.0,
+        "sentiment": 20.0,
         "volume": 50.27,
         "policy": 50.0,
         "volatility_penalty": 8.55
@@ -563,28 +563,30 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0178,
+      "target_weight": 0.0212,
       "current_weight": 0.0388,
-      "notional_delta": -2075.52,
-      "reason": "overweight by 2.10% vs target \u2014 trim",
+      "notional_delta": -1740.05,
+      "reason": "overweight by 1.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.61%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.4 (starter), contribution 52.0"
+        "theme 'Semiconductors (Broad)' score 47.4 (starter), contribution 55.0"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.02,
+      "target_weight": 0.0237,
       "current_weight": 0.0397,
-      "notional_delta": -1940.96,
-      "reason": "overweight by 1.97% vs target \u2014 trim",
+      "notional_delta": -1575.89,
+      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Calls ASML Europe's 'Greatest Company' Ahead Of Pitch For SpaceX's Terafab Vision: 'Should Be Treasured And Supported'\" \u00b7 overweight by 1.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.15%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.4 (starter), contribution 58.4"
+        "theme 'Semiconductors (Broad)' score 47.4 (starter), contribution 61.4",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -621,10 +623,10 @@
     {
       "symbol": "BAC",
       "action": "REDUCE",
-      "target_weight": 0.0309,
+      "target_weight": 0.0318,
       "current_weight": 0.0441,
-      "notional_delta": -1306.41,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet\" \u00b7 overweight by 1.32% vs target \u2014 trim",
+      "notional_delta": -1217.61,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet\" \u00b7 overweight by 1.23% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.44%",
         "theme=Financials & Rates",
@@ -637,14 +639,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0431,
+      "target_weight": 0.0432,
       "current_weight": 0.0228,
-      "notional_delta": 1998.04,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.03% vs target \u2014 add",
+      "notional_delta": 2007.91,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.04% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.4 (buy), contribution 73.5",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 73.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -668,14 +670,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0414,
+      "target_weight": 0.0415,
       "current_weight": 0.0187,
-      "notional_delta": 2240.53,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 2250.4,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.28% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.4 (buy), contribution 70.5",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 70.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -725,11 +727,11 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0097,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0194,
-      "notional_delta": -955.62,
-      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1911.24,
+      "reason": "theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-0.97%",
         "theme=EV & Clean Transport"
@@ -757,24 +759,28 @@
       "target_weight": 0.0,
       "current_weight": 0.0532,
       "notional_delta": -5245.05,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Apple's AI Moment, Spacex's $4 Trillion Valuation And More: This Week In Appleverse\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.94%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "JPM",
       "action": "REDUCE",
-      "target_weight": 0.0303,
+      "target_weight": 0.0313,
       "current_weight": 0.0429,
-      "notional_delta": -1241.89,
-      "reason": "overweight by 1.26% vs target \u2014 trim",
+      "notional_delta": -1143.23,
+      "reason": "trimming on mixed news flow \u2014 \"Apple's AI Moment, Spacex's $4 Trillion Valuation And More: This Week In Appleverse\" \u00b7 overweight by 1.16% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 58.7 (buy), contribution 67.0"
+        "theme 'Financials & Rates' score 58.7 (buy), contribution 67.0",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials"
     },
@@ -857,10 +863,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0548,
       "notional_delta": -5408.64,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Apple's AI Moment, Spacex's $4 Trillion Valuation And More: This Week In Appleverse\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.46%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials"
     },
@@ -870,7 +878,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0356,
       "notional_delta": -3507.88,
-      "reason": "exiting on mixed news flow \u2014 \"Trump AI Adviser Sriram Krishnan To Leave White House, Plans New Role Influencing AI Policy: Report\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Apple's AI Moment, Spacex's $4 Trillion Valuation And More: This Week In Appleverse\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-6.02%",
         "theme=AI & Compute",
@@ -967,14 +975,16 @@
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
-      "target_weight": 0.011,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.022,
-      "notional_delta": -1086.31,
-      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2172.62,
+      "reason": "exiting on mixed news flow \u2014 \"Apple's AI Moment, Spacex's $4 Trillion Valuation And More: This Week In Appleverse\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-7.80%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1025,14 +1035,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0171,
+      "target_weight": 0.0204,
       "current_weight": 0.0342,
-      "notional_delta": -1691.81,
-      "reason": "overweight by 1.71% vs target \u2014 trim",
+      "notional_delta": -1366.21,
+      "reason": "overweight by 1.38% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.81%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.4 (starter), contribution 49.9"
+        "theme 'Semiconductors (Broad)' score 47.4 (starter), contribution 52.9"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1056,10 +1066,10 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0314,
+      "target_weight": 0.0324,
       "current_weight": 0.0462,
-      "notional_delta": -1460.76,
-      "reason": "overweight by 1.48% vs target \u2014 trim",
+      "notional_delta": -1362.09,
+      "reason": "overweight by 1.38% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.17%",
         "theme=Financials & Rates",
@@ -1070,14 +1080,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0436,
+      "target_weight": 0.0437,
       "current_weight": 0.023,
-      "notional_delta": 2034.94,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.06% vs target \u2014 add",
+      "notional_delta": 2044.81,
+      "reason": "buying on positive news flow \u2014 \"Exxon\u2019s Move to Texas and Shareholder Votes Might Change The Case For Investing In Exxon Mobil (XOM)\" \u00b7 underweight by 2.07% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.4 (buy), contribution 74.4",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 74.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1116,14 +1126,14 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0178,
+      "target_weight": 0.0212,
       "current_weight": 0.0388,
-      "notional_delta": -2075.52,
-      "reason": "overweight by 2.10% vs target \u2014 trim",
+      "notional_delta": -1740.05,
+      "reason": "overweight by 1.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.61%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.4 (starter), contribution 52.0"
+        "theme 'Semiconductors (Broad)' score 47.4 (starter), contribution 55.0"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1133,14 +1143,16 @@
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.02,
+      "target_weight": 0.0237,
       "current_weight": 0.0397,
-      "notional_delta": -1940.96,
-      "reason": "overweight by 1.97% vs target \u2014 trim",
+      "notional_delta": -1575.89,
+      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Calls ASML Europe's 'Greatest Company' Ahead Of Pitch For SpaceX's Terafab Vision: 'Should Be Treasured And Supported'\" \u00b7 overweight by 1.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.15%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.4 (starter), contribution 58.4"
+        "theme 'Semiconductors (Broad)' score 47.4 (starter), contribution 61.4",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1186,10 +1198,10 @@
     {
       "symbol": "BAC",
       "action": "REDUCE",
-      "target_weight": 0.0309,
+      "target_weight": 0.0318,
       "current_weight": 0.0441,
-      "notional_delta": -1306.41,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet\" \u00b7 overweight by 1.32% vs target \u2014 trim",
+      "notional_delta": -1217.61,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet\" \u00b7 overweight by 1.23% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.44%",
         "theme=Financials & Rates",
@@ -1205,14 +1217,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0431,
+      "target_weight": 0.0432,
       "current_weight": 0.0228,
-      "notional_delta": 1998.04,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.03% vs target \u2014 add",
+      "notional_delta": 2007.91,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.04% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.4 (buy), contribution 73.5",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 73.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1242,14 +1254,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0414,
+      "target_weight": 0.0415,
       "current_weight": 0.0187,
-      "notional_delta": 2240.53,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 2250.4,
+      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.28% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.4 (buy), contribution 70.5",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 70.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1311,11 +1323,11 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0097,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0194,
-      "notional_delta": -955.62,
-      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1911.24,
+      "reason": "theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-0.97%",
         "theme=EV & Clean Transport"
@@ -1349,10 +1361,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0532,
       "notional_delta": -5245.05,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Apple's AI Moment, Spacex's $4 Trillion Valuation And More: This Week In Appleverse\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.94%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1362,14 +1376,16 @@
     {
       "symbol": "JPM",
       "action": "REDUCE",
-      "target_weight": 0.0303,
+      "target_weight": 0.0313,
       "current_weight": 0.0429,
-      "notional_delta": -1241.89,
-      "reason": "overweight by 1.26% vs target \u2014 trim",
+      "notional_delta": -1143.23,
+      "reason": "trimming on mixed news flow \u2014 \"Apple's AI Moment, Spacex's $4 Trillion Valuation And More: This Week In Appleverse\" \u00b7 overweight by 1.16% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 58.7 (buy), contribution 67.0"
+        "theme 'Financials & Rates' score 58.7 (buy), contribution 67.0",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1470,10 +1486,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0548,
       "notional_delta": -5408.64,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Apple's AI Moment, Spacex's $4 Trillion Valuation And More: This Week In Appleverse\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.46%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1486,7 +1504,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0356,
       "notional_delta": -3507.88,
-      "reason": "exiting on mixed news flow \u2014 \"Trump AI Adviser Sriram Krishnan To Leave White House, Plans New Role Influencing AI Policy: Report\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Apple's AI Moment, Spacex's $4 Trillion Valuation And More: This Week In Appleverse\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-6.02%",
         "theme=AI & Compute",
@@ -1604,14 +1622,16 @@
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
-      "target_weight": 0.011,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.022,
-      "notional_delta": -1086.31,
-      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2172.62,
+      "reason": "exiting on mixed news flow \u2014 \"Apple's AI Moment, Spacex's $4 Trillion Valuation And More: This Week In Appleverse\" \u00b7 theme score 24.4 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-7.80%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1674,14 +1694,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0171,
+      "target_weight": 0.0204,
       "current_weight": 0.0342,
-      "notional_delta": -1691.81,
-      "reason": "overweight by 1.71% vs target \u2014 trim",
+      "notional_delta": -1366.21,
+      "reason": "overweight by 1.38% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.81%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.4 (starter), contribution 49.9"
+        "theme 'Semiconductors (Broad)' score 47.4 (starter), contribution 52.9"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1711,10 +1731,10 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0314,
+      "target_weight": 0.0324,
       "current_weight": 0.0462,
-      "notional_delta": -1460.76,
-      "reason": "overweight by 1.48% vs target \u2014 trim",
+      "notional_delta": -1362.09,
+      "reason": "overweight by 1.38% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.17%",
         "theme=Financials & Rates",
@@ -1728,14 +1748,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0436,
+      "target_weight": 0.0437,
       "current_weight": 0.023,
-      "notional_delta": 2034.94,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.06% vs target \u2014 add",
+      "notional_delta": 2044.81,
+      "reason": "buying on positive news flow \u2014 \"Exxon\u2019s Move to Texas and Shareholder Votes Might Change The Case For Investing In Exxon Mobil (XOM)\" \u00b7 underweight by 2.07% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.4 (buy), contribution 74.4",
+        "theme 'Oil & Gas' score 63.5 (buy), contribution 74.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2339,6 +2359,10 @@
     {
       "t": "2026-06-07T09:53:02+00:00",
       "v": 98666.47
+    },
+    {
+      "t": "2026-06-07T12:00:58+00:00",
+      "v": 98666.47
     }
   ],
   "breaking_news": [
@@ -2347,7 +2371,7 @@
       "summary": "President Trump signed an executive order that puts some 8,000 high-ranking civil servants into a new category of employees who can be fired for any reason.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5742806/trump-federal-employees-civil-service-job-protections-schedule-f",
-      "published_utc": "2026-06-07T09:53:05+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -2356,7 +2380,7 @@
       "summary": "David Venturella's appointment as acting ICE director is the latest in a pattern: Many former employees of the private prison company GEO Group end up working at the federal agency, and vice versa.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5836625/geo-group-private-prisons-ice-close-ties",
-      "published_utc": "2026-06-07T09:53:05+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2365,7 +2389,7 @@
       "summary": "Shipping companies are looking for alternative routes as the Strait of Hormuz lockdown drags on.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5828377/as-strait-of-hormuz-stays-shut-companies-seek-new-routes-for-trade",
-      "published_utc": "2026-06-07T09:53:05+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2374,7 +2398,7 @@
       "summary": "Hurricane season is expected to be milder than usual this year. But that's not stopping cell phone companies from pulling out all the stops.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5830291/2026-hurricane-season-cell-phones",
-      "published_utc": "2026-06-07T09:53:05+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2383,7 +2407,7 @@
       "summary": "Just 3% of U.S. households pay for AI for personal use. Sign ups are growing \u2014 even though Americans have subscription fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5791661/chatgpt-gemini-claude-subscription-revenue-openai",
-      "published_utc": "2026-06-07T09:53:05+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2392,7 +2416,7 @@
       "summary": "Collecting Panini stickers is a World Cup tradition beloved in Europe and Latin America. In the U.S., interest has been building steadily, and this summer, the buzz is bigger than ever.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5844319/world-cup-2026-panini-stickers-album",
-      "published_utc": "2026-06-07T09:53:05+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2401,7 +2425,7 @@
       "summary": "U.S. employers added jobs for the third month in a row in May, while the unemployment rate held steady at 4.3%. But wage gains softened and likely failed to keep pace with rising prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5847669/jobs-labor-market-unemployment-wages-inflation",
-      "published_utc": "2026-06-07T09:53:05+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2410,7 +2434,7 @@
       "summary": "Amid widespread tech layoffs, some highly skilled workers are making radical career changes. Some laid-off workers are turning to lower paying temp jobs, and some are leaving tech altogether.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5788006/in-the-wake-of-layoffs-some-tech-workers-are-exploring-new-careers",
-      "published_utc": "2026-06-07T09:53:05+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2419,7 +2443,7 @@
       "summary": "Yusuf Ali, now 34, struggles with his memories living in Mogadishu surrounded by dark reminders of his past.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c98r7zxdxe7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2428,7 +2452,7 @@
       "summary": "Fifty years after his debut, Ilaiyaraaja remains one of the most celebrated composers in Indian cinema.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cm2pldw8x9zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2437,7 +2461,7 @@
       "summary": "The seven-month-old boy's shrouded body was wrapped in a Palestinian flag and carried by his father to the graveyard.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cly8lgn0x30o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2446,7 +2470,7 @@
       "summary": "After eight presidents in 10 years, many voters are looking for stability so the next president can focus on tackling crime and inequality.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c9d21184e7yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2455,16 +2479,16 @@
       "summary": "Iranian officials say technical staff have been denied visas, hours after the US said players could enter the country.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cy8286nqz87o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Huge crowds throng Madrid streets for Pope's open-air mass",
+      "headline": "Huge crowds throng Madrid streets for Pope's open-air Mass",
       "summary": "The pontiff waved at those gathered from his popemobile as he arrived at the Plaza de Cibeles.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c4gyejvzx9eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2473,7 +2497,7 @@
       "summary": "The BBC's Russia editor saw Putin's flagship economic event overshadowed by Ukrainian drones attacks.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c9q2gp52rgro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2482,17 +2506,8 @@
       "summary": "The US defence secretary was speaking in Normandy, 82 years after allied forces launched their operation to liberate Nazi-occupied north-western Europe.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c802e7jk458o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Who can buy shares in Elon Musk's SpaceX?",
-      "summary": "From next week individual investors can take a stake in Musk's rockets-to-AI company.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.com/news/articles/czx299wpp56o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
-      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -2500,17 +2515,8 @@
       "summary": "The Nasdaq saw its biggest daily fall since early 2025.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cwy2yq0dj58o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": -0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "The ancient trick making food waste useful and tasty",
-      "summary": "Instead of throwing away byproducts of food processing, fermentation is making them valuable.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
-      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -2518,7 +2524,25 @@
       "summary": "The US president said on Friday he expects to meet the leaders of top AI companies next week.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c98r8r7dz5no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T09:53:04+00:00",
+      "published_utc": "2026-06-07T12:01:02+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "The ancient trick making food waste useful and tasty",
+      "summary": "Instead of throwing away byproducts of food processing, fermentation is making them valuable.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-07T12:01:02+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "We need to stop AI developing without humans, says Anthropic co-founder",
+      "summary": "Jack Clark tells BBC's Newsnight AI could get to the point where it develops without human input.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.com/news/articles/cx2124z7g45o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-07T12:01:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
