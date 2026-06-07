@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-07T15:48:16+00:00",
+  "generated_at_utc": "2026-06-07T17:01:35+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 143,
-  "last_success_utc": "2026-06-07T14:17:34+00:00",
+  "cycle_count": 144,
+  "last_success_utc": "2026-06-07T15:48:16+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -417,14 +417,14 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 65.2,
-      "raw_score": 65.86,
+      "score": 63.89,
+      "raw_score": 64.56,
       "band": "buy",
-      "weight": 0.134,
+      "weight": 0.1296,
       "confidence": 1.0,
       "components": {
         "momentum": 55.73,
-        "sentiment": 100.0,
+        "sentiment": 95.65,
         "volume": 40.35,
         "policy": 55.0,
         "volatility_penalty": 0.67
@@ -465,15 +465,31 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 45.16,
-      "raw_score": 45.16,
+      "score": 46.96,
+      "raw_score": 46.96,
       "band": "starter",
-      "weight": 0.0571,
-      "confidence": 0.7,
+      "weight": 0.0641,
+      "confidence": 0.75,
       "components": {
         "momentum": 28.29,
-        "sentiment": 62.0,
+        "sentiment": 68.0,
         "volume": 51.23,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 44.12,
+      "raw_score": 44.12,
+      "band": "starter",
+      "weight": 0.0526,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 42.89,
+        "sentiment": 40.0,
+        "volume": 49.81,
         "policy": 50.0,
         "volatility_penalty": 0.0
       }
@@ -492,22 +508,6 @@
         "volume": 50.27,
         "policy": 50.0,
         "volatility_penalty": 8.55
-      }
-    },
-    {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 41.12,
-      "raw_score": 41.12,
-      "band": "starter",
-      "weight": 0.0457,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 42.89,
-        "sentiment": 30.0,
-        "volume": 49.81,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
       }
     },
     {
@@ -640,14 +640,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0451,
+      "target_weight": 0.0436,
       "current_weight": 0.0228,
-      "notional_delta": 2195.37,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.23% vs target \u2014 add",
+      "notional_delta": 2047.37,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.08% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 75.2",
+        "theme 'Oil & Gas' score 63.9 (buy), contribution 73.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -672,14 +672,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0433,
+      "target_weight": 0.0419,
       "current_weight": 0.0187,
-      "notional_delta": 2427.99,
-      "reason": "buying on positive news flow \u2014 \"Q1 Results Are In: Chevron Boosted U.S. Production 24% and Returned $6 Billion to Shareholders. Is CVX Stock a Buy Now?\" \u00b7 underweight by 2.46% vs target \u2014 add",
+      "notional_delta": 2289.86,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.32% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 72.2",
+        "theme 'Oil & Gas' score 63.9 (buy), contribution 70.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -716,15 +716,15 @@
     },
     {
       "symbol": "GD",
-      "action": "REDUCE",
-      "target_weight": 0.0158,
+      "action": "HOLD",
+      "target_weight": 0.0181,
       "current_weight": 0.0212,
-      "notional_delta": -532.04,
-      "reason": "overweight by 0.54% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.75%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 41.1 (starter), contribution 43.6"
+        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 46.6"
       ],
       "theme_key": "defense"
     },
@@ -807,15 +807,15 @@
     },
     {
       "symbol": "LMT",
-      "action": "REDUCE",
-      "target_weight": 0.0135,
+      "action": "HOLD",
+      "target_weight": 0.0157,
       "current_weight": 0.0204,
-      "notional_delta": -679.97,
-      "reason": "overweight by 0.69% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 41.1 (starter), contribution 37.4"
+        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 40.4"
       ],
       "theme_key": "defense"
     },
@@ -835,14 +835,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0229,
+      "target_weight": 0.0256,
       "current_weight": 0.024,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 45.2 (starter), contribution 55.0"
+        "theme 'Consumer Discretionary' score 47.0 (starter), contribution 56.9"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -940,7 +940,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.35%",
         "theme=Oil & Gas",
@@ -999,15 +999,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "REDUCE",
-      "target_weight": 0.0164,
+      "action": "HOLD",
+      "target_weight": 0.0188,
       "current_weight": 0.0234,
-      "notional_delta": -694.77,
-      "reason": "trimming on negative news flow \u2014 \"Spirit Airlines Won't Be The Last: IATA Chief Warns More Carriers Could Fail As Iran War Drives Up Fuel Costs\" \u00b7 overweight by 0.70% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on negative news flow \u2014 \"Spirit Airlines Won't Be The Last: IATA Chief Warns More Carriers Could Fail As Iran War Drives Up Fuel Costs\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.68%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 41.1 (starter), contribution 45.4",
+        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 48.4",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1019,7 +1019,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0239,
       "notional_delta": -2360.32,
-      "reason": "exiting on positive news flow \u2014 \"Is SLB N.V. (SLB) A Good Stock To Buy Now?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.97%",
         "theme=Oil & Gas",
@@ -1091,14 +1091,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0456,
+      "target_weight": 0.0442,
       "current_weight": 0.023,
-      "notional_delta": 2232.28,
-      "reason": "buying on positive news flow \u2014 \"Exxon\u2019s Move to Texas and Shareholder Votes Might Change The Case For Investing In Exxon Mobil (XOM)\" \u00b7 underweight by 2.26% vs target \u2014 add",
+      "notional_delta": 2094.14,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 76.1",
+        "theme 'Oil & Gas' score 63.9 (buy), contribution 74.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1107,10 +1107,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0179,
+      "target_weight": 0.0201,
       "current_weight": 0.0,
-      "notional_delta": 1766.13,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 45.2 (starter), contribution 43.0",
+      "notional_delta": 1983.2,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 47.0 (starter), contribution 44.8",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1121,10 +1121,10 @@
     {
       "symbol": "SBUX",
       "action": "BUY",
-      "target_weight": 0.0163,
+      "target_weight": 0.0183,
       "current_weight": 0.0,
-      "notional_delta": 1608.26,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 45.2 (starter), contribution 39.0",
+      "notional_delta": 1805.6,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 47.0 (starter), contribution 40.8",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -1245,14 +1245,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0451,
+      "target_weight": 0.0436,
       "current_weight": 0.0228,
-      "notional_delta": 2195.37,
-      "reason": "buying on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 underweight by 2.23% vs target \u2014 add",
+      "notional_delta": 2047.37,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.08% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 75.2",
+        "theme 'Oil & Gas' score 63.9 (buy), contribution 73.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1283,14 +1283,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0433,
+      "target_weight": 0.0419,
       "current_weight": 0.0187,
-      "notional_delta": 2427.99,
-      "reason": "buying on positive news flow \u2014 \"Q1 Results Are In: Chevron Boosted U.S. Production 24% and Returned $6 Billion to Shareholders. Is CVX Stock a Buy Now?\" \u00b7 underweight by 2.46% vs target \u2014 add",
+      "notional_delta": 2289.86,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.32% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 72.2",
+        "theme 'Oil & Gas' score 63.9 (buy), contribution 70.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1336,15 +1336,15 @@
     },
     {
       "symbol": "GD",
-      "action": "REDUCE",
-      "target_weight": 0.0158,
+      "action": "HOLD",
+      "target_weight": 0.0181,
       "current_weight": 0.0212,
-      "notional_delta": -532.04,
-      "reason": "overweight by 0.54% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.75%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 41.1 (starter), contribution 43.6"
+        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 46.6"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1445,15 +1445,15 @@
     },
     {
       "symbol": "LMT",
-      "action": "REDUCE",
-      "target_weight": 0.0135,
+      "action": "HOLD",
+      "target_weight": 0.0157,
       "current_weight": 0.0204,
-      "notional_delta": -679.97,
-      "reason": "overweight by 0.69% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 41.1 (starter), contribution 37.4"
+        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 40.4"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1479,14 +1479,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0229,
+      "target_weight": 0.0256,
       "current_weight": 0.024,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.53%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 45.2 (starter), contribution 55.0"
+        "theme 'Consumer Discretionary' score 47.0 (starter), contribution 56.9"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1605,7 +1605,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Will BP's Exploration-Led Upstream Strategy Drive Long-Term Growth?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.35%",
         "theme=Oil & Gas",
@@ -1676,15 +1676,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "REDUCE",
-      "target_weight": 0.0164,
+      "action": "HOLD",
+      "target_weight": 0.0188,
       "current_weight": 0.0234,
-      "notional_delta": -694.77,
-      "reason": "trimming on negative news flow \u2014 \"Spirit Airlines Won't Be The Last: IATA Chief Warns More Carriers Could Fail As Iran War Drives Up Fuel Costs\" \u00b7 overweight by 0.70% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on negative news flow \u2014 \"Spirit Airlines Won't Be The Last: IATA Chief Warns More Carriers Could Fail As Iran War Drives Up Fuel Costs\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.68%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 41.1 (starter), contribution 45.4",
+        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 48.4",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1699,7 +1699,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0239,
       "notional_delta": -2360.32,
-      "reason": "exiting on positive news flow \u2014 \"Is SLB N.V. (SLB) A Good Stock To Buy Now?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.97%",
         "theme=Oil & Gas",
@@ -1786,14 +1786,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0456,
+      "target_weight": 0.0442,
       "current_weight": 0.023,
-      "notional_delta": 2232.28,
-      "reason": "buying on positive news flow \u2014 \"Exxon\u2019s Move to Texas and Shareholder Votes Might Change The Case For Investing In Exxon Mobil (XOM)\" \u00b7 underweight by 2.26% vs target \u2014 add",
+      "notional_delta": 2094.14,
+      "reason": "buying on positive news flow \u2014 \"Why Short-Term Oil Volatility Is Giving Long-Term Investors a Once-in-a-Generation Gift to Buy ExxonMobil for Good\" \u00b7 underweight by 2.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.2 (buy), contribution 76.1",
+        "theme 'Oil & Gas' score 63.9 (buy), contribution 74.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1805,10 +1805,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0179,
+      "target_weight": 0.0201,
       "current_weight": 0.0,
-      "notional_delta": 1766.13,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 45.2 (starter), contribution 43.0",
+      "notional_delta": 1983.2,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 47.0 (starter), contribution 44.8",
       "factors": [
         "ret_5d=-2.01%",
         "rel_vol_5d=0.80",
@@ -1822,10 +1822,10 @@
     {
       "symbol": "SBUX",
       "action": "BUY",
-      "target_weight": 0.0163,
+      "target_weight": 0.0183,
       "current_weight": 0.0,
-      "notional_delta": 1608.26,
-      "reason": "new position \u2014 theme 'Consumer Discretionary' score 45.2 (starter), contribution 39.0",
+      "notional_delta": 1805.6,
+      "reason": "new position \u2014 theme 'Consumer Discretionary' score 47.0 (starter), contribution 40.8",
       "factors": [
         "ret_5d=-3.90%",
         "rel_vol_5d=1.09",
@@ -2428,6 +2428,10 @@
     {
       "t": "2026-06-07T15:48:10+00:00",
       "v": 98666.47
+    },
+    {
+      "t": "2026-06-07T17:01:34+00:00",
+      "v": 98666.47
     }
   ],
   "breaking_news": [
@@ -2436,7 +2440,7 @@
       "summary": "President Trump signed an executive order that puts some 8,000 high-ranking civil servants into a new category of employees who can be fired for any reason.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5742806/trump-federal-employees-civil-service-job-protections-schedule-f",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -2445,7 +2449,7 @@
       "summary": "David Venturella's appointment as acting ICE director is the latest in a pattern: Many former employees of the private prison company GEO Group end up working at the federal agency, and vice versa.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5836625/geo-group-private-prisons-ice-close-ties",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2454,7 +2458,7 @@
       "summary": "Shipping companies are looking for alternative routes as the Strait of Hormuz lockdown drags on.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/03/nx-s1-5828377/as-strait-of-hormuz-stays-shut-companies-seek-new-routes-for-trade",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2463,7 +2467,7 @@
       "summary": "Hurricane season is expected to be milder than usual this year. But that's not stopping cell phone companies from pulling out all the stops.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5830291/2026-hurricane-season-cell-phones",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2472,7 +2476,7 @@
       "summary": "Just 3% of U.S. households pay for AI for personal use. Sign ups are growing \u2014 even though Americans have subscription fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/04/nx-s1-5791661/chatgpt-gemini-claude-subscription-revenue-openai",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2481,7 +2485,7 @@
       "summary": "Collecting Panini stickers is a World Cup tradition beloved in Europe and Latin America. In the U.S., interest has been building steadily, and this summer, the buzz is bigger than ever.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5844319/world-cup-2026-panini-stickers-album",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2490,7 +2494,7 @@
       "summary": "U.S. employers added jobs for the third month in a row in May, while the unemployment rate held steady at 4.3%. But wage gains softened and likely failed to keep pace with rising prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5847669/jobs-labor-market-unemployment-wages-inflation",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2499,7 +2503,7 @@
       "summary": "Amid widespread tech layoffs, some highly skilled workers are making radical career changes. Some laid-off workers are turning to lower paying temp jobs, and some are leaving tech altogether.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/05/nx-s1-5788006/in-the-wake-of-layoffs-some-tech-workers-are-exploring-new-careers",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2508,7 +2512,7 @@
       "summary": "The suspect opened fire from a car in several locations before being shot dead.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cpwe8e80weyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2517,7 +2521,7 @@
       "summary": "After eight presidents in 10 years, many voters are looking for stability so the next president can focus on tackling crime and inequality.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c9d21184e7yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2526,7 +2530,7 @@
       "summary": "Yusuf Ali, now 34, struggles with his memories living in Mogadishu surrounded by dark reminders of his past.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c98r7zxdxe7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2535,16 +2539,7 @@
       "summary": "The pontiff waved at those gathered from his popemobile as he arrived at the Plaza de Cibeles.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c4gyejvzx9eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Hegseth attacks Europe over migration with beach 'invasion' D-Day speech",
-      "summary": "The US defence secretary was speaking in Normandy, 82 years after allied forces launched their operation to liberate Nazi-occupied north-western Europe.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c802e7jk458o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2553,7 +2548,7 @@
       "summary": "Incumbent Prime Minister Nikol Pashinyan is seeking a third term despite falling domestic support.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c3626n1epd5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2562,7 +2557,7 @@
       "summary": "The BBC's Russia editor saw Putin's flagship economic event overshadowed by Ukrainian drones attacks.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c9q2gp52rgro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2571,7 +2566,16 @@
       "summary": "Ukrainian officials say a Russian drone hit a storage facility for spent nuclear fuel near the Chornobyl nuclear plant.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cr7xr1g3nvvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Israel strikes Beirut suburb days after US-brokered truce",
+      "summary": "Israel says the attacks on the Lebanese capital were ordered  \"in response to Hezbollah's firing at Israeli territory\".",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c0qyevk8139o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2580,7 +2584,7 @@
       "summary": "Dalston's Pineapple Soda as asking people to throw away affected cans of its pineapple drink over fears they could cause injury.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/ce8j0mxy28do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2589,7 +2593,7 @@
       "summary": "Jack Clark tells BBC's Newsnight AI could get to the point where it develops without human input.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cx2124z7g45o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2598,7 +2602,7 @@
       "summary": "Instead of throwing away byproducts of food processing, fermentation is making them valuable.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c78kmj2kyklo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2607,7 +2611,7 @@
       "summary": "Fuelled by social media, the market for children's skincare is booming. Experts fear for the long-term impact on girls",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cx212x41evwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-07T15:48:16+00:00",
+      "published_utc": "2026-06-07T17:01:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
