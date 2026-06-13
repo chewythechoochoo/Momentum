@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-13T12:19:00+00:00",
+  "generated_at_utc": "2026-06-13T14:34:23+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 192,
-  "last_success_utc": "2026-06-13T10:41:50+00:00",
+  "cycle_count": 193,
+  "last_success_utc": "2026-06-13T12:19:00+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -517,38 +517,6 @@
       }
     },
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 59.17,
-      "raw_score": 59.37,
-      "band": "buy",
-      "weight": 0.0968,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 60.0,
-        "sentiment": 70.0,
-        "volume": 46.85,
-        "policy": 50.0,
-        "volatility_penalty": 0.2
-      }
-    },
-    {
-      "key": "oil_gas",
-      "name": "Oil & Gas",
-      "score": 55.83,
-      "raw_score": 56.49,
-      "band": "buy",
-      "weight": 0.0874,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 52.88,
-        "sentiment": 70.0,
-        "volume": 46.67,
-        "policy": 50.0,
-        "volatility_penalty": 0.65
-      }
-    },
-    {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
       "score": 54.34,
@@ -581,35 +549,51 @@
       }
     },
     {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 53.17,
+      "raw_score": 53.37,
+      "band": "starter",
+      "weight": 0.0775,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 60.0,
+        "sentiment": 50.0,
+        "volume": 46.85,
+        "policy": 50.0,
+        "volatility_penalty": 0.2
+      }
+    },
+    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 48.73,
-      "raw_score": 63.93,
+      "score": 52.23,
+      "raw_score": 67.43,
       "band": "starter",
-      "weight": 0.0712,
-      "confidence": 0.8,
+      "weight": 0.0908,
+      "confidence": 1.0,
       "components": {
         "momentum": 63.48,
-        "sentiment": 90.0,
+        "sentiment": 100.0,
         "volume": 32.67,
-        "policy": 50.0,
+        "policy": 55.0,
         "volatility_penalty": 15.19
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 43.17,
-      "raw_score": 53.68,
+      "key": "oil_gas",
+      "name": "Oil & Gas",
+      "score": 49.83,
+      "raw_score": 50.49,
       "band": "starter",
-      "weight": 0.0606,
-      "confidence": 1.0,
+      "weight": 0.0683,
+      "confidence": 0.65,
       "components": {
-        "momentum": 32.62,
-        "sentiment": 80.0,
-        "volume": 55.64,
-        "policy": 55.0,
-        "volatility_penalty": 10.51
+        "momentum": 52.88,
+        "sentiment": 50.0,
+        "volume": 46.67,
+        "policy": 50.0,
+        "volatility_penalty": 0.65
       }
     },
     {
@@ -626,6 +610,22 @@
         "volume": 34.09,
         "policy": 85.0,
         "volatility_penalty": 17.15
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 37.92,
+      "raw_score": 48.43,
+      "band": "hold_small",
+      "weight": 0.0375,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 32.62,
+        "sentiment": 62.5,
+        "volume": 55.64,
+        "policy": 55.0,
+        "volatility_penalty": 10.51
       }
     }
   ],
@@ -646,15 +646,15 @@
     },
     {
       "symbol": "AMD",
-      "action": "BUY",
-      "target_weight": 0.0223,
+      "action": "HOLD",
+      "target_weight": 0.014,
       "current_weight": 0.0166,
-      "notional_delta": 582.15,
-      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 underweight by 0.57% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.76%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 58.9",
+        "theme 'AI & Compute' score 37.9 (hold_small), contribution 53.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -678,17 +678,17 @@
     },
     {
       "symbol": "AVGO",
-      "action": "HOLD",
-      "target_weight": 0.018,
+      "action": "REDUCE",
+      "target_weight": 0.011,
       "current_weight": 0.0177,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Adobe's CFO Jumps Ship To Marvell For 'Once-In-A-Generation' AI Expansion\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -674.59,
+      "reason": "trimming on mixed news flow \u2014 \"Here's How Much You Would Have Made Owning Broadcom Stock In The Last 5 Years\" \u00b7 overweight by 0.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-10.82%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 47.7",
+        "theme 'AI & Compute' score 37.9 (hold_small), contribution 42.4",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -723,47 +723,45 @@
     },
     {
       "symbol": "COP",
-      "action": "HOLD",
-      "target_weight": 0.0274,
+      "action": "REDUCE",
+      "target_weight": 0.0212,
       "current_weight": 0.0283,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -718.16,
+      "reason": "overweight by 0.71% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.86%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 55.8 (buy), contribution 54.3"
+        "theme 'Oil & Gas' score 49.8 (starter), contribution 48.3"
       ],
       "theme_key": "oil_gas"
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.0233,
+      "action": "HOLD",
+      "target_weight": 0.0298,
       "current_weight": 0.0299,
-      "notional_delta": -669.49,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going On With CrowdStrike Stock Friday?\" \u00b7 overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"The Real Risk Inside CrowdStrike Stock\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.92%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.7 (starter), contribution 58.0",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Cybersecurity' score 52.2 (starter), contribution 61.5",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
     {
       "symbol": "CVX",
-      "action": "HOLD",
-      "target_weight": 0.0275,
+      "action": "REDUCE",
+      "target_weight": 0.0214,
       "current_weight": 0.0278,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Don't Be Fooled By The S&P 500's Record Run\u2014 One Wall Street Veteran Says The Real American Growth Story Is Elsewhere\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -645.77,
+      "reason": "overweight by 0.64% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.54%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 55.8 (buy), contribution 54.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Oil & Gas' score 49.8 (starter), contribution 48.7"
       ],
       "theme_key": "oil_gas"
     },
@@ -783,15 +781,15 @@
     {
       "symbol": "FTNT",
       "action": "HOLD",
-      "target_weight": 0.0226,
+      "target_weight": 0.0289,
       "current_weight": 0.0265,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Barclays Maintains Equal-Weight on Fortinet, Raises Price Target to $155\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"The Real Risk Inside CrowdStrike Stock\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.37%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.7 (starter), contribution 56.1",
-        "news_source=benzinga",
+        "theme 'Cybersecurity' score 52.2 (starter), contribution 59.6",
+        "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
@@ -799,14 +797,14 @@
     {
       "symbol": "GD",
       "action": "BUY",
-      "target_weight": 0.0351,
+      "target_weight": 0.0283,
       "current_weight": 0.0,
-      "notional_delta": 3557.46,
-      "reason": "buying on mixed news flow \u2014 \"Trump Says Iran 'Better Get Their Act Together' \u2014 Defense Stocks May Be Listening\" \u00b7 underweight by 3.51% vs target \u2014 add",
+      "notional_delta": 2868.25,
+      "reason": "buying on mixed news flow \u2014 \"Trump Says Iran 'Better Get Their Act Together' \u2014 Defense Stocks May Be Listening\" \u00b7 underweight by 2.83% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.80%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.2 (buy), contribution 73.3",
+        "theme 'Defense & Aerospace' score 53.2 (starter), contribution 67.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -818,13 +816,11 @@
       "target_weight": 0.0351,
       "current_weight": 0.0139,
       "notional_delta": 2147.52,
-      "reason": "buying on positive news flow \u2014 \"RBC Capital Reiterates Outperform on General Motors, Maintains $95 Price Target\" \u00b7 underweight by 2.12% vs target \u2014 add",
+      "reason": "underweight by 2.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.49%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 59.8 (buy), contribution 60.0",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'EV & Clean Transport' score 59.8 (buy), contribution 60.0"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -920,15 +916,15 @@
     },
     {
       "symbol": "LMT",
-      "action": "HOLD",
-      "target_weight": 0.0321,
+      "action": "REDUCE",
+      "target_weight": 0.0257,
       "current_weight": 0.0355,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Trump Says Iran 'Better Get Their Act Together' \u2014 Defense Stocks May Be Listening\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -995.55,
+      "reason": "trimming on mixed news flow \u2014 \"Trump Says Iran 'Better Get Their Act Together' \u2014 Defense Stocks May Be Listening\" \u00b7 overweight by 0.98% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.08%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.2 (buy), contribution 67.1",
+        "theme 'Defense & Aerospace' score 53.2 (starter), contribution 61.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1039,16 +1035,16 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0202,
+      "target_weight": 0.0125,
       "current_weight": 0.0163,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"SharonAI Gains On NVIDIA AI Factory Deal\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Arthur Hayes: Bitcoin Got 'Thrown Out With The AI Bathwater,' But Three Factors Could Pop The Bubble\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.04%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 53.4",
+        "theme 'AI & Compute' score 37.9 (hold_small), contribution 48.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -1058,10 +1054,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0011,
       "notional_delta": -112.77,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"The Real Risk Inside CrowdStrike Stock\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.27%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1081,14 +1079,16 @@
     {
       "symbol": "PANW",
       "action": "HOLD",
-      "target_weight": 0.0253,
+      "target_weight": 0.0321,
       "current_weight": 0.0295,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"The Real Risk Inside CrowdStrike Stock\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.42%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.7 (starter), contribution 62.8"
+        "theme 'Cybersecurity' score 52.2 (starter), contribution 66.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1139,17 +1139,17 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.0295,
+      "action": "REDUCE",
+      "target_weight": 0.0234,
       "current_weight": 0.0323,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Don't Be Fooled By The S&P 500's Record Run\u2014 One Wall Street Veteran Says The Real American Growth Story Is Elsewhere\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -906.32,
+      "reason": "trimming on mixed news flow \u2014 \"Trump Says Iran 'Better Get Their Act Together' \u2014 Defense Stocks May Be Listening\" \u00b7 overweight by 0.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.2 (buy), contribution 61.6",
+        "theme 'Defense & Aerospace' score 53.2 (starter), contribution 55.6",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "defense"
     },
@@ -1169,15 +1169,15 @@
     },
     {
       "symbol": "SLB",
-      "action": "HOLD",
-      "target_weight": 0.0324,
+      "action": "REDUCE",
+      "target_weight": 0.0257,
       "current_weight": 0.0342,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -857.66,
+      "reason": "overweight by 0.85% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.90%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 55.8 (buy), contribution 64.4"
+        "theme 'Oil & Gas' score 49.8 (starter), contribution 58.4"
       ],
       "theme_key": "oil_gas"
     },
@@ -1187,12 +1187,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.68,
-      "reason": "exiting on positive news flow \u2014 \"Stock Of The Day \u2013 Is This The Bottom For Super Micro Computer?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-35.02%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -1259,12 +1259,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0027,
       "notional_delta": -275.98,
-      "reason": "exiting on positive news flow \u2014 \"Don't Be Fooled By The S&P 500's Record Run\u2014 One Wall Street Veteran Says The Real American Growth Story Is Elsewhere\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on M&A (mixed) \u2014 \"UPDATED: 'Exxon Studies Takeover Targets Including Woodside Energy' - Bloomberg News\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.47%",
         "theme=Oil & Gas",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "event=M&A",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "oil_gas"
     },
@@ -1337,15 +1338,15 @@
     },
     {
       "symbol": "AMD",
-      "action": "BUY",
-      "target_weight": 0.0223,
+      "action": "HOLD",
+      "target_weight": 0.014,
       "current_weight": 0.0166,
-      "notional_delta": 582.15,
-      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 underweight by 0.57% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.76%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 58.9",
+        "theme 'AI & Compute' score 37.9 (hold_small), contribution 53.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1375,17 +1376,17 @@
     },
     {
       "symbol": "AVGO",
-      "action": "HOLD",
-      "target_weight": 0.018,
+      "action": "REDUCE",
+      "target_weight": 0.011,
       "current_weight": 0.0177,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Adobe's CFO Jumps Ship To Marvell For 'Once-In-A-Generation' AI Expansion\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -674.59,
+      "reason": "trimming on mixed news flow \u2014 \"Here's How Much You Would Have Made Owning Broadcom Stock In The Last 5 Years\" \u00b7 overweight by 0.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-10.82%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 47.7",
+        "theme 'AI & Compute' score 37.9 (hold_small), contribution 42.4",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1429,15 +1430,15 @@
     },
     {
       "symbol": "COP",
-      "action": "HOLD",
-      "target_weight": 0.0274,
+      "action": "REDUCE",
+      "target_weight": 0.0212,
       "current_weight": 0.0283,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -718.16,
+      "reason": "overweight by 0.71% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.86%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 55.8 (buy), contribution 54.3"
+        "theme 'Oil & Gas' score 49.8 (starter), contribution 48.3"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1446,17 +1447,17 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.0233,
+      "action": "HOLD",
+      "target_weight": 0.0298,
       "current_weight": 0.0299,
-      "notional_delta": -669.49,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going On With CrowdStrike Stock Friday?\" \u00b7 overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"The Real Risk Inside CrowdStrike Stock\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.92%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.7 (starter), contribution 58.0",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Cybersecurity' score 52.2 (starter), contribution 61.5",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1465,17 +1466,15 @@
     },
     {
       "symbol": "CVX",
-      "action": "HOLD",
-      "target_weight": 0.0275,
+      "action": "REDUCE",
+      "target_weight": 0.0214,
       "current_weight": 0.0278,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Don't Be Fooled By The S&P 500's Record Run\u2014 One Wall Street Veteran Says The Real American Growth Story Is Elsewhere\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -645.77,
+      "reason": "overweight by 0.64% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.54%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 55.8 (buy), contribution 54.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Oil & Gas' score 49.8 (starter), contribution 48.7"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1501,15 +1500,15 @@
     {
       "symbol": "FTNT",
       "action": "HOLD",
-      "target_weight": 0.0226,
+      "target_weight": 0.0289,
       "current_weight": 0.0265,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Barclays Maintains Equal-Weight on Fortinet, Raises Price Target to $155\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"The Real Risk Inside CrowdStrike Stock\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.37%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.7 (starter), contribution 56.1",
-        "news_source=benzinga",
+        "theme 'Cybersecurity' score 52.2 (starter), contribution 59.6",
+        "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
@@ -1520,14 +1519,14 @@
     {
       "symbol": "GD",
       "action": "BUY",
-      "target_weight": 0.0351,
+      "target_weight": 0.0283,
       "current_weight": 0.0,
-      "notional_delta": 3557.46,
-      "reason": "buying on mixed news flow \u2014 \"Trump Says Iran 'Better Get Their Act Together' \u2014 Defense Stocks May Be Listening\" \u00b7 underweight by 3.51% vs target \u2014 add",
+      "notional_delta": 2868.25,
+      "reason": "buying on mixed news flow \u2014 \"Trump Says Iran 'Better Get Their Act Together' \u2014 Defense Stocks May Be Listening\" \u00b7 underweight by 2.83% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.80%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.2 (buy), contribution 73.3",
+        "theme 'Defense & Aerospace' score 53.2 (starter), contribution 67.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1542,13 +1541,11 @@
       "target_weight": 0.0351,
       "current_weight": 0.0139,
       "notional_delta": 2147.52,
-      "reason": "buying on positive news flow \u2014 \"RBC Capital Reiterates Outperform on General Motors, Maintains $95 Price Target\" \u00b7 underweight by 2.12% vs target \u2014 add",
+      "reason": "underweight by 2.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.49%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 59.8 (buy), contribution 60.0",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'EV & Clean Transport' score 59.8 (buy), contribution 60.0"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1665,15 +1662,15 @@
     },
     {
       "symbol": "LMT",
-      "action": "HOLD",
-      "target_weight": 0.0321,
+      "action": "REDUCE",
+      "target_weight": 0.0257,
       "current_weight": 0.0355,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Trump Says Iran 'Better Get Their Act Together' \u2014 Defense Stocks May Be Listening\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -995.55,
+      "reason": "trimming on mixed news flow \u2014 \"Trump Says Iran 'Better Get Their Act Together' \u2014 Defense Stocks May Be Listening\" \u00b7 overweight by 0.98% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.08%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.2 (buy), contribution 67.1",
+        "theme 'Defense & Aerospace' score 53.2 (starter), contribution 61.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1808,16 +1805,16 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0202,
+      "target_weight": 0.0125,
       "current_weight": 0.0163,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"SharonAI Gains On NVIDIA AI Factory Deal\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Arthur Hayes: Bitcoin Got 'Thrown Out With The AI Bathwater,' But Three Factors Could Pop The Bubble\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.04%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 53.4",
+        "theme 'AI & Compute' score 37.9 (hold_small), contribution 48.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1830,10 +1827,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0011,
       "notional_delta": -112.77,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"The Real Risk Inside CrowdStrike Stock\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.27%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1859,14 +1858,16 @@
     {
       "symbol": "PANW",
       "action": "HOLD",
-      "target_weight": 0.0253,
+      "target_weight": 0.0321,
       "current_weight": 0.0295,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"The Real Risk Inside CrowdStrike Stock\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.42%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.7 (starter), contribution 62.8"
+        "theme 'Cybersecurity' score 52.2 (starter), contribution 66.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1929,17 +1930,17 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.0295,
+      "action": "REDUCE",
+      "target_weight": 0.0234,
       "current_weight": 0.0323,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Don't Be Fooled By The S&P 500's Record Run\u2014 One Wall Street Veteran Says The Real American Growth Story Is Elsewhere\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -906.32,
+      "reason": "trimming on mixed news flow \u2014 \"Trump Says Iran 'Better Get Their Act Together' \u2014 Defense Stocks May Be Listening\" \u00b7 overweight by 0.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.2 (buy), contribution 61.6",
+        "theme 'Defense & Aerospace' score 53.2 (starter), contribution 55.6",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1965,15 +1966,15 @@
     },
     {
       "symbol": "SLB",
-      "action": "HOLD",
-      "target_weight": 0.0324,
+      "action": "REDUCE",
+      "target_weight": 0.0257,
       "current_weight": 0.0342,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -857.66,
+      "reason": "overweight by 0.85% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.90%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 55.8 (buy), contribution 64.4"
+        "theme 'Oil & Gas' score 49.8 (starter), contribution 58.4"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1986,12 +1987,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.68,
-      "reason": "exiting on positive news flow \u2014 \"Stock Of The Day \u2013 Is This The Bottom For Super Micro Computer?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-35.02%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2073,12 +2074,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0027,
       "notional_delta": -275.98,
-      "reason": "exiting on positive news flow \u2014 \"Don't Be Fooled By The S&P 500's Record Run\u2014 One Wall Street Veteran Says The Real American Growth Story Is Elsewhere\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on M&A (mixed) \u2014 \"UPDATED: 'Exxon Studies Takeover Targets Including Woodside Energy' - Bloomberg News\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.47%",
         "theme=Oil & Gas",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "event=M&A",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2911,6 +2913,10 @@
     {
       "t": "2026-06-13T12:18:57+00:00",
       "v": 101355.2
+    },
+    {
+      "t": "2026-06-13T14:34:21+00:00",
+      "v": 101355.2
     }
   ],
   "breaking_news": [
@@ -2919,7 +2925,7 @@
       "summary": "There's a sneaky way companies add new chemicals in our food, and it is there by design, and totally legal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/11/nx-s1-5853203/how-companies-can-sneak-new-chemicals-past-the-fda-and-into-our-food-and-supplements",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2928,7 +2934,7 @@
       "summary": "SpaceX will go public on the NASDAQ Friday, likely to set a record as the most valuable IPO in history. NASDAQ is making a big play for IPOs, with new rules aimed at drawing in companies like SpaceX.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5850321/spacex-ipo-expected-to-set-record-when-it-goes-public-friday",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2937,7 +2943,7 @@
       "summary": "Are smartphones causing people to have fewer children?  A provocative new working paper explores the persistent drop in birth rates since the iPhone was introduced nearly two decades ago.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5851795/iphone-birth-rate-drop",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2946,7 +2952,7 @@
       "summary": "For decades, immigrants who are legal permanent residents in the U.S. could get loans through the Small Business Administration, a core pillar of small-business lending. Not anymore.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5853375/changes-loans-trump-small-business-immigrants-entrepreneurs-green-card",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2955,7 +2961,7 @@
       "summary": "The initial public offering from the rocket and AI company raised some $75 billion, making the company one of the biggest in the world \u2014 and likely making Elon Musk a trillionaire.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5855004/stock-ai-spacex-ipo-elon-musk",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2964,7 +2970,7 @@
       "summary": "The decision paves the way for a proposed $111 billion merger uniting two rival studio giants \u2014 Paramount, owner of CBS, and the much larger Warner, which includes HBO and CNN.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856567/paramount-acquisition-warner-bros-discovery-merger",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2973,7 +2979,7 @@
       "summary": "The Justice Department closed its investigation into the proposed $110 billion merger of Paramount and Warner Brothers Discovery, saying it found no threat to competition or consumers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856563/justice-dept-approves-paramounts-acquisition-of-warner-bros-discovery",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2982,7 +2988,7 @@
       "summary": "Workers began removing President Trump's name from the facade of the Kennedy Center early Saturday, hours after a court-ordered Friday deadline to remove references to Trump from the building.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/g-s1-128017/trump-name-kennedy-center",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2991,7 +2997,7 @@
       "summary": "The approval marks a key development in the merger that will reshape media, allowing the continue of the takeover of the Hollywood studio, which owns CNN and HBO.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cjwgled9jxwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3000,7 +3006,7 @@
       "summary": "Anthropic's Claude Fable 5, released publicly this week, sparked concerns about cybersecurity and hacking.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c932g3v3e13o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3009,7 +3015,7 @@
       "summary": "Ni\u00f1o Guerrero was killed in a \"swift and lethal kinetic strike,\" the US President wrote in a social media post.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cp36z37knlko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3018,7 +3024,7 @@
       "summary": "Fifa says numerous empty seats were visible in the near-sell-out Group A match between South Korea and the Czech Republic because of fans remaining on concourses.",
       "source": "BBC World",
       "url": "https://www.bbc.com/sport/football/articles/c14y0dp6vrdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3027,7 +3033,7 @@
       "summary": "Stars of the hit TV show say they did not know their on-screen husbands had previous convictions.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/clypy0ndvjlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3036,7 +3042,7 @@
       "summary": "The right-wing Swiss People's Party calls the plan a \"sustainability initiative\",  but opponents say it is a recipe for chaos.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cx23kz7e76po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3045,7 +3051,7 @@
       "summary": "The strikes come as Iran's foreign minister says a deal to end fighting with the US is close.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c39y02x98k8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:19:00+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3054,7 +3060,7 @@
       "summary": "The BBC's Samira Hussain explains everything you need to know about SpaceX's historic IPO.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/videos/c4gyx0x1d5ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:18:59+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3063,7 +3069,7 @@
       "summary": "It is never easy to speak up when a fellow diner says \"let's just divide it!\"",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/czxqdznzy7ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:18:59+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3072,7 +3078,7 @@
       "summary": "Agave plants grow wild in India and new distillers are using them to create a spirits industry.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cdrpe4vly5mo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:18:59+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3081,7 +3087,7 @@
       "summary": "From trade wars to soaring ticket prices, the 2026 World Cup is unlike any before it. Faisal Islam explores what this tournament reveals about our changing global economy.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cpv32417nlwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:18:59+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3090,7 +3096,7 @@
       "summary": "The economy shrank slightly in April as the Iran war began to have an impact on businesses, official data shows.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c77y47248k4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T12:18:59+00:00",
+      "published_utc": "2026-06-13T14:34:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
