@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-13T10:41:50+00:00",
+  "generated_at_utc": "2026-06-13T12:19:00+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 191,
-  "last_success_utc": "2026-06-13T08:14:41+00:00",
+  "cycle_count": 192,
+  "last_success_utc": "2026-06-13T10:41:50+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -485,6 +485,38 @@
       }
     },
     {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 61.53,
+      "raw_score": 61.53,
+      "band": "buy",
+      "weight": 0.1218,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 61.52,
+        "sentiment": 75.0,
+        "volume": 47.1,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 59.84,
+      "raw_score": 69.13,
+      "band": "buy",
+      "weight": 0.1161,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 62.07,
+        "sentiment": 100.0,
+        "volume": 46.48,
+        "policy": 50.0,
+        "volatility_penalty": 9.29
+      }
+    },
+    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 59.17,
@@ -498,38 +530,6 @@
         "volume": 46.85,
         "policy": 50.0,
         "volatility_penalty": 0.2
-      }
-    },
-    {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 57.03,
-      "raw_score": 57.03,
-      "band": "buy",
-      "weight": 0.1068,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 61.52,
-        "sentiment": 60.0,
-        "volume": 47.1,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 56.26,
-      "raw_score": 58.29,
-      "band": "buy",
-      "weight": 0.0912,
-      "confidence": 0.75,
-      "components": {
-        "momentum": 50.4,
-        "sentiment": 80.0,
-        "volume": 45.64,
-        "policy": 50.0,
-        "volatility_penalty": 2.03
       }
     },
     {
@@ -565,19 +565,19 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 52.34,
-      "raw_score": 61.63,
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 53.26,
+      "raw_score": 55.29,
       "band": "starter",
-      "weight": 0.0911,
-      "confidence": 1.0,
+      "weight": 0.0801,
+      "confidence": 0.7,
       "components": {
-        "momentum": 62.07,
-        "sentiment": 75.0,
-        "volume": 46.48,
+        "momentum": 50.4,
+        "sentiment": 70.0,
+        "volume": 45.64,
         "policy": 50.0,
-        "volatility_penalty": 9.29
+        "volatility_penalty": 2.03
       }
     },
     {
@@ -597,6 +597,22 @@
       }
     },
     {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 43.17,
+      "raw_score": 53.68,
+      "band": "starter",
+      "weight": 0.0606,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 32.62,
+        "sentiment": 80.0,
+        "volume": 55.64,
+        "policy": 55.0,
+        "volatility_penalty": 10.51
+      }
+    },
+    {
       "key": "clean_energy",
       "name": "Clean Energy",
       "score": 42.11,
@@ -610,22 +626,6 @@
         "volume": 34.09,
         "policy": 85.0,
         "volatility_penalty": 17.15
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 41.67,
-      "raw_score": 52.18,
-      "band": "starter",
-      "weight": 0.0556,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 32.62,
-        "sentiment": 75.0,
-        "volume": 55.64,
-        "policy": 55.0,
-        "volatility_penalty": 10.51
       }
     }
   ],
@@ -646,17 +646,17 @@
     },
     {
       "symbol": "AMD",
-      "action": "HOLD",
-      "target_weight": 0.0205,
+      "action": "BUY",
+      "target_weight": 0.0223,
       "current_weight": 0.0166,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Citigroup Upgrades Advanced Micro Devices to Buy, Raises Price Target to $575\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 582.15,
+      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 underweight by 0.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.76%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 57.4",
+        "theme 'AI & Compute' score 43.2 (starter), contribution 58.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -679,14 +679,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0165,
+      "target_weight": 0.018,
       "current_weight": 0.0177,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Adobe's CFO Jumps Ship To Marvell For 'Once-In-A-Generation' AI Expansion\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-10.82%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 46.2",
+        "theme 'AI & Compute' score 43.2 (starter), contribution 47.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -815,14 +815,14 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0272,
+      "target_weight": 0.0351,
       "current_weight": 0.0139,
-      "notional_delta": 1346.82,
-      "reason": "buying on positive news flow \u2014 \"RBC Capital Reiterates Outperform on General Motors, Maintains $95 Price Target\" \u00b7 underweight by 1.33% vs target \u2014 add",
+      "notional_delta": 2147.52,
+      "reason": "buying on positive news flow \u2014 \"RBC Capital Reiterates Outperform on General Motors, Maintains $95 Price Target\" \u00b7 underweight by 2.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.49%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.3 (starter), contribution 52.5",
+        "theme 'EV & Clean Transport' score 59.8 (buy), contribution 60.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -861,15 +861,15 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.0356,
+      "action": "BUY",
+      "target_weight": 0.0405,
       "current_weight": 0.032,
-      "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Medline Distribution Center Fire Creates Near-Term Headwind: Analyst\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 865.63,
+      "reason": "buying on negative news flow \u2014 \"Medline Distribution Center Fire Creates Near-Term Headwind: Analyst\" \u00b7 underweight by 0.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.56%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 71.0",
+        "theme 'Consumer Discretionary' score 61.5 (buy), contribution 75.5",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -907,16 +907,14 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0276,
+      "target_weight": 0.0241,
       "current_weight": 0.0261,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"American Express, Live Nation And A Health Care Stock: CNBC's 'Final Trades'\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 56.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 53.3 (starter), contribution 53.5"
       ],
       "theme_key": "biotech"
     },
@@ -983,14 +981,14 @@
     {
       "symbol": "MRNA",
       "action": "HOLD",
-      "target_weight": 0.0328,
+      "target_weight": 0.0289,
       "current_weight": 0.0287,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=4.92%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 67.2"
+        "theme 'Biotech & Pharma' score 53.3 (starter), contribution 64.2"
       ],
       "theme_key": "biotech"
     },
@@ -1026,29 +1024,29 @@
     },
     {
       "symbol": "NKE",
-      "action": "HOLD",
-      "target_weight": 0.0343,
+      "action": "BUY",
+      "target_weight": 0.0392,
       "current_weight": 0.0313,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 799.36,
+      "reason": "underweight by 0.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 68.5"
+        "theme 'Consumer Discretionary' score 61.5 (buy), contribution 73.0"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0185,
+      "target_weight": 0.0202,
       "current_weight": 0.0163,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"SharonAI Gains On NVIDIA AI Factory Deal\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.04%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 51.9",
+        "theme 'AI & Compute' score 43.2 (starter), contribution 53.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1097,14 +1095,14 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0308,
+      "target_weight": 0.027,
       "current_weight": 0.0271,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Value Investors Question SpaceX's Record IPO: 'It's The Future That Kills You'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.03%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 63.0",
+        "theme 'Biotech & Pharma' score 53.3 (starter), contribution 60.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1126,14 +1124,14 @@
     {
       "symbol": "RIVN",
       "action": "BUY",
-      "target_weight": 0.0276,
+      "target_weight": 0.0356,
       "current_weight": 0.0,
-      "notional_delta": 2797.39,
-      "reason": "buying on positive news flow \u2014 \"Is Rivian Stock A Buy Now? Inside The R2 SUV Delivery Milestone And 2026 Guidance\" \u00b7 underweight by 2.76% vs target \u2014 add",
+      "notional_delta": 3608.23,
+      "reason": "buying on positive news flow \u2014 \"Is Rivian Stock A Buy Now? Inside The R2 SUV Delivery Milestone And 2026 Guidance\" \u00b7 underweight by 3.56% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.61%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.3 (starter), contribution 53.3",
+        "theme 'EV & Clean Transport' score 59.8 (buy), contribution 60.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1157,15 +1155,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0369,
+      "action": "BUY",
+      "target_weight": 0.042,
       "current_weight": 0.0335,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 860.39,
+      "reason": "underweight by 0.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.96%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 73.8"
+        "theme 'Consumer Discretionary' score 61.5 (buy), contribution 78.3"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1201,14 +1199,14 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0363,
+      "target_weight": 0.0454,
       "current_weight": 0.0229,
-      "notional_delta": 1355.54,
-      "reason": "buying on mixed news flow \u2014 \"SpaceX's Mega IPO Just Made Elon Musk A Trillionaire\u2014 And Lawmakers Are Now Pushing 'Reason #1,000,000,000,000' To Tax The Ultra-Rich\" \u00b7 underweight by 1.34% vs target \u2014 add",
+      "notional_delta": 2277.87,
+      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 underweight by 2.25% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.09%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.3 (starter), contribution 70.1",
+        "theme 'EV & Clean Transport' score 59.8 (buy), contribution 77.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1339,17 +1337,17 @@
     },
     {
       "symbol": "AMD",
-      "action": "HOLD",
-      "target_weight": 0.0205,
+      "action": "BUY",
+      "target_weight": 0.0223,
       "current_weight": 0.0166,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Citigroup Upgrades Advanced Micro Devices to Buy, Raises Price Target to $575\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 582.15,
+      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 underweight by 0.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.76%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 57.4",
+        "theme 'AI & Compute' score 43.2 (starter), contribution 58.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1378,14 +1376,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0165,
+      "target_weight": 0.018,
       "current_weight": 0.0177,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Adobe's CFO Jumps Ship To Marvell For 'Once-In-A-Generation' AI Expansion\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-10.82%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 46.2",
+        "theme 'AI & Compute' score 43.2 (starter), contribution 47.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1541,14 +1539,14 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0272,
+      "target_weight": 0.0351,
       "current_weight": 0.0139,
-      "notional_delta": 1346.82,
-      "reason": "buying on positive news flow \u2014 \"RBC Capital Reiterates Outperform on General Motors, Maintains $95 Price Target\" \u00b7 underweight by 1.33% vs target \u2014 add",
+      "notional_delta": 2147.52,
+      "reason": "buying on positive news flow \u2014 \"RBC Capital Reiterates Outperform on General Motors, Maintains $95 Price Target\" \u00b7 underweight by 2.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.49%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.3 (starter), contribution 52.5",
+        "theme 'EV & Clean Transport' score 59.8 (buy), contribution 60.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1596,15 +1594,15 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.0356,
+      "action": "BUY",
+      "target_weight": 0.0405,
       "current_weight": 0.032,
-      "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Medline Distribution Center Fire Creates Near-Term Headwind: Analyst\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 865.63,
+      "reason": "buying on negative news flow \u2014 \"Medline Distribution Center Fire Creates Near-Term Headwind: Analyst\" \u00b7 underweight by 0.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.56%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 71.0",
+        "theme 'Consumer Discretionary' score 61.5 (buy), contribution 75.5",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1651,16 +1649,14 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0276,
+      "target_weight": 0.0241,
       "current_weight": 0.0261,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"American Express, Live Nation And A Health Care Stock: CNBC's 'Final Trades'\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 56.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 53.3 (starter), contribution 53.5"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1742,14 +1738,14 @@
     {
       "symbol": "MRNA",
       "action": "HOLD",
-      "target_weight": 0.0328,
+      "target_weight": 0.0289,
       "current_weight": 0.0287,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=4.92%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 67.2"
+        "theme 'Biotech & Pharma' score 53.3 (starter), contribution 64.2"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1794,15 +1790,15 @@
     },
     {
       "symbol": "NKE",
-      "action": "HOLD",
-      "target_weight": 0.0343,
+      "action": "BUY",
+      "target_weight": 0.0392,
       "current_weight": 0.0313,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 799.36,
+      "reason": "underweight by 0.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 68.5"
+        "theme 'Consumer Discretionary' score 61.5 (buy), contribution 73.0"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1812,14 +1808,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0185,
+      "target_weight": 0.0202,
       "current_weight": 0.0163,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"SharonAI Gains On NVIDIA AI Factory Deal\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.04%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 51.9",
+        "theme 'AI & Compute' score 43.2 (starter), contribution 53.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1880,14 +1876,14 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0308,
+      "target_weight": 0.027,
       "current_weight": 0.0271,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Value Investors Question SpaceX's Record IPO: 'It's The Future That Kills You'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.03%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 63.0",
+        "theme 'Biotech & Pharma' score 53.3 (starter), contribution 60.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1915,14 +1911,14 @@
     {
       "symbol": "RIVN",
       "action": "BUY",
-      "target_weight": 0.0276,
+      "target_weight": 0.0356,
       "current_weight": 0.0,
-      "notional_delta": 2797.39,
-      "reason": "buying on positive news flow \u2014 \"Is Rivian Stock A Buy Now? Inside The R2 SUV Delivery Milestone And 2026 Guidance\" \u00b7 underweight by 2.76% vs target \u2014 add",
+      "notional_delta": 3608.23,
+      "reason": "buying on positive news flow \u2014 \"Is Rivian Stock A Buy Now? Inside The R2 SUV Delivery Milestone And 2026 Guidance\" \u00b7 underweight by 3.56% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.61%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.3 (starter), contribution 53.3",
+        "theme 'EV & Clean Transport' score 59.8 (buy), contribution 60.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1952,15 +1948,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0369,
+      "action": "BUY",
+      "target_weight": 0.042,
       "current_weight": 0.0335,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 860.39,
+      "reason": "underweight by 0.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.96%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 73.8"
+        "theme 'Consumer Discretionary' score 61.5 (buy), contribution 78.3"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2005,14 +2001,14 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0363,
+      "target_weight": 0.0454,
       "current_weight": 0.0229,
-      "notional_delta": 1355.54,
-      "reason": "buying on mixed news flow \u2014 \"SpaceX's Mega IPO Just Made Elon Musk A Trillionaire\u2014 And Lawmakers Are Now Pushing 'Reason #1,000,000,000,000' To Tax The Ultra-Rich\" \u00b7 underweight by 1.34% vs target \u2014 add",
+      "notional_delta": 2277.87,
+      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 underweight by 2.25% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.09%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.3 (starter), contribution 70.1",
+        "theme 'EV & Clean Transport' score 59.8 (buy), contribution 77.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2911,6 +2907,10 @@
     {
       "t": "2026-06-13T10:41:47+00:00",
       "v": 101355.2
+    },
+    {
+      "t": "2026-06-13T12:18:57+00:00",
+      "v": 101355.2
     }
   ],
   "breaking_news": [
@@ -2919,7 +2919,7 @@
       "summary": "There's a sneaky way companies add new chemicals in our food, and it is there by design, and totally legal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/11/nx-s1-5853203/how-companies-can-sneak-new-chemicals-past-the-fda-and-into-our-food-and-supplements",
-      "published_utc": "2026-06-13T10:41:50+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2928,7 +2928,7 @@
       "summary": "SpaceX will go public on the NASDAQ Friday, likely to set a record as the most valuable IPO in history. NASDAQ is making a big play for IPOs, with new rules aimed at drawing in companies like SpaceX.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5850321/spacex-ipo-expected-to-set-record-when-it-goes-public-friday",
-      "published_utc": "2026-06-13T10:41:50+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2937,7 +2937,7 @@
       "summary": "Are smartphones causing people to have fewer children?  A provocative new working paper explores the persistent drop in birth rates since the iPhone was introduced nearly two decades ago.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5851795/iphone-birth-rate-drop",
-      "published_utc": "2026-06-13T10:41:50+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2946,7 +2946,7 @@
       "summary": "For decades, immigrants who are legal permanent residents in the U.S. could get loans through the Small Business Administration, a core pillar of small-business lending. Not anymore.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5853375/changes-loans-trump-small-business-immigrants-entrepreneurs-green-card",
-      "published_utc": "2026-06-13T10:41:50+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2955,7 +2955,7 @@
       "summary": "The initial public offering from the rocket and AI company raised some $75 billion, making the company one of the biggest in the world \u2014 and likely making Elon Musk a trillionaire.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5855004/stock-ai-spacex-ipo-elon-musk",
-      "published_utc": "2026-06-13T10:41:50+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2964,7 +2964,7 @@
       "summary": "The decision paves the way for a proposed $111 billion merger uniting two rival studio giants \u2014 Paramount, owner of CBS, and the much larger Warner, which includes HBO and CNN.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856567/paramount-acquisition-warner-bros-discovery-merger",
-      "published_utc": "2026-06-13T10:41:50+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2973,7 +2973,7 @@
       "summary": "The Justice Department closed its investigation into the proposed $110 billion merger of Paramount and Warner Brothers Discovery, saying it found no threat to competition or consumers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856563/justice-dept-approves-paramounts-acquisition-of-warner-bros-discovery",
-      "published_utc": "2026-06-13T10:41:50+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2982,7 +2982,7 @@
       "summary": "Workers began removing President Trump's name from the facade of the Kennedy Center early Saturday, hours after a court-ordered Friday deadline to remove references to Trump from the building.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/g-s1-128017/trump-name-kennedy-center",
-      "published_utc": "2026-06-13T10:41:50+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2991,7 +2991,7 @@
       "summary": "The approval marks a key development in the merger that will reshape media, allowing the continue of the takeover of the Hollywood studio, which owns CNN and HBO.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cjwgled9jxwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3000,7 +3000,7 @@
       "summary": "Anthropic's Claude Fable 5, released publicly this week, sparked concerns about cybersecurity and hacking.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c932g3v3e13o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3009,7 +3009,7 @@
       "summary": "Ni\u00f1o Guerrero was killed in a \"swift and lethal kinetic strike,\" the US President wrote in a social media post.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cp36z37knlko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3018,7 +3018,7 @@
       "summary": "Fifa says numerous empty seats were visible in the near-sell-out Group A match between South Korea and the Czech Republic because of fans remaining on concourses.",
       "source": "BBC World",
       "url": "https://www.bbc.com/sport/football/articles/c14y0dp6vrdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3027,7 +3027,7 @@
       "summary": "Stars of the hit TV show say they did not know their on-screen husbands had previous convictions.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/clypy0ndvjlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3036,16 +3036,16 @@
       "summary": "The right-wing Swiss People's Party calls the plan a \"sustainability initiative\",  but opponents say it is a recipe for chaos.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cx23kz7e76po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Deal to end fighting would lead to Hormuz reopening, Iran says",
-      "summary": "The deal which will pave the way for hostilities to end is close to being finalised, the US, Iran and mediators Pakistan say.",
+      "headline": "Israel carries out air strikes on Lebanon, state media says, as Iran claims deal with US near",
+      "summary": "The strikes come as Iran's foreign minister says a deal to end fighting with the US is close.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c39y02x98k8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:19:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3054,7 +3054,7 @@
       "summary": "The BBC's Samira Hussain explains everything you need to know about SpaceX's historic IPO.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/videos/c4gyx0x1d5ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:18:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3063,7 +3063,7 @@
       "summary": "It is never easy to speak up when a fellow diner says \"let's just divide it!\"",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/czxqdznzy7ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:18:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3072,7 +3072,7 @@
       "summary": "Agave plants grow wild in India and new distillers are using them to create a spirits industry.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cdrpe4vly5mo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:18:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3081,7 +3081,7 @@
       "summary": "From trade wars to soaring ticket prices, the 2026 World Cup is unlike any before it. Faisal Islam explores what this tournament reveals about our changing global economy.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cpv32417nlwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:18:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3090,7 +3090,7 @@
       "summary": "The economy shrank slightly in April as the Iran war began to have an impact on businesses, official data shows.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c77y47248k4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T10:41:49+00:00",
+      "published_utc": "2026-06-13T12:18:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
