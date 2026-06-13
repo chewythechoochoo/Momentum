@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-13T20:38:45+00:00",
+  "generated_at_utc": "2026-06-13T21:54:30+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 197,
-  "last_success_utc": "2026-06-13T19:01:43+00:00",
+  "cycle_count": 198,
+  "last_success_utc": "2026-06-13T20:38:45+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -469,6 +469,22 @@
   ],
   "themes": [
     {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 69.29,
+      "raw_score": 69.29,
+      "band": "buy",
+      "weight": 0.1476,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 83.61,
+        "sentiment": 68.0,
+        "volume": 44.74,
+        "policy": 65.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
       "score": 69.03,
@@ -487,33 +503,17 @@
     {
       "key": "defense",
       "name": "Defense & Aerospace",
-      "score": 66.74,
-      "raw_score": 66.94,
+      "score": 66.67,
+      "raw_score": 66.87,
       "band": "buy",
-      "weight": 0.1391,
+      "weight": 0.1389,
       "confidence": 1.0,
       "components": {
         "momentum": 60.0,
-        "sentiment": 95.24,
+        "sentiment": 95.0,
         "volume": 46.85,
         "policy": 50.0,
         "volatility_penalty": 0.2
-      }
-    },
-    {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 62.39,
-      "raw_score": 62.39,
-      "band": "buy",
-      "weight": 0.1028,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 83.61,
-        "sentiment": 50.0,
-        "volume": 44.74,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
       }
     },
     {
@@ -538,8 +538,8 @@
       "score": 59.84,
       "raw_score": 69.13,
       "band": "buy",
-      "weight": 0.1103,
-      "confidence": 0.9,
+      "weight": 0.1074,
+      "confidence": 0.85,
       "components": {
         "momentum": 62.07,
         "sentiment": 100.0,
@@ -554,8 +554,8 @@
       "score": 54.34,
       "raw_score": 66.31,
       "band": "starter",
-      "weight": 0.088,
-      "confidence": 0.8,
+      "weight": 0.0856,
+      "confidence": 0.75,
       "components": {
         "momentum": 84.87,
         "sentiment": 50.0,
@@ -633,10 +633,10 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0289,
+      "target_weight": 0.0281,
       "current_weight": 0.0502,
-      "notional_delta": -2158.79,
-      "reason": "overweight by 2.13% vs target \u2014 trim",
+      "notional_delta": -2239.87,
+      "reason": "overweight by 2.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=14.99%",
         "theme=Semiconductors (Broad)",
@@ -662,16 +662,14 @@
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.0306,
+      "target_weight": 0.0297,
       "current_weight": 0.0518,
-      "notional_delta": -2146.72,
-      "reason": "trimming on mixed news flow \u2014 \"Here's How Much You Would Have Made Owning ASML Holding Stock In The Last 15 Years\" \u00b7 overweight by 2.12% vs target \u2014 trim",
+      "notional_delta": -2237.94,
+      "reason": "overweight by 2.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.05%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 54.3 (starter), contribution 65.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Semiconductors (Broad)' score 54.3 (starter), contribution 65.4"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -705,15 +703,17 @@
     },
     {
       "symbol": "BAC",
-      "action": "REDUCE",
-      "target_weight": 0.036,
+      "action": "HOLD",
+      "target_weight": 0.0514,
       "current_weight": 0.0546,
-      "notional_delta": -1886.28,
-      "reason": "overweight by 1.86% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Goldman Sachs quietly resets oil price forecast for 2027\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.55%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.4 (buy), contribution 64.1"
+        "theme 'Financials & Rates' score 69.3 (buy), contribution 71.0",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -797,14 +797,14 @@
     {
       "symbol": "GD",
       "action": "BUY",
-      "target_weight": 0.0501,
+      "target_weight": 0.05,
       "current_weight": 0.0,
-      "notional_delta": 5077.79,
-      "reason": "buying on positive news flow \u2014 \"3 High Backlog Defense Stocks to Buy in June\" \u00b7 underweight by 5.01% vs target \u2014 add",
+      "notional_delta": 5067.66,
+      "reason": "buying on positive news flow \u2014 \"3 High Backlog Defense Stocks to Buy in June\" \u00b7 underweight by 5.00% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.80%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 80.9",
+        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 80.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -813,10 +813,10 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0334,
+      "target_weight": 0.0325,
       "current_weight": 0.0139,
-      "notional_delta": 1975.22,
-      "reason": "underweight by 1.95% vs target \u2014 add",
+      "notional_delta": 1884.0,
+      "reason": "underweight by 1.86% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.49%",
         "theme=EV & Clean Transport",
@@ -842,14 +842,16 @@
     {
       "symbol": "GS",
       "action": "REDUCE",
-      "target_weight": 0.033,
+      "target_weight": 0.0476,
       "current_weight": 0.0529,
-      "notional_delta": -2021.87,
-      "reason": "overweight by 1.99% vs target \u2014 trim",
+      "notional_delta": -542.09,
+      "reason": "trimming on positive news flow \u2014 \"Goldman Sachs quietly resets oil price forecast for 2027\" \u00b7 overweight by 0.53% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.31%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.4 (buy), contribution 58.9"
+        "theme 'Financials & Rates' score 69.3 (buy), contribution 65.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -869,17 +871,17 @@
     },
     {
       "symbol": "JPM",
-      "action": "REDUCE",
-      "target_weight": 0.0338,
+      "action": "HOLD",
+      "target_weight": 0.0486,
       "current_weight": 0.0519,
-      "notional_delta": -1833.83,
-      "reason": "trimming on mixed news flow \u2014 \"The SpaceX IPO May Be Quietly Creating A Massive Bitcoin Opportunity\" \u00b7 overweight by 1.81% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Goldman Sachs quietly resets oil price forecast for 2027\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.34%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.4 (buy), contribution 60.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 69.3 (buy), contribution 67.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -913,14 +915,14 @@
     {
       "symbol": "LMT",
       "action": "BUY",
-      "target_weight": 0.0462,
+      "target_weight": 0.0461,
       "current_weight": 0.0355,
-      "notional_delta": 1082.23,
-      "reason": "buying on positive news flow \u2014 \"3 High Backlog Defense Stocks to Buy in June\" \u00b7 underweight by 1.07% vs target \u2014 add",
+      "notional_delta": 1072.1,
+      "reason": "buying on positive news flow \u2014 \"3 High Backlog Defense Stocks to Buy in June\" \u00b7 underweight by 1.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.08%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 74.7",
+        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 74.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -929,10 +931,10 @@
     {
       "symbol": "LRCX",
       "action": "REDUCE",
-      "target_weight": 0.0286,
+      "target_weight": 0.0278,
       "current_weight": 0.0488,
-      "notional_delta": -2043.71,
-      "reason": "overweight by 2.02% vs target \u2014 trim",
+      "notional_delta": -2124.79,
+      "reason": "overweight by 2.10% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.96%",
         "theme=Semiconductors (Broad)",
@@ -988,10 +990,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0539,
       "notional_delta": -5462.49,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Goldman Sachs quietly resets oil price forecast for 2027\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=3.48%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -1115,10 +1119,10 @@
     {
       "symbol": "RIVN",
       "action": "BUY",
-      "target_weight": 0.0338,
+      "target_weight": 0.0329,
       "current_weight": 0.0,
-      "notional_delta": 3425.79,
-      "reason": "underweight by 3.38% vs target \u2014 add",
+      "notional_delta": 3334.57,
+      "reason": "underweight by 3.29% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.61%",
         "theme=EV & Clean Transport",
@@ -1136,7 +1140,7 @@
       "factors": [
         "unrealized_pl=1.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 69.2",
+        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 69.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1191,10 +1195,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0431,
+      "target_weight": 0.042,
       "current_weight": 0.0229,
-      "notional_delta": 2044.75,
-      "reason": "buying on positive news flow \u2014 \"Mark Cuban Was Once Richer Than Elon Musk And Jeff Bezos Combined\u2014 But The Reason He 'Didn't Care' Will Surprise You: 'I Was Trying To Win W\" \u00b7 underweight by 2.02% vs target \u2014 add",
+      "notional_delta": 1933.26,
+      "reason": "buying on positive news flow \u2014 \"Mark Cuban Was Once Richer Than Elon Musk And Jeff Bezos Combined\u2014 But The Reason He 'Didn't Care' Will Surprise You: 'I Was Trying To Win W\" \u00b7 underweight by 1.91% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.09%",
         "theme=EV & Clean Transport",
@@ -1238,10 +1242,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.57,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Goldman Sachs quietly resets oil price forecast for 2027\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.41%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -1316,10 +1322,10 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0289,
+      "target_weight": 0.0281,
       "current_weight": 0.0502,
-      "notional_delta": -2158.79,
-      "reason": "overweight by 2.13% vs target \u2014 trim",
+      "notional_delta": -2239.87,
+      "reason": "overweight by 2.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=14.99%",
         "theme=Semiconductors (Broad)",
@@ -1351,16 +1357,14 @@
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.0306,
+      "target_weight": 0.0297,
       "current_weight": 0.0518,
-      "notional_delta": -2146.72,
-      "reason": "trimming on mixed news flow \u2014 \"Here's How Much You Would Have Made Owning ASML Holding Stock In The Last 15 Years\" \u00b7 overweight by 2.12% vs target \u2014 trim",
+      "notional_delta": -2237.94,
+      "reason": "overweight by 2.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.05%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 54.3 (starter), contribution 65.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Semiconductors (Broad)' score 54.3 (starter), contribution 65.4"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1403,15 +1407,17 @@
     },
     {
       "symbol": "BAC",
-      "action": "REDUCE",
-      "target_weight": 0.036,
+      "action": "HOLD",
+      "target_weight": 0.0514,
       "current_weight": 0.0546,
-      "notional_delta": -1886.28,
-      "reason": "overweight by 1.86% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Goldman Sachs quietly resets oil price forecast for 2027\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.55%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.4 (buy), contribution 64.1"
+        "theme 'Financials & Rates' score 69.3 (buy), contribution 71.0",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1513,14 +1519,14 @@
     {
       "symbol": "GD",
       "action": "BUY",
-      "target_weight": 0.0501,
+      "target_weight": 0.05,
       "current_weight": 0.0,
-      "notional_delta": 5077.79,
-      "reason": "buying on positive news flow \u2014 \"3 High Backlog Defense Stocks to Buy in June\" \u00b7 underweight by 5.01% vs target \u2014 add",
+      "notional_delta": 5067.66,
+      "reason": "buying on positive news flow \u2014 \"3 High Backlog Defense Stocks to Buy in June\" \u00b7 underweight by 5.00% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.80%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 80.9",
+        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 80.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1532,10 +1538,10 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0334,
+      "target_weight": 0.0325,
       "current_weight": 0.0139,
-      "notional_delta": 1975.22,
-      "reason": "underweight by 1.95% vs target \u2014 add",
+      "notional_delta": 1884.0,
+      "reason": "underweight by 1.86% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.49%",
         "theme=EV & Clean Transport",
@@ -1567,14 +1573,16 @@
     {
       "symbol": "GS",
       "action": "REDUCE",
-      "target_weight": 0.033,
+      "target_weight": 0.0476,
       "current_weight": 0.0529,
-      "notional_delta": -2021.87,
-      "reason": "overweight by 1.99% vs target \u2014 trim",
+      "notional_delta": -542.09,
+      "reason": "trimming on positive news flow \u2014 \"Goldman Sachs quietly resets oil price forecast for 2027\" \u00b7 overweight by 0.53% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.31%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.4 (buy), contribution 58.9"
+        "theme 'Financials & Rates' score 69.3 (buy), contribution 65.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1600,17 +1608,17 @@
     },
     {
       "symbol": "JPM",
-      "action": "REDUCE",
-      "target_weight": 0.0338,
+      "action": "HOLD",
+      "target_weight": 0.0486,
       "current_weight": 0.0519,
-      "notional_delta": -1833.83,
-      "reason": "trimming on mixed news flow \u2014 \"The SpaceX IPO May Be Quietly Creating A Massive Bitcoin Opportunity\" \u00b7 overweight by 1.81% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Goldman Sachs quietly resets oil price forecast for 2027\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.34%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.4 (buy), contribution 60.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 69.3 (buy), contribution 67.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1653,14 +1661,14 @@
     {
       "symbol": "LMT",
       "action": "BUY",
-      "target_weight": 0.0462,
+      "target_weight": 0.0461,
       "current_weight": 0.0355,
-      "notional_delta": 1082.23,
-      "reason": "buying on positive news flow \u2014 \"3 High Backlog Defense Stocks to Buy in June\" \u00b7 underweight by 1.07% vs target \u2014 add",
+      "notional_delta": 1072.1,
+      "reason": "buying on positive news flow \u2014 \"3 High Backlog Defense Stocks to Buy in June\" \u00b7 underweight by 1.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.08%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 74.7",
+        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 74.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1672,10 +1680,10 @@
     {
       "symbol": "LRCX",
       "action": "REDUCE",
-      "target_weight": 0.0286,
+      "target_weight": 0.0278,
       "current_weight": 0.0488,
-      "notional_delta": -2043.71,
-      "reason": "overweight by 2.02% vs target \u2014 trim",
+      "notional_delta": -2124.79,
+      "reason": "overweight by 2.10% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.96%",
         "theme=Semiconductors (Broad)",
@@ -1743,10 +1751,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0539,
       "notional_delta": -5462.49,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Goldman Sachs quietly resets oil price forecast for 2027\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=3.48%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1897,10 +1907,10 @@
     {
       "symbol": "RIVN",
       "action": "BUY",
-      "target_weight": 0.0338,
+      "target_weight": 0.0329,
       "current_weight": 0.0,
-      "notional_delta": 3425.79,
-      "reason": "underweight by 3.38% vs target \u2014 add",
+      "notional_delta": 3334.57,
+      "reason": "underweight by 3.29% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.61%",
         "theme=EV & Clean Transport",
@@ -1921,7 +1931,7 @@
       "factors": [
         "unrealized_pl=1.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 69.2",
+        "theme 'Defense & Aerospace' score 66.7 (buy), contribution 69.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1988,10 +1998,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0431,
+      "target_weight": 0.042,
       "current_weight": 0.0229,
-      "notional_delta": 2044.75,
-      "reason": "buying on positive news flow \u2014 \"Mark Cuban Was Once Richer Than Elon Musk And Jeff Bezos Combined\u2014 But The Reason He 'Didn't Care' Will Surprise You: 'I Was Trying To Win W\" \u00b7 underweight by 2.02% vs target \u2014 add",
+      "notional_delta": 1933.26,
+      "reason": "buying on positive news flow \u2014 \"Mark Cuban Was Once Richer Than Elon Musk And Jeff Bezos Combined\u2014 But The Reason He 'Didn't Care' Will Surprise You: 'I Was Trying To Win W\" \u00b7 underweight by 1.91% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.09%",
         "theme=EV & Clean Transport",
@@ -2044,10 +2054,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.57,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Goldman Sachs quietly resets oil price forecast for 2027\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.41%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2921,6 +2933,10 @@
     {
       "t": "2026-06-13T20:38:41+00:00",
       "v": 101355.2
+    },
+    {
+      "t": "2026-06-13T21:54:27+00:00",
+      "v": 101355.2
     }
   ],
   "breaking_news": [
@@ -2929,7 +2945,7 @@
       "summary": "There's a sneaky way companies add new chemicals in our food, and it is there by design, and totally legal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/11/nx-s1-5853203/how-companies-can-sneak-new-chemicals-past-the-fda-and-into-our-food-and-supplements",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2938,7 +2954,7 @@
       "summary": "SpaceX will go public on the NASDAQ Friday, likely to set a record as the most valuable IPO in history. NASDAQ is making a big play for IPOs, with new rules aimed at drawing in companies like SpaceX.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5850321/spacex-ipo-expected-to-set-record-when-it-goes-public-friday",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:30+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2947,7 +2963,7 @@
       "summary": "Are smartphones causing people to have fewer children?  A provocative new working paper explores the persistent drop in birth rates since the iPhone was introduced nearly two decades ago.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5851795/iphone-birth-rate-drop",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:30+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2956,7 +2972,7 @@
       "summary": "For decades, immigrants who are legal permanent residents in the U.S. could get loans through the Small Business Administration, a core pillar of small-business lending. Not anymore.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5853375/changes-loans-trump-small-business-immigrants-entrepreneurs-green-card",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2965,7 +2981,7 @@
       "summary": "The initial public offering from the rocket and AI company raised some $75 billion, making the company one of the biggest in the world \u2014 and likely making Elon Musk a trillionaire.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5855004/stock-ai-spacex-ipo-elon-musk",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:30+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2974,7 +2990,7 @@
       "summary": "The decision paves the way for a proposed $111 billion merger uniting two rival studio giants \u2014 Paramount, owner of CBS, and the much larger Warner, which includes HBO and CNN.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856567/paramount-acquisition-warner-bros-discovery-merger",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2983,7 +2999,7 @@
       "summary": "The Justice Department closed its investigation into the proposed $110 billion merger of Paramount and Warner Brothers Discovery, saying it found no threat to competition or consumers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856563/justice-dept-approves-paramounts-acquisition-of-warner-bros-discovery",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2992,7 +3008,7 @@
       "summary": "Workers finished removing President Trump's name from the facade of the Kennedy Center early Saturday, hours after a court-ordered Friday deadline to remove references to Trump from the building.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/g-s1-128017/kennedy-center-trump-name-remove",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3001,7 +3017,7 @@
       "summary": "Maj Gen Rabe Abubakar's death highlights continuing security challenges facing parts of the country.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgq4veq2eqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3010,7 +3026,7 @@
       "summary": "Crews erected scaffolding on Friday as onlookers gathered into the evening, though storms delayed the work until Saturday.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c5yzd4dgxw4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3019,7 +3035,7 @@
       "summary": "The woman, 35, was pulled from the water by members of the public and then airlifted to hospital, police say.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c3ryw807133o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3028,7 +3044,7 @@
       "summary": "Ni\u00f1o Guerrero was killed in a \"swift and lethal kinetic strike,\" the US President wrote in a social media post.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cp36z37knlko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3037,7 +3053,7 @@
       "summary": "Stars of the hit TV show say they did not know their on-screen husbands had previous convictions.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/clypy0ndvjlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3046,7 +3062,7 @@
       "summary": "The right-wing Swiss People's Party calls the plan a \"sustainability initiative\",  but opponents say it is a recipe for chaos.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cx23kz7e76po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3055,7 +3071,7 @@
       "summary": "The US president's comments come as Iran says an exact date has not been decided, but it \"will not be tomorrow\".",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvglmn49xz0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3064,7 +3080,7 @@
       "summary": "The BBC's Samira Hussain explains everything you need to know about SpaceX's historic IPO.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/videos/c4gyx0x1d5ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3073,7 +3089,7 @@
       "summary": "It is never easy to speak up when a fellow diner says \"let's just divide it!\"",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/czxqdznzy7ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3082,7 +3098,7 @@
       "summary": "Agave plants grow wild in India and new distillers are using them to create a spirits industry.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cdrpe4vly5mo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3091,7 +3107,7 @@
       "summary": "From trade wars to soaring ticket prices, the 2026 World Cup is unlike any before it. Faisal Islam explores what this tournament reveals about our changing global economy.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cpv32417nlwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3100,7 +3116,7 @@
       "summary": "The economy shrank slightly in April as the Iran war began to have an impact on businesses, official data shows.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c77y47248k4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T20:38:45+00:00",
+      "published_utc": "2026-06-13T21:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
