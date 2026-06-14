@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-13T23:19:51+00:00",
+  "generated_at_utc": "2026-06-14T01:40:57+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 199,
-  "last_success_utc": "2026-06-13T21:54:30+00:00",
+  "cycle_count": 200,
+  "last_success_utc": "2026-06-13T23:19:51+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -517,16 +517,32 @@
       }
     },
     {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 61.09,
+      "raw_score": 63.12,
+      "band": "buy",
+      "weight": 0.1203,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 50.4,
+        "sentiment": 94.44,
+        "volume": 45.64,
+        "policy": 55.0,
+        "volatility_penalty": 2.03
+      }
+    },
+    {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 60.55,
-      "raw_score": 61.2,
+      "score": 60.22,
+      "raw_score": 60.87,
       "band": "buy",
-      "weight": 0.1185,
+      "weight": 0.1174,
       "confidence": 1.0,
       "components": {
         "momentum": 52.88,
-        "sentiment": 85.72,
+        "sentiment": 84.62,
         "volume": 46.67,
         "policy": 50.0,
         "volatility_penalty": 0.65
@@ -538,8 +554,8 @@
       "score": 59.84,
       "raw_score": 69.13,
       "band": "buy",
-      "weight": 0.1132,
-      "confidence": 0.95,
+      "weight": 0.1161,
+      "confidence": 1.0,
       "components": {
         "momentum": 62.07,
         "sentiment": 100.0,
@@ -581,22 +597,6 @@
       }
     },
     {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 47.26,
-      "raw_score": 49.29,
-      "band": "starter",
-      "weight": 0.0612,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 50.4,
-        "sentiment": 50.0,
-        "volume": 45.64,
-        "policy": 50.0,
-        "volatility_penalty": 2.03
-      }
-    },
-    {
       "key": "clean_energy",
       "name": "Clean Energy",
       "score": 42.61,
@@ -615,14 +615,14 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 34.17,
-      "raw_score": 44.68,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
+      "score": 37.17,
+      "raw_score": 47.68,
+      "band": "hold_small",
+      "weight": 0.033,
       "confidence": 1.0,
       "components": {
         "momentum": 32.62,
-        "sentiment": 50.0,
+        "sentiment": 60.0,
         "volume": 55.64,
         "policy": 55.0,
         "volatility_penalty": 10.51
@@ -646,11 +646,11 @@
     },
     {
       "symbol": "AMD",
-      "action": "REDUCE",
-      "target_weight": 0.0083,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0166,
-      "notional_delta": -839.04,
-      "reason": "trimming on mixed news flow \u2014 \"Micron Stock Has Become Volatile, But Key Metric Hints at Further Gains\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1678.07,
+      "reason": "exiting on mixed news flow \u2014 \"Micron Stock Has Become Volatile, But Key Metric Hints at Further Gains\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.76%",
         "theme=AI & Compute",
@@ -675,11 +675,11 @@
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.0088,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0177,
-      "notional_delta": -894.75,
-      "reason": "theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1789.49,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.82%",
         "theme=AI & Compute"
@@ -718,16 +718,16 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0373,
+      "target_weight": 0.037,
       "current_weight": 0.0283,
-      "notional_delta": 913.66,
-      "reason": "buying on positive news flow \u2014 \"Oil Hits Lowest Since Early March on Potential Hormuz Reopening\" \u00b7 underweight by 0.90% vs target \u2014 add",
+      "notional_delta": 883.25,
+      "reason": "buying on mixed news flow \u2014 \"Jim Cramer Returns To ConocoPhillips (COP) As Oil Prices Touch $96\" \u00b7 underweight by 0.87% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.86%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 60.5 (buy), contribution 59.1",
+        "theme 'Oil & Gas' score 60.2 (buy), contribution 58.7",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "oil_gas"
     },
@@ -750,14 +750,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0375,
+      "target_weight": 0.0372,
       "current_weight": 0.0278,
-      "notional_delta": 986.05,
-      "reason": "buying on positive news flow \u2014 \"Oil Hits Lowest Since Early March on Potential Hormuz Reopening\" \u00b7 underweight by 0.97% vs target \u2014 add",
+      "notional_delta": 955.64,
+      "reason": "buying on positive news flow \u2014 \"Wall Street Has 18 Buy Ratings on ConocoPhillips and Zero Sells. Our Price Target Says They Are All Wrong\" \u00b7 underweight by 0.94% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.54%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 60.5 (buy), contribution 59.4",
+        "theme 'Oil & Gas' score 60.2 (buy), contribution 59.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -811,10 +811,10 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0342,
+      "target_weight": 0.0351,
       "current_weight": 0.0139,
-      "notional_delta": 2056.3,
-      "reason": "underweight by 2.03% vs target \u2014 add",
+      "notional_delta": 2147.52,
+      "reason": "underweight by 2.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.49%",
         "theme=EV & Clean Transport",
@@ -824,11 +824,11 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "REDUCE",
-      "target_weight": 0.0076,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0152,
-      "notional_delta": -767.96,
-      "reason": "trimming on positive news flow \u2014 \"Jim Cramer Says SpaceX's Mega Debut Could Unleash A Wave Of AI Deals In The Week Ahead\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1535.92,
+      "reason": "exiting on positive news flow \u2014 \"Jim Cramer Says SpaceX's Mega Debut Could Unleash A Wave Of AI Deals In The Week Ahead\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.88%",
         "theme=AI & Compute",
@@ -896,15 +896,17 @@
     },
     {
       "symbol": "LLY",
-      "action": "REDUCE",
-      "target_weight": 0.0182,
+      "action": "BUY",
+      "target_weight": 0.0367,
       "current_weight": 0.0261,
-      "notional_delta": -803.09,
-      "reason": "overweight by 0.79% vs target \u2014 trim",
+      "notional_delta": 1071.99,
+      "reason": "buying on positive news flow \u2014 \"Arbutus Biopharma Corporation (ABUS) Reports Q1 2026 Results\" \u00b7 underweight by 1.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 47.3 (starter), contribution 47.5"
+        "theme 'Biotech & Pharma' score 61.1 (buy), contribution 61.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -953,11 +955,11 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "trimming on mixed news flow \u2014 \"SpaceX Stock Jumped After IPO: Here's Why It May Reverse Soon\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "reason": "exiting on mixed news flow \u2014 \"SpaceX Stock Jumped After IPO: Here's Why It May Reverse Soon\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.74%",
         "theme=AI & Compute",
@@ -968,15 +970,17 @@
     },
     {
       "symbol": "MRNA",
-      "action": "REDUCE",
-      "target_weight": 0.0223,
+      "action": "BUY",
+      "target_weight": 0.0431,
       "current_weight": 0.0287,
-      "notional_delta": -650.94,
-      "reason": "overweight by 0.64% vs target \u2014 trim",
+      "notional_delta": 1457.25,
+      "reason": "buying on positive news flow \u2014 \"Arbutus Biopharma Corporation (ABUS) Reports Q1 2026 Results\" \u00b7 underweight by 1.44% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.92%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 47.3 (starter), contribution 58.2"
+        "theme 'Biotech & Pharma' score 61.1 (buy), contribution 72.0",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -995,11 +999,11 @@
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0067,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0133,
-      "notional_delta": -674.11,
-      "reason": "trimming on positive news flow \u2014 \"Jim Cramer Says SpaceX's Mega Debut Could Unleash A Wave Of AI Deals In The Week Ahead\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1348.21,
+      "reason": "exiting on positive news flow \u2014 \"Jim Cramer Says SpaceX's Mega Debut Could Unleash A Wave Of AI Deals In The Week Ahead\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=AI & Compute",
@@ -1024,16 +1028,16 @@
     },
     {
       "symbol": "NVDA",
-      "action": "REDUCE",
-      "target_weight": 0.0081,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0163,
-      "notional_delta": -825.08,
-      "reason": "trimming on mixed news flow \u2014 \"Micron Stock Has Become Volatile, But Key Metric Hints at Further Gains\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1650.15,
+      "reason": "exiting on positive news flow \u2014 \"SpaceX IPO Sets the Stage, These Five Tech Companies Could Follow\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.04%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1058,7 +1062,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Oil Hits Lowest Since Early March on Potential Hormuz Reopening\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Wall Street Has 18 Buy Ratings on ConocoPhillips and Zero Sells. Our Price Target Says They Are All Wrong\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.00%",
         "theme=Oil & Gas",
@@ -1085,15 +1089,17 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.0207,
+      "action": "BUY",
+      "target_weight": 0.0405,
       "current_weight": 0.0271,
-      "notional_delta": -650.29,
-      "reason": "overweight by 0.64% vs target \u2014 trim",
+      "notional_delta": 1356.54,
+      "reason": "buying on positive news flow \u2014 \"Arbutus Biopharma Corporation (ABUS) Reports Q1 2026 Results\" \u00b7 underweight by 1.34% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.03%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 47.3 (starter), contribution 54.0"
+        "theme 'Biotech & Pharma' score 61.1 (buy), contribution 67.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1103,20 +1109,22 @@
       "target_weight": 0.0,
       "current_weight": 0.0331,
       "notional_delta": -3355.52,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Arbutus Biopharma Corporation (ABUS) Reports Q1 2026 Results\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.35%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "RIVN",
       "action": "BUY",
-      "target_weight": 0.0347,
+      "target_weight": 0.0356,
       "current_weight": 0.0,
-      "notional_delta": 3517.01,
-      "reason": "underweight by 3.47% vs target \u2014 add",
+      "notional_delta": 3608.23,
+      "reason": "underweight by 3.56% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.61%",
         "theme=EV & Clean Transport",
@@ -1157,14 +1165,14 @@
     {
       "symbol": "SLB",
       "action": "BUY",
-      "target_weight": 0.0437,
+      "target_weight": 0.0433,
       "current_weight": 0.0342,
-      "notional_delta": 966.73,
-      "reason": "buying on contract win (positive) \u2014 \"Is SLB (SLB) the Best Turnaround Stock to Buy in 2026?\" \u00b7 underweight by 0.95% vs target \u2014 add",
+      "notional_delta": 926.19,
+      "reason": "buying on contract win (positive) \u2014 \"Is SLB (SLB) the Best Turnaround Stock to Buy in 2026?\" \u00b7 underweight by 0.91% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.90%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 60.5 (buy), contribution 69.1",
+        "theme 'Oil & Gas' score 60.2 (buy), contribution 68.8",
         "news_source=yahoo_rss",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -1173,11 +1181,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -1.34,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2.68,
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-35.02%",
         "theme=AI & Compute",
@@ -1189,16 +1197,16 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0443,
+      "target_weight": 0.0454,
       "current_weight": 0.0229,
-      "notional_delta": 2166.38,
-      "reason": "buying on mixed news flow \u2014 \"SpaceX Stock Jumped After IPO: Here's Why It May Reverse Soon\" \u00b7 underweight by 2.14% vs target \u2014 add",
+      "notional_delta": 2277.87,
+      "reason": "buying on positive news flow \u2014 \"SpaceX IPO Sets the Stage, These Five Tech Companies Could Follow\" \u00b7 underweight by 2.25% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.09%",
         "theme=EV & Clean Transport",
         "theme 'EV & Clean Transport' score 59.8 (buy), contribution 77.6",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1221,12 +1229,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0217,
       "notional_delta": -2204.37,
-      "reason": "exiting on mixed news flow \u2014 \"Here's How Much $1000 Invested In Vertex Pharmaceuticals 10 Years Ago Would Be Worth Today\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Arbutus Biopharma Corporation (ABUS) Reports Q1 2026 Results\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.03%",
         "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1261,9 +1269,9 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.0273,
+      "target_weight": 0.019,
       "current_weight": 0.0,
-      "notional_delta": 2767.0,
+      "notional_delta": 1925.75,
       "reason": "buying on M&A (positive) \u2014 \"NextEra Deal Recasts Dominion Energy As Data Center And Renewables Powerhouse\" \u00b7 new position \u2014 theme 'Clean Energy' score 42.6 (starter), contribution 60.8",
       "factors": [
         "ret_5d=0.17%",
@@ -1278,9 +1286,9 @@
     {
       "symbol": "RUN",
       "action": "BUY",
-      "target_weight": 0.0166,
+      "target_weight": 0.0116,
       "current_weight": 0.0,
-      "notional_delta": 1682.5,
+      "notional_delta": 1175.72,
       "reason": "buying on M&A (positive) \u2014 \"NextEra Deal Recasts Dominion Energy As Data Center And Renewables Powerhouse\" \u00b7 new position \u2014 theme 'Clean Energy' score 42.6 (starter), contribution 37.0",
       "factors": [
         "ret_5d=-3.48%",
@@ -1295,7 +1303,7 @@
     {
       "symbol": "FSLR",
       "action": "SKIP",
-      "target_weight": 0.0148,
+      "target_weight": 0.0103,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on M&A (positive) \u2014 \"NextEra Deal Recasts Dominion Energy As Data Center And Renewables Powerhouse\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 42.6 (starter), contribution 33.1)",
@@ -1330,11 +1338,11 @@
     },
     {
       "symbol": "AMD",
-      "action": "REDUCE",
-      "target_weight": 0.0083,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0166,
-      "notional_delta": -839.04,
-      "reason": "trimming on mixed news flow \u2014 \"Micron Stock Has Become Volatile, But Key Metric Hints at Further Gains\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1678.07,
+      "reason": "exiting on mixed news flow \u2014 \"Micron Stock Has Become Volatile, But Key Metric Hints at Further Gains\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.76%",
         "theme=AI & Compute",
@@ -1365,11 +1373,11 @@
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.0088,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0177,
-      "notional_delta": -894.75,
-      "reason": "theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1789.49,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.82%",
         "theme=AI & Compute"
@@ -1417,16 +1425,16 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0373,
+      "target_weight": 0.037,
       "current_weight": 0.0283,
-      "notional_delta": 913.66,
-      "reason": "buying on positive news flow \u2014 \"Oil Hits Lowest Since Early March on Potential Hormuz Reopening\" \u00b7 underweight by 0.90% vs target \u2014 add",
+      "notional_delta": 883.25,
+      "reason": "buying on mixed news flow \u2014 \"Jim Cramer Returns To ConocoPhillips (COP) As Oil Prices Touch $96\" \u00b7 underweight by 0.87% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.86%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 60.5 (buy), contribution 59.1",
+        "theme 'Oil & Gas' score 60.2 (buy), contribution 58.7",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1455,14 +1463,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0375,
+      "target_weight": 0.0372,
       "current_weight": 0.0278,
-      "notional_delta": 986.05,
-      "reason": "buying on positive news flow \u2014 \"Oil Hits Lowest Since Early March on Potential Hormuz Reopening\" \u00b7 underweight by 0.97% vs target \u2014 add",
+      "notional_delta": 955.64,
+      "reason": "buying on positive news flow \u2014 \"Wall Street Has 18 Buy Ratings on ConocoPhillips and Zero Sells. Our Price Target Says They Are All Wrong\" \u00b7 underweight by 0.94% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.54%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 60.5 (buy), contribution 59.4",
+        "theme 'Oil & Gas' score 60.2 (buy), contribution 59.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1528,10 +1536,10 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0342,
+      "target_weight": 0.0351,
       "current_weight": 0.0139,
-      "notional_delta": 2056.3,
-      "reason": "underweight by 2.03% vs target \u2014 add",
+      "notional_delta": 2147.52,
+      "reason": "underweight by 2.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.49%",
         "theme=EV & Clean Transport",
@@ -1544,11 +1552,11 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "REDUCE",
-      "target_weight": 0.0076,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0152,
-      "notional_delta": -767.96,
-      "reason": "trimming on positive news flow \u2014 \"Jim Cramer Says SpaceX's Mega Debut Could Unleash A Wave Of AI Deals In The Week Ahead\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1535.92,
+      "reason": "exiting on positive news flow \u2014 \"Jim Cramer Says SpaceX's Mega Debut Could Unleash A Wave Of AI Deals In The Week Ahead\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.88%",
         "theme=AI & Compute",
@@ -1631,15 +1639,17 @@
     },
     {
       "symbol": "LLY",
-      "action": "REDUCE",
-      "target_weight": 0.0182,
+      "action": "BUY",
+      "target_weight": 0.0367,
       "current_weight": 0.0261,
-      "notional_delta": -803.09,
-      "reason": "overweight by 0.79% vs target \u2014 trim",
+      "notional_delta": 1071.99,
+      "reason": "buying on positive news flow \u2014 \"Arbutus Biopharma Corporation (ABUS) Reports Q1 2026 Results\" \u00b7 underweight by 1.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.63%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 47.3 (starter), contribution 47.5"
+        "theme 'Biotech & Pharma' score 61.1 (buy), contribution 61.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1700,11 +1710,11 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "trimming on mixed news flow \u2014 \"SpaceX Stock Jumped After IPO: Here's Why It May Reverse Soon\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "reason": "exiting on mixed news flow \u2014 \"SpaceX Stock Jumped After IPO: Here's Why It May Reverse Soon\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.74%",
         "theme=AI & Compute",
@@ -1718,15 +1728,17 @@
     },
     {
       "symbol": "MRNA",
-      "action": "REDUCE",
-      "target_weight": 0.0223,
+      "action": "BUY",
+      "target_weight": 0.0431,
       "current_weight": 0.0287,
-      "notional_delta": -650.94,
-      "reason": "overweight by 0.64% vs target \u2014 trim",
+      "notional_delta": 1457.25,
+      "reason": "buying on positive news flow \u2014 \"Arbutus Biopharma Corporation (ABUS) Reports Q1 2026 Results\" \u00b7 underweight by 1.44% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.92%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 47.3 (starter), contribution 58.2"
+        "theme 'Biotech & Pharma' score 61.1 (buy), contribution 72.0",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1751,11 +1763,11 @@
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0067,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0133,
-      "notional_delta": -674.11,
-      "reason": "trimming on positive news flow \u2014 \"Jim Cramer Says SpaceX's Mega Debut Could Unleash A Wave Of AI Deals In The Week Ahead\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1348.21,
+      "reason": "exiting on positive news flow \u2014 \"Jim Cramer Says SpaceX's Mega Debut Could Unleash A Wave Of AI Deals In The Week Ahead\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=AI & Compute",
@@ -1786,16 +1798,16 @@
     },
     {
       "symbol": "NVDA",
-      "action": "REDUCE",
-      "target_weight": 0.0081,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0163,
-      "notional_delta": -825.08,
-      "reason": "trimming on mixed news flow \u2014 \"Micron Stock Has Become Volatile, But Key Metric Hints at Further Gains\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1650.15,
+      "reason": "exiting on positive news flow \u2014 \"SpaceX IPO Sets the Stage, These Five Tech Companies Could Follow\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.04%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1826,7 +1838,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Oil Hits Lowest Since Early March on Potential Hormuz Reopening\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Wall Street Has 18 Buy Ratings on ConocoPhillips and Zero Sells. Our Price Target Says They Are All Wrong\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.00%",
         "theme=Oil & Gas",
@@ -1859,15 +1871,17 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.0207,
+      "action": "BUY",
+      "target_weight": 0.0405,
       "current_weight": 0.0271,
-      "notional_delta": -650.29,
-      "reason": "overweight by 0.64% vs target \u2014 trim",
+      "notional_delta": 1356.54,
+      "reason": "buying on positive news flow \u2014 \"Arbutus Biopharma Corporation (ABUS) Reports Q1 2026 Results\" \u00b7 underweight by 1.34% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.03%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 47.3 (starter), contribution 54.0"
+        "theme 'Biotech & Pharma' score 61.1 (buy), contribution 67.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1880,10 +1894,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0331,
       "notional_delta": -3355.52,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Arbutus Biopharma Corporation (ABUS) Reports Q1 2026 Results\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.35%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1893,10 +1909,10 @@
     {
       "symbol": "RIVN",
       "action": "BUY",
-      "target_weight": 0.0347,
+      "target_weight": 0.0356,
       "current_weight": 0.0,
-      "notional_delta": 3517.01,
-      "reason": "underweight by 3.47% vs target \u2014 add",
+      "notional_delta": 3608.23,
+      "reason": "underweight by 3.56% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.61%",
         "theme=EV & Clean Transport",
@@ -1946,14 +1962,14 @@
     {
       "symbol": "SLB",
       "action": "BUY",
-      "target_weight": 0.0437,
+      "target_weight": 0.0433,
       "current_weight": 0.0342,
-      "notional_delta": 966.73,
-      "reason": "buying on contract win (positive) \u2014 \"Is SLB (SLB) the Best Turnaround Stock to Buy in 2026?\" \u00b7 underweight by 0.95% vs target \u2014 add",
+      "notional_delta": 926.19,
+      "reason": "buying on contract win (positive) \u2014 \"Is SLB (SLB) the Best Turnaround Stock to Buy in 2026?\" \u00b7 underweight by 0.91% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.90%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 60.5 (buy), contribution 69.1",
+        "theme 'Oil & Gas' score 60.2 (buy), contribution 68.8",
         "news_source=yahoo_rss",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -1965,11 +1981,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -1.34,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 theme score 34.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2.68,
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Oracle, Apple, Super Micro \u2014 And SpaceX IPO Boosts Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-35.02%",
         "theme=AI & Compute",
@@ -1984,16 +2000,16 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0443,
+      "target_weight": 0.0454,
       "current_weight": 0.0229,
-      "notional_delta": 2166.38,
-      "reason": "buying on mixed news flow \u2014 \"SpaceX Stock Jumped After IPO: Here's Why It May Reverse Soon\" \u00b7 underweight by 2.14% vs target \u2014 add",
+      "notional_delta": 2277.87,
+      "reason": "buying on positive news flow \u2014 \"SpaceX IPO Sets the Stage, These Five Tech Companies Could Follow\" \u00b7 underweight by 2.25% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.09%",
         "theme=EV & Clean Transport",
         "theme 'EV & Clean Transport' score 59.8 (buy), contribution 77.6",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2022,12 +2038,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0217,
       "notional_delta": -2204.37,
-      "reason": "exiting on mixed news flow \u2014 \"Here's How Much $1000 Invested In Vertex Pharmaceuticals 10 Years Ago Would Be Worth Today\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Arbutus Biopharma Corporation (ABUS) Reports Q1 2026 Results\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.03%",
         "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2071,9 +2087,9 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.0273,
+      "target_weight": 0.019,
       "current_weight": 0.0,
-      "notional_delta": 2767.0,
+      "notional_delta": 1925.75,
       "reason": "buying on M&A (positive) \u2014 \"NextEra Deal Recasts Dominion Energy As Data Center And Renewables Powerhouse\" \u00b7 new position \u2014 theme 'Clean Energy' score 42.6 (starter), contribution 60.8",
       "factors": [
         "ret_5d=0.17%",
@@ -2091,9 +2107,9 @@
     {
       "symbol": "RUN",
       "action": "BUY",
-      "target_weight": 0.0166,
+      "target_weight": 0.0116,
       "current_weight": 0.0,
-      "notional_delta": 1682.5,
+      "notional_delta": 1175.72,
       "reason": "buying on M&A (positive) \u2014 \"NextEra Deal Recasts Dominion Energy As Data Center And Renewables Powerhouse\" \u00b7 new position \u2014 theme 'Clean Energy' score 42.6 (starter), contribution 37.0",
       "factors": [
         "ret_5d=-3.48%",
@@ -2111,7 +2127,7 @@
     {
       "symbol": "FSLR",
       "action": "SKIP",
-      "target_weight": 0.0148,
+      "target_weight": 0.0103,
       "current_weight": 0.0,
       "notional_delta": 0.0,
       "reason": "skipping on M&A (positive) \u2014 \"NextEra Deal Recasts Dominion Energy As Data Center And Renewables Powerhouse\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 42.6 (starter), contribution 33.1)",
@@ -2925,6 +2941,10 @@
     {
       "t": "2026-06-13T23:19:49+00:00",
       "v": 101355.2
+    },
+    {
+      "t": "2026-06-14T01:40:52+00:00",
+      "v": 101355.2
     }
   ],
   "breaking_news": [
@@ -2933,7 +2953,7 @@
       "summary": "There's a sneaky way companies add new chemicals in our food, and it is there by design, and totally legal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/11/nx-s1-5853203/how-companies-can-sneak-new-chemicals-past-the-fda-and-into-our-food-and-supplements",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2942,7 +2962,7 @@
       "summary": "SpaceX will go public on the NASDAQ Friday, likely to set a record as the most valuable IPO in history. NASDAQ is making a big play for IPOs, with new rules aimed at drawing in companies like SpaceX.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5850321/spacex-ipo-expected-to-set-record-when-it-goes-public-friday",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2951,7 +2971,7 @@
       "summary": "Are smartphones causing people to have fewer children?  A provocative new working paper explores the persistent drop in birth rates since the iPhone was introduced nearly two decades ago.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5851795/iphone-birth-rate-drop",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2960,7 +2980,7 @@
       "summary": "For decades, immigrants who are legal permanent residents in the U.S. could get loans through the Small Business Administration, a core pillar of small-business lending. Not anymore.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5853375/changes-loans-trump-small-business-immigrants-entrepreneurs-green-card",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2969,7 +2989,7 @@
       "summary": "The initial public offering from the rocket and AI company raised some $75 billion, making the company one of the biggest in the world \u2014 and likely making Elon Musk a trillionaire.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5855004/stock-ai-spacex-ipo-elon-musk",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2978,7 +2998,7 @@
       "summary": "The decision paves the way for a proposed $111 billion merger uniting two rival studio giants \u2014 Paramount, owner of CBS, and the much larger Warner, which includes HBO and CNN.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856567/paramount-acquisition-warner-bros-discovery-merger",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2987,7 +3007,7 @@
       "summary": "The Justice Department closed its investigation into the proposed $110 billion merger of Paramount and Warner Brothers Discovery, saying it found no threat to competition or consumers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856563/justice-dept-approves-paramounts-acquisition-of-warner-bros-discovery",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2996,16 +3016,7 @@
       "summary": "Workers finished removing President Trump's name from the facade of the Kennedy Center early Saturday, hours after a court-ordered Friday deadline to remove references to Trump from the building.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/g-s1-128017/kennedy-center-trump-name-remove",
-      "published_utc": "2026-06-13T23:19:51+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Kidnapped Nigerian retired general dies in captivity",
-      "summary": "Maj Gen Rabe Abubakar's death highlights continuing security challenges facing parts of the country.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cvgq4veq2eqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3014,7 +3025,7 @@
       "summary": "Crews erected scaffolding on Friday as onlookers gathered into the evening, though storms delayed the work until Saturday.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c5yzd4dgxw4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3023,7 +3034,7 @@
       "summary": "The woman, 35, was pulled from the water by members of the public and then airlifted to hospital, police say.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c3ryw807133o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3032,7 +3043,7 @@
       "summary": "Stars of the hit TV show say they did not know their on-screen husbands had previous convictions.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/clypy0ndvjlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3041,7 +3052,7 @@
       "summary": "A niche group of content creators called \"virtual parents\" have become hugely popular among young people.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cpq3dnr5vlzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3050,7 +3061,16 @@
       "summary": "An note on the Ticketmaster website for buying tickets to the game caused confusion and backlash among New Yorkers.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c5yz7gj4x3yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Nigerian author accuses hospital of stalling review into her son's death",
+      "summary": "Adichie's 21-month old son died in a Lagos hospital, which she says is trying to stop an inquest into the circumstances of his death.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/cgk6jzkr0xvo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3059,7 +3079,7 @@
       "summary": "The right-wing Swiss People's Party calls the plan a \"sustainability initiative\",  but opponents say it is a recipe for chaos.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cx23kz7e76po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3068,7 +3088,7 @@
       "summary": "The US president's comments come as Iran says an exact date has not been decided, but it \"will not be tomorrow\".",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvglmn49xz0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:51+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3077,7 +3097,7 @@
       "summary": "The BBC's Samira Hussain explains everything you need to know about SpaceX's historic IPO.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/videos/c4gyx0x1d5ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:50+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3086,7 +3106,7 @@
       "summary": "It is never easy to speak up when a fellow diner says \"let's just divide it!\"",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/czxqdznzy7ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:50+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3095,7 +3115,7 @@
       "summary": "Agave plants grow wild in India and new distillers are using them to create a spirits industry.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cdrpe4vly5mo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:50+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3104,7 +3124,7 @@
       "summary": "From trade wars to soaring ticket prices, the 2026 World Cup is unlike any before it. Faisal Islam explores what this tournament reveals about our changing global economy.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cpv32417nlwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-13T23:19:50+00:00",
+      "published_utc": "2026-06-14T01:40:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
