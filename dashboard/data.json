@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-14T14:36:03+00:00",
+  "generated_at_utc": "2026-06-14T16:11:21+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 204,
-  "last_success_utc": "2026-06-14T12:14:50+00:00",
+  "cycle_count": 205,
+  "last_success_utc": "2026-06-14T14:36:03+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -549,22 +549,6 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 59.73,
-      "raw_score": 69.13,
-      "band": "buy",
-      "weight": 0.1158,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 62.07,
-        "sentiment": 100.0,
-        "volume": 46.48,
-        "policy": 50.0,
-        "volatility_penalty": 9.4
-      }
-    },
-    {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
       "score": 54.29,
@@ -578,6 +562,22 @@
         "volume": 61.78,
         "policy": 50.0,
         "volatility_penalty": 12.02
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 52.23,
+      "raw_score": 61.63,
+      "band": "starter",
+      "weight": 0.0908,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 62.07,
+        "sentiment": 75.0,
+        "volume": 46.48,
+        "policy": 50.0,
+        "volatility_penalty": 9.4
       }
     },
     {
@@ -740,10 +740,10 @@
     {
       "symbol": "CRWD",
       "action": "REDUCE",
-      "target_weight": 0.0096,
+      "target_weight": 0.0178,
       "current_weight": 0.0299,
-      "notional_delta": -2058.06,
-      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 2.03% vs target \u2014 trim",
+      "notional_delta": -1226.95,
+      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 1.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.92%",
         "theme=Cybersecurity",
@@ -775,20 +775,22 @@
       "target_weight": 0.0,
       "current_weight": 0.0161,
       "notional_delta": -1631.17,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"GM Outlines Energy Storage Push With New Battery Chemistry, Data Center Applications And Vehicle-To-Grid Tech\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.81%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "FTNT",
       "action": "REDUCE",
-      "target_weight": 0.0093,
+      "target_weight": 0.0172,
       "current_weight": 0.0265,
-      "notional_delta": -1746.79,
-      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 1.72% vs target \u2014 trim",
+      "notional_delta": -946.08,
+      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 0.93% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.37%",
         "theme=Cybersecurity",
@@ -817,14 +819,16 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.035,
+      "target_weight": 0.0271,
       "current_weight": 0.0139,
-      "notional_delta": 2137.39,
-      "reason": "underweight by 2.11% vs target \u2014 add",
+      "notional_delta": 1336.68,
+      "reason": "buying on negative news flow \u2014 \"GM Outlines Energy Storage Push With New Battery Chemistry, Data Center Applications And Vehicle-To-Grid Tech\" \u00b7 underweight by 1.32% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.49%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 59.8"
+        "theme 'EV & Clean Transport' score 52.2 (starter), contribution 52.3",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -834,12 +838,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0152,
       "notional_delta": -1535.92,
-      "reason": "exiting on positive news flow \u2014 \"Software Prices See Biggest Increase On Record As AI Data Centers Absorb Global Chip Supply\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Satya Nadella's 'Don't Come Whining' Was Dubbed The Most Precise Leadership Lesson \u2014 And It Only Takes Seconds To Understand\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.88%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -1013,12 +1017,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0133,
       "notional_delta": -1348.21,
-      "reason": "exiting on positive news flow \u2014 \"Software Prices See Biggest Increase On Record As AI Data Centers Absorb Global Chip Supply\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Satya Nadella's 'Don't Come Whining' Was Dubbed The Most Precise Leadership Lesson \u2014 And It Only Takes Seconds To Understand\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -1085,10 +1089,10 @@
     {
       "symbol": "PANW",
       "action": "REDUCE",
-      "target_weight": 0.0104,
+      "target_weight": 0.0193,
       "current_weight": 0.0295,
-      "notional_delta": -1940.86,
-      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 1.91% vs target \u2014 trim",
+      "notional_delta": -1038.8,
+      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 1.02% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.42%",
         "theme=Cybersecurity",
@@ -1132,14 +1136,14 @@
     {
       "symbol": "RIVN",
       "action": "BUY",
-      "target_weight": 0.0355,
+      "target_weight": 0.0275,
       "current_weight": 0.0,
-      "notional_delta": 3598.1,
-      "reason": "buying on mixed news flow \u2014 \"Rivian CEO Says Tesla FSD-Like Driving Is Coming This Year \u2014 And Eyes-Off Driving Next Year\" \u00b7 underweight by 3.55% vs target \u2014 add",
+      "notional_delta": 2787.25,
+      "reason": "buying on mixed news flow \u2014 \"Rivian CEO Says Tesla FSD-Like Driving Is Coming This Year \u2014 And Eyes-Off Driving Next Year\" \u00b7 underweight by 2.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.61%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 60.7",
+        "theme 'EV & Clean Transport' score 52.2 (starter), contribution 53.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1209,16 +1213,16 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0453,
+      "target_weight": 0.0362,
       "current_weight": 0.0229,
-      "notional_delta": 2267.73,
-      "reason": "buying on positive news flow \u2014 \"This Week In Tesla: US EV Sales Hit Record, Top Analyst Predicts TSLA Sell-Off And More\" \u00b7 underweight by 2.24% vs target \u2014 add",
+      "notional_delta": 1345.4,
+      "reason": "buying on negative news flow \u2014 \"GM Outlines Energy Storage Push With New Battery Chemistry, Data Center Applications And Vehicle-To-Grid Tech\" \u00b7 underweight by 1.33% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.09%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 77.4",
+        "theme 'EV & Clean Transport' score 52.2 (starter), contribution 69.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1413,10 +1417,10 @@
     {
       "symbol": "CRWD",
       "action": "REDUCE",
-      "target_weight": 0.0096,
+      "target_weight": 0.0178,
       "current_weight": 0.0299,
-      "notional_delta": -2058.06,
-      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 2.03% vs target \u2014 trim",
+      "notional_delta": -1226.95,
+      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 1.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.92%",
         "theme=Cybersecurity",
@@ -1454,10 +1458,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0161,
       "notional_delta": -1631.17,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"GM Outlines Energy Storage Push With New Battery Chemistry, Data Center Applications And Vehicle-To-Grid Tech\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.81%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1467,10 +1473,10 @@
     {
       "symbol": "FTNT",
       "action": "REDUCE",
-      "target_weight": 0.0093,
+      "target_weight": 0.0172,
       "current_weight": 0.0265,
-      "notional_delta": -1746.79,
-      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 1.72% vs target \u2014 trim",
+      "notional_delta": -946.08,
+      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 0.93% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.37%",
         "theme=Cybersecurity",
@@ -1505,14 +1511,16 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.035,
+      "target_weight": 0.0271,
       "current_weight": 0.0139,
-      "notional_delta": 2137.39,
-      "reason": "underweight by 2.11% vs target \u2014 add",
+      "notional_delta": 1336.68,
+      "reason": "buying on negative news flow \u2014 \"GM Outlines Energy Storage Push With New Battery Chemistry, Data Center Applications And Vehicle-To-Grid Tech\" \u00b7 underweight by 1.32% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.49%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 59.8"
+        "theme 'EV & Clean Transport' score 52.2 (starter), contribution 52.3",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1525,12 +1533,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0152,
       "notional_delta": -1535.92,
-      "reason": "exiting on positive news flow \u2014 \"Software Prices See Biggest Increase On Record As AI Data Centers Absorb Global Chip Supply\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Satya Nadella's 'Don't Come Whining' Was Dubbed The Most Precise Leadership Lesson \u2014 And It Only Takes Seconds To Understand\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.88%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1740,12 +1748,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0133,
       "notional_delta": -1348.21,
-      "reason": "exiting on positive news flow \u2014 \"Software Prices See Biggest Increase On Record As AI Data Centers Absorb Global Chip Supply\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Satya Nadella's 'Don't Come Whining' Was Dubbed The Most Precise Leadership Lesson \u2014 And It Only Takes Seconds To Understand\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1827,10 +1835,10 @@
     {
       "symbol": "PANW",
       "action": "REDUCE",
-      "target_weight": 0.0104,
+      "target_weight": 0.0193,
       "current_weight": 0.0295,
-      "notional_delta": -1940.86,
-      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 1.91% vs target \u2014 trim",
+      "notional_delta": -1038.8,
+      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 1.02% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.42%",
         "theme=Cybersecurity",
@@ -1883,14 +1891,14 @@
     {
       "symbol": "RIVN",
       "action": "BUY",
-      "target_weight": 0.0355,
+      "target_weight": 0.0275,
       "current_weight": 0.0,
-      "notional_delta": 3598.1,
-      "reason": "buying on mixed news flow \u2014 \"Rivian CEO Says Tesla FSD-Like Driving Is Coming This Year \u2014 And Eyes-Off Driving Next Year\" \u00b7 underweight by 3.55% vs target \u2014 add",
+      "notional_delta": 2787.25,
+      "reason": "buying on mixed news flow \u2014 \"Rivian CEO Says Tesla FSD-Like Driving Is Coming This Year \u2014 And Eyes-Off Driving Next Year\" \u00b7 underweight by 2.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.61%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 60.7",
+        "theme 'EV & Clean Transport' score 52.2 (starter), contribution 53.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1975,16 +1983,16 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0453,
+      "target_weight": 0.0362,
       "current_weight": 0.0229,
-      "notional_delta": 2267.73,
-      "reason": "buying on positive news flow \u2014 \"This Week In Tesla: US EV Sales Hit Record, Top Analyst Predicts TSLA Sell-Off And More\" \u00b7 underweight by 2.24% vs target \u2014 add",
+      "notional_delta": 1345.4,
+      "reason": "buying on negative news flow \u2014 \"GM Outlines Energy Storage Push With New Battery Chemistry, Data Center Applications And Vehicle-To-Grid Tech\" \u00b7 underweight by 1.33% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.09%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 77.4",
+        "theme 'EV & Clean Transport' score 52.2 (starter), contribution 69.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2878,6 +2886,10 @@
     {
       "t": "2026-06-14T14:35:58+00:00",
       "v": 101355.2
+    },
+    {
+      "t": "2026-06-14T16:11:19+00:00",
+      "v": 101355.2
     }
   ],
   "breaking_news": [
@@ -2886,7 +2898,7 @@
       "summary": "There's a sneaky way companies add new chemicals in our food, and it is there by design, and totally legal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/11/nx-s1-5853203/how-companies-can-sneak-new-chemicals-past-the-fda-and-into-our-food-and-supplements",
-      "published_utc": "2026-06-14T14:36:03+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2895,7 +2907,7 @@
       "summary": "SpaceX will go public on the NASDAQ Friday, likely to set a record as the most valuable IPO in history. NASDAQ is making a big play for IPOs, with new rules aimed at drawing in companies like SpaceX.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5850321/spacex-ipo-expected-to-set-record-when-it-goes-public-friday",
-      "published_utc": "2026-06-14T14:36:03+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2904,7 +2916,7 @@
       "summary": "Are smartphones causing people to have fewer children?  A provocative new working paper explores the persistent drop in birth rates since the iPhone was introduced nearly two decades ago.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5851795/iphone-birth-rate-drop",
-      "published_utc": "2026-06-14T14:36:03+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2913,7 +2925,7 @@
       "summary": "For decades, immigrants who are legal permanent residents in the U.S. could get loans through the Small Business Administration, a core pillar of small-business lending. Not anymore.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5853375/changes-loans-trump-small-business-immigrants-entrepreneurs-green-card",
-      "published_utc": "2026-06-14T14:36:03+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2922,7 +2934,7 @@
       "summary": "The initial public offering from the rocket and AI company raised some $75 billion, making the company one of the biggest in the world \u2014 and likely making Elon Musk a trillionaire.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5855004/stock-ai-spacex-ipo-elon-musk",
-      "published_utc": "2026-06-14T14:36:03+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2931,7 +2943,7 @@
       "summary": "The decision paves the way for a proposed $111 billion merger uniting two rival studio giants \u2014 Paramount, owner of CBS, and the much larger Warner, which includes HBO and CNN.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856567/paramount-acquisition-warner-bros-discovery-merger",
-      "published_utc": "2026-06-14T14:36:03+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2940,7 +2952,7 @@
       "summary": "The Justice Department closed its investigation into the proposed $110 billion merger of Paramount and Warner Brothers Discovery, saying it found no threat to competition or consumers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856563/justice-dept-approves-paramounts-acquisition-of-warner-bros-discovery",
-      "published_utc": "2026-06-14T14:36:03+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2949,25 +2961,7 @@
       "summary": "Workers finished removing President Trump's name from the facade of the Kennedy Center early Saturday, hours after a court-ordered Friday deadline to remove references to Trump from the building.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/g-s1-128017/kennedy-center-trump-name-remove",
-      "published_utc": "2026-06-14T14:36:03+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Norway braces for verdict in rape trial of crown princess's son H\u00f8iby",
-      "summary": "Marius Borg H\u00f8iby will appear via video link, almost three months after his trial came to an end on 40 charges, including four counts of rape.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cd95xvk4vn2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Russian families use AI to 'resurrect' loved ones killed in Ukraine",
-      "summary": "The highly controversial trend lies at the intersection of Russia's war on Ukraine, new AI technologies and grief.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cwy24v72n19o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2976,16 +2970,16 @@
       "summary": "Somali referee Omar Artan, who was denied entry to the United States to officiate at the World Cup, will still receive his tournament fee from Fifa in full.",
       "source": "BBC World",
       "url": "https://www.bbc.com/sport/football/articles/c79y10r2plzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Author Chimamanda Adichie accuses hospital of stalling review into son's death",
-      "summary": "Chimamanda Ngozi Adichie's 21-month old son died in a Lagos hospital, which she says is trying to stop an inquest into the circumstances of his death.",
+      "headline": "'Boyfriend duties call,' Trudeau says after skipping Canada match to watch Perry",
+      "summary": "Cameras caught Perry running off stage to greet the former Canadian leader with a kiss.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cgk6jzkr0xvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
+      "url": "https://www.bbc.com/news/articles/cly9eljexnno?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2994,7 +2988,7 @@
       "summary": "Nobody was seriously hurt as a result of the accident in the Spanish town, local authorities say.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c14yn10jzyeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3003,7 +2997,7 @@
       "summary": "At least 63 people were arrested in the disorder after the Knicks beat the Spurs to clinch the title.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c8623n5pq2vo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3012,8 +3006,17 @@
       "summary": "Not all votes have been counted, but the current trend suggests 55% of participants voted against the proposal.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c20ygjem17zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Lebanon says three killed in Israeli strike on Beirut suburb",
+      "summary": "Israel says it targeted the Iran-backed Hezbollah, as Tehran warns this could derail a US-Iran deal to end the fighting.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/czj83zlx1vjo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-14T16:11:21+00:00",
+      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -3021,16 +3024,7 @@
       "summary": "The US president's comments come as Iran says an exact date has not been decided.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvglmn49xz0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Why the economics make this the craziest World Cup ever",
-      "summary": "From trade wars to soaring ticket prices, the 2026 World Cup is unlike any before it. Faisal Islam explores what this tournament reveals about our changing global economy.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.com/news/articles/cpv32417nlwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3039,7 +3033,7 @@
       "summary": "The economy shrank slightly in April as the Iran war began to have an impact on businesses, official data shows.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c77y47248k4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3048,7 +3042,7 @@
       "summary": "The BBC's Michelle Fleury spoke to Tom Mueller, who was one of the company's founders alongside Elon Musk in 2002.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/videos/cvgjx68nyvmo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3057,8 +3051,26 @@
       "summary": "The ban forms part of the government's package of sanctions on Moscow due to the ongoing war with Ukraine.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/ceqdl8xre7qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T14:36:02+00:00",
+      "published_utc": "2026-06-14T16:11:21+00:00",
       "sentiment_score": -0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "Elon Musk becomes world's first trillionaire as SpaceX soars in stock market debut",
+      "summary": "Musk is now worth $1.11tn according to the Bloomberg rich list, while SpaceX listed on the Nasdaq stock exchange with a value of $2.2tn.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.com/news/articles/c4gypy3wwl7o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-14T16:11:21+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Anthropic suspends new AI tools over US government security concerns",
+      "summary": "Anthropic's Claude Fable 5, released publicly this week, sparked concerns about cybersecurity and hacking.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.com/news/articles/c932g3v3e13o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-14T16:11:21+00:00",
+      "sentiment_score": 0.0,
       "is_policy": false
     }
   ],
