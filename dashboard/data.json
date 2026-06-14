@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-14T19:54:49+00:00",
+  "generated_at_utc": "2026-06-14T21:36:20+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 207,
-  "last_success_utc": "2026-06-14T17:54:17+00:00",
+  "cycle_count": 208,
+  "last_success_utc": "2026-06-14T19:54:49+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -474,8 +474,8 @@
       "score": 77.39,
       "raw_score": 77.39,
       "band": "strong_buy",
-      "weight": 0.1542,
-      "confidence": 0.9,
+      "weight": 0.1583,
+      "confidence": 0.95,
       "components": {
         "momentum": 83.61,
         "sentiment": 100.0,
@@ -554,8 +554,8 @@
       "score": 54.29,
       "raw_score": 66.31,
       "band": "starter",
-      "weight": 0.083,
-      "confidence": 0.7,
+      "weight": 0.0805,
+      "confidence": 0.65,
       "components": {
         "momentum": 84.87,
         "sentiment": 50.0,
@@ -581,34 +581,18 @@
       }
     },
     {
-      "key": "cybersecurity",
-      "name": "Cybersecurity",
-      "score": 46.51,
-      "raw_score": 61.93,
-      "band": "starter",
-      "weight": 0.0717,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 63.48,
-        "sentiment": 83.34,
-        "volume": 32.67,
-        "policy": 50.0,
-        "volatility_penalty": 15.41
-      }
-    },
-    {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 43.52,
-      "raw_score": 54.18,
+      "score": 45.69,
+      "raw_score": 56.34,
       "band": "starter",
-      "weight": 0.0617,
+      "weight": 0.069,
       "confidence": 1.0,
       "components": {
         "momentum": 32.62,
-        "sentiment": 83.34,
+        "sentiment": 88.89,
         "volume": 55.64,
-        "policy": 50.0,
+        "policy": 55.0,
         "volatility_penalty": 10.66
       }
     },
@@ -627,16 +611,32 @@
         "policy": 90.0,
         "volatility_penalty": 17.46
       }
+    },
+    {
+      "key": "cybersecurity",
+      "name": "Cybersecurity",
+      "score": 36.51,
+      "raw_score": 51.93,
+      "band": "hold_small",
+      "weight": 0.024,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 63.48,
+        "sentiment": 50.0,
+        "volume": 32.67,
+        "policy": 50.0,
+        "volatility_penalty": 15.41
+      }
     }
   ],
   "decisions": [
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0271,
+      "target_weight": 0.0263,
       "current_weight": 0.0502,
-      "notional_delta": -2341.23,
-      "reason": "trimming on mixed news flow \u2014 \"Consumer Tech News (Jun 8-12): SpaceX Debuts On Nasdaq, Big Tech Faces Political Scrutiny & More\" \u00b7 overweight by 2.31% vs target \u2014 trim",
+      "notional_delta": -2422.31,
+      "reason": "trimming on mixed news flow \u2014 \"Consumer Tech News (Jun 8-12): SpaceX Debuts On Nasdaq, Big Tech Faces Political Scrutiny & More\" \u00b7 overweight by 2.39% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=14.99%",
         "theme=Semiconductors (Broad)",
@@ -649,26 +649,24 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0228,
+      "target_weight": 0.0254,
       "current_weight": 0.0166,
-      "notional_delta": 632.83,
-      "reason": "buying on mixed news flow \u2014 \"Micron Stock Has Become Volatile, But Key Metric Hints at Further Gains\" \u00b7 underweight by 0.62% vs target \u2014 add",
+      "notional_delta": 896.35,
+      "reason": "underweight by 0.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.76%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.5 (starter), contribution 59.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'AI & Compute' score 45.7 (starter), contribution 61.6"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.029,
+      "target_weight": 0.0281,
       "current_weight": 0.0518,
-      "notional_delta": -2308.89,
-      "reason": "overweight by 2.28% vs target \u2014 trim",
+      "notional_delta": -2400.11,
+      "reason": "overweight by 2.37% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.05%",
         "theme=Semiconductors (Broad)",
@@ -679,14 +677,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0184,
+      "target_weight": 0.0206,
       "current_weight": 0.0177,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-10.82%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.5 (starter), contribution 47.9"
+        "theme 'AI & Compute' score 45.7 (starter), contribution 50.1"
       ],
       "theme_key": "ai_compute"
     },
@@ -708,7 +706,7 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0535,
+      "target_weight": 0.0549,
       "current_weight": 0.0546,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Sandisk Stock Leading Nasdaq 100 and S&P 500 Gains This Year: More Upside?\" \u00b7 within 50bps of target \u2014 no trade",
@@ -739,17 +737,14 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.0235,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0299,
-      "notional_delta": -649.22,
-      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 0.64% vs target \u2014 trim",
+      "notional_delta": -3031.07,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.92%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 46.5 (starter), contribution 55.8",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -786,17 +781,14 @@
     },
     {
       "symbol": "FTNT",
-      "action": "HOLD",
-      "target_weight": 0.0227,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0265,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2689.39,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.37%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 46.5 (starter), contribution 53.9",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -850,16 +842,16 @@
     {
       "symbol": "GS",
       "action": "HOLD",
-      "target_weight": 0.0499,
+      "target_weight": 0.0512,
       "current_weight": 0.0529,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Top Catalysts for Dow Jones and S&P 500 This Week\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Michael Dell's Net Worth Jumps $72 Billion on Dell Rally, and Analysts Predict Further Gains\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=4.31%",
         "theme=Financials & Rates",
         "theme 'Financials & Rates' score 77.4 (strong_buy), contribution 73.8",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -880,7 +872,7 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0509,
+      "target_weight": 0.0522,
       "current_weight": 0.0519,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"'We Can Talk About $10 Trillion In Wealth Alone:' Morgan Stanley CEO Ted Pick Raises Growth Target\" \u00b7 within 50bps of target \u2014 no trade",
@@ -941,10 +933,10 @@
     {
       "symbol": "LRCX",
       "action": "REDUCE",
-      "target_weight": 0.0269,
+      "target_weight": 0.0261,
       "current_weight": 0.0488,
-      "notional_delta": -2216.01,
-      "reason": "overweight by 2.19% vs target \u2014 trim",
+      "notional_delta": -2297.1,
+      "reason": "overweight by 2.27% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.96%",
         "theme=Semiconductors (Broad)",
@@ -1017,12 +1009,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0133,
       "notional_delta": -1348.21,
-      "reason": "exiting on negative news flow \u2014 \"Microsoft CEO Satya Nadella Warns Against A Future Where 'A Few Models Eat Everything They See'\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Michael Dell's Net Worth Jumps $72 Billion on Dell Rally, and Analysts Predict Further Gains\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1042,15 +1034,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0206,
+      "action": "BUY",
+      "target_weight": 0.023,
       "current_weight": 0.0163,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Sandisk Stock Leading Nasdaq 100 and S&P 500 Gains This Year: More Upside?\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 681.02,
+      "reason": "buying on positive news flow \u2014 \"Michael Dell's Net Worth Jumps $72 Billion on Dell Rally, and Analysts Predict Further Gains\" \u00b7 underweight by 0.67% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.04%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.5 (starter), contribution 53.7",
+        "theme 'AI & Compute' score 45.7 (starter), contribution 55.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1062,12 +1054,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0011,
       "notional_delta": -112.77,
-      "reason": "exiting on positive news flow \u2014 \"How Investors May Respond To Okta (OKTA) Elevating AI Identity Security In Its Product Pipeline\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.27%",
-        "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1088,17 +1078,15 @@
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0255,
+      "action": "REDUCE",
+      "target_weight": 0.005,
       "current_weight": 0.0295,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2488.18,
+      "reason": "overweight by 2.45% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.42%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 46.5 (starter), contribution 60.6",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Cybersecurity' score 36.5 (hold_small), contribution 50.6"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1201,12 +1189,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.68,
-      "reason": "exiting on mixed news flow \u2014 \"Consumer Tech News (Jun 8-12): SpaceX Debuts On Nasdaq, Big Tech Faces Political Scrutiny & More\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Michael Dell's Net Worth Jumps $72 Billion on Dell Rally, and Analysts Predict Further Gains\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-35.02%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1283,16 +1271,66 @@
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
+    },
+    {
+      "symbol": "NEE",
+      "action": "BUY",
+      "target_weight": 0.0268,
+      "current_weight": 0.0,
+      "notional_delta": 2716.32,
+      "reason": "buying on M&A (positive) \u2014 \"NextEra Deal Recasts Dominion Energy As Data Center And Renewables Powerhouse\" \u00b7 new position \u2014 theme 'Clean Energy' score 42.3 (starter), contribution 60.6",
+      "factors": [
+        "ret_5d=0.17%",
+        "rel_vol_5d=0.69",
+        "vol_ann=31.89%",
+        "news_source=yahoo_rss",
+        "event=M&A",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "clean_energy"
+    },
+    {
+      "symbol": "RUN",
+      "action": "BUY",
+      "target_weight": 0.0162,
+      "current_weight": 0.0,
+      "notional_delta": 1641.95,
+      "reason": "buying on M&A (positive) \u2014 \"NextEra Deal Recasts Dominion Energy As Data Center And Renewables Powerhouse\" \u00b7 new position \u2014 theme 'Clean Energy' score 42.3 (starter), contribution 36.7",
+      "factors": [
+        "ret_5d=-3.48%",
+        "rel_vol_5d=1.03",
+        "vol_ann=71.96%",
+        "news_source=yahoo_rss",
+        "event=M&A",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "clean_energy"
+    },
+    {
+      "symbol": "FSLR",
+      "action": "SKIP",
+      "target_weight": 0.0146,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on positive news flow \u2014 \"First Solar (FSLR) Stock Valuation Check After Strong Recent Share Price Gains\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 42.3 (starter), contribution 32.9)",
+      "factors": [
+        "ret_5d=-4.19%",
+        "rel_vol_5d=0.79",
+        "vol_ann=65.68%",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "clean_energy"
     }
   ],
   "executions": [
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0271,
+      "target_weight": 0.0263,
       "current_weight": 0.0502,
-      "notional_delta": -2341.23,
-      "reason": "trimming on mixed news flow \u2014 \"Consumer Tech News (Jun 8-12): SpaceX Debuts On Nasdaq, Big Tech Faces Political Scrutiny & More\" \u00b7 overweight by 2.31% vs target \u2014 trim",
+      "notional_delta": -2422.31,
+      "reason": "trimming on mixed news flow \u2014 \"Consumer Tech News (Jun 8-12): SpaceX Debuts On Nasdaq, Big Tech Faces Political Scrutiny & More\" \u00b7 overweight by 2.39% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=14.99%",
         "theme=Semiconductors (Broad)",
@@ -1308,16 +1346,14 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0228,
+      "target_weight": 0.0254,
       "current_weight": 0.0166,
-      "notional_delta": 632.83,
-      "reason": "buying on mixed news flow \u2014 \"Micron Stock Has Become Volatile, But Key Metric Hints at Further Gains\" \u00b7 underweight by 0.62% vs target \u2014 add",
+      "notional_delta": 896.35,
+      "reason": "underweight by 0.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.76%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.5 (starter), contribution 59.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'AI & Compute' score 45.7 (starter), contribution 61.6"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1327,10 +1363,10 @@
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.029,
+      "target_weight": 0.0281,
       "current_weight": 0.0518,
-      "notional_delta": -2308.89,
-      "reason": "overweight by 2.28% vs target \u2014 trim",
+      "notional_delta": -2400.11,
+      "reason": "overweight by 2.37% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.05%",
         "theme=Semiconductors (Broad)",
@@ -1344,14 +1380,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0184,
+      "target_weight": 0.0206,
       "current_weight": 0.0177,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-10.82%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.5 (starter), contribution 47.9"
+        "theme 'AI & Compute' score 45.7 (starter), contribution 50.1"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1379,7 +1415,7 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0535,
+      "target_weight": 0.0549,
       "current_weight": 0.0546,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Sandisk Stock Leading Nasdaq 100 and S&P 500 Gains This Year: More Upside?\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1416,17 +1452,14 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.0235,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0299,
-      "notional_delta": -649.22,
-      "reason": "trimming on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 overweight by 0.64% vs target \u2014 trim",
+      "notional_delta": -3031.07,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.92%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 46.5 (starter), contribution 55.8",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1472,17 +1505,14 @@
     },
     {
       "symbol": "FTNT",
-      "action": "HOLD",
-      "target_weight": 0.0227,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0265,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2689.39,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.37%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 46.5 (starter), contribution 53.9",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1548,16 +1578,16 @@
     {
       "symbol": "GS",
       "action": "HOLD",
-      "target_weight": 0.0499,
+      "target_weight": 0.0512,
       "current_weight": 0.0529,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Top Catalysts for Dow Jones and S&P 500 This Week\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Michael Dell's Net Worth Jumps $72 Billion on Dell Rally, and Analysts Predict Further Gains\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=4.31%",
         "theme=Financials & Rates",
         "theme 'Financials & Rates' score 77.4 (strong_buy), contribution 73.8",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1584,7 +1614,7 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0509,
+      "target_weight": 0.0522,
       "current_weight": 0.0519,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"'We Can Talk About $10 Trillion In Wealth Alone:' Morgan Stanley CEO Ted Pick Raises Growth Target\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1657,10 +1687,10 @@
     {
       "symbol": "LRCX",
       "action": "REDUCE",
-      "target_weight": 0.0269,
+      "target_weight": 0.0261,
       "current_weight": 0.0488,
-      "notional_delta": -2216.01,
-      "reason": "overweight by 2.19% vs target \u2014 trim",
+      "notional_delta": -2297.1,
+      "reason": "overweight by 2.27% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.96%",
         "theme=Semiconductors (Broad)",
@@ -1748,12 +1778,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0133,
       "notional_delta": -1348.21,
-      "reason": "exiting on negative news flow \u2014 \"Microsoft CEO Satya Nadella Warns Against A Future Where 'A Few Models Eat Everything They See'\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Michael Dell's Net Worth Jumps $72 Billion on Dell Rally, and Analysts Predict Further Gains\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1779,15 +1809,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0206,
+      "action": "BUY",
+      "target_weight": 0.023,
       "current_weight": 0.0163,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Sandisk Stock Leading Nasdaq 100 and S&P 500 Gains This Year: More Upside?\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 681.02,
+      "reason": "buying on positive news flow \u2014 \"Michael Dell's Net Worth Jumps $72 Billion on Dell Rally, and Analysts Predict Further Gains\" \u00b7 underweight by 0.67% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.04%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.5 (starter), contribution 53.7",
+        "theme 'AI & Compute' score 45.7 (starter), contribution 55.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1802,12 +1832,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0011,
       "notional_delta": -112.77,
-      "reason": "exiting on positive news flow \u2014 \"How Investors May Respond To Okta (OKTA) Elevating AI Identity Security In Its Product Pipeline\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.27%",
-        "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1834,17 +1862,15 @@
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0255,
+      "action": "REDUCE",
+      "target_weight": 0.005,
       "current_weight": 0.0295,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Zscaler Faces Index Exit And Probes As Growth Story Tested\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2488.18,
+      "reason": "overweight by 2.45% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.42%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 46.5 (starter), contribution 60.6",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Cybersecurity' score 36.5 (hold_small), contribution 50.6"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1968,12 +1994,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.68,
-      "reason": "exiting on mixed news flow \u2014 \"Consumer Tech News (Jun 8-12): SpaceX Debuts On Nasdaq, Big Tech Faces Political Scrutiny & More\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Michael Dell's Net Worth Jumps $72 Billion on Dell Rally, and Analysts Predict Further Gains\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-35.02%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2065,6 +2091,65 @@
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "NEE",
+      "action": "BUY",
+      "target_weight": 0.0268,
+      "current_weight": 0.0,
+      "notional_delta": 2716.32,
+      "reason": "buying on M&A (positive) \u2014 \"NextEra Deal Recasts Dominion Energy As Data Center And Renewables Powerhouse\" \u00b7 new position \u2014 theme 'Clean Energy' score 42.3 (starter), contribution 60.6",
+      "factors": [
+        "ret_5d=0.17%",
+        "rel_vol_5d=0.69",
+        "vol_ann=31.89%",
+        "news_source=yahoo_rss",
+        "event=M&A",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "clean_energy",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "RUN",
+      "action": "BUY",
+      "target_weight": 0.0162,
+      "current_weight": 0.0,
+      "notional_delta": 1641.95,
+      "reason": "buying on M&A (positive) \u2014 \"NextEra Deal Recasts Dominion Energy As Data Center And Renewables Powerhouse\" \u00b7 new position \u2014 theme 'Clean Energy' score 42.3 (starter), contribution 36.7",
+      "factors": [
+        "ret_5d=-3.48%",
+        "rel_vol_5d=1.03",
+        "vol_ann=71.96%",
+        "news_source=yahoo_rss",
+        "event=M&A",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "clean_energy",
+      "executed": false,
+      "order": null,
+      "note": "market_closed_or_no_account"
+    },
+    {
+      "symbol": "FSLR",
+      "action": "SKIP",
+      "target_weight": 0.0146,
+      "current_weight": 0.0,
+      "notional_delta": 0.0,
+      "reason": "skipping on positive news flow \u2014 \"First Solar (FSLR) Stock Valuation Check After Strong Recent Share Price Gains\" \u00b7 deferred \u2014 already at max 2 new buys this cycle (new position \u2014 theme 'Clean Energy' score 42.3 (starter), contribution 32.9)",
+      "factors": [
+        "ret_5d=-4.19%",
+        "rel_vol_5d=0.79",
+        "vol_ann=65.68%",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "clean_energy",
       "executed": false,
       "order": null,
       "note": "market_closed_or_no_account"
@@ -2898,6 +2983,10 @@
     {
       "t": "2026-06-14T19:54:44+00:00",
       "v": 101355.2
+    },
+    {
+      "t": "2026-06-14T21:36:17+00:00",
+      "v": 101355.2
     }
   ],
   "breaking_news": [
@@ -2906,7 +2995,7 @@
       "summary": "There's a sneaky way companies add new chemicals in our food, and it is there by design, and totally legal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/11/nx-s1-5853203/how-companies-can-sneak-new-chemicals-past-the-fda-and-into-our-food-and-supplements",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2915,7 +3004,7 @@
       "summary": "SpaceX will go public on the NASDAQ Friday, likely to set a record as the most valuable IPO in history. NASDAQ is making a big play for IPOs, with new rules aimed at drawing in companies like SpaceX.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5850321/spacex-ipo-expected-to-set-record-when-it-goes-public-friday",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2924,7 +3013,7 @@
       "summary": "Are smartphones causing people to have fewer children?  A provocative new working paper explores the persistent drop in birth rates since the iPhone was introduced nearly two decades ago.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5851795/iphone-birth-rate-drop",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -2933,7 +3022,7 @@
       "summary": "For decades, immigrants who are legal permanent residents in the U.S. could get loans through the Small Business Administration, a core pillar of small-business lending. Not anymore.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5853375/changes-loans-trump-small-business-immigrants-entrepreneurs-green-card",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2942,7 +3031,7 @@
       "summary": "The initial public offering from the rocket and AI company raised some $75 billion, making the company one of the biggest in the world \u2014 and likely making Elon Musk a trillionaire.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5855004/stock-ai-spacex-ipo-elon-musk",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -2951,7 +3040,7 @@
       "summary": "The decision paves the way for a proposed $111 billion merger uniting two rival studio giants \u2014 Paramount, owner of CBS, and the much larger Warner, which includes HBO and CNN.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856567/paramount-acquisition-warner-bros-discovery-merger",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2960,7 +3049,7 @@
       "summary": "The Justice Department closed its investigation into the proposed $110 billion merger of Paramount and Warner Brothers Discovery, saying it found no threat to competition or consumers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/nx-s1-5856563/justice-dept-approves-paramounts-acquisition-of-warner-bros-discovery",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2969,7 +3058,7 @@
       "summary": "Workers finished removing President Trump's name from the facade of the Kennedy Center early Saturday, hours after a court-ordered Friday deadline to remove references to Trump from the building.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/12/g-s1-128017/kennedy-center-trump-name-remove",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2978,7 +3067,7 @@
       "summary": "Marius Borg H\u00f8iby will appear via video link, almost three months after his trial came to an end on 40 charges, including four counts of rape.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cd95xvk4vn2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2987,7 +3076,7 @@
       "summary": "Somali referee Omar Artan, who was denied entry to the United States to officiate at the World Cup, will still receive his tournament fee from Fifa in full.",
       "source": "BBC World",
       "url": "https://www.bbc.com/sport/football/articles/c79y10r2plzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -2996,7 +3085,7 @@
       "summary": "Cameras caught Perry running off stage to greet the former Canadian leader with a kiss.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cly9eljexnno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3005,8 +3094,17 @@
       "summary": "Nobody was seriously hurt as a result of the accident in the Spanish town, local authorities say.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c14yn10jzyeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Protesters clash with police ahead of G7 summit in Geneva",
+      "summary": "Swiss police deployed a water cannon and fired tear gas to disperse anti-G7 protesters after clashes.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/videos/crkvek3dnrgo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-14T21:36:20+00:00",
+      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -3014,7 +3112,7 @@
       "summary": "At least 63 people were arrested in the disorder after the Knicks beat the Spurs to clinch the title.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c8623n5pq2vo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3023,17 +3121,8 @@
       "summary": "Nearly 55% of participants voted against the proposal to cap population by cutting migration, results show.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c20ygjem17zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:20+00:00",
       "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Israeli military says Hezbollah targets struck in Beirut",
-      "summary": "Israel says it targeted the Iran-backed armed group Hezbollah, as Tehran warns this could derail a US-Iran deal to end the fighting.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/czj83zlx1vjo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
-      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -3041,7 +3130,7 @@
       "summary": "The BBC's Michelle Fleury spoke to Tom Mueller, who was one of the company's founders alongside Elon Musk in 2002.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/videos/cvgjx68nyvmo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3050,7 +3139,7 @@
       "summary": "The ban forms part of the government's package of sanctions on Moscow due to the ongoing war with Ukraine.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/ceqdl8xre7qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:19+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3059,7 +3148,7 @@
       "summary": "Musk is now worth $1.11tn according to the Bloomberg rich list, while SpaceX listed on the Nasdaq stock exchange with a value of $2.2tn.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c4gypy3wwl7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3068,7 +3157,7 @@
       "summary": "Anthropic's Claude Fable 5, released publicly this week, sparked concerns about cybersecurity and hacking.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c932g3v3e13o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3077,7 +3166,7 @@
       "summary": "The BBC breaks down how the tech mogul's fortune has grown.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c4gyp523ly8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-14T19:54:49+00:00",
+      "published_utc": "2026-06-14T21:36:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
