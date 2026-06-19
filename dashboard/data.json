@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-19T19:19:13+00:00",
+  "generated_at_utc": "2026-06-19T20:50:38+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 243,
-  "last_success_utc": "2026-06-19T17:45:05+00:00",
+  "cycle_count": 244,
+  "last_success_utc": "2026-06-19T19:19:13+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -509,29 +509,13 @@
   ],
   "themes": [
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 63.38,
-      "raw_score": 63.38,
-      "band": "buy",
-      "weight": 0.1151,
-      "confidence": 0.8,
-      "components": {
-        "momentum": 52.33,
-        "sentiment": 90.0,
-        "volume": 52.23,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "financials",
       "name": "Financials & Rates",
       "score": 60.54,
       "raw_score": 60.54,
       "band": "buy",
-      "weight": 0.1007,
-      "confidence": 0.7,
+      "weight": 0.0977,
+      "confidence": 0.65,
       "components": {
         "momentum": 72.69,
         "sentiment": 50.0,
@@ -557,13 +541,29 @@
       }
     },
     {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 51.38,
+      "raw_score": 51.38,
+      "band": "starter",
+      "weight": 0.0791,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 52.33,
+        "sentiment": 50.0,
+        "volume": 52.23,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "biotech",
       "name": "Biotech & Pharma",
       "score": 50.02,
       "raw_score": 52.71,
       "band": "starter",
-      "weight": 0.0751,
-      "confidence": 0.8,
+      "weight": 0.073,
+      "confidence": 0.75,
       "components": {
         "momentum": 50.1,
         "sentiment": 50.0,
@@ -589,29 +589,13 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 47.44,
-      "raw_score": 58.77,
-      "band": "starter",
-      "weight": 0.0748,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 59.62,
-        "sentiment": 66.66,
-        "volume": 47.12,
-        "policy": 55.0,
-        "volatility_penalty": 11.33
-      }
-    },
-    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
       "score": 44.68,
       "raw_score": 53.78,
       "band": "starter",
-      "weight": 0.064,
-      "confidence": 0.95,
+      "weight": 0.0656,
+      "confidence": 1.0,
       "components": {
         "momentum": 61.13,
         "sentiment": 50.0,
@@ -634,6 +618,22 @@
         "volume": 59.66,
         "policy": 50.0,
         "volatility_penalty": 0.24
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 41.94,
+      "raw_score": 53.27,
+      "band": "starter",
+      "weight": 0.0565,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 59.62,
+        "sentiment": 50.0,
+        "volume": 47.12,
+        "policy": 50.0,
+        "volatility_penalty": 11.33
       }
     },
     {
@@ -700,14 +700,14 @@
     {
       "symbol": "AMZN",
       "action": "BUY",
-      "target_weight": 0.0399,
+      "target_weight": 0.0277,
       "current_weight": 0.022,
-      "notional_delta": 1837.99,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 underweight by 1.79% vs target \u2014 add",
+      "notional_delta": 582.45,
+      "reason": "buying on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 underweight by 0.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 68.1",
+        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 56.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -729,14 +729,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0258,
+      "target_weight": 0.0195,
       "current_weight": 0.0219,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.4 (starter), contribution 65.0",
+        "theme 'AI & Compute' score 41.9 (starter), contribution 59.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -889,14 +889,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0252,
+      "target_weight": 0.0191,
       "current_weight": 0.0207,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.4 (starter), contribution 63.6",
+        "theme 'AI & Compute' score 41.9 (starter), contribution 58.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -905,40 +905,38 @@
     {
       "symbol": "GS",
       "action": "BUY",
-      "target_weight": 0.0338,
+      "target_weight": 0.0328,
       "current_weight": 0.0221,
-      "notional_delta": 1205.76,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.17% vs target \u2014 add",
+      "notional_delta": 1102.85,
+      "reason": "underweight by 1.07% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 60.5 (buy), contribution 70.2",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 60.5 (buy), contribution 70.2"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "HD",
-      "action": "BUY",
-      "target_weight": 0.0432,
+      "action": "HOLD",
+      "target_weight": 0.0305,
       "current_weight": 0.0263,
-      "notional_delta": 1741.62,
-      "reason": "underweight by 1.69% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.72%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 73.8"
+        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 61.8"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0325,
+      "target_weight": 0.0315,
       "current_weight": 0.023,
-      "notional_delta": 981.35,
-      "reason": "buying on mixed news flow \u2014 \"Are Stock Markets Open On Juneteenth? Here's What's Open And Closed On June 19\" \u00b7 underweight by 0.95% vs target \u2014 add",
+      "notional_delta": 878.44,
+      "reason": "buying on mixed news flow \u2014 \"Are Stock Markets Open On Juneteenth? Here's What's Open And Closed On June 19\" \u00b7 underweight by 0.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.21%",
         "theme=Financials & Rates",
@@ -951,10 +949,10 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.02,
+      "target_weight": 0.0205,
       "current_weight": 0.0,
-      "notional_delta": 2058.25,
-      "reason": "underweight by 2.00% vs target \u2014 add",
+      "notional_delta": 2109.71,
+      "reason": "underweight by 2.05% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
@@ -1024,7 +1022,7 @@
     {
       "symbol": "MRNA",
       "action": "HOLD",
-      "target_weight": 0.0282,
+      "target_weight": 0.0274,
       "current_weight": 0.0237,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Moderna's Flu Vaccine Clears Key FDA Panel Vote As Advisory Committee Backs Shot 9-0\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1040,16 +1038,14 @@
     {
       "symbol": "MS",
       "action": "BUY",
-      "target_weight": 0.0344,
+      "target_weight": 0.0334,
       "current_weight": 0.0227,
-      "notional_delta": 1203.3,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.17% vs target \u2014 add",
+      "notional_delta": 1100.39,
+      "reason": "underweight by 1.07% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.37%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 60.5 (buy), contribution 71.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 60.5 (buy), contribution 71.4"
       ],
       "theme_key": "financials"
     },
@@ -1059,7 +1055,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.32,
-      "reason": "exiting on mixed news flow \u2014 \"The Nasdaq 100 Has Tripled Since 2020, But These 10 Mega-Caps Are Still Underwater\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.65%",
         "theme=AI & Compute",
@@ -1084,28 +1080,28 @@
     {
       "symbol": "NKE",
       "action": "BUY",
-      "target_weight": 0.032,
+      "target_weight": 0.021,
       "current_weight": 0.0,
-      "notional_delta": 3292.79,
-      "reason": "underweight by 3.20% vs target \u2014 add",
+      "notional_delta": 2160.75,
+      "reason": "underweight by 2.10% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.22%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 54.7"
+        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 42.7"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0238,
+      "target_weight": 0.0179,
       "current_weight": 0.0195,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.4 (starter), contribution 60.0",
+        "theme 'AI & Compute' score 41.9 (starter), contribution 54.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1173,10 +1169,10 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0209,
+      "target_weight": 0.0203,
       "current_weight": 0.0143,
-      "notional_delta": 678.2,
-      "reason": "underweight by 0.66% vs target \u2014 add",
+      "notional_delta": 616.45,
+      "reason": "underweight by 0.60% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Biotech & Pharma",
@@ -1187,10 +1183,10 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0238,
+      "target_weight": 0.0244,
       "current_weight": 0.0405,
-      "notional_delta": -1717.11,
-      "reason": "trimming on mixed news flow \u2014 \"7 Consumer Discretionary Stocks Whale Activity In Today\u2019s Session\" \u00b7 overweight by 1.67% vs target \u2014 trim",
+      "notional_delta": -1655.37,
+      "reason": "trimming on mixed news flow \u2014 \"7 Consumer Discretionary Stocks Whale Activity In Today\u2019s Session\" \u00b7 overweight by 1.61% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
@@ -1282,10 +1278,10 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0202,
+      "target_weight": 0.0207,
       "current_weight": 0.0308,
-      "notional_delta": -1087.47,
-      "reason": "trimming on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 overweight by 1.06% vs target \u2014 trim",
+      "notional_delta": -1036.01,
+      "reason": "trimming on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 overweight by 1.01% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
@@ -1312,7 +1308,7 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.026,
+      "target_weight": 0.0253,
       "current_weight": 0.0216,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1389,14 +1385,14 @@
     {
       "symbol": "AMZN",
       "action": "BUY",
-      "target_weight": 0.0399,
+      "target_weight": 0.0277,
       "current_weight": 0.022,
-      "notional_delta": 1837.99,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 underweight by 1.79% vs target \u2014 add",
+      "notional_delta": 582.45,
+      "reason": "buying on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 underweight by 0.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 68.1",
+        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 56.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1424,14 +1420,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0258,
+      "target_weight": 0.0195,
       "current_weight": 0.0219,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.4 (starter), contribution 65.0",
+        "theme 'AI & Compute' score 41.9 (starter), contribution 59.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1617,14 +1613,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0252,
+      "target_weight": 0.0191,
       "current_weight": 0.0207,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.4 (starter), contribution 63.6",
+        "theme 'AI & Compute' score 41.9 (starter), contribution 58.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1636,16 +1632,14 @@
     {
       "symbol": "GS",
       "action": "BUY",
-      "target_weight": 0.0338,
+      "target_weight": 0.0328,
       "current_weight": 0.0221,
-      "notional_delta": 1205.76,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.17% vs target \u2014 add",
+      "notional_delta": 1102.85,
+      "reason": "underweight by 1.07% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 60.5 (buy), contribution 70.2",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 60.5 (buy), contribution 70.2"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1654,15 +1648,15 @@
     },
     {
       "symbol": "HD",
-      "action": "BUY",
-      "target_weight": 0.0432,
+      "action": "HOLD",
+      "target_weight": 0.0305,
       "current_weight": 0.0263,
-      "notional_delta": 1741.62,
-      "reason": "underweight by 1.69% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.72%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 73.8"
+        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 61.8"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1672,10 +1666,10 @@
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0325,
+      "target_weight": 0.0315,
       "current_weight": 0.023,
-      "notional_delta": 981.35,
-      "reason": "buying on mixed news flow \u2014 \"Are Stock Markets Open On Juneteenth? Here's What's Open And Closed On June 19\" \u00b7 underweight by 0.95% vs target \u2014 add",
+      "notional_delta": 878.44,
+      "reason": "buying on mixed news flow \u2014 \"Are Stock Markets Open On Juneteenth? Here's What's Open And Closed On June 19\" \u00b7 underweight by 0.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.21%",
         "theme=Financials & Rates",
@@ -1691,10 +1685,10 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.02,
+      "target_weight": 0.0205,
       "current_weight": 0.0,
-      "notional_delta": 2058.25,
-      "reason": "underweight by 2.00% vs target \u2014 add",
+      "notional_delta": 2109.71,
+      "reason": "underweight by 2.05% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
@@ -1779,7 +1773,7 @@
     {
       "symbol": "MRNA",
       "action": "HOLD",
-      "target_weight": 0.0282,
+      "target_weight": 0.0274,
       "current_weight": 0.0237,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Moderna's Flu Vaccine Clears Key FDA Panel Vote As Advisory Committee Backs Shot 9-0\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1798,16 +1792,14 @@
     {
       "symbol": "MS",
       "action": "BUY",
-      "target_weight": 0.0344,
+      "target_weight": 0.0334,
       "current_weight": 0.0227,
-      "notional_delta": 1203.3,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.17% vs target \u2014 add",
+      "notional_delta": 1100.39,
+      "reason": "underweight by 1.07% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.37%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 60.5 (buy), contribution 71.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 60.5 (buy), contribution 71.4"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1820,7 +1812,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.32,
-      "reason": "exiting on mixed news flow \u2014 \"The Nasdaq 100 Has Tripled Since 2020, But These 10 Mega-Caps Are Still Underwater\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.65%",
         "theme=AI & Compute",
@@ -1851,14 +1843,14 @@
     {
       "symbol": "NKE",
       "action": "BUY",
-      "target_weight": 0.032,
+      "target_weight": 0.021,
       "current_weight": 0.0,
-      "notional_delta": 3292.79,
-      "reason": "underweight by 3.20% vs target \u2014 add",
+      "notional_delta": 2160.75,
+      "reason": "underweight by 2.10% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.22%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 54.7"
+        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 42.7"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1868,14 +1860,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0238,
+      "target_weight": 0.0179,
       "current_weight": 0.0195,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.4 (starter), contribution 60.0",
+        "theme 'AI & Compute' score 41.9 (starter), contribution 54.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1958,10 +1950,10 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0209,
+      "target_weight": 0.0203,
       "current_weight": 0.0143,
-      "notional_delta": 678.2,
-      "reason": "underweight by 0.66% vs target \u2014 add",
+      "notional_delta": 616.45,
+      "reason": "underweight by 0.60% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Biotech & Pharma",
@@ -1975,10 +1967,10 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0238,
+      "target_weight": 0.0244,
       "current_weight": 0.0405,
-      "notional_delta": -1717.11,
-      "reason": "trimming on mixed news flow \u2014 \"7 Consumer Discretionary Stocks Whale Activity In Today\u2019s Session\" \u00b7 overweight by 1.67% vs target \u2014 trim",
+      "notional_delta": -1655.37,
+      "reason": "trimming on mixed news flow \u2014 \"7 Consumer Discretionary Stocks Whale Activity In Today\u2019s Session\" \u00b7 overweight by 1.61% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
@@ -2091,10 +2083,10 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0202,
+      "target_weight": 0.0207,
       "current_weight": 0.0308,
-      "notional_delta": -1087.47,
-      "reason": "trimming on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 overweight by 1.06% vs target \u2014 trim",
+      "notional_delta": -1036.01,
+      "reason": "trimming on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 overweight by 1.01% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
@@ -2127,7 +2119,7 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.026,
+      "target_weight": 0.0253,
       "current_weight": 0.0216,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -3148,6 +3140,10 @@
     {
       "t": "2026-06-19T19:19:09+00:00",
       "v": 102913.11
+    },
+    {
+      "t": "2026-06-19T20:50:34+00:00",
+      "v": 102913.11
     }
   ],
   "breaking_news": [
@@ -3156,7 +3152,7 @@
       "summary": "About 40% of rentals on Zillow offer move-in deals, like a month of free rent, thanks to a construction boom that created an apartment surplus in some parts of the United States.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847678/rent-apartment-landlord-construction-boom",
-      "published_utc": "2026-06-19T19:19:13+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3165,7 +3161,7 @@
       "summary": "A new Pew survey finds many working parents feel they cannot give 100% at either work or home. Benefits like paid sick leave and more affordable childcare could help.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5856274/working-parents-balance-work-pew",
-      "published_utc": "2026-06-19T19:19:13+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3174,7 +3170,7 @@
       "summary": "The U.S. may be the world's biggest producer of <em>crude </em>oil, but that's not the case for <em>motor </em>oil. The cost of lubricants is soaring, and even a tentative deal to end the war won't solve the problem.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847024/motor-oil-iran-war",
-      "published_utc": "2026-06-19T19:19:13+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3183,7 +3179,7 @@
       "summary": "NPR's Ailsa Chang talks with Jakob Larsen, chief safety and security officer at BIMCO, the global shipping association, about what it might mean to reopen the Strait of Hormuz.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5860650/shipping-exec-says-industry-needs-assurances-strait-of-hormuz-will-be-safe",
-      "published_utc": "2026-06-19T19:19:13+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3192,7 +3188,7 @@
       "summary": "The Federal Reserve left its benchmark interest rates unchanged Wednesday, and signaled its next move could be a rate increase. It's the first rate decision under the new Fed chairman, Kevin Warsh.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860084/fed-chief-warsh-first-fomc-meeting",
-      "published_utc": "2026-06-19T19:19:13+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3201,7 +3197,7 @@
       "summary": "Iran's control of the Strait of Hormuz inflicted global pain during the months-long conflict with the U.S. and Israel. A tentative deal is in place, but questions remain about the key waterway.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860909/iran-ships-strait-of-hormuz-trump",
-      "published_utc": "2026-06-19T19:19:13+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3210,7 +3206,7 @@
       "summary": "More than three months after the U.S. and Israel launched their war on Iran, the costs and aftereffects are felt around the world.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860739/iran-war-cost-oil-military-trade",
-      "published_utc": "2026-06-19T19:19:13+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3219,7 +3215,7 @@
       "summary": "A new NPR/PBS News/Marist poll finds a record low share of Americans approve of President Trump's job performance and his handling of the economy heading into the summer before a key midterm election.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/18/nx-s1-5861720/trump-economy-gas-prices-midterms-polling",
-      "published_utc": "2026-06-19T19:19:13+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3228,7 +3224,7 @@
       "summary": "Markos's beloved hen was not responding to any treatments - so he did the only thing he could think of.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cy49e7w3rmxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3237,7 +3233,7 @@
       "summary": "The man was allegedly struck by his 81-year-old opponent, who has since been arrested, the public prosecutor says.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgmny9v14no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3246,7 +3242,7 @@
       "summary": "French prosecutors confirm Morocco captain Achraf Hakimi will stand trial for rape, in accusations dating back to 2023.",
       "source": "BBC World",
       "url": "https://www.bbc.com/sport/football/articles/c20y18z7le1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3255,7 +3251,7 @@
       "summary": "Health facilities have come under attack during the current outbreak as a result of misinformation and fear.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c0qyg29wpk2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3264,7 +3260,7 @@
       "summary": "Some see a double standard: Japanese men who clean in public while their wives do all the housework.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/crel9xlp8r1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3273,7 +3269,7 @@
       "summary": "The US says South Africa is not doing enough to protect the white-minority Afrikaner community.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cdr457lxr71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3282,7 +3278,7 @@
       "summary": "The highly public exchange is an indication that their earlier close ties have frayed  since Trump's decision to go to war with Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c20y1ygn707o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3291,7 +3287,7 @@
       "summary": "The agreement followed concerns that continued clashes would undermine the deal to end the war between the US and Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cwyk7kkygj5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3300,7 +3296,7 @@
       "summary": "The Bank last cut interest rates in December but upheaval in the Middle East has stalled any further reductions.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c33yzm5mdjpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:37+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3309,7 +3305,7 @@
       "summary": "With fuel and gas prices having fallen in recent days, we look at how the end of hostilities might affect you - in five charts.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c4g5574pwreo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:37+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3318,7 +3314,7 @@
       "summary": "Himalayan villages are creating artificial glaciers to guarantee water for their crops in the spring.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c072414183go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:37+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3327,7 +3323,7 @@
       "summary": "Analysis showed how much the UK could have grown if it had not exited the EU.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvg75npqkq4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T19:19:12+00:00",
+      "published_utc": "2026-06-19T20:50:37+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
