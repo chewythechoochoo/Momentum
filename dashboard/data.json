@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-19T11:52:27+00:00",
+  "generated_at_utc": "2026-06-19T15:38:48+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 240,
-  "last_success_utc": "2026-06-19T07:33:49+00:00",
+  "cycle_count": 241,
+  "last_success_utc": "2026-06-19T11:52:27+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -514,8 +514,8 @@
       "score": 65.02,
       "raw_score": 67.71,
       "band": "buy",
-      "weight": 0.1267,
-      "confidence": 0.9,
+      "weight": 0.1301,
+      "confidence": 0.95,
       "components": {
         "momentum": 50.1,
         "sentiment": 100.0,
@@ -527,14 +527,14 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 63.65,
-      "raw_score": 76.49,
+      "score": 62.22,
+      "raw_score": 75.06,
       "band": "buy",
-      "weight": 0.1288,
-      "confidence": 1.0,
+      "weight": 0.1179,
+      "confidence": 0.9,
       "components": {
         "momentum": 96.93,
-        "sentiment": 71.43,
+        "sentiment": 66.66,
         "volume": 56.42,
         "policy": 50.0,
         "volatility_penalty": 12.83
@@ -546,8 +546,8 @@
       "score": 60.54,
       "raw_score": 60.54,
       "band": "buy",
-      "weight": 0.1096,
-      "confidence": 0.85,
+      "weight": 0.1066,
+      "confidence": 0.8,
       "components": {
         "momentum": 72.69,
         "sentiment": 50.0,
@@ -557,35 +557,67 @@
       }
     },
     {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 59.12,
+      "raw_score": 59.37,
+      "band": "buy",
+      "weight": 0.1137,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 31.09,
+        "sentiment": 100.0,
+        "volume": 59.66,
+        "policy": 50.0,
+        "volatility_penalty": 0.24
+      }
+    },
+    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 51.88,
-      "raw_score": 51.88,
-      "band": "starter",
-      "weight": 0.0896,
+      "score": 58.88,
+      "raw_score": 58.88,
+      "band": "buy",
+      "weight": 0.1129,
       "confidence": 1.0,
       "components": {
         "momentum": 52.33,
-        "sentiment": 50.0,
+        "sentiment": 75.0,
         "volume": 52.23,
-        "policy": 55.0,
+        "policy": 50.0,
         "volatility_penalty": 0.0
       }
     },
     {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 48.91,
-      "raw_score": 64.13,
+      "score": 47.99,
+      "raw_score": 63.2,
       "band": "starter",
-      "weight": 0.0797,
+      "weight": 0.0766,
       "confidence": 1.0,
       "components": {
         "momentum": 64.35,
-        "sentiment": 80.0,
+        "sentiment": 76.92,
         "volume": 39.43,
         "policy": 65.0,
         "volatility_penalty": 15.21
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 45.44,
+      "raw_score": 56.77,
+      "band": "starter",
+      "weight": 0.0681,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 59.62,
+        "sentiment": 60.0,
+        "volume": 47.12,
+        "policy": 55.0,
+        "volatility_penalty": 11.33
       }
     },
     {
@@ -594,8 +626,8 @@
       "score": 44.68,
       "raw_score": 53.78,
       "band": "starter",
-      "weight": 0.0656,
-      "confidence": 1.0,
+      "weight": 0.0623,
+      "confidence": 0.9,
       "components": {
         "momentum": 61.13,
         "sentiment": 50.0,
@@ -605,64 +637,32 @@
       }
     },
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 44.12,
-      "raw_score": 44.37,
-      "band": "starter",
-      "weight": 0.0526,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 31.09,
-        "sentiment": 50.0,
-        "volume": 59.66,
-        "policy": 50.0,
-        "volatility_penalty": 0.24
-      }
-    },
-    {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 42.5,
-      "raw_score": 60.3,
-      "band": "starter",
-      "weight": 0.051,
-      "confidence": 0.75,
+      "score": 39.5,
+      "raw_score": 57.3,
+      "band": "hold_small",
+      "weight": 0.0399,
+      "confidence": 0.7,
       "components": {
         "momentum": 57.48,
-        "sentiment": 80.0,
+        "sentiment": 70.0,
         "volume": 41.55,
         "policy": 50.0,
         "volatility_penalty": 17.8
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 41.27,
-      "raw_score": 52.6,
-      "band": "starter",
-      "weight": 0.0542,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 59.62,
-        "sentiment": 44.45,
-        "volume": 47.12,
-        "policy": 60.0,
-        "volatility_penalty": 11.33
-      }
-    },
-    {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 41.17,
-      "raw_score": 42.12,
-      "band": "starter",
-      "weight": 0.0472,
-      "confidence": 0.75,
+      "score": 32.17,
+      "raw_score": 33.12,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.7,
       "components": {
         "momentum": 0.88,
-        "sentiment": 80.0,
+        "sentiment": 50.0,
         "volume": 63.83,
         "policy": 50.0,
         "volatility_penalty": 0.94
@@ -672,15 +672,15 @@
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "HOLD",
-      "target_weight": 0.0425,
+      "action": "REDUCE",
+      "target_weight": 0.0389,
       "current_weight": 0.0458,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -714.08,
+      "reason": "overweight by 0.69% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=19.44%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 63.6 (buy), contribution 67.7"
+        "theme 'Semiconductors (Broad)' score 62.2 (buy), contribution 66.3"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -702,14 +702,14 @@
     {
       "symbol": "AMZN",
       "action": "BUY",
-      "target_weight": 0.0313,
+      "target_weight": 0.0392,
       "current_weight": 0.022,
-      "notional_delta": 952.94,
-      "reason": "buying on positive news flow \u2014 \"3 Space Stocks to Buy Now That SpaceX Is Off the Table\" \u00b7 underweight by 0.93% vs target \u2014 add",
+      "notional_delta": 1765.95,
+      "reason": "buying on positive news flow \u2014 \"3 Space Stocks to Buy Now That SpaceX Is Off the Table\" \u00b7 underweight by 1.72% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.9 (starter), contribution 56.6",
+        "theme 'Consumer Discretionary' score 58.9 (buy), contribution 63.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -731,14 +731,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0188,
+      "target_weight": 0.0235,
       "current_weight": 0.0219,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Nasdaq 100 Rallies, Oil Sinks To $75 On Iran Peace Deal: Stock Market Today\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.3 (starter), contribution 58.8",
+        "theme 'AI & Compute' score 45.4 (starter), contribution 63.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -746,17 +746,17 @@
     },
     {
       "symbol": "BA",
-      "action": "HOLD",
-      "target_weight": 0.0173,
+      "action": "BUY",
+      "target_weight": 0.0375,
       "current_weight": 0.0149,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Boeing Announces That Its Q4S Quantum Networking Satellite System Successfully Demonstrated High-Fidelity Entanglement Swapping During Groun\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 2325.18,
+      "reason": "buying on positive news flow \u2014 \"General Motors Is a Cash-Compounding Machine. Buy the Stock.\" \u00b7 underweight by 2.26% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.68%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 48.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Defense & Aerospace' score 59.1 (buy), contribution 63.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
@@ -777,29 +777,28 @@
     },
     {
       "symbol": "COP",
-      "action": "BUY",
-      "target_weight": 0.0159,
+      "action": "REDUCE",
+      "target_weight": 0.0012,
       "current_weight": 0.0024,
-      "notional_delta": 1388.42,
-      "reason": "underweight by 1.35% vs target \u2014 add",
+      "notional_delta": -123.95,
+      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.76%",
-        "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.2 (starter), contribution 42.5"
+        "theme=Oil & Gas"
       ],
       "theme_key": "oil_gas"
     },
     {
       "symbol": "CRWD",
       "action": "BUY",
-      "target_weight": 0.0229,
+      "target_weight": 0.0219,
       "current_weight": 0.0029,
-      "notional_delta": 2063.31,
-      "reason": "buying on positive news flow \u2014 \"CrowdStrike, AWS race to fix AI security blind spot\" \u00b7 underweight by 2.00% vs target \u2014 add",
+      "notional_delta": 1960.4,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 1.90% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.9 (starter), contribution 45.6",
+        "theme 'Cybersecurity' score 48.0 (starter), contribution 44.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -807,15 +806,14 @@
     },
     {
       "symbol": "CVX",
-      "action": "BUY",
-      "target_weight": 0.0152,
+      "action": "REDUCE",
+      "target_weight": 0.0012,
       "current_weight": 0.0025,
-      "notional_delta": 1308.81,
-      "reason": "buying on mixed news flow \u2014 \"The 14-Point US-Iran Deal Broken Down: What It Means For Oil Prices\" \u00b7 underweight by 1.27% vs target \u2014 add",
+      "notional_delta": -127.73,
+      "reason": "trimming on mixed news flow \u2014 \"The 14-Point US-Iran Deal Broken Down: What It Means For Oil Prices\" \u00b7 theme score 32.2 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.66%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.2 (starter), contribution 40.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -842,26 +840,24 @@
       "target_weight": 0.0,
       "current_weight": 0.0007,
       "notional_delta": -72.58,
-      "reason": "exiting on mixed news flow \u2014 \"T1 Energy Stock Edges Higher Thursday: What's Going On?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.30%",
-        "theme=Clean Energy",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
     {
       "symbol": "FTNT",
       "action": "BUY",
-      "target_weight": 0.0256,
+      "target_weight": 0.0246,
       "current_weight": 0.0027,
-      "notional_delta": 2360.79,
-      "reason": "buying on positive news flow \u2014 \"CrowdStrike, AWS race to fix AI security blind spot\" \u00b7 underweight by 2.29% vs target \u2014 add",
+      "notional_delta": 2257.88,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.19% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.9 (starter), contribution 51.0",
+        "theme 'Cybersecurity' score 48.0 (starter), contribution 50.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -869,15 +865,17 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.016,
+      "action": "BUY",
+      "target_weight": 0.0354,
       "current_weight": 0.0139,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 2212.64,
+      "reason": "buying on positive news flow \u2014 \"General Motors Is a Cash-Compounding Machine. Buy the Stock.\" \u00b7 underweight by 2.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.91%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 44.9"
+        "theme 'Defense & Aerospace' score 59.1 (buy), contribution 59.9",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
@@ -897,14 +895,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0183,
+      "target_weight": 0.023,
       "current_weight": 0.0207,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Holding SpaceX Since The IPO? Why I'd Use The Strength To Sell\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.3 (starter), contribution 57.4",
+        "theme 'AI & Compute' score 45.4 (starter), contribution 61.6",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -913,10 +911,10 @@
     {
       "symbol": "GS",
       "action": "BUY",
-      "target_weight": 0.0368,
+      "target_weight": 0.0358,
       "current_weight": 0.0221,
-      "notional_delta": 1514.5,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.47% vs target \u2014 add",
+      "notional_delta": 1411.59,
+      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.37% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=Financials & Rates",
@@ -929,24 +927,24 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0344,
+      "target_weight": 0.0428,
       "current_weight": 0.0263,
-      "notional_delta": 835.98,
-      "reason": "underweight by 0.81% vs target \u2014 add",
+      "notional_delta": 1700.45,
+      "reason": "underweight by 1.65% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.72%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.9 (starter), contribution 62.3"
+        "theme 'Consumer Discretionary' score 58.9 (buy), contribution 69.3"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0353,
+      "target_weight": 0.0344,
       "current_weight": 0.023,
-      "notional_delta": 1269.51,
-      "reason": "buying on mixed news flow \u2014 \"Are Stock Markets Open On Juneteenth? Here's What's Open And Closed On June 19\" \u00b7 underweight by 1.23% vs target \u2014 add",
+      "notional_delta": 1176.89,
+      "reason": "buying on mixed news flow \u2014 \"Are Stock Markets Open On Juneteenth? Here's What's Open And Closed On June 19\" \u00b7 underweight by 1.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.21%",
         "theme=Financials & Rates",
@@ -959,16 +957,14 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0205,
+      "target_weight": 0.0195,
       "current_weight": 0.0,
-      "notional_delta": 2109.71,
-      "reason": "buying on mixed news flow \u2014 \"Lucid Stock Gains On 2027 Robotaxi Expansion Plans: What Investors Need To Know\" \u00b7 underweight by 2.05% vs target \u2014 add",
+      "notional_delta": 2006.8,
+      "reason": "underweight by 1.95% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 47.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 47.1"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -978,10 +974,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0249,
       "notional_delta": -2567.29,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Eli Lilly Stock In The Last 15 Years\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.62%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
     },
@@ -991,24 +989,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0267,
       "notional_delta": -2745.06,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"General Motors Is a Cash-Compounding Machine. Buy the Stock.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.55%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "LRCX",
-      "action": "HOLD",
-      "target_weight": 0.0415,
+      "action": "REDUCE",
+      "target_weight": 0.038,
       "current_weight": 0.0436,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -571.82,
+      "reason": "overweight by 0.56% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=10.95%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 63.6 (buy), contribution 66.1"
+        "theme 'Semiconductors (Broad)' score 62.2 (buy), contribution 64.7"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1028,10 +1028,10 @@
     {
       "symbol": "MRNA",
       "action": "BUY",
-      "target_weight": 0.0464,
+      "target_weight": 0.0477,
       "current_weight": 0.0237,
-      "notional_delta": 2340.97,
-      "reason": "buying on positive news flow \u2014 \"Bulls Pile Into Moderna As FDA Decision Nears, Ignites 60% Surge In This ETF\" \u00b7 underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 2474.76,
+      "reason": "buying on positive news flow \u2014 \"Bulls Pile Into Moderna As FDA Decision Nears, Ignites 60% Surge In This ETF\" \u00b7 underweight by 2.40% vs target \u2014 add",
       "factors": [
         "unrealized_pl=22.69%",
         "theme=Biotech & Pharma",
@@ -1044,10 +1044,10 @@
     {
       "symbol": "MS",
       "action": "BUY",
-      "target_weight": 0.0374,
+      "target_weight": 0.0364,
       "current_weight": 0.0227,
-      "notional_delta": 1512.04,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.47% vs target \u2014 add",
+      "notional_delta": 1409.13,
+      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.37% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.37%",
         "theme=Financials & Rates",
@@ -1075,42 +1075,42 @@
     {
       "symbol": "NEE",
       "action": "HOLD",
-      "target_weight": 0.0223,
+      "target_weight": 0.0177,
       "current_weight": 0.02,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.09%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.5 (starter), contribution 67.2"
+        "theme 'Clean Energy' score 39.5 (hold_small), contribution 64.2"
       ],
       "theme_key": "clean_energy"
     },
     {
       "symbol": "NKE",
       "action": "BUY",
-      "target_weight": 0.0239,
+      "target_weight": 0.0309,
       "current_weight": 0.0,
-      "notional_delta": 2459.19,
-      "reason": "underweight by 2.39% vs target \u2014 add",
+      "notional_delta": 3179.59,
+      "reason": "underweight by 3.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.22%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.9 (starter), contribution 43.2"
+        "theme 'Consumer Discretionary' score 58.9 (buy), contribution 50.2"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0172,
+      "target_weight": 0.0216,
       "current_weight": 0.0195,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Qnity Electronics Stock Trends After Hours: CEO Tells Jim Cramer Company 'Right At The Center' Of Materials Innovation, The 'Hidden Hero' Of\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.3 (starter), contribution 53.8",
+        "theme 'AI & Compute' score 45.4 (starter), contribution 58.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1122,7 +1122,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -7.13,
-      "reason": "exiting on positive news flow \u2014 \"CrowdStrike, AWS race to fix AI security blind spot\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.03%",
         "theme=Cybersecurity",
@@ -1133,11 +1133,11 @@
     },
     {
       "symbol": "OXY",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on mixed news flow \u2014 \"The 14-Point US-Iran Deal Broken Down: What It Means For Oil Prices\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "trimming on mixed news flow \u2014 \"The 14-Point US-Iran Deal Broken Down: What It Means For Oil Prices\" \u00b7 theme score 32.2 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.85%",
         "theme=Oil & Gas",
@@ -1149,14 +1149,14 @@
     {
       "symbol": "PANW",
       "action": "BUY",
-      "target_weight": 0.0312,
+      "target_weight": 0.0301,
       "current_weight": 0.003,
-      "notional_delta": 2899.43,
-      "reason": "buying on positive news flow \u2014 \"CrowdStrike, AWS race to fix AI security blind spot\" \u00b7 underweight by 2.82% vs target \u2014 add",
+      "notional_delta": 2786.22,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.71% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.62%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.9 (starter), contribution 62.1",
+        "theme 'Cybersecurity' score 48.0 (starter), contribution 61.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1180,10 +1180,10 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0368,
+      "target_weight": 0.0377,
       "current_weight": 0.0143,
-      "notional_delta": 2314.52,
-      "reason": "underweight by 2.25% vs target \u2014 add",
+      "notional_delta": 2407.14,
+      "reason": "underweight by 2.34% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Biotech & Pharma",
@@ -1194,10 +1194,10 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0244,
+      "target_weight": 0.0232,
       "current_weight": 0.0405,
-      "notional_delta": -1655.37,
-      "reason": "overweight by 1.61% vs target \u2014 trim",
+      "notional_delta": -1778.86,
+      "reason": "overweight by 1.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
@@ -1207,29 +1207,31 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.0193,
+      "action": "BUY",
+      "target_weight": 0.0408,
       "current_weight": 0.0168,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 2464.99,
+      "reason": "buying on positive news flow \u2014 \"General Motors Is a Cash-Compounding Machine. Buy the Stock.\" \u00b7 underweight by 2.40% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.32%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 54.0"
+        "theme 'Defense & Aerospace' score 59.1 (buy), contribution 69.0",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "RUN",
       "action": "HOLD",
-      "target_weight": 0.0211,
+      "target_weight": 0.0167,
       "current_weight": 0.0192,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.70%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.5 (starter), contribution 63.6"
+        "theme 'Clean Energy' score 39.5 (hold_small), contribution 60.6"
       ],
       "theme_key": "clean_energy"
     },
@@ -1249,29 +1251,27 @@
     {
       "symbol": "SEDG",
       "action": "HOLD",
-      "target_weight": 0.0076,
+      "target_weight": 0.0055,
       "current_weight": 0.0064,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.5 (starter), contribution 22.8"
+        "theme 'Clean Energy' score 39.5 (hold_small), contribution 19.8"
       ],
       "theme_key": "clean_energy"
     },
     {
       "symbol": "SLB",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Stifel Maintains Buy on SLB, Raises Price Target to $64\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
-        "theme=Oil & Gas",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Oil & Gas"
       ],
       "theme_key": "oil_gas"
     },
@@ -1293,10 +1293,10 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0207,
+      "target_weight": 0.0197,
       "current_weight": 0.0308,
-      "notional_delta": -1036.01,
-      "reason": "trimming on positive news flow \u2014 \"Intel Hires Former SK Hynix CEO Seok-Hee Lee To Lead Advanced Packaging Push As Apple Partnership Fuels Foundry Revival\" \u00b7 overweight by 1.01% vs target \u2014 trim",
+      "notional_delta": -1138.93,
+      "reason": "trimming on positive news flow \u2014 \"Intel Hires Former SK Hynix CEO Seok-Hee Lee To Lead Advanced Packaging Push As Apple Partnership Fuels Foundry Revival\" \u00b7 overweight by 1.11% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
@@ -1308,27 +1308,25 @@
     },
     {
       "symbol": "TSM",
-      "action": "HOLD",
-      "target_weight": 0.0448,
+      "action": "REDUCE",
+      "target_weight": 0.041,
       "current_weight": 0.047,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Intel's Next Move Could Be Bigger Than Today's Pop\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -616.29,
+      "reason": "overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.04%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 63.6 (buy), contribution 71.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Semiconductors (Broad)' score 62.2 (buy), contribution 69.9"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0435,
+      "target_weight": 0.0447,
       "current_weight": 0.0216,
-      "notional_delta": 2257.14,
-      "reason": "underweight by 2.19% vs target \u2014 add",
+      "notional_delta": 2380.64,
+      "reason": "underweight by 2.31% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.10%",
         "theme=Biotech & Pharma",
@@ -1351,15 +1349,14 @@
     },
     {
       "symbol": "XOM",
-      "action": "BUY",
-      "target_weight": 0.016,
+      "action": "REDUCE",
+      "target_weight": 0.0037,
       "current_weight": 0.0074,
-      "notional_delta": 885.04,
-      "reason": "buying on mixed news flow \u2014 \"Here's How Much You Would Have Made Owning Exxon Mobil Stock In The Last 5 Years\" \u00b7 underweight by 0.86% vs target \u2014 add",
+      "notional_delta": -380.78,
+      "reason": "trimming on mixed news flow \u2014 \"Here's How Much You Would Have Made Owning Exxon Mobil Stock In The Last 5 Years\" \u00b7 theme score 32.2 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.77%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.2 (starter), contribution 42.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1369,15 +1366,15 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "HOLD",
-      "target_weight": 0.0425,
+      "action": "REDUCE",
+      "target_weight": 0.0389,
       "current_weight": 0.0458,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -714.08,
+      "reason": "overweight by 0.69% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=19.44%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 63.6 (buy), contribution 67.7"
+        "theme 'Semiconductors (Broad)' score 62.2 (buy), contribution 66.3"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1405,14 +1402,14 @@
     {
       "symbol": "AMZN",
       "action": "BUY",
-      "target_weight": 0.0313,
+      "target_weight": 0.0392,
       "current_weight": 0.022,
-      "notional_delta": 952.94,
-      "reason": "buying on positive news flow \u2014 \"3 Space Stocks to Buy Now That SpaceX Is Off the Table\" \u00b7 underweight by 0.93% vs target \u2014 add",
+      "notional_delta": 1765.95,
+      "reason": "buying on positive news flow \u2014 \"3 Space Stocks to Buy Now That SpaceX Is Off the Table\" \u00b7 underweight by 1.72% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.9 (starter), contribution 56.6",
+        "theme 'Consumer Discretionary' score 58.9 (buy), contribution 63.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1440,14 +1437,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0188,
+      "target_weight": 0.0235,
       "current_weight": 0.0219,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Nasdaq 100 Rallies, Oil Sinks To $75 On Iran Peace Deal: Stock Market Today\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.3 (starter), contribution 58.8",
+        "theme 'AI & Compute' score 45.4 (starter), contribution 63.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1458,17 +1455,17 @@
     },
     {
       "symbol": "BA",
-      "action": "HOLD",
-      "target_weight": 0.0173,
+      "action": "BUY",
+      "target_weight": 0.0375,
       "current_weight": 0.0149,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Boeing Announces That Its Q4S Quantum Networking Satellite System Successfully Demonstrated High-Fidelity Entanglement Swapping During Groun\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 2325.18,
+      "reason": "buying on positive news flow \u2014 \"General Motors Is a Cash-Compounding Machine. Buy the Stock.\" \u00b7 underweight by 2.26% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.68%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 48.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Defense & Aerospace' score 59.1 (buy), contribution 63.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1495,15 +1492,14 @@
     },
     {
       "symbol": "COP",
-      "action": "BUY",
-      "target_weight": 0.0159,
+      "action": "REDUCE",
+      "target_weight": 0.0012,
       "current_weight": 0.0024,
-      "notional_delta": 1388.42,
-      "reason": "underweight by 1.35% vs target \u2014 add",
+      "notional_delta": -123.95,
+      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.76%",
-        "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.2 (starter), contribution 42.5"
+        "theme=Oil & Gas"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1513,14 +1509,14 @@
     {
       "symbol": "CRWD",
       "action": "BUY",
-      "target_weight": 0.0229,
+      "target_weight": 0.0219,
       "current_weight": 0.0029,
-      "notional_delta": 2063.31,
-      "reason": "buying on positive news flow \u2014 \"CrowdStrike, AWS race to fix AI security blind spot\" \u00b7 underweight by 2.00% vs target \u2014 add",
+      "notional_delta": 1960.4,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 1.90% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.9 (starter), contribution 45.6",
+        "theme 'Cybersecurity' score 48.0 (starter), contribution 44.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1531,15 +1527,14 @@
     },
     {
       "symbol": "CVX",
-      "action": "BUY",
-      "target_weight": 0.0152,
+      "action": "REDUCE",
+      "target_weight": 0.0012,
       "current_weight": 0.0025,
-      "notional_delta": 1308.81,
-      "reason": "buying on mixed news flow \u2014 \"The 14-Point US-Iran Deal Broken Down: What It Means For Oil Prices\" \u00b7 underweight by 1.27% vs target \u2014 add",
+      "notional_delta": -127.73,
+      "reason": "trimming on mixed news flow \u2014 \"The 14-Point US-Iran Deal Broken Down: What It Means For Oil Prices\" \u00b7 theme score 32.2 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.66%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.2 (starter), contribution 40.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1572,12 +1567,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0007,
       "notional_delta": -72.58,
-      "reason": "exiting on mixed news flow \u2014 \"T1 Energy Stock Edges Higher Thursday: What's Going On?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.30%",
-        "theme=Clean Energy",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1587,14 +1580,14 @@
     {
       "symbol": "FTNT",
       "action": "BUY",
-      "target_weight": 0.0256,
+      "target_weight": 0.0246,
       "current_weight": 0.0027,
-      "notional_delta": 2360.79,
-      "reason": "buying on positive news flow \u2014 \"CrowdStrike, AWS race to fix AI security blind spot\" \u00b7 underweight by 2.29% vs target \u2014 add",
+      "notional_delta": 2257.88,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.19% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.9 (starter), contribution 51.0",
+        "theme 'Cybersecurity' score 48.0 (starter), contribution 50.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1605,15 +1598,17 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.016,
+      "action": "BUY",
+      "target_weight": 0.0354,
       "current_weight": 0.0139,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 2212.64,
+      "reason": "buying on positive news flow \u2014 \"General Motors Is a Cash-Compounding Machine. Buy the Stock.\" \u00b7 underweight by 2.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.91%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 44.9"
+        "theme 'Defense & Aerospace' score 59.1 (buy), contribution 59.9",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1639,14 +1634,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0183,
+      "target_weight": 0.023,
       "current_weight": 0.0207,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Holding SpaceX Since The IPO? Why I'd Use The Strength To Sell\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.3 (starter), contribution 57.4",
+        "theme 'AI & Compute' score 45.4 (starter), contribution 61.6",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1658,10 +1653,10 @@
     {
       "symbol": "GS",
       "action": "BUY",
-      "target_weight": 0.0368,
+      "target_weight": 0.0358,
       "current_weight": 0.0221,
-      "notional_delta": 1514.5,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.47% vs target \u2014 add",
+      "notional_delta": 1411.59,
+      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.37% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=Financials & Rates",
@@ -1677,14 +1672,14 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0344,
+      "target_weight": 0.0428,
       "current_weight": 0.0263,
-      "notional_delta": 835.98,
-      "reason": "underweight by 0.81% vs target \u2014 add",
+      "notional_delta": 1700.45,
+      "reason": "underweight by 1.65% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.72%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.9 (starter), contribution 62.3"
+        "theme 'Consumer Discretionary' score 58.9 (buy), contribution 69.3"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1694,10 +1689,10 @@
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0353,
+      "target_weight": 0.0344,
       "current_weight": 0.023,
-      "notional_delta": 1269.51,
-      "reason": "buying on mixed news flow \u2014 \"Are Stock Markets Open On Juneteenth? Here's What's Open And Closed On June 19\" \u00b7 underweight by 1.23% vs target \u2014 add",
+      "notional_delta": 1176.89,
+      "reason": "buying on mixed news flow \u2014 \"Are Stock Markets Open On Juneteenth? Here's What's Open And Closed On June 19\" \u00b7 underweight by 1.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.21%",
         "theme=Financials & Rates",
@@ -1713,16 +1708,14 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0205,
+      "target_weight": 0.0195,
       "current_weight": 0.0,
-      "notional_delta": 2109.71,
-      "reason": "buying on mixed news flow \u2014 \"Lucid Stock Gains On 2027 Robotaxi Expansion Plans: What Investors Need To Know\" \u00b7 underweight by 2.05% vs target \u2014 add",
+      "notional_delta": 2006.8,
+      "reason": "underweight by 1.95% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 47.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 47.1"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1735,10 +1728,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0249,
       "notional_delta": -2567.29,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Eli Lilly Stock In The Last 15 Years\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.62%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1751,10 +1746,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0267,
       "notional_delta": -2745.06,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"General Motors Is a Cash-Compounding Machine. Buy the Stock.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.55%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1763,15 +1760,15 @@
     },
     {
       "symbol": "LRCX",
-      "action": "HOLD",
-      "target_weight": 0.0415,
+      "action": "REDUCE",
+      "target_weight": 0.038,
       "current_weight": 0.0436,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -571.82,
+      "reason": "overweight by 0.56% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=10.95%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 63.6 (buy), contribution 66.1"
+        "theme 'Semiconductors (Broad)' score 62.2 (buy), contribution 64.7"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1797,10 +1794,10 @@
     {
       "symbol": "MRNA",
       "action": "BUY",
-      "target_weight": 0.0464,
+      "target_weight": 0.0477,
       "current_weight": 0.0237,
-      "notional_delta": 2340.97,
-      "reason": "buying on positive news flow \u2014 \"Bulls Pile Into Moderna As FDA Decision Nears, Ignites 60% Surge In This ETF\" \u00b7 underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 2474.76,
+      "reason": "buying on positive news flow \u2014 \"Bulls Pile Into Moderna As FDA Decision Nears, Ignites 60% Surge In This ETF\" \u00b7 underweight by 2.40% vs target \u2014 add",
       "factors": [
         "unrealized_pl=22.69%",
         "theme=Biotech & Pharma",
@@ -1816,10 +1813,10 @@
     {
       "symbol": "MS",
       "action": "BUY",
-      "target_weight": 0.0374,
+      "target_weight": 0.0364,
       "current_weight": 0.0227,
-      "notional_delta": 1512.04,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.47% vs target \u2014 add",
+      "notional_delta": 1409.13,
+      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Spark Battle Between Goldman And Morgan Stanley\" \u00b7 underweight by 1.37% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.37%",
         "theme=Financials & Rates",
@@ -1853,14 +1850,14 @@
     {
       "symbol": "NEE",
       "action": "HOLD",
-      "target_weight": 0.0223,
+      "target_weight": 0.0177,
       "current_weight": 0.02,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.09%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.5 (starter), contribution 67.2"
+        "theme 'Clean Energy' score 39.5 (hold_small), contribution 64.2"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1870,14 +1867,14 @@
     {
       "symbol": "NKE",
       "action": "BUY",
-      "target_weight": 0.0239,
+      "target_weight": 0.0309,
       "current_weight": 0.0,
-      "notional_delta": 2459.19,
-      "reason": "underweight by 2.39% vs target \u2014 add",
+      "notional_delta": 3179.59,
+      "reason": "underweight by 3.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.22%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.9 (starter), contribution 43.2"
+        "theme 'Consumer Discretionary' score 58.9 (buy), contribution 50.2"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1887,14 +1884,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0172,
+      "target_weight": 0.0216,
       "current_weight": 0.0195,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Qnity Electronics Stock Trends After Hours: CEO Tells Jim Cramer Company 'Right At The Center' Of Materials Innovation, The 'Hidden Hero' Of\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.3 (starter), contribution 53.8",
+        "theme 'AI & Compute' score 45.4 (starter), contribution 58.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1909,7 +1906,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -7.13,
-      "reason": "exiting on positive news flow \u2014 \"CrowdStrike, AWS race to fix AI security blind spot\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.03%",
         "theme=Cybersecurity",
@@ -1923,11 +1920,11 @@
     },
     {
       "symbol": "OXY",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on mixed news flow \u2014 \"The 14-Point US-Iran Deal Broken Down: What It Means For Oil Prices\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "trimming on mixed news flow \u2014 \"The 14-Point US-Iran Deal Broken Down: What It Means For Oil Prices\" \u00b7 theme score 32.2 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.85%",
         "theme=Oil & Gas",
@@ -1942,14 +1939,14 @@
     {
       "symbol": "PANW",
       "action": "BUY",
-      "target_weight": 0.0312,
+      "target_weight": 0.0301,
       "current_weight": 0.003,
-      "notional_delta": 2899.43,
-      "reason": "buying on positive news flow \u2014 \"CrowdStrike, AWS race to fix AI security blind spot\" \u00b7 underweight by 2.82% vs target \u2014 add",
+      "notional_delta": 2786.22,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.71% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.62%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.9 (starter), contribution 62.1",
+        "theme 'Cybersecurity' score 48.0 (starter), contribution 61.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1979,10 +1976,10 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0368,
+      "target_weight": 0.0377,
       "current_weight": 0.0143,
-      "notional_delta": 2314.52,
-      "reason": "underweight by 2.25% vs target \u2014 add",
+      "notional_delta": 2407.14,
+      "reason": "underweight by 2.34% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Biotech & Pharma",
@@ -1996,10 +1993,10 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0244,
+      "target_weight": 0.0232,
       "current_weight": 0.0405,
-      "notional_delta": -1655.37,
-      "reason": "overweight by 1.61% vs target \u2014 trim",
+      "notional_delta": -1778.86,
+      "reason": "overweight by 1.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
@@ -2012,15 +2009,17 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.0193,
+      "action": "BUY",
+      "target_weight": 0.0408,
       "current_weight": 0.0168,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 2464.99,
+      "reason": "buying on positive news flow \u2014 \"General Motors Is a Cash-Compounding Machine. Buy the Stock.\" \u00b7 underweight by 2.40% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.32%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.1 (starter), contribution 54.0"
+        "theme 'Defense & Aerospace' score 59.1 (buy), contribution 69.0",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2030,14 +2029,14 @@
     {
       "symbol": "RUN",
       "action": "HOLD",
-      "target_weight": 0.0211,
+      "target_weight": 0.0167,
       "current_weight": 0.0192,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.70%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.5 (starter), contribution 63.6"
+        "theme 'Clean Energy' score 39.5 (hold_small), contribution 60.6"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -2063,14 +2062,14 @@
     {
       "symbol": "SEDG",
       "action": "HOLD",
-      "target_weight": 0.0076,
+      "target_weight": 0.0055,
       "current_weight": 0.0064,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.5 (starter), contribution 22.8"
+        "theme 'Clean Energy' score 39.5 (hold_small), contribution 19.8"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -2079,16 +2078,14 @@
     },
     {
       "symbol": "SLB",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Stifel Maintains Buy on SLB, Raises Price Target to $64\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
-        "theme=Oil & Gas",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Oil & Gas"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2116,10 +2113,10 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0207,
+      "target_weight": 0.0197,
       "current_weight": 0.0308,
-      "notional_delta": -1036.01,
-      "reason": "trimming on positive news flow \u2014 \"Intel Hires Former SK Hynix CEO Seok-Hee Lee To Lead Advanced Packaging Push As Apple Partnership Fuels Foundry Revival\" \u00b7 overweight by 1.01% vs target \u2014 trim",
+      "notional_delta": -1138.93,
+      "reason": "trimming on positive news flow \u2014 \"Intel Hires Former SK Hynix CEO Seok-Hee Lee To Lead Advanced Packaging Push As Apple Partnership Fuels Foundry Revival\" \u00b7 overweight by 1.11% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
@@ -2134,17 +2131,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "HOLD",
-      "target_weight": 0.0448,
+      "action": "REDUCE",
+      "target_weight": 0.041,
       "current_weight": 0.047,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Intel's Next Move Could Be Bigger Than Today's Pop\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -616.29,
+      "reason": "overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.04%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 63.6 (buy), contribution 71.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Semiconductors (Broad)' score 62.2 (buy), contribution 69.9"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2154,10 +2149,10 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0435,
+      "target_weight": 0.0447,
       "current_weight": 0.0216,
-      "notional_delta": 2257.14,
-      "reason": "underweight by 2.19% vs target \u2014 add",
+      "notional_delta": 2380.64,
+      "reason": "underweight by 2.31% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.10%",
         "theme=Biotech & Pharma",
@@ -2186,15 +2181,14 @@
     },
     {
       "symbol": "XOM",
-      "action": "BUY",
-      "target_weight": 0.016,
+      "action": "REDUCE",
+      "target_weight": 0.0037,
       "current_weight": 0.0074,
-      "notional_delta": 885.04,
-      "reason": "buying on mixed news flow \u2014 \"Here's How Much You Would Have Made Owning Exxon Mobil Stock In The Last 5 Years\" \u00b7 underweight by 0.86% vs target \u2014 add",
+      "notional_delta": -380.78,
+      "reason": "trimming on mixed news flow \u2014 \"Here's How Much You Would Have Made Owning Exxon Mobil Stock In The Last 5 Years\" \u00b7 theme score 32.2 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.77%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.2 (starter), contribution 42.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -3164,6 +3158,10 @@
     {
       "t": "2026-06-19T11:52:24+00:00",
       "v": 102913.11
+    },
+    {
+      "t": "2026-06-19T15:38:44+00:00",
+      "v": 102913.11
     }
   ],
   "breaking_news": [
@@ -3172,7 +3170,7 @@
       "summary": "About 40% of rentals on Zillow offer move-in deals, like a month of free rent, thanks to a construction boom that created an apartment surplus in some parts of the United States.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847678/rent-apartment-landlord-construction-boom",
-      "published_utc": "2026-06-19T11:52:27+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3181,7 +3179,7 @@
       "summary": "A new Pew survey finds many working parents feel they cannot give 100% at either work or home. Benefits like paid sick leave and more affordable childcare could help.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5856274/working-parents-balance-work-pew",
-      "published_utc": "2026-06-19T11:52:27+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3190,7 +3188,7 @@
       "summary": "The U.S. may be the world's biggest producer of <em>crude </em>oil, but that's not the case for <em>motor </em>oil. The cost of lubricants is soaring, and even a tentative deal to end the war won't solve the problem.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847024/motor-oil-iran-war",
-      "published_utc": "2026-06-19T11:52:27+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3199,7 +3197,7 @@
       "summary": "NPR's Ailsa Chang talks with Jakob Larsen, chief safety and security officer at BIMCO, the global shipping association, about what it might mean to reopen the Strait of Hormuz.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5860650/shipping-exec-says-industry-needs-assurances-strait-of-hormuz-will-be-safe",
-      "published_utc": "2026-06-19T11:52:27+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3208,7 +3206,7 @@
       "summary": "The Federal Reserve left its benchmark interest rates unchanged Wednesday, and signaled its next move could be a rate increase. It's the first rate decision under the new Fed chairman, Kevin Warsh.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860084/fed-chief-warsh-first-fomc-meeting",
-      "published_utc": "2026-06-19T11:52:27+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3217,7 +3215,7 @@
       "summary": "Iran's control of the Strait of Hormuz inflicted global pain during the months-long conflict with the U.S. and Israel. A tentative deal is in place, but questions remain about the key waterway.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860909/iran-ships-strait-of-hormuz-trump",
-      "published_utc": "2026-06-19T11:52:27+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3226,7 +3224,7 @@
       "summary": "More than three months after the U.S. and Israel launched their war on Iran, the costs and aftereffects are felt around the world.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860739/iran-war-cost-oil-military-trade",
-      "published_utc": "2026-06-19T11:52:27+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3235,7 +3233,7 @@
       "summary": "A new NPR/PBS News/Marist poll finds a record low share of Americans approve of President Trump's job performance and his handling of the economy heading into the summer before a key midterm election.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/18/nx-s1-5861720/trump-economy-gas-prices-midterms-polling",
-      "published_utc": "2026-06-19T11:52:27+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3244,26 +3242,26 @@
       "summary": "India's largest telecom operator is expected to raise around $4bn (\u00a33.02bn), according to media reports.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cx2kerpkynko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Thirty-five killed as gunmen attack Niger's biggest airport",
-      "summary": "Niger has been fighting a militant Islamist insurgency for a decade and in January suspected jihadists attacked the same airport.",
+      "headline": "UK actress charged with importing meth worth almost A$300m into Australia",
+      "summary": "Emaa Hussen, 34, faces life in prison for allegedly trying to smuggle 320kg of meth hidden in bags of charcoal.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cdx7krkdqeno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
+      "url": "https://www.bbc.com/news/articles/ckg5nq0172no?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Moscow residents complain of black rain after largest Ukrainian attack hits oil refinery",
-      "summary": "A refinery and a shopping centre burned after almost 200 Ukrainian drones were launched towards an area to the south-east of the Russian capital.",
+      "headline": "Boy, 12, wins hearts after trying to check sick chicken into Ethiopian hospital",
+      "summary": "Markos's beloved hen was not responding to any treatments - so he did the only thing he could think of.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c98291g5rr1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
-      "sentiment_score": 0.0,
+      "url": "https://www.bbc.com/news/articles/cy49e7w3rmxo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-19T15:38:48+00:00",
+      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -3271,7 +3269,25 @@
       "summary": "The proposal would extend Emmerson Mnangagwa's term by two years and scrap direct presidential elections.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c20y15m0337o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Morocco captain Achraf Hakimi to stand trial for rape",
+      "summary": "French prosecutors confirm Morocco captain Achraf Hakimi will stand trial for rape, in accusations dating back to 2023.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/sport/football/articles/c20y18z7le1o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-19T15:38:48+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Six-year-old Ebola patient taken from DR Congo hospital found and 'doing well'",
+      "summary": "Health facilities have come under attack during the current outbreak as a result of misinformation and fear.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c0qyg29wpk2o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3280,34 +3296,16 @@
       "summary": "Some see a double standard: Japanese men who clean in public while their wives do all the housework.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/crel9xlp8r1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "What Iran and US get from deal and why both could struggle to keep it",
-      "summary": "BBC analysts assess the claims by both Washington and Tehran to have won a victory with the deal to end their war.",
+      "headline": "Italy's Meloni says Trump 'made up' story that she 'begged' him for photo at G7",
+      "summary": "The highly public exchange is an indication that their earlier close ties have frayed  since Trump's decision to go to war with Iran.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c932yqz8lggo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Lebanon says Israeli strikes kill 18 as Israel says four soldiers killed by Hezbollah",
-      "summary": "It comes a day after the US and Iran signed a deal to end their conflict, including fighting in Lebanon.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c23ymz1n9rmo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "US-Iran talks postponed as Vance pulls out of Switzerland trip",
-      "summary": "The talks were expected to focus on implementing the deal to end the war signed earlier this week.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c8r2eme2n5do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
+      "url": "https://www.bbc.com/news/articles/c20y1ygn707o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3316,7 +3314,7 @@
       "summary": "Thousands of Brits were left stranded in the Middle East when the US-Iran war broke out in early 2026.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cddl29lg5gro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3325,7 +3323,7 @@
       "summary": "The Bank last cut interest rates in December but upheaval in the Middle East has stalled any further reductions.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c33yzm5mdjpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3334,7 +3332,7 @@
       "summary": "Himalayan villages are creating artificial glaciers to guarantee water for their crops in the spring.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c072414183go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3343,7 +3341,7 @@
       "summary": "With fuel and gas prices having fallen in recent days, we look at how the end of hostilities might affect you - in five charts.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c4g5574pwreo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T11:52:26+00:00",
+      "published_utc": "2026-06-19T15:38:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
