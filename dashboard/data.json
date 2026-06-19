@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-19T20:50:38+00:00",
+  "generated_at_utc": "2026-06-19T21:59:49+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 244,
-  "last_success_utc": "2026-06-19T19:19:13+00:00",
+  "cycle_count": 245,
+  "last_success_utc": "2026-06-19T20:50:38+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -525,6 +525,22 @@
       }
     },
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 59.68,
+      "raw_score": 68.78,
+      "band": "buy",
+      "weight": 0.1127,
+      "confidence": 0.95,
+      "components": {
+        "momentum": 61.13,
+        "sentiment": 100.0,
+        "volume": 46.66,
+        "policy": 50.0,
+        "volatility_penalty": 9.1
+      }
+    },
+    {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
       "score": 57.22,
@@ -538,6 +554,22 @@
         "volume": 56.42,
         "policy": 50.0,
         "volatility_penalty": 12.83
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 56.94,
+      "raw_score": 68.27,
+      "band": "buy",
+      "weight": 0.1065,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 59.62,
+        "sentiment": 100.0,
+        "volume": 47.12,
+        "policy": 50.0,
+        "volatility_penalty": 11.33
       }
     },
     {
@@ -589,19 +621,19 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 44.68,
-      "raw_score": 53.78,
+      "key": "oil_gas",
+      "name": "Oil & Gas",
+      "score": 44.67,
+      "raw_score": 45.62,
       "band": "starter",
       "weight": 0.0656,
       "confidence": 1.0,
       "components": {
-        "momentum": 61.13,
-        "sentiment": 50.0,
-        "volume": 46.66,
-        "policy": 50.0,
-        "volatility_penalty": 9.1
+        "momentum": 0.88,
+        "sentiment": 90.0,
+        "volume": 63.83,
+        "policy": 55.0,
+        "volatility_penalty": 0.94
       }
     },
     {
@@ -621,22 +653,6 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 41.94,
-      "raw_score": 53.27,
-      "band": "starter",
-      "weight": 0.0565,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 59.62,
-        "sentiment": 50.0,
-        "volume": 47.12,
-        "policy": 50.0,
-        "volatility_penalty": 11.33
-      }
-    },
-    {
       "key": "clean_energy",
       "name": "Clean Energy",
       "score": 33.5,
@@ -650,22 +666,6 @@
         "volume": 41.55,
         "policy": 50.0,
         "volatility_penalty": 17.8
-      }
-    },
-    {
-      "key": "oil_gas",
-      "name": "Oil & Gas",
-      "score": 32.17,
-      "raw_score": 33.12,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 0.88,
-        "sentiment": 50.0,
-        "volume": 63.83,
-        "policy": 50.0,
-        "volatility_penalty": 0.94
       }
     }
   ],
@@ -728,15 +728,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "HOLD",
-      "target_weight": 0.0195,
+      "action": "BUY",
+      "target_weight": 0.0365,
       "current_weight": 0.0219,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 1501.78,
+      "reason": "buying on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 underweight by 1.46% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.9 (starter), contribution 59.5",
+        "theme 'AI & Compute' score 56.9 (buy), contribution 74.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -775,14 +775,17 @@
     },
     {
       "symbol": "COP",
-      "action": "REDUCE",
-      "target_weight": 0.0012,
+      "action": "BUY",
+      "target_weight": 0.0221,
       "current_weight": 0.0024,
-      "notional_delta": -123.95,
-      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2026.48,
+      "reason": "buying on positive news flow \u2014 \"Equinor to Boost Troll Gas Output with $412 Million Subsea Development\" \u00b7 underweight by 1.97% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.76%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "theme 'Oil & Gas' score 44.7 (starter), contribution 46.0",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -804,14 +807,17 @@
     },
     {
       "symbol": "CVX",
-      "action": "REDUCE",
-      "target_weight": 0.0012,
+      "action": "BUY",
+      "target_weight": 0.0212,
       "current_weight": 0.0025,
-      "notional_delta": -127.73,
-      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1926.29,
+      "reason": "buying on positive news flow \u2014 \"Equinor to Boost Troll Gas Output with $412 Million Subsea Development\" \u00b7 underweight by 1.87% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.66%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "theme 'Oil & Gas' score 44.7 (starter), contribution 44.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -821,12 +827,10 @@
       "target_weight": 0.0,
       "current_weight": 0.015,
       "notional_delta": -1545.43,
-      "reason": "exiting on negative news flow \u2014 \"Holding SpaceX Since The IPO? Why I'd Use The Strength To Sell\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.48%",
-        "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -888,15 +892,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0191,
+      "action": "BUY",
+      "target_weight": 0.0358,
       "current_weight": 0.0207,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 1551.09,
+      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 underweight by 1.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.9 (starter), contribution 58.1",
+        "theme 'AI & Compute' score 56.9 (buy), contribution 73.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -949,14 +953,14 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0205,
+      "target_weight": 0.0358,
       "current_weight": 0.0,
-      "notional_delta": 2109.71,
-      "reason": "underweight by 2.05% vs target \u2014 add",
+      "notional_delta": 3684.28,
+      "reason": "underweight by 3.58% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 47.1"
+        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 62.1"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1093,15 +1097,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0179,
+      "action": "BUY",
+      "target_weight": 0.0341,
       "current_weight": 0.0195,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 1500.93,
+      "reason": "buying on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 underweight by 1.46% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.9 (starter), contribution 54.5",
+        "theme 'AI & Compute' score 56.9 (buy), contribution 69.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1124,14 +1128,16 @@
     },
     {
       "symbol": "OXY",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
+      "reason": "exiting on positive news flow \u2014 \"Equinor to Boost Troll Gas Output with $412 Million Subsea Development\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-13.85%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1182,15 +1188,15 @@
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
-      "target_weight": 0.0244,
+      "action": "HOLD",
+      "target_weight": 0.0409,
       "current_weight": 0.0405,
-      "notional_delta": -1655.37,
-      "reason": "trimming on mixed news flow \u2014 \"7 Consumer Discretionary Stocks Whale Activity In Today\u2019s Session\" \u00b7 overweight by 1.61% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"7 Consumer Discretionary Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 56.0",
+        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 71.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1251,14 +1257,16 @@
     },
     {
       "symbol": "SLB",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
+      "reason": "exiting on positive news flow \u2014 \"Equinor to Boost Troll Gas Output with $412 Million Subsea Development\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-15.17%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1277,15 +1285,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
-      "target_weight": 0.0207,
+      "action": "BUY",
+      "target_weight": 0.036,
       "current_weight": 0.0308,
-      "notional_delta": -1036.01,
-      "reason": "trimming on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 overweight by 1.01% vs target \u2014 trim",
+      "notional_delta": 538.56,
+      "reason": "buying on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 underweight by 0.52% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 47.6",
+        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 62.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1334,16 +1342,17 @@
     },
     {
       "symbol": "XOM",
-      "action": "REDUCE",
-      "target_weight": 0.0037,
+      "action": "BUY",
+      "target_weight": 0.0223,
       "current_weight": 0.0074,
-      "notional_delta": -380.78,
-      "reason": "trimming on mixed news flow \u2014 \"Here's How Much You Would Have Made Owning Exxon Mobil Stock In The Last 5 Years\" \u00b7 theme score 32.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1533.39,
+      "reason": "buying on positive news flow \u2014 \"Equinor to Boost Troll Gas Output with $412 Million Subsea Development\" \u00b7 underweight by 1.49% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.77%",
         "theme=Oil & Gas",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Oil & Gas' score 44.7 (starter), contribution 46.4",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     }
@@ -1419,15 +1428,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "HOLD",
-      "target_weight": 0.0195,
+      "action": "BUY",
+      "target_weight": 0.0365,
       "current_weight": 0.0219,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 1501.78,
+      "reason": "buying on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 underweight by 1.46% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.9 (starter), contribution 59.5",
+        "theme 'AI & Compute' score 56.9 (buy), contribution 74.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1475,14 +1484,17 @@
     },
     {
       "symbol": "COP",
-      "action": "REDUCE",
-      "target_weight": 0.0012,
+      "action": "BUY",
+      "target_weight": 0.0221,
       "current_weight": 0.0024,
-      "notional_delta": -123.95,
-      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2026.48,
+      "reason": "buying on positive news flow \u2014 \"Equinor to Boost Troll Gas Output with $412 Million Subsea Development\" \u00b7 underweight by 1.97% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.76%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "theme 'Oil & Gas' score 44.7 (starter), contribution 46.0",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1510,14 +1522,17 @@
     },
     {
       "symbol": "CVX",
-      "action": "REDUCE",
-      "target_weight": 0.0012,
+      "action": "BUY",
+      "target_weight": 0.0212,
       "current_weight": 0.0025,
-      "notional_delta": -127.73,
-      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1926.29,
+      "reason": "buying on positive news flow \u2014 \"Equinor to Boost Troll Gas Output with $412 Million Subsea Development\" \u00b7 underweight by 1.87% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.66%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "theme 'Oil & Gas' score 44.7 (starter), contribution 44.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1530,12 +1545,10 @@
       "target_weight": 0.0,
       "current_weight": 0.015,
       "notional_delta": -1545.43,
-      "reason": "exiting on negative news flow \u2014 \"Holding SpaceX Since The IPO? Why I'd Use The Strength To Sell\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.48%",
-        "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1612,15 +1625,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0191,
+      "action": "BUY",
+      "target_weight": 0.0358,
       "current_weight": 0.0207,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 1551.09,
+      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 underweight by 1.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.9 (starter), contribution 58.1",
+        "theme 'AI & Compute' score 56.9 (buy), contribution 73.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1685,14 +1698,14 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0205,
+      "target_weight": 0.0358,
       "current_weight": 0.0,
-      "notional_delta": 2109.71,
-      "reason": "underweight by 2.05% vs target \u2014 add",
+      "notional_delta": 3684.28,
+      "reason": "underweight by 3.58% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 47.1"
+        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 62.1"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1859,15 +1872,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0179,
+      "action": "BUY",
+      "target_weight": 0.0341,
       "current_weight": 0.0195,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 1500.93,
+      "reason": "buying on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 underweight by 1.46% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.9 (starter), contribution 54.5",
+        "theme 'AI & Compute' score 56.9 (buy), contribution 69.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1896,14 +1909,16 @@
     },
     {
       "symbol": "OXY",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
+      "reason": "exiting on positive news flow \u2014 \"Equinor to Boost Troll Gas Output with $412 Million Subsea Development\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-13.85%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1966,15 +1981,15 @@
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
-      "target_weight": 0.0244,
+      "action": "HOLD",
+      "target_weight": 0.0409,
       "current_weight": 0.0405,
-      "notional_delta": -1655.37,
-      "reason": "trimming on mixed news flow \u2014 \"7 Consumer Discretionary Stocks Whale Activity In Today\u2019s Session\" \u00b7 overweight by 1.61% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"7 Consumer Discretionary Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 56.0",
+        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 71.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2050,14 +2065,16 @@
     },
     {
       "symbol": "SLB",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 32.2 < reduce threshold 35 \u2014 halve position",
+      "reason": "exiting on positive news flow \u2014 \"Equinor to Boost Troll Gas Output with $412 Million Subsea Development\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-15.17%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2082,15 +2099,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
-      "target_weight": 0.0207,
+      "action": "BUY",
+      "target_weight": 0.036,
       "current_weight": 0.0308,
-      "notional_delta": -1036.01,
-      "reason": "trimming on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 overweight by 1.01% vs target \u2014 trim",
+      "notional_delta": 538.56,
+      "reason": "buying on mixed news flow \u2014 \"As SpaceX Falls Back To Earth, Bear ETFs Reach For The Stars\" \u00b7 underweight by 0.52% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 47.6",
+        "theme 'EV & Clean Transport' score 59.7 (buy), contribution 62.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2151,16 +2168,17 @@
     },
     {
       "symbol": "XOM",
-      "action": "REDUCE",
-      "target_weight": 0.0037,
+      "action": "BUY",
+      "target_weight": 0.0223,
       "current_weight": 0.0074,
-      "notional_delta": -380.78,
-      "reason": "trimming on mixed news flow \u2014 \"Here's How Much You Would Have Made Owning Exxon Mobil Stock In The Last 5 Years\" \u00b7 theme score 32.2 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1533.39,
+      "reason": "buying on positive news flow \u2014 \"Equinor to Boost Troll Gas Output with $412 Million Subsea Development\" \u00b7 underweight by 1.49% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.77%",
         "theme=Oil & Gas",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Oil & Gas' score 44.7 (starter), contribution 46.4",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -3144,6 +3162,10 @@
     {
       "t": "2026-06-19T20:50:34+00:00",
       "v": 102913.11
+    },
+    {
+      "t": "2026-06-19T21:59:47+00:00",
+      "v": 102913.11
     }
   ],
   "breaking_news": [
@@ -3152,7 +3174,7 @@
       "summary": "About 40% of rentals on Zillow offer move-in deals, like a month of free rent, thanks to a construction boom that created an apartment surplus in some parts of the United States.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847678/rent-apartment-landlord-construction-boom",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3161,7 +3183,7 @@
       "summary": "A new Pew survey finds many working parents feel they cannot give 100% at either work or home. Benefits like paid sick leave and more affordable childcare could help.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5856274/working-parents-balance-work-pew",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3170,7 +3192,7 @@
       "summary": "The U.S. may be the world's biggest producer of <em>crude </em>oil, but that's not the case for <em>motor </em>oil. The cost of lubricants is soaring, and even a tentative deal to end the war won't solve the problem.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847024/motor-oil-iran-war",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3179,7 +3201,7 @@
       "summary": "NPR's Ailsa Chang talks with Jakob Larsen, chief safety and security officer at BIMCO, the global shipping association, about what it might mean to reopen the Strait of Hormuz.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5860650/shipping-exec-says-industry-needs-assurances-strait-of-hormuz-will-be-safe",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3188,7 +3210,7 @@
       "summary": "The Federal Reserve left its benchmark interest rates unchanged Wednesday, and signaled its next move could be a rate increase. It's the first rate decision under the new Fed chairman, Kevin Warsh.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860084/fed-chief-warsh-first-fomc-meeting",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3197,7 +3219,7 @@
       "summary": "Iran's control of the Strait of Hormuz inflicted global pain during the months-long conflict with the U.S. and Israel. A tentative deal is in place, but questions remain about the key waterway.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860909/iran-ships-strait-of-hormuz-trump",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3206,7 +3228,7 @@
       "summary": "More than three months after the U.S. and Israel launched their war on Iran, the costs and aftereffects are felt around the world.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860739/iran-war-cost-oil-military-trade",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3215,7 +3237,7 @@
       "summary": "A new NPR/PBS News/Marist poll finds a record low share of Americans approve of President Trump's job performance and his handling of the economy heading into the summer before a key midterm election.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/18/nx-s1-5861720/trump-economy-gas-prices-midterms-polling",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3224,7 +3246,7 @@
       "summary": "Markos's beloved hen was not responding to any treatments - so he did the only thing he could think of.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cy49e7w3rmxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3233,16 +3255,7 @@
       "summary": "The man was allegedly struck by his 81-year-old opponent, who has since been arrested, the public prosecutor says.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgmny9v14no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:38+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Morocco captain Achraf Hakimi to stand trial for rape",
-      "summary": "French prosecutors confirm Morocco captain Achraf Hakimi will stand trial for rape, in accusations dating back to 2023.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/sport/football/articles/c20y18z7le1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3251,7 +3264,7 @@
       "summary": "Health facilities have come under attack during the current outbreak as a result of misinformation and fear.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c0qyg29wpk2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3260,7 +3273,16 @@
       "summary": "Some see a double standard: Japanese men who clean in public while their wives do all the housework.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/crel9xlp8r1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Zelensky stripped of highest Polish honour over WW2 name of army unit",
+      "summary": "Ukraine has denounced the move, calling it a \"strategic mistake\" and \"disrespectful\".",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/cr7xzg3dmj8o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3269,7 +3291,7 @@
       "summary": "The US says South Africa is not doing enough to protect the white-minority Afrikaner community.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cdr457lxr71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3278,7 +3300,7 @@
       "summary": "The highly public exchange is an indication that their earlier close ties have frayed  since Trump's decision to go to war with Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c20y1ygn707o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3287,7 +3309,7 @@
       "summary": "The agreement followed concerns that continued clashes would undermine the deal to end the war between the US and Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cwyk7kkygj5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:38+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3296,7 +3318,7 @@
       "summary": "The Bank last cut interest rates in December but upheaval in the Middle East has stalled any further reductions.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c33yzm5mdjpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:37+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3305,7 +3327,7 @@
       "summary": "With fuel and gas prices having fallen in recent days, we look at how the end of hostilities might affect you - in five charts.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c4g5574pwreo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:37+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3314,7 +3336,7 @@
       "summary": "Himalayan villages are creating artificial glaciers to guarantee water for their crops in the spring.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c072414183go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:37+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3323,7 +3345,7 @@
       "summary": "Analysis showed how much the UK could have grown if it had not exited the EU.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvg75npqkq4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T20:50:37+00:00",
+      "published_utc": "2026-06-19T21:59:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
