@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-19T17:45:05+00:00",
+  "generated_at_utc": "2026-06-19T19:19:13+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 242,
-  "last_success_utc": "2026-06-19T15:38:48+00:00",
+  "cycle_count": 243,
+  "last_success_utc": "2026-06-19T17:45:05+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -511,33 +511,17 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 66.38,
-      "raw_score": 66.38,
+      "score": 63.38,
+      "raw_score": 63.38,
       "band": "buy",
-      "weight": 0.1276,
-      "confidence": 0.85,
+      "weight": 0.1151,
+      "confidence": 0.8,
       "components": {
         "momentum": 52.33,
-        "sentiment": 100.0,
+        "sentiment": 90.0,
         "volume": 52.23,
         "policy": 50.0,
         "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 65.02,
-      "raw_score": 67.71,
-      "band": "buy",
-      "weight": 0.1267,
-      "confidence": 0.9,
-      "components": {
-        "momentum": 50.1,
-        "sentiment": 100.0,
-        "volume": 63.34,
-        "policy": 50.0,
-        "volatility_penalty": 2.68
       }
     },
     {
@@ -570,6 +554,22 @@
         "volume": 56.42,
         "policy": 50.0,
         "volatility_penalty": 12.83
+      }
+    },
+    {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 50.02,
+      "raw_score": 52.71,
+      "band": "starter",
+      "weight": 0.0751,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 50.1,
+        "sentiment": 50.0,
+        "volume": 63.34,
+        "policy": 50.0,
+        "volatility_penalty": 2.68
       }
     },
     {
@@ -639,14 +639,14 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 39.5,
-      "raw_score": 57.3,
-      "band": "hold_small",
-      "weight": 0.0399,
-      "confidence": 0.7,
+      "score": 33.5,
+      "raw_score": 51.3,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.65,
       "components": {
         "momentum": 57.48,
-        "sentiment": 70.0,
+        "sentiment": 50.0,
         "volume": 41.55,
         "policy": 50.0,
         "volatility_penalty": 17.8
@@ -700,14 +700,14 @@
     {
       "symbol": "AMZN",
       "action": "BUY",
-      "target_weight": 0.0441,
+      "target_weight": 0.0399,
       "current_weight": 0.022,
-      "notional_delta": 2270.23,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 underweight by 2.21% vs target \u2014 add",
+      "notional_delta": 1837.99,
+      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 underweight by 1.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 66.4 (buy), contribution 71.1",
+        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 68.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -832,11 +832,11 @@
     },
     {
       "symbol": "FSLR",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0004,
       "current_weight": 0.0007,
-      "notional_delta": -72.58,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -36.29,
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.30%",
         "theme=Clean Energy"
@@ -921,14 +921,14 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0477,
+      "target_weight": 0.0432,
       "current_weight": 0.0263,
-      "notional_delta": 2204.73,
-      "reason": "underweight by 2.14% vs target \u2014 add",
+      "notional_delta": 1741.62,
+      "reason": "underweight by 1.69% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.72%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 66.4 (buy), contribution 76.8"
+        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 73.8"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1023,17 +1023,17 @@
     },
     {
       "symbol": "MRNA",
-      "action": "BUY",
-      "target_weight": 0.0464,
+      "action": "HOLD",
+      "target_weight": 0.0282,
       "current_weight": 0.0237,
-      "notional_delta": 2340.97,
-      "reason": "buying on positive news flow \u2014 \"Bulls Pile Into Moderna As FDA Decision Nears, Ignites 60% Surge In This ETF\" \u00b7 underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Moderna's Flu Vaccine Clears Key FDA Panel Vote As Advisory Committee Backs Shot 9-0\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=22.69%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.0 (buy), contribution 77.9",
+        "theme 'Biotech & Pharma' score 50.0 (starter), contribution 62.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
     },
@@ -1070,29 +1070,28 @@
     },
     {
       "symbol": "NEE",
-      "action": "HOLD",
-      "target_weight": 0.0177,
+      "action": "REDUCE",
+      "target_weight": 0.01,
       "current_weight": 0.02,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1027.49,
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.09%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.5 (hold_small), contribution 64.2"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
     {
       "symbol": "NKE",
       "action": "BUY",
-      "target_weight": 0.0358,
+      "target_weight": 0.032,
       "current_weight": 0.0,
-      "notional_delta": 3683.86,
-      "reason": "underweight by 3.58% vs target \u2014 add",
+      "notional_delta": 3292.79,
+      "reason": "underweight by 3.20% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.22%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 66.4 (buy), contribution 57.7"
+        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 54.7"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1174,14 +1173,14 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0368,
+      "target_weight": 0.0209,
       "current_weight": 0.0143,
-      "notional_delta": 2314.52,
-      "reason": "underweight by 2.25% vs target \u2014 add",
+      "notional_delta": 678.2,
+      "reason": "underweight by 0.66% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.0 (buy), contribution 61.6"
+        "theme 'Biotech & Pharma' score 50.0 (starter), contribution 46.6"
       ],
       "theme_key": "biotech"
     },
@@ -1217,15 +1216,14 @@
     },
     {
       "symbol": "RUN",
-      "action": "HOLD",
-      "target_weight": 0.0167,
+      "action": "REDUCE",
+      "target_weight": 0.0096,
       "current_weight": 0.0192,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -989.6,
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=1.70%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.5 (hold_small), contribution 60.6"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
@@ -1244,15 +1242,14 @@
     },
     {
       "symbol": "SEDG",
-      "action": "HOLD",
-      "target_weight": 0.0055,
+      "action": "REDUCE",
+      "target_weight": 0.0032,
       "current_weight": 0.0064,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -328.41,
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.07%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.5 (hold_small), contribution 19.8"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
@@ -1314,15 +1311,15 @@
     },
     {
       "symbol": "VRTX",
-      "action": "BUY",
-      "target_weight": 0.0435,
+      "action": "HOLD",
+      "target_weight": 0.026,
       "current_weight": 0.0216,
-      "notional_delta": 2257.14,
-      "reason": "underweight by 2.19% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.10%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.0 (buy), contribution 73.0"
+        "theme 'Biotech & Pharma' score 50.0 (starter), contribution 58.0"
       ],
       "theme_key": "biotech"
     },
@@ -1392,14 +1389,14 @@
     {
       "symbol": "AMZN",
       "action": "BUY",
-      "target_weight": 0.0441,
+      "target_weight": 0.0399,
       "current_weight": 0.022,
-      "notional_delta": 2270.23,
-      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 underweight by 2.21% vs target \u2014 add",
+      "notional_delta": 1837.99,
+      "reason": "buying on mixed news flow \u2014 \"OpenAI, Anthropic And SpaceX Join Nvidia In New ProShares \u2018FAB 10\u2019 ETF Filing\" \u00b7 underweight by 1.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 66.4 (buy), contribution 71.1",
+        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 68.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1551,11 +1548,11 @@
     },
     {
       "symbol": "FSLR",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0004,
       "current_weight": 0.0007,
-      "notional_delta": -72.58,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -36.29,
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.30%",
         "theme=Clean Energy"
@@ -1658,14 +1655,14 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.0477,
+      "target_weight": 0.0432,
       "current_weight": 0.0263,
-      "notional_delta": 2204.73,
-      "reason": "underweight by 2.14% vs target \u2014 add",
+      "notional_delta": 1741.62,
+      "reason": "underweight by 1.69% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.72%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 66.4 (buy), contribution 76.8"
+        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 73.8"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1781,17 +1778,17 @@
     },
     {
       "symbol": "MRNA",
-      "action": "BUY",
-      "target_weight": 0.0464,
+      "action": "HOLD",
+      "target_weight": 0.0282,
       "current_weight": 0.0237,
-      "notional_delta": 2340.97,
-      "reason": "buying on positive news flow \u2014 \"Bulls Pile Into Moderna As FDA Decision Nears, Ignites 60% Surge In This ETF\" \u00b7 underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Moderna's Flu Vaccine Clears Key FDA Panel Vote As Advisory Committee Backs Shot 9-0\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=22.69%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.0 (buy), contribution 77.9",
+        "theme 'Biotech & Pharma' score 50.0 (starter), contribution 62.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1837,15 +1834,14 @@
     },
     {
       "symbol": "NEE",
-      "action": "HOLD",
-      "target_weight": 0.0177,
+      "action": "REDUCE",
+      "target_weight": 0.01,
       "current_weight": 0.02,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1027.49,
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.09%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.5 (hold_small), contribution 64.2"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1855,14 +1851,14 @@
     {
       "symbol": "NKE",
       "action": "BUY",
-      "target_weight": 0.0358,
+      "target_weight": 0.032,
       "current_weight": 0.0,
-      "notional_delta": 3683.86,
-      "reason": "underweight by 3.58% vs target \u2014 add",
+      "notional_delta": 3292.79,
+      "reason": "underweight by 3.20% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.22%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 66.4 (buy), contribution 57.7"
+        "theme 'Consumer Discretionary' score 63.4 (buy), contribution 54.7"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1962,14 +1958,14 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0368,
+      "target_weight": 0.0209,
       "current_weight": 0.0143,
-      "notional_delta": 2314.52,
-      "reason": "underweight by 2.25% vs target \u2014 add",
+      "notional_delta": 678.2,
+      "reason": "underweight by 0.66% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.0 (buy), contribution 61.6"
+        "theme 'Biotech & Pharma' score 50.0 (starter), contribution 46.6"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2014,15 +2010,14 @@
     },
     {
       "symbol": "RUN",
-      "action": "HOLD",
-      "target_weight": 0.0167,
+      "action": "REDUCE",
+      "target_weight": 0.0096,
       "current_weight": 0.0192,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -989.6,
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=1.70%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.5 (hold_small), contribution 60.6"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -2047,15 +2042,14 @@
     },
     {
       "symbol": "SEDG",
-      "action": "HOLD",
-      "target_weight": 0.0055,
+      "action": "REDUCE",
+      "target_weight": 0.0032,
       "current_weight": 0.0064,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -328.41,
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.07%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.5 (hold_small), contribution 19.8"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -2132,15 +2126,15 @@
     },
     {
       "symbol": "VRTX",
-      "action": "BUY",
-      "target_weight": 0.0435,
+      "action": "HOLD",
+      "target_weight": 0.026,
       "current_weight": 0.0216,
-      "notional_delta": 2257.14,
-      "reason": "underweight by 2.19% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.10%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.0 (buy), contribution 73.0"
+        "theme 'Biotech & Pharma' score 50.0 (starter), contribution 58.0"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -3150,6 +3144,10 @@
     {
       "t": "2026-06-19T17:45:04+00:00",
       "v": 102913.11
+    },
+    {
+      "t": "2026-06-19T19:19:09+00:00",
+      "v": 102913.11
     }
   ],
   "breaking_news": [
@@ -3158,7 +3156,7 @@
       "summary": "About 40% of rentals on Zillow offer move-in deals, like a month of free rent, thanks to a construction boom that created an apartment surplus in some parts of the United States.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847678/rent-apartment-landlord-construction-boom",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3167,7 +3165,7 @@
       "summary": "A new Pew survey finds many working parents feel they cannot give 100% at either work or home. Benefits like paid sick leave and more affordable childcare could help.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5856274/working-parents-balance-work-pew",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3176,7 +3174,7 @@
       "summary": "The U.S. may be the world's biggest producer of <em>crude </em>oil, but that's not the case for <em>motor </em>oil. The cost of lubricants is soaring, and even a tentative deal to end the war won't solve the problem.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847024/motor-oil-iran-war",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3185,7 +3183,7 @@
       "summary": "NPR's Ailsa Chang talks with Jakob Larsen, chief safety and security officer at BIMCO, the global shipping association, about what it might mean to reopen the Strait of Hormuz.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5860650/shipping-exec-says-industry-needs-assurances-strait-of-hormuz-will-be-safe",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3194,7 +3192,7 @@
       "summary": "The Federal Reserve left its benchmark interest rates unchanged Wednesday, and signaled its next move could be a rate increase. It's the first rate decision under the new Fed chairman, Kevin Warsh.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860084/fed-chief-warsh-first-fomc-meeting",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3203,7 +3201,7 @@
       "summary": "Iran's control of the Strait of Hormuz inflicted global pain during the months-long conflict with the U.S. and Israel. A tentative deal is in place, but questions remain about the key waterway.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860909/iran-ships-strait-of-hormuz-trump",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3212,7 +3210,7 @@
       "summary": "More than three months after the U.S. and Israel launched their war on Iran, the costs and aftereffects are felt around the world.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860739/iran-war-cost-oil-military-trade",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3221,26 +3219,8 @@
       "summary": "A new NPR/PBS News/Marist poll finds a record low share of Americans approve of President Trump's job performance and his handling of the economy heading into the summer before a key midterm election.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/18/nx-s1-5861720/trump-economy-gas-prices-midterms-polling",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:13+00:00",
       "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "UK actress charged with importing meth worth almost A$300m into Australia",
-      "summary": "Emaa Hussen, 34, faces life in prison for allegedly trying to smuggle 320kg of meth hidden in bags of charcoal.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/ckg5nq0172no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Zimbabwe MPs pass bill to extend president's time in power",
-      "summary": "The proposal would extend Emmerson Mnangagwa's term by two years and scrap direct presidential elections.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c20y15m0337o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
-      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -3248,8 +3228,17 @@
       "summary": "Markos's beloved hen was not responding to any treatments - so he did the only thing he could think of.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cy49e7w3rmxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:12+00:00",
       "sentiment_score": 0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "P\u00e9tanque player, 68, dies after being 'hit in head with metal boule'",
+      "summary": "The man was allegedly struck by his 81-year-old opponent, who has since been arrested, the public prosecutor says.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/cvgmny9v14no?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-19T19:19:12+00:00",
+      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -3257,7 +3246,7 @@
       "summary": "French prosecutors confirm Morocco captain Achraf Hakimi will stand trial for rape, in accusations dating back to 2023.",
       "source": "BBC World",
       "url": "https://www.bbc.com/sport/football/articles/c20y18z7le1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3266,7 +3255,7 @@
       "summary": "Health facilities have come under attack during the current outbreak as a result of misinformation and fear.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c0qyg29wpk2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3275,7 +3264,7 @@
       "summary": "Some see a double standard: Japanese men who clean in public while their wives do all the housework.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/crel9xlp8r1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3284,7 +3273,7 @@
       "summary": "The US says South Africa is not doing enough to protect the white-minority Afrikaner community.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cdr457lxr71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3293,7 +3282,16 @@
       "summary": "The highly public exchange is an indication that their earlier close ties have frayed  since Trump's decision to go to war with Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c20y1ygn707o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:12+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Israel and Hezbollah agree ceasefire, US says, as more Lebanon strikes reported",
+      "summary": "The agreement followed concerns that continued clashes would undermine the deal to end the war between the US and Iran.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/cwyk7kkygj5o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-19T19:19:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3302,7 +3300,7 @@
       "summary": "The Bank last cut interest rates in December but upheaval in the Middle East has stalled any further reductions.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c33yzm5mdjpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:12+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3311,7 +3309,7 @@
       "summary": "With fuel and gas prices having fallen in recent days, we look at how the end of hostilities might affect you - in five charts.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c4g5574pwreo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3320,7 +3318,7 @@
       "summary": "Himalayan villages are creating artificial glaciers to guarantee water for their crops in the spring.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c072414183go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3329,7 +3327,7 @@
       "summary": "Analysis showed how much the UK could have grown if it had not exited the EU.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvg75npqkq4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-19T17:45:05+00:00",
+      "published_utc": "2026-06-19T19:19:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
