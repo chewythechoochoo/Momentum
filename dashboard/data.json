@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-20T20:08:35+00:00",
+  "generated_at_utc": "2026-06-20T21:43:40+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 255,
-  "last_success_utc": "2026-06-20T18:43:46+00:00",
+  "cycle_count": 256,
+  "last_success_utc": "2026-06-20T20:08:35+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -509,6 +509,22 @@
   ],
   "themes": [
     {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 66.13,
+      "raw_score": 79.06,
+      "band": "buy",
+      "weight": 0.12,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 96.93,
+        "sentiment": 80.0,
+        "volume": 56.42,
+        "policy": 50.0,
+        "volatility_penalty": 12.92
+      }
+    },
+    {
       "key": "biotech",
       "name": "Biotech & Pharma",
       "score": 64.92,
@@ -541,35 +557,35 @@
       }
     },
     {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 57.13,
-      "raw_score": 70.06,
-      "band": "buy",
-      "weight": 0.0884,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 96.93,
-        "sentiment": 50.0,
-        "volume": 56.42,
-        "policy": 50.0,
-        "volatility_penalty": 12.92
-      }
-    },
-    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
       "score": 51.38,
       "raw_score": 51.38,
       "band": "starter",
-      "weight": 0.0857,
-      "confidence": 0.95,
+      "weight": 0.0835,
+      "confidence": 0.9,
       "components": {
         "momentum": 52.33,
         "sentiment": 50.0,
         "volume": 52.23,
         "policy": 50.0,
         "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 49.33,
+      "raw_score": 60.77,
+      "band": "starter",
+      "weight": 0.0811,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 59.62,
+        "sentiment": 75.0,
+        "volume": 47.12,
+        "policy": 50.0,
+        "volatility_penalty": 11.44
       }
     },
     {
@@ -605,22 +621,6 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 46.83,
-      "raw_score": 58.27,
-      "band": "starter",
-      "weight": 0.0728,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 59.62,
-        "sentiment": 66.66,
-        "volume": 47.12,
-        "policy": 50.0,
-        "volatility_penalty": 11.44
-      }
-    },
-    {
       "key": "oil_gas",
       "name": "Oil & Gas",
       "score": 44.92,
@@ -642,8 +642,8 @@
       "score": 44.5,
       "raw_score": 53.78,
       "band": "starter",
-      "weight": 0.0553,
-      "confidence": 0.7,
+      "weight": 0.0536,
+      "confidence": 0.65,
       "components": {
         "momentum": 61.13,
         "sentiment": 50.0,
@@ -673,14 +673,14 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0291,
+      "target_weight": 0.0395,
       "current_weight": 0.0458,
-      "notional_delta": -1722.62,
-      "reason": "overweight by 1.67% vs target \u2014 trim",
+      "notional_delta": -652.33,
+      "reason": "overweight by 0.63% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=19.44%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 57.1 (buy), contribution 61.1"
+        "theme 'Semiconductors (Broad)' score 66.1 (buy), contribution 70.1"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -700,10 +700,10 @@
     {
       "symbol": "AMZN",
       "action": "BUY",
-      "target_weight": 0.03,
+      "target_weight": 0.0292,
       "current_weight": 0.022,
-      "notional_delta": 819.15,
-      "reason": "buying on negative news flow \u2014 \"Apple Stock Forms Risky Pattern, May Be Overvalued Ahead of iPhone Price Increases\" \u00b7 underweight by 0.80% vs target \u2014 add",
+      "notional_delta": 736.82,
+      "reason": "buying on negative news flow \u2014 \"Apple Stock Forms Risky Pattern, May Be Overvalued Ahead of iPhone Price Increases\" \u00b7 underweight by 0.72% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Consumer Discretionary",
@@ -728,15 +728,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "HOLD",
-      "target_weight": 0.0252,
+      "action": "BUY",
+      "target_weight": 0.028,
       "current_weight": 0.0219,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 627.02,
+      "reason": "underweight by 0.61% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.8 (starter), contribution 64.7"
+        "theme 'AI & Compute' score 49.3 (starter), contribution 67.2"
       ],
       "theme_key": "ai_compute"
     },
@@ -892,15 +892,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0245,
+      "action": "BUY",
+      "target_weight": 0.0273,
       "current_weight": 0.0207,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Tim Cook Says 'Pretty Good' Workers Master Their Jobs, While 'Brilliant' Workers Do This One Thing To Get To 100%: Excellence Can Only Get Y\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 676.33,
+      "reason": "buying on positive news flow \u2014 \"Tim Cook Says 'Pretty Good' Workers Master Their Jobs, While 'Brilliant' Workers Do This One Thing To Get To 100%: Excellence Can Only Get Y\" \u00b7 underweight by 0.66% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.8 (starter), contribution 63.0",
+        "theme 'AI & Compute' score 49.3 (starter), contribution 65.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -925,10 +925,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.033,
+      "target_weight": 0.0322,
       "current_weight": 0.0263,
-      "notional_delta": 691.91,
-      "reason": "underweight by 0.67% vs target \u2014 add",
+      "notional_delta": 609.57,
+      "reason": "underweight by 0.59% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.72%",
         "theme=Consumer Discretionary",
@@ -955,10 +955,10 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0172,
+      "target_weight": 0.0167,
       "current_weight": 0.0,
-      "notional_delta": 1770.09,
-      "reason": "underweight by 1.72% vs target \u2014 add",
+      "notional_delta": 1718.64,
+      "reason": "underweight by 1.67% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
@@ -996,15 +996,15 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
-      "target_weight": 0.0283,
+      "action": "HOLD",
+      "target_weight": 0.0386,
       "current_weight": 0.0436,
-      "notional_delta": -1570.07,
-      "reason": "overweight by 1.53% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.95%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 57.1 (buy), contribution 59.5"
+        "theme 'Semiconductors (Broad)' score 66.1 (buy), contribution 68.5"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1082,10 +1082,10 @@
     {
       "symbol": "NKE",
       "action": "BUY",
-      "target_weight": 0.0227,
+      "target_weight": 0.0222,
       "current_weight": 0.0,
-      "notional_delta": 2335.7,
-      "reason": "underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 2284.24,
+      "reason": "underweight by 2.22% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.22%",
         "theme=Consumer Discretionary",
@@ -1095,17 +1095,17 @@
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0231,
+      "action": "BUY",
+      "target_weight": 0.0258,
       "current_weight": 0.0195,
-      "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Apple Stock Forms Risky Pattern, May Be Overvalued Ahead of iPhone Price Increases\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 646.75,
+      "reason": "buying on positive news flow \u2014 \"Top BofA Analyst Explains Why Sandisk Has More Upside After 4,755% Surge\" \u00b7 underweight by 0.63% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.8 (starter), contribution 59.3",
+        "theme 'AI & Compute' score 49.3 (starter), contribution 61.8",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1189,10 +1189,10 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0206,
+      "target_weight": 0.02,
       "current_weight": 0.0405,
-      "notional_delta": -2046.44,
-      "reason": "overweight by 1.99% vs target \u2014 trim",
+      "notional_delta": -2108.18,
+      "reason": "overweight by 2.05% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
@@ -1284,10 +1284,10 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0174,
+      "target_weight": 0.0169,
       "current_weight": 0.0308,
-      "notional_delta": -1375.63,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls And Bears: SpaceX, SanDisk, Palantir \u2014 And Markets Volatile In Shortened Week\" \u00b7 overweight by 1.34% vs target \u2014 trim",
+      "notional_delta": -1427.08,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls And Bears: SpaceX, SanDisk, Palantir \u2014 And Markets Volatile In Shortened Week\" \u00b7 overweight by 1.39% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
@@ -1300,14 +1300,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.031,
+      "target_weight": 0.0418,
       "current_weight": 0.047,
-      "notional_delta": -1645.42,
-      "reason": "overweight by 1.60% vs target \u2014 trim",
+      "notional_delta": -533.96,
+      "reason": "overweight by 0.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.04%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 57.1 (buy), contribution 65.2"
+        "theme 'Semiconductors (Broad)' score 66.1 (buy), contribution 74.2"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1363,14 +1363,14 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0291,
+      "target_weight": 0.0395,
       "current_weight": 0.0458,
-      "notional_delta": -1722.62,
-      "reason": "overweight by 1.67% vs target \u2014 trim",
+      "notional_delta": -652.33,
+      "reason": "overweight by 0.63% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=19.44%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 57.1 (buy), contribution 61.1"
+        "theme 'Semiconductors (Broad)' score 66.1 (buy), contribution 70.1"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1396,10 +1396,10 @@
     {
       "symbol": "AMZN",
       "action": "BUY",
-      "target_weight": 0.03,
+      "target_weight": 0.0292,
       "current_weight": 0.022,
-      "notional_delta": 819.15,
-      "reason": "buying on negative news flow \u2014 \"Apple Stock Forms Risky Pattern, May Be Overvalued Ahead of iPhone Price Increases\" \u00b7 underweight by 0.80% vs target \u2014 add",
+      "notional_delta": 736.82,
+      "reason": "buying on negative news flow \u2014 \"Apple Stock Forms Risky Pattern, May Be Overvalued Ahead of iPhone Price Increases\" \u00b7 underweight by 0.72% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Consumer Discretionary",
@@ -1430,15 +1430,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "HOLD",
-      "target_weight": 0.0252,
+      "action": "BUY",
+      "target_weight": 0.028,
       "current_weight": 0.0219,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 627.02,
+      "reason": "underweight by 0.61% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.8 (starter), contribution 64.7"
+        "theme 'AI & Compute' score 49.3 (starter), contribution 67.2"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1627,15 +1627,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0245,
+      "action": "BUY",
+      "target_weight": 0.0273,
       "current_weight": 0.0207,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Tim Cook Says 'Pretty Good' Workers Master Their Jobs, While 'Brilliant' Workers Do This One Thing To Get To 100%: Excellence Can Only Get Y\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 676.33,
+      "reason": "buying on positive news flow \u2014 \"Tim Cook Says 'Pretty Good' Workers Master Their Jobs, While 'Brilliant' Workers Do This One Thing To Get To 100%: Excellence Can Only Get Y\" \u00b7 underweight by 0.66% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.8 (starter), contribution 63.0",
+        "theme 'AI & Compute' score 49.3 (starter), contribution 65.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1666,10 +1666,10 @@
     {
       "symbol": "HD",
       "action": "BUY",
-      "target_weight": 0.033,
+      "target_weight": 0.0322,
       "current_weight": 0.0263,
-      "notional_delta": 691.91,
-      "reason": "underweight by 0.67% vs target \u2014 add",
+      "notional_delta": 609.57,
+      "reason": "underweight by 0.59% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.72%",
         "theme=Consumer Discretionary",
@@ -1702,10 +1702,10 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0172,
+      "target_weight": 0.0167,
       "current_weight": 0.0,
-      "notional_delta": 1770.09,
-      "reason": "underweight by 1.72% vs target \u2014 add",
+      "notional_delta": 1718.64,
+      "reason": "underweight by 1.67% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
@@ -1752,15 +1752,15 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
-      "target_weight": 0.0283,
+      "action": "HOLD",
+      "target_weight": 0.0386,
       "current_weight": 0.0436,
-      "notional_delta": -1570.07,
-      "reason": "overweight by 1.53% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.95%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 57.1 (buy), contribution 59.5"
+        "theme 'Semiconductors (Broad)' score 66.1 (buy), contribution 68.5"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1856,10 +1856,10 @@
     {
       "symbol": "NKE",
       "action": "BUY",
-      "target_weight": 0.0227,
+      "target_weight": 0.0222,
       "current_weight": 0.0,
-      "notional_delta": 2335.7,
-      "reason": "underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 2284.24,
+      "reason": "underweight by 2.22% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.22%",
         "theme=Consumer Discretionary",
@@ -1872,17 +1872,17 @@
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0231,
+      "action": "BUY",
+      "target_weight": 0.0258,
       "current_weight": 0.0195,
-      "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Apple Stock Forms Risky Pattern, May Be Overvalued Ahead of iPhone Price Increases\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 646.75,
+      "reason": "buying on positive news flow \u2014 \"Top BofA Analyst Explains Why Sandisk Has More Upside After 4,755% Surge\" \u00b7 underweight by 0.63% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.8 (starter), contribution 59.3",
+        "theme 'AI & Compute' score 49.3 (starter), contribution 61.8",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1984,10 +1984,10 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0206,
+      "target_weight": 0.02,
       "current_weight": 0.0405,
-      "notional_delta": -2046.44,
-      "reason": "overweight by 1.99% vs target \u2014 trim",
+      "notional_delta": -2108.18,
+      "reason": "overweight by 2.05% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
@@ -2100,10 +2100,10 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0174,
+      "target_weight": 0.0169,
       "current_weight": 0.0308,
-      "notional_delta": -1375.63,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls And Bears: SpaceX, SanDisk, Palantir \u2014 And Markets Volatile In Shortened Week\" \u00b7 overweight by 1.34% vs target \u2014 trim",
+      "notional_delta": -1427.08,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls And Bears: SpaceX, SanDisk, Palantir \u2014 And Markets Volatile In Shortened Week\" \u00b7 overweight by 1.39% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
@@ -2119,14 +2119,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.031,
+      "target_weight": 0.0418,
       "current_weight": 0.047,
-      "notional_delta": -1645.42,
-      "reason": "overweight by 1.60% vs target \u2014 trim",
+      "notional_delta": -533.96,
+      "reason": "overweight by 0.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.04%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 57.1 (buy), contribution 65.2"
+        "theme 'Semiconductors (Broad)' score 66.1 (buy), contribution 74.2"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -3210,6 +3210,10 @@
     {
       "t": "2026-06-20T20:08:30+00:00",
       "v": 102913.11
+    },
+    {
+      "t": "2026-06-20T21:43:33+00:00",
+      "v": 102913.11
     }
   ],
   "breaking_news": [
@@ -3218,7 +3222,7 @@
       "summary": "A new Pew survey finds many working parents feel they cannot give 100% at either work or home. Benefits like paid sick leave and more affordable childcare could help.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5856274/working-parents-balance-work-pew",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3227,7 +3231,7 @@
       "summary": "The U.S. may be the world's biggest producer of <em>crude </em>oil, but that's not the case for <em>motor </em>oil. The cost of lubricants is soaring, and even a tentative deal to end the war won't solve the problem.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847024/motor-oil-iran-war",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3236,7 +3240,7 @@
       "summary": "NPR's Ailsa Chang talks with Jakob Larsen, chief safety and security officer at BIMCO, the global shipping association, about what it might mean to reopen the Strait of Hormuz.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5860650/shipping-exec-says-industry-needs-assurances-strait-of-hormuz-will-be-safe",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3245,7 +3249,7 @@
       "summary": "The Federal Reserve left its benchmark interest rates unchanged Wednesday, and signaled its next move could be a rate increase. It's the first rate decision under the new Fed chairman, Kevin Warsh.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860084/fed-chief-warsh-first-fomc-meeting",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3254,7 +3258,7 @@
       "summary": "Iran's control of the Strait of Hormuz inflicted global pain during the months-long conflict with the U.S. and Israel. A tentative deal is in place, but questions remain about the key waterway.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860909/iran-ships-strait-of-hormuz-trump",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3263,7 +3267,7 @@
       "summary": "More than three months after the U.S. and Israel launched their war on Iran, the costs and aftereffects are felt around the world.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860739/iran-war-cost-oil-military-trade",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3272,7 +3276,7 @@
       "summary": "A new NPR/PBS News/Marist poll finds a record low share of Americans approve of President Trump's job performance and his handling of the economy heading into the summer before a key midterm election.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/18/nx-s1-5861720/trump-economy-gas-prices-midterms-polling",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3281,7 +3285,7 @@
       "summary": "SpaceX stock hit the market last week. Here's how it could turn up in your retirement or investment portfolio.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/20/nx-s1-5860047/here-is-how-spacex-could-turn-up-in-your-current-investments",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3290,7 +3294,7 @@
       "summary": "More than eight million South Africans are living with HIV \u2013 the highest number of any country in the world.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cdr457lxr71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3299,7 +3303,7 @@
       "summary": "Ukraine has denounced the move, calling it a \"strategic mistake\" and \"disrespectful\".",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cr7xzg3dmj8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3308,7 +3312,7 @@
       "summary": "Nearly 1,700 people were evacuated from the huge blaze at Viva Wyndham Dominicus Beach in Bayahibe, a popular resort town on the Caribbean coast.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c932k8010j1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3317,7 +3321,7 @@
       "summary": "Ukraine's president said his country was open to \"engagement\" about \"difficult and painful chapters of our shared past\".",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c2lye7xje9yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3326,7 +3330,7 @@
       "summary": "The move comes after weeks of anti-government protests that have caused a shortage of basic goods in Bolivia.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cr47wn92zdgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3335,7 +3339,7 @@
       "summary": "The US president earlier questioned Meloni's popularity after suggesting she \"begged\" for a photo at G7 summit",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cgqj77909jpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3344,16 +3348,16 @@
       "summary": "Mona Khalil, who had refused to leave the beach she had spent years protecting, died from her injuries after the Israeli strike.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cwylx1vq18zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Iran says Strait of Hormuz will be closed over Israel attacks on Lebanon",
-      "summary": "Iran said Israel's continued attacks in Lebanon are a breach of Tehran's agreement with the US to end the war.",
+      "headline": "Iran says it has closed Strait of Hormuz over Israel attacks on Lebanon",
+      "summary": "The US military has disputed Tehran's claim, which comes ahead of US-Iran talks in Switzerland on Sunday.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cwyekkwm1mmo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:35+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3362,7 +3366,7 @@
       "summary": "The Bank last cut interest rates in December but upheaval in the Middle East has stalled any further reductions.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c33yzm5mdjpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:34+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3371,7 +3375,7 @@
       "summary": "With fuel and gas prices having fallen in recent days, we look at how the end of hostilities might affect you - in five charts.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c4g5574pwreo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:34+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3380,7 +3384,7 @@
       "summary": "Himalayan villages are creating artificial glaciers to guarantee water for their crops in the spring.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c072414183go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:34+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3389,7 +3393,7 @@
       "summary": "Analysis showed how much the UK could have grown if it had not exited the EU.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvg75npqkq4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-20T20:08:34+00:00",
+      "published_utc": "2026-06-20T21:43:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
