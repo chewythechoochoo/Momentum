@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-21T16:18:59+00:00",
+  "generated_at_utc": "2026-06-21T18:00:39+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 263,
-  "last_success_utc": "2026-06-21T14:30:38+00:00",
+  "cycle_count": 264,
+  "last_success_utc": "2026-06-21T16:18:59+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -511,30 +511,30 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 75.04,
-      "raw_score": 75.04,
+      "score": 75.81,
+      "raw_score": 75.81,
       "band": "strong_buy",
-      "weight": 0.1584,
+      "weight": 0.1597,
       "confidence": 1.0,
       "components": {
         "momentum": 72.69,
-        "sentiment": 90.0,
+        "sentiment": 90.91,
         "volume": 57.3,
-        "policy": 75.0,
+        "policy": 80.0,
         "volatility_penalty": 0.0
       }
     },
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 68.94,
-      "raw_score": 82.06,
-      "band": "buy",
-      "weight": 0.1318,
-      "confidence": 0.8,
+      "score": 71.94,
+      "raw_score": 85.06,
+      "band": "strong_buy",
+      "weight": 0.1417,
+      "confidence": 0.85,
       "components": {
         "momentum": 96.93,
-        "sentiment": 90.0,
+        "sentiment": 100.0,
         "volume": 56.42,
         "policy": 50.0,
         "volatility_penalty": 13.11
@@ -673,14 +673,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.0434,
+      "target_weight": 0.0467,
       "current_weight": 0.0458,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=19.44%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 68.9 (buy), contribution 72.8"
+        "theme 'Semiconductors (Broad)' score 71.9 (strong_buy), contribution 75.8"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -731,14 +731,16 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0218,
+      "target_weight": 0.0191,
       "current_weight": 0.0219,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Top Three Catalysts For Dow, Nasdaq 100, and S&P 500 This Week\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.9 (starter), contribution 61.6"
+        "theme 'AI & Compute' score 43.9 (starter), contribution 61.6",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -765,7 +767,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Boutiqaat Positioned for a New Era of Expansion Following Reported IPO Plans\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Morgan Stanley gives Google stock investors reason to rethink AI spending\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.19%",
         "theme=Financials & Rates",
@@ -901,7 +903,7 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0213,
+      "target_weight": 0.0186,
       "current_weight": 0.0207,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Amazon's AI Chip Expansion, Intel's New Hire And Google's Loss: This Week In Tech\" \u00b7 within 50bps of target \u2014 no trade",
@@ -917,14 +919,14 @@
     {
       "symbol": "GS",
       "action": "BUY",
-      "target_weight": 0.053,
+      "target_weight": 0.0535,
       "current_weight": 0.0221,
-      "notional_delta": 3181.69,
-      "reason": "buying on positive news flow \u2014 \"Boutiqaat Positioned for a New Era of Expansion Following Reported IPO Plans\" \u00b7 underweight by 3.09% vs target \u2014 add",
+      "notional_delta": 3233.15,
+      "reason": "buying on positive news flow \u2014 \"Morgan Stanley gives Google stock investors reason to rethink AI spending\" \u00b7 underweight by 3.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 75.0 (strong_buy), contribution 84.4",
+        "theme 'Financials & Rates' score 75.8 (strong_buy), contribution 85.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -947,16 +949,16 @@
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0514,
+      "target_weight": 0.0518,
       "current_weight": 0.023,
-      "notional_delta": 2926.41,
-      "reason": "buying on negative news flow \u2014 \"JPMorgan Warns Crowded Semiconductor Trade Faces Rising Risk of Sharp Selloffs\" \u00b7 underweight by 2.84% vs target \u2014 add",
+      "notional_delta": 2967.58,
+      "reason": "buying on positive news flow \u2014 \"Morgan Stanley gives Google stock investors reason to rethink AI spending\" \u00b7 underweight by 2.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.21%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 75.0 (strong_buy), contribution 81.8",
+        "theme 'Financials & Rates' score 75.8 (strong_buy), contribution 82.6",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -1010,14 +1012,14 @@
     {
       "symbol": "LRCX",
       "action": "HOLD",
-      "target_weight": 0.0425,
+      "target_weight": 0.0458,
       "current_weight": 0.0436,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.95%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 68.9 (buy), contribution 71.4"
+        "theme 'Semiconductors (Broad)' score 71.9 (strong_buy), contribution 74.4"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1053,14 +1055,14 @@
     {
       "symbol": "MS",
       "action": "BUY",
-      "target_weight": 0.054,
+      "target_weight": 0.0544,
       "current_weight": 0.0227,
-      "notional_delta": 3220.4,
-      "reason": "buying on positive news flow \u2014 \"Boutiqaat Positioned for a New Era of Expansion Following Reported IPO Plans\" \u00b7 underweight by 3.13% vs target \u2014 add",
+      "notional_delta": 3261.57,
+      "reason": "buying on positive news flow \u2014 \"Morgan Stanley gives Google stock investors reason to rethink AI spending\" \u00b7 underweight by 3.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.37%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 75.0 (strong_buy), contribution 85.9",
+        "theme 'Financials & Rates' score 75.8 (strong_buy), contribution 86.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1072,12 +1074,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.32,
-      "reason": "exiting on mixed news flow \u2014 \"Apple's Tim Cook Warns Of Price Hike, Intel Soars On Trump's Apple Partnership Announcement, And More: This Week In Appleverse\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Peterffy Overtakes Bill Gates on Net Worth List as IBKR Surges\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.65%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.07"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -1114,7 +1116,7 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.02,
+      "target_weight": 0.0174,
       "current_weight": 0.0195,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Apple's Tim Cook Warns Of Price Hike, Intel Soars On Trump's Apple Partnership Announcement, And More: This Week In Appleverse\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1329,14 +1331,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0459,
+      "target_weight": 0.0493,
       "current_weight": 0.047,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (June 15-18): Trump Signals Major US Chip Alliance, Snap AR Glasses Face Criticism & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=8.04%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 68.9 (buy), contribution 77.0",
+        "theme 'Semiconductors (Broad)' score 71.9 (strong_buy), contribution 80.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1364,7 +1366,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.56,
-      "reason": "exiting on positive news flow \u2014 \"Boutiqaat Positioned for a New Era of Expansion Following Reported IPO Plans\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Morgan Stanley gives Google stock investors reason to rethink AI spending\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.44%",
         "theme=Financials & Rates",
@@ -1394,14 +1396,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.0434,
+      "target_weight": 0.0467,
       "current_weight": 0.0458,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=19.44%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 68.9 (buy), contribution 72.8"
+        "theme 'Semiconductors (Broad)' score 71.9 (strong_buy), contribution 75.8"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1464,14 +1466,16 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0218,
+      "target_weight": 0.0191,
       "current_weight": 0.0219,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Top Three Catalysts For Dow, Nasdaq 100, and S&P 500 This Week\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.9 (starter), contribution 61.6"
+        "theme 'AI & Compute' score 43.9 (starter), contribution 61.6",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1504,7 +1508,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Boutiqaat Positioned for a New Era of Expansion Following Reported IPO Plans\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Morgan Stanley gives Google stock investors reason to rethink AI spending\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.19%",
         "theme=Financials & Rates",
@@ -1667,7 +1671,7 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0213,
+      "target_weight": 0.0186,
       "current_weight": 0.0207,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Amazon's AI Chip Expansion, Intel's New Hire And Google's Loss: This Week In Tech\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1686,14 +1690,14 @@
     {
       "symbol": "GS",
       "action": "BUY",
-      "target_weight": 0.053,
+      "target_weight": 0.0535,
       "current_weight": 0.0221,
-      "notional_delta": 3181.69,
-      "reason": "buying on positive news flow \u2014 \"Boutiqaat Positioned for a New Era of Expansion Following Reported IPO Plans\" \u00b7 underweight by 3.09% vs target \u2014 add",
+      "notional_delta": 3233.15,
+      "reason": "buying on positive news flow \u2014 \"Morgan Stanley gives Google stock investors reason to rethink AI spending\" \u00b7 underweight by 3.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 75.0 (strong_buy), contribution 84.4",
+        "theme 'Financials & Rates' score 75.8 (strong_buy), contribution 85.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1722,16 +1726,16 @@
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0514,
+      "target_weight": 0.0518,
       "current_weight": 0.023,
-      "notional_delta": 2926.41,
-      "reason": "buying on negative news flow \u2014 \"JPMorgan Warns Crowded Semiconductor Trade Faces Rising Risk of Sharp Selloffs\" \u00b7 underweight by 2.84% vs target \u2014 add",
+      "notional_delta": 2967.58,
+      "reason": "buying on positive news flow \u2014 \"Morgan Stanley gives Google stock investors reason to rethink AI spending\" \u00b7 underweight by 2.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.21%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 75.0 (strong_buy), contribution 81.8",
+        "theme 'Financials & Rates' score 75.8 (strong_buy), contribution 82.6",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1797,14 +1801,14 @@
     {
       "symbol": "LRCX",
       "action": "HOLD",
-      "target_weight": 0.0425,
+      "target_weight": 0.0458,
       "current_weight": 0.0436,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.95%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 68.9 (buy), contribution 71.4"
+        "theme 'Semiconductors (Broad)' score 71.9 (strong_buy), contribution 74.4"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1849,14 +1853,14 @@
     {
       "symbol": "MS",
       "action": "BUY",
-      "target_weight": 0.054,
+      "target_weight": 0.0544,
       "current_weight": 0.0227,
-      "notional_delta": 3220.4,
-      "reason": "buying on positive news flow \u2014 \"Boutiqaat Positioned for a New Era of Expansion Following Reported IPO Plans\" \u00b7 underweight by 3.13% vs target \u2014 add",
+      "notional_delta": 3261.57,
+      "reason": "buying on positive news flow \u2014 \"Morgan Stanley gives Google stock investors reason to rethink AI spending\" \u00b7 underweight by 3.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.37%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 75.0 (strong_buy), contribution 85.9",
+        "theme 'Financials & Rates' score 75.8 (strong_buy), contribution 86.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1871,12 +1875,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.32,
-      "reason": "exiting on mixed news flow \u2014 \"Apple's Tim Cook Warns Of Price Hike, Intel Soars On Trump's Apple Partnership Announcement, And More: This Week In Appleverse\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Peterffy Overtakes Bill Gates on Net Worth List as IBKR Surges\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.65%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.07"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1922,7 +1926,7 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.02,
+      "target_weight": 0.0174,
       "current_weight": 0.0195,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Apple's Tim Cook Warns Of Price Hike, Intel Soars On Trump's Apple Partnership Announcement, And More: This Week In Appleverse\" \u00b7 within 50bps of target \u2014 no trade",
@@ -2179,14 +2183,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0459,
+      "target_weight": 0.0493,
       "current_weight": 0.047,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (June 15-18): Trump Signals Major US Chip Alliance, Snap AR Glasses Face Criticism & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=8.04%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 68.9 (buy), contribution 77.0",
+        "theme 'Semiconductors (Broad)' score 71.9 (strong_buy), contribution 80.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2220,7 +2224,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.56,
-      "reason": "exiting on positive news flow \u2014 \"Boutiqaat Positioned for a New Era of Expansion Following Reported IPO Plans\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Morgan Stanley gives Google stock investors reason to rethink AI spending\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.44%",
         "theme=Financials & Rates",
@@ -3304,6 +3308,10 @@
     {
       "t": "2026-06-21T16:18:56+00:00",
       "v": 102913.11
+    },
+    {
+      "t": "2026-06-21T18:00:36+00:00",
+      "v": 102913.11
     }
   ],
   "breaking_news": [
@@ -3312,7 +3320,7 @@
       "summary": "A new Pew survey finds many working parents feel they cannot give 100% at either work or home. Benefits like paid sick leave and more affordable childcare could help.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5856274/working-parents-balance-work-pew",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3321,7 +3329,7 @@
       "summary": "The U.S. may be the world's biggest producer of <em>crude </em>oil, but that's not the case for <em>motor </em>oil. The cost of lubricants is soaring, and even a tentative deal to end the war won't solve the problem.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847024/motor-oil-iran-war",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3330,7 +3338,7 @@
       "summary": "NPR's Ailsa Chang talks with Jakob Larsen, chief safety and security officer at BIMCO, the global shipping association, about what it might mean to reopen the Strait of Hormuz.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5860650/shipping-exec-says-industry-needs-assurances-strait-of-hormuz-will-be-safe",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3339,7 +3347,7 @@
       "summary": "The Federal Reserve left its benchmark interest rates unchanged Wednesday, and signaled its next move could be a rate increase. It's the first rate decision under the new Fed chairman, Kevin Warsh.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860084/fed-chief-warsh-first-fomc-meeting",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3348,7 +3356,7 @@
       "summary": "Iran's control of the Strait of Hormuz inflicted global pain during the months-long conflict with the U.S. and Israel. A tentative deal is in place, but questions remain about the key waterway.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860909/iran-ships-strait-of-hormuz-trump",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3357,7 +3365,7 @@
       "summary": "More than three months after the U.S. and Israel launched their war on Iran, the costs and aftereffects are felt around the world.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860739/iran-war-cost-oil-military-trade",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3366,7 +3374,7 @@
       "summary": "A new NPR/PBS News/Marist poll finds a record low share of Americans approve of President Trump's job performance and his handling of the economy heading into the summer before a key midterm election.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/18/nx-s1-5861720/trump-economy-gas-prices-midterms-polling",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3375,7 +3383,7 @@
       "summary": "SpaceX stock hit the market last week. Here's how it could turn up in your retirement or investment portfolio.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/20/nx-s1-5860047/here-is-how-spacex-could-turn-up-in-your-current-investments",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3384,7 +3392,7 @@
       "summary": "The Israeli military accused Ahmed Wishah of being a \"Hamas sniper operative\", without providing evidence.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c4gy26p6pwzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3393,7 +3401,7 @@
       "summary": "Millions of candidates face biometric checks and frisking as air force deployed to secure exam papers.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cwy0gjqv783o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3402,7 +3410,7 @@
       "summary": "Davey Hearn says he was simply touching the new paint at the site out of curiosity and did not remove or alter it.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c8d26051vv2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3411,7 +3419,7 @@
       "summary": "A left-wing senator who backs talks with armed gangs faces an outsider endorsed by Trump.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgqv8q1ndpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3420,17 +3428,17 @@
       "summary": "Temperatures are forecast to peak on Monday, and authorities warn they could match historic highs.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "Nobel Peace Prize winner triumphs at Ethiopian polls but fears grow of new conflict",
+      "headline": "Ethiopia PM's party wins landslide as fears grow of new conflict",
       "summary": "Abiy Ahmed's party retains its huge majority despite unrest in several parts of Ethiopia and tensions with its neighbours.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cz750q5e3w3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
-      "sentiment_score": 0.0,
+      "published_utc": "2026-06-21T18:00:39+00:00",
+      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -3438,7 +3446,7 @@
       "summary": "Fuel had already been rationed due to shortages caused by Kyiv's attacks against supply routes in Russian-occupied territories.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/clyx2lk9d15o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3447,7 +3455,7 @@
       "summary": "The face-to-face meeting follows ongoing fighting in Lebanon and Iran's claim to have shut the Strait of Hormuz.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cwy0q41v1lzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3456,7 +3464,7 @@
       "summary": "The Bank last cut interest rates in December but upheaval in the Middle East has stalled any further reductions.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c33yzm5mdjpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3465,7 +3473,7 @@
       "summary": "With fuel and gas prices having fallen in recent days, we look at how the end of hostilities might affect you - in five charts.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c4g5574pwreo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3474,7 +3482,7 @@
       "summary": "Himalayan villages are creating artificial glaciers to guarantee water for their crops in the spring.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c072414183go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3483,7 +3491,7 @@
       "summary": "Analysis showed how much the UK could have grown if it had not exited the EU.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvg75npqkq4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T16:18:59+00:00",
+      "published_utc": "2026-06-21T18:00:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
