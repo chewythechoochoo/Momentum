@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-21T05:23:36+00:00",
+  "generated_at_utc": "2026-06-21T09:28:32+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 259,
-  "last_success_utc": "2026-06-21T00:19:45+00:00",
+  "cycle_count": 260,
+  "last_success_utc": "2026-06-21T05:23:36+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -557,6 +557,38 @@
       }
     },
     {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 54.37,
+      "raw_score": 54.37,
+      "band": "starter",
+      "weight": 0.0979,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 31.09,
+        "sentiment": 80.0,
+        "volume": 59.66,
+        "policy": 60.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 53.65,
+      "raw_score": 62.78,
+      "band": "starter",
+      "weight": 0.0836,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 61.13,
+        "sentiment": 80.0,
+        "volume": 46.66,
+        "policy": 50.0,
+        "volatility_penalty": 9.13
+      }
+    },
+    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
       "score": 51.38,
@@ -570,22 +602,6 @@
         "volume": 52.23,
         "policy": 50.0,
         "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 49.24,
-      "raw_score": 60.77,
-      "band": "starter",
-      "weight": 0.0788,
-      "confidence": 0.95,
-      "components": {
-        "momentum": 59.62,
-        "sentiment": 75.0,
-        "volume": 47.12,
-        "policy": 50.0,
-        "volatility_penalty": 11.53
       }
     },
     {
@@ -621,22 +637,6 @@
       }
     },
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 47.37,
-      "raw_score": 47.37,
-      "band": "starter",
-      "weight": 0.0615,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 31.09,
-        "sentiment": 60.0,
-        "volume": 59.66,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "oil_gas",
       "name": "Oil & Gas",
       "score": 44.91,
@@ -653,19 +653,19 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 44.65,
-      "raw_score": 53.78,
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 44.74,
+      "raw_score": 56.27,
       "band": "starter",
-      "weight": 0.054,
-      "confidence": 0.65,
+      "weight": 0.0642,
+      "confidence": 0.95,
       "components": {
-        "momentum": 61.13,
-        "sentiment": 50.0,
-        "volume": 46.66,
+        "momentum": 59.62,
+        "sentiment": 60.0,
+        "volume": 47.12,
         "policy": 50.0,
-        "volatility_penalty": 9.13
+        "volatility_penalty": 11.53
       }
     }
   ],
@@ -728,31 +728,32 @@
     },
     {
       "symbol": "AVGO",
-      "action": "BUY",
-      "target_weight": 0.0272,
+      "action": "HOLD",
+      "target_weight": 0.0222,
       "current_weight": 0.0219,
-      "notional_delta": 544.69,
-      "reason": "underweight by 0.53% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 49.2 (starter), contribution 66.9"
+        "theme 'AI & Compute' score 44.7 (starter), contribution 62.4"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "BA",
       "action": "BUY",
-      "target_weight": 0.0204,
+      "target_weight": 0.0325,
       "current_weight": 0.0149,
-      "notional_delta": 565.37,
-      "reason": "buying on positive news flow \u2014 \"Trump Unveils Qatar-Donated Air Force One, Says He'll Fly It To NATO Summit And Signals China Visit: 'Nobody Tops This One'\" \u00b7 underweight by 0.55% vs target \u2014 add",
+      "notional_delta": 1810.62,
+      "reason": "buying on partnership (negative) \u2014 \"General Motors (GM) Expands Into Defense, Grid Services And Factory Automation\" \u00b7 underweight by 1.76% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.68%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.4 (starter), contribution 51.9",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 58.9",
+        "news_source=yahoo_rss",
+        "event=partnership",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense"
     },
@@ -865,15 +866,18 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.0188,
+      "action": "BUY",
+      "target_weight": 0.0302,
       "current_weight": 0.0139,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1677.49,
+      "reason": "buying on partnership (negative) \u2014 \"General Motors (GM) Expands Into Defense, Grid Services And Factory Automation\" \u00b7 underweight by 1.63% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.91%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.4 (starter), contribution 47.7"
+        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 54.7",
+        "news_source=yahoo_rss",
+        "event=partnership",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense"
     },
@@ -892,17 +896,17 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "BUY",
-      "target_weight": 0.0265,
+      "action": "HOLD",
+      "target_weight": 0.0216,
       "current_weight": 0.0207,
-      "notional_delta": 594.0,
-      "reason": "buying on positive news flow \u2014 \"Tim Cook Says 'Pretty Good' Workers Master Their Jobs, While 'Brilliant' Workers Do This One Thing To Get To 100%: Excellence Can Only Get Y\" \u00b7 underweight by 0.58% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on negative news flow \u2014 \"Ro Khanna Says Americans Didn't Fight A Revolution 'To Be Ruled By Tech Billionaires' As OpenAI, Anthropic And Meta Leaders Join G7 AI Talks\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 49.2 (starter), contribution 65.3",
+        "theme 'AI & Compute' score 44.7 (starter), contribution 60.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -953,14 +957,14 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0171,
+      "target_weight": 0.0266,
       "current_weight": 0.0,
-      "notional_delta": 1759.8,
-      "reason": "underweight by 1.71% vs target \u2014 add",
+      "notional_delta": 2737.48,
+      "reason": "underweight by 2.66% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 47.8"
+        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 56.8"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -985,10 +989,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0267,
       "notional_delta": -2745.06,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on partnership (negative) \u2014 \"General Motors (GM) Expands Into Defense, Grid Services And Factory Automation\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.55%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=yahoo_rss",
+        "event=partnership",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense"
     },
@@ -1096,15 +1103,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "BUY",
-      "target_weight": 0.0251,
+      "action": "HOLD",
+      "target_weight": 0.0203,
       "current_weight": 0.0195,
-      "notional_delta": 574.71,
-      "reason": "buying on positive news flow \u2014 \"Top BofA Analyst Explains Why Sandisk Has More Upside After 4,755% Surge\" \u00b7 underweight by 0.56% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Top BofA Analyst Explains Why Sandisk Has More Upside After 4,755% Surge\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 49.2 (starter), contribution 61.7",
+        "theme 'AI & Compute' score 44.7 (starter), contribution 57.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1190,28 +1197,33 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.02,
+      "target_weight": 0.0305,
       "current_weight": 0.0405,
-      "notional_delta": -2108.18,
-      "reason": "overweight by 2.05% vs target \u2014 trim",
+      "notional_delta": -1027.6,
+      "reason": "trimming on positive news flow \u2014 \"JB Pritzker Says Illinois Has 'A Right To Win' Quantum Computing Race, Builds Chicago Hub With PsiQuantum, GlobalFoundries\" \u00b7 overweight by 1.00% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 56.0"
+        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 65.0",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "RTX",
       "action": "BUY",
-      "target_weight": 0.0224,
+      "target_weight": 0.0353,
       "current_weight": 0.0168,
-      "notional_delta": 571.39,
-      "reason": "underweight by 0.56% vs target \u2014 add",
+      "notional_delta": 1898.97,
+      "reason": "buying on partnership (negative) \u2014 \"General Motors (GM) Expands Into Defense, Grid Services And Factory Automation\" \u00b7 underweight by 1.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.32%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.4 (starter), contribution 57.0"
+        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 64.0",
+        "news_source=yahoo_rss",
+        "event=partnership",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense"
     },
@@ -1290,15 +1302,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
-      "target_weight": 0.017,
+      "action": "HOLD",
+      "target_weight": 0.0265,
       "current_weight": 0.0308,
-      "notional_delta": -1416.79,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls And Bears: SpaceX, SanDisk, Palantir \u2014 And Markets Volatile In Shortened Week\" \u00b7 overweight by 1.38% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"JD Vance Says Trump Backs Government Stakes In AI Giants, But Musk And Cuban Push Back: 'Better Just To Send Money Directly'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 47.5",
+        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 56.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1437,15 +1449,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "BUY",
-      "target_weight": 0.0272,
+      "action": "HOLD",
+      "target_weight": 0.0222,
       "current_weight": 0.0219,
-      "notional_delta": 544.69,
-      "reason": "underweight by 0.53% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 49.2 (starter), contribution 66.9"
+        "theme 'AI & Compute' score 44.7 (starter), contribution 62.4"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1455,16 +1467,17 @@
     {
       "symbol": "BA",
       "action": "BUY",
-      "target_weight": 0.0204,
+      "target_weight": 0.0325,
       "current_weight": 0.0149,
-      "notional_delta": 565.37,
-      "reason": "buying on positive news flow \u2014 \"Trump Unveils Qatar-Donated Air Force One, Says He'll Fly It To NATO Summit And Signals China Visit: 'Nobody Tops This One'\" \u00b7 underweight by 0.55% vs target \u2014 add",
+      "notional_delta": 1810.62,
+      "reason": "buying on partnership (negative) \u2014 \"General Motors (GM) Expands Into Defense, Grid Services And Factory Automation\" \u00b7 underweight by 1.76% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.68%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.4 (starter), contribution 51.9",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 58.9",
+        "news_source=yahoo_rss",
+        "event=partnership",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1601,15 +1614,18 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.0188,
+      "action": "BUY",
+      "target_weight": 0.0302,
       "current_weight": 0.0139,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1677.49,
+      "reason": "buying on partnership (negative) \u2014 \"General Motors (GM) Expands Into Defense, Grid Services And Factory Automation\" \u00b7 underweight by 1.63% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.91%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.4 (starter), contribution 47.7"
+        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 54.7",
+        "news_source=yahoo_rss",
+        "event=partnership",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1634,17 +1650,17 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "BUY",
-      "target_weight": 0.0265,
+      "action": "HOLD",
+      "target_weight": 0.0216,
       "current_weight": 0.0207,
-      "notional_delta": 594.0,
-      "reason": "buying on positive news flow \u2014 \"Tim Cook Says 'Pretty Good' Workers Master Their Jobs, While 'Brilliant' Workers Do This One Thing To Get To 100%: Excellence Can Only Get Y\" \u00b7 underweight by 0.58% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on negative news flow \u2014 \"Ro Khanna Says Americans Didn't Fight A Revolution 'To Be Ruled By Tech Billionaires' As OpenAI, Anthropic And Meta Leaders Join G7 AI Talks\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 49.2 (starter), contribution 65.3",
+        "theme 'AI & Compute' score 44.7 (starter), contribution 60.9",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1707,14 +1723,14 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0171,
+      "target_weight": 0.0266,
       "current_weight": 0.0,
-      "notional_delta": 1759.8,
-      "reason": "underweight by 1.71% vs target \u2014 add",
+      "notional_delta": 2737.48,
+      "reason": "underweight by 2.66% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 47.8"
+        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 56.8"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1745,10 +1761,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0267,
       "notional_delta": -2745.06,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on partnership (negative) \u2014 \"General Motors (GM) Expands Into Defense, Grid Services And Factory Automation\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.55%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=yahoo_rss",
+        "event=partnership",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1880,15 +1899,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "BUY",
-      "target_weight": 0.0251,
+      "action": "HOLD",
+      "target_weight": 0.0203,
       "current_weight": 0.0195,
-      "notional_delta": 574.71,
-      "reason": "buying on positive news flow \u2014 \"Top BofA Analyst Explains Why Sandisk Has More Upside After 4,755% Surge\" \u00b7 underweight by 0.56% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Top BofA Analyst Explains Why Sandisk Has More Upside After 4,755% Surge\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 49.2 (starter), contribution 61.7",
+        "theme 'AI & Compute' score 44.7 (starter), contribution 57.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1992,14 +2011,16 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.02,
+      "target_weight": 0.0305,
       "current_weight": 0.0405,
-      "notional_delta": -2108.18,
-      "reason": "overweight by 2.05% vs target \u2014 trim",
+      "notional_delta": -1027.6,
+      "reason": "trimming on positive news flow \u2014 \"JB Pritzker Says Illinois Has 'A Right To Win' Quantum Computing Race, Builds Chicago Hub With PsiQuantum, GlobalFoundries\" \u00b7 overweight by 1.00% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 56.0"
+        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 65.0",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2009,14 +2030,17 @@
     {
       "symbol": "RTX",
       "action": "BUY",
-      "target_weight": 0.0224,
+      "target_weight": 0.0353,
       "current_weight": 0.0168,
-      "notional_delta": 571.39,
-      "reason": "underweight by 0.56% vs target \u2014 add",
+      "notional_delta": 1898.97,
+      "reason": "buying on partnership (negative) \u2014 \"General Motors (GM) Expands Into Defense, Grid Services And Factory Automation\" \u00b7 underweight by 1.85% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.32%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.4 (starter), contribution 57.0"
+        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 64.0",
+        "news_source=yahoo_rss",
+        "event=partnership",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2113,15 +2137,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
-      "target_weight": 0.017,
+      "action": "HOLD",
+      "target_weight": 0.0265,
       "current_weight": 0.0308,
-      "notional_delta": -1416.79,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls And Bears: SpaceX, SanDisk, Palantir \u2014 And Markets Volatile In Shortened Week\" \u00b7 overweight by 1.38% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"JD Vance Says Trump Backs Government Stakes In AI Giants, But Musk And Cuban Push Back: 'Better Just To Send Money Directly'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 47.5",
+        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 56.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -3240,6 +3264,10 @@
     {
       "t": "2026-06-21T05:23:33+00:00",
       "v": 102913.11
+    },
+    {
+      "t": "2026-06-21T09:28:30+00:00",
+      "v": 102913.11
     }
   ],
   "breaking_news": [
@@ -3248,7 +3276,7 @@
       "summary": "A new Pew survey finds many working parents feel they cannot give 100% at either work or home. Benefits like paid sick leave and more affordable childcare could help.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5856274/working-parents-balance-work-pew",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3257,7 +3285,7 @@
       "summary": "The U.S. may be the world's biggest producer of <em>crude </em>oil, but that's not the case for <em>motor </em>oil. The cost of lubricants is soaring, and even a tentative deal to end the war won't solve the problem.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847024/motor-oil-iran-war",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3266,7 +3294,7 @@
       "summary": "NPR's Ailsa Chang talks with Jakob Larsen, chief safety and security officer at BIMCO, the global shipping association, about what it might mean to reopen the Strait of Hormuz.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5860650/shipping-exec-says-industry-needs-assurances-strait-of-hormuz-will-be-safe",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3275,7 +3303,7 @@
       "summary": "The Federal Reserve left its benchmark interest rates unchanged Wednesday, and signaled its next move could be a rate increase. It's the first rate decision under the new Fed chairman, Kevin Warsh.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860084/fed-chief-warsh-first-fomc-meeting",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3284,7 +3312,7 @@
       "summary": "Iran's control of the Strait of Hormuz inflicted global pain during the months-long conflict with the U.S. and Israel. A tentative deal is in place, but questions remain about the key waterway.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860909/iran-ships-strait-of-hormuz-trump",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3293,7 +3321,7 @@
       "summary": "More than three months after the U.S. and Israel launched their war on Iran, the costs and aftereffects are felt around the world.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860739/iran-war-cost-oil-military-trade",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3302,7 +3330,7 @@
       "summary": "A new NPR/PBS News/Marist poll finds a record low share of Americans approve of President Trump's job performance and his handling of the economy heading into the summer before a key midterm election.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/18/nx-s1-5861720/trump-economy-gas-prices-midterms-polling",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3311,16 +3339,16 @@
       "summary": "SpaceX stock hit the market last week. Here's how it could turn up in your retirement or investment portfolio.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/20/nx-s1-5860047/here-is-how-spacex-could-turn-up-in-your-current-investments",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "France bans alcohol at music festival events under red heatwave alert",
-      "summary": "The annual F\u00eate de la Musique celebrations draw millions to the streets but the most serious heatwave warnings have been issued for 35 of the country's departments.",
+      "summary": "Annual street parties attended by millions ordered to help \u201cpreserve\u201d healthcare services in 40C (104F) heat.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3329,7 +3357,7 @@
       "summary": "Ukraine's president said his country was open to \"engagement\" about \"difficult and painful chapters of our shared past\".",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c2lye7xje9yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3338,7 +3366,7 @@
       "summary": "The Israeli military accused Ahmed Wishah of being a \"Hamas sniper operative\", without providing evidence.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/c4gy26p6pwzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3347,7 +3375,7 @@
       "summary": "The US president earlier questioned Meloni's popularity after suggesting she \"begged\" for a photo at G7 summit",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cgqj77909jpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3356,16 +3384,16 @@
       "summary": "A left-wing senator who backs talks with armed gangs faces an outsider endorsed by Trump.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgqv8q1ndpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "Lebanese turtle conservationist Mona Khalil killed by Israeli strike",
-      "summary": "Mona Khalil, who had refused to leave the beach she had spent years protecting, died from her injuries after the Israeli strike.",
+      "summary": "Mona Khalil, who had refused to leave the beach she had spent years protecting, died after several days in hospital, an environmental group said.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cwylx1vq18zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3374,7 +3402,7 @@
       "summary": "Travelling with a humanitarian convoy, BBC's Hugo Bachega has been given rare access to a part of Lebanon under Israeli occupation.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/videos/c8r2pyv3e2po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3383,7 +3411,7 @@
       "summary": "The US disputed Iran's claim the waterway is shut, a move Tehran says was a response to Israeli attacks in Lebanon.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cwyekkwm1mmo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3392,7 +3420,7 @@
       "summary": "The Bank last cut interest rates in December but upheaval in the Middle East has stalled any further reductions.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c33yzm5mdjpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3401,7 +3429,7 @@
       "summary": "With fuel and gas prices having fallen in recent days, we look at how the end of hostilities might affect you - in five charts.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c4g5574pwreo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3410,7 +3438,7 @@
       "summary": "Himalayan villages are creating artificial glaciers to guarantee water for their crops in the spring.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c072414183go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3419,7 +3447,7 @@
       "summary": "Analysis showed how much the UK could have grown if it had not exited the EU.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvg75npqkq4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T05:23:36+00:00",
+      "published_utc": "2026-06-21T09:28:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
