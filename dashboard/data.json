@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-21T09:28:32+00:00",
+  "generated_at_utc": "2026-06-21T12:00:33+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 260,
-  "last_success_utc": "2026-06-21T05:23:36+00:00",
+  "cycle_count": 261,
+  "last_success_utc": "2026-06-21T09:28:32+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -527,14 +527,14 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 62.91,
-      "raw_score": 65.71,
+      "score": 62.77,
+      "raw_score": 65.56,
       "band": "buy",
-      "weight": 0.1264,
+      "weight": 0.1259,
       "confidence": 1.0,
       "components": {
         "momentum": 50.1,
-        "sentiment": 93.34,
+        "sentiment": 92.85,
         "volume": 63.34,
         "policy": 50.0,
         "volatility_penalty": 2.79
@@ -573,51 +573,19 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 53.65,
-      "raw_score": 62.78,
-      "band": "starter",
-      "weight": 0.0836,
-      "confidence": 0.75,
-      "components": {
-        "momentum": 61.13,
-        "sentiment": 80.0,
-        "volume": 46.66,
-        "policy": 50.0,
-        "volatility_penalty": 9.13
-      }
-    },
-    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 51.38,
-      "raw_score": 51.38,
+      "score": 48.38,
+      "raw_score": 48.38,
       "band": "starter",
-      "weight": 0.0791,
-      "confidence": 0.8,
+      "weight": 0.0721,
+      "confidence": 0.85,
       "components": {
         "momentum": 52.33,
-        "sentiment": 50.0,
+        "sentiment": 40.0,
         "volume": 52.23,
         "policy": 50.0,
         "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "cybersecurity",
-      "name": "Cybersecurity",
-      "score": 47.99,
-      "raw_score": 63.2,
-      "band": "starter",
-      "weight": 0.0766,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 64.35,
-        "sentiment": 76.92,
-        "volume": 39.43,
-        "policy": 65.0,
-        "volatility_penalty": 15.22
       }
     },
     {
@@ -637,32 +605,64 @@
       }
     },
     {
+      "key": "cybersecurity",
+      "name": "Cybersecurity",
+      "score": 46.73,
+      "raw_score": 61.94,
+      "band": "starter",
+      "weight": 0.0724,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 64.35,
+        "sentiment": 72.72,
+        "volume": 39.43,
+        "policy": 65.0,
+        "volatility_penalty": 15.22
+      }
+    },
+    {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 44.91,
-      "raw_score": 45.97,
+      "score": 44.75,
+      "raw_score": 45.81,
       "band": "starter",
-      "weight": 0.0664,
+      "weight": 0.0658,
       "confidence": 1.0,
       "components": {
         "momentum": 0.88,
-        "sentiment": 92.85,
+        "sentiment": 92.31,
         "volume": 63.83,
         "policy": 50.0,
         "volatility_penalty": 1.06
       }
     },
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 44.65,
+      "raw_score": 53.78,
+      "band": "starter",
+      "weight": 0.059,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 61.13,
+        "sentiment": 50.0,
+        "volume": 46.66,
+        "policy": 50.0,
+        "volatility_penalty": 9.13
+      }
+    },
+    {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 44.74,
-      "raw_score": 56.27,
+      "score": 41.74,
+      "raw_score": 53.27,
       "band": "starter",
-      "weight": 0.0642,
-      "confidence": 0.95,
+      "weight": 0.0558,
+      "confidence": 1.0,
       "components": {
         "momentum": 59.62,
-        "sentiment": 60.0,
+        "sentiment": 50.0,
         "volume": 47.12,
         "policy": 50.0,
         "volatility_penalty": 11.53
@@ -699,15 +699,15 @@
     },
     {
       "symbol": "AMZN",
-      "action": "BUY",
-      "target_weight": 0.0277,
+      "action": "HOLD",
+      "target_weight": 0.0253,
       "current_weight": 0.022,
-      "notional_delta": 582.45,
-      "reason": "buying on negative news flow \u2014 \"Apple Stock Forms Risky Pattern, May Be Overvalued Ahead of iPhone Price Increases\" \u00b7 underweight by 0.57% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on negative news flow \u2014 \"Apple Stock Forms Risky Pattern, May Be Overvalued Ahead of iPhone Price Increases\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 56.1",
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 53.1",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -729,14 +729,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0222,
+      "target_weight": 0.0193,
       "current_weight": 0.0219,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 44.7 (starter), contribution 62.4"
+        "theme 'AI & Compute' score 41.7 (starter), contribution 59.4"
       ],
       "theme_key": "ai_compute"
     },
@@ -775,14 +775,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0224,
+      "target_weight": 0.0222,
       "current_weight": 0.0024,
-      "notional_delta": 2057.36,
-      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 2.00% vs target \u2014 add",
+      "notional_delta": 2036.77,
+      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 1.98% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.76%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 44.9 (starter), contribution 46.3",
+        "theme 'Oil & Gas' score 44.8 (starter), contribution 46.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -791,14 +791,14 @@
     {
       "symbol": "CRWD",
       "action": "BUY",
-      "target_weight": 0.022,
+      "target_weight": 0.0207,
       "current_weight": 0.0029,
-      "notional_delta": 1970.69,
-      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 1.91% vs target \u2014 add",
+      "notional_delta": 1836.91,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 1.78% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.0 (starter), contribution 45.0",
+        "theme 'Cybersecurity' score 46.7 (starter), contribution 43.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -807,14 +807,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0215,
+      "target_weight": 0.0213,
       "current_weight": 0.0025,
-      "notional_delta": 1957.17,
-      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 1.90% vs target \u2014 add",
+      "notional_delta": 1936.58,
+      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 1.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.66%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 44.9 (starter), contribution 44.5",
+        "theme 'Oil & Gas' score 44.8 (starter), contribution 44.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -851,14 +851,14 @@
     {
       "symbol": "FTNT",
       "action": "BUY",
-      "target_weight": 0.0246,
+      "target_weight": 0.0232,
       "current_weight": 0.0027,
-      "notional_delta": 2257.88,
-      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.19% vs target \u2014 add",
+      "notional_delta": 2113.8,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.05% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.0 (starter), contribution 50.3",
+        "theme 'Cybersecurity' score 46.7 (starter), contribution 49.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -897,14 +897,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0216,
+      "target_weight": 0.0188,
       "current_weight": 0.0207,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Ro Khanna Says Americans Didn't Fight A Revolution 'To Be Ruled By Tech Billionaires' As OpenAI, Anthropic And Meta Leaders Join G7 AI Talks\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 44.7 (starter), contribution 60.9",
+        "theme 'AI & Compute' score 41.7 (starter), contribution 57.9",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -927,14 +927,14 @@
     {
       "symbol": "HD",
       "action": "HOLD",
-      "target_weight": 0.0305,
+      "target_weight": 0.028,
       "current_weight": 0.0263,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.72%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 61.8"
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 58.8"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -957,14 +957,14 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0266,
+      "target_weight": 0.0186,
       "current_weight": 0.0,
-      "notional_delta": 2737.48,
-      "reason": "underweight by 2.66% vs target \u2014 add",
+      "notional_delta": 1914.17,
+      "reason": "underweight by 1.86% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 56.8"
+        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 47.8"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1029,14 +1029,14 @@
     {
       "symbol": "MRNA",
       "action": "BUY",
-      "target_weight": 0.0464,
+      "target_weight": 0.0463,
       "current_weight": 0.0237,
-      "notional_delta": 2340.97,
-      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 2330.68,
+      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.26% vs target \u2014 add",
       "factors": [
         "unrealized_pl=22.69%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 62.9 (buy), contribution 75.8",
+        "theme 'Biotech & Pharma' score 62.8 (buy), contribution 75.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1090,28 +1090,28 @@
     {
       "symbol": "NKE",
       "action": "BUY",
-      "target_weight": 0.021,
+      "target_weight": 0.0188,
       "current_weight": 0.0,
-      "notional_delta": 2160.75,
-      "reason": "underweight by 2.10% vs target \u2014 add",
+      "notional_delta": 1934.34,
+      "reason": "underweight by 1.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.22%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 42.6"
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 39.6"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0203,
+      "target_weight": 0.0176,
       "current_weight": 0.0195,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Top BofA Analyst Explains Why Sandisk Has More Upside After 4,755% Surge\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 44.7 (starter), contribution 57.2",
+        "theme 'AI & Compute' score 41.7 (starter), contribution 54.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1150,14 +1150,14 @@
     {
       "symbol": "PANW",
       "action": "BUY",
-      "target_weight": 0.0301,
+      "target_weight": 0.0286,
       "current_weight": 0.003,
-      "notional_delta": 2786.22,
-      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.71% vs target \u2014 add",
+      "notional_delta": 2631.85,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.56% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.62%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.0 (starter), contribution 61.6",
+        "theme 'Cybersecurity' score 46.7 (starter), contribution 60.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1181,14 +1181,14 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0365,
+      "target_weight": 0.0363,
       "current_weight": 0.0143,
-      "notional_delta": 2283.64,
-      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.22% vs target \u2014 add",
+      "notional_delta": 2263.06,
+      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.20% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 62.9 (buy), contribution 59.5",
+        "theme 'Biotech & Pharma' score 62.8 (buy), contribution 59.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1197,14 +1197,14 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0305,
+      "target_weight": 0.0218,
       "current_weight": 0.0405,
-      "notional_delta": -1027.6,
-      "reason": "trimming on positive news flow \u2014 \"JB Pritzker Says Illinois Has 'A Right To Win' Quantum Computing Race, Builds Chicago Hub With PsiQuantum, GlobalFoundries\" \u00b7 overweight by 1.00% vs target \u2014 trim",
+      "notional_delta": -1922.94,
+      "reason": "trimming on positive news flow \u2014 \"JB Pritzker Says Illinois Has 'A Right To Win' Quantum Computing Race, Builds Chicago Hub With PsiQuantum, GlobalFoundries\" \u00b7 overweight by 1.87% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 65.0",
+        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 56.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1302,17 +1302,17 @@
     },
     {
       "symbol": "TSLA",
-      "action": "HOLD",
-      "target_weight": 0.0265,
+      "action": "REDUCE",
+      "target_weight": 0.0185,
       "current_weight": 0.0308,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"JD Vance Says Trump Backs Government Stakes In AI Giants, But Musk And Cuban Push Back: 'Better Just To Send Money Directly'\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1262.42,
+      "reason": "trimming on mixed news flow \u2014 \"Apple's Tim Cook Warns Of Price Hike, Intel Soars On Trump's Apple Partnership Announcement, And More: This Week In Appleverse\" \u00b7 overweight by 1.23% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 56.5",
+        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 47.5",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.07"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1333,14 +1333,14 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0435,
+      "target_weight": 0.0433,
       "current_weight": 0.0216,
-      "notional_delta": 2257.14,
-      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.19% vs target \u2014 add",
+      "notional_delta": 2236.56,
+      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.10%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 62.9 (buy), contribution 71.0",
+        "theme 'Biotech & Pharma' score 62.8 (buy), contribution 70.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1364,14 +1364,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0225,
+      "target_weight": 0.0223,
       "current_weight": 0.0074,
-      "notional_delta": 1553.98,
-      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 1.51% vs target \u2014 add",
+      "notional_delta": 1533.39,
+      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 1.49% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.77%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 44.9 (starter), contribution 46.5",
+        "theme 'Oil & Gas' score 44.8 (starter), contribution 46.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1414,15 +1414,15 @@
     },
     {
       "symbol": "AMZN",
-      "action": "BUY",
-      "target_weight": 0.0277,
+      "action": "HOLD",
+      "target_weight": 0.0253,
       "current_weight": 0.022,
-      "notional_delta": 582.45,
-      "reason": "buying on negative news flow \u2014 \"Apple Stock Forms Risky Pattern, May Be Overvalued Ahead of iPhone Price Increases\" \u00b7 underweight by 0.57% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on negative news flow \u2014 \"Apple Stock Forms Risky Pattern, May Be Overvalued Ahead of iPhone Price Increases\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 56.1",
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 53.1",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1450,14 +1450,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0222,
+      "target_weight": 0.0193,
       "current_weight": 0.0219,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 44.7 (starter), contribution 62.4"
+        "theme 'AI & Compute' score 41.7 (starter), contribution 59.4"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1505,14 +1505,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0224,
+      "target_weight": 0.0222,
       "current_weight": 0.0024,
-      "notional_delta": 2057.36,
-      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 2.00% vs target \u2014 add",
+      "notional_delta": 2036.77,
+      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 1.98% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.76%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 44.9 (starter), contribution 46.3",
+        "theme 'Oil & Gas' score 44.8 (starter), contribution 46.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1524,14 +1524,14 @@
     {
       "symbol": "CRWD",
       "action": "BUY",
-      "target_weight": 0.022,
+      "target_weight": 0.0207,
       "current_weight": 0.0029,
-      "notional_delta": 1970.69,
-      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 1.91% vs target \u2014 add",
+      "notional_delta": 1836.91,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 1.78% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.0 (starter), contribution 45.0",
+        "theme 'Cybersecurity' score 46.7 (starter), contribution 43.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1543,14 +1543,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0215,
+      "target_weight": 0.0213,
       "current_weight": 0.0025,
-      "notional_delta": 1957.17,
-      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 1.90% vs target \u2014 add",
+      "notional_delta": 1936.58,
+      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 1.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.66%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 44.9 (starter), contribution 44.5",
+        "theme 'Oil & Gas' score 44.8 (starter), contribution 44.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1596,14 +1596,14 @@
     {
       "symbol": "FTNT",
       "action": "BUY",
-      "target_weight": 0.0246,
+      "target_weight": 0.0232,
       "current_weight": 0.0027,
-      "notional_delta": 2257.88,
-      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.19% vs target \u2014 add",
+      "notional_delta": 2113.8,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.05% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.0 (starter), contribution 50.3",
+        "theme 'Cybersecurity' score 46.7 (starter), contribution 49.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1651,14 +1651,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0216,
+      "target_weight": 0.0188,
       "current_weight": 0.0207,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Ro Khanna Says Americans Didn't Fight A Revolution 'To Be Ruled By Tech Billionaires' As OpenAI, Anthropic And Meta Leaders Join G7 AI Talks\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 44.7 (starter), contribution 60.9",
+        "theme 'AI & Compute' score 41.7 (starter), contribution 57.9",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1687,14 +1687,14 @@
     {
       "symbol": "HD",
       "action": "HOLD",
-      "target_weight": 0.0305,
+      "target_weight": 0.028,
       "current_weight": 0.0263,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.72%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 61.8"
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 58.8"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1723,14 +1723,14 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0266,
+      "target_weight": 0.0186,
       "current_weight": 0.0,
-      "notional_delta": 2737.48,
-      "reason": "underweight by 2.66% vs target \u2014 add",
+      "notional_delta": 1914.17,
+      "reason": "underweight by 1.86% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 56.8"
+        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 47.8"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1810,14 +1810,14 @@
     {
       "symbol": "MRNA",
       "action": "BUY",
-      "target_weight": 0.0464,
+      "target_weight": 0.0463,
       "current_weight": 0.0237,
-      "notional_delta": 2340.97,
-      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.27% vs target \u2014 add",
+      "notional_delta": 2330.68,
+      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.26% vs target \u2014 add",
       "factors": [
         "unrealized_pl=22.69%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 62.9 (buy), contribution 75.8",
+        "theme 'Biotech & Pharma' score 62.8 (buy), contribution 75.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1883,14 +1883,14 @@
     {
       "symbol": "NKE",
       "action": "BUY",
-      "target_weight": 0.021,
+      "target_weight": 0.0188,
       "current_weight": 0.0,
-      "notional_delta": 2160.75,
-      "reason": "underweight by 2.10% vs target \u2014 add",
+      "notional_delta": 1934.34,
+      "reason": "underweight by 1.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.22%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 51.4 (starter), contribution 42.6"
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 39.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1900,14 +1900,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0203,
+      "target_weight": 0.0176,
       "current_weight": 0.0195,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Top BofA Analyst Explains Why Sandisk Has More Upside After 4,755% Surge\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 44.7 (starter), contribution 57.2",
+        "theme 'AI & Compute' score 41.7 (starter), contribution 54.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1955,14 +1955,14 @@
     {
       "symbol": "PANW",
       "action": "BUY",
-      "target_weight": 0.0301,
+      "target_weight": 0.0286,
       "current_weight": 0.003,
-      "notional_delta": 2786.22,
-      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.71% vs target \u2014 add",
+      "notional_delta": 2631.85,
+      "reason": "buying on positive news flow \u2014 \"3 S&P 500 Stocks to Consider Right Now\" \u00b7 underweight by 2.56% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.62%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 48.0 (starter), contribution 61.6",
+        "theme 'Cybersecurity' score 46.7 (starter), contribution 60.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1992,14 +1992,14 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0365,
+      "target_weight": 0.0363,
       "current_weight": 0.0143,
-      "notional_delta": 2283.64,
-      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.22% vs target \u2014 add",
+      "notional_delta": 2263.06,
+      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.20% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 62.9 (buy), contribution 59.5",
+        "theme 'Biotech & Pharma' score 62.8 (buy), contribution 59.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2011,14 +2011,14 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0305,
+      "target_weight": 0.0218,
       "current_weight": 0.0405,
-      "notional_delta": -1027.6,
-      "reason": "trimming on positive news flow \u2014 \"JB Pritzker Says Illinois Has 'A Right To Win' Quantum Computing Race, Builds Chicago Hub With PsiQuantum, GlobalFoundries\" \u00b7 overweight by 1.00% vs target \u2014 trim",
+      "notional_delta": -1922.94,
+      "reason": "trimming on positive news flow \u2014 \"JB Pritzker Says Illinois Has 'A Right To Win' Quantum Computing Race, Builds Chicago Hub With PsiQuantum, GlobalFoundries\" \u00b7 overweight by 1.87% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.43%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 65.0",
+        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 56.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2137,17 +2137,17 @@
     },
     {
       "symbol": "TSLA",
-      "action": "HOLD",
-      "target_weight": 0.0265,
+      "action": "REDUCE",
+      "target_weight": 0.0185,
       "current_weight": 0.0308,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"JD Vance Says Trump Backs Government Stakes In AI Giants, But Musk And Cuban Push Back: 'Better Just To Send Money Directly'\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1262.42,
+      "reason": "trimming on mixed news flow \u2014 \"Apple's Tim Cook Warns Of Price Hike, Intel Soars On Trump's Apple Partnership Announcement, And More: This Week In Appleverse\" \u00b7 overweight by 1.23% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 53.6 (starter), contribution 56.5",
+        "theme 'EV & Clean Transport' score 44.6 (starter), contribution 47.5",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.07"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2174,14 +2174,14 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0435,
+      "target_weight": 0.0433,
       "current_weight": 0.0216,
-      "notional_delta": 2257.14,
-      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.19% vs target \u2014 add",
+      "notional_delta": 2236.56,
+      "reason": "buying on positive news flow \u2014 \"Novo Nordisk (NYSE:NVO) Launches Pan European Obesity Research Push As Pfizer Closes In\" \u00b7 underweight by 2.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.10%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 62.9 (buy), contribution 71.0",
+        "theme 'Biotech & Pharma' score 62.8 (buy), contribution 70.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2211,14 +2211,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0225,
+      "target_weight": 0.0223,
       "current_weight": 0.0074,
-      "notional_delta": 1553.98,
-      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 1.51% vs target \u2014 add",
+      "notional_delta": 1533.39,
+      "reason": "buying on positive news flow \u2014 \"ConocoPhillips Signs Deal to Revive Syria\u2019s Gas Output\" \u00b7 underweight by 1.49% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.77%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 44.9 (starter), contribution 46.5",
+        "theme 'Oil & Gas' score 44.8 (starter), contribution 46.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -3268,6 +3268,10 @@
     {
       "t": "2026-06-21T09:28:30+00:00",
       "v": 102913.11
+    },
+    {
+      "t": "2026-06-21T12:00:29+00:00",
+      "v": 102913.11
     }
   ],
   "breaking_news": [
@@ -3276,7 +3280,7 @@
       "summary": "A new Pew survey finds many working parents feel they cannot give 100% at either work or home. Benefits like paid sick leave and more affordable childcare could help.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5856274/working-parents-balance-work-pew",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3285,7 +3289,7 @@
       "summary": "The U.S. may be the world's biggest producer of <em>crude </em>oil, but that's not the case for <em>motor </em>oil. The cost of lubricants is soaring, and even a tentative deal to end the war won't solve the problem.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5847024/motor-oil-iran-war",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3294,7 +3298,7 @@
       "summary": "NPR's Ailsa Chang talks with Jakob Larsen, chief safety and security officer at BIMCO, the global shipping association, about what it might mean to reopen the Strait of Hormuz.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/16/nx-s1-5860650/shipping-exec-says-industry-needs-assurances-strait-of-hormuz-will-be-safe",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3303,7 +3307,7 @@
       "summary": "The Federal Reserve left its benchmark interest rates unchanged Wednesday, and signaled its next move could be a rate increase. It's the first rate decision under the new Fed chairman, Kevin Warsh.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860084/fed-chief-warsh-first-fomc-meeting",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3312,7 +3316,7 @@
       "summary": "Iran's control of the Strait of Hormuz inflicted global pain during the months-long conflict with the U.S. and Israel. A tentative deal is in place, but questions remain about the key waterway.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860909/iran-ships-strait-of-hormuz-trump",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3321,7 +3325,7 @@
       "summary": "More than three months after the U.S. and Israel launched their war on Iran, the costs and aftereffects are felt around the world.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860739/iran-war-cost-oil-military-trade",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3330,7 +3334,7 @@
       "summary": "A new NPR/PBS News/Marist poll finds a record low share of Americans approve of President Trump's job performance and his handling of the economy heading into the summer before a key midterm election.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/18/nx-s1-5861720/trump-economy-gas-prices-midterms-polling",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3339,34 +3343,7 @@
       "summary": "SpaceX stock hit the market last week. Here's how it could turn up in your retirement or investment portfolio.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/20/nx-s1-5860047/here-is-how-spacex-could-turn-up-in-your-current-investments",
-      "published_utc": "2026-06-21T09:28:32+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "France bans alcohol at music festival events under red heatwave alert",
-      "summary": "Annual street parties attended by millions ordered to help \u201cpreserve\u201d healthcare services in 40C (104F) heat.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Zelensky returns highest Polish honour after award stripped",
-      "summary": "Ukraine's president said his country was open to \"engagement\" about \"difficult and painful chapters of our shared past\".",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c2lye7xje9yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Israeli strikes kill six people in Gaza including Al Jazeera cameraman, officials say",
-      "summary": "The Israeli military accused Ahmed Wishah of being a \"Hamas sniper operative\", without providing evidence.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/c4gy26p6pwzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3375,7 +3352,43 @@
       "summary": "The US president earlier questioned Meloni's popularity after suggesting she \"begged\" for a photo at G7 summit",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cgqj77909jpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Tight security as Indian students resit medical exam after alleged paper leak",
+      "summary": "Millions of candidates face biometric checks and frisking as air force deployed to secure exam papers.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/cwy0gjqv783o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-21T12:00:33+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Israeli strikes kill six people in Gaza including Al Jazeera cameraman, officials say",
+      "summary": "The Israeli military accused Ahmed Wishah of being a \"Hamas sniper operative\", without providing evidence.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c4gy26p6pwzo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-21T12:00:33+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Former Olympian denies vandalising Washington Reflecting Pool after arrest",
+      "summary": "Davey Hearn says he was simply touching the new paint at the site out of curiosity and did not remove or alter it.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/c8d26051vv2o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-21T12:00:33+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "France bans alcohol at music festival events under red heatwave alert",
+      "summary": "Annual street parties attended by millions ordered to help \u201cpreserve\u201d healthcare services in 40C (104F) heat.",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3384,25 +3397,16 @@
       "summary": "A left-wing senator who backs talks with armed gangs faces an outsider endorsed by Trump.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cvgqv8q1ndpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Lebanese turtle conservationist Mona Khalil killed by Israeli strike",
-      "summary": "Mona Khalil, who had refused to leave the beach she had spent years protecting, died after several days in hospital, an environmental group said.",
+      "headline": "Fuel sales halted in occupied Crimea as Ukraine targets oil facilities",
+      "summary": "Fuel had already been rationed due to shortages caused by Kyiv's attacks against supply routes in Russian-occupied territories.",
       "source": "BBC World",
-      "url": "https://www.bbc.com/news/articles/cwylx1vq18zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "BBC sees destroyed villages in Israeli-occupied southern Lebanon",
-      "summary": "Travelling with a humanitarian convoy, BBC's Hugo Bachega has been given rare access to a part of Lebanon under Israeli occupation.",
-      "source": "BBC World",
-      "url": "https://www.bbc.com/news/videos/c8r2pyv3e2po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "url": "https://www.bbc.com/news/articles/clyx2lk9d15o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3411,7 +3415,7 @@
       "summary": "The US disputed Iran's claim the waterway is shut, a move Tehran says was a response to Israeli attacks in Lebanon.",
       "source": "BBC World",
       "url": "https://www.bbc.com/news/articles/cwyekkwm1mmo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3420,7 +3424,7 @@
       "summary": "The Bank last cut interest rates in December but upheaval in the Middle East has stalled any further reductions.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c33yzm5mdjpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3429,7 +3433,7 @@
       "summary": "With fuel and gas prices having fallen in recent days, we look at how the end of hostilities might affect you - in five charts.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c4g5574pwreo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3438,7 +3442,7 @@
       "summary": "Himalayan villages are creating artificial glaciers to guarantee water for their crops in the spring.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/c072414183go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3447,7 +3451,7 @@
       "summary": "Analysis showed how much the UK could have grown if it had not exited the EU.",
       "source": "BBC Business",
       "url": "https://www.bbc.com/news/articles/cvg75npqkq4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-21T09:28:32+00:00",
+      "published_utc": "2026-06-21T12:00:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
