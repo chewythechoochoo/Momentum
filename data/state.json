@@ -1,723 +1,11 @@
 {
   "schema_version": 2,
-  "last_run_iso": "2026-06-26T06:19:39+00:00",
-  "last_success_iso": "2026-06-26T06:19:45+00:00",
-  "cycle_count": 305,
+  "last_run_iso": "2026-06-26T09:56:50+00:00",
+  "last_success_iso": "2026-06-26T09:56:53+00:00",
+  "cycle_count": 306,
   "consecutive_errors": 0,
   "equity_high_water": 103849.64,
   "decision_log": [
-    {
-      "symbol": "SEDG",
-      "action": "REDUCE",
-      "target_weight": 0.0004,
-      "current_weight": 0.0007,
-      "notional_delta": -36.83,
-      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
-      "factors": [
-        "unrealized_pl=-10.48%",
-        "theme=Clean Energy"
-      ],
-      "theme_key": "clean_energy"
-    },
-    {
-      "symbol": "SLB",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0,
-      "notional_delta": -0.51,
-      "reason": "no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-0.53%",
-        "theme=Oil & Gas"
-      ],
-      "theme_key": "oil_gas"
-    },
-    {
-      "symbol": "SMCI",
-      "action": "HOLD",
-      "target_weight": 0.0172,
-      "current_weight": 0.0142,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=-2.68%",
-        "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.4 (starter), contribution 50.8"
-      ],
-      "theme_key": "ai_compute"
-    },
-    {
-      "symbol": "TSLA",
-      "action": "REDUCE",
-      "target_weight": 0.0,
-      "current_weight": 0.0001,
-      "notional_delta": -4.25,
-      "reason": "trimming on negative news flow \u2014 \"SpaceX Bond Deal Signals Market 'Bubble,' Allianz Exec Warns: Elon Musk Got '$70 Billion Of Funny Money'\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
-      "factors": [
-        "unrealized_pl=-6.53%",
-        "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
-      ],
-      "theme_key": "ev_clean_transport"
-    },
-    {
-      "symbol": "TSM",
-      "action": "HOLD",
-      "target_weight": 0.0407,
-      "current_weight": 0.043,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Exclusive: Trump\u2019s Intel Push Won\u2019t Kill TSMC\u2014Why The World\u2019s \u2018Indispensable Backbone\u2019 Remains A Buy\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=-1.71%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 65.3 (buy), contribution 63.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "semiconductors_ex_ai"
-    },
-    {
-      "symbol": "VRTX",
-      "action": "HOLD",
-      "target_weight": 0.0532,
-      "current_weight": 0.0545,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=3.29%",
-        "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 66.9 (buy), contribution 86.4"
-      ],
-      "theme_key": "biotech"
-    },
-    {
-      "symbol": "WFC",
-      "action": "HOLD",
-      "target_weight": 0.0495,
-      "current_weight": 0.053,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Fed Announces Large U.S. Banks Well Positioned To Withstand Recession After Stress Test Results\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=-0.75%",
-        "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 73.0 (strong_buy), contribution 71.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
-      ],
-      "theme_key": "financials"
-    },
-    {
-      "symbol": "XOM",
-      "action": "HOLD",
-      "target_weight": 0.0128,
-      "current_weight": 0.0119,
-      "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Why Aren\u2019t Gas Prices Falling Faster? Chevron CFO Responds As Trump Turns Up The Heat On Big Oil: 'Doing Everything That We Can...'\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=0.55%",
-        "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 38.4 (hold_small), contribution 39.9",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
-      ],
-      "theme_key": "oil_gas"
-    },
-    {
-      "symbol": "AMAT",
-      "action": "HOLD",
-      "target_weight": 0.0466,
-      "current_weight": 0.0485,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=9.37%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 65.3 (buy), contribution 72.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "semiconductors_ex_ai"
-    },
-    {
-      "symbol": "AMD",
-      "action": "HOLD",
-      "target_weight": 0.0198,
-      "current_weight": 0.015,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Stock Market Today: Dow Jones, S&P 500, Nasdaq Futures Gain As AI Stocks Rally On Micron\u2019s Strong Outlook\u2014Qualcomm, Wendy's In Focus (UPDATE\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=0.86%",
-        "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.5 (starter), contribution 58.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "ai_compute"
-    },
-    {
-      "symbol": "AMZN",
-      "action": "HOLD",
-      "target_weight": 0.0239,
-      "current_weight": 0.0268,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=-5.41%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.1 (buy), contribution 46.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "consumer_discretionary"
-    },
-    {
-      "symbol": "ASML",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0,
-      "notional_delta": -0.66,
-      "reason": "no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-3.01%",
-        "theme=Semiconductors (Broad)"
-      ],
-      "theme_key": "semiconductors_ex_ai"
-    },
-    {
-      "symbol": "AVGO",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0,
-      "notional_delta": -0.18,
-      "reason": "no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-1.55%",
-        "theme=AI & Compute"
-      ],
-      "theme_key": "ai_compute"
-    },
-    {
-      "symbol": "BA",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0369,
-      "notional_delta": -3732.98,
-      "reason": "exiting on policy headwind (negative) \u2014 \"'EU Extends Tariff Suspension in Boeing-Airbus Trade Dispute' - Bloomberg\" \u00b7 no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-1.18%",
-        "theme=Defense & Aerospace",
-        "news_source=benzinga",
-        "event=policy headwind",
-        "news_sentiment=-0.20"
-      ],
-      "theme_key": "defense"
-    },
-    {
-      "symbol": "BAC",
-      "action": "HOLD",
-      "target_weight": 0.0521,
-      "current_weight": 0.0569,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=0.49%",
-        "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 72.5 (strong_buy), contribution 77.0"
-      ],
-      "theme_key": "financials"
-    },
-    {
-      "symbol": "COP",
-      "action": "HOLD",
-      "target_weight": 0.0055,
-      "current_weight": 0.0062,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=-2.63%",
-        "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 35.4 (hold_small), contribution 29.0"
-      ],
-      "theme_key": "oil_gas"
-    },
-    {
-      "symbol": "CRWD",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0183,
-      "notional_delta": -1846.94,
-      "reason": "no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-0.25%",
-        "theme=Cybersecurity"
-      ],
-      "theme_key": "cybersecurity"
-    },
-    {
-      "symbol": "CVX",
-      "action": "HOLD",
-      "target_weight": 0.0065,
-      "current_weight": 0.0111,
-      "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Why Aren\u2019t Gas Prices Falling Faster? Chevron CFO Responds As Trump Turns Up The Heat On Big Oil: 'Doing Everything That We Can...'\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=0.32%",
-        "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 35.4 (hold_small), contribution 34.4",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
-      ],
-      "theme_key": "oil_gas"
-    },
-    {
-      "symbol": "F",
-      "action": "REDUCE",
-      "target_weight": 0.0,
-      "current_weight": 0.0,
-      "notional_delta": -0.01,
-      "reason": "trimming on positive news flow \u2014 \"Wells Fargo Maintains Underweight on Ford Motor, Raises Price Target to $11\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
-      "factors": [
-        "unrealized_pl=-3.94%",
-        "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "ev_clean_transport"
-    },
-    {
-      "symbol": "FSLR",
-      "action": "REDUCE",
-      "target_weight": 0.0009,
-      "current_weight": 0.0019,
-      "notional_delta": -95.77,
-      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
-      "factors": [
-        "unrealized_pl=-5.95%",
-        "theme=Clean Energy"
-      ],
-      "theme_key": "clean_energy"
-    },
-    {
-      "symbol": "FTNT",
-      "action": "HOLD",
-      "target_weight": 0.0332,
-      "current_weight": 0.0329,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Watching Fortinet; Hearing Investor Business Daily Swingtrader Buys Stock\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=1.22%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 56.4 (buy), contribution 69.9",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
-      ],
-      "theme_key": "cybersecurity"
-    },
-    {
-      "symbol": "GD",
-      "action": "REDUCE",
-      "target_weight": 0.0285,
-      "current_weight": 0.0364,
-      "notional_delta": -799.63,
-      "reason": "trimming on mixed news flow \u2014 \"A Congress Member Sold Up To $30K In General Dynamics Stock: Here's What You Need To Know\" \u00b7 overweight by 0.79% vs target \u2014 trim",
-      "factors": [
-        "unrealized_pl=-0.89%",
-        "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 52.4 (starter), contribution 43.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
-      ],
-      "theme_key": "defense"
-    },
-    {
-      "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0,
-      "current_weight": 0.0001,
-      "notional_delta": -4.46,
-      "reason": "trimming on positive news flow \u2014 \"Wells Fargo Maintains Underweight on General Motors, Raises Price Target to $60\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
-      "factors": [
-        "unrealized_pl=-4.44%",
-        "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "ev_clean_transport"
-    },
-    {
-      "symbol": "GOOGL",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0,
-      "notional_delta": -0.03,
-      "reason": "exiting on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-0.73%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "ai_compute"
-    },
-    {
-      "symbol": "GS",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0,
-      "notional_delta": -1.25,
-      "reason": "exiting on mixed news flow \u2014 \"Ross Gerber Says Slate Auto Is What Happens When 'Top Tesla And Amazon' Execs Build An EV, Predicts Buyers Will \u2018Love\u2019 Its $25,000 Pickup\" \u00b7 no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-3.01%",
-        "theme=Financials & Rates",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
-      ],
-      "theme_key": "financials"
-    },
-    {
-      "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.0424,
-      "current_weight": 0.0389,
-      "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"'Big Short' Star Steve Eisman Warns Middle Class Is 'Starting To Crack', Tax Refunds 'Went Into The Gas Tank'\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=2.77%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.1 (buy), contribution 83.0",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
-      ],
-      "theme_key": "consumer_discretionary"
-    },
-    {
-      "symbol": "JPM",
-      "action": "REDUCE",
-      "target_weight": 0.0464,
-      "current_weight": 0.0524,
-      "notional_delta": -604.47,
-      "reason": "trimming on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 overweight by 0.60% vs target \u2014 trim",
-      "factors": [
-        "unrealized_pl=0.34%",
-        "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 72.5 (strong_buy), contribution 68.6",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "financials"
-    },
-    {
-      "symbol": "LCID",
-      "action": "REDUCE",
-      "target_weight": 0.0,
-      "current_weight": 0.0001,
-      "notional_delta": -4.35,
-      "reason": "theme score 28.6 < reduce threshold 35 \u2014 halve position",
-      "factors": [
-        "unrealized_pl=0.19%",
-        "theme=EV & Clean Transport"
-      ],
-      "theme_key": "ev_clean_transport"
-    },
-    {
-      "symbol": "LLY",
-      "action": "HOLD",
-      "target_weight": 0.0421,
-      "current_weight": 0.0443,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Leerink Partners Maintains Outperform on Eli Lilly, Raises Price Target to $1232\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=-1.61%",
-        "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 66.9 (buy), contribution 68.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "biotech"
-    },
-    {
-      "symbol": "LMT",
-      "action": "REDUCE",
-      "target_weight": 0.0281,
-      "current_weight": 0.0355,
-      "notional_delta": -747.13,
-      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin's Mega Missile Deal Signals New Defense Supercycle\" \u00b7 overweight by 0.74% vs target \u2014 trim",
-      "factors": [
-        "unrealized_pl=-0.35%",
-        "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 52.4 (starter), contribution 43.0",
-        "news_source=benzinga",
-        "event=contract win",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "defense"
-    },
-    {
-      "symbol": "LRCX",
-      "action": "HOLD",
-      "target_weight": 0.0471,
-      "current_weight": 0.0467,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Stock Market: Will S&P 500 Open Up Or Down Today?\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=5.15%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 65.3 (buy), contribution 73.2",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "semiconductors_ex_ai"
-    },
-    {
-      "symbol": "MCD",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0172,
-      "notional_delta": -1738.3,
-      "reason": "no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-6.59%",
-        "theme=Consumer Discretionary"
-      ],
-      "theme_key": "consumer_discretionary"
-    },
-    {
-      "symbol": "META",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0086,
-      "notional_delta": -867.8,
-      "reason": "exiting on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-1.24%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "ai_compute"
-    },
-    {
-      "symbol": "MRNA",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0465,
-      "notional_delta": -4702.12,
-      "reason": "exiting on positive news flow \u2014 \"Moderna Outlines Research And Early Development Programs Fueling Future Growth; Highlights T\u2011Cell Engager Modality And Unveils In Vivo CAR\u2011T\" \u00b7 no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=0.80%",
-        "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "biotech"
-    },
-    {
-      "symbol": "MS",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0355,
-      "notional_delta": -3588.68,
-      "reason": "exiting on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-2.51%",
-        "theme=Financials & Rates",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "financials"
-    },
-    {
-      "symbol": "MSFT",
-      "action": "BUY",
-      "target_weight": 0.0145,
-      "current_weight": 0.0,
-      "notional_delta": 1464.87,
-      "reason": "buying on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 underweight by 1.45% vs target \u2014 add",
-      "factors": [
-        "unrealized_pl=-4.94%",
-        "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.5 (starter), contribution 42.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "ai_compute"
-    },
-    {
-      "symbol": "NEE",
-      "action": "REDUCE",
-      "target_weight": 0.0027,
-      "current_weight": 0.0053,
-      "notional_delta": -270.22,
-      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
-      "factors": [
-        "unrealized_pl=1.19%",
-        "theme=Clean Energy"
-      ],
-      "theme_key": "clean_energy"
-    },
-    {
-      "symbol": "NKE",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0,
-      "notional_delta": -0.39,
-      "reason": "exiting on negative news flow \u2014 \"'Big Short' Star Steve Eisman Warns Middle Class Is 'Starting To Crack', Tax Refunds 'Went Into The Gas Tank'\" \u00b7 no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-10.58%",
-        "theme=Consumer Discretionary",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
-      ],
-      "theme_key": "consumer_discretionary"
-    },
-    {
-      "symbol": "NVDA",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0,
-      "notional_delta": -0.06,
-      "reason": "exiting on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-8.08%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "ai_compute"
-    },
-    {
-      "symbol": "OKTA",
-      "action": "HOLD",
-      "target_weight": 0.0285,
-      "current_weight": 0.0237,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Micron To Rally More Than 57%? Here Are 10 Top Analyst Forecasts For Thursday\" \u00b7 within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=-1.37%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 56.4 (buy), contribution 60.0",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "cybersecurity"
-    },
-    {
-      "symbol": "OXY",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0,
-      "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-14.82%",
-        "theme=Oil & Gas"
-      ],
-      "theme_key": "oil_gas"
-    },
-    {
-      "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0325,
-      "current_weight": 0.0313,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=1.14%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 56.4 (buy), contribution 68.5"
-      ],
-      "theme_key": "cybersecurity"
-    },
-    {
-      "symbol": "PFE",
-      "action": "SELL",
-      "target_weight": 0.0,
-      "current_weight": 0.0,
-      "notional_delta": -0.31,
-      "reason": "exiting on FDA approval (mixed) \u2014 \"FDA Expands Pfizer's Ibrance Label For Frontline Maintenance In Advanced Breast Cancer\" \u00b7 no longer in target set \u2014 exit",
-      "factors": [
-        "unrealized_pl=-8.94%",
-        "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "event=FDA approval",
-        "news_sentiment=+0.00"
-      ],
-      "theme_key": "biotech"
-    },
-    {
-      "symbol": "REGN",
-      "action": "HOLD",
-      "target_weight": 0.0445,
-      "current_weight": 0.0443,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=0.84%",
-        "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 66.9 (buy), contribution 72.3"
-      ],
-      "theme_key": "biotech"
-    },
-    {
-      "symbol": "RIVN",
-      "action": "REDUCE",
-      "target_weight": 0.0001,
-      "current_weight": 0.0001,
-      "notional_delta": -7.32,
-      "reason": "theme score 28.6 < reduce threshold 35 \u2014 halve position",
-      "factors": [
-        "unrealized_pl=-11.19%",
-        "theme=EV & Clean Transport"
-      ],
-      "theme_key": "ev_clean_transport"
-    },
-    {
-      "symbol": "RTX",
-      "action": "REDUCE",
-      "target_weight": 0.0301,
-      "current_weight": 0.0372,
-      "notional_delta": -717.53,
-      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin's Mega Missile Deal Signals New Defense Supercycle\" \u00b7 overweight by 0.71% vs target \u2014 trim",
-      "factors": [
-        "unrealized_pl=-0.55%",
-        "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 52.4 (starter), contribution 46.0",
-        "news_source=benzinga",
-        "event=contract win",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "defense"
-    },
-    {
-      "symbol": "RUN",
-      "action": "REDUCE",
-      "target_weight": 0.0022,
-      "current_weight": 0.0044,
-      "notional_delta": -220.05,
-      "reason": "trimming on positive news flow \u2014 \"Sunrun, Tesla Join Forces On 16GW Virtual Power Plant: A New Catalyst For RUN Stock?\" \u00b7 theme score 30.4 < reduce threshold 35 \u2014 halve position",
-      "factors": [
-        "unrealized_pl=-3.23%",
-        "theme=Clean Energy",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
-      ],
-      "theme_key": "clean_energy"
-    },
-    {
-      "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0373,
-      "current_weight": 0.0379,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
-      "factors": [
-        "unrealized_pl=1.23%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.1 (buy), contribution 73.1"
-      ],
-      "theme_key": "consumer_discretionary"
-    },
     {
       "symbol": "SEDG",
       "action": "REDUCE",
@@ -2970,6 +2258,717 @@
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
+    },
+    {
+      "symbol": "AMAT",
+      "action": "HOLD",
+      "target_weight": 0.0462,
+      "current_weight": 0.0478,
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=7.48%",
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 64.8 (buy), contribution 72.3",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "semiconductors_ex_ai"
+    },
+    {
+      "symbol": "AMD",
+      "action": "BUY",
+      "target_weight": 0.0197,
+      "current_weight": 0.0146,
+      "notional_delta": 512.39,
+      "reason": "buying on positive news flow \u2014 \"Stock Market Today: Dow Jones, S&P 500, Nasdaq Futures Gain As AI Stocks Rally On Micron\u2019s Strong Outlook\u2014Qualcomm, Wendy's In Focus (UPDATE\" \u00b7 underweight by 0.51% vs target \u2014 add",
+      "factors": [
+        "unrealized_pl=-1.81%",
+        "theme=AI & Compute",
+        "theme 'AI & Compute' score 40.4 (starter), contribution 58.2",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ai_compute"
+    },
+    {
+      "symbol": "AMZN",
+      "action": "HOLD",
+      "target_weight": 0.0239,
+      "current_weight": 0.0269,
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Nancy Pelosi Has Added These 9 Stocks To Her Portfolio Since 2025, Including Three Magnificent Seven Names\" \u00b7 within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=-5.12%",
+        "theme=Consumer Discretionary",
+        "theme 'Consumer Discretionary' score 56.1 (buy), contribution 46.7",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "consumer_discretionary"
+    },
+    {
+      "symbol": "ASML",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0,
+      "notional_delta": -0.65,
+      "reason": "no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-7.03%",
+        "theme=Semiconductors (Broad)"
+      ],
+      "theme_key": "semiconductors_ex_ai"
+    },
+    {
+      "symbol": "AVGO",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0,
+      "notional_delta": -0.17,
+      "reason": "exiting on positive news flow \u2014 \"Nancy Pelosi Has Added These 9 Stocks To Her Portfolio Since 2025, Including Three Magnificent Seven Names\" \u00b7 no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-3.60%",
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ai_compute"
+    },
+    {
+      "symbol": "BA",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0369,
+      "notional_delta": -3715.7,
+      "reason": "exiting on policy headwind (negative) \u2014 \"'EU Extends Tariff Suspension in Boeing-Airbus Trade Dispute' - Bloomberg\" \u00b7 no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-1.64%",
+        "theme=Defense & Aerospace",
+        "news_source=benzinga",
+        "event=policy headwind",
+        "news_sentiment=-0.20"
+      ],
+      "theme_key": "defense"
+    },
+    {
+      "symbol": "BAC",
+      "action": "REDUCE",
+      "target_weight": 0.0521,
+      "current_weight": 0.0572,
+      "notional_delta": -511.32,
+      "reason": "overweight by 0.51% vs target \u2014 trim",
+      "factors": [
+        "unrealized_pl=0.65%",
+        "theme=Financials & Rates",
+        "theme 'Financials & Rates' score 72.5 (strong_buy), contribution 77.0"
+      ],
+      "theme_key": "financials"
+    },
+    {
+      "symbol": "COP",
+      "action": "HOLD",
+      "target_weight": 0.0058,
+      "current_weight": 0.0061,
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=-3.42%",
+        "theme=Oil & Gas",
+        "theme 'Oil & Gas' score 35.4 (hold_small), contribution 29.1"
+      ],
+      "theme_key": "oil_gas"
+    },
+    {
+      "symbol": "CRWD",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0184,
+      "notional_delta": -1853.49,
+      "reason": "no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=0.11%",
+        "theme=Cybersecurity"
+      ],
+      "theme_key": "cybersecurity"
+    },
+    {
+      "symbol": "CVX",
+      "action": "HOLD",
+      "target_weight": 0.0069,
+      "current_weight": 0.0111,
+      "notional_delta": 0.0,
+      "reason": "holding on negative news flow \u2014 \"Trump's Oil Price-Gouging Probe Is 'Socialism' He Accused Kamala Harris Of, Peter Schiff Says\" \u00b7 within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=-0.47%",
+        "theme=Oil & Gas",
+        "theme 'Oil & Gas' score 35.4 (hold_small), contribution 34.4",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
+      ],
+      "theme_key": "oil_gas"
+    },
+    {
+      "symbol": "F",
+      "action": "REDUCE",
+      "target_weight": 0.0,
+      "current_weight": 0.0,
+      "notional_delta": -0.01,
+      "reason": "trimming on positive news flow \u2014 \"Wells Fargo Maintains Underweight on Ford Motor, Raises Price Target to $11\" \u00b7 theme score 29.9 < reduce threshold 35 \u2014 halve position",
+      "factors": [
+        "unrealized_pl=-4.56%",
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ev_clean_transport"
+    },
+    {
+      "symbol": "FSLR",
+      "action": "REDUCE",
+      "target_weight": 0.0009,
+      "current_weight": 0.0019,
+      "notional_delta": -93.93,
+      "reason": "theme score 30.2 < reduce threshold 35 \u2014 halve position",
+      "factors": [
+        "unrealized_pl=-7.75%",
+        "theme=Clean Energy"
+      ],
+      "theme_key": "clean_energy"
+    },
+    {
+      "symbol": "FTNT",
+      "action": "HOLD",
+      "target_weight": 0.0329,
+      "current_weight": 0.033,
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Watching Fortinet; Hearing Investor Business Daily Swingtrader Buys Stock\" \u00b7 within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=1.12%",
+        "theme=Cybersecurity",
+        "theme 'Cybersecurity' score 56.1 (buy), contribution 69.7",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
+      ],
+      "theme_key": "cybersecurity"
+    },
+    {
+      "symbol": "GD",
+      "action": "REDUCE",
+      "target_weight": 0.0283,
+      "current_weight": 0.0365,
+      "notional_delta": -830.18,
+      "reason": "trimming on mixed news flow \u2014 \"A Congress Member Sold Up To $30K In General Dynamics Stock: Here's What You Need To Know\" \u00b7 overweight by 0.82% vs target \u2014 trim",
+      "factors": [
+        "unrealized_pl=-0.89%",
+        "theme=Defense & Aerospace",
+        "theme 'Defense & Aerospace' score 52.3 (starter), contribution 43.4",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
+      ],
+      "theme_key": "defense"
+    },
+    {
+      "symbol": "GM",
+      "action": "REDUCE",
+      "target_weight": 0.0,
+      "current_weight": 0.0001,
+      "notional_delta": -4.44,
+      "reason": "trimming on positive news flow \u2014 \"Wells Fargo Maintains Underweight on General Motors, Raises Price Target to $60\" \u00b7 theme score 29.9 < reduce threshold 35 \u2014 halve position",
+      "factors": [
+        "unrealized_pl=-4.85%",
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ev_clean_transport"
+    },
+    {
+      "symbol": "GOOGL",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0,
+      "notional_delta": -0.03,
+      "reason": "exiting on positive news flow \u2014 \"Nancy Pelosi Has Added These 9 Stocks To Her Portfolio Since 2025, Including Three Magnificent Seven Names\" \u00b7 no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-1.27%",
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ai_compute"
+    },
+    {
+      "symbol": "GS",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0,
+      "notional_delta": -1.25,
+      "reason": "no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-2.38%",
+        "theme=Financials & Rates"
+      ],
+      "theme_key": "financials"
+    },
+    {
+      "symbol": "HD",
+      "action": "HOLD",
+      "target_weight": 0.0424,
+      "current_weight": 0.0386,
+      "notional_delta": 0.0,
+      "reason": "holding on negative news flow \u2014 \"'Big Short' Star Steve Eisman Warns Middle Class Is 'Starting To Crack', Tax Refunds 'Went Into The Gas Tank'\" \u00b7 within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=1.58%",
+        "theme=Consumer Discretionary",
+        "theme 'Consumer Discretionary' score 56.1 (buy), contribution 83.0",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
+      ],
+      "theme_key": "consumer_discretionary"
+    },
+    {
+      "symbol": "JPM",
+      "action": "REDUCE",
+      "target_weight": 0.0464,
+      "current_weight": 0.0527,
+      "notional_delta": -637.16,
+      "reason": "trimming on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 overweight by 0.63% vs target \u2014 trim",
+      "factors": [
+        "unrealized_pl=0.64%",
+        "theme=Financials & Rates",
+        "theme 'Financials & Rates' score 72.5 (strong_buy), contribution 68.6",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "financials"
+    },
+    {
+      "symbol": "LCID",
+      "action": "REDUCE",
+      "target_weight": 0.0,
+      "current_weight": 0.0001,
+      "notional_delta": -4.31,
+      "reason": "theme score 29.9 < reduce threshold 35 \u2014 halve position",
+      "factors": [
+        "unrealized_pl=-0.58%",
+        "theme=EV & Clean Transport"
+      ],
+      "theme_key": "ev_clean_transport"
+    },
+    {
+      "symbol": "LLY",
+      "action": "HOLD",
+      "target_weight": 0.0399,
+      "current_weight": 0.0446,
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Leerink Partners Maintains Outperform on Eli Lilly, Raises Price Target to $1232\" \u00b7 within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=-1.36%",
+        "theme=Biotech & Pharma",
+        "theme 'Biotech & Pharma' score 66.8 (buy), contribution 68.3",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "biotech"
+    },
+    {
+      "symbol": "LMT",
+      "action": "REDUCE",
+      "target_weight": 0.0281,
+      "current_weight": 0.0356,
+      "notional_delta": -757.26,
+      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin's Mega Missile Deal Signals New Defense Supercycle\" \u00b7 overweight by 0.75% vs target \u2014 trim",
+      "factors": [
+        "unrealized_pl=-0.36%",
+        "theme=Defense & Aerospace",
+        "theme 'Defense & Aerospace' score 52.3 (starter), contribution 43.0",
+        "news_source=benzinga",
+        "event=contract win",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "defense"
+    },
+    {
+      "symbol": "LRCX",
+      "action": "HOLD",
+      "target_weight": 0.0464,
+      "current_weight": 0.0456,
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=2.17%",
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 64.8 (buy), contribution 72.6"
+      ],
+      "theme_key": "semiconductors_ex_ai"
+    },
+    {
+      "symbol": "MCD",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0173,
+      "notional_delta": -1743.74,
+      "reason": "no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-6.29%",
+        "theme=Consumer Discretionary"
+      ],
+      "theme_key": "consumer_discretionary"
+    },
+    {
+      "symbol": "META",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0086,
+      "notional_delta": -869.23,
+      "reason": "exiting on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-1.08%",
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ai_compute"
+    },
+    {
+      "symbol": "MRNA",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0462,
+      "notional_delta": -4647.95,
+      "reason": "exiting on positive news flow \u2014 \"Moderna Outlines Research And Early Development Programs Fueling Future Growth; Highlights T\u2011Cell Engager Modality And Unveils In Vivo CAR\u2011T\" \u00b7 no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-0.36%",
+        "theme=Biotech & Pharma",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "biotech"
+    },
+    {
+      "symbol": "MS",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0357,
+      "notional_delta": -3598.24,
+      "reason": "exiting on positive news flow \u2014 \"Micron Rallies 15%, Apple Sinks 6% On Memory Costs: Stock Market Today\" \u00b7 no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-2.25%",
+        "theme=Financials & Rates",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "financials"
+    },
+    {
+      "symbol": "MSFT",
+      "action": "BUY",
+      "target_weight": 0.0145,
+      "current_weight": 0.0,
+      "notional_delta": 1459.57,
+      "reason": "buying on supply shock (positive) \u2014 \"Xbox Prices Surge Again As Microsoft Expects Memory Costs To Double By Fall 2027, Joins Apple, Sony And Nintendo In Wave Of Hardware Price H\" \u00b7 underweight by 1.45% vs target \u2014 add",
+      "factors": [
+        "unrealized_pl=-4.44%",
+        "theme=AI & Compute",
+        "theme 'AI & Compute' score 40.4 (starter), contribution 42.7",
+        "news_source=benzinga",
+        "event=supply shock",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ai_compute"
+    },
+    {
+      "symbol": "NEE",
+      "action": "REDUCE",
+      "target_weight": 0.0027,
+      "current_weight": 0.0054,
+      "notional_delta": -271.02,
+      "reason": "theme score 30.2 < reduce threshold 35 \u2014 halve position",
+      "factors": [
+        "unrealized_pl=1.56%",
+        "theme=Clean Energy"
+      ],
+      "theme_key": "clean_energy"
+    },
+    {
+      "symbol": "NKE",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0,
+      "notional_delta": -0.39,
+      "reason": "exiting on negative news flow \u2014 \"'Big Short' Star Steve Eisman Warns Middle Class Is 'Starting To Crack', Tax Refunds 'Went Into The Gas Tank'\" \u00b7 no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-11.17%",
+        "theme=Consumer Discretionary",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
+      ],
+      "theme_key": "consumer_discretionary"
+    },
+    {
+      "symbol": "NVDA",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0,
+      "notional_delta": -0.06,
+      "reason": "exiting on positive news flow \u2014 \"Nancy Pelosi Has Added These 9 Stocks To Her Portfolio Since 2025, Including Three Magnificent Seven Names\" \u00b7 no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-8.86%",
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ai_compute"
+    },
+    {
+      "symbol": "OKTA",
+      "action": "HOLD",
+      "target_weight": 0.0282,
+      "current_weight": 0.0241,
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Micron To Rally More Than 57%? Here Are 10 Top Analyst Forecasts For Thursday\" \u00b7 within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=-0.15%",
+        "theme=Cybersecurity",
+        "theme 'Cybersecurity' score 56.1 (buy), contribution 59.7",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "cybersecurity"
+    },
+    {
+      "symbol": "OXY",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0,
+      "notional_delta": -0.01,
+      "reason": "no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-16.04%",
+        "theme=Oil & Gas"
+      ],
+      "theme_key": "oil_gas"
+    },
+    {
+      "symbol": "PANW",
+      "action": "HOLD",
+      "target_weight": 0.0323,
+      "current_weight": 0.0313,
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=0.99%",
+        "theme=Cybersecurity",
+        "theme 'Cybersecurity' score 56.1 (buy), contribution 68.4"
+      ],
+      "theme_key": "cybersecurity"
+    },
+    {
+      "symbol": "PFE",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0,
+      "notional_delta": -0.31,
+      "reason": "exiting on FDA approval (mixed) \u2014 \"FDA Expands Pfizer's Ibrance Label For Frontline Maintenance In Advanced Breast Cancer\" \u00b7 no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-8.63%",
+        "theme=Biotech & Pharma",
+        "news_source=benzinga",
+        "event=FDA approval",
+        "news_sentiment=+0.00"
+      ],
+      "theme_key": "biotech"
+    },
+    {
+      "symbol": "REGN",
+      "action": "HOLD",
+      "target_weight": 0.0422,
+      "current_weight": 0.0445,
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=0.84%",
+        "theme=Biotech & Pharma",
+        "theme 'Biotech & Pharma' score 66.8 (buy), contribution 72.2"
+      ],
+      "theme_key": "biotech"
+    },
+    {
+      "symbol": "RIVN",
+      "action": "REDUCE",
+      "target_weight": 0.0001,
+      "current_weight": 0.0001,
+      "notional_delta": -7.3,
+      "reason": "trimming on mixed news flow \u2014 \"Rivian R1T Is What Tesla Should Have Made Instead Of The Cybertruck, Pickup Skeptic James May Says He's 'Converted'\" \u00b7 theme score 29.9 < reduce threshold 35 \u2014 halve position",
+      "factors": [
+        "unrealized_pl=-11.43%",
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
+      ],
+      "theme_key": "ev_clean_transport"
+    },
+    {
+      "symbol": "RTX",
+      "action": "REDUCE",
+      "target_weight": 0.03,
+      "current_weight": 0.0377,
+      "notional_delta": -776.17,
+      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin's Mega Missile Deal Signals New Defense Supercycle\" \u00b7 overweight by 0.77% vs target \u2014 trim",
+      "factors": [
+        "unrealized_pl=0.45%",
+        "theme=Defense & Aerospace",
+        "theme 'Defense & Aerospace' score 52.3 (starter), contribution 46.0",
+        "news_source=benzinga",
+        "event=contract win",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "defense"
+    },
+    {
+      "symbol": "RUN",
+      "action": "REDUCE",
+      "target_weight": 0.0021,
+      "current_weight": 0.0042,
+      "notional_delta": -212.93,
+      "reason": "trimming on positive news flow \u2014 \"Sunrun, Tesla Join Forces On 16GW Virtual Power Plant: A New Catalyst For RUN Stock?\" \u00b7 theme score 30.2 < reduce threshold 35 \u2014 halve position",
+      "factors": [
+        "unrealized_pl=-18.31%",
+        "theme=Clean Energy",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "clean_energy"
+    },
+    {
+      "symbol": "SBUX",
+      "action": "HOLD",
+      "target_weight": 0.0374,
+      "current_weight": 0.0382,
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=1.47%",
+        "theme=Consumer Discretionary",
+        "theme 'Consumer Discretionary' score 56.1 (buy), contribution 73.1"
+      ],
+      "theme_key": "consumer_discretionary"
+    },
+    {
+      "symbol": "SEDG",
+      "action": "REDUCE",
+      "target_weight": 0.0004,
+      "current_weight": 0.0007,
+      "notional_delta": -36.13,
+      "reason": "theme score 30.2 < reduce threshold 35 \u2014 halve position",
+      "factors": [
+        "unrealized_pl=-12.17%",
+        "theme=Clean Energy"
+      ],
+      "theme_key": "clean_energy"
+    },
+    {
+      "symbol": "SLB",
+      "action": "SELL",
+      "target_weight": 0.0,
+      "current_weight": 0.0,
+      "notional_delta": -0.51,
+      "reason": "no longer in target set \u2014 exit",
+      "factors": [
+        "unrealized_pl=-1.05%",
+        "theme=Oil & Gas"
+      ],
+      "theme_key": "oil_gas"
+    },
+    {
+      "symbol": "SMCI",
+      "action": "HOLD",
+      "target_weight": 0.0173,
+      "current_weight": 0.0138,
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=-5.83%",
+        "theme=AI & Compute",
+        "theme 'AI & Compute' score 40.4 (starter), contribution 51.0"
+      ],
+      "theme_key": "ai_compute"
+    },
+    {
+      "symbol": "TSLA",
+      "action": "REDUCE",
+      "target_weight": 0.0,
+      "current_weight": 0.0001,
+      "notional_delta": -4.2,
+      "reason": "trimming on positive news flow \u2014 \"Michael Dell Says Texas Is 'Home' And Where Dell Has Always Belonged, Elon Musk Chimes In\" \u00b7 theme score 29.9 < reduce threshold 35 \u2014 halve position",
+      "factors": [
+        "unrealized_pl=-7.62%",
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "ev_clean_transport"
+    },
+    {
+      "symbol": "TSM",
+      "action": "HOLD",
+      "target_weight": 0.0402,
+      "current_weight": 0.0424,
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=-3.49%",
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 64.8 (buy), contribution 62.8",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
+      ],
+      "theme_key": "semiconductors_ex_ai"
+    },
+    {
+      "symbol": "VRTX",
+      "action": "HOLD",
+      "target_weight": 0.0505,
+      "current_weight": 0.0549,
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=3.60%",
+        "theme=Biotech & Pharma",
+        "theme 'Biotech & Pharma' score 66.8 (buy), contribution 86.4"
+      ],
+      "theme_key": "biotech"
+    },
+    {
+      "symbol": "WFC",
+      "action": "REDUCE",
+      "target_weight": 0.048,
+      "current_weight": 0.0535,
+      "notional_delta": -555.04,
+      "reason": "overweight by 0.55% vs target \u2014 trim",
+      "factors": [
+        "unrealized_pl=-0.31%",
+        "theme=Financials & Rates",
+        "theme 'Financials & Rates' score 72.5 (strong_buy), contribution 70.9"
+      ],
+      "theme_key": "financials"
+    },
+    {
+      "symbol": "XOM",
+      "action": "HOLD",
+      "target_weight": 0.0073,
+      "current_weight": 0.0118,
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Michael Dell Says Texas Is 'Home' And Where Dell Has Always Belonged, Elon Musk Chimes In\" \u00b7 within 50bps of target \u2014 no trade",
+      "factors": [
+        "unrealized_pl=-0.29%",
+        "theme=Oil & Gas",
+        "theme 'Oil & Gas' score 35.4 (hold_small), contribution 36.8",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
+      ],
+      "theme_key": "oil_gas"
     }
   ],
   "equity_history": [
@@ -4192,6 +4191,10 @@
     {
       "t": "2026-06-26T06:19:40+00:00",
       "v": 100517.2
+    },
+    {
+      "t": "2026-06-26T09:56:50+00:00",
+      "v": 100666.08
     }
   ]
 }
