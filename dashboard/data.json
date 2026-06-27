@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-27T16:51:47+00:00",
+  "generated_at_utc": "2026-06-27T17:59:18+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 321,
-  "last_success_utc": "2026-06-27T15:37:29+00:00",
+  "cycle_count": 322,
+  "last_success_utc": "2026-06-27T16:51:47+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -531,33 +531,49 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 67.82,
-      "raw_score": 70.91,
+      "score": 61.82,
+      "raw_score": 64.91,
       "band": "buy",
-      "weight": 0.1213,
-      "confidence": 0.7,
+      "weight": 0.1013,
+      "confidence": 0.65,
       "components": {
         "momentum": 80.5,
-        "sentiment": 70.0,
+        "sentiment": 50.0,
         "volume": 63.53,
         "policy": 50.0,
         "volatility_penalty": 3.09
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 49.91,
-      "raw_score": 59.86,
-      "band": "starter",
-      "weight": 0.0768,
-      "confidence": 0.85,
+      "key": "cybersecurity",
+      "name": "Cybersecurity",
+      "score": 61.3,
+      "raw_score": 76.46,
+      "band": "buy",
+      "weight": 0.121,
+      "confidence": 1.0,
       "components": {
-        "momentum": 38.64,
-        "sentiment": 100.0,
-        "volume": 47.01,
-        "policy": 50.0,
-        "volatility_penalty": 9.95
+        "momentum": 91.0,
+        "sentiment": 95.0,
+        "volume": 30.29,
+        "policy": 55.0,
+        "volatility_penalty": 15.16
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 57.98,
+      "raw_score": 57.98,
+      "band": "buy",
+      "weight": 0.1099,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 40.42,
+        "sentiment": 83.34,
+        "volume": 51.56,
+        "policy": 65.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -577,35 +593,19 @@
       }
     },
     {
-      "key": "cybersecurity",
-      "name": "Cybersecurity",
-      "score": 47.3,
-      "raw_score": 62.46,
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 43.91,
+      "raw_score": 53.86,
       "band": "starter",
-      "weight": 0.0613,
-      "confidence": 0.65,
+      "weight": 0.0552,
+      "confidence": 0.75,
       "components": {
-        "momentum": 91.0,
-        "sentiment": 50.0,
-        "volume": 30.29,
+        "momentum": 38.64,
+        "sentiment": 80.0,
+        "volume": 47.01,
         "policy": 50.0,
-        "volatility_penalty": 15.16
-      }
-    },
-    {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 46.98,
-      "raw_score": 46.98,
-      "band": "starter",
-      "weight": 0.0604,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 40.42,
-        "sentiment": 50.0,
-        "volume": 51.56,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
+        "volatility_penalty": 9.95
       }
     },
     {
@@ -646,8 +646,8 @@
       "score": 36.82,
       "raw_score": 36.82,
       "band": "hold_small",
-      "weight": 0.0301,
-      "confidence": 0.95,
+      "weight": 0.0286,
+      "confidence": 0.85,
       "components": {
         "momentum": 47.67,
         "sentiment": 0.0,
@@ -659,14 +659,14 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 34.92,
-      "raw_score": 52.8,
+      "score": 34.82,
+      "raw_score": 52.69,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 23.32,
-        "sentiment": 91.66,
+        "sentiment": 91.31,
         "volume": 52.35,
         "policy": 55.0,
         "volatility_penalty": 17.87
@@ -766,10 +766,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0366,
       "notional_delta": -3716.73,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"IPO Stock Of The Week: Aerospace And Defense Leader Loar Breaks Out Amid Volatile Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.61%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
@@ -803,15 +805,17 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.018,
+      "action": "BUY",
+      "target_weight": 0.0365,
       "current_weight": 0.0286,
-      "notional_delta": -1074.72,
-      "reason": "overweight by 1.06% vs target \u2014 trim",
+      "notional_delta": 805.75,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 underweight by 0.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.57%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.3 (starter), contribution 48.2"
+        "theme 'Cybersecurity' score 61.3 (buy), contribution 62.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
@@ -832,14 +836,14 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0239,
+      "target_weight": 0.0171,
       "current_weight": 0.0,
-      "notional_delta": 2429.35,
-      "reason": "underweight by 2.39% vs target \u2014 add",
+      "notional_delta": 1738.15,
+      "reason": "underweight by 1.71% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.01%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 56.1"
+        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 50.1"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -849,7 +853,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.95,
-      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.70%",
         "theme=Clean Energy",
@@ -860,45 +864,47 @@
     },
     {
       "symbol": "FTNT",
-      "action": "HOLD",
-      "target_weight": 0.0212,
+      "action": "BUY",
+      "target_weight": 0.0415,
       "current_weight": 0.0194,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 2251.11,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 underweight by 2.21% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.48%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.3 (starter), contribution 56.6"
+        "theme 'Cybersecurity' score 61.3 (buy), contribution 70.6",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
     {
       "symbol": "GD",
-      "action": "REDUCE",
-      "target_weight": 0.0189,
+      "action": "HOLD",
+      "target_weight": 0.0348,
       "current_weight": 0.0364,
-      "notional_delta": -1779.36,
-      "reason": "trimming on mixed news flow \u2014 \"Trump\u2019s Intel And Defense Push Just Paid Off \u2014 For A Democratic Congressman\" \u00b7 overweight by 1.75% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"IPO Stock Of The Week: Aerospace And Defense Leader Loar Breaks Out Amid Volatile Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.0 (starter), contribution 47.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Defense & Aerospace' score 58.0 (buy), contribution 58.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0244,
+      "target_weight": 0.0174,
       "current_weight": 0.0001,
-      "notional_delta": 2471.32,
-      "reason": "underweight by 2.43% vs target \u2014 add",
+      "notional_delta": 1759.79,
+      "reason": "underweight by 1.73% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-5.09%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 57.1"
+        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 51.1"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -933,10 +939,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0126,
+      "target_weight": 0.012,
       "current_weight": 0.0313,
-      "notional_delta": -1896.49,
-      "reason": "overweight by 1.87% vs target \u2014 trim",
+      "notional_delta": -1957.47,
+      "reason": "overweight by 1.93% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.00%",
         "theme=Consumer Discretionary",
@@ -961,42 +967,44 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0285,
+      "target_weight": 0.0207,
       "current_weight": 0.0001,
-      "notional_delta": 2886.93,
-      "reason": "underweight by 2.84% vs target \u2014 add",
+      "notional_delta": 2094.08,
+      "reason": "underweight by 2.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=15.40%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 66.8"
+        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 60.8"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0402,
+      "target_weight": 0.0335,
       "current_weight": 0.0384,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.56%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 67.8 (buy), contribution 74.5"
+        "theme 'Biotech & Pharma' score 61.8 (buy), contribution 68.5"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "LMT",
-      "action": "REDUCE",
-      "target_weight": 0.0199,
+      "action": "HOLD",
+      "target_weight": 0.0363,
       "current_weight": 0.0354,
-      "notional_delta": -1580.25,
-      "reason": "overweight by 1.55% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"IPO Stock Of The Week: Aerospace And Defense Leader Loar Breaks Out Amid Volatile Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.12%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.0 (starter), contribution 50.2"
+        "theme 'Defense & Aerospace' score 58.0 (buy), contribution 61.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
@@ -1017,10 +1025,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0055,
+      "target_weight": 0.0053,
       "current_weight": 0.0174,
-      "notional_delta": -1208.74,
-      "reason": "overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -1229.07,
+      "reason": "overweight by 1.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.00%",
         "theme=Consumer Discretionary",
@@ -1049,12 +1057,12 @@
       "target_weight": 0.0,
       "current_weight": 0.052,
       "notional_delta": -5281.55,
-      "reason": "exiting on positive news flow \u2014 \"CDC Raises Its Response Level To Congo Ebola Outbreak To Level 1 Activation, Its Highest Level; Says Risk Of Ebola Spreading In The U.S. Rem\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"What's Going On With Capricor Therapeutics Stock On Friday?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=13.23%",
         "theme=Biotech & Pharma",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
     },
@@ -1109,7 +1117,7 @@
       "target_weight": 0.0027,
       "current_weight": 0.0054,
       "notional_delta": -272.44,
-      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=2.09%",
         "theme=Clean Energy",
@@ -1124,12 +1132,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.39,
-      "reason": "exiting on mixed news flow \u2014 \"Deutsche Bank Maintains Hold on Nike, Lowers Price Target to $43\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.95%",
-        "theme=Consumer Discretionary",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1139,7 +1145,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on mixed news flow \u2014 \"Stock Market's Character May Have Begun To Change\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"The Zen of Jensen: Nvidia CEO Says \u2018I Let the World Come to Me\u2019\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -1154,10 +1160,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0154,
       "notional_delta": -1569.59,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.62%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1176,15 +1184,17 @@
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0221,
+      "action": "BUY",
+      "target_weight": 0.043,
       "current_weight": 0.0193,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 2413.66,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 underweight by 2.37% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.22%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.3 (starter), contribution 59.2"
+        "theme 'Cybersecurity' score 61.3 (buy), contribution 73.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1204,16 +1214,14 @@
     {
       "symbol": "REGN",
       "action": "HOLD",
-      "target_weight": 0.0369,
+      "target_weight": 0.0306,
       "current_weight": 0.0354,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"CDC Raises Its Response Level To Congo Ebola Outbreak To Level 1 Activation, Its Highest Level; Says Risk Of Ebola Spreading In The U.S. Rem\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.82%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 67.8 (buy), contribution 68.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 61.8 (buy), contribution 62.5"
       ],
       "theme_key": "biotech"
     },
@@ -1234,15 +1242,17 @@
     },
     {
       "symbol": "RTX",
-      "action": "REDUCE",
-      "target_weight": 0.0216,
+      "action": "HOLD",
+      "target_weight": 0.0388,
       "current_weight": 0.0375,
-      "notional_delta": -1620.67,
-      "reason": "overweight by 1.59% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"RTX Board of Directors Declares Quarterly Cash Dividend\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.98%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.0 (starter), contribution 54.5"
+        "theme 'Defense & Aerospace' score 58.0 (buy), contribution 65.5",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
@@ -1252,7 +1262,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.39%",
         "theme=Clean Energy",
@@ -1264,10 +1274,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.012,
+      "target_weight": 0.0114,
       "current_weight": 0.033,
-      "notional_delta": -2131.37,
-      "reason": "overweight by 2.10% vs target \u2014 trim",
+      "notional_delta": -2192.36,
+      "reason": "overweight by 2.16% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.81%",
         "theme=Consumer Discretionary",
@@ -1281,7 +1291,7 @@
       "target_weight": 0.0004,
       "current_weight": 0.0007,
       "notional_delta": -36.65,
-      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.91%",
         "theme=Clean Energy",
@@ -1349,14 +1359,14 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0442,
+      "target_weight": 0.0372,
       "current_weight": 0.0393,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.27%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 67.8 (buy), contribution 82.0"
+        "theme 'Biotech & Pharma' score 61.8 (buy), contribution 76.0"
       ],
       "theme_key": "biotech"
     },
@@ -1483,10 +1493,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0366,
       "notional_delta": -3716.73,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"IPO Stock Of The Week: Aerospace And Defense Leader Loar Breaks Out Amid Volatile Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.61%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1529,15 +1541,17 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.018,
+      "action": "BUY",
+      "target_weight": 0.0365,
       "current_weight": 0.0286,
-      "notional_delta": -1074.72,
-      "reason": "overweight by 1.06% vs target \u2014 trim",
+      "notional_delta": 805.75,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 underweight by 0.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.57%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.3 (starter), contribution 48.2"
+        "theme 'Cybersecurity' score 61.3 (buy), contribution 62.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1564,14 +1578,14 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0239,
+      "target_weight": 0.0171,
       "current_weight": 0.0,
-      "notional_delta": 2429.35,
-      "reason": "underweight by 2.39% vs target \u2014 add",
+      "notional_delta": 1738.15,
+      "reason": "underweight by 1.71% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.01%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 56.1"
+        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 50.1"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1584,7 +1598,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.95,
-      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.70%",
         "theme=Clean Energy",
@@ -1598,15 +1612,17 @@
     },
     {
       "symbol": "FTNT",
-      "action": "HOLD",
-      "target_weight": 0.0212,
+      "action": "BUY",
+      "target_weight": 0.0415,
       "current_weight": 0.0194,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 2251.11,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 underweight by 2.21% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.48%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.3 (starter), contribution 56.6"
+        "theme 'Cybersecurity' score 61.3 (buy), contribution 70.6",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1615,17 +1631,17 @@
     },
     {
       "symbol": "GD",
-      "action": "REDUCE",
-      "target_weight": 0.0189,
+      "action": "HOLD",
+      "target_weight": 0.0348,
       "current_weight": 0.0364,
-      "notional_delta": -1779.36,
-      "reason": "trimming on mixed news flow \u2014 \"Trump\u2019s Intel And Defense Push Just Paid Off \u2014 For A Democratic Congressman\" \u00b7 overweight by 1.75% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"IPO Stock Of The Week: Aerospace And Defense Leader Loar Breaks Out Amid Volatile Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.0 (starter), contribution 47.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Defense & Aerospace' score 58.0 (buy), contribution 58.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1635,14 +1651,14 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0244,
+      "target_weight": 0.0174,
       "current_weight": 0.0001,
-      "notional_delta": 2471.32,
-      "reason": "underweight by 2.43% vs target \u2014 add",
+      "notional_delta": 1759.79,
+      "reason": "underweight by 1.73% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-5.09%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 57.1"
+        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 51.1"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1686,10 +1702,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0126,
+      "target_weight": 0.012,
       "current_weight": 0.0313,
-      "notional_delta": -1896.49,
-      "reason": "overweight by 1.87% vs target \u2014 trim",
+      "notional_delta": -1957.47,
+      "reason": "overweight by 1.93% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.00%",
         "theme=Consumer Discretionary",
@@ -1720,14 +1736,14 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0285,
+      "target_weight": 0.0207,
       "current_weight": 0.0001,
-      "notional_delta": 2886.93,
-      "reason": "underweight by 2.84% vs target \u2014 add",
+      "notional_delta": 2094.08,
+      "reason": "underweight by 2.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=15.40%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 66.8"
+        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 60.8"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1737,14 +1753,14 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0402,
+      "target_weight": 0.0335,
       "current_weight": 0.0384,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.56%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 67.8 (buy), contribution 74.5"
+        "theme 'Biotech & Pharma' score 61.8 (buy), contribution 68.5"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1753,15 +1769,17 @@
     },
     {
       "symbol": "LMT",
-      "action": "REDUCE",
-      "target_weight": 0.0199,
+      "action": "HOLD",
+      "target_weight": 0.0363,
       "current_weight": 0.0354,
-      "notional_delta": -1580.25,
-      "reason": "overweight by 1.55% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"IPO Stock Of The Week: Aerospace And Defense Leader Loar Breaks Out Amid Volatile Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.12%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.0 (starter), contribution 50.2"
+        "theme 'Defense & Aerospace' score 58.0 (buy), contribution 61.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1788,10 +1806,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0055,
+      "target_weight": 0.0053,
       "current_weight": 0.0174,
-      "notional_delta": -1208.74,
-      "reason": "overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -1229.07,
+      "reason": "overweight by 1.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.00%",
         "theme=Consumer Discretionary",
@@ -1826,12 +1844,12 @@
       "target_weight": 0.0,
       "current_weight": 0.052,
       "notional_delta": -5281.55,
-      "reason": "exiting on positive news flow \u2014 \"CDC Raises Its Response Level To Congo Ebola Outbreak To Level 1 Activation, Its Highest Level; Says Risk Of Ebola Spreading In The U.S. Rem\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"What's Going On With Capricor Therapeutics Stock On Friday?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=13.23%",
         "theme=Biotech & Pharma",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1898,7 +1916,7 @@
       "target_weight": 0.0027,
       "current_weight": 0.0054,
       "notional_delta": -272.44,
-      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=2.09%",
         "theme=Clean Energy",
@@ -1916,12 +1934,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.39,
-      "reason": "exiting on mixed news flow \u2014 \"Deutsche Bank Maintains Hold on Nike, Lowers Price Target to $43\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.95%",
-        "theme=Consumer Discretionary",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1934,7 +1950,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on mixed news flow \u2014 \"Stock Market's Character May Have Begun To Change\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"The Zen of Jensen: Nvidia CEO Says \u2018I Let the World Come to Me\u2019\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -1952,10 +1968,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0154,
       "notional_delta": -1569.59,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.62%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1980,15 +1998,17 @@
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0221,
+      "action": "BUY",
+      "target_weight": 0.043,
       "current_weight": 0.0193,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 2413.66,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 underweight by 2.37% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.22%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.3 (starter), contribution 59.2"
+        "theme 'Cybersecurity' score 61.3 (buy), contribution 73.2",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2014,16 +2034,14 @@
     {
       "symbol": "REGN",
       "action": "HOLD",
-      "target_weight": 0.0369,
+      "target_weight": 0.0306,
       "current_weight": 0.0354,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"CDC Raises Its Response Level To Congo Ebola Outbreak To Level 1 Activation, Its Highest Level; Says Risk Of Ebola Spreading In The U.S. Rem\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.82%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 67.8 (buy), contribution 68.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 61.8 (buy), contribution 62.5"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2050,15 +2068,17 @@
     },
     {
       "symbol": "RTX",
-      "action": "REDUCE",
-      "target_weight": 0.0216,
+      "action": "HOLD",
+      "target_weight": 0.0388,
       "current_weight": 0.0375,
-      "notional_delta": -1620.67,
-      "reason": "overweight by 1.59% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"RTX Board of Directors Declares Quarterly Cash Dividend\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.98%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 47.0 (starter), contribution 54.5"
+        "theme 'Defense & Aerospace' score 58.0 (buy), contribution 65.5",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2071,7 +2091,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.39%",
         "theme=Clean Energy",
@@ -2086,10 +2106,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.012,
+      "target_weight": 0.0114,
       "current_weight": 0.033,
-      "notional_delta": -2131.37,
-      "reason": "overweight by 2.10% vs target \u2014 trim",
+      "notional_delta": -2192.36,
+      "reason": "overweight by 2.16% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.81%",
         "theme=Consumer Discretionary",
@@ -2106,7 +2126,7 @@
       "target_weight": 0.0004,
       "current_weight": 0.0007,
       "notional_delta": -36.65,
-      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Solar Beats Coal for the First Time: 3 Dividend Stocks to Buy Now\" \u00b7 theme score 34.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.91%",
         "theme=Clean Energy",
@@ -2189,14 +2209,14 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0442,
+      "target_weight": 0.0372,
       "current_weight": 0.0393,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.27%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 67.8 (buy), contribution 82.0"
+        "theme 'Biotech & Pharma' score 61.8 (buy), contribution 76.0"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -3524,6 +3544,10 @@
     {
       "t": "2026-06-27T16:51:39+00:00",
       "v": 101646.92
+    },
+    {
+      "t": "2026-06-27T17:59:15+00:00",
+      "v": 101646.92
     }
   ],
   "breaking_news": [
@@ -3532,7 +3556,7 @@
       "summary": "During his chairmanship, Greenspan was celebrated as possibly the best central banker in history. But later, his reputation was tarnished by the worst financial crisis since the Great Depression.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/656930918/alan-greenspan-the-legendary-former-federal-reserve-chair-dies",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3541,7 +3565,7 @@
       "summary": "One of the most intellectually important relationships in the life of the late Fed chair Alan Greenspan was with his close friend, the formidable novelist and libertarian thinker Ayn Rand.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/nx-s1-5866558/alan-greenspan-dead-ayn-rand",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3550,7 +3574,7 @@
       "summary": "Denver renters are celebrating falling housing costs. But sometimes cheaper housing is a sign of economic decline. How can you tell the difference?",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/06/23/g-s1-129339/when-falling-housing-prices-are-good-news-and-when-theyre-not",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3559,7 +3583,7 @@
       "summary": "Investors are selling off AI-related stocks as doubts are starting to surface over whether the massive spending on AI is worth the investment and whether it's \"one big bubble.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867633/ai-selloff-tech-stocks-bubble-nasdaq",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3568,7 +3592,7 @@
       "summary": "President Trump canceled a signing ceremony for the bill Wednesday, saying Congress must first pass a strict voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867575/congress-passes-housing-affordability-bill",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3577,7 +3601,7 @@
       "summary": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/24/nx-s1-5869486/meta-prediction-market-app-ai",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3586,7 +3610,7 @@
       "summary": "The ordeal has left fans forced to either miss out on a once-in-a-lifetime opportunity or scramble to find new tickets, often costing more and for worse seats.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/26/nx-s1-5871397/world-cup-tickets-stubhub-resale-controversy",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3595,7 +3619,7 @@
       "summary": "Don't let your leftovers go to waste. Cookbook authors share clever storage techniques \u2014 like an \"Eat Me First\" box in your fridge \u2014 and cooking tricks to help you make the most of your food scraps.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/27/nx-s1-5786564/4-ways-get-creative-with-your-leftovers-save-money-on-food",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3604,7 +3628,7 @@
       "summary": "The House panel then issued subpoenas demanding the private equity tycoon, who co-founded Apollo Global Management, testify on camera and under oath.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cn948lwyl3jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3613,7 +3637,7 @@
       "summary": "The West African country's junta accused the former colonial power of undermining its national interests.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c7vymlgl5vgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3622,7 +3646,7 @@
       "summary": "Critics say the new reading requirements infringe on religious freedoms and blur the separation of church and state.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckg8m2xkg84o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3631,7 +3655,7 @@
       "summary": "Germany's highest ever temperature of 41.3C is recorded provisionally in Saarbr\u00fccken, over the border from France.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2knzzwprgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3640,7 +3664,7 @@
       "summary": "Italy's PM was not long ago being called the \"Trump whisperer\", but their relationship has gone from public attacks to personal insults.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cze962pgk27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3649,7 +3673,7 @@
       "summary": "Iran accuses the US of violating their deal and says it struck targets linked to American forces in response.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckg590wqxwpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3658,7 +3682,7 @@
       "summary": "Rescue teams are working ceaselessly to reach those trapped under rubble. But as hope fades, anger is growing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdjk8zwe7z3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3667,7 +3691,7 @@
       "summary": "Hundreds are still feared trapped under the rubble, as families desperate for news.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c39y79g7gzko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:47+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3676,7 +3700,7 @@
       "summary": "Owen Flowers and Thalha Jubair were convicted for their roles in the attack, which led to large costs for Transport for London.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cx2kx8jr244o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:42+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3685,7 +3709,7 @@
       "summary": "The prime minister's resignation has fired the starting gun on the race to be in charge of the UK's finances.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c36yj4pn7jdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:42+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3694,7 +3718,7 @@
       "summary": "When the conflict began on 28 February, fuel costs jumped as the war disrupted the production and transportation of energy across the Middle East.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:42+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3703,7 +3727,7 @@
       "summary": "Trading on South Korea's Kospi index was halted for the third time this week to prevent panic selling.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce8jz40k00ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T16:51:42+00:00",
+      "published_utc": "2026-06-27T17:59:18+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     }
