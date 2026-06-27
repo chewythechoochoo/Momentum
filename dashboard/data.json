@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-27T19:42:31+00:00",
+  "generated_at_utc": "2026-06-27T20:45:42+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 323,
-  "last_success_utc": "2026-06-27T17:59:18+00:00",
+  "cycle_count": 324,
+  "last_success_utc": "2026-06-27T19:42:31+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -531,14 +531,14 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 71.82,
-      "raw_score": 74.91,
+      "score": 70.82,
+      "raw_score": 73.91,
       "band": "strong_buy",
-      "weight": 0.153,
+      "weight": 0.1514,
       "confidence": 1.0,
       "components": {
         "momentum": 80.5,
-        "sentiment": 83.34,
+        "sentiment": 80.0,
         "volume": 63.53,
         "policy": 50.0,
         "volatility_penalty": 3.09
@@ -598,8 +598,8 @@
       "score": 51.82,
       "raw_score": 51.82,
       "band": "starter",
-      "weight": 0.0849,
-      "confidence": 0.9,
+      "weight": 0.0827,
+      "confidence": 0.85,
       "components": {
         "momentum": 47.67,
         "sentiment": 50.0,
@@ -643,14 +643,14 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 40.73,
-      "raw_score": 56.23,
-      "band": "starter",
-      "weight": 0.0472,
-      "confidence": 0.8,
+      "score": 34.73,
+      "raw_score": 50.23,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.75,
       "components": {
         "momentum": 45.82,
-        "sentiment": 70.0,
+        "sentiment": 50.0,
         "volume": 59.5,
         "policy": 50.0,
         "volatility_penalty": 15.5
@@ -675,14 +675,14 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 32.63,
-      "raw_score": 44.22,
+      "score": 25.13,
+      "raw_score": 36.72,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 1.0,
+      "confidence": 0.9,
       "components": {
         "momentum": 15.47,
-        "sentiment": 75.0,
+        "sentiment": 50.0,
         "volume": 52.65,
         "policy": 50.0,
         "volatility_penalty": 11.59
@@ -693,14 +693,13 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0209,
+      "target_weight": 0.015,
       "current_weight": 0.03,
-      "notional_delta": -929.32,
-      "reason": "overweight by 0.91% vs target \u2014 trim",
+      "notional_delta": -1526.87,
+      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.23%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 40.7 (starter), contribution 50.5"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -710,7 +709,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -93.26,
-      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.89%",
         "theme=AI & Compute"
@@ -734,11 +733,11 @@
     },
     {
       "symbol": "ASML",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.65,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.33,
+      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-7.12%",
         "theme=Semiconductors (Broad)"
@@ -751,7 +750,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute"
@@ -918,7 +917,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
@@ -945,7 +944,7 @@
     {
       "symbol": "HD",
       "action": "HOLD",
-      "target_weight": 0.0337,
+      "target_weight": 0.0328,
       "current_weight": 0.0313,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -989,14 +988,14 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0507,
+      "target_weight": 0.0501,
       "current_weight": 0.0384,
-      "notional_delta": 1248.64,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly (LLY) and BioArctic AB Enter into Research and Collaboration Agreement\" \u00b7 underweight by 1.23% vs target \u2014 add",
+      "notional_delta": 1187.66,
+      "reason": "buying on positive news flow \u2014 \"Opinion: Pfizer Is a Fantastic Dividend Stock for Income Investors to Buy Right Now\" \u00b7 underweight by 1.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.56%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 71.8 (strong_buy), contribution 78.5",
+        "theme 'Biotech & Pharma' score 70.8 (strong_buy), contribution 77.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1021,21 +1020,20 @@
     {
       "symbol": "LRCX",
       "action": "REDUCE",
-      "target_weight": 0.0136,
+      "target_weight": 0.0106,
       "current_weight": 0.0212,
-      "notional_delta": -774.71,
-      "reason": "overweight by 0.76% vs target \u2014 trim",
+      "notional_delta": -1078.55,
+      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.83%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 40.7 (starter), contribution 32.8"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0189,
+      "target_weight": 0.0184,
       "current_weight": 0.0174,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1052,7 +1050,7 @@
       "target_weight": 0.0005,
       "current_weight": 0.0011,
       "notional_delta": -54.83,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1067,7 +1065,7 @@
       "target_weight": 0.0,
       "current_weight": 0.052,
       "notional_delta": -5281.55,
-      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Opinion: Pfizer Is a Fantastic Dividend Stock for Income Investors to Buy Right Now\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=13.23%",
         "theme=Biotech & Pharma",
@@ -1097,7 +1095,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
         "theme=AI & Compute",
@@ -1108,11 +1106,11 @@
     },
     {
       "symbol": "MU",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0107,
       "current_weight": 0.0214,
-      "notional_delta": -2175.54,
-      "reason": "exiting on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1087.77,
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 34.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Semiconductors (Broad)",
@@ -1155,7 +1153,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -1216,26 +1214,27 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.32,
-      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on legal risk (negative) \u2014 \"Pfizer (PFE) Dismissed From Generic Drug Price Fixing Lawsuit\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.79%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0468,
+      "target_weight": 0.0463,
       "current_weight": 0.0354,
-      "notional_delta": 1162.28,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 underweight by 1.14% vs target \u2014 add",
+      "notional_delta": 1111.46,
+      "reason": "buying on positive news flow \u2014 \"Opinion: Pfizer Is a Fantastic Dividend Stock for Income Investors to Buy Right Now\" \u00b7 underweight by 1.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.82%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 71.8 (strong_buy), contribution 72.5",
+        "theme 'Biotech & Pharma' score 70.8 (strong_buy), contribution 71.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1288,7 +1287,7 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0323,
+      "target_weight": 0.0315,
       "current_weight": 0.033,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1335,7 +1334,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0017,
       "notional_delta": -86.23,
-      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.74%",
         "theme=AI & Compute"
@@ -1360,28 +1359,27 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0127,
+      "target_weight": 0.0096,
       "current_weight": 0.0192,
-      "notional_delta": -656.36,
-      "reason": "overweight by 0.65% vs target \u2014 trim",
+      "notional_delta": -973.64,
+      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.01%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 40.7 (starter), contribution 30.7"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0555,
+      "target_weight": 0.055,
       "current_weight": 0.0393,
-      "notional_delta": 1649.31,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 underweight by 1.62% vs target \u2014 add",
+      "notional_delta": 1598.48,
+      "reason": "buying on positive news flow \u2014 \"Opinion: Pfizer Is a Fantastic Dividend Stock for Income Investors to Buy Right Now\" \u00b7 underweight by 1.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.27%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 71.8 (strong_buy), contribution 86.0",
+        "theme 'Biotech & Pharma' score 70.8 (strong_buy), contribution 85.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1424,14 +1422,13 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0209,
+      "target_weight": 0.015,
       "current_weight": 0.03,
-      "notional_delta": -929.32,
-      "reason": "overweight by 0.91% vs target \u2014 trim",
+      "notional_delta": -1526.87,
+      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.23%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 40.7 (starter), contribution 50.5"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1444,7 +1441,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -93.26,
-      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.89%",
         "theme=AI & Compute"
@@ -1474,11 +1471,11 @@
     },
     {
       "symbol": "ASML",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.65,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.33,
+      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-7.12%",
         "theme=Semiconductors (Broad)"
@@ -1494,7 +1491,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute"
@@ -1694,7 +1691,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
@@ -1727,7 +1724,7 @@
     {
       "symbol": "HD",
       "action": "HOLD",
-      "target_weight": 0.0337,
+      "target_weight": 0.0328,
       "current_weight": 0.0313,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1780,14 +1777,14 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0507,
+      "target_weight": 0.0501,
       "current_weight": 0.0384,
-      "notional_delta": 1248.64,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly (LLY) and BioArctic AB Enter into Research and Collaboration Agreement\" \u00b7 underweight by 1.23% vs target \u2014 add",
+      "notional_delta": 1187.66,
+      "reason": "buying on positive news flow \u2014 \"Opinion: Pfizer Is a Fantastic Dividend Stock for Income Investors to Buy Right Now\" \u00b7 underweight by 1.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.56%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 71.8 (strong_buy), contribution 78.5",
+        "theme 'Biotech & Pharma' score 70.8 (strong_buy), contribution 77.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1818,14 +1815,13 @@
     {
       "symbol": "LRCX",
       "action": "REDUCE",
-      "target_weight": 0.0136,
+      "target_weight": 0.0106,
       "current_weight": 0.0212,
-      "notional_delta": -774.71,
-      "reason": "overweight by 0.76% vs target \u2014 trim",
+      "notional_delta": -1078.55,
+      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.83%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 40.7 (starter), contribution 32.8"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1835,7 +1831,7 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0189,
+      "target_weight": 0.0184,
       "current_weight": 0.0174,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1855,7 +1851,7 @@
       "target_weight": 0.0005,
       "current_weight": 0.0011,
       "notional_delta": -54.83,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1873,7 +1869,7 @@
       "target_weight": 0.0,
       "current_weight": 0.052,
       "notional_delta": -5281.55,
-      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Opinion: Pfizer Is a Fantastic Dividend Stock for Income Investors to Buy Right Now\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=13.23%",
         "theme=Biotech & Pharma",
@@ -1909,7 +1905,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
         "theme=AI & Compute",
@@ -1923,11 +1919,11 @@
     },
     {
       "symbol": "MU",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0107,
       "current_weight": 0.0214,
-      "notional_delta": -2175.54,
-      "reason": "exiting on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1087.77,
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 34.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Semiconductors (Broad)",
@@ -1979,7 +1975,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -2052,12 +2048,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.32,
-      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on legal risk (negative) \u2014 \"Pfizer (PFE) Dismissed From Generic Drug Price Fixing Lawsuit\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.79%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2067,14 +2064,14 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.0468,
+      "target_weight": 0.0463,
       "current_weight": 0.0354,
-      "notional_delta": 1162.28,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 underweight by 1.14% vs target \u2014 add",
+      "notional_delta": 1111.46,
+      "reason": "buying on positive news flow \u2014 \"Opinion: Pfizer Is a Fantastic Dividend Stock for Income Investors to Buy Right Now\" \u00b7 underweight by 1.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.82%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 71.8 (strong_buy), contribution 72.5",
+        "theme 'Biotech & Pharma' score 70.8 (strong_buy), contribution 71.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2139,7 +2136,7 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0323,
+      "target_weight": 0.0315,
       "current_weight": 0.033,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -2195,7 +2192,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0017,
       "notional_delta": -86.23,
-      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 25.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.74%",
         "theme=AI & Compute"
@@ -2226,14 +2223,13 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0127,
+      "target_weight": 0.0096,
       "current_weight": 0.0192,
-      "notional_delta": -656.36,
-      "reason": "overweight by 0.65% vs target \u2014 trim",
+      "notional_delta": -973.64,
+      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.01%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 40.7 (starter), contribution 30.7"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2243,14 +2239,14 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0555,
+      "target_weight": 0.055,
       "current_weight": 0.0393,
-      "notional_delta": 1649.31,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point. Eli Lilly Soars, Tesla, Jobs On Tap.\" \u00b7 underweight by 1.62% vs target \u2014 add",
+      "notional_delta": 1598.48,
+      "reason": "buying on positive news flow \u2014 \"Opinion: Pfizer Is a Fantastic Dividend Stock for Income Investors to Buy Right Now\" \u00b7 underweight by 1.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.27%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 71.8 (strong_buy), contribution 86.0",
+        "theme 'Biotech & Pharma' score 70.8 (strong_buy), contribution 85.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -3590,6 +3586,10 @@
     {
       "t": "2026-06-27T19:42:25+00:00",
       "v": 101646.92
+    },
+    {
+      "t": "2026-06-27T20:45:36+00:00",
+      "v": 101646.92
     }
   ],
   "breaking_news": [
@@ -3598,7 +3598,7 @@
       "summary": "During his chairmanship, Greenspan was celebrated as possibly the best central banker in history. But later, his reputation was tarnished by the worst financial crisis since the Great Depression.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/656930918/alan-greenspan-the-legendary-former-federal-reserve-chair-dies",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3607,7 +3607,7 @@
       "summary": "One of the most intellectually important relationships in the life of the late Fed chair Alan Greenspan was with his close friend, the formidable novelist and libertarian thinker Ayn Rand.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/nx-s1-5866558/alan-greenspan-dead-ayn-rand",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3616,7 +3616,7 @@
       "summary": "Denver renters are celebrating falling housing costs. But sometimes cheaper housing is a sign of economic decline. How can you tell the difference?",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/06/23/g-s1-129339/when-falling-housing-prices-are-good-news-and-when-theyre-not",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3625,7 +3625,7 @@
       "summary": "Investors are selling off AI-related stocks as doubts are starting to surface over whether the massive spending on AI is worth the investment and whether it's \"one big bubble.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867633/ai-selloff-tech-stocks-bubble-nasdaq",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3634,7 +3634,7 @@
       "summary": "President Trump canceled a signing ceremony for the bill Wednesday, saying Congress must first pass a strict voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867575/congress-passes-housing-affordability-bill",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3643,7 +3643,7 @@
       "summary": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/24/nx-s1-5869486/meta-prediction-market-app-ai",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3652,7 +3652,7 @@
       "summary": "The ordeal has left fans forced to either miss out on a once-in-a-lifetime opportunity or scramble to find new tickets, often costing more and for worse seats.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/26/nx-s1-5871397/world-cup-tickets-stubhub-resale-controversy",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3661,17 +3661,8 @@
       "summary": "Don't let your leftovers go to waste. Cookbook authors share clever storage techniques \u2014 like an \"Eat Me First\" box in your fridge \u2014 and cooking tricks to help you make the most of your food scraps.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/27/nx-s1-5786564/4-ways-get-creative-with-your-leftovers-save-money-on-food",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Billionaire Leon Black walks out of Epstein investigation hearing",
-      "summary": "The House panel then issued subpoenas demanding the private equity tycoon, who co-founded Apollo Global Management, testify on camera and under oath.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cn948lwyl3jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
-      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -3679,7 +3670,7 @@
       "summary": "The West African country's junta accused the former colonial power of undermining its national interests.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c7vymlgl5vgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3688,16 +3679,7 @@
       "summary": "Critics say the new reading requirements infringe on religious freedoms and blur the separation of church and state.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckg8m2xkg84o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Europe's deadly heatwave breaks German record and halts public events",
-      "summary": "Germany's highest ever temperature of 41.3C is recorded provisionally in Saarbr\u00fccken, over the border from France.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cx2knzzwprgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3706,7 +3688,25 @@
       "summary": "Italy's PM was not long ago being called the \"Trump whisperer\", but their relationship has gone from public attacks to personal insults.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cze962pgk27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Trump's face is added to select US passports for America's 250th birthday",
+      "summary": "The commemorative special edition passports will be available on 6 July, and can only be applied for in person",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/ce3ewkdgw9ro?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-27T20:45:42+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Heatwave breaks more records in northern and central Europe",
+      "summary": "Germany, Denmark and the Czech republic are among the countries recording new all-time high temperatures.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cx2vdydz31no?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3715,16 +3715,16 @@
       "summary": "Iran accuses the US of violating their deal and says it struck targets linked to American forces in response.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckg590wqxwpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "In Caracas, this feels like the hardest moment in Venezuela's modern history",
-      "summary": "Rescue teams are working ceaselessly to reach those trapped under rubble. But as hope fades, anger is growing.",
+      "headline": "'Every person saved is a miracle': Families call to trapped loved ones in region devastated by Venezuela quakes",
+      "summary": "Families keep vigil at buildings where they fear their loved ones are trapped, but face an impossible task to move heavy debris.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cdjk8zwe7z3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cp8l451420zo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3733,7 +3733,7 @@
       "summary": "Hundreds are still feared trapped under the rubble, as families desperate for news.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c39y79g7gzko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3742,7 +3742,7 @@
       "summary": "Owen Flowers and Thalha Jubair were convicted for their roles in the attack, which led to large costs for Transport for London.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cx2kx8jr244o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3751,7 +3751,7 @@
       "summary": "The prime minister's resignation has fired the starting gun on the race to be in charge of the UK's finances.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c36yj4pn7jdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3760,7 +3760,7 @@
       "summary": "When the conflict began on 28 February, fuel costs jumped as the war disrupted the production and transportation of energy across the Middle East.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3769,7 +3769,7 @@
       "summary": "Trading on South Korea's Kospi index was halted for the third time this week to prevent panic selling.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce8jz40k00ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T19:42:31+00:00",
+      "published_utc": "2026-06-27T20:45:42+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     }
