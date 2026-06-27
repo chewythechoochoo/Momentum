@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-27T12:00:14+00:00",
+  "generated_at_utc": "2026-06-27T14:04:16+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 318,
-  "last_success_utc": "2026-06-27T10:31:25+00:00",
+  "cycle_count": 319,
+  "last_success_utc": "2026-06-27T12:00:14+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -534,8 +534,8 @@
       "score": 64.82,
       "raw_score": 67.91,
       "band": "buy",
-      "weight": 0.1294,
-      "confidence": 0.95,
+      "weight": 0.1261,
+      "confidence": 0.9,
       "components": {
         "momentum": 80.5,
         "sentiment": 60.0,
@@ -547,14 +547,14 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 64.72,
-      "raw_score": 64.72,
+      "score": 61.72,
+      "raw_score": 61.72,
       "band": "buy",
-      "weight": 0.1225,
-      "confidence": 0.85,
+      "weight": 0.1102,
+      "confidence": 0.8,
       "components": {
         "momentum": 50.12,
-        "sentiment": 100.0,
+        "sentiment": 90.0,
         "volume": 48.39,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -563,49 +563,33 @@
     {
       "key": "defense",
       "name": "Defense & Aerospace",
-      "score": 61.98,
-      "raw_score": 61.98,
+      "score": 55.98,
+      "raw_score": 55.98,
       "band": "buy",
-      "weight": 0.1171,
-      "confidence": 0.9,
+      "weight": 0.0904,
+      "confidence": 0.75,
       "components": {
         "momentum": 40.42,
-        "sentiment": 100.0,
+        "sentiment": 80.0,
         "volume": 51.56,
         "policy": 55.0,
         "volatility_penalty": 0.0
       }
     },
     {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 49.73,
-      "raw_score": 65.23,
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 49.91,
+      "raw_score": 59.86,
       "band": "starter",
-      "weight": 0.0824,
-      "confidence": 1.0,
+      "weight": 0.0789,
+      "confidence": 0.9,
       "components": {
-        "momentum": 45.82,
+        "momentum": 38.64,
         "sentiment": 100.0,
-        "volume": 59.5,
+        "volume": 47.01,
         "policy": 50.0,
-        "volatility_penalty": 15.5
-      }
-    },
-    {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 48.07,
-      "raw_score": 48.07,
-      "band": "starter",
-      "weight": 0.0769,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 47.67,
-        "sentiment": 37.5,
-        "volume": 63.73,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
+        "volatility_penalty": 9.95
       }
     },
     {
@@ -625,6 +609,22 @@
       }
     },
     {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 46.73,
+      "raw_score": 62.23,
+      "band": "starter",
+      "weight": 0.0724,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 45.82,
+        "sentiment": 90.0,
+        "volume": 59.5,
+        "policy": 50.0,
+        "volatility_penalty": 15.5
+      }
+    },
+    {
       "key": "oil_gas",
       "name": "Oil & Gas",
       "score": 42.01,
@@ -641,51 +641,51 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 40.13,
-      "raw_score": 51.72,
-      "band": "starter",
-      "weight": 0.0504,
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 36.82,
+      "raw_score": 36.82,
+      "band": "hold_small",
+      "weight": 0.0309,
       "confidence": 1.0,
       "components": {
-        "momentum": 15.47,
-        "sentiment": 100.0,
-        "volume": 52.65,
+        "momentum": 47.67,
+        "sentiment": 0.0,
+        "volume": 63.73,
         "policy": 50.0,
-        "volatility_penalty": 11.59
-      }
-    },
-    {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 34.91,
-      "raw_score": 44.86,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 38.64,
-        "sentiment": 50.0,
-        "volume": 47.01,
-        "policy": 50.0,
-        "volatility_penalty": 9.95
+        "volatility_penalty": 0.0
       }
     },
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 21.92,
-      "raw_score": 39.8,
+      "score": 33.67,
+      "raw_score": 51.55,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.65,
+      "confidence": 1.0,
       "components": {
         "momentum": 23.32,
-        "sentiment": 50.0,
+        "sentiment": 87.5,
         "volume": 52.35,
-        "policy": 50.0,
+        "policy": 55.0,
         "volatility_penalty": 17.87
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 32.63,
+      "raw_score": 44.22,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 15.47,
+        "sentiment": 75.0,
+        "volume": 52.65,
+        "policy": 50.0,
+        "volatility_penalty": 11.59
       }
     }
   ],
@@ -693,14 +693,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.0348,
+      "target_weight": 0.031,
       "current_weight": 0.03,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Wells Fargo Maintains Overweight on Applied Materials, Raises Price Target to $740\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.23%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 59.5",
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 56.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -708,16 +708,14 @@
     },
     {
       "symbol": "AMD",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0009,
       "current_weight": 0.0018,
-      "notional_delta": -186.53,
-      "reason": "exiting on mixed news flow \u2014 \"What's Going On With AMD Stock Friday?\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -93.26,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.89%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
@@ -751,11 +749,11 @@
     },
     {
       "symbol": "AVGO",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.17,
-      "reason": "exiting on positive news flow \u2014 \"What Is Going On With Broadcom Stock On Friday?\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.09,
+      "reason": "trimming on positive news flow \u2014 \"What Is Going On With Broadcom Stock On Friday?\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute",
@@ -770,26 +768,24 @@
       "target_weight": 0.0,
       "current_weight": 0.0366,
       "notional_delta": -3716.73,
-      "reason": "exiting on positive news flow \u2014 \"'Boeing Wins Jet Deal From China Southern Valued at $3.62 Billion' - Bloomberg\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.61%",
-        "theme=Defense & Aerospace",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0426,
+      "target_weight": 0.0384,
       "current_weight": 0.0409,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Truist Securities Maintains Buy on Bank of America, Raises Price Target to $64\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.7 (buy), contribution 75.9",
+        "theme 'Financials & Rates' score 61.7 (buy), contribution 72.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -839,27 +835,30 @@
     },
     {
       "symbol": "F",
-      "action": "REDUCE",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0246,
       "current_weight": 0.0,
-      "notional_delta": -0.01,
-      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2500.5,
+      "reason": "underweight by 2.46% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.01%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 56.1"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "FSLR",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0009,
       "current_weight": 0.0018,
-      "notional_delta": -183.91,
-      "reason": "theme score 21.9 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -91.95,
+      "reason": "trimming on positive news flow \u2014 \"Does Constellation Energy Stock Add A Different Kind of Risk?\" \u00b7 theme score 33.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.70%",
-        "theme=Clean Energy"
+        "theme=Clean Energy",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
     },
@@ -879,15 +878,15 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.0372,
+      "action": "REDUCE",
+      "target_weight": 0.0286,
       "current_weight": 0.0364,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Trump\u2019s Intel And Defense Push Just Paid Off \u2014 For A Democratic Congressman\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -793.38,
+      "reason": "trimming on mixed news flow \u2014 \"Trump\u2019s Intel And Defense Push Just Paid Off \u2014 For A Democratic Congressman\" \u00b7 overweight by 0.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 62.8",
+        "theme 'Defense & Aerospace' score 56.0 (buy), contribution 56.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -895,28 +894,28 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.025,
       "current_weight": 0.0001,
-      "notional_delta": -4.43,
-      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2532.31,
+      "reason": "underweight by 2.49% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-5.09%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 57.1"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "GOOGL",
-      "action": "BUY",
-      "target_weight": 0.0158,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 1605.99,
-      "reason": "buying on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 underweight by 1.58% vs target \u2014 add",
+      "notional_delta": -0.02,
+      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.1 (starter), contribution 46.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -937,29 +936,29 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.0309,
+      "action": "REDUCE",
+      "target_weight": 0.013,
       "current_weight": 0.0313,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1855.83,
+      "reason": "overweight by 1.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 48.1 (starter), contribution 65.1"
+        "theme 'Consumer Discretionary' score 36.8 (hold_small), contribution 53.9"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0395,
+      "target_weight": 0.0354,
       "current_weight": 0.0376,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Truist Securities Maintains Hold on JPMorgan Chase, Raises Price Target to $344\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.92%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.7 (buy), contribution 70.3",
+        "theme 'Financials & Rates' score 61.7 (buy), contribution 67.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -967,14 +966,15 @@
     },
     {
       "symbol": "LCID",
-      "action": "REDUCE",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0293,
       "current_weight": 0.0001,
-      "notional_delta": -5.01,
-      "reason": "trimming on mixed news flow \u2014 \"Lucid Stock Is Climbing Friday: What's Driving The Action?\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2968.24,
+      "reason": "buying on mixed news flow \u2014 \"Lucid Stock Is Climbing Friday: What's Driving The Action?\" \u00b7 underweight by 2.92% vs target \u2014 add",
       "factors": [
         "unrealized_pl=15.40%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 66.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -983,7 +983,7 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0428,
+      "target_weight": 0.0417,
       "current_weight": 0.0384,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Apogee Enterprises Posts Strong Q1 Earnings, Joins ACADIA Pharmaceuticals, Crocs And Other Big Stocks Moving Higher On Friday\" \u00b7 within 50bps of target \u2014 no trade",
@@ -998,59 +998,56 @@
     },
     {
       "symbol": "LMT",
-      "action": "HOLD",
-      "target_weight": 0.0387,
+      "action": "REDUCE",
+      "target_weight": 0.0298,
       "current_weight": 0.0354,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Lockheed Martin Partners With Finnish Tech Firm Insta To Establish Europe\u2019s First Sustainment Center For The M270A2 And HIMARS MLRS In Finla\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -573.94,
+      "reason": "overweight by 0.56% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.12%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 65.2",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Defense & Aerospace' score 56.0 (buy), contribution 59.2"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "LRCX",
       "action": "HOLD",
-      "target_weight": 0.0244,
+      "target_weight": 0.0213,
       "current_weight": 0.0212,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.83%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 41.8"
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 38.8"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0165,
+      "action": "REDUCE",
+      "target_weight": 0.0057,
       "current_weight": 0.0174,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1188.41,
+      "reason": "overweight by 1.17% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 48.1 (starter), contribution 34.9"
+        "theme 'Consumer Discretionary' score 36.8 (hold_small), contribution 23.6"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
-      "action": "BUY",
-      "target_weight": 0.0137,
+      "action": "REDUCE",
+      "target_weight": 0.0005,
       "current_weight": 0.0011,
-      "notional_delta": 1282.89,
-      "reason": "buying on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 underweight by 1.26% vs target \u2014 add",
+      "notional_delta": -54.83,
+      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.1 (starter), contribution 40.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1088,17 +1085,16 @@
     },
     {
       "symbol": "MSFT",
-      "action": "BUY",
-      "target_weight": 0.0208,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 2114.16,
-      "reason": "buying on positive news flow \u2014 \"Microsoft Has Worst Month Since 2000, Micron Delivers Memorable Beat: This Week On Wall Street\" \u00b7 underweight by 2.08% vs target \u2014 add",
+      "notional_delta": -0.05,
+      "reason": "trimming on negative news flow \u2014 \"Benzinga Bulls And Bears: Micron, Take-Two, SpaceX \u2014 And Nasdaq Posts Sharpest Decline In Months\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.1 (starter), contribution 60.8",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1108,25 +1104,27 @@
       "target_weight": 0.0,
       "current_weight": 0.0214,
       "notional_delta": -2175.54,
-      "reason": "exiting on positive news flow \u2014 \"Microsoft Has Worst Month Since 2000, Micron Delivers Memorable Beat: This Week On Wall Street\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Benzinga Bulls And Bears: Micron, Take-Two, SpaceX \u2014 And Nasdaq Posts Sharpest Decline In Months\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "NEE",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0027,
       "current_weight": 0.0054,
-      "notional_delta": -544.88,
-      "reason": "theme score 21.9 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -272.44,
+      "reason": "trimming on positive news flow \u2014 \"Does Constellation Energy Stock Add A Different Kind of Risk?\" \u00b7 theme score 33.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=2.09%",
-        "theme=Clean Energy"
+        "theme=Clean Energy",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
     },
@@ -1147,11 +1145,11 @@
     },
     {
       "symbol": "NVDA",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.06,
-      "reason": "exiting on mixed news flow \u2014 \"Stock Market's Character May Have Begun To Change\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.03,
+      "reason": "trimming on mixed news flow \u2014 \"Stock Market's Character May Have Begun To Change\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -1218,7 +1216,7 @@
     {
       "symbol": "REGN",
       "action": "HOLD",
-      "target_weight": 0.0393,
+      "target_weight": 0.0382,
       "current_weight": 0.0354,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"CDC Raises Its Response Level To Congo Ebola Outbreak To Level 1 Activation, Its Highest Level; Says Risk Of Ebola Spreading In The U.S. Rem\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1233,11 +1231,11 @@
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0001,
-      "notional_delta": -3.85,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going On With Rivian Stock Friday?\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -7.71,
+      "reason": "exiting on mixed news flow \u2014 \"What's Going On With Rivian Stock Friday?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.53%",
         "theme=EV & Clean Transport",
@@ -1248,15 +1246,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.0412,
+      "action": "REDUCE",
+      "target_weight": 0.032,
       "current_weight": 0.0375,
-      "notional_delta": 0.0,
-      "reason": "holding on contract win (positive) \u2014 \"Why RTX Stock Is Gaining After Raytheon\u2019s New Navy Missile Deal\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -563.55,
+      "reason": "trimming on contract win (positive) \u2014 \"Why RTX Stock Is Gaining After Raytheon\u2019s New Navy Missile Deal\" \u00b7 overweight by 0.55% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.98%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 69.5",
+        "theme 'Defense & Aerospace' score 56.0 (buy), contribution 63.5",
         "news_source=benzinga",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -1265,43 +1263,45 @@
     },
     {
       "symbol": "RUN",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on mixed news flow \u2014 \"What's Going On With Sunrun Stock Friday?\" \u00b7 theme score 21.9 < exit threshold 25 \u2014 fully exit",
+      "reason": "trimming on positive news flow \u2014 \"Does Constellation Energy Stock Add A Different Kind of Risk?\" \u00b7 theme score 33.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.39%",
         "theme=Clean Energy",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0295,
+      "action": "REDUCE",
+      "target_weight": 0.0123,
       "current_weight": 0.033,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -2100.88,
+      "reason": "overweight by 2.07% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.81%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 48.1 (starter), contribution 62.3"
+        "theme 'Consumer Discretionary' score 36.8 (hold_small), contribution 51.0"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "SEDG",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0004,
       "current_weight": 0.0007,
-      "notional_delta": -73.3,
-      "reason": "theme score 21.9 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -36.65,
+      "reason": "trimming on positive news flow \u2014 \"Does Constellation Energy Stock Add A Different Kind of Risk?\" \u00b7 theme score 33.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.91%",
-        "theme=Clean Energy"
+        "theme=Clean Energy",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
     },
@@ -1320,11 +1320,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0008,
       "current_weight": 0.0017,
-      "notional_delta": -172.45,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -86.23,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.74%",
         "theme=AI & Compute"
@@ -1333,11 +1333,11 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0001,
-      "notional_delta": -4.31,
-      "reason": "trimming on M&A (positive) \u2014 \"U.S. Federal Trade Commission Grants Approval To Elon Musk To Acquire Mesh Optical Technologies Corporation\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -8.61,
+      "reason": "exiting on M&A (positive) \u2014 \"U.S. Federal Trade Commission Grants Approval To Elon Musk To Acquire Mesh Optical Technologies Corporation\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.38%",
         "theme=EV & Clean Transport",
@@ -1350,24 +1350,24 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0232,
+      "target_weight": 0.0201,
       "current_weight": 0.0192,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.01%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 39.7"
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 36.7"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0473,
+      "target_weight": 0.0461,
       "current_weight": 0.0393,
-      "notional_delta": 815.8,
-      "reason": "underweight by 0.80% vs target \u2014 add",
+      "notional_delta": 693.82,
+      "reason": "underweight by 0.68% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.27%",
         "theme=Biotech & Pharma",
@@ -1378,14 +1378,14 @@
     {
       "symbol": "WFC",
       "action": "HOLD",
-      "target_weight": 0.0404,
+      "target_weight": 0.0363,
       "current_weight": 0.0392,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Truist Securities Maintains Buy on Wells Fargo, Raises Price Target to $94\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.60%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.7 (buy), contribution 71.9",
+        "theme 'Financials & Rates' score 61.7 (buy), contribution 68.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1412,14 +1412,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.0348,
+      "target_weight": 0.031,
       "current_weight": 0.03,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Wells Fargo Maintains Overweight on Applied Materials, Raises Price Target to $740\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.23%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 59.5",
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 56.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1430,16 +1430,14 @@
     },
     {
       "symbol": "AMD",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0009,
       "current_weight": 0.0018,
-      "notional_delta": -186.53,
-      "reason": "exiting on mixed news flow \u2014 \"What's Going On With AMD Stock Friday?\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -93.26,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.89%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1482,11 +1480,11 @@
     },
     {
       "symbol": "AVGO",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.17,
-      "reason": "exiting on positive news flow \u2014 \"What Is Going On With Broadcom Stock On Friday?\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.09,
+      "reason": "trimming on positive news flow \u2014 \"What Is Going On With Broadcom Stock On Friday?\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute",
@@ -1504,12 +1502,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0366,
       "notional_delta": -3716.73,
-      "reason": "exiting on positive news flow \u2014 \"'Boeing Wins Jet Deal From China Southern Valued at $3.62 Billion' - Bloomberg\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.61%",
-        "theme=Defense & Aerospace",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1519,14 +1515,14 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0426,
+      "target_weight": 0.0384,
       "current_weight": 0.0409,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Truist Securities Maintains Buy on Bank of America, Raises Price Target to $64\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.7 (buy), contribution 75.9",
+        "theme 'Financials & Rates' score 61.7 (buy), contribution 72.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1588,14 +1584,15 @@
     },
     {
       "symbol": "F",
-      "action": "REDUCE",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0246,
       "current_weight": 0.0,
-      "notional_delta": -0.01,
-      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2500.5,
+      "reason": "underweight by 2.46% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.01%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 56.1"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1604,14 +1601,16 @@
     },
     {
       "symbol": "FSLR",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0009,
       "current_weight": 0.0018,
-      "notional_delta": -183.91,
-      "reason": "theme score 21.9 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -91.95,
+      "reason": "trimming on positive news flow \u2014 \"Does Constellation Energy Stock Add A Different Kind of Risk?\" \u00b7 theme score 33.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.70%",
-        "theme=Clean Energy"
+        "theme=Clean Energy",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1637,15 +1636,15 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.0372,
+      "action": "REDUCE",
+      "target_weight": 0.0286,
       "current_weight": 0.0364,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Trump\u2019s Intel And Defense Push Just Paid Off \u2014 For A Democratic Congressman\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -793.38,
+      "reason": "trimming on mixed news flow \u2014 \"Trump\u2019s Intel And Defense Push Just Paid Off \u2014 For A Democratic Congressman\" \u00b7 overweight by 0.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 62.8",
+        "theme 'Defense & Aerospace' score 56.0 (buy), contribution 56.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1656,14 +1655,15 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.025,
       "current_weight": 0.0001,
-      "notional_delta": -4.43,
-      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2532.31,
+      "reason": "underweight by 2.49% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-5.09%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 57.1"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1672,15 +1672,14 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "BUY",
-      "target_weight": 0.0158,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 1605.99,
-      "reason": "buying on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 underweight by 1.58% vs target \u2014 add",
+      "notional_delta": -0.02,
+      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.1 (starter), contribution 46.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1707,15 +1706,15 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.0309,
+      "action": "REDUCE",
+      "target_weight": 0.013,
       "current_weight": 0.0313,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1855.83,
+      "reason": "overweight by 1.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 48.1 (starter), contribution 65.1"
+        "theme 'Consumer Discretionary' score 36.8 (hold_small), contribution 53.9"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1725,14 +1724,14 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0395,
+      "target_weight": 0.0354,
       "current_weight": 0.0376,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Truist Securities Maintains Hold on JPMorgan Chase, Raises Price Target to $344\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.92%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.7 (buy), contribution 70.3",
+        "theme 'Financials & Rates' score 61.7 (buy), contribution 67.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1743,14 +1742,15 @@
     },
     {
       "symbol": "LCID",
-      "action": "REDUCE",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0293,
       "current_weight": 0.0001,
-      "notional_delta": -5.01,
-      "reason": "trimming on mixed news flow \u2014 \"Lucid Stock Is Climbing Friday: What's Driving The Action?\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2968.24,
+      "reason": "buying on mixed news flow \u2014 \"Lucid Stock Is Climbing Friday: What's Driving The Action?\" \u00b7 underweight by 2.92% vs target \u2014 add",
       "factors": [
         "unrealized_pl=15.40%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 66.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1762,7 +1762,7 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0428,
+      "target_weight": 0.0417,
       "current_weight": 0.0384,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Apogee Enterprises Posts Strong Q1 Earnings, Joins ACADIA Pharmaceuticals, Crocs And Other Big Stocks Moving Higher On Friday\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1780,17 +1780,15 @@
     },
     {
       "symbol": "LMT",
-      "action": "HOLD",
-      "target_weight": 0.0387,
+      "action": "REDUCE",
+      "target_weight": 0.0298,
       "current_weight": 0.0354,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Lockheed Martin Partners With Finnish Tech Firm Insta To Establish Europe\u2019s First Sustainment Center For The M270A2 And HIMARS MLRS In Finla\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -573.94,
+      "reason": "overweight by 0.56% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.12%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 65.2",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Defense & Aerospace' score 56.0 (buy), contribution 59.2"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1800,14 +1798,14 @@
     {
       "symbol": "LRCX",
       "action": "HOLD",
-      "target_weight": 0.0244,
+      "target_weight": 0.0213,
       "current_weight": 0.0212,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.83%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 41.8"
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 38.8"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1816,15 +1814,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0165,
+      "action": "REDUCE",
+      "target_weight": 0.0057,
       "current_weight": 0.0174,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1188.41,
+      "reason": "overweight by 1.17% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 48.1 (starter), contribution 34.9"
+        "theme 'Consumer Discretionary' score 36.8 (hold_small), contribution 23.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1833,15 +1831,14 @@
     },
     {
       "symbol": "META",
-      "action": "BUY",
-      "target_weight": 0.0137,
+      "action": "REDUCE",
+      "target_weight": 0.0005,
       "current_weight": 0.0011,
-      "notional_delta": 1282.89,
-      "reason": "buying on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 underweight by 1.26% vs target \u2014 add",
+      "notional_delta": -54.83,
+      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.1 (starter), contribution 40.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1888,17 +1885,16 @@
     },
     {
       "symbol": "MSFT",
-      "action": "BUY",
-      "target_weight": 0.0208,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 2114.16,
-      "reason": "buying on positive news flow \u2014 \"Microsoft Has Worst Month Since 2000, Micron Delivers Memorable Beat: This Week On Wall Street\" \u00b7 underweight by 2.08% vs target \u2014 add",
+      "notional_delta": -0.05,
+      "reason": "trimming on negative news flow \u2014 \"Benzinga Bulls And Bears: Micron, Take-Two, SpaceX \u2014 And Nasdaq Posts Sharpest Decline In Months\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.1 (starter), contribution 60.8",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1911,12 +1907,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0214,
       "notional_delta": -2175.54,
-      "reason": "exiting on positive news flow \u2014 \"Microsoft Has Worst Month Since 2000, Micron Delivers Memorable Beat: This Week On Wall Street\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Benzinga Bulls And Bears: Micron, Take-Two, SpaceX \u2014 And Nasdaq Posts Sharpest Decline In Months\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1925,14 +1921,16 @@
     },
     {
       "symbol": "NEE",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0027,
       "current_weight": 0.0054,
-      "notional_delta": -544.88,
-      "reason": "theme score 21.9 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -272.44,
+      "reason": "trimming on positive news flow \u2014 \"Does Constellation Energy Stock Add A Different Kind of Risk?\" \u00b7 theme score 33.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=2.09%",
-        "theme=Clean Energy"
+        "theme=Clean Energy",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1959,11 +1957,11 @@
     },
     {
       "symbol": "NVDA",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.06,
-      "reason": "exiting on mixed news flow \u2014 \"Stock Market's Character May Have Begun To Change\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.03,
+      "reason": "trimming on mixed news flow \u2014 \"Stock Market's Character May Have Begun To Change\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -2045,7 +2043,7 @@
     {
       "symbol": "REGN",
       "action": "HOLD",
-      "target_weight": 0.0393,
+      "target_weight": 0.0382,
       "current_weight": 0.0354,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"CDC Raises Its Response Level To Congo Ebola Outbreak To Level 1 Activation, Its Highest Level; Says Risk Of Ebola Spreading In The U.S. Rem\" \u00b7 within 50bps of target \u2014 no trade",
@@ -2063,11 +2061,11 @@
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0001,
-      "notional_delta": -3.85,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going On With Rivian Stock Friday?\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -7.71,
+      "reason": "exiting on mixed news flow \u2014 \"What's Going On With Rivian Stock Friday?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.53%",
         "theme=EV & Clean Transport",
@@ -2081,15 +2079,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.0412,
+      "action": "REDUCE",
+      "target_weight": 0.032,
       "current_weight": 0.0375,
-      "notional_delta": 0.0,
-      "reason": "holding on contract win (positive) \u2014 \"Why RTX Stock Is Gaining After Raytheon\u2019s New Navy Missile Deal\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -563.55,
+      "reason": "trimming on contract win (positive) \u2014 \"Why RTX Stock Is Gaining After Raytheon\u2019s New Navy Missile Deal\" \u00b7 overweight by 0.55% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.98%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 69.5",
+        "theme 'Defense & Aerospace' score 56.0 (buy), contribution 63.5",
         "news_source=benzinga",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -2101,16 +2099,16 @@
     },
     {
       "symbol": "RUN",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on mixed news flow \u2014 \"What's Going On With Sunrun Stock Friday?\" \u00b7 theme score 21.9 < exit threshold 25 \u2014 fully exit",
+      "reason": "trimming on positive news flow \u2014 \"Does Constellation Energy Stock Add A Different Kind of Risk?\" \u00b7 theme score 33.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.39%",
         "theme=Clean Energy",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -2119,15 +2117,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0295,
+      "action": "REDUCE",
+      "target_weight": 0.0123,
       "current_weight": 0.033,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -2100.88,
+      "reason": "overweight by 2.07% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.81%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 48.1 (starter), contribution 62.3"
+        "theme 'Consumer Discretionary' score 36.8 (hold_small), contribution 51.0"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2136,14 +2134,16 @@
     },
     {
       "symbol": "SEDG",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0004,
       "current_weight": 0.0007,
-      "notional_delta": -73.3,
-      "reason": "theme score 21.9 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -36.65,
+      "reason": "trimming on positive news flow \u2014 \"Does Constellation Energy Stock Add A Different Kind of Risk?\" \u00b7 theme score 33.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.91%",
-        "theme=Clean Energy"
+        "theme=Clean Energy",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -2168,11 +2168,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0008,
       "current_weight": 0.0017,
-      "notional_delta": -172.45,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -86.23,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.74%",
         "theme=AI & Compute"
@@ -2184,11 +2184,11 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0001,
-      "notional_delta": -4.31,
-      "reason": "trimming on M&A (positive) \u2014 \"U.S. Federal Trade Commission Grants Approval To Elon Musk To Acquire Mesh Optical Technologies Corporation\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -8.61,
+      "reason": "exiting on M&A (positive) \u2014 \"U.S. Federal Trade Commission Grants Approval To Elon Musk To Acquire Mesh Optical Technologies Corporation\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.38%",
         "theme=EV & Clean Transport",
@@ -2204,14 +2204,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0232,
+      "target_weight": 0.0201,
       "current_weight": 0.0192,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.01%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 39.7"
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 36.7"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2221,10 +2221,10 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0473,
+      "target_weight": 0.0461,
       "current_weight": 0.0393,
-      "notional_delta": 815.8,
-      "reason": "underweight by 0.80% vs target \u2014 add",
+      "notional_delta": 693.82,
+      "reason": "underweight by 0.68% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.27%",
         "theme=Biotech & Pharma",
@@ -2238,14 +2238,14 @@
     {
       "symbol": "WFC",
       "action": "HOLD",
-      "target_weight": 0.0404,
+      "target_weight": 0.0363,
       "current_weight": 0.0392,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Truist Securities Maintains Buy on Wells Fargo, Raises Price Target to $94\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.60%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.7 (buy), contribution 71.9",
+        "theme 'Financials & Rates' score 61.7 (buy), contribution 68.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -3546,6 +3546,10 @@
     {
       "t": "2026-06-27T12:00:11+00:00",
       "v": 101646.92
+    },
+    {
+      "t": "2026-06-27T14:04:14+00:00",
+      "v": 101646.92
     }
   ],
   "breaking_news": [
@@ -3554,7 +3558,7 @@
       "summary": "During his chairmanship, Greenspan was celebrated as possibly the best central banker in history. But later, his reputation was tarnished by the worst financial crisis since the Great Depression.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/656930918/alan-greenspan-the-legendary-former-federal-reserve-chair-dies",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3563,7 +3567,7 @@
       "summary": "One of the most intellectually important relationships in the life of the late Fed chair Alan Greenspan was with his close friend, the formidable novelist and libertarian thinker Ayn Rand.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/nx-s1-5866558/alan-greenspan-dead-ayn-rand",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3572,7 +3576,7 @@
       "summary": "Denver renters are celebrating falling housing costs. But sometimes cheaper housing is a sign of economic decline. How can you tell the difference?",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/06/23/g-s1-129339/when-falling-housing-prices-are-good-news-and-when-theyre-not",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3581,7 +3585,7 @@
       "summary": "Investors are selling off AI-related stocks as doubts are starting to surface over whether the massive spending on AI is worth the investment and whether it's \"one big bubble.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867633/ai-selloff-tech-stocks-bubble-nasdaq",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3590,7 +3594,7 @@
       "summary": "President Trump canceled a signing ceremony for the bill Wednesday, saying Congress must first pass a strict voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867575/congress-passes-housing-affordability-bill",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3599,7 +3603,7 @@
       "summary": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/24/nx-s1-5869486/meta-prediction-market-app-ai",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3608,7 +3612,7 @@
       "summary": "The ordeal has left fans forced to either miss out on a once-in-a-lifetime opportunity or scramble to find new tickets, often costing more and for worse seats.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/26/nx-s1-5871397/world-cup-tickets-stubhub-resale-controversy",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3617,7 +3621,7 @@
       "summary": "Don't let your leftovers go to waste. Cookbook authors share clever storage techniques \u2014 like an \"Eat Me First\" box in your fridge \u2014 and cooking tricks to help you make the most of your food scraps.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/27/nx-s1-5786564/4-ways-get-creative-with-your-leftovers-save-money-on-food",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3626,7 +3630,7 @@
       "summary": "Buttigieg says the day he spent separated from his twins was \"among the darkest hours of my life\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwydx95kjx0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3635,7 +3639,7 @@
       "summary": "The House panel then issued subpoenas demanding the private equity tycoon, who co-founded Apollo Global Management, testify on camera and under oath.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cn948lwyl3jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3644,7 +3648,7 @@
       "summary": "Critics say the new reading requirements infringe on religious freedoms and blur the separation of church and state.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckg8m2xkg84o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3653,7 +3657,7 @@
       "summary": "Germany's highest ever temperature of 41.3C is recorded provisionally in Saarbr\u00fccken, over the border from France.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2knzzwprgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3662,7 +3666,7 @@
       "summary": "Italy's PM was not long ago being called the \"Trump whisperer\", but their relationship has gone from public attacks to personal insults.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cze962pgk27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3671,7 +3675,7 @@
       "summary": "H\u00e9ctor Bello wrote on social media that \"you gave your own life for our daughter\" in the quakes which killed at least 920 people.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c0jydyz8z6jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3680,7 +3684,7 @@
       "summary": "Hundreds are still feared trapped under the rubble, as families desperate for news.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c39y79g7gzko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3689,7 +3693,7 @@
       "summary": "Iran accuses the US of violating their deal and says it struck targets linked to American forces in response.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckg590wqxwpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3698,7 +3702,7 @@
       "summary": "Owen Flowers and Thalha Jubair were convicted for their roles in the attack, which led to large costs for Transport for London.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cx2kx8jr244o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3707,7 +3711,7 @@
       "summary": "The prime minister's resignation has fired the starting gun on the race to be in charge of the UK's finances.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c36yj4pn7jdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3716,7 +3720,7 @@
       "summary": "When the conflict began on 28 February, fuel costs jumped as the war disrupted the production and transportation of energy across the Middle East.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3725,7 +3729,7 @@
       "summary": "Trading on South Korea's Kospi index was halted for the third time this week to prevent panic selling.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce8jz40k00ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T12:00:13+00:00",
+      "published_utc": "2026-06-27T14:04:16+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     }
