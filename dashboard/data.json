@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-27T05:44:20+00:00",
+  "generated_at_utc": "2026-06-27T08:20:06+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 315,
-  "last_success_utc": "2026-06-27T01:48:39+00:00",
+  "cycle_count": 316,
+  "last_success_utc": "2026-06-27T05:44:20+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -577,49 +577,49 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 50.15,
-      "raw_score": 50.15,
-      "band": "starter",
-      "weight": 0.0838,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 47.67,
-        "sentiment": 44.45,
-        "volume": 63.74,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 47.74,
-      "raw_score": 63.23,
+      "score": 49.73,
+      "raw_score": 65.23,
       "band": "starter",
-      "weight": 0.0758,
+      "weight": 0.0824,
       "confidence": 1.0,
       "components": {
         "momentum": 45.82,
-        "sentiment": 93.34,
-        "volume": 59.52,
+        "sentiment": 100.0,
+        "volume": 59.5,
         "policy": 50.0,
         "volatility_penalty": 15.5
       }
     },
     {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 48.82,
+      "raw_score": 48.82,
+      "band": "starter",
+      "weight": 0.0794,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 47.67,
+        "sentiment": 40.0,
+        "volume": 63.73,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 47.31,
-      "raw_score": 62.47,
+      "score": 47.3,
+      "raw_score": 62.46,
       "band": "starter",
-      "weight": 0.0614,
+      "weight": 0.0613,
       "confidence": 0.65,
       "components": {
         "momentum": 91.0,
         "sentiment": 50.0,
-        "volume": 30.33,
+        "volume": 30.29,
         "policy": 50.0,
         "volatility_penalty": 15.16
       }
@@ -627,14 +627,14 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 39.01,
-      "raw_score": 39.66,
-      "band": "hold_small",
-      "weight": 0.0375,
-      "confidence": 0.7,
+      "score": 42.01,
+      "raw_score": 42.66,
+      "band": "starter",
+      "weight": 0.0468,
+      "confidence": 0.65,
       "components": {
         "momentum": 23.14,
-        "sentiment": 50.0,
+        "sentiment": 60.0,
         "volume": 52.03,
         "policy": 50.0,
         "volatility_penalty": 0.65
@@ -659,15 +659,15 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 32.63,
-      "raw_score": 44.22,
+      "score": 33.46,
+      "raw_score": 45.05,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 15.47,
-        "sentiment": 75.0,
-        "volume": 52.67,
+        "sentiment": 77.78,
+        "volume": 52.65,
         "policy": 50.0,
         "volatility_penalty": 11.59
       }
@@ -693,14 +693,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.0323,
+      "target_weight": 0.0348,
       "current_weight": 0.03,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Wells Fargo Maintains Overweight on Applied Materials, Raises Price Target to $740\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.33%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 47.7 (starter), contribution 57.5",
+        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 59.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -712,7 +712,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -93.26,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going On With AMD Stock Friday?\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"What's Going On With AMD Stock Friday?\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.37%",
         "theme=AI & Compute",
@@ -727,12 +727,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0273,
       "notional_delta": -2773.84,
-      "reason": "exiting on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Legendary Investor Jeremy Grantham Says This Is The \u2018Most Expensive\u2019 Market In US History As Buffett\u2019s Favorite Valuation Gauge Sends A Warn\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.97%",
         "theme=Consumer Discretionary",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -755,7 +755,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "trimming on positive news flow \u2014 \"What Is Going On With Broadcom Stock On Friday?\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"What Is Going On With Broadcom Stock On Friday?\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute",
@@ -798,14 +798,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0121,
+      "target_weight": 0.0151,
       "current_weight": 0.0,
-      "notional_delta": 1229.92,
-      "reason": "underweight by 1.21% vs target \u2014 add",
+      "notional_delta": 1534.86,
+      "reason": "underweight by 1.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.13%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 39.0 (hold_small), contribution 42.8"
+        "theme 'Oil & Gas' score 42.0 (starter), contribution 45.8"
       ],
       "theme_key": "oil_gas"
     },
@@ -826,16 +826,14 @@
     {
       "symbol": "CVX",
       "action": "HOLD",
-      "target_weight": 0.0127,
+      "target_weight": 0.0158,
       "current_weight": 0.011,
       "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Trump's Oil Price-Gouging Probe Is 'Socialism' He Accused Kamala Harris Of, Peter Schiff Says\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.45%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 39.0 (hold_small), contribution 44.9",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "theme 'Oil & Gas' score 42.0 (starter), contribution 47.9"
       ],
       "theme_key": "oil_gas"
     },
@@ -916,7 +914,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
@@ -941,14 +939,14 @@
     {
       "symbol": "HD",
       "action": "HOLD",
-      "target_weight": 0.0334,
+      "target_weight": 0.0318,
       "current_weight": 0.0313,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.92%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.1 (starter), contribution 67.2"
+        "theme 'Consumer Discretionary' score 48.8 (starter), contribution 65.9"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1019,28 +1017,28 @@
     {
       "symbol": "LRCX",
       "action": "HOLD",
-      "target_weight": 0.0223,
+      "target_weight": 0.0244,
       "current_weight": 0.0212,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.35%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 47.7 (starter), contribution 39.8"
+        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 41.8"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0184,
+      "target_weight": 0.0172,
       "current_weight": 0.0174,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.1 (starter), contribution 37.0"
+        "theme 'Consumer Discretionary' score 48.8 (starter), contribution 35.6"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1050,7 +1048,7 @@
       "target_weight": 0.0005,
       "current_weight": 0.0011,
       "notional_delta": -54.83,
-      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1095,7 +1093,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "trimming on positive news flow \u2014 \"Microsoft Has Worst Month Since 2000, Micron Delivers Memorable Beat: This Week On Wall Street\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Microsoft Has Worst Month Since 2000, Micron Delivers Memorable Beat: This Week On Wall Street\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
         "theme=AI & Compute",
@@ -1153,7 +1151,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on mixed news flow \u2014 \"Stock Market's Character May Have Begun To Change\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"Stock Market's Character May Have Begun To Change\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -1191,7 +1189,7 @@
     {
       "symbol": "PANW",
       "action": "HOLD",
-      "target_weight": 0.0222,
+      "target_weight": 0.0221,
       "current_weight": 0.0193,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1283,14 +1281,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.032,
+      "target_weight": 0.0304,
       "current_weight": 0.033,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.80%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.1 (starter), contribution 64.4"
+        "theme 'Consumer Discretionary' score 48.8 (starter), contribution 63.0"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1326,7 +1324,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0017,
       "notional_delta": -86.23,
-      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.23%",
         "theme=AI & Compute"
@@ -1352,14 +1350,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0212,
+      "target_weight": 0.0232,
       "current_weight": 0.0192,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"What's Going On With Taiwan Semiconductor Stock Friday?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.46%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 47.7 (starter), contribution 37.7",
+        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 39.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1398,14 +1396,14 @@
     {
       "symbol": "XOM",
       "action": "HOLD",
-      "target_weight": 0.0127,
+      "target_weight": 0.0158,
       "current_weight": 0.0117,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"'Exxon\u2019s Top US Gas Trader to Join Expand as Exits Hit Oil Giant' - Bloomberg News\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.40%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 39.0 (hold_small), contribution 44.9",
+        "theme 'Oil & Gas' score 42.0 (starter), contribution 47.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1416,14 +1414,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.0323,
+      "target_weight": 0.0348,
       "current_weight": 0.03,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Wells Fargo Maintains Overweight on Applied Materials, Raises Price Target to $740\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.33%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 47.7 (starter), contribution 57.5",
+        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 59.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1438,7 +1436,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -93.26,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going On With AMD Stock Friday?\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"What's Going On With AMD Stock Friday?\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.37%",
         "theme=AI & Compute",
@@ -1456,12 +1454,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0273,
       "notional_delta": -2773.84,
-      "reason": "exiting on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Legendary Investor Jeremy Grantham Says This Is The \u2018Most Expensive\u2019 Market In US History As Buffett\u2019s Favorite Valuation Gauge Sends A Warn\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.97%",
         "theme=Consumer Discretionary",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1490,7 +1488,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "trimming on positive news flow \u2014 \"What Is Going On With Broadcom Stock On Friday?\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"What Is Going On With Broadcom Stock On Friday?\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute",
@@ -1542,14 +1540,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0121,
+      "target_weight": 0.0151,
       "current_weight": 0.0,
-      "notional_delta": 1229.92,
-      "reason": "underweight by 1.21% vs target \u2014 add",
+      "notional_delta": 1534.86,
+      "reason": "underweight by 1.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.13%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 39.0 (hold_small), contribution 42.8"
+        "theme 'Oil & Gas' score 42.0 (starter), contribution 45.8"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1576,16 +1574,14 @@
     {
       "symbol": "CVX",
       "action": "HOLD",
-      "target_weight": 0.0127,
+      "target_weight": 0.0158,
       "current_weight": 0.011,
       "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Trump's Oil Price-Gouging Probe Is 'Socialism' He Accused Kamala Harris Of, Peter Schiff Says\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.45%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 39.0 (hold_small), contribution 44.9",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "theme 'Oil & Gas' score 42.0 (starter), contribution 47.9"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1684,7 +1680,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
@@ -1715,14 +1711,14 @@
     {
       "symbol": "HD",
       "action": "HOLD",
-      "target_weight": 0.0334,
+      "target_weight": 0.0318,
       "current_weight": 0.0313,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.92%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.1 (starter), contribution 67.2"
+        "theme 'Consumer Discretionary' score 48.8 (starter), contribution 65.9"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1808,14 +1804,14 @@
     {
       "symbol": "LRCX",
       "action": "HOLD",
-      "target_weight": 0.0223,
+      "target_weight": 0.0244,
       "current_weight": 0.0212,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.35%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 47.7 (starter), contribution 39.8"
+        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 41.8"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1825,14 +1821,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0184,
+      "target_weight": 0.0172,
       "current_weight": 0.0174,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.1 (starter), contribution 37.0"
+        "theme 'Consumer Discretionary' score 48.8 (starter), contribution 35.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1845,7 +1841,7 @@
       "target_weight": 0.0005,
       "current_weight": 0.0011,
       "notional_delta": -54.83,
-      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"Trump Threatens 100% Tariffs That Would \u2018Supersede Trade Deals\u2019 For Countries Taxing American Tech Giants Like Meta, Amazon And Alphabet\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1899,7 +1895,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "trimming on positive news flow \u2014 \"Microsoft Has Worst Month Since 2000, Micron Delivers Memorable Beat: This Week On Wall Street\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Microsoft Has Worst Month Since 2000, Micron Delivers Memorable Beat: This Week On Wall Street\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
         "theme=AI & Compute",
@@ -1969,7 +1965,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on mixed news flow \u2014 \"Stock Market's Character May Have Begun To Change\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"Stock Market's Character May Have Begun To Change\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -2016,7 +2012,7 @@
     {
       "symbol": "PANW",
       "action": "HOLD",
-      "target_weight": 0.0222,
+      "target_weight": 0.0221,
       "current_weight": 0.0193,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -2126,14 +2122,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.032,
+      "target_weight": 0.0304,
       "current_weight": 0.033,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.80%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.1 (starter), contribution 64.4"
+        "theme 'Consumer Discretionary' score 48.8 (starter), contribution 63.0"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2178,7 +2174,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0017,
       "notional_delta": -86.23,
-      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.23%",
         "theme=AI & Compute"
@@ -2210,14 +2206,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0212,
+      "target_weight": 0.0232,
       "current_weight": 0.0192,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"What's Going On With Taiwan Semiconductor Stock Friday?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.46%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 47.7 (starter), contribution 37.7",
+        "theme 'Semiconductors (Broad)' score 49.7 (starter), contribution 39.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2265,14 +2261,14 @@
     {
       "symbol": "XOM",
       "action": "HOLD",
-      "target_weight": 0.0127,
+      "target_weight": 0.0158,
       "current_weight": 0.0117,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"'Exxon\u2019s Top US Gas Trader to Join Expand as Exits Hit Oil Giant' - Bloomberg News\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.40%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 39.0 (hold_small), contribution 44.9",
+        "theme 'Oil & Gas' score 42.0 (starter), contribution 47.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -3542,6 +3538,10 @@
     {
       "t": "2026-06-27T05:44:16+00:00",
       "v": 101646.97
+    },
+    {
+      "t": "2026-06-27T08:20:01+00:00",
+      "v": 101646.97
     }
   ],
   "breaking_news": [
@@ -3550,7 +3550,7 @@
       "summary": "SpaceX stock hit the market last week. Here's how it could turn up in your retirement or investment portfolio.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/20/nx-s1-5860047/here-is-how-spacex-could-turn-up-in-your-current-investments",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3559,7 +3559,7 @@
       "summary": "During his chairmanship, Greenspan was celebrated as possibly the best central banker in history. But later, his reputation was tarnished by the worst financial crisis since the Great Depression.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/656930918/alan-greenspan-the-legendary-former-federal-reserve-chair-dies",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3568,7 +3568,7 @@
       "summary": "One of the most intellectually important relationships in the life of the late Fed chair Alan Greenspan was with his close friend, the formidable novelist and libertarian thinker Ayn Rand.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/nx-s1-5866558/alan-greenspan-dead-ayn-rand",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3577,7 +3577,7 @@
       "summary": "Denver renters are celebrating falling housing costs. But sometimes cheaper housing is a sign of economic decline. How can you tell the difference?",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/06/23/g-s1-129339/when-falling-housing-prices-are-good-news-and-when-theyre-not",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3586,7 +3586,7 @@
       "summary": "Investors are selling off AI-related stocks as doubts are starting to surface over whether the massive spending on AI is worth the investment and whether it's \"one big bubble.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867633/ai-selloff-tech-stocks-bubble-nasdaq",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3595,7 +3595,7 @@
       "summary": "President Trump canceled a signing ceremony for the bill Wednesday, saying Congress must first pass a strict voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867575/congress-passes-housing-affordability-bill",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3604,7 +3604,7 @@
       "summary": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/24/nx-s1-5869486/meta-prediction-market-app-ai",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3613,7 +3613,7 @@
       "summary": "The ordeal has left fans forced to either miss out on a once-in-a-lifetime opportunity or scramble to find new tickets, often costing more and for worse seats.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/26/nx-s1-5871397/world-cup-tickets-stubhub-resale-controversy",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3622,7 +3622,7 @@
       "summary": "Hezbollah is not party to Friday's agreement, and previous ceasefires between Israel and Lebanon have still seen near-daily cross-border strikes.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cg5315n1v5go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3631,7 +3631,7 @@
       "summary": "Kinshasa accuses its neighbour of committing various violations since the 1994 Rwanda genocide.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c8724zn3491o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3640,7 +3640,7 @@
       "summary": "Critics say the new reading requirements infringe on religious freedoms and blur the separation of church and state.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckg8m2xkg84o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3649,7 +3649,7 @@
       "summary": "Germany's highest ever temperature of 41.3C is recorded provisionally in Saarbr\u00fccken, over the border from France.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2knzzwprgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3658,7 +3658,7 @@
       "summary": "Italy's PM was not long ago being called the \"Trump whisperer\", but their relationship has gone from public attacks to personal insults.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cze962pgk27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3667,7 +3667,7 @@
       "summary": "H\u00e9ctor Bello wrote on social media that \"you gave your own life for our daughter\" in the quakes which killed at least 920 people.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c0jydyz8z6jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3676,16 +3676,16 @@
       "summary": "Hundreds are still feared trapped under the rubble, as families desperate for news.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c39y79g7gzko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "US strikes on Iran after attack on cargo ship",
+      "headline": "US strikes Iran after attack on cargo ship",
       "summary": "US Central Command says it has struck missile and drone storage facilities and coastal radar positions.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckg590wqxwpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3694,7 +3694,7 @@
       "summary": "Owen Flowers and Thalha Jubair were convicted for their roles in the attack, which led to large costs for Transport for London.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cx2kx8jr244o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3703,7 +3703,7 @@
       "summary": "The prime minister's resignation has fired the starting gun on the race to be in charge of the UK's finances.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c36yj4pn7jdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3712,7 +3712,7 @@
       "summary": "When the conflict began on 28 February, fuel costs jumped as the war disrupted the production and transportation of energy across the Middle East.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3721,7 +3721,7 @@
       "summary": "Trading on South Korea's Kospi index was halted for the third time this week to prevent panic selling.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce8jz40k00ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-27T05:44:20+00:00",
+      "published_utc": "2026-06-27T08:20:06+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     }
