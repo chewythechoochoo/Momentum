@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-28T18:16:19+00:00",
+  "generated_at_utc": "2026-06-28T19:50:24+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 335,
-  "last_success_utc": "2026-06-28T16:53:03+00:00",
+  "cycle_count": 336,
+  "last_success_utc": "2026-06-28T18:16:19+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -579,14 +579,14 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 56.32,
-      "raw_score": 56.32,
+      "score": 55.82,
+      "raw_score": 55.82,
       "band": "buy",
-      "weight": 0.0914,
-      "confidence": 0.75,
+      "weight": 0.0925,
+      "confidence": 0.8,
       "components": {
         "momentum": 47.67,
-        "sentiment": 65.0,
+        "sentiment": 63.34,
         "volume": 63.73,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -611,33 +611,17 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 46.72,
-      "raw_score": 46.72,
+      "score": 43.72,
+      "raw_score": 43.72,
       "band": "starter",
-      "weight": 0.0597,
-      "confidence": 0.65,
+      "weight": 0.053,
+      "confidence": 0.7,
       "components": {
         "momentum": 50.12,
-        "sentiment": 40.0,
+        "sentiment": 30.0,
         "volume": 48.39,
         "policy": 50.0,
         "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 34.46,
-      "raw_score": 50.23,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.8,
-      "components": {
-        "momentum": 45.82,
-        "sentiment": 50.0,
-        "volume": 59.5,
-        "policy": 50.0,
-        "volatility_penalty": 15.77
       }
     },
     {
@@ -657,46 +641,62 @@
       }
     },
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 28.99,
+      "raw_score": 38.86,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 38.64,
+        "sentiment": 30.0,
+        "volume": 47.01,
+        "policy": 50.0,
+        "volatility_penalty": 9.87
+      }
+    },
+    {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 30.83,
-      "raw_score": 41.72,
+      "score": 28.83,
+      "raw_score": 39.72,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 0.85,
       "components": {
         "momentum": 15.47,
-        "sentiment": 66.66,
+        "sentiment": 60.0,
         "volume": 52.65,
         "policy": 50.0,
         "volatility_penalty": 10.88
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 30.49,
-      "raw_score": 40.36,
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 19.46,
+      "raw_score": 35.23,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.75,
+      "confidence": 0.85,
       "components": {
-        "momentum": 38.64,
-        "sentiment": 35.0,
-        "volume": 47.01,
+        "momentum": 45.82,
+        "sentiment": 0.0,
+        "volume": 59.5,
         "policy": 50.0,
-        "volatility_penalty": 9.87
+        "volatility_penalty": 15.77
       }
     }
   ],
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.015,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.03,
-      "notional_delta": -1526.87,
-      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3053.74,
+      "reason": "theme score 19.5 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=0.23%",
         "theme=Semiconductors (Broad)"
@@ -709,7 +709,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -93.26,
-      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.89%",
         "theme=AI & Compute"
@@ -733,11 +733,11 @@
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.33,
-      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.65,
+      "reason": "theme score 19.5 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-7.12%",
         "theme=Semiconductors (Broad)"
@@ -750,7 +750,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute"
@@ -775,14 +775,14 @@
     {
       "symbol": "BAC",
       "action": "REDUCE",
-      "target_weight": 0.0211,
+      "target_weight": 0.0188,
       "current_weight": 0.0409,
-      "notional_delta": -2011.11,
-      "reason": "overweight by 1.98% vs target \u2014 trim",
+      "notional_delta": -2244.9,
+      "reason": "overweight by 2.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.7 (starter), contribution 57.9"
+        "theme 'Financials & Rates' score 43.7 (starter), contribution 54.9"
       ],
       "theme_key": "financials"
     },
@@ -840,7 +840,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.01%",
         "theme=EV & Clean Transport"
@@ -900,7 +900,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -4.43,
-      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.09%",
         "theme=EV & Clean Transport"
@@ -913,7 +913,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
@@ -937,29 +937,29 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.0358,
+      "action": "BUY",
+      "target_weight": 0.0363,
       "current_weight": 0.0313,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 512.55,
+      "reason": "underweight by 0.50% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.3 (buy), contribution 73.3"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 72.8"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "JPM",
       "action": "REDUCE",
-      "target_weight": 0.019,
+      "target_weight": 0.0168,
       "current_weight": 0.0376,
-      "notional_delta": -1892.86,
-      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 overweight by 1.86% vs target \u2014 trim",
+      "notional_delta": -2116.48,
+      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 overweight by 2.08% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.92%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.7 (starter), contribution 52.3",
+        "theme 'Financials & Rates' score 43.7 (starter), contribution 49.3",
         "news_source=benzinga",
         "event=legal risk",
         "news_sentiment=-0.20"
@@ -972,7 +972,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -5.01,
-      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=15.40%",
         "theme=EV & Clean Transport"
@@ -1013,11 +1013,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
-      "target_weight": 0.0106,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0212,
-      "notional_delta": -1078.55,
-      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2157.11,
+      "reason": "theme score 19.5 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-1.83%",
         "theme=Semiconductors (Broad)"
@@ -1027,14 +1027,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0211,
+      "target_weight": 0.0212,
       "current_weight": 0.0174,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.3 (buy), contribution 43.1"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 42.6"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1044,7 +1044,7 @@
       "target_weight": 0.0005,
       "current_weight": 0.0011,
       "notional_delta": -54.83,
-      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1087,27 +1087,25 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "MU",
-      "action": "REDUCE",
-      "target_weight": 0.0107,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0214,
-      "notional_delta": -1087.77,
-      "reason": "trimming on negative news flow \u2014 \"Nike Stock Gets A Rude Awakening As Technicals Point To More Weakness Ahead Of Earnings\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2175.54,
+      "reason": "exiting on mixed news flow \u2014 \"Dow Jones and Nasdaq 100: Top 4 Events Investors Should Watch This Week\" \u00b7 theme score 19.5 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1147,7 +1145,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -1239,7 +1237,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -3.85,
-      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.53%",
         "theme=EV & Clean Transport"
@@ -1280,14 +1278,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0345,
+      "target_weight": 0.0349,
       "current_weight": 0.033,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.81%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.3 (buy), contribution 70.5"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 70.0"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1327,7 +1325,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0017,
       "notional_delta": -86.23,
-      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.74%",
         "theme=AI & Compute"
@@ -1340,7 +1338,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -4.31,
-      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 theme score 30.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 theme score 29.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.38%",
         "theme=EV & Clean Transport",
@@ -1352,11 +1350,11 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0096,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0192,
-      "notional_delta": -973.64,
-      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1947.28,
+      "reason": "theme score 19.5 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-2.01%",
         "theme=Semiconductors (Broad)"
@@ -1382,14 +1380,14 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0196,
+      "target_weight": 0.0174,
       "current_weight": 0.0392,
-      "notional_delta": -1995.96,
-      "reason": "overweight by 1.96% vs target \u2014 trim",
+      "notional_delta": -2219.59,
+      "reason": "overweight by 2.18% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.60%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.7 (starter), contribution 53.9"
+        "theme 'Financials & Rates' score 43.7 (starter), contribution 50.9"
       ],
       "theme_key": "financials"
     },
@@ -1413,11 +1411,11 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.015,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.03,
-      "notional_delta": -1526.87,
-      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -3053.74,
+      "reason": "theme score 19.5 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=0.23%",
         "theme=Semiconductors (Broad)"
@@ -1433,7 +1431,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -93.26,
-      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.89%",
         "theme=AI & Compute"
@@ -1463,11 +1461,11 @@
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.33,
-      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.65,
+      "reason": "theme score 19.5 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-7.12%",
         "theme=Semiconductors (Broad)"
@@ -1483,7 +1481,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute"
@@ -1514,14 +1512,14 @@
     {
       "symbol": "BAC",
       "action": "REDUCE",
-      "target_weight": 0.0211,
+      "target_weight": 0.0188,
       "current_weight": 0.0409,
-      "notional_delta": -2011.11,
-      "reason": "overweight by 1.98% vs target \u2014 trim",
+      "notional_delta": -2244.9,
+      "reason": "overweight by 2.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.7 (starter), contribution 57.9"
+        "theme 'Financials & Rates' score 43.7 (starter), contribution 54.9"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1591,7 +1589,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.01%",
         "theme=EV & Clean Transport"
@@ -1663,7 +1661,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -4.43,
-      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.09%",
         "theme=EV & Clean Transport"
@@ -1679,7 +1677,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
@@ -1709,15 +1707,15 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.0358,
+      "action": "BUY",
+      "target_weight": 0.0363,
       "current_weight": 0.0313,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 512.55,
+      "reason": "underweight by 0.50% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.3 (buy), contribution 73.3"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 72.8"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1727,14 +1725,14 @@
     {
       "symbol": "JPM",
       "action": "REDUCE",
-      "target_weight": 0.019,
+      "target_weight": 0.0168,
       "current_weight": 0.0376,
-      "notional_delta": -1892.86,
-      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 overweight by 1.86% vs target \u2014 trim",
+      "notional_delta": -2116.48,
+      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 overweight by 2.08% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.92%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.7 (starter), contribution 52.3",
+        "theme 'Financials & Rates' score 43.7 (starter), contribution 49.3",
         "news_source=benzinga",
         "event=legal risk",
         "news_sentiment=-0.20"
@@ -1750,7 +1748,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -5.01,
-      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=15.40%",
         "theme=EV & Clean Transport"
@@ -1800,11 +1798,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
-      "target_weight": 0.0106,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0212,
-      "notional_delta": -1078.55,
-      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2157.11,
+      "reason": "theme score 19.5 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-1.83%",
         "theme=Semiconductors (Broad)"
@@ -1817,14 +1815,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0211,
+      "target_weight": 0.0212,
       "current_weight": 0.0174,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.3 (buy), contribution 43.1"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 42.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1837,7 +1835,7 @@
       "target_weight": 0.0005,
       "current_weight": 0.0011,
       "notional_delta": -54.83,
-      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1889,12 +1887,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1903,16 +1899,16 @@
     },
     {
       "symbol": "MU",
-      "action": "REDUCE",
-      "target_weight": 0.0107,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0214,
-      "notional_delta": -1087.77,
-      "reason": "trimming on negative news flow \u2014 \"Nike Stock Gets A Rude Awakening As Technicals Point To More Weakness Ahead Of Earnings\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2175.54,
+      "reason": "exiting on mixed news flow \u2014 \"Dow Jones and Nasdaq 100: Top 4 Events Investors Should Watch This Week\" \u00b7 theme score 19.5 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1961,7 +1957,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -2071,7 +2067,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -3.85,
-      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.53%",
         "theme=EV & Clean Transport"
@@ -2121,14 +2117,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0345,
+      "target_weight": 0.0349,
       "current_weight": 0.033,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.81%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.3 (buy), contribution 70.5"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 70.0"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2177,7 +2173,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0017,
       "notional_delta": -86.23,
-      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.74%",
         "theme=AI & Compute"
@@ -2193,7 +2189,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -4.31,
-      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 theme score 30.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 theme score 29.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.38%",
         "theme=EV & Clean Transport",
@@ -2208,11 +2204,11 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0096,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0192,
-      "notional_delta": -973.64,
-      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1947.28,
+      "reason": "theme score 19.5 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-2.01%",
         "theme=Semiconductors (Broad)"
@@ -2244,14 +2240,14 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0196,
+      "target_weight": 0.0174,
       "current_weight": 0.0392,
-      "notional_delta": -1995.96,
-      "reason": "overweight by 1.96% vs target \u2014 trim",
+      "notional_delta": -2219.59,
+      "reason": "overweight by 2.18% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.60%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.7 (starter), contribution 53.9"
+        "theme 'Financials & Rates' score 43.7 (starter), contribution 50.9"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -3618,6 +3614,10 @@
     {
       "t": "2026-06-28T18:16:16+00:00",
       "v": 101646.92
+    },
+    {
+      "t": "2026-06-28T19:50:18+00:00",
+      "v": 101646.92
     }
   ],
   "breaking_news": [
@@ -3626,7 +3626,7 @@
       "summary": "During his chairmanship, Greenspan was celebrated as possibly the best central banker in history. But later, his reputation was tarnished by the worst financial crisis since the Great Depression.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/656930918/alan-greenspan-the-legendary-former-federal-reserve-chair-dies",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3635,7 +3635,7 @@
       "summary": "One of the most intellectually important relationships in the life of the late Fed chair Alan Greenspan was with his close friend, the formidable novelist and libertarian thinker Ayn Rand.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/nx-s1-5866558/alan-greenspan-dead-ayn-rand",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3644,7 +3644,7 @@
       "summary": "Denver renters are celebrating falling housing costs. But sometimes cheaper housing is a sign of economic decline. How can you tell the difference?",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/06/23/g-s1-129339/when-falling-housing-prices-are-good-news-and-when-theyre-not",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3653,7 +3653,7 @@
       "summary": "Investors are selling off AI-related stocks as doubts are starting to surface over whether the massive spending on AI is worth the investment and whether it's \"one big bubble.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867633/ai-selloff-tech-stocks-bubble-nasdaq",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3662,7 +3662,7 @@
       "summary": "President Trump canceled a signing ceremony for the bill Wednesday, saying Congress must first pass a strict voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867575/congress-passes-housing-affordability-bill",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3671,7 +3671,7 @@
       "summary": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/24/nx-s1-5869486/meta-prediction-market-app-ai",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3680,7 +3680,7 @@
       "summary": "The ordeal has left fans forced to either miss out on a once-in-a-lifetime opportunity or scramble to find new tickets, often costing more and for worse seats.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/26/nx-s1-5871397/world-cup-tickets-stubhub-resale-controversy",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3689,7 +3689,7 @@
       "summary": "Don't let your leftovers go to waste. Cookbook authors share clever storage techniques \u2014 like an \"Eat Me First\" box in your fridge \u2014 and cooking tricks to help you make the most of your food scraps.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/27/nx-s1-5786564/4-ways-get-creative-with-your-leftovers-save-money-on-food",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3698,7 +3698,7 @@
       "summary": "A number of blazes have been raging across Utah and Colorado, leading both governors to declare states of emergency.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cp8l7mpmdggo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3707,7 +3707,7 @@
       "summary": "The aircraft belonged to state oil giant Aramco and the cause of the crash is being investigated.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c3eyd9j5g7xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3716,7 +3716,7 @@
       "summary": "The 17-year-old's body was found discarded near a railway track on Saturday, police say.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cd0my5zy821o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3725,16 +3725,16 @@
       "summary": "Iran says it has launched retaliatory attacks at US infrastructure in Kuwait and Bahrain after the US said it hit multiple targets across Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdxdwkgqgq0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "Eleven killed after plane carrying skydivers crashes in eastern France",
-      "summary": "The pilot and 10 passengers died in the incident, local officials said.",
+      "summary": "The pilot and 10 passengers - including five first-time parachutists - died in the incident, local officials said.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5yz9yj9x74o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3743,7 +3743,7 @@
       "summary": "WHO chief Tedros Adhanom Ghebreyesus warned that Europe is not prepared for high temperatures.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cn4d2vv935lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3752,7 +3752,7 @@
       "summary": "Rescue teams are working ceaselessly to reach those trapped under rubble. But as hope fades, anger is growing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdjk8zwe7z3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3761,7 +3761,7 @@
       "summary": "Rescuers spent six hours carefully digging to reach one of the boys, as many residents continue searching through the rubble by hand, still waiting for heavy machinery to arrive.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr47dvywvy5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:24+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3770,7 +3770,7 @@
       "summary": "When the conflict began on 28 February, fuel costs jumped as the war disrupted the production and transportation of energy across the Middle East.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3779,7 +3779,7 @@
       "summary": "Trading on South Korea's Kospi index was halted for the third time this week to prevent panic selling.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce8jz40k00ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:23+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3788,7 +3788,7 @@
       "summary": "Lithium battery fires are the number one safety risk to aircraft, yet the number of devices found in hold bags has nearly doubled in a year.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cly716qd146o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3797,7 +3797,7 @@
       "summary": "Rising costs are forcing more young adults to live with their parents, here's how not to come to blows.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cg53q6dl0plo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T18:16:19+00:00",
+      "published_utc": "2026-06-28T19:50:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
