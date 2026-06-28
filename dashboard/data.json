@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-28T10:53:35+00:00",
+  "generated_at_utc": "2026-06-28T12:19:55+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 330,
-  "last_success_utc": "2026-06-28T08:27:23+00:00",
+  "cycle_count": 331,
+  "last_success_utc": "2026-06-28T10:53:35+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -547,14 +547,14 @@
     {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 61.07,
-      "raw_score": 76.38,
+      "score": 60.89,
+      "raw_score": 76.2,
       "band": "buy",
-      "weight": 0.1202,
+      "weight": 0.1196,
       "confidence": 1.0,
       "components": {
         "momentum": 91.0,
-        "sentiment": 94.73,
+        "sentiment": 94.12,
         "volume": 30.29,
         "policy": 55.0,
         "volatility_penalty": 15.31
@@ -625,10 +625,26 @@
       }
     },
     {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 34.46,
+      "raw_score": 50.23,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.85,
+      "components": {
+        "momentum": 45.82,
+        "sentiment": 50.0,
+        "volume": 59.5,
+        "policy": 50.0,
+        "volatility_penalty": 15.77
+      }
+    },
+    {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 33.87,
-      "raw_score": 51.7,
+      "score": 34.37,
+      "raw_score": 52.2,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
@@ -636,7 +652,7 @@
         "momentum": 23.32,
         "sentiment": 88.0,
         "volume": 52.35,
-        "policy": 55.0,
+        "policy": 60.0,
         "volatility_penalty": 17.83
       }
     },
@@ -657,32 +673,16 @@
       }
     },
     {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 29.46,
-      "raw_score": 45.23,
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 28.83,
+      "raw_score": 39.72,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 0.85,
       "components": {
-        "momentum": 45.82,
-        "sentiment": 33.34,
-        "volume": 59.5,
-        "policy": 50.0,
-        "volatility_penalty": 15.77
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 25.83,
-      "raw_score": 36.72,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.9,
-      "components": {
         "momentum": 15.47,
-        "sentiment": 50.0,
+        "sentiment": 60.0,
         "volume": 52.65,
         "policy": 50.0,
         "volatility_penalty": 10.88
@@ -696,7 +696,7 @@
       "target_weight": 0.015,
       "current_weight": 0.03,
       "notional_delta": -1526.87,
-      "reason": "theme score 29.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.23%",
         "theme=Semiconductors (Broad)"
@@ -709,7 +709,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -93.26,
-      "reason": "theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.89%",
         "theme=AI & Compute"
@@ -737,7 +737,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.33,
-      "reason": "theme score 29.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-7.12%",
         "theme=Semiconductors (Broad)"
@@ -750,7 +750,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute"
@@ -805,14 +805,14 @@
     {
       "symbol": "CRWD",
       "action": "BUY",
-      "target_weight": 0.0363,
+      "target_weight": 0.0361,
       "current_weight": 0.0286,
-      "notional_delta": 785.42,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 0.77% vs target \u2014 add",
+      "notional_delta": 765.09,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 0.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.57%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 61.1 (buy), contribution 62.0",
+        "theme 'Cybersecurity' score 60.9 (buy), contribution 61.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -853,7 +853,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.95,
-      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.70%",
         "theme=Clean Energy",
@@ -866,14 +866,14 @@
     {
       "symbol": "FTNT",
       "action": "BUY",
-      "target_weight": 0.0412,
+      "target_weight": 0.041,
       "current_weight": 0.0194,
-      "notional_delta": 2220.61,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 2.18% vs target \u2014 add",
+      "notional_delta": 2200.28,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 2.16% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.48%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 61.1 (buy), contribution 70.5",
+        "theme 'Cybersecurity' score 60.9 (buy), contribution 70.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -914,7 +914,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on positive news flow \u2014 \"Tech's Grip On S&P 500 Hits Record 39% As AI Rally Pushes Concentration Beyond Dot-Com Peak\" \u00b7 theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Tech's Grip On S&P 500 Hits Record 39% As AI Rally Pushes Concentration Beyond Dot-Com Peak\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
@@ -986,13 +986,13 @@
       "target_weight": 0.0506,
       "current_weight": 0.0384,
       "notional_delta": 1238.48,
-      "reason": "buying on negative news flow \u2014 \"A CFO Departure. A Clinical Miss. A $43 Billion Question Mark. Should You Throw in the Towel on Pfizer Stock?\" \u00b7 underweight by 1.22% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 1.22% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.56%",
         "theme=Biotech & Pharma",
         "theme 'Biotech & Pharma' score 70.1 (strong_buy), contribution 78.5",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1018,7 +1018,7 @@
       "target_weight": 0.0106,
       "current_weight": 0.0212,
       "notional_delta": -1078.55,
-      "reason": "theme score 29.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.83%",
         "theme=Semiconductors (Broad)"
@@ -1045,7 +1045,7 @@
       "target_weight": 0.0005,
       "current_weight": 0.0011,
       "notional_delta": -54.83,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1060,12 +1060,12 @@
       "target_weight": 0.0,
       "current_weight": 0.052,
       "notional_delta": -5281.55,
-      "reason": "exiting on negative news flow \u2014 \"A CFO Departure. A Clinical Miss. A $43 Billion Question Mark. Should You Throw in the Towel on Pfizer Stock?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=13.23%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1088,7 +1088,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
         "theme=AI & Compute",
@@ -1103,7 +1103,7 @@
       "target_weight": 0.0107,
       "current_weight": 0.0214,
       "notional_delta": -1087.77,
-      "reason": "trimming on negative news flow \u2014 \"Nike Stock Gets A Rude Awakening As Technicals Point To More Weakness Ahead Of Earnings\" \u00b7 theme score 29.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Nike Stock Gets A Rude Awakening As Technicals Point To More Weakness Ahead Of Earnings\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Semiconductors (Broad)",
@@ -1118,7 +1118,7 @@
       "target_weight": 0.0027,
       "current_weight": 0.0054,
       "notional_delta": -272.44,
-      "reason": "trimming on M&A (positive) \u2014 \"NextEra Energy (NEE) Is Buying Dominion As AI Data Center Demand Builds\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on M&A (positive) \u2014 \"NextEra Energy (NEE) Is Buying Dominion As AI Data Center Demand Builds\" \u00b7 theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=2.09%",
         "theme=Clean Energy",
@@ -1149,7 +1149,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -1191,14 +1191,14 @@
     {
       "symbol": "PANW",
       "action": "BUY",
-      "target_weight": 0.0427,
+      "target_weight": 0.0425,
       "current_weight": 0.0193,
-      "notional_delta": 2383.17,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 2.34% vs target \u2014 add",
+      "notional_delta": 2362.84,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 2.32% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.22%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 61.1 (buy), contribution 73.0",
+        "theme 'Cybersecurity' score 60.9 (buy), contribution 72.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1210,12 +1210,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.32,
-      "reason": "exiting on negative news flow \u2014 \"A CFO Departure. A Clinical Miss. A $43 Billion Question Mark. Should You Throw in the Towel on Pfizer Stock?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.79%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1225,13 +1225,13 @@
       "target_weight": 0.0455,
       "current_weight": 0.0354,
       "notional_delta": 1030.14,
-      "reason": "buying on negative news flow \u2014 \"A CFO Departure. A Clinical Miss. A $43 Billion Question Mark. Should You Throw in the Towel on Pfizer Stock?\" \u00b7 underweight by 1.01% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 1.01% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.82%",
         "theme=Biotech & Pharma",
         "theme 'Biotech & Pharma' score 70.1 (strong_buy), contribution 70.5",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1270,7 +1270,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.39%",
         "theme=Clean Energy",
@@ -1300,7 +1300,7 @@
       "target_weight": 0.0004,
       "current_weight": 0.0007,
       "notional_delta": -36.65,
-      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.91%",
         "theme=Clean Energy",
@@ -1331,7 +1331,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0017,
       "notional_delta": -86.23,
-      "reason": "theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.74%",
         "theme=AI & Compute"
@@ -1360,7 +1360,7 @@
       "target_weight": 0.0096,
       "current_weight": 0.0192,
       "notional_delta": -973.64,
-      "reason": "theme score 29.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.01%",
         "theme=Semiconductors (Broad)"
@@ -1373,13 +1373,13 @@
       "target_weight": 0.0541,
       "current_weight": 0.0393,
       "notional_delta": 1507.0,
-      "reason": "buying on negative news flow \u2014 \"A CFO Departure. A Clinical Miss. A $43 Billion Question Mark. Should You Throw in the Towel on Pfizer Stock?\" \u00b7 underweight by 1.48% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 1.48% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.27%",
         "theme=Biotech & Pharma",
         "theme 'Biotech & Pharma' score 70.1 (strong_buy), contribution 83.9",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1421,7 +1421,7 @@
       "target_weight": 0.015,
       "current_weight": 0.03,
       "notional_delta": -1526.87,
-      "reason": "theme score 29.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.23%",
         "theme=Semiconductors (Broad)"
@@ -1437,7 +1437,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -93.26,
-      "reason": "theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.89%",
         "theme=AI & Compute"
@@ -1471,7 +1471,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.33,
-      "reason": "theme score 29.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-7.12%",
         "theme=Semiconductors (Broad)"
@@ -1487,7 +1487,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute"
@@ -1554,14 +1554,14 @@
     {
       "symbol": "CRWD",
       "action": "BUY",
-      "target_weight": 0.0363,
+      "target_weight": 0.0361,
       "current_weight": 0.0286,
-      "notional_delta": 785.42,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 0.77% vs target \u2014 add",
+      "notional_delta": 765.09,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 0.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.57%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 61.1 (buy), contribution 62.0",
+        "theme 'Cybersecurity' score 60.9 (buy), contribution 61.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1611,7 +1611,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.95,
-      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.70%",
         "theme=Clean Energy",
@@ -1627,14 +1627,14 @@
     {
       "symbol": "FTNT",
       "action": "BUY",
-      "target_weight": 0.0412,
+      "target_weight": 0.041,
       "current_weight": 0.0194,
-      "notional_delta": 2220.61,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 2.18% vs target \u2014 add",
+      "notional_delta": 2200.28,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 2.16% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.48%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 61.1 (buy), contribution 70.5",
+        "theme 'Cybersecurity' score 60.9 (buy), contribution 70.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1684,7 +1684,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on positive news flow \u2014 \"Tech's Grip On S&P 500 Hits Record 39% As AI Rally Pushes Concentration Beyond Dot-Com Peak\" \u00b7 theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Tech's Grip On S&P 500 Hits Record 39% As AI Rally Pushes Concentration Beyond Dot-Com Peak\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
@@ -1771,13 +1771,13 @@
       "target_weight": 0.0506,
       "current_weight": 0.0384,
       "notional_delta": 1238.48,
-      "reason": "buying on negative news flow \u2014 \"A CFO Departure. A Clinical Miss. A $43 Billion Question Mark. Should You Throw in the Towel on Pfizer Stock?\" \u00b7 underweight by 1.22% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 1.22% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.56%",
         "theme=Biotech & Pharma",
         "theme 'Biotech & Pharma' score 70.1 (strong_buy), contribution 78.5",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1809,7 +1809,7 @@
       "target_weight": 0.0106,
       "current_weight": 0.0212,
       "notional_delta": -1078.55,
-      "reason": "theme score 29.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.83%",
         "theme=Semiconductors (Broad)"
@@ -1842,7 +1842,7 @@
       "target_weight": 0.0005,
       "current_weight": 0.0011,
       "notional_delta": -54.83,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1860,12 +1860,12 @@
       "target_weight": 0.0,
       "current_weight": 0.052,
       "notional_delta": -5281.55,
-      "reason": "exiting on negative news flow \u2014 \"A CFO Departure. A Clinical Miss. A $43 Billion Question Mark. Should You Throw in the Towel on Pfizer Stock?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=13.23%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1894,7 +1894,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
         "theme=AI & Compute",
@@ -1912,7 +1912,7 @@
       "target_weight": 0.0107,
       "current_weight": 0.0214,
       "notional_delta": -1087.77,
-      "reason": "trimming on negative news flow \u2014 \"Nike Stock Gets A Rude Awakening As Technicals Point To More Weakness Ahead Of Earnings\" \u00b7 theme score 29.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Nike Stock Gets A Rude Awakening As Technicals Point To More Weakness Ahead Of Earnings\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Semiconductors (Broad)",
@@ -1930,7 +1930,7 @@
       "target_weight": 0.0027,
       "current_weight": 0.0054,
       "notional_delta": -272.44,
-      "reason": "trimming on M&A (positive) \u2014 \"NextEra Energy (NEE) Is Buying Dominion As AI Data Center Demand Builds\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on M&A (positive) \u2014 \"NextEra Energy (NEE) Is Buying Dominion As AI Data Center Demand Builds\" \u00b7 theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=2.09%",
         "theme=Clean Energy",
@@ -1967,7 +1967,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -2018,14 +2018,14 @@
     {
       "symbol": "PANW",
       "action": "BUY",
-      "target_weight": 0.0427,
+      "target_weight": 0.0425,
       "current_weight": 0.0193,
-      "notional_delta": 2383.17,
-      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 2.34% vs target \u2014 add",
+      "notional_delta": 2362.84,
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 2.32% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.22%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 61.1 (buy), contribution 73.0",
+        "theme 'Cybersecurity' score 60.9 (buy), contribution 72.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2040,12 +2040,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.32,
-      "reason": "exiting on negative news flow \u2014 \"A CFO Departure. A Clinical Miss. A $43 Billion Question Mark. Should You Throw in the Towel on Pfizer Stock?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.79%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2058,13 +2058,13 @@
       "target_weight": 0.0455,
       "current_weight": 0.0354,
       "notional_delta": 1030.14,
-      "reason": "buying on negative news flow \u2014 \"A CFO Departure. A Clinical Miss. A $43 Billion Question Mark. Should You Throw in the Towel on Pfizer Stock?\" \u00b7 underweight by 1.01% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 1.01% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.82%",
         "theme=Biotech & Pharma",
         "theme 'Biotech & Pharma' score 70.1 (strong_buy), contribution 70.5",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2112,7 +2112,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.39%",
         "theme=Clean Energy",
@@ -2148,7 +2148,7 @@
       "target_weight": 0.0004,
       "current_weight": 0.0007,
       "notional_delta": -36.65,
-      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on analyst downgrade (positive) \u2014 \"Dominion Energy (D) Price Target Lowered at Barclays. Here is Why\" \u00b7 theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.91%",
         "theme=Clean Energy",
@@ -2185,7 +2185,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0017,
       "notional_delta": -86.23,
-      "reason": "theme score 25.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.74%",
         "theme=AI & Compute"
@@ -2220,7 +2220,7 @@
       "target_weight": 0.0096,
       "current_weight": 0.0192,
       "notional_delta": -973.64,
-      "reason": "theme score 29.5 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.01%",
         "theme=Semiconductors (Broad)"
@@ -2236,13 +2236,13 @@
       "target_weight": 0.0541,
       "current_weight": 0.0393,
       "notional_delta": 1507.0,
-      "reason": "buying on negative news flow \u2014 \"A CFO Departure. A Clinical Miss. A $43 Billion Question Mark. Should You Throw in the Towel on Pfizer Stock?\" \u00b7 underweight by 1.48% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Dow Jones Futures: Market At Tipping Point As U.S.-Iran Attacks Escalate. Tesla, Jobs On Tap.\" \u00b7 underweight by 1.48% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.27%",
         "theme=Biotech & Pharma",
         "theme 'Biotech & Pharma' score 70.1 (strong_buy), contribution 83.9",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -3606,6 +3606,10 @@
     {
       "t": "2026-06-28T10:53:30+00:00",
       "v": 101646.92
+    },
+    {
+      "t": "2026-06-28T12:19:51+00:00",
+      "v": 101646.92
     }
   ],
   "breaking_news": [
@@ -3614,7 +3618,7 @@
       "summary": "During his chairmanship, Greenspan was celebrated as possibly the best central banker in history. But later, his reputation was tarnished by the worst financial crisis since the Great Depression.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/656930918/alan-greenspan-the-legendary-former-federal-reserve-chair-dies",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3623,7 +3627,7 @@
       "summary": "One of the most intellectually important relationships in the life of the late Fed chair Alan Greenspan was with his close friend, the formidable novelist and libertarian thinker Ayn Rand.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/nx-s1-5866558/alan-greenspan-dead-ayn-rand",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3632,7 +3636,7 @@
       "summary": "Denver renters are celebrating falling housing costs. But sometimes cheaper housing is a sign of economic decline. How can you tell the difference?",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/06/23/g-s1-129339/when-falling-housing-prices-are-good-news-and-when-theyre-not",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3641,7 +3645,7 @@
       "summary": "Investors are selling off AI-related stocks as doubts are starting to surface over whether the massive spending on AI is worth the investment and whether it's \"one big bubble.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867633/ai-selloff-tech-stocks-bubble-nasdaq",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3650,7 +3654,7 @@
       "summary": "President Trump canceled a signing ceremony for the bill Wednesday, saying Congress must first pass a strict voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867575/congress-passes-housing-affordability-bill",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3659,7 +3663,7 @@
       "summary": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/24/nx-s1-5869486/meta-prediction-market-app-ai",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3668,7 +3672,7 @@
       "summary": "The ordeal has left fans forced to either miss out on a once-in-a-lifetime opportunity or scramble to find new tickets, often costing more and for worse seats.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/26/nx-s1-5871397/world-cup-tickets-stubhub-resale-controversy",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3677,7 +3681,7 @@
       "summary": "Don't let your leftovers go to waste. Cookbook authors share clever storage techniques \u2014 like an \"Eat Me First\" box in your fridge \u2014 and cooking tricks to help you make the most of your food scraps.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/27/nx-s1-5786564/4-ways-get-creative-with-your-leftovers-save-money-on-food",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3686,7 +3690,7 @@
       "summary": "Hundreds more animals are still missing from the California facility as investigators continue excavating the grounds.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj4gqz5lx1eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3695,7 +3699,7 @@
       "summary": "The commemorative special edition passports will be available on 6 July, and can only be applied for in person",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ce3ewkdgw9ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3704,7 +3708,7 @@
       "summary": "An estimated 150 million people have been experiencing temperatures of over 35C across Europe.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2vdydz31no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3713,7 +3717,7 @@
       "summary": "Strikes have killed at least one person, state media say a day after Lebanon and Israel signed a framework agreement.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2kpn0eeweo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3722,7 +3726,7 @@
       "summary": "Very few North Koreans know about her, as her origin could threaten the regime\u2019s legitimacy.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpvp3xn489no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3731,7 +3735,7 @@
       "summary": "Iran says it has launched retaliatory attacks at US infrastructure in Kuwait and Bahrain after the US said it hit multiple targets across Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdxdwkgqgq0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3740,7 +3744,7 @@
       "summary": "Rescue teams are working ceaselessly to reach those trapped under rubble. But as hope fades, anger is growing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdjk8zwe7z3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3749,7 +3753,7 @@
       "summary": "In La Guaira, desperate families keep vigil at buildings where they fear their relatives are trapped, but face an impossible task to move heavy debris.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cp8l451420zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3758,7 +3762,7 @@
       "summary": "When the conflict began on 28 February, fuel costs jumped as the war disrupted the production and transportation of energy across the Middle East.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3767,7 +3771,7 @@
       "summary": "Trading on South Korea's Kospi index was halted for the third time this week to prevent panic selling.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce8jz40k00ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3776,7 +3780,7 @@
       "summary": "Lithium battery fires are the number one safety risk to aircraft, yet the number of devices found in hold bags has nearly doubled in a year.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cly716qd146o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3785,7 +3789,7 @@
       "summary": "Rising costs are forcing more young adults to live with their parents, here's how not to come to blows.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cg53q6dl0plo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T10:53:35+00:00",
+      "published_utc": "2026-06-28T12:19:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
