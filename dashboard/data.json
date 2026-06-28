@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-06-28T12:19:55+00:00",
+  "generated_at_utc": "2026-06-28T14:20:25+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 331,
-  "last_success_utc": "2026-06-28T10:53:35+00:00",
+  "cycle_count": 332,
+  "last_success_utc": "2026-06-28T12:19:55+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -545,6 +545,22 @@
       }
     },
     {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 61.98,
+      "raw_score": 61.98,
+      "band": "buy",
+      "weight": 0.1233,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 40.42,
+        "sentiment": 100.0,
+        "volume": 51.56,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 60.89,
@@ -558,22 +574,6 @@
         "volume": 30.29,
         "policy": 55.0,
         "volatility_penalty": 15.31
-      }
-    },
-    {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 60.6,
-      "raw_score": 60.6,
-      "band": "buy",
-      "weight": 0.1187,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 40.42,
-        "sentiment": 93.75,
-        "volume": 51.56,
-        "policy": 60.0,
-        "volatility_penalty": 0.0
       }
     },
     {
@@ -595,16 +595,16 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 46.86,
-      "raw_score": 47.59,
+      "score": 47.36,
+      "raw_score": 48.09,
       "band": "starter",
-      "weight": 0.0729,
+      "weight": 0.0745,
       "confidence": 1.0,
       "components": {
         "momentum": 23.14,
         "sentiment": 71.43,
         "volume": 52.03,
-        "policy": 65.0,
+        "policy": 70.0,
         "volatility_penalty": 0.73
       }
     },
@@ -657,35 +657,35 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 31.99,
-      "raw_score": 41.86,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 38.64,
-        "sentiment": 40.0,
-        "volume": 47.01,
-        "policy": 50.0,
-        "volatility_penalty": 9.87
-      }
-    },
-    {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 28.83,
-      "raw_score": 39.72,
+      "score": 30.83,
+      "raw_score": 41.72,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.85,
+      "confidence": 0.9,
       "components": {
         "momentum": 15.47,
-        "sentiment": 60.0,
+        "sentiment": 66.66,
         "volume": 52.65,
         "policy": 50.0,
         "volatility_penalty": 10.88
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 30.49,
+      "raw_score": 40.36,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 38.64,
+        "sentiment": 35.0,
+        "volume": 47.01,
+        "policy": 50.0,
+        "volatility_penalty": 9.87
       }
     }
   ],
@@ -709,7 +709,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -93.26,
-      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.89%",
         "theme=AI & Compute"
@@ -750,7 +750,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute"
@@ -763,7 +763,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0366,
       "notional_delta": -3716.73,
-      "reason": "exiting on positive news flow \u2014 \"Ondas (ONDS), Lockheed Martin Collaborate to Integrate Sentrycs Technology into Sanctum Counter-UAS Platform\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Huntington Ingalls Industries vs. Lockheed Martin: Which Industrial Stock Is a Better Buy in 2026?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.61%",
         "theme=Defense & Aerospace",
@@ -789,14 +789,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0236,
+      "target_weight": 0.0242,
       "current_weight": 0.0,
-      "notional_delta": 2398.86,
-      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 2.36% vs target \u2014 add",
+      "notional_delta": 2459.84,
+      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 2.42% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.13%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.9 (starter), contribution 50.7",
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 51.2",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -821,14 +821,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0246,
+      "target_weight": 0.0252,
       "current_weight": 0.011,
-      "notional_delta": 1384.43,
-      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 1.36% vs target \u2014 add",
+      "notional_delta": 1445.42,
+      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 1.42% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.45%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.9 (starter), contribution 52.8",
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 53.3",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -840,7 +840,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 32.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.01%",
         "theme=EV & Clean Transport"
@@ -882,14 +882,14 @@
     {
       "symbol": "GD",
       "action": "HOLD",
-      "target_weight": 0.0377,
+      "target_weight": 0.0392,
       "current_weight": 0.0364,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Ondas (ONDS), Lockheed Martin Collaborate to Integrate Sentrycs Technology into Sanctum Counter-UAS Platform\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Huntington Ingalls Industries vs. Lockheed Martin: Which Industrial Stock Is a Better Buy in 2026?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.6 (buy), contribution 61.4",
+        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 62.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -901,7 +901,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -4.43,
-      "reason": "theme score 32.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.09%",
         "theme=EV & Clean Transport"
@@ -914,7 +914,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on positive news flow \u2014 \"Tech's Grip On S&P 500 Hits Record 39% As AI Rally Pushes Concentration Beyond Dot-Com Peak\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
@@ -973,7 +973,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -5.01,
-      "reason": "theme score 32.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=15.40%",
         "theme=EV & Clean Transport"
@@ -998,15 +998,15 @@
     },
     {
       "symbol": "LMT",
-      "action": "HOLD",
-      "target_weight": 0.0392,
+      "action": "BUY",
+      "target_weight": 0.0407,
       "current_weight": 0.0354,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Ondas (ONDS), Lockheed Martin Collaborate to Integrate Sentrycs Technology into Sanctum Counter-UAS Platform\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 534.01,
+      "reason": "buying on positive news flow \u2014 \"Huntington Ingalls Industries vs. Lockheed Martin: Which Industrial Stock Is a Better Buy in 2026?\" \u00b7 underweight by 0.53% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.12%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.6 (buy), contribution 63.9",
+        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 65.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1045,7 +1045,7 @@
       "target_weight": 0.0005,
       "current_weight": 0.0011,
       "notional_delta": -54.83,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1088,7 +1088,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
         "theme=AI & Compute",
@@ -1149,7 +1149,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -1241,7 +1241,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -3.85,
-      "reason": "theme score 32.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.53%",
         "theme=EV & Clean Transport"
@@ -1250,15 +1250,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.0418,
+      "action": "BUY",
+      "target_weight": 0.0434,
       "current_weight": 0.0375,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Ondas (ONDS), Lockheed Martin Collaborate to Integrate Sentrycs Technology into Sanctum Counter-UAS Platform\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 595.23,
+      "reason": "buying on positive news flow \u2014 \"Huntington Ingalls Industries vs. Lockheed Martin: Which Industrial Stock Is a Better Buy in 2026?\" \u00b7 underweight by 0.59% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.98%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.6 (buy), contribution 68.1",
+        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 69.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1331,7 +1331,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0017,
       "notional_delta": -86.23,
-      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.74%",
         "theme=AI & Compute"
@@ -1344,7 +1344,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -4.31,
-      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 theme score 32.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 theme score 30.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.38%",
         "theme=EV & Clean Transport",
@@ -1400,14 +1400,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0246,
+      "target_weight": 0.0252,
       "current_weight": 0.0117,
-      "notional_delta": 1313.48,
-      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 1.29% vs target \u2014 add",
+      "notional_delta": 1374.47,
+      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 1.35% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.40%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.9 (starter), contribution 52.8",
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 53.3",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -1437,7 +1437,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -93.26,
-      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.89%",
         "theme=AI & Compute"
@@ -1487,7 +1487,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.43%",
         "theme=AI & Compute"
@@ -1503,7 +1503,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0366,
       "notional_delta": -3716.73,
-      "reason": "exiting on positive news flow \u2014 \"Ondas (ONDS), Lockheed Martin Collaborate to Integrate Sentrycs Technology into Sanctum Counter-UAS Platform\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Huntington Ingalls Industries vs. Lockheed Martin: Which Industrial Stock Is a Better Buy in 2026?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.61%",
         "theme=Defense & Aerospace",
@@ -1535,14 +1535,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0236,
+      "target_weight": 0.0242,
       "current_weight": 0.0,
-      "notional_delta": 2398.86,
-      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 2.36% vs target \u2014 add",
+      "notional_delta": 2459.84,
+      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 2.42% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.13%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.9 (starter), contribution 50.7",
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 51.2",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -1573,14 +1573,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0246,
+      "target_weight": 0.0252,
       "current_weight": 0.011,
-      "notional_delta": 1384.43,
-      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 1.36% vs target \u2014 add",
+      "notional_delta": 1445.42,
+      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 1.42% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.45%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.9 (starter), contribution 52.8",
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 53.3",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -1595,7 +1595,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 32.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.01%",
         "theme=EV & Clean Transport"
@@ -1646,14 +1646,14 @@
     {
       "symbol": "GD",
       "action": "HOLD",
-      "target_weight": 0.0377,
+      "target_weight": 0.0392,
       "current_weight": 0.0364,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Ondas (ONDS), Lockheed Martin Collaborate to Integrate Sentrycs Technology into Sanctum Counter-UAS Platform\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Huntington Ingalls Industries vs. Lockheed Martin: Which Industrial Stock Is a Better Buy in 2026?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.6 (buy), contribution 61.4",
+        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 62.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1668,7 +1668,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -4.43,
-      "reason": "theme score 32.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.09%",
         "theme=EV & Clean Transport"
@@ -1684,7 +1684,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on positive news flow \u2014 \"Tech's Grip On S&P 500 Hits Record 39% As AI Rally Pushes Concentration Beyond Dot-Com Peak\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.34%",
         "theme=AI & Compute",
@@ -1755,7 +1755,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -5.01,
-      "reason": "theme score 32.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=15.40%",
         "theme=EV & Clean Transport"
@@ -1786,15 +1786,15 @@
     },
     {
       "symbol": "LMT",
-      "action": "HOLD",
-      "target_weight": 0.0392,
+      "action": "BUY",
+      "target_weight": 0.0407,
       "current_weight": 0.0354,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Ondas (ONDS), Lockheed Martin Collaborate to Integrate Sentrycs Technology into Sanctum Counter-UAS Platform\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 534.01,
+      "reason": "buying on positive news flow \u2014 \"Huntington Ingalls Industries vs. Lockheed Martin: Which Industrial Stock Is a Better Buy in 2026?\" \u00b7 underweight by 0.53% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.12%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.6 (buy), contribution 63.9",
+        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 65.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1842,7 +1842,7 @@
       "target_weight": 0.0005,
       "current_weight": 0.0011,
       "notional_delta": -54.83,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Google Limits Meta's Access To Gemini AI Models Amid Rising Demand: Report\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1894,7 +1894,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"MAGS ETF: Magnificent 7 Outflows Surge as Investors Rotate Into DRAM\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.05%",
         "theme=AI & Compute",
@@ -1967,7 +1967,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Nobel Economist Robert Shiller Warns AI Job Loss Fears Could Become A Self-Fulfilling Prophecy\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.36%",
         "theme=AI & Compute",
@@ -2077,7 +2077,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -3.85,
-      "reason": "theme score 32.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.53%",
         "theme=EV & Clean Transport"
@@ -2089,15 +2089,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.0418,
+      "action": "BUY",
+      "target_weight": 0.0434,
       "current_weight": 0.0375,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Ondas (ONDS), Lockheed Martin Collaborate to Integrate Sentrycs Technology into Sanctum Counter-UAS Platform\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 595.23,
+      "reason": "buying on positive news flow \u2014 \"Huntington Ingalls Industries vs. Lockheed Martin: Which Industrial Stock Is a Better Buy in 2026?\" \u00b7 underweight by 0.59% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.98%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.6 (buy), contribution 68.1",
+        "theme 'Defense & Aerospace' score 62.0 (buy), contribution 69.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2185,7 +2185,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0017,
       "notional_delta": -86.23,
-      "reason": "theme score 28.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.74%",
         "theme=AI & Compute"
@@ -2201,7 +2201,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -4.31,
-      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 theme score 32.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on legal risk (negative) \u2014 \"NHTSA Closes Tesla Power Steering Probe After Recall Fix\" \u00b7 theme score 30.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.38%",
         "theme=EV & Clean Transport",
@@ -2269,14 +2269,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0246,
+      "target_weight": 0.0252,
       "current_weight": 0.0117,
-      "notional_delta": 1313.48,
-      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 1.29% vs target \u2014 add",
+      "notional_delta": 1374.47,
+      "reason": "buying on negative news flow \u2014 \"Here\u2019s What JPMorgan Thinks About Microsoft (MSFT) and Chevron\u2019s 20-Year Agreement\" \u00b7 underweight by 1.35% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.40%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.9 (starter), contribution 52.8",
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 53.3",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -3610,6 +3610,10 @@
     {
       "t": "2026-06-28T12:19:51+00:00",
       "v": 101646.92
+    },
+    {
+      "t": "2026-06-28T14:20:21+00:00",
+      "v": 101646.92
     }
   ],
   "breaking_news": [
@@ -3618,7 +3622,7 @@
       "summary": "During his chairmanship, Greenspan was celebrated as possibly the best central banker in history. But later, his reputation was tarnished by the worst financial crisis since the Great Depression.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/656930918/alan-greenspan-the-legendary-former-federal-reserve-chair-dies",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3627,7 +3631,7 @@
       "summary": "One of the most intellectually important relationships in the life of the late Fed chair Alan Greenspan was with his close friend, the formidable novelist and libertarian thinker Ayn Rand.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/22/nx-s1-5866558/alan-greenspan-dead-ayn-rand",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3636,7 +3640,7 @@
       "summary": "Denver renters are celebrating falling housing costs. But sometimes cheaper housing is a sign of economic decline. How can you tell the difference?",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/06/23/g-s1-129339/when-falling-housing-prices-are-good-news-and-when-theyre-not",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3645,7 +3649,7 @@
       "summary": "Investors are selling off AI-related stocks as doubts are starting to surface over whether the massive spending on AI is worth the investment and whether it's \"one big bubble.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867633/ai-selloff-tech-stocks-bubble-nasdaq",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3654,7 +3658,7 @@
       "summary": "President Trump canceled a signing ceremony for the bill Wednesday, saying Congress must first pass a strict voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/23/nx-s1-5867575/congress-passes-housing-affordability-bill",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -3663,7 +3667,7 @@
       "summary": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/24/nx-s1-5869486/meta-prediction-market-app-ai",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3672,7 +3676,7 @@
       "summary": "The ordeal has left fans forced to either miss out on a once-in-a-lifetime opportunity or scramble to find new tickets, often costing more and for worse seats.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/26/nx-s1-5871397/world-cup-tickets-stubhub-resale-controversy",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3681,7 +3685,7 @@
       "summary": "Don't let your leftovers go to waste. Cookbook authors share clever storage techniques \u2014 like an \"Eat Me First\" box in your fridge \u2014 and cooking tricks to help you make the most of your food scraps.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/27/nx-s1-5786564/4-ways-get-creative-with-your-leftovers-save-money-on-food",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3690,7 +3694,7 @@
       "summary": "Hundreds more animals are still missing from the California facility as investigators continue excavating the grounds.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj4gqz5lx1eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3699,7 +3703,7 @@
       "summary": "The commemorative special edition passports will be available on 6 July, and can only be applied for in person",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ce3ewkdgw9ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3708,16 +3712,7 @@
       "summary": "An estimated 150 million people have been experiencing temperatures of over 35C across Europe.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2vdydz31no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Israel strikes southern Lebanon as Hezbollah condemns new deal",
-      "summary": "Strikes have killed at least one person, state media say a day after Lebanon and Israel signed a framework agreement.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cx2kpn0eeweo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3726,7 +3721,16 @@
       "summary": "Very few North Koreans know about her, as her origin could threaten the regime\u2019s legitimacy.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpvp3xn489no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Eleven killed after plane carrying skydivers crashes in eastern France",
+      "summary": "The pilot and 10 passengers died in the incident, local officials said.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c5yz9yj9x74o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3735,7 +3739,7 @@
       "summary": "Iran says it has launched retaliatory attacks at US infrastructure in Kuwait and Bahrain after the US said it hit multiple targets across Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdxdwkgqgq0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3744,16 +3748,16 @@
       "summary": "Rescue teams are working ceaselessly to reach those trapped under rubble. But as hope fades, anger is growing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdjk8zwe7z3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Families calling out to loved ones trapped in rubble by Venezuela quakes",
-      "summary": "In La Guaira, desperate families keep vigil at buildings where they fear their relatives are trapped, but face an impossible task to move heavy debris.",
+      "headline": "Two boys rescued from Venezuela earthquake rubble after days of being trapped",
+      "summary": "Rescuers spent six hours carefully digging to reach one of the boys, as many residents continue searching through the rubble by hand, still waiting for heavy machinery to arrive.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cp8l451420zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cr47dvywvy5o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3762,7 +3766,7 @@
       "summary": "When the conflict began on 28 February, fuel costs jumped as the war disrupted the production and transportation of energy across the Middle East.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3771,7 +3775,7 @@
       "summary": "Trading on South Korea's Kospi index was halted for the third time this week to prevent panic selling.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce8jz40k00ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3780,7 +3784,7 @@
       "summary": "Lithium battery fires are the number one safety risk to aircraft, yet the number of devices found in hold bags has nearly doubled in a year.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cly716qd146o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3789,7 +3793,7 @@
       "summary": "Rising costs are forcing more young adults to live with their parents, here's how not to come to blows.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cg53q6dl0plo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-06-28T12:19:55+00:00",
+      "published_utc": "2026-06-28T14:20:25+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
