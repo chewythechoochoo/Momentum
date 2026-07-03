@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-03T19:47:38+00:00",
+  "generated_at_utc": "2026-07-03T20:48:56+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 385,
-  "last_success_utc": "2026-07-03T18:05:43+00:00",
+  "cycle_count": 386,
+  "last_success_utc": "2026-07-03T19:47:38+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -539,35 +539,35 @@
   ],
   "themes": [
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 77.15,
-      "raw_score": 77.35,
-      "band": "strong_buy",
-      "weight": 0.1417,
-      "confidence": 0.75,
-      "components": {
-        "momentum": 93.52,
-        "sentiment": 80.0,
-        "volume": 54.7,
-        "policy": 50.0,
-        "volatility_penalty": 0.19
-      }
-    },
-    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 75.67,
-      "raw_score": 75.67,
+      "score": 77.67,
+      "raw_score": 77.67,
       "band": "strong_buy",
-      "weight": 0.1475,
-      "confidence": 0.85,
+      "weight": 0.1465,
+      "confidence": 0.8,
       "components": {
         "momentum": 81.25,
-        "sentiment": 83.34,
+        "sentiment": 90.0,
         "volume": 65.83,
         "policy": 50.0,
         "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 68.15,
+      "raw_score": 68.35,
+      "band": "buy",
+      "weight": 0.1223,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 93.52,
+        "sentiment": 50.0,
+        "volume": 54.7,
+        "policy": 50.0,
+        "volatility_penalty": 0.19
       }
     },
     {
@@ -635,22 +635,6 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 40.0,
-      "raw_score": 51.59,
-      "band": "starter",
-      "weight": 0.05,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 34.58,
-        "sentiment": 72.72,
-        "volume": 54.73,
-        "policy": 50.0,
-        "volatility_penalty": 11.59
-      }
-    },
-    {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
       "score": 38.48,
@@ -664,6 +648,22 @@
         "volume": 58.53,
         "policy": 50.0,
         "volatility_penalty": 18.11
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 38.18,
+      "raw_score": 49.77,
+      "band": "hold_small",
+      "weight": 0.0391,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 34.58,
+        "sentiment": 66.66,
+        "volume": 54.73,
+        "policy": 50.0,
+        "volatility_penalty": 11.59
       }
     },
     {
@@ -706,11 +706,13 @@
       "target_weight": 0.0097,
       "current_weight": 0.0027,
       "notional_delta": 700.54,
-      "reason": "underweight by 0.70% vs target \u2014 add",
+      "reason": "buying on mixed news flow \u2014 \"Here's How Much $1000 Invested In Applied Materials 10 Years Ago Would Be Worth Today\" \u00b7 underweight by 0.70% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 38.5 (hold_small), contribution 29.6"
+        "theme 'Semiconductors (Broad)' score 38.5 (hold_small), contribution 29.6",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -732,14 +734,14 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0499,
+      "target_weight": 0.0495,
       "current_weight": 0.0534,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 75.7 (strong_buy), contribution 84.8",
+        "theme 'Consumer Discretionary' score 77.7 (strong_buy), contribution 86.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -765,12 +767,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.17,
-      "reason": "exiting on positive news flow \u2014 \"Software's AI Death Knell Is a Hallucination, Guggenheim Says\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Jim Cramer on Anthropic's Reported Samsung AI Chip Plans: 'We Really Don't Have Anything But a Rumor'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.61%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -908,14 +910,14 @@
     {
       "symbol": "GD",
       "action": "BUY",
-      "target_weight": 0.046,
+      "target_weight": 0.0395,
       "current_weight": 0.0283,
-      "notional_delta": 1774.1,
-      "reason": "underweight by 1.77% vs target \u2014 add",
+      "notional_delta": 1120.79,
+      "reason": "underweight by 1.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.47%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 77.2 (strong_buy), contribution 77.9"
+        "theme 'Defense & Aerospace' score 68.2 (buy), contribution 68.9"
       ],
       "theme_key": "defense"
     },
@@ -937,14 +939,14 @@
     {
       "symbol": "GOOGL",
       "action": "REDUCE",
-      "target_weight": 0.0167,
+      "target_weight": 0.0131,
       "current_weight": 0.0224,
-      "notional_delta": -575.22,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.57% vs target \u2014 trim",
+      "notional_delta": -937.06,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.93% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.0 (starter), contribution 77.5",
+        "theme 'AI & Compute' score 38.2 (hold_small), contribution 75.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1027,16 +1029,14 @@
     {
       "symbol": "LMT",
       "action": "BUY",
-      "target_weight": 0.048,
+      "target_weight": 0.0415,
       "current_weight": 0.0302,
-      "notional_delta": 1790.54,
-      "reason": "buying on positive news flow \u2014 \"'Lockheed Martin in lead to buy naval tech group Ultra Maritime For ~$3.5B' - Financial Times\" \u00b7 underweight by 1.78% vs target \u2014 add",
+      "notional_delta": 1137.23,
+      "reason": "underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.49%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 77.2 (strong_buy), contribution 81.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 68.2 (buy), contribution 72.4"
       ],
       "theme_key": "defense"
     },
@@ -1058,28 +1058,28 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0479,
+      "target_weight": 0.0476,
       "current_weight": 0.0546,
-      "notional_delta": -670.24,
-      "reason": "overweight by 0.67% vs target \u2014 trim",
+      "notional_delta": -700.4,
+      "reason": "overweight by 0.70% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 75.7 (strong_buy), contribution 81.4"
+        "theme 'Consumer Discretionary' score 77.7 (strong_buy), contribution 83.4"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.0161,
+      "target_weight": 0.0126,
       "current_weight": 0.0211,
-      "notional_delta": -503.07,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.50% vs target \u2014 trim",
+      "notional_delta": -854.85,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.85% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.0 (starter), contribution 74.5",
+        "theme 'AI & Compute' score 38.2 (hold_small), contribution 72.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1118,14 +1118,14 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.0172,
+      "target_weight": 0.0134,
       "current_weight": 0.0228,
-      "notional_delta": -563.37,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.56% vs target \u2014 trim",
+      "notional_delta": -945.3,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.94% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.0 (starter), contribution 79.4",
+        "theme 'AI & Compute' score 38.2 (hold_small), contribution 77.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1165,30 +1165,28 @@
     {
       "symbol": "NKE",
       "action": "HOLD",
-      "target_weight": 0.0497,
+      "target_weight": 0.0493,
       "current_weight": 0.0539,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Dow Hits Records as Money Rotates Out of AI Chips Into Blue Chips: This Week on Wall Street\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.16%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 75.7 (strong_buy), contribution 84.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.10"
+        "theme 'Consumer Discretionary' score 77.7 (strong_buy), contribution 86.4"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "NOC",
       "action": "BUY",
-      "target_weight": 0.0477,
+      "target_weight": 0.0412,
       "current_weight": 0.03,
-      "notional_delta": 1775.73,
-      "reason": "underweight by 1.77% vs target \u2014 add",
+      "notional_delta": 1122.42,
+      "reason": "underweight by 1.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.81%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 77.2 (strong_buy), contribution 80.9"
+        "theme 'Defense & Aerospace' score 68.2 (buy), contribution 71.9"
       ],
       "theme_key": "defense"
     },
@@ -1354,12 +1352,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.04,
-      "reason": "exiting on mixed news flow \u2014 \"$100 Invested In Super Micro Computer 15 Years Ago Would Be Worth This Much Today\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.46%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
@@ -1447,11 +1443,13 @@
       "target_weight": 0.0097,
       "current_weight": 0.0027,
       "notional_delta": 700.54,
-      "reason": "underweight by 0.70% vs target \u2014 add",
+      "reason": "buying on mixed news flow \u2014 \"Here's How Much $1000 Invested In Applied Materials 10 Years Ago Would Be Worth Today\" \u00b7 underweight by 0.70% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 38.5 (hold_small), contribution 29.6"
+        "theme 'Semiconductors (Broad)' score 38.5 (hold_small), contribution 29.6",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1479,14 +1477,14 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0499,
+      "target_weight": 0.0495,
       "current_weight": 0.0534,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 75.7 (strong_buy), contribution 84.8",
+        "theme 'Consumer Discretionary' score 77.7 (strong_buy), contribution 86.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1518,12 +1516,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.17,
-      "reason": "exiting on positive news flow \u2014 \"Software's AI Death Knell Is a Hallucination, Guggenheim Says\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Jim Cramer on Anthropic's Reported Samsung AI Chip Plans: 'We Really Don't Have Anything But a Rumor'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.61%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1691,14 +1689,14 @@
     {
       "symbol": "GD",
       "action": "BUY",
-      "target_weight": 0.046,
+      "target_weight": 0.0395,
       "current_weight": 0.0283,
-      "notional_delta": 1774.1,
-      "reason": "underweight by 1.77% vs target \u2014 add",
+      "notional_delta": 1120.79,
+      "reason": "underweight by 1.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.47%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 77.2 (strong_buy), contribution 77.9"
+        "theme 'Defense & Aerospace' score 68.2 (buy), contribution 68.9"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1726,14 +1724,14 @@
     {
       "symbol": "GOOGL",
       "action": "REDUCE",
-      "target_weight": 0.0167,
+      "target_weight": 0.0131,
       "current_weight": 0.0224,
-      "notional_delta": -575.22,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.57% vs target \u2014 trim",
+      "notional_delta": -937.06,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.93% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.0 (starter), contribution 77.5",
+        "theme 'AI & Compute' score 38.2 (hold_small), contribution 75.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1834,16 +1832,14 @@
     {
       "symbol": "LMT",
       "action": "BUY",
-      "target_weight": 0.048,
+      "target_weight": 0.0415,
       "current_weight": 0.0302,
-      "notional_delta": 1790.54,
-      "reason": "buying on positive news flow \u2014 \"'Lockheed Martin in lead to buy naval tech group Ultra Maritime For ~$3.5B' - Financial Times\" \u00b7 underweight by 1.78% vs target \u2014 add",
+      "notional_delta": 1137.23,
+      "reason": "underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.49%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 77.2 (strong_buy), contribution 81.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 68.2 (buy), contribution 72.4"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1871,14 +1867,14 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0479,
+      "target_weight": 0.0476,
       "current_weight": 0.0546,
-      "notional_delta": -670.24,
-      "reason": "overweight by 0.67% vs target \u2014 trim",
+      "notional_delta": -700.4,
+      "reason": "overweight by 0.70% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 75.7 (strong_buy), contribution 81.4"
+        "theme 'Consumer Discretionary' score 77.7 (strong_buy), contribution 83.4"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1888,14 +1884,14 @@
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.0161,
+      "target_weight": 0.0126,
       "current_weight": 0.0211,
-      "notional_delta": -503.07,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.50% vs target \u2014 trim",
+      "notional_delta": -854.85,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.85% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.0 (starter), contribution 74.5",
+        "theme 'AI & Compute' score 38.2 (hold_small), contribution 72.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1943,14 +1939,14 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.0172,
+      "target_weight": 0.0134,
       "current_weight": 0.0228,
-      "notional_delta": -563.37,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.56% vs target \u2014 trim",
+      "notional_delta": -945.3,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.94% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 40.0 (starter), contribution 79.4",
+        "theme 'AI & Compute' score 38.2 (hold_small), contribution 77.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1999,16 +1995,14 @@
     {
       "symbol": "NKE",
       "action": "HOLD",
-      "target_weight": 0.0497,
+      "target_weight": 0.0493,
       "current_weight": 0.0539,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Dow Hits Records as Money Rotates Out of AI Chips Into Blue Chips: This Week on Wall Street\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.16%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 75.7 (strong_buy), contribution 84.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.10"
+        "theme 'Consumer Discretionary' score 77.7 (strong_buy), contribution 86.4"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2018,14 +2012,14 @@
     {
       "symbol": "NOC",
       "action": "BUY",
-      "target_weight": 0.0477,
+      "target_weight": 0.0412,
       "current_weight": 0.03,
-      "notional_delta": 1775.73,
-      "reason": "underweight by 1.77% vs target \u2014 add",
+      "notional_delta": 1122.42,
+      "reason": "underweight by 1.12% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.81%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 77.2 (strong_buy), contribution 80.9"
+        "theme 'Defense & Aerospace' score 68.2 (buy), contribution 71.9"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2227,12 +2221,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.04,
-      "reason": "exiting on mixed news flow \u2014 \"$100 Invested In Super Micro Computer 15 Years Ago Would Be Worth This Much Today\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.46%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -3871,6 +3863,10 @@
     {
       "t": "2026-07-03T19:47:37+00:00",
       "v": 100509.06
+    },
+    {
+      "t": "2026-07-03T20:48:52+00:00",
+      "v": 100509.06
     }
   ],
   "breaking_news": [
@@ -3879,7 +3875,7 @@
       "summary": "NPR's Steve Inskeep asks Princeton computer scientist Sayash Kapoor about his assertions that AI won't lead to mass layoffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5864243/computer-scientist-on-why-he-believes-mass-layoffs-due-to-ai-is-a-convenient-excuse",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:56+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3888,7 +3884,7 @@
       "summary": "Personal finance and nutrition experts share simple strategies that make it possible to eat out on a budget. One tip? You might have to let go of your fast food delivery habit.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5862777/how-to-spend-less-money-restaurants-takeout",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3897,7 +3893,7 @@
       "summary": "Mark Zuckerberg met with Kalshi's CEO last year about a potential deal, but talks did not move forward. Now Meta is making its own prediction market app.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5875468/meta-kalshi-prediction-market-acquisition-talks",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3906,7 +3902,7 @@
       "summary": "Employers added 57,000 jobs in June, the Labor Department said on Friday, as jobs growth slowed from the previous two months, while the unemployment rate ticked down to 4.2%.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5877491/labor-department-to-release-latest-jobs-report-thursday",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:56+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3915,7 +3911,7 @@
       "summary": "President Trump earned more than $1 billion in 2025 from cryptocurrency ventures. But there are thousands of investors who bought into some of those cryptocurrencies, and they stand to lose big.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5878411/trump-earned-more-than-1-billion-from-crypto-but-his-investors-didnt-fare-so-well",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3924,7 +3920,7 @@
       "summary": "Don't have a pool during this hot summer? Rent one! Swimply is a platform that lets users rent private pools.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5838050/a-hot-summer-trend-in-the-sharing-economy-rental-swimming-pools",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3933,7 +3929,7 @@
       "summary": "The Airbnb-style company Swimply said there have been about 275,000 private pool reservations so far this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5876505/swimming-pool-rental-sharing-economy-swimply",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3942,7 +3938,7 @@
       "summary": "Colonial Americans were drinking coffee long before they dumped tea into Boston Harbor or fought a war for independence. The establishments that served it were already brewing revolutionary ideas.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5845436/coffee-july-4-colonies-america-250-1776-boston-tea-party",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3951,16 +3947,16 @@
       "summary": "Former President Zuma's trip to India reignites anger over a decade-old corruption scandal.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvge0gd6lnqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Stand-up comic held for jokes about Erdogan and Islam in Turkey crackdown",
+      "headline": "Stand-up comic held for jokes about Erdo\u011fan and Islam in Turkey crackdown",
       "summary": "Deniz G\u00f6kta\u015f is regarded as one of Turkey's most popular comedians and is accused of \"inciting hatred and hostility\" on stage.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c36yrlzew39o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3969,7 +3965,7 @@
       "summary": "Ali Khamenei's body will lie in state in Tehran's Grand Mosalla from Friday ahead of days-long funeral events.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2k4k7jqeno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3978,7 +3974,7 @@
       "summary": "A Nasa-funded robot has blasted off to catch a falling telescope in mid-orbit and blast it back to safety before it burns up.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c0ry4xx7rk8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3987,7 +3983,7 @@
       "summary": "A doctors' group says it \"borders on madness\" that patients will have to obtain the note in person.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4gyxnj38m1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3996,7 +3992,7 @@
       "summary": "Forecasters are warning of further extreme temperatures on the continent in the next few days.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c3ry307rxqro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4005,7 +4001,7 @@
       "summary": "Tusk says Poland is preparing for \"various\" scenarios after media reports of a planned Russian attack.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj0gp88q4l4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4014,7 +4010,7 @@
       "summary": "Officials believe the suspect may not have acted alone and spent days casing out the scene of the attack.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4gy603z2qlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4023,7 +4019,7 @@
       "summary": "The ads use terms including \u201crape\u201d and \u201cchild video\u201d and link to content on the messaging app Telegram.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgm4e0316zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4032,7 +4028,7 @@
       "summary": "Millions are likely to have eaten \"lamb\" kebabs that were actually made with goat, skin and fat.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce95y1zlzyxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4041,7 +4037,7 @@
       "summary": "Leading AI researcher Yan LeCun has a start-up which is developing a more flexible AI system.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj6gr0xkyr3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4050,7 +4046,7 @@
       "summary": "The government had initially said it would not relax licensing laws further for the World Cup.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c1kyr8747m9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T19:47:38+00:00",
+      "published_utc": "2026-07-03T20:48:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
