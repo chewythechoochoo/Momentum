@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-03T18:05:43+00:00",
+  "generated_at_utc": "2026-07-03T19:47:38+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 384,
-  "last_success_utc": "2026-07-03T16:43:32+00:00",
+  "cycle_count": 385,
+  "last_success_utc": "2026-07-03T18:05:43+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -592,8 +592,8 @@
       "score": 52.38,
       "raw_score": 52.38,
       "band": "starter",
-      "weight": 0.089,
-      "confidence": 0.95,
+      "weight": 0.0844,
+      "confidence": 0.85,
       "components": {
         "momentum": 55.48,
         "sentiment": 50.0,
@@ -605,14 +605,14 @@
     {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
-      "score": 46.88,
-      "raw_score": 57.48,
+      "score": 44.88,
+      "raw_score": 55.48,
       "band": "starter",
-      "weight": 0.0729,
+      "weight": 0.0663,
       "confidence": 1.0,
       "components": {
         "momentum": 47.43,
-        "sentiment": 73.34,
+        "sentiment": 66.66,
         "volume": 57.54,
         "policy": 50.0,
         "volatility_penalty": 10.6
@@ -637,17 +637,33 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 38.95,
-      "raw_score": 50.54,
-      "band": "hold_small",
-      "weight": 0.0437,
+      "score": 40.0,
+      "raw_score": 51.59,
+      "band": "starter",
+      "weight": 0.05,
       "confidence": 1.0,
       "components": {
         "momentum": 34.58,
-        "sentiment": 69.23,
+        "sentiment": 72.72,
         "volume": 54.73,
         "policy": 50.0,
         "volatility_penalty": 11.59
+      }
+    },
+    {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 38.48,
+      "raw_score": 56.59,
+      "band": "hold_small",
+      "weight": 0.0409,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 24.72,
+        "sentiment": 100.0,
+        "volume": 58.53,
+        "policy": 50.0,
+        "volatility_penalty": 18.11
       }
     },
     {
@@ -667,29 +683,13 @@
       }
     },
     {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 28.48,
-      "raw_score": 46.59,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 24.72,
-        "sentiment": 66.66,
-        "volume": 58.53,
-        "policy": 50.0,
-        "volatility_penalty": 18.11
-      }
-    },
-    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 27.33,
       "raw_score": 57.33,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.75,
+      "confidence": 0.7,
       "components": {
         "momentum": 67.49,
         "sentiment": 50.0,
@@ -702,14 +702,15 @@
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "BUY",
+      "target_weight": 0.0097,
       "current_weight": 0.0027,
-      "notional_delta": -137.2,
-      "reason": "theme score 28.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 700.54,
+      "reason": "underweight by 0.70% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-13.45%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 38.5 (hold_small), contribution 29.6"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -719,10 +720,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0177,
       "notional_delta": -1782.18,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"EXCLUSIVE: Top 12 Most-Searched Tickers For First Half of 2026 - Where Do Micron, Nvidia, Tesla, SanDisk Rank?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.76%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -744,14 +747,15 @@
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "BUY",
+      "target_weight": 0.0124,
       "current_weight": 0.0028,
-      "notional_delta": -138.31,
-      "reason": "theme score 28.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 969.69,
+      "reason": "underweight by 0.96% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-10.64%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 38.5 (hold_small), contribution 37.6"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -788,7 +792,7 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0301,
+      "target_weight": 0.0286,
       "current_weight": 0.0292,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -933,14 +937,14 @@
     {
       "symbol": "GOOGL",
       "action": "REDUCE",
-      "target_weight": 0.0146,
+      "target_weight": 0.0167,
       "current_weight": 0.0224,
-      "notional_delta": -786.29,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.78% vs target \u2014 trim",
+      "notional_delta": -575.22,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.0 (hold_small), contribution 76.5",
+        "theme 'AI & Compute' score 40.0 (starter), contribution 77.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -977,7 +981,7 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0284,
+      "target_weight": 0.027,
       "current_weight": 0.0279,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Why Is Avis Budget Group (CAR) Stock Trending Overnight? (CORRECTED)\" \u00b7 within 50bps of target \u2014 no trade",
@@ -993,14 +997,14 @@
     {
       "symbol": "LCID",
       "action": "HOLD",
-      "target_weight": 0.023,
+      "target_weight": 0.0209,
       "current_weight": 0.0208,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-11.68%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.9 (starter), contribution 62.5"
+        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 60.5"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1038,11 +1042,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
-      "target_weight": 0.0016,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0032,
-      "notional_delta": -158.37,
-      "reason": "trimming on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Lam Research Stock In The Last 20 Years\" \u00b7 theme score 28.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -316.75,
+      "reason": "exiting on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Lam Research Stock In The Last 20 Years\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.52%",
         "theme=Semiconductors (Broad)",
@@ -1068,14 +1072,14 @@
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.0141,
+      "target_weight": 0.0161,
       "current_weight": 0.0211,
-      "notional_delta": -704.08,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.70% vs target \u2014 trim",
+      "notional_delta": -503.07,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.0 (hold_small), contribution 73.5",
+        "theme 'AI & Compute' score 40.0 (starter), contribution 74.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1114,14 +1118,14 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.015,
+      "target_weight": 0.0172,
       "current_weight": 0.0228,
-      "notional_delta": -784.49,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.78% vs target \u2014 trim",
+      "notional_delta": -563.37,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.56% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.0 (hold_small), contribution 78.4",
+        "theme 'AI & Compute' score 40.0 (starter), contribution 79.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1129,11 +1133,11 @@
     },
     {
       "symbol": "MU",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.25,
-      "reason": "trimming on positive news flow \u2014 \"Michael Burry Is Shorting Micron as a 'Destroyer Of Capital' Despite Trump's Praises and a 241% Rally\u2014 Here's Why\" \u00b7 theme score 28.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.5,
+      "reason": "exiting on positive news flow \u2014 \"Michael Burry Is Shorting Micron as a 'Destroyer Of Capital' Despite Trump's Praises and a 241% Rally\u2014 Here's Why\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-15.52%",
         "theme=Semiconductors (Broad)",
@@ -1274,14 +1278,14 @@
     {
       "symbol": "RIVN",
       "action": "HOLD",
-      "target_weight": 0.0244,
+      "target_weight": 0.0222,
       "current_weight": 0.0213,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Gary Black Targets Elon Musk's Self-Driving Efforts as Rivian Stock Rally Shows no 'Newfound Infatuation' with Autonomous Vehicles, FSD\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=6.88%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.9 (starter), contribution 66.3",
+        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 64.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1362,14 +1366,14 @@
     {
       "symbol": "TSLA",
       "action": "HOLD",
-      "target_weight": 0.0255,
+      "target_weight": 0.0232,
       "current_weight": 0.0232,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.9 (starter), contribution 69.4",
+        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 67.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1377,14 +1381,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0012,
+      "action": "BUY",
+      "target_weight": 0.0188,
       "current_weight": 0.0024,
-      "notional_delta": -121.84,
-      "reason": "trimming on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Taiwan Semiconductor Stock In The Last 5 Years\" \u00b7 theme score 28.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1645.9,
+      "reason": "buying on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Taiwan Semiconductor Stock In The Last 5 Years\" \u00b7 underweight by 1.64% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-7.39%",
         "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 38.5 (hold_small), contribution 57.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1407,7 +1412,7 @@
     {
       "symbol": "WFC",
       "action": "HOLD",
-      "target_weight": 0.0304,
+      "target_weight": 0.0288,
       "current_weight": 0.0305,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Why Is Avis Budget Group (CAR) Stock Trending Overnight? (CORRECTED)\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1438,14 +1443,15 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "BUY",
+      "target_weight": 0.0097,
       "current_weight": 0.0027,
-      "notional_delta": -137.2,
-      "reason": "theme score 28.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 700.54,
+      "reason": "underweight by 0.70% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-13.45%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 38.5 (hold_small), contribution 29.6"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1458,10 +1464,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0177,
       "notional_delta": -1782.18,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"EXCLUSIVE: Top 12 Most-Searched Tickers For First Half of 2026 - Where Do Micron, Nvidia, Tesla, SanDisk Rank?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.76%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1489,14 +1497,15 @@
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "BUY",
+      "target_weight": 0.0124,
       "current_weight": 0.0028,
-      "notional_delta": -138.31,
-      "reason": "theme score 28.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 969.69,
+      "reason": "underweight by 0.96% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-10.64%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 38.5 (hold_small), contribution 37.6"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1542,7 +1551,7 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0301,
+      "target_weight": 0.0286,
       "current_weight": 0.0292,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1717,14 +1726,14 @@
     {
       "symbol": "GOOGL",
       "action": "REDUCE",
-      "target_weight": 0.0146,
+      "target_weight": 0.0167,
       "current_weight": 0.0224,
-      "notional_delta": -786.29,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.78% vs target \u2014 trim",
+      "notional_delta": -575.22,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.0 (hold_small), contribution 76.5",
+        "theme 'AI & Compute' score 40.0 (starter), contribution 77.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1770,7 +1779,7 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0284,
+      "target_weight": 0.027,
       "current_weight": 0.0279,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Why Is Avis Budget Group (CAR) Stock Trending Overnight? (CORRECTED)\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1789,14 +1798,14 @@
     {
       "symbol": "LCID",
       "action": "HOLD",
-      "target_weight": 0.023,
+      "target_weight": 0.0209,
       "current_weight": 0.0208,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-11.68%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.9 (starter), contribution 62.5"
+        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 60.5"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1843,11 +1852,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
-      "target_weight": 0.0016,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0032,
-      "notional_delta": -158.37,
-      "reason": "trimming on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Lam Research Stock In The Last 20 Years\" \u00b7 theme score 28.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -316.75,
+      "reason": "exiting on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Lam Research Stock In The Last 20 Years\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.52%",
         "theme=Semiconductors (Broad)",
@@ -1879,14 +1888,14 @@
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.0141,
+      "target_weight": 0.0161,
       "current_weight": 0.0211,
-      "notional_delta": -704.08,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.70% vs target \u2014 trim",
+      "notional_delta": -503.07,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.0 (hold_small), contribution 73.5",
+        "theme 'AI & Compute' score 40.0 (starter), contribution 74.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1934,14 +1943,14 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.015,
+      "target_weight": 0.0172,
       "current_weight": 0.0228,
-      "notional_delta": -784.49,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.78% vs target \u2014 trim",
+      "notional_delta": -563.37,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.56% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.0 (hold_small), contribution 78.4",
+        "theme 'AI & Compute' score 40.0 (starter), contribution 79.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1952,11 +1961,11 @@
     },
     {
       "symbol": "MU",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.25,
-      "reason": "trimming on positive news flow \u2014 \"Michael Burry Is Shorting Micron as a 'Destroyer Of Capital' Despite Trump's Praises and a 241% Rally\u2014 Here's Why\" \u00b7 theme score 28.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.5,
+      "reason": "exiting on positive news flow \u2014 \"Michael Burry Is Shorting Micron as a 'Destroyer Of Capital' Despite Trump's Praises and a 241% Rally\u2014 Here's Why\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-15.52%",
         "theme=Semiconductors (Broad)",
@@ -2127,14 +2136,14 @@
     {
       "symbol": "RIVN",
       "action": "HOLD",
-      "target_weight": 0.0244,
+      "target_weight": 0.0222,
       "current_weight": 0.0213,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Gary Black Targets Elon Musk's Self-Driving Efforts as Rivian Stock Rally Shows no 'Newfound Infatuation' with Autonomous Vehicles, FSD\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=6.88%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.9 (starter), contribution 66.3",
+        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 64.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2233,14 +2242,14 @@
     {
       "symbol": "TSLA",
       "action": "HOLD",
-      "target_weight": 0.0255,
+      "target_weight": 0.0232,
       "current_weight": 0.0232,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.9 (starter), contribution 69.4",
+        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 67.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2251,14 +2260,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0012,
+      "action": "BUY",
+      "target_weight": 0.0188,
       "current_weight": 0.0024,
-      "notional_delta": -121.84,
-      "reason": "trimming on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Taiwan Semiconductor Stock In The Last 5 Years\" \u00b7 theme score 28.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1645.9,
+      "reason": "buying on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Taiwan Semiconductor Stock In The Last 5 Years\" \u00b7 underweight by 1.64% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-7.39%",
         "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 38.5 (hold_small), contribution 57.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2287,7 +2297,7 @@
     {
       "symbol": "WFC",
       "action": "HOLD",
-      "target_weight": 0.0304,
+      "target_weight": 0.0288,
       "current_weight": 0.0305,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Why Is Avis Budget Group (CAR) Stock Trending Overnight? (CORRECTED)\" \u00b7 within 50bps of target \u2014 no trade",
@@ -3857,6 +3867,10 @@
     {
       "t": "2026-07-03T18:05:38+00:00",
       "v": 100509.06
+    },
+    {
+      "t": "2026-07-03T19:47:37+00:00",
+      "v": 100509.06
     }
   ],
   "breaking_news": [
@@ -3865,7 +3879,7 @@
       "summary": "NPR's Steve Inskeep asks Princeton computer scientist Sayash Kapoor about his assertions that AI won't lead to mass layoffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5864243/computer-scientist-on-why-he-believes-mass-layoffs-due-to-ai-is-a-convenient-excuse",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3874,7 +3888,7 @@
       "summary": "Personal finance and nutrition experts share simple strategies that make it possible to eat out on a budget. One tip? You might have to let go of your fast food delivery habit.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5862777/how-to-spend-less-money-restaurants-takeout",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3883,7 +3897,7 @@
       "summary": "Mark Zuckerberg met with Kalshi's CEO last year about a potential deal, but talks did not move forward. Now Meta is making its own prediction market app.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5875468/meta-kalshi-prediction-market-acquisition-talks",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3892,7 +3906,7 @@
       "summary": "Employers added 57,000 jobs in June, the Labor Department said on Friday, as jobs growth slowed from the previous two months, while the unemployment rate ticked down to 4.2%.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5877491/labor-department-to-release-latest-jobs-report-thursday",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3901,7 +3915,7 @@
       "summary": "President Trump earned more than $1 billion in 2025 from cryptocurrency ventures. But there are thousands of investors who bought into some of those cryptocurrencies, and they stand to lose big.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5878411/trump-earned-more-than-1-billion-from-crypto-but-his-investors-didnt-fare-so-well",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3910,7 +3924,7 @@
       "summary": "Don't have a pool during this hot summer? Rent one! Swimply is a platform that lets users rent private pools.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5838050/a-hot-summer-trend-in-the-sharing-economy-rental-swimming-pools",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3919,7 +3933,7 @@
       "summary": "The Airbnb-style company Swimply said there have been about 275,000 private pool reservations so far this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5876505/swimming-pool-rental-sharing-economy-swimply",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3928,7 +3942,7 @@
       "summary": "Colonial Americans were drinking coffee long before they dumped tea into Boston Harbor or fought a war for independence. The establishments that served it were already brewing revolutionary ideas.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5845436/coffee-july-4-colonies-america-250-1776-boston-tea-party",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3937,7 +3951,7 @@
       "summary": "Former President Zuma's trip to India reignites anger over a decade-old corruption scandal.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvge0gd6lnqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3946,7 +3960,7 @@
       "summary": "Deniz G\u00f6kta\u015f is regarded as one of Turkey's most popular comedians and is accused of \"inciting hatred and hostility\" on stage.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c36yrlzew39o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3955,7 +3969,7 @@
       "summary": "Ali Khamenei's body will lie in state in Tehran's Grand Mosalla from Friday ahead of days-long funeral events.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2k4k7jqeno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3964,7 +3978,7 @@
       "summary": "A Nasa-funded robot has blasted off to catch a falling telescope in mid-orbit and blast it back to safety before it burns up.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c0ry4xx7rk8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3973,7 +3987,7 @@
       "summary": "A doctors' group says it \"borders on madness\" that patients will have to obtain the note in person.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4gyxnj38m1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3982,7 +3996,7 @@
       "summary": "Forecasters are warning of further extreme temperatures on the continent in the next few days.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c3ry307rxqro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3991,7 +4005,7 @@
       "summary": "Tusk says Poland is preparing for \"various\" scenarios after media reports of a planned Russian attack.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj0gp88q4l4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4000,7 +4014,7 @@
       "summary": "Officials believe the suspect may not have acted alone and spent days casing out the scene of the attack.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4gy603z2qlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4009,7 +4023,7 @@
       "summary": "The ads use terms including \u201crape\u201d and \u201cchild video\u201d and link to content on the messaging app Telegram.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgm4e0316zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4018,7 +4032,7 @@
       "summary": "Millions are likely to have eaten \"lamb\" kebabs that were actually made with goat, skin and fat.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce95y1zlzyxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4027,7 +4041,7 @@
       "summary": "Leading AI researcher Yan LeCun has a start-up which is developing a more flexible AI system.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj6gr0xkyr3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4036,7 +4050,7 @@
       "summary": "The government had initially said it would not relax licensing laws further for the World Cup.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c1kyr8747m9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-03T18:05:43+00:00",
+      "published_utc": "2026-07-03T19:47:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
