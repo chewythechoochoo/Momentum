@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-04T07:34:55+00:00",
+  "generated_at_utc": "2026-07-04T09:51:00+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 391,
-  "last_success_utc": "2026-07-04T04:48:33+00:00",
+  "cycle_count": 392,
+  "last_success_utc": "2026-07-04T07:34:55+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -587,6 +587,22 @@
       }
     },
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 54.76,
+      "raw_score": 65.48,
+      "band": "starter",
+      "weight": 0.0918,
+      "confidence": 0.85,
+      "components": {
+        "momentum": 47.43,
+        "sentiment": 100.0,
+        "volume": 57.54,
+        "policy": 50.0,
+        "volatility_penalty": 10.72
+      }
+    },
+    {
       "key": "financials",
       "name": "Financials & Rates",
       "score": 52.38,
@@ -600,22 +616,6 @@
         "volume": 50.93,
         "policy": 50.0,
         "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 43.21,
-      "raw_score": 53.78,
-      "band": "starter",
-      "weight": 0.0607,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 34.58,
-        "sentiment": 80.0,
-        "volume": 54.73,
-        "policy": 50.0,
-        "volatility_penalty": 10.57
       }
     },
     {
@@ -635,19 +635,19 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 41.91,
-      "raw_score": 52.62,
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 41.71,
+      "raw_score": 52.28,
       "band": "starter",
-      "weight": 0.055,
-      "confidence": 0.95,
+      "weight": 0.0557,
+      "confidence": 1.0,
       "components": {
-        "momentum": 47.43,
-        "sentiment": 57.14,
-        "volume": 57.54,
+        "momentum": 34.58,
+        "sentiment": 75.0,
+        "volume": 54.73,
         "policy": 50.0,
-        "volatility_penalty": 10.72
+        "volatility_penalty": 10.57
       }
     },
     {
@@ -669,14 +669,14 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 35.7,
-      "raw_score": 53.34,
-      "band": "hold_small",
-      "weight": 0.0242,
+      "score": 33.56,
+      "raw_score": 51.2,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 19.32,
-        "sentiment": 100.0,
+        "sentiment": 92.85,
         "volume": 50.56,
         "policy": 55.0,
         "volatility_penalty": 17.64
@@ -850,11 +850,11 @@
     },
     {
       "symbol": "ENPH",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0009,
       "current_weight": 0.0018,
-      "notional_delta": -183.17,
-      "reason": "exiting on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -91.59,
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.20%",
         "theme=Clean Energy",
@@ -880,15 +880,14 @@
     },
     {
       "symbol": "FSLR",
-      "action": "BUY",
-      "target_weight": 0.0054,
+      "action": "REDUCE",
+      "target_weight": 0.0001,
       "current_weight": 0.0002,
-      "notional_delta": 521.16,
-      "reason": "buying on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 underweight by 0.52% vs target \u2014 add",
+      "notional_delta": -10.79,
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 35.7 (hold_small), contribution 30.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -939,14 +938,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0204,
+      "target_weight": 0.0187,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 79.8",
+        "theme 'AI & Compute' score 41.7 (starter), contribution 78.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -996,15 +995,15 @@
     },
     {
       "symbol": "LCID",
-      "action": "HOLD",
-      "target_weight": 0.0172,
+      "action": "BUY",
+      "target_weight": 0.0291,
       "current_weight": 0.0208,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 834.8,
+      "reason": "underweight by 0.83% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-11.68%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 57.3"
+        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 70.2"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1072,14 +1071,14 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0195,
+      "target_weight": 0.0179,
       "current_weight": 0.0211,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 76.6",
+        "theme 'AI & Compute' score 41.7 (starter), contribution 75.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1118,14 +1117,14 @@
     {
       "symbol": "MSFT",
       "action": "HOLD",
-      "target_weight": 0.0208,
+      "target_weight": 0.0191,
       "current_weight": 0.0228,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 81.5",
+        "theme 'AI & Compute' score 41.7 (starter), contribution 80.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1148,15 +1147,14 @@
     },
     {
       "symbol": "NEE",
-      "action": "BUY",
-      "target_weight": 0.0121,
+      "action": "REDUCE",
+      "target_weight": 0.0015,
       "current_weight": 0.0031,
-      "notional_delta": 909.53,
-      "reason": "buying on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 underweight by 0.90% vs target \u2014 add",
+      "notional_delta": -153.31,
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.34%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 35.7 (hold_small), contribution 69.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1198,12 +1196,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.06,
-      "reason": "exiting on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"David Sacks Says Palantir's Alex Karp Was 'Exactly Right' to Warn Enterprises Against Feeding Data to OpenAI and Anthropic\u2014 the Figma Story \" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.28%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1277,15 +1275,15 @@
     },
     {
       "symbol": "RIVN",
-      "action": "HOLD",
-      "target_weight": 0.0184,
+      "action": "BUY",
+      "target_weight": 0.0307,
       "current_weight": 0.0213,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 941.97,
+      "reason": "underweight by 0.94% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.88%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 61.2"
+        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 74.0"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1319,15 +1317,14 @@
     },
     {
       "symbol": "SEDG",
-      "action": "HOLD",
-      "target_weight": 0.0067,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -129.77,
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.17%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 35.7 (hold_small), contribution 38.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1363,15 +1360,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "HOLD",
-      "target_weight": 0.0193,
+      "action": "BUY",
+      "target_weight": 0.032,
       "current_weight": 0.0232,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 887.55,
+      "reason": "buying on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 underweight by 0.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 64.4",
+        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 77.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1617,11 +1614,11 @@
     },
     {
       "symbol": "ENPH",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0009,
       "current_weight": 0.0018,
-      "notional_delta": -183.17,
-      "reason": "exiting on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -91.59,
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.20%",
         "theme=Clean Energy",
@@ -1653,15 +1650,14 @@
     },
     {
       "symbol": "FSLR",
-      "action": "BUY",
-      "target_weight": 0.0054,
+      "action": "REDUCE",
+      "target_weight": 0.0001,
       "current_weight": 0.0002,
-      "notional_delta": 521.16,
-      "reason": "buying on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 underweight by 0.52% vs target \u2014 add",
+      "notional_delta": -10.79,
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 35.7 (hold_small), contribution 30.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1724,14 +1720,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0204,
+      "target_weight": 0.0187,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 79.8",
+        "theme 'AI & Compute' score 41.7 (starter), contribution 78.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1793,15 +1789,15 @@
     },
     {
       "symbol": "LCID",
-      "action": "HOLD",
-      "target_weight": 0.0172,
+      "action": "BUY",
+      "target_weight": 0.0291,
       "current_weight": 0.0208,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 834.8,
+      "reason": "underweight by 0.83% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-11.68%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 57.3"
+        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 70.2"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1884,14 +1880,14 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0195,
+      "target_weight": 0.0179,
       "current_weight": 0.0211,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 76.6",
+        "theme 'AI & Compute' score 41.7 (starter), contribution 75.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1939,14 +1935,14 @@
     {
       "symbol": "MSFT",
       "action": "HOLD",
-      "target_weight": 0.0208,
+      "target_weight": 0.0191,
       "current_weight": 0.0228,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 43.2 (starter), contribution 81.5",
+        "theme 'AI & Compute' score 41.7 (starter), contribution 80.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1975,15 +1971,14 @@
     },
     {
       "symbol": "NEE",
-      "action": "BUY",
-      "target_weight": 0.0121,
+      "action": "REDUCE",
+      "target_weight": 0.0015,
       "current_weight": 0.0031,
-      "notional_delta": 909.53,
-      "reason": "buying on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 underweight by 0.90% vs target \u2014 add",
+      "notional_delta": -153.31,
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.34%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 35.7 (hold_small), contribution 69.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2034,12 +2029,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.06,
-      "reason": "exiting on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"David Sacks Says Palantir's Alex Karp Was 'Exactly Right' to Warn Enterprises Against Feeding Data to OpenAI and Anthropic\u2014 the Figma Story \" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.28%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2131,15 +2126,15 @@
     },
     {
       "symbol": "RIVN",
-      "action": "HOLD",
-      "target_weight": 0.0184,
+      "action": "BUY",
+      "target_weight": 0.0307,
       "current_weight": 0.0213,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 941.97,
+      "reason": "underweight by 0.94% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.88%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 61.2"
+        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 74.0"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2182,15 +2177,14 @@
     },
     {
       "symbol": "SEDG",
-      "action": "HOLD",
-      "target_weight": 0.0067,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -129.77,
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.17%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 35.7 (hold_small), contribution 38.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2235,15 +2229,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "HOLD",
-      "target_weight": 0.0193,
+      "action": "BUY",
+      "target_weight": 0.032,
       "current_weight": 0.0232,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 887.55,
+      "reason": "buying on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 underweight by 0.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 64.4",
+        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 77.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -3887,6 +3881,10 @@
     {
       "t": "2026-07-04T07:34:52+00:00",
       "v": 100509.06
+    },
+    {
+      "t": "2026-07-04T09:50:56+00:00",
+      "v": 100509.06
     }
   ],
   "breaking_news": [
@@ -3895,7 +3893,7 @@
       "summary": "NPR's Steve Inskeep asks Princeton computer scientist Sayash Kapoor about his assertions that AI won't lead to mass layoffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5864243/computer-scientist-on-why-he-believes-mass-layoffs-due-to-ai-is-a-convenient-excuse",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3904,7 +3902,7 @@
       "summary": "Personal finance and nutrition experts share simple strategies that make it possible to eat out on a budget. One tip? You might have to let go of your fast food delivery habit.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5862777/how-to-spend-less-money-restaurants-takeout",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3913,7 +3911,7 @@
       "summary": "Mark Zuckerberg met with Kalshi's CEO last year about a potential deal, but talks did not move forward. Now Meta is making its own prediction market app.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5875468/meta-kalshi-prediction-market-acquisition-talks",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3922,7 +3920,7 @@
       "summary": "Employers added 57,000 jobs in June, the Labor Department said on Friday, as jobs growth slowed from the previous two months, while the unemployment rate ticked down to 4.2%.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5877491/labor-department-to-release-latest-jobs-report-thursday",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3931,7 +3929,7 @@
       "summary": "President Trump earned more than $1 billion in 2025 from cryptocurrency ventures. But there are thousands of investors who bought into some of those cryptocurrencies, and they stand to lose big.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5878411/trump-earned-more-than-1-billion-from-crypto-but-his-investors-didnt-fare-so-well",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3940,7 +3938,7 @@
       "summary": "Don't have a pool during this hot summer? Rent one! Swimply is a platform that lets users rent private pools.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5838050/a-hot-summer-trend-in-the-sharing-economy-rental-swimming-pools",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3949,7 +3947,7 @@
       "summary": "The Airbnb-style company Swimply said there have been about 275,000 private pool reservations so far this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5876505/swimming-pool-rental-sharing-economy-swimply",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3958,43 +3956,7 @@
       "summary": "Colonial Americans were drinking coffee long before they dumped tea into Boston Harbor or fought a war for independence. The establishments that served it were already brewing revolutionary ideas.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5845436/coffee-july-4-colonies-america-250-1776-boston-tea-party",
-      "published_utc": "2026-07-04T07:34:55+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Row after Indian state drops eggs from school lunch menu",
-      "summary": "West Bengal's move to replace eggs in some school meals has sparked a wider debate over nutrition and choice.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c33yldyd62po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "'Flamingo Revolution' takes off as thousands demand Albanian PM's resignation",
-      "summary": "Flamingos have become a national symbol of protest, triggered by opposition to a luxury development.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c8925jnl0z3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
-      "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Iran begins public mourning for Ayatollah killed in February",
-      "summary": "Ali Khamenei's body will lie in state in Tehran's Grand Mosalla from Friday ahead of days-long funeral events.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cx2k4k7jqeno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Anguished families left to identify Venezuela quake victims at makeshift morgue",
-      "summary": "The disaster has overwhelmed local services, with bodies put outside or in tents for identification.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c20y2p9qqqko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4003,8 +3965,26 @@
       "summary": "Forecasters are warning of further extreme temperatures on the continent in the next few days.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c3ry307rxqro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": -0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "'Flamingo Revolution' takes off as thousands demand Albanian PM's resignation",
+      "summary": "Flamingos have become a national symbol of protest, triggered by opposition to a luxury development.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c8925jnl0z3o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T09:51:00+00:00",
+      "sentiment_score": 0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "Anguished families left to identify Venezuela quake victims at makeshift morgue",
+      "summary": "The disaster has overwhelmed local services, with bodies put outside or in tents for identification.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c20y2p9qqqko?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T09:51:00+00:00",
+      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4012,7 +3992,25 @@
       "summary": "Officials believe the suspect may not have acted alone and spent days casing out the scene of the attack.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4gy603z2qlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Large crowds gather in Tehran on first day of Ayatollah Khamenei's funeral",
+      "summary": "Ali Khamenei's body will lie in state in Tehran's Grand Mosalla until Monday, before travelling across Iran and Iraq.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c0ky2zen1kgo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T09:51:00+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Keiko Fujimori declared winner of Peru's presidential election weeks after vote",
+      "summary": "The daughter of disgraced president Alberto Fujimori is declared winner of tight race nearly a month after voting took place.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cr5jpvv06e1o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4021,16 +4019,16 @@
       "summary": "More than 165 million people are enduring dangerous heat and humidity, with temperatures expected to stay at 38C (100F) for several days.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cevlkzer7vdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "Taylor Swift marries Travis Kelce in NYC ceremony officiated by Adam Sandler",
-      "summary": "It was the bash of the century, with celebrities from singer Benson Boone and actor Hugh Grant to model Gigi Hadid and actor Ethan Hawke in attendence.",
+      "summary": "The star-studded celebration saw several streets in Midtown Manhattan shut, as hordes of fans gathered outside the arena.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c982ry2pen3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4039,7 +4037,7 @@
       "summary": "The ads use terms including \u201crape\u201d and \u201cchild video\u201d and link to content on the messaging app Telegram.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgm4e0316zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4048,7 +4046,7 @@
       "summary": "Millions are likely to have eaten \"lamb\" kebabs that were actually made with goat, skin and fat.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce95y1zlzyxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4057,7 +4055,7 @@
       "summary": "Leading AI researcher Yan LeCun has a start-up which is developing a more flexible AI system.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj6gr0xkyr3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4066,7 +4064,7 @@
       "summary": "The government had initially said it would not relax licensing laws further for the World Cup.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c1kyr8747m9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T07:34:55+00:00",
+      "published_utc": "2026-07-04T09:51:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
