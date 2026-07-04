@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-04T16:46:14+00:00",
+  "generated_at_utc": "2026-07-04T17:51:43+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 397,
-  "last_success_utc": "2026-07-04T15:39:53+00:00",
+  "cycle_count": 398,
+  "last_success_utc": "2026-07-04T16:46:14+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -539,13 +539,29 @@
   ],
   "themes": [
     {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 80.85,
+      "raw_score": 84.09,
+      "band": "strong_buy",
+      "weight": 0.1681,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 91.16,
+        "sentiment": 95.65,
+        "volume": 62.15,
+        "policy": 65.0,
+        "volatility_penalty": 3.24
+      }
+    },
+    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 68.09,
       "raw_score": 68.35,
       "band": "buy",
-      "weight": 0.1221,
-      "confidence": 0.7,
+      "weight": 0.1185,
+      "confidence": 0.65,
       "components": {
         "momentum": 93.52,
         "sentiment": 50.0,
@@ -571,51 +587,19 @@
       }
     },
     {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 65.65,
-      "raw_score": 68.9,
-      "band": "buy",
-      "weight": 0.1118,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 91.16,
-        "sentiment": 50.0,
-        "volume": 62.15,
-        "policy": 50.0,
-        "volatility_penalty": 3.24
-      }
-    },
-    {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 64.38,
-      "raw_score": 64.38,
+      "score": 63.42,
+      "raw_score": 63.42,
       "band": "buy",
-      "weight": 0.1313,
+      "weight": 0.1281,
       "confidence": 1.0,
       "components": {
         "momentum": 55.48,
-        "sentiment": 85.0,
+        "sentiment": 81.82,
         "volume": 50.93,
         "policy": 65.0,
         "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 54.76,
-      "raw_score": 65.48,
-      "band": "starter",
-      "weight": 0.0918,
-      "confidence": 0.85,
-      "components": {
-        "momentum": 47.43,
-        "sentiment": 100.0,
-        "volume": 57.54,
-        "policy": 50.0,
-        "volatility_penalty": 10.72
       }
     },
     {
@@ -635,16 +619,32 @@
       }
     },
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 39.76,
+      "raw_score": 50.48,
+      "band": "hold_small",
+      "weight": 0.0437,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 47.43,
+        "sentiment": 50.0,
+        "volume": 57.54,
+        "policy": 50.0,
+        "volatility_penalty": 10.72
+      }
+    },
+    {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 30.08,
-      "raw_score": 47.72,
+      "score": 29.28,
+      "raw_score": 46.91,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 19.32,
-        "sentiment": 81.25,
+        "sentiment": 78.57,
         "volume": 50.56,
         "policy": 55.0,
         "volatility_penalty": 17.64
@@ -673,7 +673,7 @@
       "raw_score": 41.59,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.8,
+      "confidence": 0.75,
       "components": {
         "momentum": 24.72,
         "sentiment": 50.0,
@@ -689,7 +689,7 @@
       "raw_score": 29.78,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.9,
+      "confidence": 0.85,
       "components": {
         "momentum": 34.58,
         "sentiment": 0.0,
@@ -790,14 +790,14 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0443,
+      "target_weight": 0.0433,
       "current_weight": 0.0292,
-      "notional_delta": 1521.02,
-      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.51% vs target \u2014 add",
+      "notional_delta": 1420.51,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.41% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 65.5",
+        "theme 'Financials & Rates' score 63.4 (buy), contribution 64.5",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -854,7 +854,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.59,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 29.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.20%",
         "theme=Clean Energy",
@@ -869,12 +869,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.52%",
-        "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -884,7 +882,7 @@
       "target_weight": 0.0001,
       "current_weight": 0.0002,
       "notional_delta": -10.79,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 29.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
         "theme=Clean Energy",
@@ -909,10 +907,10 @@
     {
       "symbol": "GD",
       "action": "BUY",
-      "target_weight": 0.0395,
+      "target_weight": 0.0383,
       "current_weight": 0.0283,
-      "notional_delta": 1120.79,
-      "reason": "underweight by 1.12% vs target \u2014 add",
+      "notional_delta": 1000.18,
+      "reason": "underweight by 1.00% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.47%",
         "theme=Defense & Aerospace",
@@ -926,12 +924,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "exiting on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.65%",
-        "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -981,14 +977,14 @@
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0423,
+      "target_weight": 0.0412,
       "current_weight": 0.0279,
-      "notional_delta": 1445.99,
-      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.44% vs target \u2014 add",
+      "notional_delta": 1335.43,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.33% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 62.5",
+        "theme 'Financials & Rates' score 63.4 (buy), contribution 61.5",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -996,41 +992,41 @@
     },
     {
       "symbol": "LCID",
-      "action": "BUY",
-      "target_weight": 0.0291,
+      "action": "REDUCE",
+      "target_weight": 0.0137,
       "current_weight": 0.0208,
-      "notional_delta": 834.8,
-      "reason": "underweight by 0.83% vs target \u2014 add",
+      "notional_delta": -713.04,
+      "reason": "overweight by 0.71% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-11.68%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 70.2"
+        "theme 'EV & Clean Transport' score 39.8 (hold_small), contribution 55.1"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "LLY",
-      "action": "REDUCE",
-      "target_weight": 0.0372,
+      "action": "HOLD",
+      "target_weight": 0.0559,
       "current_weight": 0.0551,
-      "notional_delta": -1801.53,
-      "reason": "trimming on mixed news flow \u2014 \"8 Health Care Stocks Whale Activity In Today\u2019s Session\" \u00b7 overweight by 1.79% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Is Viking Therapeutics Stock Going to $50? Here's What the Bulls and Bears Are Saying\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.55%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.7 (buy), contribution 71.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 80.8 (strong_buy), contribution 86.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "LMT",
       "action": "BUY",
-      "target_weight": 0.0415,
+      "target_weight": 0.0402,
       "current_weight": 0.0302,
-      "notional_delta": 1137.23,
-      "reason": "buying on mixed news flow \u2014 \"Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom \" \u00b7 underweight by 1.13% vs target \u2014 add",
+      "notional_delta": 1006.57,
+      "reason": "buying on mixed news flow \u2014 \"Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom \" \u00b7 underweight by 1.00% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.49%",
         "theme=Defense & Aerospace",
@@ -1090,12 +1086,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0283,
       "notional_delta": -2847.35,
-      "reason": "exiting on mixed news flow \u2014 \"8 Health Care Stocks Whale Activity In Today\u2019s Session\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Is Viking Therapeutics Stock Going to $50? Here's What the Bulls and Bears Are Saying\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=10.87%",
         "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1150,7 +1146,7 @@
       "target_weight": 0.0015,
       "current_weight": 0.0031,
       "notional_delta": -153.31,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 29.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.34%",
         "theme=Clean Energy",
@@ -1178,10 +1174,10 @@
     {
       "symbol": "NOC",
       "action": "BUY",
-      "target_weight": 0.0411,
+      "target_weight": 0.0399,
       "current_weight": 0.03,
-      "notional_delta": 1112.37,
-      "reason": "buying on mixed news flow \u2014 \"Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom \" \u00b7 underweight by 1.11% vs target \u2014 add",
+      "notional_delta": 991.76,
+      "reason": "buying on mixed news flow \u2014 \"Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom \" \u00b7 underweight by 0.99% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.81%",
         "theme=Defense & Aerospace",
@@ -1251,38 +1247,43 @@
       "target_weight": 0.0,
       "current_weight": 0.0514,
       "notional_delta": -5166.79,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Is Viking Therapeutics Stock Going to $50? Here's What the Bulls and Bears Are Saying\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.98%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "REGN",
-      "action": "REDUCE",
-      "target_weight": 0.0348,
+      "action": "HOLD",
+      "target_weight": 0.053,
       "current_weight": 0.0489,
-      "notional_delta": -1414.05,
-      "reason": "overweight by 1.41% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on trial data (positive) \u2014 \"Regeneron (REGN) Secures FDA Priority Review And EMA Acceptance For Cemdisiran\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.33%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.7 (buy), contribution 66.6"
+        "theme 'Biotech & Pharma' score 80.8 (strong_buy), contribution 81.8",
+        "news_source=yahoo_rss",
+        "event=trial data",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "RIVN",
-      "action": "BUY",
-      "target_weight": 0.0307,
+      "action": "REDUCE",
+      "target_weight": 0.0146,
       "current_weight": 0.0213,
-      "notional_delta": 941.97,
-      "reason": "underweight by 0.94% vs target \u2014 add",
+      "notional_delta": -676.23,
+      "reason": "overweight by 0.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.88%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 74.0"
+        "theme 'EV & Clean Transport' score 39.8 (hold_small), contribution 59.0"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1320,7 +1321,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -129.77,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 29.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.17%",
         "theme=Clean Energy",
@@ -1359,15 +1360,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "BUY",
-      "target_weight": 0.032,
+      "action": "REDUCE",
+      "target_weight": 0.0154,
       "current_weight": 0.0232,
-      "notional_delta": 887.55,
-      "reason": "buying on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 underweight by 0.88% vs target \u2014 add",
+      "notional_delta": -780.9,
+      "reason": "trimming on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 overweight by 0.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 77.2",
+        "theme 'EV & Clean Transport' score 39.8 (hold_small), contribution 62.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1388,29 +1389,31 @@
     },
     {
       "symbol": "VRTX",
-      "action": "REDUCE",
-      "target_weight": 0.0398,
+      "action": "HOLD",
+      "target_weight": 0.0592,
       "current_weight": 0.06,
-      "notional_delta": -2027.11,
-      "reason": "overweight by 2.02% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Is Viking Therapeutics Stock Going to $50? Here's What the Bulls and Bears Are Saying\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.85%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.7 (buy), contribution 76.2"
+        "theme 'Biotech & Pharma' score 80.8 (strong_buy), contribution 91.4",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0446,
+      "target_weight": 0.0436,
       "current_weight": 0.0305,
-      "notional_delta": 1414.54,
-      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.41% vs target \u2014 add",
+      "notional_delta": 1314.03,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.31% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 66.0",
+        "theme 'Financials & Rates' score 63.4 (buy), contribution 65.0",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -1540,14 +1543,14 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0443,
+      "target_weight": 0.0433,
       "current_weight": 0.0292,
-      "notional_delta": 1521.02,
-      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.51% vs target \u2014 add",
+      "notional_delta": 1420.51,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.41% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 65.5",
+        "theme 'Financials & Rates' score 63.4 (buy), contribution 64.5",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -1616,7 +1619,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.59,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 29.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.20%",
         "theme=Clean Energy",
@@ -1634,12 +1637,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.52%",
-        "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1652,7 +1653,7 @@
       "target_weight": 0.0001,
       "current_weight": 0.0002,
       "notional_delta": -10.79,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 29.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
         "theme=Clean Energy",
@@ -1683,10 +1684,10 @@
     {
       "symbol": "GD",
       "action": "BUY",
-      "target_weight": 0.0395,
+      "target_weight": 0.0383,
       "current_weight": 0.0283,
-      "notional_delta": 1120.79,
-      "reason": "underweight by 1.12% vs target \u2014 add",
+      "notional_delta": 1000.18,
+      "reason": "underweight by 1.00% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.47%",
         "theme=Defense & Aerospace",
@@ -1703,12 +1704,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "exiting on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.65%",
-        "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1770,14 +1769,14 @@
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0423,
+      "target_weight": 0.0412,
       "current_weight": 0.0279,
-      "notional_delta": 1445.99,
-      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.44% vs target \u2014 add",
+      "notional_delta": 1335.43,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.33% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 62.5",
+        "theme 'Financials & Rates' score 63.4 (buy), contribution 61.5",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -1788,15 +1787,15 @@
     },
     {
       "symbol": "LCID",
-      "action": "BUY",
-      "target_weight": 0.0291,
+      "action": "REDUCE",
+      "target_weight": 0.0137,
       "current_weight": 0.0208,
-      "notional_delta": 834.8,
-      "reason": "underweight by 0.83% vs target \u2014 add",
+      "notional_delta": -713.04,
+      "reason": "overweight by 0.71% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-11.68%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 70.2"
+        "theme 'EV & Clean Transport' score 39.8 (hold_small), contribution 55.1"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1805,17 +1804,17 @@
     },
     {
       "symbol": "LLY",
-      "action": "REDUCE",
-      "target_weight": 0.0372,
+      "action": "HOLD",
+      "target_weight": 0.0559,
       "current_weight": 0.0551,
-      "notional_delta": -1801.53,
-      "reason": "trimming on mixed news flow \u2014 \"8 Health Care Stocks Whale Activity In Today\u2019s Session\" \u00b7 overweight by 1.79% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Is Viking Therapeutics Stock Going to $50? Here's What the Bulls and Bears Are Saying\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.55%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.7 (buy), contribution 71.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 80.8 (strong_buy), contribution 86.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1825,10 +1824,10 @@
     {
       "symbol": "LMT",
       "action": "BUY",
-      "target_weight": 0.0415,
+      "target_weight": 0.0402,
       "current_weight": 0.0302,
-      "notional_delta": 1137.23,
-      "reason": "buying on mixed news flow \u2014 \"Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom \" \u00b7 underweight by 1.13% vs target \u2014 add",
+      "notional_delta": 1006.57,
+      "reason": "buying on mixed news flow \u2014 \"Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom \" \u00b7 underweight by 1.00% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.49%",
         "theme=Defense & Aerospace",
@@ -1900,12 +1899,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0283,
       "notional_delta": -2847.35,
-      "reason": "exiting on mixed news flow \u2014 \"8 Health Care Stocks Whale Activity In Today\u2019s Session\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Is Viking Therapeutics Stock Going to $50? Here's What the Bulls and Bears Are Saying\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=10.87%",
         "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1972,7 +1971,7 @@
       "target_weight": 0.0015,
       "current_weight": 0.0031,
       "notional_delta": -153.31,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 29.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.34%",
         "theme=Clean Energy",
@@ -2006,10 +2005,10 @@
     {
       "symbol": "NOC",
       "action": "BUY",
-      "target_weight": 0.0411,
+      "target_weight": 0.0399,
       "current_weight": 0.03,
-      "notional_delta": 1112.37,
-      "reason": "buying on mixed news flow \u2014 \"Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom \" \u00b7 underweight by 1.11% vs target \u2014 add",
+      "notional_delta": 991.76,
+      "reason": "buying on mixed news flow \u2014 \"Trump Faces New Questions As Report Says Boeing, Lockheed, Palantir and Other Federal Contractors Supported Both America250 and His Freedom \" \u00b7 underweight by 0.99% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.81%",
         "theme=Defense & Aerospace",
@@ -2094,10 +2093,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0514,
       "notional_delta": -5166.79,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Is Viking Therapeutics Stock Going to $50? Here's What the Bulls and Bears Are Saying\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.98%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2106,15 +2107,18 @@
     },
     {
       "symbol": "REGN",
-      "action": "REDUCE",
-      "target_weight": 0.0348,
+      "action": "HOLD",
+      "target_weight": 0.053,
       "current_weight": 0.0489,
-      "notional_delta": -1414.05,
-      "reason": "overweight by 1.41% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on trial data (positive) \u2014 \"Regeneron (REGN) Secures FDA Priority Review And EMA Acceptance For Cemdisiran\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.33%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.7 (buy), contribution 66.6"
+        "theme 'Biotech & Pharma' score 80.8 (strong_buy), contribution 81.8",
+        "news_source=yahoo_rss",
+        "event=trial data",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2123,15 +2127,15 @@
     },
     {
       "symbol": "RIVN",
-      "action": "BUY",
-      "target_weight": 0.0307,
+      "action": "REDUCE",
+      "target_weight": 0.0146,
       "current_weight": 0.0213,
-      "notional_delta": 941.97,
-      "reason": "underweight by 0.94% vs target \u2014 add",
+      "notional_delta": -676.23,
+      "reason": "overweight by 0.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.88%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 74.0"
+        "theme 'EV & Clean Transport' score 39.8 (hold_small), contribution 59.0"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2178,7 +2182,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -129.77,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 29.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.17%",
         "theme=Clean Energy",
@@ -2226,15 +2230,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "BUY",
-      "target_weight": 0.032,
+      "action": "REDUCE",
+      "target_weight": 0.0154,
       "current_weight": 0.0232,
-      "notional_delta": 887.55,
-      "reason": "buying on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 underweight by 0.88% vs target \u2014 add",
+      "notional_delta": -780.9,
+      "reason": "trimming on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 overweight by 0.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 54.8 (starter), contribution 77.2",
+        "theme 'EV & Clean Transport' score 39.8 (hold_small), contribution 62.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2261,15 +2265,17 @@
     },
     {
       "symbol": "VRTX",
-      "action": "REDUCE",
-      "target_weight": 0.0398,
+      "action": "HOLD",
+      "target_weight": 0.0592,
       "current_weight": 0.06,
-      "notional_delta": -2027.11,
-      "reason": "overweight by 2.02% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Is Viking Therapeutics Stock Going to $50? Here's What the Bulls and Bears Are Saying\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.85%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 65.7 (buy), contribution 76.2"
+        "theme 'Biotech & Pharma' score 80.8 (strong_buy), contribution 91.4",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2279,14 +2285,14 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0446,
+      "target_weight": 0.0436,
       "current_weight": 0.0305,
-      "notional_delta": 1414.54,
-      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.41% vs target \u2014 add",
+      "notional_delta": 1314.03,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.31% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 66.0",
+        "theme 'Financials & Rates' score 63.4 (buy), contribution 65.0",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -3901,6 +3907,10 @@
     {
       "t": "2026-07-04T16:46:12+00:00",
       "v": 100509.06
+    },
+    {
+      "t": "2026-07-04T17:51:39+00:00",
+      "v": 100509.06
     }
   ],
   "breaking_news": [
@@ -3909,7 +3919,7 @@
       "summary": "NPR's Steve Inskeep asks Princeton computer scientist Sayash Kapoor about his assertions that AI won't lead to mass layoffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5864243/computer-scientist-on-why-he-believes-mass-layoffs-due-to-ai-is-a-convenient-excuse",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3918,7 +3928,7 @@
       "summary": "Personal finance and nutrition experts share simple strategies that make it possible to eat out on a budget. One tip? You might have to let go of your fast food delivery habit.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5862777/how-to-spend-less-money-restaurants-takeout",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3927,7 +3937,7 @@
       "summary": "Mark Zuckerberg met with Kalshi's CEO last year about a potential deal, but talks did not move forward. Now Meta is making its own prediction market app.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5875468/meta-kalshi-prediction-market-acquisition-talks",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3936,7 +3946,7 @@
       "summary": "Employers added 57,000 jobs in June, the Labor Department said on Friday, as jobs growth slowed from the previous two months, while the unemployment rate ticked down to 4.2%.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5877491/labor-department-to-release-latest-jobs-report-thursday",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3945,7 +3955,7 @@
       "summary": "President Trump earned more than $1 billion in 2025 from cryptocurrency ventures. But there are thousands of investors who bought into some of those cryptocurrencies, and they stand to lose big.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5878411/trump-earned-more-than-1-billion-from-crypto-but-his-investors-didnt-fare-so-well",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3954,7 +3964,7 @@
       "summary": "Don't have a pool during this hot summer? Rent one! Swimply is a platform that lets users rent private pools.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5838050/a-hot-summer-trend-in-the-sharing-economy-rental-swimming-pools",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3963,7 +3973,7 @@
       "summary": "The Airbnb-style company Swimply said there have been about 275,000 private pool reservations so far this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5876505/swimming-pool-rental-sharing-economy-swimply",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3972,7 +3982,7 @@
       "summary": "Colonial Americans were drinking coffee long before they dumped tea into Boston Harbor or fought a war for independence. The establishments that served it were already brewing revolutionary ideas.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5845436/coffee-july-4-colonies-america-250-1776-boston-tea-party",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3981,7 +3991,7 @@
       "summary": "The star-studded celebration saw several streets in Midtown Manhattan shut, as hordes of fans gathered outside the arena.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c982ry2pen3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3990,16 +4000,16 @@
       "summary": "West Bengal's move to replace eggs in some school meals has sparked a wider debate over nutrition and choice.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c33yldyd62po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Pope urges Europe to do more for migrants while visiting gateway island",
+      "headline": "Pope urges Europe to do more for migrants as he visits gateway island",
       "summary": "The pontiff pays tribute to migrants who lost their lives at sea at a cemetery on the Italian island of Lampedusa.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5yz83n7q5no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4008,7 +4018,7 @@
       "summary": "Serena Williams pulls out of her planned Wimbledon doubles appearance with older sister Venus because of a knee injury.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/sport/tennis/articles/ce95mxn1rlmo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4017,7 +4027,7 @@
       "summary": "The former Russian world chess champion had accused other players, including the late Daniel Naroditsky, of cheating.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cd6epx607dqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4026,7 +4036,7 @@
       "summary": "Ali Khamenei's body will lie in state in Tehran's Grand Mosalla until Monday, before travelling across Iran and Iraq.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c0ky2zen1kgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4035,7 +4045,7 @@
       "summary": "Ukrainian President Volodymyr Zelensky says the target is key infrastructure \"that generates revenue for Russia's war\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c8j2vmzxezro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4044,7 +4054,7 @@
       "summary": "More than 165 million people are enduring dangerous heat and humidity, with temperatures expected to stay at 38C (100F) for several days.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cevlkzer7vdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4053,7 +4063,7 @@
       "summary": "The ads use terms including \u201crape\u201d and \u201cchild video\u201d and link to content on the messaging app Telegram.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgm4e0316zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4062,7 +4072,7 @@
       "summary": "Millions are likely to have eaten \"lamb\" kebabs that were actually made with goat, skin and fat.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce95y1zlzyxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4071,7 +4081,7 @@
       "summary": "Leading AI researcher Yan LeCun has a start-up which is developing a more flexible AI system.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj6gr0xkyr3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4080,7 +4090,7 @@
       "summary": "The government had initially said it would not relax licensing laws further for the World Cup.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c1kyr8747m9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T16:46:14+00:00",
+      "published_utc": "2026-07-04T17:51:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
