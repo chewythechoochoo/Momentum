@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-04T04:48:33+00:00",
+  "generated_at_utc": "2026-07-04T07:34:55+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 390,
-  "last_success_utc": "2026-07-04T01:04:03+00:00",
+  "cycle_count": 391,
+  "last_success_utc": "2026-07-04T04:48:33+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -541,14 +541,14 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 81.17,
-      "raw_score": 81.17,
+      "score": 78.17,
+      "raw_score": 78.17,
       "band": "strong_buy",
-      "weight": 0.156,
-      "confidence": 0.85,
+      "weight": 0.1473,
+      "confidence": 0.8,
       "components": {
         "momentum": 81.25,
-        "sentiment": 100.0,
+        "sentiment": 90.0,
         "volume": 65.83,
         "policy": 55.0,
         "volatility_penalty": 0.0
@@ -592,30 +592,14 @@
       "score": 52.38,
       "raw_score": 52.38,
       "band": "starter",
-      "weight": 0.0799,
-      "confidence": 0.75,
+      "weight": 0.0776,
+      "confidence": 0.7,
       "components": {
         "momentum": 55.48,
         "sentiment": 50.0,
         "volume": 50.93,
         "policy": 50.0,
         "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 43.85,
-      "raw_score": 54.57,
-      "band": "starter",
-      "weight": 0.0628,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 47.43,
-        "sentiment": 63.63,
-        "volume": 57.54,
-        "policy": 50.0,
-        "volatility_penalty": 10.72
       }
     },
     {
@@ -648,6 +632,22 @@
         "volume": 50.05,
         "policy": 60.0,
         "volatility_penalty": 0.08
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 41.91,
+      "raw_score": 52.62,
+      "band": "starter",
+      "weight": 0.055,
+      "confidence": 0.95,
+      "components": {
+        "momentum": 47.43,
+        "sentiment": 57.14,
+        "volume": 57.54,
+        "policy": 50.0,
+        "volatility_penalty": 10.72
       }
     },
     {
@@ -734,14 +734,14 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0527,
+      "target_weight": 0.0498,
       "current_weight": 0.0534,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 81.2 (strong_buy), contribution 90.1",
+        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 87.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -767,12 +767,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.17,
-      "reason": "exiting on mixed news flow \u2014 \"Jim Cramer on Anthropic's Reported Samsung AI Chip Plans: 'We Really Don't Have Anything But a Rumor'\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.61%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
@@ -794,7 +792,7 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.027,
+      "target_weight": 0.0263,
       "current_weight": 0.0292,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -985,30 +983,28 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0255,
+      "target_weight": 0.0248,
       "current_weight": 0.0279,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Why Is Avis Budget Group (CAR) Stock Trending Overnight? (CORRECTED)\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.4 (starter), contribution 50.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 52.4 (starter), contribution 50.5"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "LCID",
       "action": "HOLD",
-      "target_weight": 0.0197,
+      "target_weight": 0.0172,
       "current_weight": 0.0208,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-11.68%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 59.2"
+        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 57.3"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1059,15 +1055,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0508,
+      "action": "REDUCE",
+      "target_weight": 0.0479,
       "current_weight": 0.0546,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -670.24,
+      "reason": "trimming on mixed news flow \u2014 \"$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today\" \u00b7 overweight by 0.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 81.2 (strong_buy), contribution 86.9",
+        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 83.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1169,14 +1165,14 @@
     {
       "symbol": "NKE",
       "action": "HOLD",
-      "target_weight": 0.0525,
+      "target_weight": 0.0496,
       "current_weight": 0.0539,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.16%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 81.2 (strong_buy), contribution 89.8"
+        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 86.8"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1282,14 +1278,14 @@
     {
       "symbol": "RIVN",
       "action": "HOLD",
-      "target_weight": 0.021,
+      "target_weight": 0.0184,
       "current_weight": 0.0213,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=6.88%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 63.1"
+        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 61.2"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1368,14 +1364,14 @@
     {
       "symbol": "TSLA",
       "action": "HOLD",
-      "target_weight": 0.0221,
+      "target_weight": 0.0193,
       "current_weight": 0.0232,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 66.3",
+        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 64.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1414,16 +1410,14 @@
     {
       "symbol": "WFC",
       "action": "HOLD",
-      "target_weight": 0.0273,
+      "target_weight": 0.0265,
       "current_weight": 0.0305,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Why Is Avis Budget Group (CAR) Stock Trending Overnight? (CORRECTED)\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.4 (starter), contribution 54.0",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 52.4 (starter), contribution 54.0"
       ],
       "theme_key": "financials"
     },
@@ -1483,14 +1477,14 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0527,
+      "target_weight": 0.0498,
       "current_weight": 0.0534,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 81.2 (strong_buy), contribution 90.1",
+        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 87.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1522,12 +1516,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.17,
-      "reason": "exiting on mixed news flow \u2014 \"Jim Cramer on Anthropic's Reported Samsung AI Chip Plans: 'We Really Don't Have Anything But a Rumor'\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.61%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1555,7 +1547,7 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.027,
+      "target_weight": 0.0263,
       "current_weight": 0.0292,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1785,16 +1777,14 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0255,
+      "target_weight": 0.0248,
       "current_weight": 0.0279,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Why Is Avis Budget Group (CAR) Stock Trending Overnight? (CORRECTED)\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.4 (starter), contribution 50.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 52.4 (starter), contribution 50.5"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1804,14 +1794,14 @@
     {
       "symbol": "LCID",
       "action": "HOLD",
-      "target_weight": 0.0197,
+      "target_weight": 0.0172,
       "current_weight": 0.0208,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-11.68%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 59.2"
+        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 57.3"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1874,15 +1864,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0508,
+      "action": "REDUCE",
+      "target_weight": 0.0479,
       "current_weight": 0.0546,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -670.24,
+      "reason": "trimming on mixed news flow \u2014 \"$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today\" \u00b7 overweight by 0.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 81.2 (strong_buy), contribution 86.9",
+        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 83.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2005,14 +1995,14 @@
     {
       "symbol": "NKE",
       "action": "HOLD",
-      "target_weight": 0.0525,
+      "target_weight": 0.0496,
       "current_weight": 0.0539,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.16%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 81.2 (strong_buy), contribution 89.8"
+        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 86.8"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2142,14 +2132,14 @@
     {
       "symbol": "RIVN",
       "action": "HOLD",
-      "target_weight": 0.021,
+      "target_weight": 0.0184,
       "current_weight": 0.0213,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=6.88%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 63.1"
+        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 61.2"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2246,14 +2236,14 @@
     {
       "symbol": "TSLA",
       "action": "HOLD",
-      "target_weight": 0.0221,
+      "target_weight": 0.0193,
       "current_weight": 0.0232,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Tesla Takes a Page From Ford, GM and Toyota's Playbook With the Model Y L\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.9 (starter), contribution 66.3",
+        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 64.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2301,16 +2291,14 @@
     {
       "symbol": "WFC",
       "action": "HOLD",
-      "target_weight": 0.0273,
+      "target_weight": 0.0265,
       "current_weight": 0.0305,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Why Is Avis Budget Group (CAR) Stock Trending Overnight? (CORRECTED)\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.4 (starter), contribution 54.0",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 52.4 (starter), contribution 54.0"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -3895,6 +3883,10 @@
     {
       "t": "2026-07-04T04:48:30+00:00",
       "v": 100509.06
+    },
+    {
+      "t": "2026-07-04T07:34:52+00:00",
+      "v": 100509.06
     }
   ],
   "breaking_news": [
@@ -3903,7 +3895,7 @@
       "summary": "NPR's Steve Inskeep asks Princeton computer scientist Sayash Kapoor about his assertions that AI won't lead to mass layoffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5864243/computer-scientist-on-why-he-believes-mass-layoffs-due-to-ai-is-a-convenient-excuse",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3912,7 +3904,7 @@
       "summary": "Personal finance and nutrition experts share simple strategies that make it possible to eat out on a budget. One tip? You might have to let go of your fast food delivery habit.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5862777/how-to-spend-less-money-restaurants-takeout",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3921,7 +3913,7 @@
       "summary": "Mark Zuckerberg met with Kalshi's CEO last year about a potential deal, but talks did not move forward. Now Meta is making its own prediction market app.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5875468/meta-kalshi-prediction-market-acquisition-talks",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3930,7 +3922,7 @@
       "summary": "Employers added 57,000 jobs in June, the Labor Department said on Friday, as jobs growth slowed from the previous two months, while the unemployment rate ticked down to 4.2%.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5877491/labor-department-to-release-latest-jobs-report-thursday",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3939,7 +3931,7 @@
       "summary": "President Trump earned more than $1 billion in 2025 from cryptocurrency ventures. But there are thousands of investors who bought into some of those cryptocurrencies, and they stand to lose big.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5878411/trump-earned-more-than-1-billion-from-crypto-but-his-investors-didnt-fare-so-well",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3948,7 +3940,7 @@
       "summary": "Don't have a pool during this hot summer? Rent one! Swimply is a platform that lets users rent private pools.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5838050/a-hot-summer-trend-in-the-sharing-economy-rental-swimming-pools",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3957,7 +3949,7 @@
       "summary": "The Airbnb-style company Swimply said there have been about 275,000 private pool reservations so far this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5876505/swimming-pool-rental-sharing-economy-swimply",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3966,35 +3958,26 @@
       "summary": "Colonial Americans were drinking coffee long before they dumped tea into Boston Harbor or fought a war for independence. The establishments that served it were already brewing revolutionary ideas.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5845436/coffee-july-4-colonies-america-250-1776-boston-tea-party",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Stand-up comic held for jokes about Erdo\u011fan and Islam in Turkey crackdown",
-      "summary": "Deniz G\u00f6kta\u015f is regarded as one of Turkey's most popular comedians and is accused of \"inciting hatred and hostility\" on stage.",
+      "headline": "Row after Indian state drops eggs from school lunch menu",
+      "summary": "West Bengal's move to replace eggs in some school meals has sparked a wider debate over nutrition and choice.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c36yrlzew39o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c33yldyd62po?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Nasa launches mission to save falling space telescope",
-      "summary": "A Nasa-funded robot has blasted off to catch a falling telescope in mid-orbit and blast it back to safety before it burns up.",
+      "headline": "'Flamingo Revolution' takes off as thousands demand Albanian PM's resignation",
+      "summary": "Flamingos have become a national symbol of protest, triggered by opposition to a luxury development.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c0ry4xx7rk8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c8925jnl0z3o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "German row over plan for workers to need sick note on first day of illness",
-      "summary": "A doctors' group says it \"borders on madness\" that patients will have to obtain the note in person.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c4gyxnj38m1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
-      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4002,7 +3985,7 @@
       "summary": "Ali Khamenei's body will lie in state in Tehran's Grand Mosalla from Friday ahead of days-long funeral events.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2k4k7jqeno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4011,7 +3994,7 @@
       "summary": "The disaster has overwhelmed local services, with bodies put outside or in tents for identification.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c20y2p9qqqko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4020,16 +4003,7 @@
       "summary": "Forecasters are warning of further extreme temperatures on the continent in the next few days.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c3ry307rxqro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
-      "sentiment_score": -0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Polish PM warns critical months ahead in face of Russian threat",
-      "summary": "Tusk says Poland is preparing for \"various\" scenarios after media reports of a planned Russian attack.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cj0gp88q4l4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4038,7 +4012,25 @@
       "summary": "Officials believe the suspect may not have acted alone and spent days casing out the scene of the attack.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4gy603z2qlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Brutal heat cancels Fourth of July events, from DC to Philadelphia",
+      "summary": "More than 165 million people are enduring dangerous heat and humidity, with temperatures expected to stay at 38C (100F) for several days.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cevlkzer7vdo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T07:34:55+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Taylor Swift marries Travis Kelce in NYC ceremony officiated by Adam Sandler",
+      "summary": "It was the bash of the century, with celebrities from singer Benson Boone and actor Hugh Grant to model Gigi Hadid and actor Ethan Hawke in attendence.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c982ry2pen3o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4047,7 +4039,7 @@
       "summary": "The ads use terms including \u201crape\u201d and \u201cchild video\u201d and link to content on the messaging app Telegram.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgm4e0316zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4056,7 +4048,7 @@
       "summary": "Millions are likely to have eaten \"lamb\" kebabs that were actually made with goat, skin and fat.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce95y1zlzyxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4065,7 +4057,7 @@
       "summary": "Leading AI researcher Yan LeCun has a start-up which is developing a more flexible AI system.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj6gr0xkyr3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4074,7 +4066,7 @@
       "summary": "The government had initially said it would not relax licensing laws further for the World Cup.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c1kyr8747m9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T04:48:33+00:00",
+      "published_utc": "2026-07-04T07:34:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
