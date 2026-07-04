@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-04T14:20:49+00:00",
+  "generated_at_utc": "2026-07-04T15:39:53+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 395,
-  "last_success_utc": "2026-07-04T12:47:28+00:00",
+  "cycle_count": 396,
+  "last_success_utc": "2026-07-04T14:20:49+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -539,22 +539,6 @@
   ],
   "themes": [
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 78.17,
-      "raw_score": 78.17,
-      "band": "strong_buy",
-      "weight": 0.1473,
-      "confidence": 0.8,
-      "components": {
-        "momentum": 81.25,
-        "sentiment": 90.0,
-        "volume": 65.83,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 68.09,
@@ -568,6 +552,22 @@
         "volume": 54.7,
         "policy": 50.0,
         "volatility_penalty": 0.26
+      }
+    },
+    {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 66.17,
+      "raw_score": 66.17,
+      "band": "buy",
+      "weight": 0.1201,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 81.25,
+        "sentiment": 50.0,
+        "volume": 65.83,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -589,14 +589,14 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 64.79,
-      "raw_score": 64.79,
+      "score": 64.38,
+      "raw_score": 64.38,
       "band": "buy",
-      "weight": 0.1326,
+      "weight": 0.1313,
       "confidence": 1.0,
       "components": {
         "momentum": 55.48,
-        "sentiment": 86.36,
+        "sentiment": 85.0,
         "volume": 50.93,
         "policy": 65.0,
         "volatility_penalty": 0.0
@@ -635,32 +635,16 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 39.21,
-      "raw_score": 49.77,
-      "band": "hold_small",
-      "weight": 0.0453,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 34.58,
-        "sentiment": 66.66,
-        "volume": 54.73,
-        "policy": 50.0,
-        "volatility_penalty": 10.57
-      }
-    },
-    {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 31.95,
-      "raw_score": 49.59,
+      "score": 30.41,
+      "raw_score": 48.05,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 19.32,
-        "sentiment": 87.5,
+        "sentiment": 82.36,
         "volume": 50.56,
         "policy": 55.0,
         "volatility_penalty": 17.64
@@ -689,13 +673,29 @@
       "raw_score": 41.59,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.85,
+      "confidence": 0.8,
       "components": {
         "momentum": 24.72,
         "sentiment": 50.0,
         "volume": 58.53,
         "policy": 50.0,
         "volatility_penalty": 18.0
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 19.21,
+      "raw_score": 29.78,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.9,
+      "components": {
+        "momentum": 34.58,
+        "sentiment": 0.0,
+        "volume": 54.73,
+        "policy": 50.0,
+        "volatility_penalty": 10.57
       }
     }
   ],
@@ -721,7 +721,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0177,
       "notional_delta": -1782.18,
-      "reason": "exiting on mixed news flow \u2014 \"EXCLUSIVE: Top 12 Most-Searched Tickers For First Half of 2026 - Where Do Micron, Nvidia, Tesla, SanDisk Rank?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"EXCLUSIVE: Top 12 Most-Searched Tickers For First Half of 2026 - Where Do Micron, Nvidia, Tesla, SanDisk Rank?\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-7.76%",
         "theme=AI & Compute",
@@ -732,17 +732,17 @@
     },
     {
       "symbol": "AMZN",
-      "action": "HOLD",
-      "target_weight": 0.0498,
+      "action": "REDUCE",
+      "target_weight": 0.0407,
       "current_weight": 0.0534,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1274.46,
+      "reason": "trimming on mixed news flow \u2014 \"Trump Won't Create AI Regulator, Says Former White House Adviser Sriram Krishnan Amid Data Center Backlash: 'That Is Never, Never Going To H\" \u00b7 overweight by 1.27% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 87.1",
+        "theme 'Consumer Discretionary' score 66.2 (buy), contribution 75.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -765,7 +765,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.17,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-6.61%",
         "theme=AI & Compute"
@@ -790,17 +790,16 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0448,
+      "target_weight": 0.0443,
       "current_weight": 0.0292,
-      "notional_delta": 1571.28,
-      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.56% vs target \u2014 add",
+      "notional_delta": 1521.02,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.8 (buy), contribution 65.9",
+        "theme 'Financials & Rates' score 64.4 (buy), contribution 65.5",
         "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials"
     },
@@ -855,12 +854,12 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.59,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.20%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "clean_energy"
     },
@@ -885,12 +884,12 @@
       "target_weight": 0.0001,
       "current_weight": 0.0002,
       "notional_delta": -10.79,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "clean_energy"
     },
@@ -938,17 +937,16 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "REDUCE",
-      "target_weight": 0.0152,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0224,
-      "notional_delta": -725.99,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.72% vs target \u2014 trim",
+      "notional_delta": -2253.73,
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.2 (hold_small), contribution 75.8",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -958,13 +956,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.19,
-      "reason": "exiting on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.28%",
         "theme=Financials & Rates",
         "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials"
     },
@@ -984,17 +981,16 @@
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0427,
+      "target_weight": 0.0423,
       "current_weight": 0.0279,
-      "notional_delta": 1486.2,
-      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.48% vs target \u2014 add",
+      "notional_delta": 1445.99,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.44% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.8 (buy), contribution 62.9",
+        "theme 'Financials & Rates' score 64.4 (buy), contribution 62.5",
         "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials"
     },
@@ -1060,14 +1056,14 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0479,
+      "target_weight": 0.0389,
       "current_weight": 0.0546,
-      "notional_delta": -670.24,
-      "reason": "trimming on mixed news flow \u2014 \"$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today\" \u00b7 overweight by 0.67% vs target \u2014 trim",
+      "notional_delta": -1574.83,
+      "reason": "trimming on mixed news flow \u2014 \"$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today\" \u00b7 overweight by 1.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 83.9",
+        "theme 'Consumer Discretionary' score 66.2 (buy), contribution 71.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1075,15 +1071,14 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.0145,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0211,
-      "notional_delta": -663.88,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -2121.26,
+      "reason": "exiting on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=1.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.2 (hold_small), contribution 72.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1110,27 +1105,25 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.45%",
         "theme=Financials & Rates",
         "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0155,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0228,
-      "notional_delta": -734.23,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 overweight by 0.73% vs target \u2014 trim",
+      "notional_delta": -2292.12,
+      "reason": "exiting on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.2 (hold_small), contribution 77.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1157,26 +1150,26 @@
       "target_weight": 0.0015,
       "current_weight": 0.0031,
       "notional_delta": -153.31,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.34%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "clean_energy"
     },
     {
       "symbol": "NKE",
-      "action": "HOLD",
-      "target_weight": 0.0496,
+      "action": "REDUCE",
+      "target_weight": 0.0405,
       "current_weight": 0.0539,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1351.41,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 overweight by 1.34% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.16%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 86.8",
+        "theme 'Consumer Discretionary' score 66.2 (buy), contribution 74.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1204,12 +1197,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.06,
-      "reason": "exiting on negative news flow \u2014 \"David Sacks Says Palantir's Alex Karp Was 'Exactly Right' to Warn Enterprises Against Feeding Data to OpenAI and Anthropic\u2014 the Figma Story \" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-8.28%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -1327,12 +1320,12 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -129.77,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.17%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "clean_energy"
     },
@@ -1357,7 +1350,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.04,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-14.46%",
         "theme=AI & Compute",
@@ -1372,7 +1365,7 @@
       "target_weight": 0.032,
       "current_weight": 0.0232,
       "notional_delta": 887.55,
-      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 underweight by 0.88% vs target \u2014 add",
+      "reason": "buying on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 underweight by 0.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
@@ -1388,12 +1381,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0024,
       "notional_delta": -243.67,
-      "reason": "exiting on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Taiwan Semiconductor Stock In The Last 5 Years\" \u00b7 theme score 23.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 23.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-7.39%",
-        "theme=Semiconductors (Broad)",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1414,17 +1405,16 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0451,
+      "target_weight": 0.0446,
       "current_weight": 0.0305,
-      "notional_delta": 1464.79,
-      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.46% vs target \u2014 add",
+      "notional_delta": 1414.54,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.41% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.8 (buy), contribution 66.4",
+        "theme 'Financials & Rates' score 64.4 (buy), contribution 66.0",
         "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials"
     },
@@ -1468,7 +1458,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0177,
       "notional_delta": -1782.18,
-      "reason": "exiting on mixed news flow \u2014 \"EXCLUSIVE: Top 12 Most-Searched Tickers For First Half of 2026 - Where Do Micron, Nvidia, Tesla, SanDisk Rank?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"EXCLUSIVE: Top 12 Most-Searched Tickers For First Half of 2026 - Where Do Micron, Nvidia, Tesla, SanDisk Rank?\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-7.76%",
         "theme=AI & Compute",
@@ -1482,17 +1472,17 @@
     },
     {
       "symbol": "AMZN",
-      "action": "HOLD",
-      "target_weight": 0.0498,
+      "action": "REDUCE",
+      "target_weight": 0.0407,
       "current_weight": 0.0534,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1274.46,
+      "reason": "trimming on mixed news flow \u2014 \"Trump Won't Create AI Regulator, Says Former White House Adviser Sriram Krishnan Amid Data Center Backlash: 'That Is Never, Never Going To H\" \u00b7 overweight by 1.27% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 87.1",
+        "theme 'Consumer Discretionary' score 66.2 (buy), contribution 75.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1521,7 +1511,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.17,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-6.61%",
         "theme=AI & Compute"
@@ -1552,17 +1542,16 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0448,
+      "target_weight": 0.0443,
       "current_weight": 0.0292,
-      "notional_delta": 1571.28,
-      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.56% vs target \u2014 add",
+      "notional_delta": 1521.02,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.8 (buy), contribution 65.9",
+        "theme 'Financials & Rates' score 64.4 (buy), contribution 65.5",
         "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1629,12 +1618,12 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.59,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.20%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1665,12 +1654,12 @@
       "target_weight": 0.0001,
       "current_weight": 0.0002,
       "notional_delta": -10.79,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1730,17 +1719,16 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "REDUCE",
-      "target_weight": 0.0152,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0224,
-      "notional_delta": -725.99,
-      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.72% vs target \u2014 trim",
+      "notional_delta": -2253.73,
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.2 (hold_small), contribution 75.8",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1753,13 +1741,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.19,
-      "reason": "exiting on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.28%",
         "theme=Financials & Rates",
         "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1785,17 +1772,16 @@
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0427,
+      "target_weight": 0.0423,
       "current_weight": 0.0279,
-      "notional_delta": 1486.2,
-      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.48% vs target \u2014 add",
+      "notional_delta": 1445.99,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.44% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.8 (buy), contribution 62.9",
+        "theme 'Financials & Rates' score 64.4 (buy), contribution 62.5",
         "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1876,14 +1862,14 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0479,
+      "target_weight": 0.0389,
       "current_weight": 0.0546,
-      "notional_delta": -670.24,
-      "reason": "trimming on mixed news flow \u2014 \"$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today\" \u00b7 overweight by 0.67% vs target \u2014 trim",
+      "notional_delta": -1574.83,
+      "reason": "trimming on mixed news flow \u2014 \"$100 Invested In McDonald's 20 Years Ago Would Be Worth This Much Today\" \u00b7 overweight by 1.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.18%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 83.9",
+        "theme 'Consumer Discretionary' score 66.2 (buy), contribution 71.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1894,15 +1880,14 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.0145,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0211,
-      "notional_delta": -663.88,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -2121.26,
+      "reason": "exiting on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=1.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.2 (hold_small), contribution 72.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1935,13 +1920,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.45%",
         "theme=Financials & Rates",
         "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1950,15 +1934,14 @@
     },
     {
       "symbol": "MSFT",
-      "action": "REDUCE",
-      "target_weight": 0.0155,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0228,
-      "notional_delta": -734.23,
-      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 overweight by 0.73% vs target \u2014 trim",
+      "notional_delta": -2292.12,
+      "reason": "exiting on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 39.2 (hold_small), contribution 77.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1991,12 +1974,12 @@
       "target_weight": 0.0015,
       "current_weight": 0.0031,
       "notional_delta": -153.31,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.34%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -2005,15 +1988,15 @@
     },
     {
       "symbol": "NKE",
-      "action": "HOLD",
-      "target_weight": 0.0496,
+      "action": "REDUCE",
+      "target_weight": 0.0405,
       "current_weight": 0.0539,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1351.41,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 overweight by 1.34% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.16%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 78.2 (strong_buy), contribution 86.8",
+        "theme 'Consumer Discretionary' score 66.2 (buy), contribution 74.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2047,12 +2030,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.06,
-      "reason": "exiting on negative news flow \u2014 \"David Sacks Says Palantir's Alex Karp Was 'Exactly Right' to Warn Enterprises Against Feeding Data to OpenAI and Anthropic\u2014 the Figma Story \" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-8.28%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2197,12 +2180,12 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -129.77,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d\" \u00b7 theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.17%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -2233,7 +2216,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.04,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 theme score 19.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-14.46%",
         "theme=AI & Compute",
@@ -2251,7 +2234,7 @@
       "target_weight": 0.032,
       "current_weight": 0.0232,
       "notional_delta": 887.55,
-      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 underweight by 0.88% vs target \u2014 add",
+      "reason": "buying on mixed news flow \u2014 \"A Former Uber Engineer Visited Nvidia's Headquarters and Couldn't Believe What Employees Actually Pay for at Work: 'We Use This Thing Called\" \u00b7 underweight by 0.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
@@ -2270,12 +2253,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0024,
       "notional_delta": -243.67,
-      "reason": "exiting on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Taiwan Semiconductor Stock In The Last 5 Years\" \u00b7 theme score 23.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 23.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-7.39%",
-        "theme=Semiconductors (Broad)",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2302,17 +2283,16 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0451,
+      "target_weight": 0.0446,
       "current_weight": 0.0305,
-      "notional_delta": 1464.79,
-      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.46% vs target \u2014 add",
+      "notional_delta": 1414.54,
+      "reason": "buying on negative news flow \u2014 \"Jim Cramer Says He Would Avoid Blue Owl and Prefers Blackstone\" \u00b7 underweight by 1.41% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.8 (buy), contribution 66.4",
+        "theme 'Financials & Rates' score 64.4 (buy), contribution 66.0",
         "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -3917,6 +3897,10 @@
     {
       "t": "2026-07-04T14:20:44+00:00",
       "v": 100509.06
+    },
+    {
+      "t": "2026-07-04T15:39:50+00:00",
+      "v": 100509.06
     }
   ],
   "breaking_news": [
@@ -3925,7 +3909,7 @@
       "summary": "NPR's Steve Inskeep asks Princeton computer scientist Sayash Kapoor about his assertions that AI won't lead to mass layoffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5864243/computer-scientist-on-why-he-believes-mass-layoffs-due-to-ai-is-a-convenient-excuse",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3934,7 +3918,7 @@
       "summary": "Personal finance and nutrition experts share simple strategies that make it possible to eat out on a budget. One tip? You might have to let go of your fast food delivery habit.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5862777/how-to-spend-less-money-restaurants-takeout",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3943,7 +3927,7 @@
       "summary": "Mark Zuckerberg met with Kalshi's CEO last year about a potential deal, but talks did not move forward. Now Meta is making its own prediction market app.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5875468/meta-kalshi-prediction-market-acquisition-talks",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3952,7 +3936,7 @@
       "summary": "Employers added 57,000 jobs in June, the Labor Department said on Friday, as jobs growth slowed from the previous two months, while the unemployment rate ticked down to 4.2%.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5877491/labor-department-to-release-latest-jobs-report-thursday",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3961,7 +3945,7 @@
       "summary": "President Trump earned more than $1 billion in 2025 from cryptocurrency ventures. But there are thousands of investors who bought into some of those cryptocurrencies, and they stand to lose big.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5878411/trump-earned-more-than-1-billion-from-crypto-but-his-investors-didnt-fare-so-well",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3970,7 +3954,7 @@
       "summary": "Don't have a pool during this hot summer? Rent one! Swimply is a platform that lets users rent private pools.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5838050/a-hot-summer-trend-in-the-sharing-economy-rental-swimming-pools",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3979,7 +3963,7 @@
       "summary": "The Airbnb-style company Swimply said there have been about 275,000 private pool reservations so far this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5876505/swimming-pool-rental-sharing-economy-swimply",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3988,52 +3972,7 @@
       "summary": "Colonial Americans were drinking coffee long before they dumped tea into Boston Harbor or fought a war for independence. The establishments that served it were already brewing revolutionary ideas.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5845436/coffee-july-4-colonies-america-250-1776-boston-tea-party",
-      "published_utc": "2026-07-04T14:20:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Anguished families left to identify Venezuela quake victims at makeshift morgue",
-      "summary": "The disaster has overwhelmed local services, with bodies put outside or in tents for identification.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c20y2p9qqqko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Pope urges Europe to do more for migrants while visiting gateway island",
-      "summary": "The pontiff pays tribute to migrants who lost their lives at sea at a cemetery on the Italian island of Lampedusa.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c5yz83n7q5no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "'Flamingo Revolution' takes off as thousands demand Albanian PM's resignation",
-      "summary": "Flamingos have become a national symbol of protest, triggered by opposition to a luxury development.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c8925jnl0z3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
-      "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Ukraine hits major oil terminal in Russia's St Petersburg",
-      "summary": "Ukrainian President Volodymyr Zelensky says the target is key infrastructure \"that generates revenue for Russia's war\".",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c8j2vmzxezro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Large crowds gather in Tehran on first day of Ayatollah Khamenei's funeral",
-      "summary": "Ali Khamenei's body will lie in state in Tehran's Grand Mosalla until Monday, before travelling across Iran and Iraq.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c0ky2zen1kgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4042,16 +3981,7 @@
       "summary": "The daughter of disgraced president Alberto Fujimori is declared winner of tight race nearly a month after voting took place.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr5jpvv06e1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Brutal heat cancels Fourth of July events, from DC to Philadelphia",
-      "summary": "More than 165 million people are enduring dangerous heat and humidity, with temperatures expected to stay at 38C (100F) for several days.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cevlkzer7vdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4060,7 +3990,61 @@
       "summary": "The star-studded celebration saw several streets in Midtown Manhattan shut, as hordes of fans gathered outside the arena.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c982ry2pen3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Row after Indian state drops eggs from school lunch menu",
+      "summary": "West Bengal's move to replace eggs in some school meals has sparked a wider debate over nutrition and choice.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c33yldyd62po?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T15:39:53+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Pope urges Europe to do more for migrants while visiting gateway island",
+      "summary": "The pontiff pays tribute to migrants who lost their lives at sea at a cemetery on the Italian island of Lampedusa.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c5yz83n7q5no?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T15:39:53+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Injury ends Williams' Wimbledon comeback",
+      "summary": "Serena Williams pulls out of her planned Wimbledon doubles appearance with older sister Venus because of a knee injury.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/sport/tennis/articles/ce95mxn1rlmo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T15:39:53+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Large crowds gather in Tehran on first day of Ayatollah Khamenei's funeral",
+      "summary": "Ali Khamenei's body will lie in state in Tehran's Grand Mosalla until Monday, before travelling across Iran and Iraq.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c0ky2zen1kgo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T15:39:53+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Ukraine hits major oil terminal in Russia's St Petersburg",
+      "summary": "Ukrainian President Volodymyr Zelensky says the target is key infrastructure \"that generates revenue for Russia's war\".",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c8j2vmzxezro?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T15:39:53+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Brutal heat cancels Fourth of July events, from DC to Philadelphia",
+      "summary": "More than 165 million people are enduring dangerous heat and humidity, with temperatures expected to stay at 38C (100F) for several days.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cevlkzer7vdo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4069,7 +4053,7 @@
       "summary": "The ads use terms including \u201crape\u201d and \u201cchild video\u201d and link to content on the messaging app Telegram.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgm4e0316zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4078,7 +4062,7 @@
       "summary": "Millions are likely to have eaten \"lamb\" kebabs that were actually made with goat, skin and fat.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce95y1zlzyxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4087,7 +4071,7 @@
       "summary": "Leading AI researcher Yan LeCun has a start-up which is developing a more flexible AI system.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj6gr0xkyr3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4096,7 +4080,7 @@
       "summary": "The government had initially said it would not relax licensing laws further for the World Cup.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c1kyr8747m9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T14:20:49+00:00",
+      "published_utc": "2026-07-04T15:39:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
