@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-04T12:47:28+00:00",
+  "generated_at_utc": "2026-07-04T14:20:49+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 394,
-  "last_success_utc": "2026-07-04T11:22:32+00:00",
+  "cycle_count": 395,
+  "last_success_utc": "2026-07-04T12:47:28+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -587,35 +587,35 @@
       }
     },
     {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 64.79,
+      "raw_score": 64.79,
+      "band": "buy",
+      "weight": 0.1326,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 55.48,
+        "sentiment": 86.36,
+        "volume": 50.93,
+        "policy": 65.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
       "score": 54.76,
       "raw_score": 65.48,
       "band": "starter",
-      "weight": 0.0942,
-      "confidence": 0.9,
+      "weight": 0.0918,
+      "confidence": 0.85,
       "components": {
         "momentum": 47.43,
         "sentiment": 100.0,
         "volume": 57.54,
         "policy": 50.0,
         "volatility_penalty": 10.72
-      }
-    },
-    {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 52.38,
-      "raw_score": 52.38,
-      "band": "starter",
-      "weight": 0.0753,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 55.48,
-        "sentiment": 50.0,
-        "volume": 50.93,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
       }
     },
     {
@@ -637,14 +637,14 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 41.71,
-      "raw_score": 52.28,
-      "band": "starter",
-      "weight": 0.0557,
+      "score": 39.21,
+      "raw_score": 49.77,
+      "band": "hold_small",
+      "weight": 0.0453,
       "confidence": 1.0,
       "components": {
         "momentum": 34.58,
-        "sentiment": 75.0,
+        "sentiment": 66.66,
         "volume": 54.73,
         "policy": 50.0,
         "volatility_penalty": 10.57
@@ -653,14 +653,14 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 33.56,
-      "raw_score": 51.2,
+      "score": 31.95,
+      "raw_score": 49.59,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 19.32,
-        "sentiment": 92.85,
+        "sentiment": 87.5,
         "volume": 50.56,
         "policy": 55.0,
         "volatility_penalty": 17.64
@@ -673,7 +673,7 @@
       "raw_score": 57.33,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.7,
+      "confidence": 0.65,
       "components": {
         "momentum": 67.49,
         "sentiment": 50.0,
@@ -789,15 +789,18 @@
     },
     {
       "symbol": "BAC",
-      "action": "HOLD",
-      "target_weight": 0.0255,
+      "action": "BUY",
+      "target_weight": 0.0448,
       "current_weight": 0.0292,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1571.28,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.56% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.4 (starter), contribution 53.5"
+        "theme 'Financials & Rates' score 64.8 (buy), contribution 65.9",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -852,7 +855,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.59,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.20%",
         "theme=Clean Energy",
@@ -882,7 +885,7 @@
       "target_weight": 0.0001,
       "current_weight": 0.0002,
       "notional_delta": -10.79,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
         "theme=Clean Energy",
@@ -935,15 +938,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0187,
+      "action": "REDUCE",
+      "target_weight": 0.0152,
       "current_weight": 0.0224,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -725.99,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.72% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 78.3",
+        "theme 'AI & Compute' score 39.2 (hold_small), contribution 75.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -955,12 +958,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.19,
-      "reason": "exiting on mixed news flow \u2014 \"Here's How Much $1000 Invested In Goldman Sachs Group 5 Years Ago Would Be Worth Today\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.28%",
         "theme=Financials & Rates",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -979,25 +983,28 @@
     },
     {
       "symbol": "JPM",
-      "action": "HOLD",
-      "target_weight": 0.0241,
+      "action": "BUY",
+      "target_weight": 0.0427,
       "current_weight": 0.0279,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1486.2,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.48% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.4 (starter), contribution 50.5"
+        "theme 'Financials & Rates' score 64.8 (buy), contribution 62.9",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0299,
+      "target_weight": 0.0291,
       "current_weight": 0.0208,
-      "notional_delta": 915.21,
-      "reason": "underweight by 0.91% vs target \u2014 add",
+      "notional_delta": 834.8,
+      "reason": "underweight by 0.83% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-11.68%",
         "theme=EV & Clean Transport",
@@ -1068,15 +1075,15 @@
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0179,
+      "action": "REDUCE",
+      "target_weight": 0.0145,
       "current_weight": 0.0211,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -663.88,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 overweight by 0.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 75.1",
+        "theme 'AI & Compute' score 39.2 (hold_small), contribution 72.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1103,24 +1110,27 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.45%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "MSFT",
-      "action": "HOLD",
-      "target_weight": 0.0191,
+      "action": "REDUCE",
+      "target_weight": 0.0155,
       "current_weight": 0.0228,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -734.23,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 overweight by 0.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 80.0",
+        "theme 'AI & Compute' score 39.2 (hold_small), contribution 77.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1147,7 +1157,7 @@
       "target_weight": 0.0015,
       "current_weight": 0.0031,
       "notional_delta": -153.31,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.34%",
         "theme=Clean Energy",
@@ -1235,12 +1245,10 @@
       "target_weight": 0.0055,
       "current_weight": 0.0111,
       "notional_delta": -556.54,
-      "reason": "trimming on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Palo Alto Networks Stock In The Last 10 Years\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.83%",
-        "theme=Cybersecurity",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1274,10 +1282,10 @@
     {
       "symbol": "RIVN",
       "action": "BUY",
-      "target_weight": 0.0315,
+      "target_weight": 0.0307,
       "current_weight": 0.0213,
-      "notional_delta": 1022.37,
-      "reason": "underweight by 1.02% vs target \u2014 add",
+      "notional_delta": 941.97,
+      "reason": "underweight by 0.94% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.88%",
         "theme=EV & Clean Transport",
@@ -1319,7 +1327,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -129.77,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.17%",
         "theme=Clean Energy",
@@ -1361,10 +1369,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0329,
+      "target_weight": 0.032,
       "current_weight": 0.0232,
-      "notional_delta": 978.01,
-      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 underweight by 0.97% vs target \u2014 add",
+      "notional_delta": 887.55,
+      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 underweight by 0.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
@@ -1405,15 +1413,18 @@
     },
     {
       "symbol": "WFC",
-      "action": "HOLD",
-      "target_weight": 0.0257,
+      "action": "BUY",
+      "target_weight": 0.0451,
       "current_weight": 0.0305,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1464.79,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.46% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.4 (starter), contribution 54.0"
+        "theme 'Financials & Rates' score 64.8 (buy), contribution 66.4",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -1540,15 +1551,18 @@
     },
     {
       "symbol": "BAC",
-      "action": "HOLD",
-      "target_weight": 0.0255,
+      "action": "BUY",
+      "target_weight": 0.0448,
       "current_weight": 0.0292,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1571.28,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.56% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.4 (starter), contribution 53.5"
+        "theme 'Financials & Rates' score 64.8 (buy), contribution 65.9",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1615,7 +1629,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.59,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.20%",
         "theme=Clean Energy",
@@ -1651,7 +1665,7 @@
       "target_weight": 0.0001,
       "current_weight": 0.0002,
       "notional_delta": -10.79,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
         "theme=Clean Energy",
@@ -1716,15 +1730,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0187,
+      "action": "REDUCE",
+      "target_weight": 0.0152,
       "current_weight": 0.0224,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -725.99,
+      "reason": "trimming on positive news flow \u2014 \"This AI Stock Beat Nvidia by 200%\u2014Then Zuckerberg Sparked a 17% Sell-Off\" \u00b7 overweight by 0.72% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 78.3",
+        "theme 'AI & Compute' score 39.2 (hold_small), contribution 75.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1739,12 +1753,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.19,
-      "reason": "exiting on mixed news flow \u2014 \"Here's How Much $1000 Invested In Goldman Sachs Group 5 Years Ago Would Be Worth Today\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.28%",
         "theme=Financials & Rates",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1769,15 +1784,18 @@
     },
     {
       "symbol": "JPM",
-      "action": "HOLD",
-      "target_weight": 0.0241,
+      "action": "BUY",
+      "target_weight": 0.0427,
       "current_weight": 0.0279,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1486.2,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.48% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.4 (starter), contribution 50.5"
+        "theme 'Financials & Rates' score 64.8 (buy), contribution 62.9",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1787,10 +1805,10 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0299,
+      "target_weight": 0.0291,
       "current_weight": 0.0208,
-      "notional_delta": 915.21,
-      "reason": "underweight by 0.91% vs target \u2014 add",
+      "notional_delta": 834.8,
+      "reason": "underweight by 0.83% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-11.68%",
         "theme=EV & Clean Transport",
@@ -1876,15 +1894,15 @@
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0179,
+      "action": "REDUCE",
+      "target_weight": 0.0145,
       "current_weight": 0.0211,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -663.88,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 overweight by 0.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 75.1",
+        "theme 'AI & Compute' score 39.2 (hold_small), contribution 72.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1917,10 +1935,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.45%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1929,15 +1950,15 @@
     },
     {
       "symbol": "MSFT",
-      "action": "HOLD",
-      "target_weight": 0.0191,
+      "action": "REDUCE",
+      "target_weight": 0.0155,
       "current_weight": 0.0228,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -734.23,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 overweight by 0.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 41.7 (starter), contribution 80.0",
+        "theme 'AI & Compute' score 39.2 (hold_small), contribution 77.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1970,7 +1991,7 @@
       "target_weight": 0.0015,
       "current_weight": 0.0031,
       "notional_delta": -153.31,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.34%",
         "theme=Clean Energy",
@@ -2076,12 +2097,10 @@
       "target_weight": 0.0055,
       "current_weight": 0.0111,
       "notional_delta": -556.54,
-      "reason": "trimming on mixed news flow \u2014 \"Here\u2019s How Much You Would Have Made Owning Palo Alto Networks Stock In The Last 10 Years\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.83%",
-        "theme=Cybersecurity",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2124,10 +2143,10 @@
     {
       "symbol": "RIVN",
       "action": "BUY",
-      "target_weight": 0.0315,
+      "target_weight": 0.0307,
       "current_weight": 0.0213,
-      "notional_delta": 1022.37,
-      "reason": "underweight by 1.02% vs target \u2014 add",
+      "notional_delta": 941.97,
+      "reason": "underweight by 0.94% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.88%",
         "theme=EV & Clean Transport",
@@ -2178,7 +2197,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -129.77,
-      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 33.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval\" \u00b7 theme score 31.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.17%",
         "theme=Clean Energy",
@@ -2229,10 +2248,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0329,
+      "target_weight": 0.032,
       "current_weight": 0.0232,
-      "notional_delta": 978.01,
-      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 underweight by 0.97% vs target \u2014 add",
+      "notional_delta": 887.55,
+      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note\" \u00b7 underweight by 0.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-6.93%",
         "theme=EV & Clean Transport",
@@ -2282,15 +2301,18 @@
     },
     {
       "symbol": "WFC",
-      "action": "HOLD",
-      "target_weight": 0.0257,
+      "action": "BUY",
+      "target_weight": 0.0451,
       "current_weight": 0.0305,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1464.79,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Why is Morgan Stanley Bullish on Charles River Laboratories International, Inc. (CRL) as a Top Stock to Buy According to Ariel Investment?\" \u00b7 underweight by 1.46% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.4 (starter), contribution 54.0"
+        "theme 'Financials & Rates' score 64.8 (buy), contribution 66.4",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -3891,6 +3913,10 @@
     {
       "t": "2026-07-04T12:47:24+00:00",
       "v": 100509.06
+    },
+    {
+      "t": "2026-07-04T14:20:44+00:00",
+      "v": 100509.06
     }
   ],
   "breaking_news": [
@@ -3899,7 +3925,7 @@
       "summary": "NPR's Steve Inskeep asks Princeton computer scientist Sayash Kapoor about his assertions that AI won't lead to mass layoffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5864243/computer-scientist-on-why-he-believes-mass-layoffs-due-to-ai-is-a-convenient-excuse",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3908,7 +3934,7 @@
       "summary": "Personal finance and nutrition experts share simple strategies that make it possible to eat out on a budget. One tip? You might have to let go of your fast food delivery habit.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5862777/how-to-spend-less-money-restaurants-takeout",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3917,7 +3943,7 @@
       "summary": "Mark Zuckerberg met with Kalshi's CEO last year about a potential deal, but talks did not move forward. Now Meta is making its own prediction market app.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5875468/meta-kalshi-prediction-market-acquisition-talks",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3926,7 +3952,7 @@
       "summary": "Employers added 57,000 jobs in June, the Labor Department said on Friday, as jobs growth slowed from the previous two months, while the unemployment rate ticked down to 4.2%.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5877491/labor-department-to-release-latest-jobs-report-thursday",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3935,7 +3961,7 @@
       "summary": "President Trump earned more than $1 billion in 2025 from cryptocurrency ventures. But there are thousands of investors who bought into some of those cryptocurrencies, and they stand to lose big.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5878411/trump-earned-more-than-1-billion-from-crypto-but-his-investors-didnt-fare-so-well",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3944,7 +3970,7 @@
       "summary": "Don't have a pool during this hot summer? Rent one! Swimply is a platform that lets users rent private pools.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5838050/a-hot-summer-trend-in-the-sharing-economy-rental-swimming-pools",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3953,7 +3979,7 @@
       "summary": "The Airbnb-style company Swimply said there have been about 275,000 private pool reservations so far this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5876505/swimming-pool-rental-sharing-economy-swimply",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3962,7 +3988,7 @@
       "summary": "Colonial Americans were drinking coffee long before they dumped tea into Boston Harbor or fought a war for independence. The establishments that served it were already brewing revolutionary ideas.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5845436/coffee-july-4-colonies-america-250-1776-boston-tea-party",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3971,7 +3997,7 @@
       "summary": "The disaster has overwhelmed local services, with bodies put outside or in tents for identification.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c20y2p9qqqko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3980,7 +4006,7 @@
       "summary": "The pontiff pays tribute to migrants who lost their lives at sea at a cemetery on the Italian island of Lampedusa.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5yz83n7q5no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3989,7 +4015,7 @@
       "summary": "Flamingos have become a national symbol of protest, triggered by opposition to a luxury development.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c8925jnl0z3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3998,7 +4024,7 @@
       "summary": "Ukrainian President Volodymyr Zelensky says the target is key infrastructure \"that generates revenue for Russia's war\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c8j2vmzxezro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4007,7 +4033,7 @@
       "summary": "Ali Khamenei's body will lie in state in Tehran's Grand Mosalla until Monday, before travelling across Iran and Iraq.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c0ky2zen1kgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4016,7 +4042,7 @@
       "summary": "The daughter of disgraced president Alberto Fujimori is declared winner of tight race nearly a month after voting took place.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr5jpvv06e1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4025,7 +4051,7 @@
       "summary": "More than 165 million people are enduring dangerous heat and humidity, with temperatures expected to stay at 38C (100F) for several days.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cevlkzer7vdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4034,7 +4060,7 @@
       "summary": "The star-studded celebration saw several streets in Midtown Manhattan shut, as hordes of fans gathered outside the arena.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c982ry2pen3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4043,7 +4069,7 @@
       "summary": "The ads use terms including \u201crape\u201d and \u201cchild video\u201d and link to content on the messaging app Telegram.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgm4e0316zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4052,7 +4078,7 @@
       "summary": "Millions are likely to have eaten \"lamb\" kebabs that were actually made with goat, skin and fat.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce95y1zlzyxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4061,7 +4087,7 @@
       "summary": "Leading AI researcher Yan LeCun has a start-up which is developing a more flexible AI system.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj6gr0xkyr3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4070,7 +4096,7 @@
       "summary": "The government had initially said it would not relax licensing laws further for the World Cup.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c1kyr8747m9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-04T12:47:28+00:00",
+      "published_utc": "2026-07-04T14:20:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
