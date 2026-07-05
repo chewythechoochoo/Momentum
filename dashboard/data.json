@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-05T10:50:15+00:00",
+  "generated_at_utc": "2026-07-05T12:10:59+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 407,
-  "last_success_utc": "2026-07-05T08:33:57+00:00",
+  "cycle_count": 408,
+  "last_success_utc": "2026-07-05T10:50:15+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -557,14 +557,14 @@
     {
       "key": "defense",
       "name": "Defense & Aerospace",
-      "score": 80.74,
-      "raw_score": 81.13,
+      "score": 80.82,
+      "raw_score": 81.2,
       "band": "strong_buy",
-      "weight": 0.1679,
+      "weight": 0.168,
       "confidence": 1.0,
       "components": {
         "momentum": 93.52,
-        "sentiment": 92.59,
+        "sentiment": 92.85,
         "volume": 54.7,
         "policy": 50.0,
         "volatility_penalty": 0.38
@@ -589,14 +589,14 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 62.66,
-      "raw_score": 62.66,
+      "score": 62.42,
+      "raw_score": 62.42,
       "band": "buy",
-      "weight": 0.1255,
+      "weight": 0.1247,
       "confidence": 1.0,
       "components": {
         "momentum": 55.48,
-        "sentiment": 82.61,
+        "sentiment": 81.82,
         "volume": 50.93,
         "policy": 55.0,
         "volatility_penalty": 0.0
@@ -624,8 +624,8 @@
       "score": 49.01,
       "raw_score": 59.78,
       "band": "starter",
-      "weight": 0.078,
-      "confidence": 0.95,
+      "weight": 0.08,
+      "confidence": 1.0,
       "components": {
         "momentum": 34.58,
         "sentiment": 100.0,
@@ -653,14 +653,14 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 32.39,
-      "raw_score": 50.59,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.75,
+      "score": 35.39,
+      "raw_score": 53.59,
+      "band": "hold_small",
+      "weight": 0.0201,
+      "confidence": 0.8,
       "components": {
         "momentum": 24.72,
-        "sentiment": 80.0,
+        "sentiment": 90.0,
         "volume": 58.53,
         "policy": 50.0,
         "volatility_penalty": 18.2
@@ -685,16 +685,16 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 27.62,
-      "raw_score": 45.34,
+      "score": 26.89,
+      "raw_score": 44.61,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 19.32,
-        "sentiment": 73.34,
+        "sentiment": 69.23,
         "volume": 50.56,
-        "policy": 55.0,
+        "policy": 60.0,
         "volatility_penalty": 17.72
       }
     }
@@ -702,11 +702,11 @@
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0027,
-      "notional_delta": -137.2,
-      "reason": "theme score 32.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -274.4,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=Semiconductors (Broad)"
@@ -744,14 +744,15 @@
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "HOLD",
+      "target_weight": 0.0061,
       "current_weight": 0.0028,
-      "notional_delta": -138.31,
-      "reason": "theme score 32.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-10.64%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 35.4 (hold_small), contribution 34.9"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -786,14 +787,14 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0424,
+      "target_weight": 0.0421,
       "current_weight": 0.0292,
-      "notional_delta": 1330.06,
-      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.32% vs target \u2014 add",
+      "notional_delta": 1299.9,
+      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.29% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.7 (buy), contribution 63.8",
+        "theme 'Financials & Rates' score 62.4 (buy), contribution 63.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -850,7 +851,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.59,
-      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 26.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.20%",
         "theme=Clean Energy",
@@ -878,7 +879,7 @@
       "target_weight": 0.0001,
       "current_weight": 0.0002,
       "notional_delta": -10.79,
-      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 26.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
         "theme=Clean Energy",
@@ -903,14 +904,14 @@
     {
       "symbol": "GD",
       "action": "BUY",
-      "target_weight": 0.0546,
+      "target_weight": 0.0547,
       "current_weight": 0.0283,
-      "notional_delta": 2638.48,
-      "reason": "buying on positive news flow \u2014 \"Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?\" \u00b7 underweight by 2.63% vs target \u2014 add",
+      "notional_delta": 2648.53,
+      "reason": "buying on positive news flow \u2014 \"Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?\" \u00b7 underweight by 2.64% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.47%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 80.7 (strong_buy), contribution 81.7",
+        "theme 'Defense & Aerospace' score 80.8 (strong_buy), contribution 81.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -932,7 +933,7 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0262,
+      "target_weight": 0.0268,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Data Center Leases Top $850 Billion as Meta, Microsoft, Oracle Lead Record AI Infrastructure Spending\" \u00b7 within 50bps of target \u2014 no trade",
@@ -951,7 +952,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.19,
-      "reason": "exiting on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"The Goldman Sachs Group (GS) Shares Are Up After Jim Cramer Blessed The Stock\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.28%",
         "theme=Financials & Rates",
@@ -976,14 +977,14 @@
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0404,
+      "target_weight": 0.0401,
       "current_weight": 0.0279,
-      "notional_delta": 1255.03,
-      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.25% vs target \u2014 add",
+      "notional_delta": 1224.88,
+      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.22% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.7 (buy), contribution 60.8",
+        "theme 'Financials & Rates' score 62.4 (buy), contribution 60.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1022,14 +1023,14 @@
     {
       "symbol": "LMT",
       "action": "BUY",
-      "target_weight": 0.0568,
+      "target_weight": 0.0569,
       "current_weight": 0.0302,
-      "notional_delta": 2675.02,
-      "reason": "buying on positive news flow \u2014 \"Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?\" \u00b7 underweight by 2.66% vs target \u2014 add",
+      "notional_delta": 2685.07,
+      "reason": "buying on positive news flow \u2014 \"Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?\" \u00b7 underweight by 2.67% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.49%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 80.7 (strong_buy), contribution 85.0",
+        "theme 'Defense & Aerospace' score 80.8 (strong_buy), contribution 85.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1037,11 +1038,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
-      "target_weight": 0.0016,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0032,
-      "notional_delta": -158.37,
-      "reason": "theme score 32.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -316.75,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.52%",
         "theme=Semiconductors (Broad)"
@@ -1065,7 +1066,7 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0252,
+      "target_weight": 0.0258,
       "current_weight": 0.0211,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Data Center Leases Top $850 Billion as Meta, Microsoft, Oracle Lead Record AI Infrastructure Spending\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1099,7 +1100,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Morgan Stanley (MS) Higher After Jim Cramer Said It Deserved A Higher Multiple\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.45%",
         "theme=Financials & Rates",
@@ -1111,7 +1112,7 @@
     {
       "symbol": "MSFT",
       "action": "HOLD",
-      "target_weight": 0.0267,
+      "target_weight": 0.0274,
       "current_weight": 0.0228,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Data Center Leases Top $850 Billion as Meta, Microsoft, Oracle Lead Record AI Infrastructure Spending\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1126,11 +1127,11 @@
     },
     {
       "symbol": "MU",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.25,
-      "reason": "trimming on positive news flow \u2014 \"Micron Begins $9.3 Billion Japan Plant Expansion To Boost AI Chip Production\" \u00b7 theme score 32.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.5,
+      "reason": "exiting on positive news flow \u2014 \"Micron Begins $9.3 Billion Japan Plant Expansion To Boost AI Chip Production\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-15.52%",
         "theme=Semiconductors (Broad)",
@@ -1145,7 +1146,7 @@
       "target_weight": 0.0015,
       "current_weight": 0.0031,
       "notional_delta": -153.31,
-      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 26.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.34%",
         "theme=Clean Energy",
@@ -1176,12 +1177,13 @@
       "target_weight": 0.0565,
       "current_weight": 0.03,
       "notional_delta": 2660.21,
-      "reason": "buying on positive news flow \u2014 \"Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?\" \u00b7 underweight by 2.65% vs target \u2014 add",
+      "reason": "buying on analyst downgrade (positive) \u2014 \"Citi Keeps Buy Rating on Northrop Grumman (NOC)\" \u00b7 underweight by 2.65% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.81%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 80.7 (strong_buy), contribution 84.5",
+        "theme 'Defense & Aerospace' score 80.8 (strong_buy), contribution 84.6",
         "news_source=yahoo_rss",
+        "event=analyst downgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
@@ -1323,7 +1325,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -129.77,
-      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 26.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.17%",
         "theme=Clean Energy",
@@ -1380,14 +1382,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0012,
+      "action": "BUY",
+      "target_weight": 0.0095,
       "current_weight": 0.0024,
-      "notional_delta": -121.84,
-      "reason": "theme score 32.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 711.17,
+      "reason": "underweight by 0.71% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-7.39%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 35.4 (hold_small), contribution 54.5"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1410,14 +1413,14 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0427,
+      "target_weight": 0.0424,
       "current_weight": 0.0305,
-      "notional_delta": 1223.57,
-      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.22% vs target \u2014 add",
+      "notional_delta": 1193.42,
+      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.19% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.7 (buy), contribution 64.2",
+        "theme 'Financials & Rates' score 62.4 (buy), contribution 64.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1443,11 +1446,11 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0027,
-      "notional_delta": -137.2,
-      "reason": "theme score 32.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -274.4,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-13.45%",
         "theme=Semiconductors (Broad)"
@@ -1494,14 +1497,15 @@
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "HOLD",
+      "target_weight": 0.0061,
       "current_weight": 0.0028,
-      "notional_delta": -138.31,
-      "reason": "theme score 32.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-10.64%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 35.4 (hold_small), contribution 34.9"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1545,14 +1549,14 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0424,
+      "target_weight": 0.0421,
       "current_weight": 0.0292,
-      "notional_delta": 1330.06,
-      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.32% vs target \u2014 add",
+      "notional_delta": 1299.9,
+      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.29% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.7 (buy), contribution 63.8",
+        "theme 'Financials & Rates' score 62.4 (buy), contribution 63.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1621,7 +1625,7 @@
       "target_weight": 0.0009,
       "current_weight": 0.0018,
       "notional_delta": -91.59,
-      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 26.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.20%",
         "theme=Clean Energy",
@@ -1655,7 +1659,7 @@
       "target_weight": 0.0001,
       "current_weight": 0.0002,
       "notional_delta": -10.79,
-      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 26.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.17%",
         "theme=Clean Energy",
@@ -1686,14 +1690,14 @@
     {
       "symbol": "GD",
       "action": "BUY",
-      "target_weight": 0.0546,
+      "target_weight": 0.0547,
       "current_weight": 0.0283,
-      "notional_delta": 2638.48,
-      "reason": "buying on positive news flow \u2014 \"Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?\" \u00b7 underweight by 2.63% vs target \u2014 add",
+      "notional_delta": 2648.53,
+      "reason": "buying on positive news flow \u2014 \"Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?\" \u00b7 underweight by 2.64% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.47%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 80.7 (strong_buy), contribution 81.7",
+        "theme 'Defense & Aerospace' score 80.8 (strong_buy), contribution 81.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1721,7 +1725,7 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0262,
+      "target_weight": 0.0268,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Data Center Leases Top $850 Billion as Meta, Microsoft, Oracle Lead Record AI Infrastructure Spending\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1743,7 +1747,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.19,
-      "reason": "exiting on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"The Goldman Sachs Group (GS) Shares Are Up After Jim Cramer Blessed The Stock\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.28%",
         "theme=Financials & Rates",
@@ -1774,14 +1778,14 @@
     {
       "symbol": "JPM",
       "action": "BUY",
-      "target_weight": 0.0404,
+      "target_weight": 0.0401,
       "current_weight": 0.0279,
-      "notional_delta": 1255.03,
-      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.25% vs target \u2014 add",
+      "notional_delta": 1224.88,
+      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.22% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.7 (buy), contribution 60.8",
+        "theme 'Financials & Rates' score 62.4 (buy), contribution 60.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1829,14 +1833,14 @@
     {
       "symbol": "LMT",
       "action": "BUY",
-      "target_weight": 0.0568,
+      "target_weight": 0.0569,
       "current_weight": 0.0302,
-      "notional_delta": 2675.02,
-      "reason": "buying on positive news flow \u2014 \"Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?\" \u00b7 underweight by 2.66% vs target \u2014 add",
+      "notional_delta": 2685.07,
+      "reason": "buying on positive news flow \u2014 \"Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?\" \u00b7 underweight by 2.67% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.49%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 80.7 (strong_buy), contribution 85.0",
+        "theme 'Defense & Aerospace' score 80.8 (strong_buy), contribution 85.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1847,11 +1851,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
-      "target_weight": 0.0016,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0032,
-      "notional_delta": -158.37,
-      "reason": "theme score 32.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -316.75,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.52%",
         "theme=Semiconductors (Broad)"
@@ -1881,7 +1885,7 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0252,
+      "target_weight": 0.0258,
       "current_weight": 0.0211,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Data Center Leases Top $850 Billion as Meta, Microsoft, Oracle Lead Record AI Infrastructure Spending\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1921,7 +1925,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Morgan Stanley (MS) Higher After Jim Cramer Said It Deserved A Higher Multiple\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.45%",
         "theme=Financials & Rates",
@@ -1936,7 +1940,7 @@
     {
       "symbol": "MSFT",
       "action": "HOLD",
-      "target_weight": 0.0267,
+      "target_weight": 0.0274,
       "current_weight": 0.0228,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Data Center Leases Top $850 Billion as Meta, Microsoft, Oracle Lead Record AI Infrastructure Spending\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1954,11 +1958,11 @@
     },
     {
       "symbol": "MU",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.25,
-      "reason": "trimming on positive news flow \u2014 \"Micron Begins $9.3 Billion Japan Plant Expansion To Boost AI Chip Production\" \u00b7 theme score 32.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.5,
+      "reason": "exiting on positive news flow \u2014 \"Micron Begins $9.3 Billion Japan Plant Expansion To Boost AI Chip Production\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-15.52%",
         "theme=Semiconductors (Broad)",
@@ -1976,7 +1980,7 @@
       "target_weight": 0.0015,
       "current_weight": 0.0031,
       "notional_delta": -153.31,
-      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 26.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.34%",
         "theme=Clean Energy",
@@ -2013,12 +2017,13 @@
       "target_weight": 0.0565,
       "current_weight": 0.03,
       "notional_delta": 2660.21,
-      "reason": "buying on positive news flow \u2014 \"Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?\" \u00b7 underweight by 2.65% vs target \u2014 add",
+      "reason": "buying on analyst downgrade (positive) \u2014 \"Citi Keeps Buy Rating on Northrop Grumman (NOC)\" \u00b7 underweight by 2.65% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.81%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 80.7 (strong_buy), contribution 84.5",
+        "theme 'Defense & Aerospace' score 80.8 (strong_buy), contribution 84.6",
         "news_source=yahoo_rss",
+        "event=analyst downgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
@@ -2190,7 +2195,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -129.77,
-      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"The Portfolio That Lets You Go Part-Time Five Years Early\" \u00b7 theme score 26.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.17%",
         "theme=Clean Energy",
@@ -2259,14 +2264,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0012,
+      "action": "BUY",
+      "target_weight": 0.0095,
       "current_weight": 0.0024,
-      "notional_delta": -121.84,
-      "reason": "theme score 32.4 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 711.17,
+      "reason": "underweight by 0.71% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-7.39%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 35.4 (hold_small), contribution 54.5"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2295,14 +2301,14 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0427,
+      "target_weight": 0.0424,
       "current_weight": 0.0305,
-      "notional_delta": 1223.57,
-      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.22% vs target \u2014 add",
+      "notional_delta": 1193.42,
+      "reason": "buying on positive news flow \u2014 \"Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy\" \u00b7 underweight by 1.19% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 62.7 (buy), contribution 64.2",
+        "theme 'Financials & Rates' score 62.4 (buy), contribution 64.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -3959,6 +3965,10 @@
     {
       "t": "2026-07-05T10:50:12+00:00",
       "v": 100509.06
+    },
+    {
+      "t": "2026-07-05T12:10:54+00:00",
+      "v": 100509.06
     }
   ],
   "breaking_news": [
@@ -3967,7 +3977,7 @@
       "summary": "NPR's Steve Inskeep asks Princeton computer scientist Sayash Kapoor about his assertions that AI won't lead to mass layoffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5864243/computer-scientist-on-why-he-believes-mass-layoffs-due-to-ai-is-a-convenient-excuse",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -3976,7 +3986,7 @@
       "summary": "Personal finance and nutrition experts share simple strategies that make it possible to eat out on a budget. One tip? You might have to let go of your fast food delivery habit.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5862777/how-to-spend-less-money-restaurants-takeout",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3985,7 +3995,7 @@
       "summary": "Mark Zuckerberg met with Kalshi's CEO last year about a potential deal, but talks did not move forward. Now Meta is making its own prediction market app.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5875468/meta-kalshi-prediction-market-acquisition-talks",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3994,7 +4004,7 @@
       "summary": "Employers added 57,000 jobs in June, the Labor Department said on Friday, as jobs growth slowed from the previous two months, while the unemployment rate ticked down to 4.2%.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5877491/labor-department-to-release-latest-jobs-report-thursday",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4003,7 +4013,7 @@
       "summary": "President Trump earned more than $1 billion in 2025 from cryptocurrency ventures. But there are thousands of investors who bought into some of those cryptocurrencies, and they stand to lose big.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5878411/trump-earned-more-than-1-billion-from-crypto-but-his-investors-didnt-fare-so-well",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4012,7 +4022,7 @@
       "summary": "Don't have a pool during this hot summer? Rent one! Swimply is a platform that lets users rent private pools.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5838050/a-hot-summer-trend-in-the-sharing-economy-rental-swimming-pools",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4021,7 +4031,7 @@
       "summary": "The Airbnb-style company Swimply said there have been about 275,000 private pool reservations so far this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5876505/swimming-pool-rental-sharing-economy-swimply",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4030,7 +4040,7 @@
       "summary": "Colonial Americans were drinking coffee long before they dumped tea into Boston Harbor or fought a war for independence. The establishments that served it were already brewing revolutionary ideas.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5845436/coffee-july-4-colonies-america-250-1776-boston-tea-party",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4039,7 +4049,7 @@
       "summary": "West Bengal's move to replace eggs in some school meals has sparked a wider debate over nutrition and choice.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c33yldyd62po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4048,7 +4058,7 @@
       "summary": "The pontiff pays tribute to migrants who lost their lives at sea at a cemetery on the Italian island of Lampedusa.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5yz83n7q5no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4057,7 +4067,7 @@
       "summary": "Far-right leader Marine Le Pen is appealing against a verdict which found her guilty of misusing EU funds.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5yzlwz34p7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4066,7 +4076,7 @@
       "summary": "The former Russian world chess champion had accused other players, including the late Daniel Naroditsky, of cheating.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cd6epx607dqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4075,7 +4085,7 @@
       "summary": "The Zion Church founder's release comes after a direct plea to Xi Jinping from Donald Trump.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4gy51ky75vo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4084,7 +4094,7 @@
       "summary": "The storm is forecast to bring winds in excess of 160mph and waves nearly 11m high when it makes landfall on Monday.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr7xpgx50jxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4093,7 +4103,7 @@
       "summary": "Ukrainian President Volodymyr Zelensky says the target is key infrastructure \"that generates revenue for Russia's war\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c8j2vmzxezro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4102,7 +4112,7 @@
       "summary": "US President Donald Trump's speech included some of his political agenda but also honoured war veterans and American history.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cp9lppvkmz5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4111,7 +4121,7 @@
       "summary": "The ads use terms including \u201crape\u201d and \u201cchild video\u201d and link to content on the messaging app Telegram.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgm4e0316zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4120,7 +4130,7 @@
       "summary": "Millions are likely to have eaten \"lamb\" kebabs that were actually made with goat, skin and fat.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce95y1zlzyxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4129,7 +4139,7 @@
       "summary": "Leading AI researcher Yan LeCun has a start-up which is developing a more flexible AI system.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj6gr0xkyr3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4138,7 +4148,7 @@
       "summary": "The government had initially said it would not relax licensing laws further for the World Cup.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c1kyr8747m9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T10:50:15+00:00",
+      "published_utc": "2026-07-05T12:10:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
