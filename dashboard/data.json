@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-05T20:43:09+00:00",
+  "generated_at_utc": "2026-07-05T21:45:13+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 414,
-  "last_success_utc": "2026-07-05T19:39:58+00:00",
+  "cycle_count": 415,
+  "last_success_utc": "2026-07-05T20:43:09+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -653,14 +653,14 @@
     {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 30.33,
-      "raw_score": 60.33,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.65,
+      "score": 35.81,
+      "raw_score": 65.81,
+      "band": "hold_small",
+      "weight": 0.0249,
+      "confidence": 1.0,
       "components": {
         "momentum": 67.49,
-        "sentiment": 60.0,
+        "sentiment": 78.26,
         "volume": 51.67,
         "policy": 50.0,
         "volatility_penalty": 30.0
@@ -673,7 +673,7 @@
       "raw_score": 41.59,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.8,
+      "confidence": 0.75,
       "components": {
         "momentum": 24.72,
         "sentiment": 50.0,
@@ -815,14 +815,16 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0027,
-      "notional_delta": -137.17,
-      "reason": "theme score 30.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -274.33,
+      "reason": "exiting on positive news flow \u2014 \"Cisco Stock Is Soaring On A Massive AI Bet\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-75.19%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
@@ -890,14 +892,17 @@
     },
     {
       "symbol": "FTNT",
-      "action": "REDUCE",
-      "target_weight": 0.0053,
+      "action": "HOLD",
+      "target_weight": 0.0088,
       "current_weight": 0.0106,
-      "notional_delta": -534.84,
-      "reason": "theme score 30.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Cisco Stock Is Soaring On A Massive AI Bet\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.37%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "theme 'Cybersecurity' score 35.8 (hold_small), contribution 70.6",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1198,14 +1203,17 @@
     },
     {
       "symbol": "OKTA",
-      "action": "REDUCE",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0072,
       "current_weight": 0.0,
-      "notional_delta": -0.05,
-      "reason": "theme score 30.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 723.56,
+      "reason": "buying on positive news flow \u2014 \"Cisco Stock Is Soaring On A Massive AI Bet\" \u00b7 underweight by 0.72% vs target \u2014 add",
       "factors": [
         "unrealized_pl=14.06%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "theme 'Cybersecurity' score 35.8 (hold_small), contribution 57.7",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1224,15 +1232,16 @@
     },
     {
       "symbol": "PANW",
-      "action": "REDUCE",
-      "target_weight": 0.0055,
+      "action": "HOLD",
+      "target_weight": 0.0089,
       "current_weight": 0.0111,
-      "notional_delta": -556.54,
-      "reason": "trimming on positive news flow \u2014 \"Analysts Bullish on Palo Alto Networks Stock But Crucial Risks Persist\" \u00b7 theme score 30.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Palo Alto Networks (PANW) Shares Up Significantly After Jim Cramer Said They Were A Buy\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.83%",
         "theme=Cybersecurity",
-        "news_source=benzinga",
+        "theme 'Cybersecurity' score 35.8 (hold_small), contribution 71.8",
+        "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
@@ -1565,14 +1574,16 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0027,
-      "notional_delta": -137.17,
-      "reason": "theme score 30.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -274.33,
+      "reason": "exiting on positive news flow \u2014 \"Cisco Stock Is Soaring On A Massive AI Bet\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-75.19%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1655,14 +1666,17 @@
     },
     {
       "symbol": "FTNT",
-      "action": "REDUCE",
-      "target_weight": 0.0053,
+      "action": "HOLD",
+      "target_weight": 0.0088,
       "current_weight": 0.0106,
-      "notional_delta": -534.84,
-      "reason": "theme score 30.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Cisco Stock Is Soaring On A Massive AI Bet\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.37%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "theme 'Cybersecurity' score 35.8 (hold_small), contribution 70.6",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2026,14 +2040,17 @@
     },
     {
       "symbol": "OKTA",
-      "action": "REDUCE",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0072,
       "current_weight": 0.0,
-      "notional_delta": -0.05,
-      "reason": "theme score 30.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 723.56,
+      "reason": "buying on positive news flow \u2014 \"Cisco Stock Is Soaring On A Massive AI Bet\" \u00b7 underweight by 0.72% vs target \u2014 add",
       "factors": [
         "unrealized_pl=14.06%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "theme 'Cybersecurity' score 35.8 (hold_small), contribution 57.7",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2058,15 +2075,16 @@
     },
     {
       "symbol": "PANW",
-      "action": "REDUCE",
-      "target_weight": 0.0055,
+      "action": "HOLD",
+      "target_weight": 0.0089,
       "current_weight": 0.0111,
-      "notional_delta": -556.54,
-      "reason": "trimming on positive news flow \u2014 \"Analysts Bullish on Palo Alto Networks Stock But Crucial Risks Persist\" \u00b7 theme score 30.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Palo Alto Networks (PANW) Shares Up Significantly After Jim Cramer Said They Were A Buy\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.83%",
         "theme=Cybersecurity",
-        "news_source=benzinga",
+        "theme 'Cybersecurity' score 35.8 (hold_small), contribution 71.8",
+        "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
@@ -3957,6 +3975,10 @@
     {
       "t": "2026-07-05T20:43:07+00:00",
       "v": 100509.06
+    },
+    {
+      "t": "2026-07-05T21:45:11+00:00",
+      "v": 100509.06
     }
   ],
   "breaking_news": [
@@ -3965,7 +3987,7 @@
       "summary": "Personal finance and nutrition experts share simple strategies that make it possible to eat out on a budget. One tip? You might have to let go of your fast food delivery habit.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5862777/how-to-spend-less-money-restaurants-takeout",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3974,7 +3996,7 @@
       "summary": "Mark Zuckerberg met with Kalshi's CEO last year about a potential deal, but talks did not move forward. Now Meta is making its own prediction market app.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/06/30/nx-s1-5875468/meta-kalshi-prediction-market-acquisition-talks",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -3983,7 +4005,7 @@
       "summary": "Employers added 57,000 jobs in June, the Labor Department said on Friday, as jobs growth slowed from the previous two months, while the unemployment rate ticked down to 4.2%.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5877491/labor-department-to-release-latest-jobs-report-thursday",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -3992,7 +4014,7 @@
       "summary": "President Trump earned more than $1 billion in 2025 from cryptocurrency ventures. But there are thousands of investors who bought into some of those cryptocurrencies, and they stand to lose big.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5878411/trump-earned-more-than-1-billion-from-crypto-but-his-investors-didnt-fare-so-well",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4001,7 +4023,7 @@
       "summary": "Don't have a pool during this hot summer? Rent one! Swimply is a platform that lets users rent private pools.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/02/nx-s1-5838050/a-hot-summer-trend-in-the-sharing-economy-rental-swimming-pools",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4010,7 +4032,7 @@
       "summary": "The Airbnb-style company Swimply said there have been about 275,000 private pool reservations so far this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5876505/swimming-pool-rental-sharing-economy-swimply",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4019,7 +4041,7 @@
       "summary": "Colonial Americans were drinking coffee long before they dumped tea into Boston Harbor or fought a war for independence. The establishments that served it were already brewing revolutionary ideas.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/03/nx-s1-5845436/coffee-july-4-colonies-america-250-1776-boston-tea-party",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4028,7 +4050,7 @@
       "summary": "Seventeen states and the Department of Justice have settled a case of alleged price-fixing by major egg producers. Egg prices soared in recent years but have since fallen sharply.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/05/nx-s1-5876239-e1/egg-producers-settle-with-doj-states-over-price-fixing-complaint",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4037,7 +4059,7 @@
       "summary": "Tens of thousands of fans formed an ocean of blue outside the airport in capital city, Praia.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c70yy4xkeexo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4046,16 +4068,16 @@
       "summary": "The plane had 52 passengers and six crew onboard. No injuries were reported.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj4gg89r9gdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Evacuations in Guam as super typhoon Bavi approaches",
-      "summary": "The storm is forecast to bring winds in excess of 160mph and waves nearly 11m high when it makes landfall on Monday.",
+      "headline": "Super Typhoon Bavi makes landfall on US Pacific islands with huge wind gusts",
+      "summary": "The storm, with winds of nearly 290km/h (180mph) and gusts of 350km/h, is lashing the island of Rota.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr7xpgx50jxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4064,7 +4086,7 @@
       "summary": "Officials are searching for the origins of six pieces of space debris discovered on Forrest Beach in Queensland.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1jyydr7jnjo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4073,7 +4095,7 @@
       "summary": "Far-right leader Marine Le Pen is appealing against a verdict which found her guilty of misusing EU funds.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5yzlwz34p7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4082,7 +4104,7 @@
       "summary": "Some of the famous guests have been posting on social media about the big day in New York.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/clyxxr9n2kjo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4091,7 +4113,7 @@
       "summary": "The BBC's chief international correspondent reports from Tehran where funeral events are taking place in honour of Iran's former leader, Ayatollah Ali Khamenei.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/videos/c4gyye3rplno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4100,7 +4122,7 @@
       "summary": "Mojtaba Khamenei has not been seen in public since the attack which killed his father at the outset of the US-Israel war with Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cevllyj9vv3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4109,7 +4131,7 @@
       "summary": "The government had initially said it would not relax licensing laws further for the World Cup.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c1kyr8747m9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4118,7 +4140,7 @@
       "summary": "Co-habiting couples in England and Wales could be given more protections if they break up under new government proposals.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cx2vx4dvgzno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4127,7 +4149,7 @@
       "summary": "More than 250 of the UK's biggest employers have signed up to his 'Get Britain Working' taskforce.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cq61j11r577o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4136,7 +4158,7 @@
       "summary": "While some firms lean into their heritage, others are modernising in the face of economic pressures.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c982e3k9zw9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-05T20:43:09+00:00",
+      "published_utc": "2026-07-05T21:45:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
