@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-11T12:38:01+00:00",
+  "generated_at_utc": "2026-07-11T14:14:45+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 475,
-  "last_success_utc": "2026-07-11T11:34:06+00:00",
+  "cycle_count": 476,
+  "last_success_utc": "2026-07-11T12:38:01+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -544,29 +544,13 @@
       "score": 62.96,
       "raw_score": 62.96,
       "band": "buy",
-      "weight": 0.1234,
-      "confidence": 0.95,
+      "weight": 0.117,
+      "confidence": 0.85,
       "components": {
         "momentum": 53.78,
         "sentiment": 100.0,
         "volume": 32.24,
         "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 59.94,
-      "raw_score": 59.94,
-      "band": "buy",
-      "weight": 0.099,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 72.47,
-        "sentiment": 60.0,
-        "volume": 37.26,
-        "policy": 55.0,
         "volatility_penalty": 0.0
       }
     },
@@ -587,13 +571,29 @@
       }
     },
     {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 57.44,
+      "raw_score": 57.44,
+      "band": "buy",
+      "weight": 0.0892,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 72.47,
+        "sentiment": 53.34,
+        "volume": 37.26,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "biotech",
       "name": "Biotech & Pharma",
       "score": 56.35,
       "raw_score": 60.15,
       "band": "buy",
-      "weight": 0.1019,
-      "confidence": 0.95,
+      "weight": 0.0993,
+      "confidence": 0.9,
       "components": {
         "momentum": 42.72,
         "sentiment": 100.0,
@@ -621,14 +621,14 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 54.52,
-      "raw_score": 65.27,
+      "score": 51.19,
+      "raw_score": 61.94,
       "band": "starter",
-      "weight": 0.0984,
+      "weight": 0.0873,
       "confidence": 1.0,
       "components": {
         "momentum": 74.49,
-        "sentiment": 77.78,
+        "sentiment": 66.66,
         "volume": 35.72,
         "policy": 50.0,
         "volatility_penalty": 10.75
@@ -640,8 +640,8 @@
       "score": 49.02,
       "raw_score": 66.82,
       "band": "starter",
-      "weight": 0.0801,
-      "confidence": 1.0,
+      "weight": 0.0781,
+      "confidence": 0.95,
       "components": {
         "momentum": 62.13,
         "sentiment": 100.0,
@@ -669,14 +669,14 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 37.41,
-      "raw_score": 54.6,
-      "band": "hold_small",
-      "weight": 0.031,
-      "confidence": 0.8,
+      "score": 30.41,
+      "raw_score": 47.6,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.65,
       "components": {
         "momentum": 55.49,
-        "sentiment": 63.34,
+        "sentiment": 40.0,
         "volume": 42.02,
         "policy": 50.0,
         "volatility_penalty": 17.2
@@ -702,17 +702,15 @@
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "BUY",
-      "target_weight": 0.0219,
+      "action": "HOLD",
+      "target_weight": 0.0214,
       "current_weight": 0.0166,
-      "notional_delta": 535.77,
-      "reason": "buying on positive news flow \u2014 \"Stifel Maintains Buy on Applied Materials, Raises Price Target to $650\" \u00b7 underweight by 0.53% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.0 (starter), contribution 41.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Semiconductors (Broad)' score 49.0 (starter), contribution 41.8"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -722,19 +720,19 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -4.0,
-      "reason": "exiting on positive news flow \u2014 \"Stifel Maintains Buy on Advanced Micro Devices, Raises Price Target to $635\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"EXCLUSIVE: Rackspace CFO Says AI Winners Will \u2018Own The Outcome,\u2019 Not the GPUs\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.21%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0398,
+      "target_weight": 0.0378,
       "current_weight": 0.0354,
       "notional_delta": 0.0,
       "reason": "holding on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 within 50bps of target \u2014 no trade",
@@ -751,10 +749,10 @@
     {
       "symbol": "ASML",
       "action": "BUY",
-      "target_weight": 0.0295,
+      "target_weight": 0.0288,
       "current_weight": 0.0231,
-      "notional_delta": 652.64,
-      "reason": "underweight by 0.64% vs target \u2014 add",
+      "notional_delta": 581.55,
+      "reason": "underweight by 0.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.96%",
         "theme=Semiconductors (Broad)",
@@ -765,14 +763,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0302,
+      "target_weight": 0.0267,
       "current_weight": 0.031,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 54.5 (starter), contribution 64.9",
+        "theme 'AI & Compute' score 51.2 (starter), contribution 61.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -851,11 +849,11 @@
     },
     {
       "symbol": "ENPH",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0001,
-      "notional_delta": -5.94,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -2.97,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.66%",
         "theme=Clean Energy"
@@ -879,14 +877,13 @@
     {
       "symbol": "FSLR",
       "action": "REDUCE",
-      "target_weight": 0.0101,
+      "target_weight": 0.0096,
       "current_weight": 0.0192,
-      "notional_delta": -922.72,
-      "reason": "overweight by 0.91% vs target \u2014 trim",
+      "notional_delta": -974.23,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.52%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 37.4 (hold_small), contribution 45.5"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
@@ -937,12 +934,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "exiting on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Before BlackRock Became Untouchable, Carl Icahn Told Larry Fink His $4.8 Trillion Empire Was Protecting Bad CEOs\u2014 And He Had a $9 Billion Ex\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.12%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "event=export news",
         "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
@@ -950,14 +946,14 @@
     {
       "symbol": "GS",
       "action": "REDUCE",
-      "target_weight": 0.0324,
+      "target_weight": 0.0292,
       "current_weight": 0.0411,
-      "notional_delta": -885.19,
-      "reason": "trimming on mixed news flow \u2014 \"Blue Owl Saw Investor Exodus After UBS Flaged Rising Private Credit Default Risk\" \u00b7 overweight by 0.87% vs target \u2014 trim",
+      "notional_delta": -1210.18,
+      "reason": "trimming on mixed news flow \u2014 \"Blue Owl Saw Investor Exodus After UBS Flaged Rising Private Credit Default Risk\" \u00b7 overweight by 1.19% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.00%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.9 (buy), contribution 60.2",
+        "theme 'Financials & Rates' score 57.4 (buy), contribution 57.7",
         "news_source=benzinga",
         "news_sentiment=+0.07"
       ],
@@ -1009,7 +1005,7 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0303,
+      "target_weight": 0.0296,
       "current_weight": 0.0302,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"B of A Securities Maintains Buy on Eli Lilly, Raises Price Target to $1334\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1043,12 +1039,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0104,
       "notional_delta": -1053.44,
-      "reason": "exiting on positive news flow \u2014 \"Stifel Maintains Buy on Lam Research, Raises Price Target to $425\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.79%",
-        "theme=Semiconductors (Broad)",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1068,14 +1062,14 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0305,
       "current_weight": 0.0346,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Meta Pulls AI Image Feature After Privacy Backlash, Admits It 'Missed the Mark' Amid SAG-AFTRA Criticism\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.85%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 54.5 (starter), contribution 73.8",
+        "theme 'AI & Compute' score 51.2 (starter), contribution 70.4",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1087,29 +1081,24 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.22,
-      "reason": "exiting on mixed news flow \u2014 \"Intel Stock Has Doubled, So Why Is JPMorgan Calling It a Top Short?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.38%",
-        "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0353,
+      "target_weight": 0.0319,
       "current_weight": 0.0442,
-      "notional_delta": -906.21,
-      "reason": "trimming on FDA approval (positive) \u2014 \"CRCL Surges 12% on Regulatory Approval by OCC: Here's What It Means for Circle\" \u00b7 overweight by 0.89% vs target \u2014 trim",
+      "notional_delta": -1251.51,
+      "reason": "overweight by 1.23% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.57%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.9 (buy), contribution 65.5",
-        "news_source=benzinga",
-        "event=FDA approval",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 57.4 (buy), contribution 63.0"
       ],
       "theme_key": "financials"
     },
@@ -1147,24 +1136,23 @@
     {
       "symbol": "NEE",
       "action": "REDUCE",
-      "target_weight": 0.0114,
+      "target_weight": 0.0099,
       "current_weight": 0.0199,
-      "notional_delta": -859.15,
-      "reason": "overweight by 0.85% vs target \u2014 trim",
+      "notional_delta": -1008.46,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.45%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 37.4 (hold_small), contribution 51.6"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
     {
       "symbol": "NKE",
-      "action": "BUY",
-      "target_weight": 0.0391,
+      "action": "HOLD",
+      "target_weight": 0.0371,
       "current_weight": 0.0328,
-      "notional_delta": 636.13,
-      "reason": "underweight by 0.63% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.55%",
         "theme=Consumer Discretionary",
@@ -1188,15 +1176,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0339,
+      "action": "REDUCE",
+      "target_weight": 0.0301,
       "current_weight": 0.0353,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -529.6,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 overweight by 0.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.60%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 54.5 (starter), contribution 72.9",
+        "theme 'AI & Compute' score 51.2 (starter), contribution 69.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1247,7 +1235,7 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0335,
       "current_weight": 0.0344,
       "notional_delta": 0.0,
       "reason": "holding on FDA approval (positive) \u2014 \"Pfizer, Astellas Expand PADCEV-Keytruda Label With FDA Nod In Bladder Cancer\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1263,11 +1251,11 @@
     },
     {
       "symbol": "REGN",
-      "action": "BUY",
-      "target_weight": 0.0372,
+      "action": "HOLD",
+      "target_weight": 0.0363,
       "current_weight": 0.0315,
-      "notional_delta": 583.76,
-      "reason": "underweight by 0.57% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.54%",
         "theme=Biotech & Pharma",
@@ -1310,7 +1298,7 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0445,
+      "target_weight": 0.0422,
       "current_weight": 0.0406,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1324,16 +1312,13 @@
     {
       "symbol": "SEDG",
       "action": "REDUCE",
-      "target_weight": 0.0095,
+      "target_weight": 0.0088,
       "current_weight": 0.0177,
-      "notional_delta": -831.53,
-      "reason": "trimming on positive news flow \u2014 \"Barclays Maintains Equal-Weight on SolarEdge Technologies, Raises Price Target to $53\" \u00b7 overweight by 0.82% vs target \u2014 trim",
+      "notional_delta": -898.17,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.09%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 37.4 (hold_small), contribution 42.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
@@ -1385,10 +1370,10 @@
     {
       "symbol": "TSM",
       "action": "BUY",
-      "target_weight": 0.0286,
+      "target_weight": 0.0279,
       "current_weight": 0.0224,
-      "notional_delta": 624.67,
-      "reason": "underweight by 0.62% vs target \u2014 add",
+      "notional_delta": 553.58,
+      "reason": "underweight by 0.55% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.58%",
         "theme=Semiconductors (Broad)",
@@ -1412,14 +1397,14 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0313,
+      "target_weight": 0.0282,
       "current_weight": 0.0466,
-      "notional_delta": -1557.76,
-      "reason": "overweight by 1.53% vs target \u2014 trim",
+      "notional_delta": -1872.59,
+      "reason": "overweight by 1.84% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.26%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.9 (buy), contribution 58.2"
+        "theme 'Financials & Rates' score 57.4 (buy), contribution 55.7"
       ],
       "theme_key": "financials"
     },
@@ -1440,17 +1425,15 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "BUY",
-      "target_weight": 0.0219,
+      "action": "HOLD",
+      "target_weight": 0.0214,
       "current_weight": 0.0166,
-      "notional_delta": 535.77,
-      "reason": "buying on positive news flow \u2014 \"Stifel Maintains Buy on Applied Materials, Raises Price Target to $650\" \u00b7 underweight by 0.53% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.0 (starter), contribution 41.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Semiconductors (Broad)' score 49.0 (starter), contribution 41.8"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1463,12 +1446,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -4.0,
-      "reason": "exiting on positive news flow \u2014 \"Stifel Maintains Buy on Advanced Micro Devices, Raises Price Target to $635\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"EXCLUSIVE: Rackspace CFO Says AI Winners Will \u2018Own The Outcome,\u2019 Not the GPUs\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.21%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1478,7 +1461,7 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0398,
+      "target_weight": 0.0378,
       "current_weight": 0.0354,
       "notional_delta": 0.0,
       "reason": "holding on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1498,10 +1481,10 @@
     {
       "symbol": "ASML",
       "action": "BUY",
-      "target_weight": 0.0295,
+      "target_weight": 0.0288,
       "current_weight": 0.0231,
-      "notional_delta": 652.64,
-      "reason": "underweight by 0.64% vs target \u2014 add",
+      "notional_delta": 581.55,
+      "reason": "underweight by 0.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.96%",
         "theme=Semiconductors (Broad)",
@@ -1515,14 +1498,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0302,
+      "target_weight": 0.0267,
       "current_weight": 0.031,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 54.5 (starter), contribution 64.9",
+        "theme 'AI & Compute' score 51.2 (starter), contribution 61.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1619,11 +1602,11 @@
     },
     {
       "symbol": "ENPH",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0001,
-      "notional_delta": -5.94,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -2.97,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.66%",
         "theme=Clean Energy"
@@ -1653,14 +1636,13 @@
     {
       "symbol": "FSLR",
       "action": "REDUCE",
-      "target_weight": 0.0101,
+      "target_weight": 0.0096,
       "current_weight": 0.0192,
-      "notional_delta": -922.72,
-      "reason": "overweight by 0.91% vs target \u2014 trim",
+      "notional_delta": -974.23,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.52%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 37.4 (hold_small), contribution 45.5"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1723,12 +1705,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "exiting on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Before BlackRock Became Untouchable, Carl Icahn Told Larry Fink His $4.8 Trillion Empire Was Protecting Bad CEOs\u2014 And He Had a $9 Billion Ex\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.12%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "event=export news",
         "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
@@ -1739,14 +1720,14 @@
     {
       "symbol": "GS",
       "action": "REDUCE",
-      "target_weight": 0.0324,
+      "target_weight": 0.0292,
       "current_weight": 0.0411,
-      "notional_delta": -885.19,
-      "reason": "trimming on mixed news flow \u2014 \"Blue Owl Saw Investor Exodus After UBS Flaged Rising Private Credit Default Risk\" \u00b7 overweight by 0.87% vs target \u2014 trim",
+      "notional_delta": -1210.18,
+      "reason": "trimming on mixed news flow \u2014 \"Blue Owl Saw Investor Exodus After UBS Flaged Rising Private Credit Default Risk\" \u00b7 overweight by 1.19% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.00%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.9 (buy), contribution 60.2",
+        "theme 'Financials & Rates' score 57.4 (buy), contribution 57.7",
         "news_source=benzinga",
         "news_sentiment=+0.07"
       ],
@@ -1810,7 +1791,7 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0303,
+      "target_weight": 0.0296,
       "current_weight": 0.0302,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"B of A Securities Maintains Buy on Eli Lilly, Raises Price Target to $1334\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1850,12 +1831,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0104,
       "notional_delta": -1053.44,
-      "reason": "exiting on positive news flow \u2014 \"Stifel Maintains Buy on Lam Research, Raises Price Target to $425\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.79%",
-        "theme=Semiconductors (Broad)",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1881,14 +1860,14 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0305,
       "current_weight": 0.0346,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Meta Pulls AI Image Feature After Privacy Backlash, Admits It 'Missed the Mark' Amid SAG-AFTRA Criticism\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.85%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 54.5 (starter), contribution 73.8",
+        "theme 'AI & Compute' score 51.2 (starter), contribution 70.4",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1903,12 +1882,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.22,
-      "reason": "exiting on mixed news flow \u2014 \"Intel Stock Has Doubled, So Why Is JPMorgan Calling It a Top Short?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.38%",
-        "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1918,17 +1895,14 @@
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0353,
+      "target_weight": 0.0319,
       "current_weight": 0.0442,
-      "notional_delta": -906.21,
-      "reason": "trimming on FDA approval (positive) \u2014 \"CRCL Surges 12% on Regulatory Approval by OCC: Here's What It Means for Circle\" \u00b7 overweight by 0.89% vs target \u2014 trim",
+      "notional_delta": -1251.51,
+      "reason": "overweight by 1.23% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.57%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.9 (buy), contribution 65.5",
-        "news_source=benzinga",
-        "event=FDA approval",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 57.4 (buy), contribution 63.0"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1975,14 +1949,13 @@
     {
       "symbol": "NEE",
       "action": "REDUCE",
-      "target_weight": 0.0114,
+      "target_weight": 0.0099,
       "current_weight": 0.0199,
-      "notional_delta": -859.15,
-      "reason": "overweight by 0.85% vs target \u2014 trim",
+      "notional_delta": -1008.46,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.45%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 37.4 (hold_small), contribution 51.6"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1991,11 +1964,11 @@
     },
     {
       "symbol": "NKE",
-      "action": "BUY",
-      "target_weight": 0.0391,
+      "action": "HOLD",
+      "target_weight": 0.0371,
       "current_weight": 0.0328,
-      "notional_delta": 636.13,
-      "reason": "underweight by 0.63% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.55%",
         "theme=Consumer Discretionary",
@@ -2025,15 +1998,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0339,
+      "action": "REDUCE",
+      "target_weight": 0.0301,
       "current_weight": 0.0353,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -529.6,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 overweight by 0.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.60%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 54.5 (starter), contribution 72.9",
+        "theme 'AI & Compute' score 51.2 (starter), contribution 69.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2096,7 +2069,7 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0335,
       "current_weight": 0.0344,
       "notional_delta": 0.0,
       "reason": "holding on FDA approval (positive) \u2014 \"Pfizer, Astellas Expand PADCEV-Keytruda Label With FDA Nod In Bladder Cancer\" \u00b7 within 50bps of target \u2014 no trade",
@@ -2115,11 +2088,11 @@
     },
     {
       "symbol": "REGN",
-      "action": "BUY",
-      "target_weight": 0.0372,
+      "action": "HOLD",
+      "target_weight": 0.0363,
       "current_weight": 0.0315,
-      "notional_delta": 583.76,
-      "reason": "underweight by 0.57% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.54%",
         "theme=Biotech & Pharma",
@@ -2171,7 +2144,7 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0445,
+      "target_weight": 0.0422,
       "current_weight": 0.0406,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -2188,16 +2161,13 @@
     {
       "symbol": "SEDG",
       "action": "REDUCE",
-      "target_weight": 0.0095,
+      "target_weight": 0.0088,
       "current_weight": 0.0177,
-      "notional_delta": -831.53,
-      "reason": "trimming on positive news flow \u2014 \"Barclays Maintains Equal-Weight on SolarEdge Technologies, Raises Price Target to $53\" \u00b7 overweight by 0.82% vs target \u2014 trim",
+      "notional_delta": -898.17,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.09%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 37.4 (hold_small), contribution 42.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -2261,10 +2231,10 @@
     {
       "symbol": "TSM",
       "action": "BUY",
-      "target_weight": 0.0286,
+      "target_weight": 0.0279,
       "current_weight": 0.0224,
-      "notional_delta": 624.67,
-      "reason": "underweight by 0.62% vs target \u2014 add",
+      "notional_delta": 553.58,
+      "reason": "underweight by 0.55% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.58%",
         "theme=Semiconductors (Broad)",
@@ -2294,14 +2264,14 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0313,
+      "target_weight": 0.0282,
       "current_weight": 0.0466,
-      "notional_delta": -1557.76,
-      "reason": "overweight by 1.53% vs target \u2014 trim",
+      "notional_delta": -1872.59,
+      "reason": "overweight by 1.84% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.26%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.9 (buy), contribution 58.2"
+        "theme 'Financials & Rates' score 57.4 (buy), contribution 55.7"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -4217,6 +4187,10 @@
     {
       "t": "2026-07-11T12:37:56+00:00",
       "v": 101558.55
+    },
+    {
+      "t": "2026-07-11T14:14:43+00:00",
+      "v": 101558.55
     }
   ],
   "breaking_news": [
@@ -4225,7 +4199,7 @@
       "summary": "A GE Appliances plant in rural northwest Georgia was short hundreds of workers amid COVID-19. A flexible work option where some workers can sign up for shifts through an app has eased the pain.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5876084/manufacturing-flexible-part-time-work",
-      "published_utc": "2026-07-11T12:38:01+00:00",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4234,7 +4208,7 @@
       "summary": "Crude oil prices jumped and stock prices fell after President Trump declared an end to the ceasefire with Iran, adding fresh uncertainty to an already shaky outlook for the global economy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5885946/iran-trump-oil-stock-inflation-gas-federal-reserve",
-      "published_utc": "2026-07-11T12:38:01+00:00",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4243,7 +4217,7 @@
       "summary": "Families can still benefit even if their children aren't eligible for the free $1,000 contribution from the federal government.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5884855/trump-accounts-what-to-know",
-      "published_utc": "2026-07-11T12:38:01+00:00",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4252,7 +4226,7 @@
       "summary": "Aviation is literally soaring in the U.S., with record passenger numbers. But with a generation of mechanics set to leave the workforce, the industry needs new graduates to fill the gap.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5860843/aviation-mechanics-labor-shortage",
-      "published_utc": "2026-07-11T12:38:01+00:00",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4261,7 +4235,7 @@
       "summary": "The Trump EPA calls Biden-era rules for cutting pollution from heavy trucks \"unworkable.\" The proposed changes have been celebrated by trucking groups and denounced by environmental groups.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886354/epa-heavy-duty-truck-emissions",
-      "published_utc": "2026-07-11T12:38:01+00:00",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4270,7 +4244,7 @@
       "summary": "Gas prices have fluctuated since the U.S. and Israel launched a war on Iran, which disrupted shipping through the Strait of Hormuz and left consumers unsure of what they'll pay at the pump.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886319/gas-prices-budget",
-      "published_utc": "2026-07-11T12:38:01+00:00",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4279,7 +4253,7 @@
       "summary": "This week, Microsoft announced they were laying off over 3,000 staff at Xbox. What will the impact be on the company? And what do these layoffs say about the gaming industry right now?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5884900/microsoft-is-doing-a-hard-reset-of-its-xbox-gaming-division",
-      "published_utc": "2026-07-11T12:38:01+00:00",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4288,52 +4262,25 @@
       "summary": "President Trump refused to sign the bill without Congress first passing his sweeping voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/10/nx-s1-5885027/housing-bill-without-trump-signature",
-      "published_utc": "2026-07-11T12:38:01+00:00",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
     {
-      "headline": "Australian killer's final police interview footage released",
-      "summary": "Bradley Murdoch, 67, died in jail without disclosing where Peter Falconio's remains might be.",
+      "headline": "Landmark US housing bill becomes law despite Trump protest",
+      "summary": "The president had wanted voter ID legislation passed before the housing law, which aims to reduce costs and increase supply.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cvglj4k03w4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cn8qwj611qxo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "New dinosaur species as long as cricket pitch discovered in Thailand",
-      "summary": "The plant-eating dinosaur, named Uragasaurus kalasinensis, is thought to have lived about 150 million years ago.",
+      "headline": "South Africa World Cup midfielder Adams dies aged 25",
+      "summary": "South Africa and Mamelodi Sundowns midfielder Jayden Adams dies at the age of 25, just weeks after featuring for his country at the World Cup.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/crely7g8xepo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Apple sues OpenAI, its employees claiming theft of trade secrets",
-      "summary": "Apple said in a Friday lawsuit that OpenAI\u2019s nascent hardware business is \u201crotten to its core.\u201d",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cy8w379e091o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
-      "sentiment_score": -0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Tourist speedboat capsizes in Vietnam, killing 15",
-      "summary": "Local media say 21 people were saved after the boat overturned in rough seas near an island in south Vietnam.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cwyd7x22lp1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "China braced for second typhoon in a week as Bavi approaches landfall",
-      "summary": "Hundreds of thousands of people are evacuated from eastern Zhejiang province, with the city of Wenzhou close to the path of the storm.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cdxd3wkp2rzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cr47y5nvrqlo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4342,7 +4289,34 @@
       "summary": "They think democracy has run its course - so they're setting up their own nations instead.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cly8eqyj8e2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
+      "published_utc": "2026-07-11T14:14:45+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "US pays out $3m to victims of mystery Havana Syndrome condition reported by spies",
+      "summary": "US officials and diplomats and their families began reporting a mysterious illness a decade ago.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cr7xyl78vnko?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-11T14:14:45+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "China braced for second typhoon in a week as Bavi approaches landfall",
+      "summary": "Hundreds of thousands of people are evacuated from eastern Zhejiang province, with the city of Wenzhou close to the path of the storm.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cdxd3wkp2rzo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-11T14:14:45+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Indian tourists among 15 killed as speedboat capsizes in Vietnam",
+      "summary": "Local media say 21 people were saved after the boat overturned in rough seas near an island in south Vietnam.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cwyd7x22lp1o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4351,16 +4325,16 @@
       "summary": "At least four Britons are believed to be among the victims of the blaze, which left another 23 people missing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "US wants Iran to pledge to stop shooting at ships in Strait of Hormuz",
-      "summary": "Vice-President JD Vance is among US officials expected to take part in negotiations resuming on Saturday in Oman.",
+      "summary": "US media say Iran has told US officials an attack on ships crossing the strait early this week was \"a mistake\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/crelyq79x71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
+      "published_utc": "2026-07-11T14:14:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4369,7 +4343,7 @@
       "summary": "The shares surged as much as 17% in their Nasdaq trading debut on Friday following the record-breaking foreign listing.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c4gym70r0y4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
+      "published_utc": "2026-07-11T14:14:44+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4378,7 +4352,7 @@
       "summary": "A lawsuit demands that the Port of Rotterdam moves faster to cut its dependence on fossil fuel firms.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c39y78rwrmno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
+      "published_utc": "2026-07-11T14:14:44+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4387,7 +4361,7 @@
       "summary": "People are being consulted about plans to stop vape companies using enticing flavour descriptions that \"attract\" children into experimenting.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9v29d7vml7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
+      "published_utc": "2026-07-11T14:14:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4396,7 +4370,7 @@
       "summary": "The man's wife held onto his legs for around five minutes to stop him from being sucked out, officials say.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgk65knkyzdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T12:38:00+00:00",
+      "published_utc": "2026-07-11T14:14:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
