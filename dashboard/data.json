@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-11T15:26:59+00:00",
+  "generated_at_utc": "2026-07-11T16:30:19+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 477,
-  "last_success_utc": "2026-07-11T14:14:45+00:00",
+  "cycle_count": 478,
+  "last_success_utc": "2026-07-11T15:26:59+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -589,16 +589,16 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 56.35,
-      "raw_score": 60.15,
-      "band": "buy",
-      "weight": 0.0993,
-      "confidence": 0.9,
+      "score": 52.85,
+      "raw_score": 56.65,
+      "band": "starter",
+      "weight": 0.0836,
+      "confidence": 0.8,
       "components": {
         "momentum": 42.72,
-        "sentiment": 100.0,
+        "sentiment": 90.0,
         "volume": 37.8,
-        "policy": 55.0,
+        "policy": 50.0,
         "volatility_penalty": 3.79
       }
     },
@@ -616,22 +616,6 @@
         "volume": 32.6,
         "policy": 50.0,
         "volatility_penalty": 0.41
-      }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 49.02,
-      "raw_score": 66.82,
-      "band": "starter",
-      "weight": 0.0761,
-      "confidence": 0.9,
-      "components": {
-        "momentum": 62.13,
-        "sentiment": 100.0,
-        "volume": 34.83,
-        "policy": 50.0,
-        "volatility_penalty": 17.8
       }
     },
     {
@@ -664,6 +648,22 @@
         "volume": 49.51,
         "policy": 50.0,
         "volatility_penalty": 12.05
+      }
+    },
+    {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 34.02,
+      "raw_score": 51.82,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.85,
+      "components": {
+        "momentum": 62.13,
+        "sentiment": 50.0,
+        "volume": 34.83,
+        "policy": 50.0,
+        "volatility_penalty": 17.8
       }
     },
     {
@@ -702,15 +702,14 @@
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "HOLD",
-      "target_weight": 0.0209,
+      "action": "REDUCE",
+      "target_weight": 0.0083,
       "current_weight": 0.0166,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -844.18,
+      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.27%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.0 (starter), contribution 41.8"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -748,15 +747,14 @@
     },
     {
       "symbol": "ASML",
-      "action": "BUY",
-      "target_weight": 0.0281,
+      "action": "REDUCE",
+      "target_weight": 0.0115,
       "current_weight": 0.0231,
-      "notional_delta": 510.46,
-      "reason": "underweight by 0.50% vs target \u2014 add",
+      "notional_delta": -1171.67,
+      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.96%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.0 (starter), contribution 56.2"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1006,15 +1004,15 @@
     },
     {
       "symbol": "LLY",
-      "action": "HOLD",
-      "target_weight": 0.0296,
+      "action": "REDUCE",
+      "target_weight": 0.0247,
       "current_weight": 0.0302,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"B of A Securities Maintains Buy on Eli Lilly, Raises Price Target to $1334\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -556.99,
+      "reason": "trimming on positive news flow \u2014 \"B of A Securities Maintains Buy on Eli Lilly, Raises Price Target to $1334\" \u00b7 overweight by 0.55% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.66%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 52.9",
+        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 49.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1037,11 +1035,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0052,
       "current_weight": 0.0104,
-      "notional_delta": -1053.44,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -526.72,
+      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.79%",
         "theme=Semiconductors (Broad)"
@@ -1121,11 +1119,11 @@
     },
     {
       "symbol": "MU",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.22,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.11,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.74%",
         "theme=Semiconductors (Broad)",
@@ -1237,15 +1235,15 @@
     },
     {
       "symbol": "PFE",
-      "action": "HOLD",
-      "target_weight": 0.0335,
+      "action": "REDUCE",
+      "target_weight": 0.0282,
       "current_weight": 0.0344,
-      "notional_delta": 0.0,
-      "reason": "holding on FDA approval (positive) \u2014 \"Pfizer, Astellas Expand PADCEV-Keytruda Label With FDA Nod In Bladder Cancer\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -632.67,
+      "reason": "trimming on FDA approval (positive) \u2014 \"Pfizer, Astellas Expand PADCEV-Keytruda Label With FDA Nod In Bladder Cancer\" \u00b7 overweight by 0.62% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 59.9",
+        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 56.4",
         "news_source=benzinga",
         "event=FDA approval",
         "news_sentiment=+0.20"
@@ -1255,14 +1253,14 @@
     {
       "symbol": "REGN",
       "action": "HOLD",
-      "target_weight": 0.0363,
+      "target_weight": 0.0307,
       "current_weight": 0.0315,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.54%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 64.9"
+        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 61.4"
       ],
       "theme_key": "biotech"
     },
@@ -1372,15 +1370,14 @@
     },
     {
       "symbol": "TSM",
-      "action": "HOLD",
-      "target_weight": 0.0272,
+      "action": "REDUCE",
+      "target_weight": 0.0112,
       "current_weight": 0.0224,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1139.95,
+      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.58%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.0 (starter), contribution 54.4"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1428,15 +1425,14 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "HOLD",
-      "target_weight": 0.0209,
+      "action": "REDUCE",
+      "target_weight": 0.0083,
       "current_weight": 0.0166,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -844.18,
+      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.27%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.0 (starter), contribution 41.8"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1483,15 +1479,14 @@
     },
     {
       "symbol": "ASML",
-      "action": "BUY",
-      "target_weight": 0.0281,
+      "action": "REDUCE",
+      "target_weight": 0.0115,
       "current_weight": 0.0231,
-      "notional_delta": 510.46,
-      "reason": "underweight by 0.50% vs target \u2014 add",
+      "notional_delta": -1171.67,
+      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.96%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.0 (starter), contribution 56.2"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1795,15 +1790,15 @@
     },
     {
       "symbol": "LLY",
-      "action": "HOLD",
-      "target_weight": 0.0296,
+      "action": "REDUCE",
+      "target_weight": 0.0247,
       "current_weight": 0.0302,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"B of A Securities Maintains Buy on Eli Lilly, Raises Price Target to $1334\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -556.99,
+      "reason": "trimming on positive news flow \u2014 \"B of A Securities Maintains Buy on Eli Lilly, Raises Price Target to $1334\" \u00b7 overweight by 0.55% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.66%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 52.9",
+        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 49.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1832,11 +1827,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0052,
       "current_weight": 0.0104,
-      "notional_delta": -1053.44,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -526.72,
+      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.79%",
         "theme=Semiconductors (Broad)"
@@ -1934,11 +1929,11 @@
     },
     {
       "symbol": "MU",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.22,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.11,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.74%",
         "theme=Semiconductors (Broad)",
@@ -2074,15 +2069,15 @@
     },
     {
       "symbol": "PFE",
-      "action": "HOLD",
-      "target_weight": 0.0335,
+      "action": "REDUCE",
+      "target_weight": 0.0282,
       "current_weight": 0.0344,
-      "notional_delta": 0.0,
-      "reason": "holding on FDA approval (positive) \u2014 \"Pfizer, Astellas Expand PADCEV-Keytruda Label With FDA Nod In Bladder Cancer\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -632.67,
+      "reason": "trimming on FDA approval (positive) \u2014 \"Pfizer, Astellas Expand PADCEV-Keytruda Label With FDA Nod In Bladder Cancer\" \u00b7 overweight by 0.62% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 59.9",
+        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 56.4",
         "news_source=benzinga",
         "event=FDA approval",
         "news_sentiment=+0.20"
@@ -2095,14 +2090,14 @@
     {
       "symbol": "REGN",
       "action": "HOLD",
-      "target_weight": 0.0363,
+      "target_weight": 0.0307,
       "current_weight": 0.0315,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.54%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.4 (buy), contribution 64.9"
+        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 61.4"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2236,15 +2231,14 @@
     },
     {
       "symbol": "TSM",
-      "action": "HOLD",
-      "target_weight": 0.0272,
+      "action": "REDUCE",
+      "target_weight": 0.0112,
       "current_weight": 0.0224,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1139.95,
+      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.58%",
-        "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.0 (starter), contribution 54.4"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -4201,6 +4195,10 @@
     {
       "t": "2026-07-11T15:26:57+00:00",
       "v": 101558.55
+    },
+    {
+      "t": "2026-07-11T16:30:16+00:00",
+      "v": 101558.55
     }
   ],
   "breaking_news": [
@@ -4209,7 +4207,7 @@
       "summary": "A GE Appliances plant in rural northwest Georgia was short hundreds of workers amid COVID-19. A flexible work option where some workers can sign up for shifts through an app has eased the pain.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5876084/manufacturing-flexible-part-time-work",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4218,7 +4216,7 @@
       "summary": "Crude oil prices jumped and stock prices fell after President Trump declared an end to the ceasefire with Iran, adding fresh uncertainty to an already shaky outlook for the global economy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5885946/iran-trump-oil-stock-inflation-gas-federal-reserve",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4227,7 +4225,7 @@
       "summary": "Families can still benefit even if their children aren't eligible for the free $1,000 contribution from the federal government.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5884855/trump-accounts-what-to-know",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4236,7 +4234,7 @@
       "summary": "Aviation is literally soaring in the U.S., with record passenger numbers. But with a generation of mechanics set to leave the workforce, the industry needs new graduates to fill the gap.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5860843/aviation-mechanics-labor-shortage",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:19+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4245,7 +4243,7 @@
       "summary": "The Trump EPA calls Biden-era rules for cutting pollution from heavy trucks \"unworkable.\" The proposed changes have been celebrated by trucking groups and denounced by environmental groups.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886354/epa-heavy-duty-truck-emissions",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4254,7 +4252,7 @@
       "summary": "Gas prices have fluctuated since the U.S. and Israel launched a war on Iran, which disrupted shipping through the Strait of Hormuz and left consumers unsure of what they'll pay at the pump.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886319/gas-prices-budget",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4263,7 +4261,7 @@
       "summary": "This week, Microsoft announced they were laying off over 3,000 staff at Xbox. What will the impact be on the company? And what do these layoffs say about the gaming industry right now?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5884900/microsoft-is-doing-a-hard-reset-of-its-xbox-gaming-division",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:19+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4272,16 +4270,16 @@
       "summary": "President Trump refused to sign the bill without Congress first passing his sweeping voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/10/nx-s1-5885027/housing-bill-without-trump-signature",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
     {
-      "headline": "Landmark US housing bill becomes law despite Trump protest",
-      "summary": "The president had wanted voter ID legislation passed before the housing law, which aims to reduce costs and increase supply.",
+      "headline": "US pays out $3m to victims of mystery Havana Syndrome condition reported by spies",
+      "summary": "US officials and diplomats and their families began reporting a mysterious illness a decade ago.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cn8qwj611qxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cr7xyl78vnko?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-11T16:30:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4290,16 +4288,7 @@
       "summary": "South Africa and Mamelodi Sundowns midfielder Jayden Adams dies at the age of 25, just weeks after featuring for his country at the World Cup.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/sport/football/articles/cr47y5nvrqlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "US pays out $3m to victims of mystery Havana Syndrome condition reported by spies",
-      "summary": "US officials and diplomats and their families began reporting a mysterious illness a decade ago.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cr7xyl78vnko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4308,7 +4297,7 @@
       "summary": "\"I feel happy and elated\u2026 I feel joy,\" the head of the local teachers' union tells the BBC.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cly9lnjlp1eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4317,7 +4306,7 @@
       "summary": "Hundreds of thousands of people are evacuated from eastern Zhejiang province, with the city of Wenzhou close to the path of the storm.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdxd3wkp2rzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4326,7 +4315,16 @@
       "summary": "Local media say 21 people were saved after the boat overturned in rough seas near an island in south Vietnam.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwyd7x22lp1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:18+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Trump administration subpoenas New York Times journalists over Air Force One reporting",
+      "summary": "The reporters received the legal summons after they reported on alleged security issues with the president's new plane, which was gifted by Qatar.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cpd3g8q51g7o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-11T16:30:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4335,7 +4333,7 @@
       "summary": "At least four Britons are believed to be among the victims of the blaze, which left another 23 people missing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4344,7 +4342,7 @@
       "summary": "US media say Iran has told US officials an attack on ships crossing the strait early this week was \"a mistake\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/crelyq79x71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4353,7 +4351,7 @@
       "summary": "The shares surged as much as 17% in their Nasdaq trading debut on Friday following the record-breaking foreign listing.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c4gym70r0y4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:18+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4362,7 +4360,7 @@
       "summary": "A lawsuit demands that the Port of Rotterdam moves faster to cut its dependence on fossil fuel firms.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c39y78rwrmno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:18+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4371,7 +4369,7 @@
       "summary": "People are being consulted about plans to stop vape companies using enticing flavour descriptions that \"attract\" children into experimenting.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9v29d7vml7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4380,7 +4378,7 @@
       "summary": "The man's wife held onto his legs for around five minutes to stop him from being sucked out, officials say.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgk65knkyzdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T15:26:59+00:00",
+      "published_utc": "2026-07-11T16:30:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
