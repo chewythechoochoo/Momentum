@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-11T04:25:51+00:00",
+  "generated_at_utc": "2026-07-11T06:57:09+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 470,
-  "last_success_utc": "2026-07-11T01:04:44+00:00",
+  "cycle_count": 471,
+  "last_success_utc": "2026-07-11T04:25:51+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -541,14 +541,14 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 64.44,
-      "raw_score": 64.44,
+      "score": 62.94,
+      "raw_score": 62.94,
       "band": "buy",
-      "weight": 0.1249,
-      "confidence": 0.9,
+      "weight": 0.1138,
+      "confidence": 0.8,
       "components": {
         "momentum": 72.47,
-        "sentiment": 75.0,
+        "sentiment": 70.0,
         "volume": 37.26,
         "policy": 55.0,
         "volatility_penalty": 0.0
@@ -603,6 +603,22 @@
       }
     },
     {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 56.57,
+      "raw_score": 67.33,
+      "band": "buy",
+      "weight": 0.1052,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 74.49,
+        "sentiment": 84.62,
+        "volume": 35.73,
+        "policy": 50.0,
+        "volatility_penalty": 10.75
+      }
+    },
+    {
       "key": "biotech",
       "name": "Biotech & Pharma",
       "score": 56.35,
@@ -635,32 +651,16 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 56.06,
-      "raw_score": 66.82,
-      "band": "buy",
-      "weight": 0.1035,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 74.49,
-        "sentiment": 81.25,
-        "volume": 35.73,
-        "policy": 55.0,
-        "volatility_penalty": 10.75
-      }
-    },
-    {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 44.02,
-      "raw_score": 61.82,
+      "score": 43.4,
+      "raw_score": 61.19,
       "band": "starter",
-      "weight": 0.0634,
+      "weight": 0.0613,
       "confidence": 1.0,
       "components": {
         "momentum": 62.13,
-        "sentiment": 83.34,
+        "sentiment": 81.25,
         "volume": 34.83,
         "policy": 50.0,
         "volatility_penalty": 17.8
@@ -703,14 +703,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.017,
+      "target_weight": 0.0164,
       "current_weight": 0.0166,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Stifel Maintains Buy on Applied Materials, Raises Price Target to $650\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.0 (starter), contribution 36.8",
+        "theme 'Semiconductors (Broad)' score 43.4 (starter), contribution 36.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -737,12 +737,13 @@
       "target_weight": 0.0372,
       "current_weight": 0.0354,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Billionaire Investor Retreats From Retail, Exits Alibaba Entirely, Cuts Amazon Stake 10%\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Consumer Discretionary",
         "theme 'Consumer Discretionary' score 59.6 (buy), contribution 58.9",
         "news_source=benzinga",
+        "event=export news",
         "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary"
@@ -750,28 +751,28 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0236,
+      "target_weight": 0.0229,
       "current_weight": 0.0231,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.01%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.0 (starter), contribution 51.2"
+        "theme 'Semiconductors (Broad)' score 43.4 (starter), contribution 50.6"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0318,
+      "target_weight": 0.0324,
       "current_weight": 0.031,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 56.1 (buy), contribution 66.5",
+        "theme 'AI & Compute' score 56.6 (buy), contribution 67.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -942,11 +943,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "exiting on mixed news flow \u2014 \"Bill Ackman\u2019s Big Bet On Meta Stock Is Finally Paying Off: Here\u2019s The 2026 Gain So Far\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.02%",
         "theme=AI & Compute",
         "news_source=benzinga",
+        "event=export news",
         "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
@@ -954,14 +956,14 @@
     {
       "symbol": "GS",
       "action": "HOLD",
-      "target_weight": 0.0409,
+      "target_weight": 0.0373,
       "current_weight": 0.0411,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Blue Owl Saw Investor Exodus After UBS Flaged Rising Private Credit Default Risk\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.00%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 64.7",
+        "theme 'Financials & Rates' score 62.9 (buy), contribution 63.2",
         "news_source=benzinga",
         "news_sentiment=+0.07"
       ],
@@ -1072,14 +1074,14 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0361,
+      "target_weight": 0.0366,
       "current_weight": 0.0346,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Meta Pulls AI Image Feature After Privacy Backlash, Admits It 'Missed the Mark' Amid SAG-AFTRA Criticism\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.85%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 56.1 (buy), contribution 75.3",
+        "theme 'AI & Compute' score 56.6 (buy), contribution 75.8",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1103,14 +1105,14 @@
     {
       "symbol": "MS",
       "action": "HOLD",
-      "target_weight": 0.0443,
+      "target_weight": 0.0404,
       "current_weight": 0.0442,
       "notional_delta": 0.0,
       "reason": "holding on FDA approval (positive) \u2014 \"CRCL Surges 12% on Regulatory Approval by OCC: Here's What It Means for Circle\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.60%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 70.0",
+        "theme 'Financials & Rates' score 62.9 (buy), contribution 68.5",
         "news_source=benzinga",
         "event=FDA approval",
         "news_sentiment=+0.20"
@@ -1123,11 +1125,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "exiting on mixed news flow \u2014 \"Apple Says Tang Yew Tan Allegedly Using Apple Trade Secrets As OpenAI Chief Hardware Officer; Chang Liu Allegedly Stole Dozens Of Confidenti\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
         "news_source=benzinga",
+        "event=export news",
         "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
@@ -1192,14 +1195,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0357,
+      "target_weight": 0.0362,
       "current_weight": 0.0353,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.60%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 56.1 (buy), contribution 74.5",
+        "theme 'AI & Compute' score 56.6 (buy), contribution 75.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1389,14 +1392,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0228,
+      "target_weight": 0.0221,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Ken Griffin Tells Bernie Sanders and NYC Mayor Zohran Mamdani to 'Read a Damn History Book' While Warning Wall Street Is Leaving New York\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.90%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.0 (starter), contribution 49.4",
+        "theme 'Semiconductors (Broad)' score 43.4 (starter), contribution 48.8",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1418,14 +1421,14 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0396,
+      "target_weight": 0.0361,
       "current_weight": 0.0466,
-      "notional_delta": -714.82,
-      "reason": "trimming on mixed news flow \u2014 \"How To Earn $500 A Month From Wells Fargo Stock Ahead Of Q2 Earnings\" \u00b7 overweight by 0.70% vs target \u2014 trim",
+      "notional_delta": -1070.27,
+      "reason": "trimming on mixed news flow \u2014 \"How To Earn $500 A Month From Wells Fargo Stock Ahead Of Q2 Earnings\" \u00b7 overweight by 1.05% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.26%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 62.7",
+        "theme 'Financials & Rates' score 62.9 (buy), contribution 61.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1449,14 +1452,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.017,
+      "target_weight": 0.0164,
       "current_weight": 0.0166,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Stifel Maintains Buy on Applied Materials, Raises Price Target to $650\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.0 (starter), contribution 36.8",
+        "theme 'Semiconductors (Broad)' score 43.4 (starter), contribution 36.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1489,12 +1492,13 @@
       "target_weight": 0.0372,
       "current_weight": 0.0354,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Billionaire Investor Retreats From Retail, Exits Alibaba Entirely, Cuts Amazon Stake 10%\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Consumer Discretionary",
         "theme 'Consumer Discretionary' score 59.6 (buy), contribution 58.9",
         "news_source=benzinga",
+        "event=export news",
         "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary",
@@ -1505,14 +1509,14 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0236,
+      "target_weight": 0.0229,
       "current_weight": 0.0231,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.01%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.0 (starter), contribution 51.2"
+        "theme 'Semiconductors (Broad)' score 43.4 (starter), contribution 50.6"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1522,14 +1526,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0318,
+      "target_weight": 0.0324,
       "current_weight": 0.031,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 56.1 (buy), contribution 66.5",
+        "theme 'AI & Compute' score 56.6 (buy), contribution 67.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1736,11 +1740,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "exiting on mixed news flow \u2014 \"Bill Ackman\u2019s Big Bet On Meta Stock Is Finally Paying Off: Here\u2019s The 2026 Gain So Far\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.02%",
         "theme=AI & Compute",
         "news_source=benzinga",
+        "event=export news",
         "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
@@ -1751,14 +1756,14 @@
     {
       "symbol": "GS",
       "action": "HOLD",
-      "target_weight": 0.0409,
+      "target_weight": 0.0373,
       "current_weight": 0.0411,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Blue Owl Saw Investor Exodus After UBS Flaged Rising Private Credit Default Risk\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.00%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 64.7",
+        "theme 'Financials & Rates' score 62.9 (buy), contribution 63.2",
         "news_source=benzinga",
         "news_sentiment=+0.07"
       ],
@@ -1893,14 +1898,14 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0361,
+      "target_weight": 0.0366,
       "current_weight": 0.0346,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Meta Pulls AI Image Feature After Privacy Backlash, Admits It 'Missed the Mark' Amid SAG-AFTRA Criticism\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.85%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 56.1 (buy), contribution 75.3",
+        "theme 'AI & Compute' score 56.6 (buy), contribution 75.8",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1930,14 +1935,14 @@
     {
       "symbol": "MS",
       "action": "HOLD",
-      "target_weight": 0.0443,
+      "target_weight": 0.0404,
       "current_weight": 0.0442,
       "notional_delta": 0.0,
       "reason": "holding on FDA approval (positive) \u2014 \"CRCL Surges 12% on Regulatory Approval by OCC: Here's What It Means for Circle\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.60%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 70.0",
+        "theme 'Financials & Rates' score 62.9 (buy), contribution 68.5",
         "news_source=benzinga",
         "event=FDA approval",
         "news_sentiment=+0.20"
@@ -1953,11 +1958,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "exiting on mixed news flow \u2014 \"Apple Says Tang Yew Tan Allegedly Using Apple Trade Secrets As OpenAI Chief Hardware Officer; Chang Liu Allegedly Stole Dozens Of Confidenti\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
         "news_source=benzinga",
+        "event=export news",
         "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
@@ -2037,14 +2043,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0357,
+      "target_weight": 0.0362,
       "current_weight": 0.0353,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.60%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 56.1 (buy), contribution 74.5",
+        "theme 'AI & Compute' score 56.6 (buy), contribution 75.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2273,14 +2279,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0228,
+      "target_weight": 0.0221,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Ken Griffin Tells Bernie Sanders and NYC Mayor Zohran Mamdani to 'Read a Damn History Book' While Warning Wall Street Is Leaving New York\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.90%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.0 (starter), contribution 49.4",
+        "theme 'Semiconductors (Broad)' score 43.4 (starter), contribution 48.8",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -2308,14 +2314,14 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0396,
+      "target_weight": 0.0361,
       "current_weight": 0.0466,
-      "notional_delta": -714.82,
-      "reason": "trimming on mixed news flow \u2014 \"How To Earn $500 A Month From Wells Fargo Stock Ahead Of Q2 Earnings\" \u00b7 overweight by 0.70% vs target \u2014 trim",
+      "notional_delta": -1070.27,
+      "reason": "trimming on mixed news flow \u2014 \"How To Earn $500 A Month From Wells Fargo Stock Ahead Of Q2 Earnings\" \u00b7 overweight by 1.05% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.26%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 64.4 (buy), contribution 62.7",
+        "theme 'Financials & Rates' score 62.9 (buy), contribution 61.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -4213,6 +4219,10 @@
     {
       "t": "2026-07-11T04:25:46+00:00",
       "v": 101558.64
+    },
+    {
+      "t": "2026-07-11T06:57:05+00:00",
+      "v": 101558.64
     }
   ],
   "breaking_news": [
@@ -4221,7 +4231,7 @@
       "summary": "A GE Appliances plant in rural northwest Georgia was short hundreds of workers amid COVID-19. A flexible work option where some workers can sign up for shifts through an app has eased the pain.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5876084/manufacturing-flexible-part-time-work",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:09+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4230,7 +4240,7 @@
       "summary": "Crude oil prices jumped and stock prices fell after President Trump declared an end to the ceasefire with Iran, adding fresh uncertainty to an already shaky outlook for the global economy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5885946/iran-trump-oil-stock-inflation-gas-federal-reserve",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:09+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4239,7 +4249,7 @@
       "summary": "Families can still benefit even if their children aren't eligible for the free $1,000 contribution from the federal government.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5884855/trump-accounts-what-to-know",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:09+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4248,7 +4258,7 @@
       "summary": "Aviation is literally soaring in the U.S., with record passenger numbers. But with a generation of mechanics set to leave the workforce, the industry needs new graduates to fill the gap.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5860843/aviation-mechanics-labor-shortage",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:09+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4257,7 +4267,7 @@
       "summary": "The Trump EPA calls Biden-era rules for cutting pollution from heavy trucks \"unworkable.\" The proposed changes have been celebrated by trucking groups and denounced by environmental groups.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886354/epa-heavy-duty-truck-emissions",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:09+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4266,7 +4276,7 @@
       "summary": "Gas prices have fluctuated since the U.S. and Israel launched a war on Iran, which disrupted shipping through the Strait of Hormuz and left consumers unsure of what they'll pay at the pump.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886319/gas-prices-budget",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:09+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4275,43 +4285,52 @@
       "summary": "This week, Microsoft announced they were laying off over 3,000 staff at Xbox. What will the impact be on the company? And what do these layoffs say about the gaming industry right now?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5884900/microsoft-is-doing-a-hard-reset-of-its-xbox-gaming-division",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:09+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "A major housing bill is set to become law at midnight \u2014 even though Trump says he won't sign",
-      "summary": "President Trump says he is refusing to sign the bill without Congress first passing his sweeping voter ID bill.",
+      "headline": "Largest housing affordability bill in decades becomes law without Trump's signature",
+      "summary": "President Trump refused to sign the bill without Congress first passing his sweeping voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/10/nx-s1-5885027/housing-bill-without-trump-signature",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:09+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
     {
-      "headline": "Man fatally shot by ICE in Houston was not intended target, DHS says",
-      "summary": "Immigration agents were looking for a different person when they shot Lorenzo Salgado Araujo during a traffic stop, officials say.",
+      "headline": "New dinosaur species with neck as long as cricket pitch discovered in Thailand",
+      "summary": "The plant-eating dinosaur, named Uragasaurus kalasinensis, is thought to have lived about 150 million years ago.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cm2rm66xd17o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/crely7g8xepo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-11T06:57:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Zulu king expresses regret after video captures tirade against his wife",
-      "summary": "In the footage widely shared in South Africa, King Misuzulu threatens to physically assault his wife and accuses her of cheating.",
+      "headline": "Apple sues OpenAI, its employees claiming theft of trade secrets",
+      "summary": "Apple said in a Friday lawsuit that OpenAI\u2019s nascent hardware business is \u201crotten to its core.\u201d",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cy8dl9n1v3vo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cy8w379e091o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-11T06:57:08+00:00",
+      "sentiment_score": -0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "Meta pulls new AI image feature after days of backlash",
+      "summary": "Meta's release this week of an AI feature that let people alter Instagram content drew swift blowback.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c2dy6e8klw0o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-11T06:57:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Forced to wait his turn, Marine Le Pen's deputy Bardella returns to the shadows",
+      "headline": "Forced to wait his turn, Marine Le Pen's deputy returns to the shadows",
       "summary": "Thirty-year-old Jordan Bardella had been groomed for success as France's next hard-right leader. He will now have to wait longer.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cn7558gdvjro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4320,7 +4339,7 @@
       "summary": "Heading for Taiwan and south-eastern China, the 1,000 km-wide Bavi is forecast to be one of the strongest storms in decades.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c04y6wr03gxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4329,7 +4348,7 @@
       "summary": "They think democracy has run its course - so they're setting up their own nations instead.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cly8eqyj8e2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4338,7 +4357,7 @@
       "summary": "At least four Britons are believed to be among the victims of the blaze, which left another 23 people missing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4347,7 +4366,7 @@
       "summary": "Vice-President JD Vance is among US officials expected to take part in negotiations resuming on Saturday in Oman.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/crelyq79x71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4356,7 +4375,7 @@
       "summary": "The shares surged as much as 17% in their Nasdaq trading debut on Friday following the record-breaking foreign listing.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c4gym70r0y4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:08+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4365,7 +4384,7 @@
       "summary": "The BBC looks at the growing trend of people swapping homes to cut holiday costs.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ce8kkerxz74o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4374,7 +4393,7 @@
       "summary": "A lawsuit demands that the Port of Rotterdam moves faster to cut its dependence on fossil fuel firms.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c39y78rwrmno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:08+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4383,16 +4402,7 @@
       "summary": "People are being consulted about plans to stop vape companies using enticing flavour descriptions that \"attract\" children into experimenting.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9v29d7vml7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Man nearly sucked out of window mid-air on Ryanair plane, passengers say",
-      "summary": "The man's wife held onto his legs for around five minutes to stop him from being sucked out, officials say.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cgk65knkyzdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T04:25:51+00:00",
+      "published_utc": "2026-07-11T06:57:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
