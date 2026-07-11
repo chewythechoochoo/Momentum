@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-11T16:30:19+00:00",
+  "generated_at_utc": "2026-07-11T17:38:04+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 478,
-  "last_success_utc": "2026-07-11T15:26:59+00:00",
+  "cycle_count": 479,
+  "last_success_utc": "2026-07-11T16:30:19+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -539,38 +539,6 @@
   ],
   "themes": [
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 62.96,
-      "raw_score": 62.96,
-      "band": "buy",
-      "weight": 0.117,
-      "confidence": 0.85,
-      "components": {
-        "momentum": 53.78,
-        "sentiment": 100.0,
-        "volume": 32.24,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "oil_gas",
-      "name": "Oil & Gas",
-      "score": 57.66,
-      "raw_score": 58.13,
-      "band": "buy",
-      "weight": 0.0925,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 60.64,
-        "sentiment": 70.0,
-        "volume": 39.4,
-        "policy": 50.0,
-        "volatility_penalty": 0.48
-      }
-    },
-    {
       "key": "financials",
       "name": "Financials & Rates",
       "score": 57.44,
@@ -587,19 +555,19 @@
       }
     },
     {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 52.85,
-      "raw_score": 56.65,
+      "key": "oil_gas",
+      "name": "Oil & Gas",
+      "score": 51.66,
+      "raw_score": 52.13,
       "band": "starter",
-      "weight": 0.0836,
-      "confidence": 0.8,
+      "weight": 0.0733,
+      "confidence": 0.65,
       "components": {
-        "momentum": 42.72,
-        "sentiment": 90.0,
-        "volume": 37.8,
+        "momentum": 60.64,
+        "sentiment": 50.0,
+        "volume": 39.4,
         "policy": 50.0,
-        "volatility_penalty": 3.79
+        "volatility_penalty": 0.48
       }
     },
     {
@@ -635,6 +603,38 @@
       }
     },
     {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 47.96,
+      "raw_score": 47.96,
+      "band": "starter",
+      "weight": 0.0651,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 53.78,
+        "sentiment": 50.0,
+        "volume": 32.24,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 46.85,
+      "raw_score": 50.65,
+      "band": "starter",
+      "weight": 0.0619,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 42.72,
+        "sentiment": 70.0,
+        "volume": 37.8,
+        "policy": 50.0,
+        "volatility_penalty": 3.79
+      }
+    },
+    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
       "score": 41.23,
@@ -657,7 +657,7 @@
       "raw_score": 51.82,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "components": {
         "momentum": 62.13,
         "sentiment": 50.0,
@@ -730,15 +730,15 @@
     },
     {
       "symbol": "AMZN",
-      "action": "HOLD",
-      "target_weight": 0.0378,
+      "action": "REDUCE",
+      "target_weight": 0.0208,
       "current_weight": 0.0354,
-      "notional_delta": 0.0,
-      "reason": "holding on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1486.28,
+      "reason": "trimming on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 overweight by 1.46% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.0 (buy), contribution 62.3",
+        "theme 'Consumer Discretionary' score 48.0 (starter), contribution 47.3",
         "news_source=benzinga",
         "event=export news",
         "news_sentiment=+0.00"
@@ -802,14 +802,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0299,
+      "target_weight": 0.0237,
       "current_weight": 0.0,
-      "notional_delta": 3036.25,
-      "reason": "underweight by 2.99% vs target \u2014 add",
+      "notional_delta": 2406.59,
+      "reason": "underweight by 2.37% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 57.7 (buy), contribution 69.8"
+        "theme 'Oil & Gas' score 51.7 (starter), contribution 63.8"
       ],
       "theme_key": "oil_gas"
     },
@@ -830,15 +830,15 @@
     },
     {
       "symbol": "CVX",
-      "action": "BUY",
-      "target_weight": 0.0304,
+      "action": "HOLD",
+      "target_weight": 0.0241,
       "current_weight": 0.0224,
-      "notional_delta": 808.12,
-      "reason": "underweight by 0.80% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.29%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 57.7 (buy), contribution 70.9"
+        "theme 'Oil & Gas' score 51.7 (starter), contribution 64.9"
       ],
       "theme_key": "oil_gas"
     },
@@ -965,12 +965,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.07,
-      "reason": "exiting on positive news flow \u2014 \"WD-40 Greases Wheels For Another Rally, DA Davidson Sees More Upside\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.58%",
-        "theme=Consumer Discretionary",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1005,14 +1003,14 @@
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.0247,
+      "target_weight": 0.018,
       "current_weight": 0.0302,
-      "notional_delta": -556.99,
-      "reason": "trimming on positive news flow \u2014 \"B of A Securities Maintains Buy on Eli Lilly, Raises Price Target to $1334\" \u00b7 overweight by 0.55% vs target \u2014 trim",
+      "notional_delta": -1237.43,
+      "reason": "trimming on positive news flow \u2014 \"B of A Securities Maintains Buy on Eli Lilly, Raises Price Target to $1334\" \u00b7 overweight by 1.22% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.66%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 49.4",
+        "theme 'Biotech & Pharma' score 46.9 (starter), contribution 43.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1150,15 +1148,15 @@
     },
     {
       "symbol": "NKE",
-      "action": "HOLD",
-      "target_weight": 0.0371,
+      "action": "REDUCE",
+      "target_weight": 0.0203,
       "current_weight": 0.0328,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1273.17,
+      "reason": "overweight by 1.25% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.55%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.0 (buy), contribution 61.1"
+        "theme 'Consumer Discretionary' score 48.0 (starter), contribution 46.1"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1206,15 +1204,15 @@
     },
     {
       "symbol": "OXY",
-      "action": "BUY",
-      "target_weight": 0.0322,
+      "action": "HOLD",
+      "target_weight": 0.0256,
       "current_weight": 0.0257,
-      "notional_delta": 658.18,
-      "reason": "buying on mixed news flow \u2014 \"Occidental Petroleum Q2 2026 Crude Oil Collar Settlements Reduced Operating Cash Flow By $156M; Q2 2026 Average Realized Oil Price Worldwide\" \u00b7 underweight by 0.65% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Occidental Petroleum Q2 2026 Crude Oil Collar Settlements Reduced Operating Cash Flow By $156M; Q2 2026 Average Realized Oil Price Worldwide\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.37%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 57.7 (buy), contribution 75.0",
+        "theme 'Oil & Gas' score 51.7 (starter), contribution 69.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1236,31 +1234,30 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0282,
+      "target_weight": 0.0209,
       "current_weight": 0.0344,
-      "notional_delta": -632.67,
-      "reason": "trimming on FDA approval (positive) \u2014 \"Pfizer, Astellas Expand PADCEV-Keytruda Label With FDA Nod In Bladder Cancer\" \u00b7 overweight by 0.62% vs target \u2014 trim",
+      "notional_delta": -1374.05,
+      "reason": "trimming on mixed news flow \u2014 \"B of A Securities Maintains Neutral on Pfizer, Lowers Price Target to $26\" \u00b7 overweight by 1.35% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 56.4",
+        "theme 'Biotech & Pharma' score 46.9 (starter), contribution 50.4",
         "news_source=benzinga",
-        "event=FDA approval",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "REGN",
-      "action": "HOLD",
-      "target_weight": 0.0307,
+      "action": "REDUCE",
+      "target_weight": 0.023,
       "current_weight": 0.0315,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -858.37,
+      "reason": "overweight by 0.85% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.54%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 61.4"
+        "theme 'Biotech & Pharma' score 46.9 (starter), contribution 55.4"
       ],
       "theme_key": "biotech"
     },
@@ -1270,7 +1267,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.58,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.31%",
         "theme=EV & Clean Transport",
@@ -1295,15 +1292,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0422,
+      "action": "REDUCE",
+      "target_weight": 0.024,
       "current_weight": 0.0406,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1686.59,
+      "reason": "overweight by 1.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.46%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.0 (buy), contribution 69.6"
+        "theme 'Consumer Discretionary' score 48.0 (starter), contribution 54.6"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1329,12 +1326,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0235,
       "notional_delta": -2381.77,
-      "reason": "exiting on positive news flow \u2014 \"Raymond James Maintains Outperform on SLB, Lowers Price Target to $61\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.38%",
-        "theme=Oil & Gas",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Oil & Gas"
       ],
       "theme_key": "oil_gas"
     },
@@ -1459,15 +1454,15 @@
     },
     {
       "symbol": "AMZN",
-      "action": "HOLD",
-      "target_weight": 0.0378,
+      "action": "REDUCE",
+      "target_weight": 0.0208,
       "current_weight": 0.0354,
-      "notional_delta": 0.0,
-      "reason": "holding on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1486.28,
+      "reason": "trimming on export news (mixed) \u2014 \"Elizabeth Warren Calls UAE Chip Export Rule 'Corrupt' as Commerce Department Eases Controls on Trump-Linked Stablecoin Deal\" \u00b7 overweight by 1.46% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.0 (buy), contribution 62.3",
+        "theme 'Consumer Discretionary' score 48.0 (starter), contribution 47.3",
         "news_source=benzinga",
         "event=export news",
         "news_sentiment=+0.00"
@@ -1546,14 +1541,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0299,
+      "target_weight": 0.0237,
       "current_weight": 0.0,
-      "notional_delta": 3036.25,
-      "reason": "underweight by 2.99% vs target \u2014 add",
+      "notional_delta": 2406.59,
+      "reason": "underweight by 2.37% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 57.7 (buy), contribution 69.8"
+        "theme 'Oil & Gas' score 51.7 (starter), contribution 63.8"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1580,15 +1575,15 @@
     },
     {
       "symbol": "CVX",
-      "action": "BUY",
-      "target_weight": 0.0304,
+      "action": "HOLD",
+      "target_weight": 0.0241,
       "current_weight": 0.0224,
-      "notional_delta": 808.12,
-      "reason": "underweight by 0.80% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.29%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 57.7 (buy), contribution 70.9"
+        "theme 'Oil & Gas' score 51.7 (starter), contribution 64.9"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1742,12 +1737,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.07,
-      "reason": "exiting on positive news flow \u2014 \"WD-40 Greases Wheels For Another Rally, DA Davidson Sees More Upside\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.58%",
-        "theme=Consumer Discretionary",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1791,14 +1784,14 @@
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.0247,
+      "target_weight": 0.018,
       "current_weight": 0.0302,
-      "notional_delta": -556.99,
-      "reason": "trimming on positive news flow \u2014 \"B of A Securities Maintains Buy on Eli Lilly, Raises Price Target to $1334\" \u00b7 overweight by 0.55% vs target \u2014 trim",
+      "notional_delta": -1237.43,
+      "reason": "trimming on positive news flow \u2014 \"B of A Securities Maintains Buy on Eli Lilly, Raises Price Target to $1334\" \u00b7 overweight by 1.22% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.66%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 49.4",
+        "theme 'Biotech & Pharma' score 46.9 (starter), contribution 43.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1966,15 +1959,15 @@
     },
     {
       "symbol": "NKE",
-      "action": "HOLD",
-      "target_weight": 0.0371,
+      "action": "REDUCE",
+      "target_weight": 0.0203,
       "current_weight": 0.0328,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1273.17,
+      "reason": "overweight by 1.25% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.55%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.0 (buy), contribution 61.1"
+        "theme 'Consumer Discretionary' score 48.0 (starter), contribution 46.1"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2034,15 +2027,15 @@
     },
     {
       "symbol": "OXY",
-      "action": "BUY",
-      "target_weight": 0.0322,
+      "action": "HOLD",
+      "target_weight": 0.0256,
       "current_weight": 0.0257,
-      "notional_delta": 658.18,
-      "reason": "buying on mixed news flow \u2014 \"Occidental Petroleum Q2 2026 Crude Oil Collar Settlements Reduced Operating Cash Flow By $156M; Q2 2026 Average Realized Oil Price Worldwide\" \u00b7 underweight by 0.65% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Occidental Petroleum Q2 2026 Crude Oil Collar Settlements Reduced Operating Cash Flow By $156M; Q2 2026 Average Realized Oil Price Worldwide\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.37%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 57.7 (buy), contribution 75.0",
+        "theme 'Oil & Gas' score 51.7 (starter), contribution 69.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2070,17 +2063,16 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0282,
+      "target_weight": 0.0209,
       "current_weight": 0.0344,
-      "notional_delta": -632.67,
-      "reason": "trimming on FDA approval (positive) \u2014 \"Pfizer, Astellas Expand PADCEV-Keytruda Label With FDA Nod In Bladder Cancer\" \u00b7 overweight by 0.62% vs target \u2014 trim",
+      "notional_delta": -1374.05,
+      "reason": "trimming on mixed news flow \u2014 \"B of A Securities Maintains Neutral on Pfizer, Lowers Price Target to $26\" \u00b7 overweight by 1.35% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 56.4",
+        "theme 'Biotech & Pharma' score 46.9 (starter), contribution 50.4",
         "news_source=benzinga",
-        "event=FDA approval",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2089,15 +2081,15 @@
     },
     {
       "symbol": "REGN",
-      "action": "HOLD",
-      "target_weight": 0.0307,
+      "action": "REDUCE",
+      "target_weight": 0.023,
       "current_weight": 0.0315,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -858.37,
+      "reason": "overweight by 0.85% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.54%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 52.9 (starter), contribution 61.4"
+        "theme 'Biotech & Pharma' score 46.9 (starter), contribution 55.4"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2110,7 +2102,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.58,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: Penguin Solutions, Draftkings, Palantir \u2014 And Stocks End Week With Solid Gains\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.31%",
         "theme=EV & Clean Transport",
@@ -2141,15 +2133,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0422,
+      "action": "REDUCE",
+      "target_weight": 0.024,
       "current_weight": 0.0406,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1686.59,
+      "reason": "overweight by 1.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.46%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.0 (buy), contribution 69.6"
+        "theme 'Consumer Discretionary' score 48.0 (starter), contribution 54.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2181,12 +2173,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0235,
       "notional_delta": -2381.77,
-      "reason": "exiting on positive news flow \u2014 \"Raymond James Maintains Outperform on SLB, Lowers Price Target to $61\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.38%",
-        "theme=Oil & Gas",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Oil & Gas"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -4199,24 +4189,19 @@
     {
       "t": "2026-07-11T16:30:16+00:00",
       "v": 101558.55
+    },
+    {
+      "t": "2026-07-11T17:38:02+00:00",
+      "v": 101558.55
     }
   ],
   "breaking_news": [
-    {
-      "headline": "This factory was severely short on workers. Then it offered flexible work",
-      "summary": "A GE Appliances plant in rural northwest Georgia was short hundreds of workers amid COVID-19. A flexible work option where some workers can sign up for shifts through an app has eased the pain.",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/07/08/nx-s1-5876084/manufacturing-flexible-part-time-work",
-      "published_utc": "2026-07-11T16:30:19+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
     {
       "headline": "Tensions with Iran add fresh uncertainty to an already shaky global economy",
       "summary": "Crude oil prices jumped and stock prices fell after President Trump declared an end to the ceasefire with Iran, adding fresh uncertainty to an already shaky outlook for the global economy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5885946/iran-trump-oil-stock-inflation-gas-federal-reserve",
-      "published_utc": "2026-07-11T16:30:19+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4225,7 +4210,7 @@
       "summary": "Families can still benefit even if their children aren't eligible for the free $1,000 contribution from the federal government.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5884855/trump-accounts-what-to-know",
-      "published_utc": "2026-07-11T16:30:19+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4234,7 +4219,7 @@
       "summary": "Aviation is literally soaring in the U.S., with record passenger numbers. But with a generation of mechanics set to leave the workforce, the industry needs new graduates to fill the gap.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5860843/aviation-mechanics-labor-shortage",
-      "published_utc": "2026-07-11T16:30:19+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4243,7 +4228,7 @@
       "summary": "The Trump EPA calls Biden-era rules for cutting pollution from heavy trucks \"unworkable.\" The proposed changes have been celebrated by trucking groups and denounced by environmental groups.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886354/epa-heavy-duty-truck-emissions",
-      "published_utc": "2026-07-11T16:30:19+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4252,7 +4237,7 @@
       "summary": "Gas prices have fluctuated since the U.S. and Israel launched a war on Iran, which disrupted shipping through the Strait of Hormuz and left consumers unsure of what they'll pay at the pump.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886319/gas-prices-budget",
-      "published_utc": "2026-07-11T16:30:19+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4261,7 +4246,7 @@
       "summary": "This week, Microsoft announced they were laying off over 3,000 staff at Xbox. What will the impact be on the company? And what do these layoffs say about the gaming industry right now?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5884900/microsoft-is-doing-a-hard-reset-of-its-xbox-gaming-division",
-      "published_utc": "2026-07-11T16:30:19+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4270,16 +4255,25 @@
       "summary": "President Trump refused to sign the bill without Congress first passing his sweeping voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/10/nx-s1-5885027/housing-bill-without-trump-signature",
-      "published_utc": "2026-07-11T16:30:19+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
+    },
+    {
+      "headline": "Justice Department subpoenas New York Times reporters over Air Force One reporting",
+      "summary": "The <em>Times</em> says federal agents turned up on the doorsteps of several of its journalists to force grand jury testimony next week over their coverage of the Air Force One plane gifted to Trump by Qatar.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/07/11/g-s1-133160/justice-department-subpoenas-new-york-times-reporters-over-air-force-one-reporting",
+      "published_utc": "2026-07-11T17:38:04+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
     },
     {
       "headline": "US pays out $3m to victims of mystery Havana Syndrome condition reported by spies",
       "summary": "US officials and diplomats and their families began reporting a mysterious illness a decade ago.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr7xyl78vnko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4288,7 +4282,7 @@
       "summary": "South Africa and Mamelodi Sundowns midfielder Jayden Adams dies at the age of 25, just weeks after featuring for his country at the World Cup.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/sport/football/articles/cr47y5nvrqlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4297,7 +4291,7 @@
       "summary": "\"I feel happy and elated\u2026 I feel joy,\" the head of the local teachers' union tells the BBC.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cly9lnjlp1eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4306,7 +4300,7 @@
       "summary": "Hundreds of thousands of people are evacuated from eastern Zhejiang province, with the city of Wenzhou close to the path of the storm.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdxd3wkp2rzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4315,7 +4309,7 @@
       "summary": "Local media say 21 people were saved after the boat overturned in rough seas near an island in south Vietnam.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwyd7x22lp1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4324,7 +4318,7 @@
       "summary": "The reporters received the legal summons after they reported on alleged security issues with the president's new plane, which was gifted by Qatar.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpd3g8q51g7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4333,16 +4327,16 @@
       "summary": "At least four Britons are believed to be among the victims of the blaze, which left another 23 people missing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "US wants Iran to pledge to stop shooting at ships in Strait of Hormuz",
+      "headline": "Iran must pledge to stop shooting at ships in Strait of Hormuz, US officials say",
       "summary": "US media say Iran has told US officials an attack on ships crossing the strait early this week was \"a mistake\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/crelyq79x71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4351,7 +4345,7 @@
       "summary": "The shares surged as much as 17% in their Nasdaq trading debut on Friday following the record-breaking foreign listing.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c4gym70r0y4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:03+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4360,7 +4354,7 @@
       "summary": "A lawsuit demands that the Port of Rotterdam moves faster to cut its dependence on fossil fuel firms.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c39y78rwrmno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:03+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4369,7 +4363,7 @@
       "summary": "People are being consulted about plans to stop vape companies using enticing flavour descriptions that \"attract\" children into experimenting.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9v29d7vml7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:03+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4378,7 +4372,7 @@
       "summary": "The man's wife held onto his legs for around five minutes to stop him from being sucked out, officials say.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgk65knkyzdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-11T16:30:18+00:00",
+      "published_utc": "2026-07-11T17:38:03+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
