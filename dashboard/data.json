@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-12T06:44:41+00:00",
+  "generated_at_utc": "2026-07-12T08:56:33+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 487,
-  "last_success_utc": "2026-07-12T04:04:15+00:00",
+  "cycle_count": 488,
+  "last_success_utc": "2026-07-12T06:44:41+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -571,19 +571,19 @@
       }
     },
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 61.91,
-      "raw_score": 62.3,
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 58.09,
+      "raw_score": 68.94,
       "band": "buy",
-      "weight": 0.123,
-      "confidence": 1.0,
+      "weight": 0.0993,
+      "confidence": 0.8,
       "components": {
-        "momentum": 51.96,
-        "sentiment": 100.0,
-        "volume": 32.6,
+        "momentum": 74.49,
+        "sentiment": 90.0,
+        "volume": 35.72,
         "policy": 50.0,
-        "volatility_penalty": 0.39
+        "volatility_penalty": 10.85
       }
     },
     {
@@ -603,16 +603,32 @@
       }
     },
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 56.18,
+      "raw_score": 68.28,
+      "band": "buy",
+      "weight": 0.0961,
+      "confidence": 0.85,
+      "components": {
+        "momentum": 58.46,
+        "sentiment": 100.0,
+        "volume": 49.51,
+        "policy": 50.0,
+        "volatility_penalty": 12.1
+      }
+    },
+    {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 50.74,
-      "raw_score": 54.69,
+      "score": 51.2,
+      "raw_score": 55.15,
       "band": "starter",
-      "weight": 0.0858,
+      "weight": 0.0873,
       "confidence": 1.0,
       "components": {
         "momentum": 42.72,
-        "sentiment": 81.82,
+        "sentiment": 83.34,
         "volume": 37.8,
         "policy": 55.0,
         "volatility_penalty": 3.95
@@ -635,35 +651,19 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 46.09,
-      "raw_score": 56.94,
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 43.91,
+      "raw_score": 44.3,
       "band": "starter",
-      "weight": 0.0633,
-      "confidence": 0.8,
+      "weight": 0.052,
+      "confidence": 0.65,
       "components": {
-        "momentum": 74.49,
-        "sentiment": 50.0,
-        "volume": 35.72,
+        "momentum": 51.96,
+        "sentiment": 40.0,
+        "volume": 32.6,
         "policy": 50.0,
-        "volatility_penalty": 10.85
-      }
-    },
-    {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 41.18,
-      "raw_score": 53.28,
-      "band": "starter",
-      "weight": 0.0512,
-      "confidence": 0.9,
-      "components": {
-        "momentum": 58.46,
-        "sentiment": 50.0,
-        "volume": 49.51,
-        "policy": 50.0,
-        "volatility_penalty": 12.1
+        "volatility_penalty": 0.39
       }
     },
     {
@@ -759,15 +759,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.0192,
+      "action": "HOLD",
+      "target_weight": 0.0307,
       "current_weight": 0.031,
-      "notional_delta": -1201.69,
-      "reason": "trimming on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 overweight by 1.18% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.1 (starter), contribution 56.9",
+        "theme 'AI & Compute' score 58.1 (buy), contribution 68.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -779,12 +779,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0348,
       "notional_delta": -3530.65,
-      "reason": "exiting on positive news flow \u2014 \"Boeing unveils new 737 MAX production line as aviation giant charts comeback\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Gavin Newsom Calls Trump's Qatar Jet 'Air Fraud One,' Says He's 'the Most Corrupt President in American History'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.57%",
         "theme=Defense & Aerospace",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense"
     },
@@ -867,15 +867,15 @@
     },
     {
       "symbol": "F",
-      "action": "REDUCE",
-      "target_weight": 0.0184,
+      "action": "HOLD",
+      "target_weight": 0.034,
       "current_weight": 0.0363,
-      "notional_delta": -1818.17,
-      "reason": "overweight by 1.79% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.82%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.2 (starter), contribution 60.7"
+        "theme 'EV & Clean Transport' score 56.2 (buy), contribution 75.7"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -912,31 +912,29 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.0443,
+      "action": "REDUCE",
+      "target_weight": 0.0193,
       "current_weight": 0.0406,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Boeing unveils new 737 MAX production line as aviation giant charts comeback\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2159.62,
+      "reason": "overweight by 2.13% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.01%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 62.1",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 43.9 (starter), contribution 44.1"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0166,
+      "target_weight": 0.0313,
       "current_weight": 0.0375,
-      "notional_delta": -2119.73,
-      "reason": "overweight by 2.09% vs target \u2014 trim",
+      "notional_delta": -626.82,
+      "reason": "overweight by 0.62% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.00%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.2 (starter), contribution 54.7"
+        "theme 'EV & Clean Transport' score 56.2 (buy), contribution 69.7"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1017,14 +1015,14 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0252,
+      "target_weight": 0.0257,
       "current_weight": 0.0302,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Should You Buy Eli Lilly Stock? Here's My Honest Take.\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"3 High-Yield Dividend Stocks Paying 5% or More That Are Worth Buying Now\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.66%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.7 (starter), contribution 47.3",
+        "theme 'Biotech & Pharma' score 51.2 (starter), contribution 47.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1036,12 +1034,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.56,
-      "reason": "exiting on positive news flow \u2014 \"Boeing unveils new 737 MAX production line as aviation giant charts comeback\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.86%",
-        "theme=Defense & Aerospace",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense"
     },
@@ -1075,15 +1071,15 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.022,
+      "action": "HOLD",
+      "target_weight": 0.0343,
       "current_weight": 0.0346,
-      "notional_delta": -1276.08,
-      "reason": "overweight by 1.26% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.85%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.1 (starter), contribution 65.2"
+        "theme 'AI & Compute' score 58.1 (buy), contribution 77.2"
       ],
       "theme_key": "ai_compute"
     },
@@ -1093,7 +1089,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.22,
-      "reason": "exiting on positive news flow \u2014 \"Should You Buy Eli Lilly Stock? Here's My Honest Take.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"3 High-Yield Dividend Stocks Paying 5% or More That Are Worth Buying Now\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.38%",
         "theme=Biotech & Pharma",
@@ -1122,13 +1118,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "exiting on legal risk (negative) \u2014 \"'OpenAI Is Burning It Down With One Mag 7 After Another'\u2014 Apple's Trade Secret Lawsuit Has Tech Analysts Talking and Elon Musk Saying That '\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Marc Andreessen Says AI Is 'Already a Better Doctor Than 99.99% of Human Doctors'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "event=legal risk",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -1181,31 +1176,29 @@
     },
     {
       "symbol": "NOC",
-      "action": "HOLD",
-      "target_weight": 0.0385,
+      "action": "REDUCE",
+      "target_weight": 0.0158,
       "current_weight": 0.0398,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Boeing unveils new 737 MAX production line as aviation giant charts comeback\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2436.41,
+      "reason": "overweight by 2.40% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.66%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 54.0",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 43.9 (starter), contribution 36.0"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "NVDA",
-      "action": "REDUCE",
-      "target_weight": 0.022,
+      "action": "HOLD",
+      "target_weight": 0.0343,
       "current_weight": 0.0353,
-      "notional_delta": -1352.23,
-      "reason": "trimming on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 overweight by 1.33% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.60%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.1 (starter), contribution 65.0",
+        "theme 'AI & Compute' score 58.1 (buy), contribution 77.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1259,15 +1252,15 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.029,
+      "action": "HOLD",
+      "target_weight": 0.0295,
       "current_weight": 0.0344,
-      "notional_delta": -551.43,
-      "reason": "trimming on positive news flow \u2014 \"Should You Buy Eli Lilly Stock? Here's My Honest Take.\" \u00b7 overweight by 0.54% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"3 High-Yield Dividend Stocks Paying 5% or More That Are Worth Buying Now\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.7 (starter), contribution 54.4",
+        "theme 'Biotech & Pharma' score 51.2 (starter), contribution 54.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1276,14 +1269,14 @@
     {
       "symbol": "REGN",
       "action": "HOLD",
-      "target_weight": 0.0316,
+      "target_weight": 0.0321,
       "current_weight": 0.0315,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Should You Buy Eli Lilly Stock? Here's My Honest Take.\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"3 High-Yield Dividend Stocks Paying 5% or More That Are Worth Buying Now\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.54%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.7 (starter), contribution 59.3",
+        "theme 'Biotech & Pharma' score 51.2 (starter), contribution 59.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1306,17 +1299,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.0402,
+      "action": "REDUCE",
+      "target_weight": 0.0169,
       "current_weight": 0.0418,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Boeing unveils new 737 MAX production line as aviation giant charts comeback\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2529.86,
+      "reason": "overweight by 2.49% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.07%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 56.4",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 43.9 (starter), contribution 38.4"
       ],
       "theme_key": "defense"
     },
@@ -1383,14 +1374,14 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0163,
+      "target_weight": 0.0309,
       "current_weight": 0.0382,
-      "notional_delta": -2224.34,
-      "reason": "trimming on positive news flow \u2014 \"Musk\u2019s Net Worth Down $407 Billion From Trillion-Plus High as SpaceX Stock Dives\" \u00b7 overweight by 2.19% vs target \u2014 trim",
+      "notional_delta": -741.58,
+      "reason": "trimming on positive news flow \u2014 \"Musk\u2019s Net Worth Down $407 Billion From Trillion-Plus High as SpaceX Stock Dives\" \u00b7 overweight by 0.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.91%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.2 (starter), contribution 53.7",
+        "theme 'EV & Clean Transport' score 56.2 (buy), contribution 68.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1415,12 +1406,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.08,
-      "reason": "exiting on FDA approval (positive) \u2014 \"Vertex (VRTX) Wins FDA Expansion For CASGEVY And Advances ALYFTREK In Canada\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"3 High-Yield Dividend Stocks Paying 5% or More That Are Worth Buying Now\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.03%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
@@ -1529,15 +1519,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "REDUCE",
-      "target_weight": 0.0192,
+      "action": "HOLD",
+      "target_weight": 0.0307,
       "current_weight": 0.031,
-      "notional_delta": -1201.69,
-      "reason": "trimming on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 overweight by 1.18% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.1 (starter), contribution 56.9",
+        "theme 'AI & Compute' score 58.1 (buy), contribution 68.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1552,12 +1542,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0348,
       "notional_delta": -3530.65,
-      "reason": "exiting on positive news flow \u2014 \"Boeing unveils new 737 MAX production line as aviation giant charts comeback\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Gavin Newsom Calls Trump's Qatar Jet 'Air Fraud One,' Says He's 'the Most Corrupt President in American History'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.57%",
         "theme=Defense & Aerospace",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1658,15 +1648,15 @@
     },
     {
       "symbol": "F",
-      "action": "REDUCE",
-      "target_weight": 0.0184,
+      "action": "HOLD",
+      "target_weight": 0.034,
       "current_weight": 0.0363,
-      "notional_delta": -1818.17,
-      "reason": "overweight by 1.79% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.82%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.2 (starter), contribution 60.7"
+        "theme 'EV & Clean Transport' score 56.2 (buy), contribution 75.7"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1712,17 +1702,15 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.0443,
+      "action": "REDUCE",
+      "target_weight": 0.0193,
       "current_weight": 0.0406,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Boeing unveils new 737 MAX production line as aviation giant charts comeback\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2159.62,
+      "reason": "overweight by 2.13% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.01%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 62.1",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 43.9 (starter), contribution 44.1"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1732,14 +1720,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0166,
+      "target_weight": 0.0313,
       "current_weight": 0.0375,
-      "notional_delta": -2119.73,
-      "reason": "overweight by 2.09% vs target \u2014 trim",
+      "notional_delta": -626.82,
+      "reason": "overweight by 0.62% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.00%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.2 (starter), contribution 54.7"
+        "theme 'EV & Clean Transport' score 56.2 (buy), contribution 69.7"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1838,14 +1826,14 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0252,
+      "target_weight": 0.0257,
       "current_weight": 0.0302,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Should You Buy Eli Lilly Stock? Here's My Honest Take.\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"3 High-Yield Dividend Stocks Paying 5% or More That Are Worth Buying Now\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.66%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.7 (starter), contribution 47.3",
+        "theme 'Biotech & Pharma' score 51.2 (starter), contribution 47.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1860,12 +1848,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.56,
-      "reason": "exiting on positive news flow \u2014 \"Boeing unveils new 737 MAX production line as aviation giant charts comeback\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.86%",
-        "theme=Defense & Aerospace",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1908,15 +1894,15 @@
     },
     {
       "symbol": "META",
-      "action": "REDUCE",
-      "target_weight": 0.022,
+      "action": "HOLD",
+      "target_weight": 0.0343,
       "current_weight": 0.0346,
-      "notional_delta": -1276.08,
-      "reason": "overweight by 1.26% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.85%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.1 (starter), contribution 65.2"
+        "theme 'AI & Compute' score 58.1 (buy), contribution 77.2"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1929,7 +1915,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.22,
-      "reason": "exiting on positive news flow \u2014 \"Should You Buy Eli Lilly Stock? Here's My Honest Take.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"3 High-Yield Dividend Stocks Paying 5% or More That Are Worth Buying Now\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.38%",
         "theme=Biotech & Pharma",
@@ -1964,13 +1950,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "exiting on legal risk (negative) \u2014 \"'OpenAI Is Burning It Down With One Mag 7 After Another'\u2014 Apple's Trade Secret Lawsuit Has Tech Analysts Talking and Elon Musk Saying That '\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Marc Andreessen Says AI Is 'Already a Better Doctor Than 99.99% of Human Doctors'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "event=legal risk",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2035,17 +2020,15 @@
     },
     {
       "symbol": "NOC",
-      "action": "HOLD",
-      "target_weight": 0.0385,
+      "action": "REDUCE",
+      "target_weight": 0.0158,
       "current_weight": 0.0398,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Boeing unveils new 737 MAX production line as aviation giant charts comeback\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2436.41,
+      "reason": "overweight by 2.40% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.66%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 54.0",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 43.9 (starter), contribution 36.0"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2054,15 +2037,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "REDUCE",
-      "target_weight": 0.022,
+      "action": "HOLD",
+      "target_weight": 0.0343,
       "current_weight": 0.0353,
-      "notional_delta": -1352.23,
-      "reason": "trimming on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 overweight by 1.33% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.60%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 46.1 (starter), contribution 65.0",
+        "theme 'AI & Compute' score 58.1 (buy), contribution 77.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2128,15 +2111,15 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.029,
+      "action": "HOLD",
+      "target_weight": 0.0295,
       "current_weight": 0.0344,
-      "notional_delta": -551.43,
-      "reason": "trimming on positive news flow \u2014 \"Should You Buy Eli Lilly Stock? Here's My Honest Take.\" \u00b7 overweight by 0.54% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"3 High-Yield Dividend Stocks Paying 5% or More That Are Worth Buying Now\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.7 (starter), contribution 54.4",
+        "theme 'Biotech & Pharma' score 51.2 (starter), contribution 54.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2148,14 +2131,14 @@
     {
       "symbol": "REGN",
       "action": "HOLD",
-      "target_weight": 0.0316,
+      "target_weight": 0.0321,
       "current_weight": 0.0315,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Should You Buy Eli Lilly Stock? Here's My Honest Take.\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"3 High-Yield Dividend Stocks Paying 5% or More That Are Worth Buying Now\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.54%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 50.7 (starter), contribution 59.3",
+        "theme 'Biotech & Pharma' score 51.2 (starter), contribution 59.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2184,17 +2167,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.0402,
+      "action": "REDUCE",
+      "target_weight": 0.0169,
       "current_weight": 0.0418,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Boeing unveils new 737 MAX production line as aviation giant charts comeback\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2529.86,
+      "reason": "overweight by 2.49% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.07%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 56.4",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 43.9 (starter), contribution 38.4"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2276,14 +2257,14 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0163,
+      "target_weight": 0.0309,
       "current_weight": 0.0382,
-      "notional_delta": -2224.34,
-      "reason": "trimming on positive news flow \u2014 \"Musk\u2019s Net Worth Down $407 Billion From Trillion-Plus High as SpaceX Stock Dives\" \u00b7 overweight by 2.19% vs target \u2014 trim",
+      "notional_delta": -741.58,
+      "reason": "trimming on positive news flow \u2014 \"Musk\u2019s Net Worth Down $407 Billion From Trillion-Plus High as SpaceX Stock Dives\" \u00b7 overweight by 0.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.91%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.2 (starter), contribution 53.7",
+        "theme 'EV & Clean Transport' score 56.2 (buy), contribution 68.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2314,12 +2295,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.08,
-      "reason": "exiting on FDA approval (positive) \u2014 \"Vertex (VRTX) Wins FDA Expansion For CASGEVY And Advances ALYFTREK In Canada\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"3 High-Yield Dividend Stocks Paying 5% or More That Are Worth Buying Now\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.03%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
@@ -4305,6 +4285,10 @@
     {
       "t": "2026-07-12T06:44:37+00:00",
       "v": 101558.55
+    },
+    {
+      "t": "2026-07-12T08:56:30+00:00",
+      "v": 101558.55
     }
   ],
   "breaking_news": [
@@ -4313,7 +4297,7 @@
       "summary": "Crude oil prices jumped and stock prices fell after President Trump declared an end to the ceasefire with Iran, adding fresh uncertainty to an already shaky outlook for the global economy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5885946/iran-trump-oil-stock-inflation-gas-federal-reserve",
-      "published_utc": "2026-07-12T06:44:41+00:00",
+      "published_utc": "2026-07-12T08:56:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4322,7 +4306,7 @@
       "summary": "Families can still benefit even if their children aren't eligible for the free $1,000 contribution from the federal government.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5884855/trump-accounts-what-to-know",
-      "published_utc": "2026-07-12T06:44:41+00:00",
+      "published_utc": "2026-07-12T08:56:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4331,7 +4315,7 @@
       "summary": "Aviation is literally soaring in the U.S., with record passenger numbers. But with a generation of mechanics set to leave the workforce, the industry needs new graduates to fill the gap.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5860843/aviation-mechanics-labor-shortage",
-      "published_utc": "2026-07-12T06:44:41+00:00",
+      "published_utc": "2026-07-12T08:56:33+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4340,7 +4324,7 @@
       "summary": "The Trump EPA calls Biden-era rules for cutting pollution from heavy trucks \"unworkable.\" The proposed changes have been celebrated by trucking groups and denounced by environmental groups.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886354/epa-heavy-duty-truck-emissions",
-      "published_utc": "2026-07-12T06:44:41+00:00",
+      "published_utc": "2026-07-12T08:56:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4349,7 +4333,7 @@
       "summary": "Gas prices have fluctuated since the U.S. and Israel launched a war on Iran, which disrupted shipping through the Strait of Hormuz and left consumers unsure of what they'll pay at the pump.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886319/gas-prices-budget",
-      "published_utc": "2026-07-12T06:44:41+00:00",
+      "published_utc": "2026-07-12T08:56:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4358,7 +4342,7 @@
       "summary": "This week, Microsoft announced they were laying off over 3,000 staff at Xbox. What will the impact be on the company? And what do these layoffs say about the gaming industry right now?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5884900/microsoft-is-doing-a-hard-reset-of-its-xbox-gaming-division",
-      "published_utc": "2026-07-12T06:44:41+00:00",
+      "published_utc": "2026-07-12T08:56:33+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4367,7 +4351,7 @@
       "summary": "President Trump refused to sign the bill without Congress first passing his sweeping voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/10/nx-s1-5885027/housing-bill-without-trump-signature",
-      "published_utc": "2026-07-12T06:44:41+00:00",
+      "published_utc": "2026-07-12T08:56:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4376,16 +4360,7 @@
       "summary": "The <em>Times</em> says federal agents turned up on the doorsteps of several of its journalists to force grand jury testimony next week over their coverage of the Air Force One plane gifted to Trump by Qatar.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/11/g-s1-133160/justice-department-subpoenas-new-york-times-reporters-over-air-force-one-reporting",
-      "published_utc": "2026-07-12T06:44:41+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Muslim judge in India faces death threats after convicting 'cow vigilantes'",
-      "summary": "Tabassum Khan has been facing online abuse after convicting 14 Hindu men in a lynching case.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cd6e9zq87xvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
+      "published_utc": "2026-07-12T08:56:33+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4394,7 +4369,7 @@
       "summary": "Khanna, 49, was visiting the occupied West Bank when he was held for 90 minutes, he says.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c0qyk9jwq9no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
+      "published_utc": "2026-07-12T08:56:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4403,7 +4378,7 @@
       "summary": "At least four Britons are believed to be among the victims of the blaze, which left another 23 people missing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
+      "published_utc": "2026-07-12T08:56:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4412,7 +4387,7 @@
       "summary": "The reporters received the legal summons after they reported on alleged security issues with the president's new plane, which was gifted by Qatar.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpd3g8q51g7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
+      "published_utc": "2026-07-12T08:56:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4421,16 +4396,16 @@
       "summary": "Police say there was an exchange of gunfire between two individuals at the festival, and two firearms had been recovered from the scene.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ce3e66e1x3go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
+      "published_utc": "2026-07-12T08:56:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "China's second typhoon in a week makes landfall",
-      "summary": "Nearly two million people are evacuated from eastern Zhejiang province, with the city of Wenzhou close to the path of the storm.",
+      "headline": "China evacuates nearly two million people as powerful typhoon makes landfall",
+      "summary": "Schools, work and outdoor activities have been suspended in Zhejiang province and many transport services cancelled.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdxd3wkp2rzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
+      "published_utc": "2026-07-12T08:56:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4439,7 +4414,16 @@
       "summary": "A 67 million-year-old Tyrannosaurus rex will go on sale in New York with a pre-sale value of $30m.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4gykgyn1r4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
+      "published_utc": "2026-07-12T08:56:32+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "US Senator Lindsey Graham dies after 'brief and sudden illness', his office says",
+      "summary": "The influential politician has just returned from Kyiv, where he met Ukraine's President Volodymyr Zelensky on Friday.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cvgj25j6nmeo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-12T08:56:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4448,17 +4432,8 @@
       "summary": "The strikes follow an attack on a Cyprus -flagged vessel travelling through the critical waterway.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
+      "published_utc": "2026-07-12T08:56:32+00:00",
       "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Pressure builds on Europe's biggest port to be greener",
-      "summary": "A lawsuit demands that the Port of Rotterdam moves faster to cut its dependence on fossil fuel firms.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/c39y78rwrmno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
-      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -4466,7 +4441,7 @@
       "summary": "People are being consulted about plans to stop vape companies using enticing flavour descriptions that \"attract\" children into experimenting.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9v29d7vml7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
+      "published_utc": "2026-07-12T08:56:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4475,7 +4450,7 @@
       "summary": "The man's wife held onto his legs for around five minutes to stop him from being sucked out, officials say.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgk65knkyzdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
+      "published_utc": "2026-07-12T08:56:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4484,7 +4459,16 @@
       "summary": "The ASA says adverts claiming small devices can rapidly cool rooms were too good to be true.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj6g41pzy41o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T06:44:40+00:00",
+      "published_utc": "2026-07-12T08:56:32+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "EasyJet agrees to surprise takeover bid as rival US firm swoops in",
+      "summary": "The airline says a bid from US firm Apollo has trumped a recent takeover offer from Castlelake.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/cgjxqq9jg8yo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-12T08:56:32+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
