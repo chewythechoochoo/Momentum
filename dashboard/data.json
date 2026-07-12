@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-12T10:40:45+00:00",
+  "generated_at_utc": "2026-07-12T11:48:17+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 489,
-  "last_success_utc": "2026-07-12T08:56:33+00:00",
+  "cycle_count": 490,
+  "last_success_utc": "2026-07-12T10:40:45+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -541,46 +541,30 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 65.29,
-      "raw_score": 65.87,
+      "score": 65.48,
+      "raw_score": 66.05,
       "band": "buy",
-      "weight": 0.1343,
+      "weight": 0.1349,
       "confidence": 1.0,
       "components": {
         "momentum": 60.64,
-        "sentiment": 94.12,
+        "sentiment": 94.73,
         "volume": 39.4,
         "policy": 55.0,
         "volatility_penalty": 0.58
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 63.46,
-      "raw_score": 63.46,
-      "band": "buy",
-      "weight": 0.1282,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 53.78,
-        "sentiment": 100.0,
-        "volume": 32.24,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 58.09,
-      "raw_score": 68.94,
+      "score": 61.09,
+      "raw_score": 71.94,
       "band": "buy",
-      "weight": 0.0993,
-      "confidence": 0.8,
+      "weight": 0.1143,
+      "confidence": 0.9,
       "components": {
         "momentum": 74.49,
-        "sentiment": 90.0,
+        "sentiment": 100.0,
         "volume": 35.72,
         "policy": 50.0,
         "volatility_penalty": 10.85
@@ -608,8 +592,8 @@
       "score": 56.18,
       "raw_score": 68.28,
       "band": "buy",
-      "weight": 0.0961,
-      "confidence": 0.85,
+      "weight": 0.0987,
+      "confidence": 0.9,
       "components": {
         "momentum": 58.46,
         "sentiment": 100.0,
@@ -635,6 +619,22 @@
       }
     },
     {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 50.96,
+      "raw_score": 50.96,
+      "band": "starter",
+      "weight": 0.0714,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 53.78,
+        "sentiment": 60.0,
+        "volume": 32.24,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "clean_energy",
       "name": "Clean Energy",
       "score": 48.94,
@@ -651,6 +651,22 @@
       }
     },
     {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 45.76,
+      "raw_score": 63.82,
+      "band": "starter",
+      "weight": 0.0623,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 62.13,
+        "sentiment": 90.0,
+        "volume": 34.83,
+        "policy": 50.0,
+        "volatility_penalty": 18.06
+      }
+    },
+    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 43.91,
@@ -664,22 +680,6 @@
         "volume": 32.6,
         "policy": 50.0,
         "volatility_penalty": 0.39
-      }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 33.76,
-      "raw_score": 51.82,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 62.13,
-        "sentiment": 50.0,
-        "volume": 34.83,
-        "policy": 50.0,
-        "volatility_penalty": 18.06
       }
     },
     {
@@ -702,14 +702,15 @@
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.0083,
+      "action": "HOLD",
+      "target_weight": 0.0167,
       "current_weight": 0.0166,
-      "notional_delta": -844.18,
-      "reason": "theme score 33.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 38.4"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -730,44 +731,43 @@
     },
     {
       "symbol": "AMZN",
-      "action": "BUY",
-      "target_weight": 0.0414,
+      "action": "REDUCE",
+      "target_weight": 0.0228,
       "current_weight": 0.0354,
-      "notional_delta": 605.82,
-      "reason": "buying on positive news flow \u2014 \"SpaceX Stock Just Dropped Below Its Debut Price. Is the Stock a Buy?\" \u00b7 underweight by 0.60% vs target \u2014 add",
+      "notional_delta": -1283.17,
+      "reason": "overweight by 1.26% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 62.6",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 50.1"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0115,
+      "action": "HOLD",
+      "target_weight": 0.0231,
       "current_weight": 0.0231,
-      "notional_delta": -1171.67,
-      "reason": "theme score 33.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.96%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 52.9"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0307,
+      "target_weight": 0.0354,
       "current_weight": 0.031,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.1 (buy), contribution 68.9",
+        "theme 'AI & Compute' score 61.1 (buy), contribution 71.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -806,16 +806,16 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0436,
+      "target_weight": 0.0438,
       "current_weight": 0.0,
-      "notional_delta": 4427.6,
-      "reason": "buying on partnership (positive) \u2014 \"Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?\" \u00b7 underweight by 4.36% vs target \u2014 add",
+      "notional_delta": 4447.91,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 4.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 77.5",
+        "theme 'Oil & Gas' score 65.5 (buy), contribution 77.7",
         "news_source=yahoo_rss",
-        "event=partnership",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
@@ -838,16 +838,16 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0443,
+      "target_weight": 0.0445,
       "current_weight": 0.0224,
-      "notional_delta": 2219.78,
-      "reason": "buying on partnership (positive) \u2014 \"Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?\" \u00b7 underweight by 2.19% vs target \u2014 add",
+      "notional_delta": 2240.09,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 2.21% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.29%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 78.7",
+        "theme 'Oil & Gas' score 65.5 (buy), contribution 78.9",
         "news_source=yahoo_rss",
-        "event=partnership",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
@@ -858,11 +858,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -5.94,
-      "reason": "exiting on positive news flow \u2014 \"Nobody Is Talking About This Dividend King Stock. Here's Why It's a Screaming Buy Right Now.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-9.66%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
@@ -870,14 +871,16 @@
     {
       "symbol": "F",
       "action": "HOLD",
-      "target_weight": 0.034,
+      "target_weight": 0.0349,
       "current_weight": 0.0363,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.82%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 56.2 (buy), contribution 75.7"
+        "theme 'EV & Clean Transport' score 56.2 (buy), contribution 75.7",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -887,12 +890,13 @@
       "target_weight": 0.0258,
       "current_weight": 0.0192,
       "notional_delta": 671.75,
-      "reason": "buying on positive news flow \u2014 \"Nobody Is Talking About This Dividend King Stock. Here's Why It's a Screaming Buy Right Now.\" \u00b7 underweight by 0.66% vs target \u2014 add",
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 0.66% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.52%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 48.9 (starter), contribution 56.2",
         "news_source=yahoo_rss",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
@@ -929,10 +933,10 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0313,
+      "target_weight": 0.0321,
       "current_weight": 0.0375,
-      "notional_delta": -626.82,
-      "reason": "overweight by 0.62% vs target \u2014 trim",
+      "notional_delta": -545.57,
+      "reason": "overweight by 0.54% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.00%",
         "theme=EV & Clean Transport",
@@ -977,12 +981,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.07,
-      "reason": "exiting on positive news flow \u2014 \"SpaceX Stock Just Dropped Below Its Debut Price. Is the Stock a Buy?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.58%",
-        "theme=Consumer Discretionary",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1045,11 +1047,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
-      "target_weight": 0.0052,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0104,
-      "notional_delta": -526.72,
-      "reason": "theme score 33.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1053.44,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.79%",
         "theme=Semiconductors (Broad)"
@@ -1062,26 +1064,26 @@
       "target_weight": 0.0,
       "current_weight": 0.03,
       "notional_delta": -3043.03,
-      "reason": "exiting on positive news flow \u2014 \"SpaceX Stock Just Dropped Below Its Debut Price. Is the Stock a Buy?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.23%",
-        "theme=Consumer Discretionary",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0395,
       "current_weight": 0.0346,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.85%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.1 (buy), contribution 77.2"
+        "theme 'AI & Compute' score 61.1 (buy), contribution 80.2",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -1120,7 +1122,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "exiting on mixed news flow \u2014 \"Marc Andreessen Says AI Is 'Already a Better Doctor Than 99.99% of Human Doctors'\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1131,16 +1133,16 @@
     },
     {
       "symbol": "MU",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.11,
-      "reason": "trimming on mixed news flow \u2014 \"SK Hynix Stock Jumped After US IPO, But SpaceX, Figma, Circle Suggest Retreat Likely\" \u00b7 theme score 33.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.22,
+      "reason": "exiting on positive news flow \u2014 \"Apple Sues OpenAI, Dependence on TSMC, Rise in Prices and More: This Week in Appleverse\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.74%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1150,28 +1152,29 @@
       "target_weight": 0.0288,
       "current_weight": 0.0199,
       "notional_delta": 907.97,
-      "reason": "buying on positive news flow \u2014 \"Nobody Is Talking About This Dividend King Stock. Here's Why It's a Screaming Buy Right Now.\" \u00b7 underweight by 0.89% vs target \u2014 add",
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 0.89% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.45%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 48.9 (starter), contribution 62.6",
         "news_source=yahoo_rss",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
     },
     {
       "symbol": "NKE",
-      "action": "BUY",
-      "target_weight": 0.0406,
+      "action": "REDUCE",
+      "target_weight": 0.0223,
       "current_weight": 0.0328,
-      "notional_delta": 788.47,
-      "reason": "buying on positive news flow \u2014 \"SpaceX Stock Just Dropped Below Its Debut Price. Is the Stock a Buy?\" \u00b7 underweight by 0.78% vs target \u2014 add",
+      "notional_delta": -1070.05,
+      "reason": "trimming on positive news flow \u2014 \"Apple Sues OpenAI, Dependence on TSMC, Rise in Prices and More: This Week in Appleverse\" \u00b7 overweight by 1.05% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.55%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 61.5",
-        "news_source=yahoo_rss",
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 49.0",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
@@ -1193,14 +1196,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0394,
       "current_weight": 0.0353,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Apple Sues OpenAI, Dependence on TSMC, Rise in Prices and More: This Week in Appleverse\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.60%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.1 (buy), contribution 77.0",
+        "theme 'AI & Compute' score 61.1 (buy), contribution 80.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1224,16 +1227,16 @@
     {
       "symbol": "OXY",
       "action": "BUY",
-      "target_weight": 0.0465,
+      "target_weight": 0.0467,
       "current_weight": 0.0257,
-      "notional_delta": 2110.47,
-      "reason": "buying on partnership (positive) \u2014 \"Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?\" \u00b7 underweight by 2.08% vs target \u2014 add",
+      "notional_delta": 2130.78,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 2.10% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.37%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 82.6",
+        "theme 'Oil & Gas' score 65.5 (buy), contribution 82.8",
         "news_source=yahoo_rss",
-        "event=partnership",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
@@ -1291,7 +1294,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.58,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.31%",
         "theme=EV & Clean Transport",
@@ -1316,17 +1319,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0463,
+      "action": "REDUCE",
+      "target_weight": 0.0262,
       "current_weight": 0.0406,
-      "notional_delta": 578.16,
-      "reason": "buying on positive news flow \u2014 \"SpaceX Stock Just Dropped Below Its Debut Price. Is the Stock a Buy?\" \u00b7 underweight by 0.57% vs target \u2014 add",
+      "notional_delta": -1463.16,
+      "reason": "overweight by 1.44% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.46%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 70.1",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 57.6"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1336,12 +1337,13 @@
       "target_weight": 0.0252,
       "current_weight": 0.0177,
       "notional_delta": 762.94,
-      "reason": "buying on positive news flow \u2014 \"Nobody Is Talking About This Dividend King Stock. Here's Why It's a Screaming Buy Right Now.\" \u00b7 underweight by 0.75% vs target \u2014 add",
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 0.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.09%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 48.9 (starter), contribution 54.9",
         "news_source=yahoo_rss",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
@@ -1352,12 +1354,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0235,
       "notional_delta": -2381.77,
-      "reason": "exiting on partnership (positive) \u2014 \"Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.38%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
-        "event=partnership",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
@@ -1378,10 +1380,10 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0309,
+      "target_weight": 0.0317,
       "current_weight": 0.0382,
-      "notional_delta": -741.58,
-      "reason": "trimming on positive news flow \u2014 \"Musk\u2019s Net Worth Down $407 Billion From Trillion-Plus High as SpaceX Stock Dives\" \u00b7 overweight by 0.73% vs target \u2014 trim",
+      "notional_delta": -660.34,
+      "reason": "trimming on positive news flow \u2014 \"Musk\u2019s Net Worth Down $407 Billion From Trillion-Plus High as SpaceX Stock Dives\" \u00b7 overweight by 0.65% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.91%",
         "theme=EV & Clean Transport",
@@ -1393,14 +1395,17 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0112,
+      "action": "HOLD",
+      "target_weight": 0.0225,
       "current_weight": 0.0224,
-      "notional_delta": -1139.95,
-      "reason": "theme score 33.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.58%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 51.5",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1441,12 +1446,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.2,
-      "reason": "exiting on partnership (positive) \u2014 \"Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.64%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
-        "event=partnership",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
@@ -1455,14 +1460,15 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.0083,
+      "action": "HOLD",
+      "target_weight": 0.0167,
       "current_weight": 0.0166,
-      "notional_delta": -844.18,
-      "reason": "theme score 33.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 38.4"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1489,17 +1495,15 @@
     },
     {
       "symbol": "AMZN",
-      "action": "BUY",
-      "target_weight": 0.0414,
+      "action": "REDUCE",
+      "target_weight": 0.0228,
       "current_weight": 0.0354,
-      "notional_delta": 605.82,
-      "reason": "buying on positive news flow \u2014 \"SpaceX Stock Just Dropped Below Its Debut Price. Is the Stock a Buy?\" \u00b7 underweight by 0.60% vs target \u2014 add",
+      "notional_delta": -1283.17,
+      "reason": "overweight by 1.26% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 62.6",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 50.1"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1508,14 +1512,15 @@
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0115,
+      "action": "HOLD",
+      "target_weight": 0.0231,
       "current_weight": 0.0231,
-      "notional_delta": -1171.67,
-      "reason": "theme score 33.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.96%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 52.9"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1525,14 +1530,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0307,
+      "target_weight": 0.0354,
       "current_weight": 0.031,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.1 (buy), contribution 68.9",
+        "theme 'AI & Compute' score 61.1 (buy), contribution 71.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1580,16 +1585,16 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0436,
+      "target_weight": 0.0438,
       "current_weight": 0.0,
-      "notional_delta": 4427.6,
-      "reason": "buying on partnership (positive) \u2014 \"Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?\" \u00b7 underweight by 4.36% vs target \u2014 add",
+      "notional_delta": 4447.91,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 4.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 77.5",
+        "theme 'Oil & Gas' score 65.5 (buy), contribution 77.7",
         "news_source=yahoo_rss",
-        "event=partnership",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
@@ -1618,16 +1623,16 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0443,
+      "target_weight": 0.0445,
       "current_weight": 0.0224,
-      "notional_delta": 2219.78,
-      "reason": "buying on partnership (positive) \u2014 \"Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?\" \u00b7 underweight by 2.19% vs target \u2014 add",
+      "notional_delta": 2240.09,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 2.21% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.29%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 78.7",
+        "theme 'Oil & Gas' score 65.5 (buy), contribution 78.9",
         "news_source=yahoo_rss",
-        "event=partnership",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
@@ -1641,11 +1646,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -5.94,
-      "reason": "exiting on positive news flow \u2014 \"Nobody Is Talking About This Dividend King Stock. Here's Why It's a Screaming Buy Right Now.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-9.66%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
@@ -1656,14 +1662,16 @@
     {
       "symbol": "F",
       "action": "HOLD",
-      "target_weight": 0.034,
+      "target_weight": 0.0349,
       "current_weight": 0.0363,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.82%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 56.2 (buy), contribution 75.7"
+        "theme 'EV & Clean Transport' score 56.2 (buy), contribution 75.7",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1676,12 +1684,13 @@
       "target_weight": 0.0258,
       "current_weight": 0.0192,
       "notional_delta": 671.75,
-      "reason": "buying on positive news flow \u2014 \"Nobody Is Talking About This Dividend King Stock. Here's Why It's a Screaming Buy Right Now.\" \u00b7 underweight by 0.66% vs target \u2014 add",
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 0.66% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.52%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 48.9 (starter), contribution 56.2",
         "news_source=yahoo_rss",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
@@ -1727,10 +1736,10 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0313,
+      "target_weight": 0.0321,
       "current_weight": 0.0375,
-      "notional_delta": -626.82,
-      "reason": "overweight by 0.62% vs target \u2014 trim",
+      "notional_delta": -545.57,
+      "reason": "overweight by 0.54% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.00%",
         "theme=EV & Clean Transport",
@@ -1784,12 +1793,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.07,
-      "reason": "exiting on positive news flow \u2014 \"SpaceX Stock Just Dropped Below Its Debut Price. Is the Stock a Buy?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.58%",
-        "theme=Consumer Discretionary",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1867,11 +1874,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
-      "target_weight": 0.0052,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0104,
-      "notional_delta": -526.72,
-      "reason": "theme score 33.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1053.44,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.79%",
         "theme=Semiconductors (Broad)"
@@ -1887,12 +1894,10 @@
       "target_weight": 0.0,
       "current_weight": 0.03,
       "notional_delta": -3043.03,
-      "reason": "exiting on positive news flow \u2014 \"SpaceX Stock Just Dropped Below Its Debut Price. Is the Stock a Buy?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.23%",
-        "theme=Consumer Discretionary",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1902,14 +1907,16 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0395,
       "current_weight": 0.0346,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.85%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.1 (buy), contribution 77.2"
+        "theme 'AI & Compute' score 61.1 (buy), contribution 80.2",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1957,7 +1964,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "exiting on mixed news flow \u2014 \"Marc Andreessen Says AI Is 'Already a Better Doctor Than 99.99% of Human Doctors'\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=AI & Compute",
@@ -1971,16 +1978,16 @@
     },
     {
       "symbol": "MU",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.11,
-      "reason": "trimming on mixed news flow \u2014 \"SK Hynix Stock Jumped After US IPO, But SpaceX, Figma, Circle Suggest Retreat Likely\" \u00b7 theme score 33.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.22,
+      "reason": "exiting on positive news flow \u2014 \"Apple Sues OpenAI, Dependence on TSMC, Rise in Prices and More: This Week in Appleverse\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.74%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1993,12 +2000,13 @@
       "target_weight": 0.0288,
       "current_weight": 0.0199,
       "notional_delta": 907.97,
-      "reason": "buying on positive news flow \u2014 \"Nobody Is Talking About This Dividend King Stock. Here's Why It's a Screaming Buy Right Now.\" \u00b7 underweight by 0.89% vs target \u2014 add",
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 0.89% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.45%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 48.9 (starter), contribution 62.6",
         "news_source=yahoo_rss",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
@@ -2008,16 +2016,16 @@
     },
     {
       "symbol": "NKE",
-      "action": "BUY",
-      "target_weight": 0.0406,
+      "action": "REDUCE",
+      "target_weight": 0.0223,
       "current_weight": 0.0328,
-      "notional_delta": 788.47,
-      "reason": "buying on positive news flow \u2014 \"SpaceX Stock Just Dropped Below Its Debut Price. Is the Stock a Buy?\" \u00b7 underweight by 0.78% vs target \u2014 add",
+      "notional_delta": -1070.05,
+      "reason": "trimming on positive news flow \u2014 \"Apple Sues OpenAI, Dependence on TSMC, Rise in Prices and More: This Week in Appleverse\" \u00b7 overweight by 1.05% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.55%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 61.5",
-        "news_source=yahoo_rss",
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 49.0",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
@@ -2045,14 +2053,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0394,
       "current_weight": 0.0353,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Apple Sues OpenAI, Dependence on TSMC, Rise in Prices and More: This Week in Appleverse\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.60%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.1 (buy), contribution 77.0",
+        "theme 'AI & Compute' score 61.1 (buy), contribution 80.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2082,16 +2090,16 @@
     {
       "symbol": "OXY",
       "action": "BUY",
-      "target_weight": 0.0465,
+      "target_weight": 0.0467,
       "current_weight": 0.0257,
-      "notional_delta": 2110.47,
-      "reason": "buying on partnership (positive) \u2014 \"Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?\" \u00b7 underweight by 2.08% vs target \u2014 add",
+      "notional_delta": 2130.78,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 2.10% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.37%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 65.3 (buy), contribution 82.6",
+        "theme 'Oil & Gas' score 65.5 (buy), contribution 82.8",
         "news_source=yahoo_rss",
-        "event=partnership",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
@@ -2161,7 +2169,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.58,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.31%",
         "theme=EV & Clean Transport",
@@ -2192,17 +2200,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0463,
+      "action": "REDUCE",
+      "target_weight": 0.0262,
       "current_weight": 0.0406,
-      "notional_delta": 578.16,
-      "reason": "buying on positive news flow \u2014 \"SpaceX Stock Just Dropped Below Its Debut Price. Is the Stock a Buy?\" \u00b7 underweight by 0.57% vs target \u2014 add",
+      "notional_delta": -1463.16,
+      "reason": "overweight by 1.44% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.46%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 70.1",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 57.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2215,12 +2221,13 @@
       "target_weight": 0.0252,
       "current_weight": 0.0177,
       "notional_delta": 762.94,
-      "reason": "buying on positive news flow \u2014 \"Nobody Is Talking About This Dividend King Stock. Here's Why It's a Screaming Buy Right Now.\" \u00b7 underweight by 0.75% vs target \u2014 add",
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 underweight by 0.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.09%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 48.9 (starter), contribution 54.9",
         "news_source=yahoo_rss",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
@@ -2234,12 +2241,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0235,
       "notional_delta": -2381.77,
-      "reason": "exiting on partnership (positive) \u2014 \"Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.38%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
-        "event=partnership",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
@@ -2266,10 +2273,10 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0309,
+      "target_weight": 0.0317,
       "current_weight": 0.0382,
-      "notional_delta": -741.58,
-      "reason": "trimming on positive news flow \u2014 \"Musk\u2019s Net Worth Down $407 Billion From Trillion-Plus High as SpaceX Stock Dives\" \u00b7 overweight by 0.73% vs target \u2014 trim",
+      "notional_delta": -660.34,
+      "reason": "trimming on positive news flow \u2014 \"Musk\u2019s Net Worth Down $407 Billion From Trillion-Plus High as SpaceX Stock Dives\" \u00b7 overweight by 0.65% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.91%",
         "theme=EV & Clean Transport",
@@ -2284,14 +2291,17 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0112,
+      "action": "HOLD",
+      "target_weight": 0.0225,
       "current_weight": 0.0224,
-      "notional_delta": -1139.95,
-      "reason": "theme score 33.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.58%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 51.5",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2341,12 +2351,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.2,
-      "reason": "exiting on partnership (positive) \u2014 \"Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on analyst upgrade (positive) \u2014 \"Street Calls of the Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.64%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
-        "event=partnership",
+        "event=analyst upgrade",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
@@ -4303,6 +4313,10 @@
     {
       "t": "2026-07-12T10:40:42+00:00",
       "v": 101558.55
+    },
+    {
+      "t": "2026-07-12T11:48:14+00:00",
+      "v": 101558.55
     }
   ],
   "breaking_news": [
@@ -4311,7 +4325,7 @@
       "summary": "Families can still benefit even if their children aren't eligible for the free $1,000 contribution from the federal government.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5884855/trump-accounts-what-to-know",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4320,7 +4334,7 @@
       "summary": "Aviation is literally soaring in the U.S., with record passenger numbers. But with a generation of mechanics set to leave the workforce, the industry needs new graduates to fill the gap.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5860843/aviation-mechanics-labor-shortage",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4329,7 +4343,7 @@
       "summary": "The Trump EPA calls Biden-era rules for cutting pollution from heavy trucks \"unworkable.\" The proposed changes have been celebrated by trucking groups and denounced by environmental groups.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886354/epa-heavy-duty-truck-emissions",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4338,7 +4352,7 @@
       "summary": "Gas prices have fluctuated since the U.S. and Israel launched a war on Iran, which disrupted shipping through the Strait of Hormuz and left consumers unsure of what they'll pay at the pump.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886319/gas-prices-budget",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4347,7 +4361,7 @@
       "summary": "This week, Microsoft announced they were laying off over 3,000 staff at Xbox. What will the impact be on the company? And what do these layoffs say about the gaming industry right now?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5884900/microsoft-is-doing-a-hard-reset-of-its-xbox-gaming-division",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4356,7 +4370,7 @@
       "summary": "President Trump refused to sign the bill without Congress first passing his sweeping voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/10/nx-s1-5885027/housing-bill-without-trump-signature",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4365,7 +4379,7 @@
       "summary": "The <em>Times</em> says federal agents turned up on the doorsteps of several of its journalists to force grand jury testimony next week over their coverage of the Air Force One plane gifted to Trump by Qatar.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/11/g-s1-133160/justice-department-subpoenas-new-york-times-reporters-over-air-force-one-reporting",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4374,7 +4388,7 @@
       "summary": "After getting hit with tariffs for the imported board games he sells, Jonathan Silva decided to see if he could produce a version of his Monopoly game in the United States. This is what he learned.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/12/nx-s1-5887378/monopoly-tariffs-china-manufacturing-made-inusa",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4383,7 +4397,7 @@
       "summary": "Khanna, 49, was visiting the occupied West Bank when he was held for 90 minutes, he says.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c0qyk9jwq9no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4392,7 +4406,7 @@
       "summary": "The reporters received the legal summons after they reported on alleged security issues with the president's new plane, which was gifted by Qatar.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpd3g8q51g7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4401,7 +4415,7 @@
       "summary": "A 67 million-year-old Tyrannosaurus rex will go on sale in New York with a pre-sale value of $30m.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4gykgyn1r4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4410,7 +4424,7 @@
       "summary": "Police say there was an exchange of gunfire between two individuals at the festival, and two firearms had been recovered from the scene.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ce3e66e1x3go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4419,16 +4433,16 @@
       "summary": "Schools, work and outdoor activities have been suspended in Zhejiang province and many transport services cancelled.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdxd3wkp2rzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Badly burned British couple rescued from ravine during Spain wildfires",
-      "summary": "The unnamed pair were found semi-conscious with 40% burns after being trapped by the blazes raging through Almeria province.",
+      "headline": "Badly burned British couple rescued from ravine during Spain wildfires, reports say",
+      "summary": "The unnamed pair were found semi-conscious with 40% burns after being trapped by the blazes raging through Almeria province, according to local media",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2x7441762o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4437,7 +4451,7 @@
       "summary": "The influential politician had just returned from Kyiv, where he met Ukraine's President Volodymyr Zelensky on Friday.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvgj25j6nmeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4446,7 +4460,7 @@
       "summary": "The strikes follow an attack on a Cyprus -flagged vessel travelling through the critical waterway.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4455,7 +4469,7 @@
       "summary": "People are being consulted about plans to stop vape companies using enticing flavour descriptions that \"attract\" children into experimenting.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9v29d7vml7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4464,7 +4478,7 @@
       "summary": "The man's wife held onto his legs for around five minutes to stop him from being sucked out, officials say.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgk65knkyzdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4473,7 +4487,7 @@
       "summary": "The ASA says adverts claiming small devices can rapidly cool rooms were too good to be true.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj6g41pzy41o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4482,7 +4496,7 @@
       "summary": "The airline says a bid from US firm Apollo has trumped a recent takeover offer from Castlelake.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgjxqq9jg8yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T10:40:45+00:00",
+      "published_utc": "2026-07-12T11:48:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
