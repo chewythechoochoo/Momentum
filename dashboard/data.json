@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-12T11:48:17+00:00",
+  "generated_at_utc": "2026-07-12T12:46:40+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 490,
-  "last_success_utc": "2026-07-12T10:40:45+00:00",
+  "cycle_count": 491,
+  "last_success_utc": "2026-07-12T11:48:17+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -560,8 +560,8 @@
       "score": 61.09,
       "raw_score": 71.94,
       "band": "buy",
-      "weight": 0.1143,
-      "confidence": 0.9,
+      "weight": 0.1113,
+      "confidence": 0.85,
       "components": {
         "momentum": 74.49,
         "sentiment": 100.0,
@@ -651,22 +651,6 @@
       }
     },
     {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 45.76,
-      "raw_score": 63.82,
-      "band": "starter",
-      "weight": 0.0623,
-      "confidence": 0.8,
-      "components": {
-        "momentum": 62.13,
-        "sentiment": 90.0,
-        "volume": 34.83,
-        "policy": 50.0,
-        "volatility_penalty": 18.06
-      }
-    },
-    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 43.91,
@@ -680,6 +664,22 @@
         "volume": 32.6,
         "policy": 50.0,
         "volatility_penalty": 0.39
+      }
+    },
+    {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 42.76,
+      "raw_score": 60.82,
+      "band": "starter",
+      "weight": 0.0518,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 62.13,
+        "sentiment": 80.0,
+        "volume": 34.83,
+        "policy": 50.0,
+        "volatility_penalty": 18.06
       }
     },
     {
@@ -703,14 +703,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.0167,
+      "target_weight": 0.0137,
       "current_weight": 0.0166,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 38.4"
+        "theme 'Semiconductors (Broad)' score 42.8 (starter), contribution 35.4"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -746,21 +746,21 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0231,
+      "target_weight": 0.0193,
       "current_weight": 0.0231,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.96%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 52.9"
+        "theme 'Semiconductors (Broad)' score 42.8 (starter), contribution 49.9"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0354,
+      "target_weight": 0.0345,
       "current_weight": 0.031,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1074,7 +1074,7 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0395,
+      "target_weight": 0.0384,
       "current_weight": 0.0346,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1196,7 +1196,7 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0394,
+      "target_weight": 0.0384,
       "current_weight": 0.0353,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Apple Sues OpenAI, Dependence on TSMC, Rise in Prices and More: This Week in Appleverse\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1294,12 +1294,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.58,
-      "reason": "exiting on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Elon Musk's Tesla Faces Potential Roadblock, Rivian's Demand Soars And More: This Week In Mobility\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.31%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1383,7 +1383,7 @@
       "target_weight": 0.0317,
       "current_weight": 0.0382,
       "notional_delta": -660.34,
-      "reason": "trimming on positive news flow \u2014 \"Musk\u2019s Net Worth Down $407 Billion From Trillion-Plus High as SpaceX Stock Dives\" \u00b7 overweight by 0.65% vs target \u2014 trim",
+      "reason": "trimming on positive news flow \u2014 \"Elon Musk's Tesla Faces Potential Roadblock, Rivian's Demand Soars And More: This Week In Mobility\" \u00b7 overweight by 0.65% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.91%",
         "theme=EV & Clean Transport",
@@ -1396,14 +1396,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0225,
+      "target_weight": 0.0188,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.58%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 51.5",
+        "theme 'Semiconductors (Broad)' score 42.8 (starter), contribution 48.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1461,14 +1461,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.0167,
+      "target_weight": 0.0137,
       "current_weight": 0.0166,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 38.4"
+        "theme 'Semiconductors (Broad)' score 42.8 (starter), contribution 35.4"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1513,14 +1513,14 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0231,
+      "target_weight": 0.0193,
       "current_weight": 0.0231,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.96%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 52.9"
+        "theme 'Semiconductors (Broad)' score 42.8 (starter), contribution 49.9"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1530,7 +1530,7 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0354,
+      "target_weight": 0.0345,
       "current_weight": 0.031,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Nvidia Stock is Finally Soaring, and Rare Chart Pattern Points to More Upside\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1907,7 +1907,7 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0395,
+      "target_weight": 0.0384,
       "current_weight": 0.0346,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 within 50bps of target \u2014 no trade",
@@ -2053,7 +2053,7 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0394,
+      "target_weight": 0.0384,
       "current_weight": 0.0353,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Apple Sues OpenAI, Dependence on TSMC, Rise in Prices and More: This Week in Appleverse\" \u00b7 within 50bps of target \u2014 no trade",
@@ -2169,12 +2169,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.58,
-      "reason": "exiting on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Elon Musk's Tesla Faces Potential Roadblock, Rivian's Demand Soars And More: This Week In Mobility\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.31%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2276,7 +2276,7 @@
       "target_weight": 0.0317,
       "current_weight": 0.0382,
       "notional_delta": -660.34,
-      "reason": "trimming on positive news flow \u2014 \"Musk\u2019s Net Worth Down $407 Billion From Trillion-Plus High as SpaceX Stock Dives\" \u00b7 overweight by 0.65% vs target \u2014 trim",
+      "reason": "trimming on positive news flow \u2014 \"Elon Musk's Tesla Faces Potential Roadblock, Rivian's Demand Soars And More: This Week In Mobility\" \u00b7 overweight by 0.65% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.91%",
         "theme=EV & Clean Transport",
@@ -2292,14 +2292,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0225,
+      "target_weight": 0.0188,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Consumer Tech News (July 6-10): Micron Plans $250B US Expansion, Apple Signs $30B Broadcom Deal & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.58%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.8 (starter), contribution 51.5",
+        "theme 'Semiconductors (Broad)' score 42.8 (starter), contribution 48.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -4317,6 +4317,10 @@
     {
       "t": "2026-07-12T11:48:14+00:00",
       "v": 101558.55
+    },
+    {
+      "t": "2026-07-12T12:46:35+00:00",
+      "v": 101558.55
     }
   ],
   "breaking_news": [
@@ -4325,7 +4329,7 @@
       "summary": "Families can still benefit even if their children aren't eligible for the free $1,000 contribution from the federal government.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/08/nx-s1-5884855/trump-accounts-what-to-know",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4334,7 +4338,7 @@
       "summary": "Aviation is literally soaring in the U.S., with record passenger numbers. But with a generation of mechanics set to leave the workforce, the industry needs new graduates to fill the gap.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5860843/aviation-mechanics-labor-shortage",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:40+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4343,7 +4347,7 @@
       "summary": "The Trump EPA calls Biden-era rules for cutting pollution from heavy trucks \"unworkable.\" The proposed changes have been celebrated by trucking groups and denounced by environmental groups.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886354/epa-heavy-duty-truck-emissions",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4352,7 +4356,7 @@
       "summary": "Gas prices have fluctuated since the U.S. and Israel launched a war on Iran, which disrupted shipping through the Strait of Hormuz and left consumers unsure of what they'll pay at the pump.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5886319/gas-prices-budget",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4361,7 +4365,7 @@
       "summary": "This week, Microsoft announced they were laying off over 3,000 staff at Xbox. What will the impact be on the company? And what do these layoffs say about the gaming industry right now?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/09/nx-s1-5884900/microsoft-is-doing-a-hard-reset-of-its-xbox-gaming-division",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:40+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4370,7 +4374,7 @@
       "summary": "President Trump refused to sign the bill without Congress first passing his sweeping voter ID bill.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/10/nx-s1-5885027/housing-bill-without-trump-signature",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4379,7 +4383,7 @@
       "summary": "The <em>Times</em> says federal agents turned up on the doorsteps of several of its journalists to force grand jury testimony next week over their coverage of the Air Force One plane gifted to Trump by Qatar.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/11/g-s1-133160/justice-department-subpoenas-new-york-times-reporters-over-air-force-one-reporting",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4388,7 +4392,7 @@
       "summary": "After getting hit with tariffs for the imported board games he sells, Jonathan Silva decided to see if he could produce a version of his Monopoly game in the United States. This is what he learned.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/12/nx-s1-5887378/monopoly-tariffs-china-manufacturing-made-inusa",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4397,7 +4401,7 @@
       "summary": "Khanna, 49, was visiting the occupied West Bank when he was held for 90 minutes, he says.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c0qyk9jwq9no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4406,7 +4410,7 @@
       "summary": "The reporters received the legal summons after they reported on alleged security issues with the president's new plane, which was gifted by Qatar.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpd3g8q51g7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4415,7 +4419,7 @@
       "summary": "A 67 million-year-old Tyrannosaurus rex will go on sale in New York with a pre-sale value of $30m.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4gykgyn1r4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4424,7 +4428,7 @@
       "summary": "Police say there was an exchange of gunfire between two individuals at the festival, and two firearms had been recovered from the scene.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ce3e66e1x3go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4433,7 +4437,7 @@
       "summary": "Schools, work and outdoor activities have been suspended in Zhejiang province and many transport services cancelled.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdxd3wkp2rzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4442,7 +4446,7 @@
       "summary": "The unnamed pair were found semi-conscious with 40% burns after being trapped by the blazes raging through Almeria province, according to local media",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2x7441762o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4451,7 +4455,7 @@
       "summary": "The influential politician had just returned from Kyiv, where he met Ukraine's President Volodymyr Zelensky on Friday.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvgj25j6nmeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4460,7 +4464,7 @@
       "summary": "The strikes follow an attack on a Cyprus -flagged vessel travelling through the critical waterway.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4469,7 +4473,7 @@
       "summary": "People are being consulted about plans to stop vape companies using enticing flavour descriptions that \"attract\" children into experimenting.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9v29d7vml7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4478,7 +4482,7 @@
       "summary": "The man's wife held onto his legs for around five minutes to stop him from being sucked out, officials say.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgk65knkyzdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4487,7 +4491,7 @@
       "summary": "The ASA says adverts claiming small devices can rapidly cool rooms were too good to be true.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj6g41pzy41o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4496,7 +4500,7 @@
       "summary": "The airline says a bid from US firm Apollo has trumped a recent takeover offer from Castlelake.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgjxqq9jg8yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-12T11:48:17+00:00",
+      "published_utc": "2026-07-12T12:46:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
