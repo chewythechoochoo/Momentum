@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-18T12:09:18+00:00",
+  "generated_at_utc": "2026-07-18T13:54:29+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 576,
-  "last_success_utc": "2026-07-18T11:16:49+00:00",
+  "cycle_count": 577,
+  "last_success_utc": "2026-07-18T12:09:18+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -531,14 +531,14 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 66.83,
-      "raw_score": 66.83,
+      "score": 63.83,
+      "raw_score": 63.83,
       "band": "buy",
-      "weight": 0.1394,
-      "confidence": 1.0,
+      "weight": 0.1165,
+      "confidence": 0.8,
       "components": {
         "momentum": 49.49,
-        "sentiment": 100.0,
+        "sentiment": 90.0,
         "volume": 60.17,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -577,22 +577,6 @@
       }
     },
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 46.11,
-      "raw_score": 46.11,
-      "band": "starter",
-      "weight": 0.0651,
-      "confidence": 0.85,
-      "components": {
-        "momentum": 33.78,
-        "sentiment": 66.66,
-        "volume": 35.49,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
       "score": 45.11,
@@ -606,22 +590,6 @@
         "volume": 53.82,
         "policy": 50.0,
         "volatility_penalty": 13.42
-      }
-    },
-    {
-      "key": "cybersecurity",
-      "name": "Cybersecurity",
-      "score": 39.28,
-      "raw_score": 69.28,
-      "band": "hold_small",
-      "weight": 0.0388,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 85.44,
-        "sentiment": 70.0,
-        "volume": 45.54,
-        "policy": 50.0,
-        "volatility_penalty": 30.0
       }
     },
     {
@@ -641,35 +609,67 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 27.08,
-      "raw_score": 37.96,
+      "key": "cybersecurity",
+      "name": "Cybersecurity",
+      "score": 33.28,
+      "raw_score": 63.28,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 1.0,
+      "confidence": 0.65,
       "components": {
-        "momentum": 24.59,
-        "sentiment": 53.34,
-        "volume": 35.6,
+        "momentum": 85.44,
+        "sentiment": 50.0,
+        "volume": 45.54,
         "policy": 50.0,
-        "volatility_penalty": 10.88
+        "volatility_penalty": 30.0
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 29.11,
+      "raw_score": 29.11,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 33.78,
+        "sentiment": 10.0,
+        "volume": 35.49,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
       }
     },
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 24.59,
-      "raw_score": 42.42,
+      "score": 28.87,
+      "raw_score": 46.7,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 6.74,
-        "sentiment": 85.72,
+        "sentiment": 100.0,
         "volume": 45.03,
         "policy": 50.0,
         "volatility_penalty": 17.83
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 28.58,
+      "raw_score": 39.46,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 24.59,
+        "sentiment": 58.34,
+        "volume": 35.6,
+        "policy": 50.0,
+        "volatility_penalty": 10.88
       }
     },
     {
@@ -692,11 +692,11 @@
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.03,
-      "reason": "theme score 24.6 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.02,
+      "reason": "theme score 28.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.58%",
         "theme=Semiconductors (Broad)"
@@ -709,12 +709,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.78,
-      "reason": "trimming on negative news flow \u2014 \"Stock Market Today: Dow, Nasdaq, S&P 500 Futures Slump as Trump Says U.S. Is Going 'Great'\u2014 Netflix, Coca-Cola, Nebius in Focus (UPDATED)\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.95%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
@@ -736,11 +734,11 @@
     },
     {
       "symbol": "ASML",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.02,
-      "reason": "exiting on positive news flow \u2014 \"'ASML to Pay One-Time \u20ac20,000 Bonus to Staff as AI Propels Demand' - Bloomberg\" \u00b7 theme score 24.6 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.01,
+      "reason": "trimming on positive news flow \u2014 \"'ASML to Pay One-Time \u20ac20,000 Bonus to Staff as AI Propels Demand' - Bloomberg\" \u00b7 theme score 28.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.77%",
         "theme=Semiconductors (Broad)",
@@ -751,11 +749,11 @@
     },
     {
       "symbol": "BA",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0138,
       "current_weight": 0.0276,
-      "notional_delta": -2758.05,
-      "reason": "exiting on mixed news flow \u2014 \"UPDATE: After Months Of Safety Review, FAA Allows Boeing To Resume Issuing Certificates For New Airplanes\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1379.03,
+      "reason": "trimming on mixed news flow \u2014 \"UPDATE: After Months Of Safety Review, FAA Allows Boeing To Resume Issuing Certificates For New Airplanes\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.18%",
         "theme=Defense & Aerospace",
@@ -766,17 +764,15 @@
     },
     {
       "symbol": "BAC",
-      "action": "HOLD",
-      "target_weight": 0.0492,
+      "action": "REDUCE",
+      "target_weight": 0.0412,
       "current_weight": 0.0518,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Evercore ISI Group Maintains Outperform on Bank of America, Raises Price Target to $67\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1064.05,
+      "reason": "overweight by 1.06% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.82%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.8 (buy), contribution 76.9",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 63.8 (buy), contribution 73.9"
       ],
       "theme_key": "financials"
     },
@@ -798,16 +794,14 @@
     },
     {
       "symbol": "CRWD",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.02,
-      "reason": "exiting on positive news flow \u2014 \"Stifel Maintains Buy on CrowdStrike Holdings, Raises Price Target to $230\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.01,
+      "reason": "theme score 33.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.78%",
-        "theme=Cybersecurity",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -869,15 +863,14 @@
     },
     {
       "symbol": "FTNT",
-      "action": "HOLD",
-      "target_weight": 0.013,
+      "action": "REDUCE",
+      "target_weight": 0.005,
       "current_weight": 0.01,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"If You Invested $100 In Fortinet Stock 15 Years Ago, You Would Have This Much Today\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -497.69,
+      "reason": "trimming on mixed news flow \u2014 \"If You Invested $100 In Fortinet Stock 15 Years Ago, You Would Have This Much Today\" \u00b7 theme score 33.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.13%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.3 (hold_small), contribution 58.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -886,17 +879,13 @@
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0224,
+      "target_weight": 0.0159,
       "current_weight": 0.0319,
-      "notional_delta": -944.92,
-      "reason": "trimming on contract win (positive) \u2014 \"Optex Systems Awarded $1.2M Contract From General Dynamics Land Systems Canada To Support The Light Armored Vehicle Weapon System Through 20\" \u00b7 overweight by 0.95% vs target \u2014 trim",
+      "notional_delta": -1591.66,
+      "reason": "theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.67%",
-        "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 46.1 (starter), contribution 46.1",
-        "news_source=benzinga",
-        "event=contract win",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense"
     },
@@ -920,7 +909,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -131.55,
-      "reason": "trimming on positive news flow \u2014 \"BMO Capital Maintains Outperform on Alphabet, Raises Price Target to $455\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"BMO Capital Maintains Outperform on Alphabet, Raises Price Target to $455\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.03%",
         "theme=AI & Compute",
@@ -935,12 +924,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.65,
-      "reason": "exiting on positive news flow \u2014 \"Evercore ISI Group Maintains Outperform on Goldman Sachs Group, Raises Price Target to $1210\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"BMO Capital Maintains Market Perform on Goldman Sachs Group, Lowers Price Target to $1150\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.76%",
         "theme=Financials & Rates",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials"
     },
@@ -960,15 +949,15 @@
     },
     {
       "symbol": "JPM",
-      "action": "HOLD",
-      "target_weight": 0.0449,
+      "action": "REDUCE",
+      "target_weight": 0.0374,
       "current_weight": 0.0434,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Tom Lee Says 'People Are Rage Quitting at the Bottom,' Compares Ethereum to Amazon, Nvidia, JPMorgan\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -596.51,
+      "reason": "trimming on positive news flow \u2014 \"Tom Lee Says 'People Are Rage Quitting at the Bottom,' Compares Ethereum to Amazon, Nvidia, JPMorgan\" \u00b7 overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.28%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.8 (buy), contribution 70.1",
+        "theme 'Financials & Rates' score 63.8 (buy), contribution 67.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1009,11 +998,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -4.98,
-      "reason": "exiting on positive news flow \u2014 \"Chip Stocks Are Having Their Worst Month Since 2008: This Analyst Says Buy the Reset\" \u00b7 theme score 24.6 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -2.49,
+      "reason": "trimming on positive news flow \u2014 \"Chip Stocks Are Having Their Worst Month Since 2008: This Analyst Says Buy the Reset\" \u00b7 theme score 28.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.31%",
         "theme=Semiconductors (Broad)",
@@ -1043,7 +1032,7 @@
       "target_weight": 0.0015,
       "current_weight": 0.0029,
       "notional_delta": -145.13,
-      "reason": "trimming on positive news flow \u2014 \"China's AI Breakthrough Triggers A Semiconductor Selloff\u2014What It Means For Investors\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"China's AI Breakthrough Triggers A Semiconductor Selloff\u2014What It Means For Investors\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.26%",
         "theme=AI & Compute",
@@ -1086,7 +1075,7 @@
       "target_weight": 0.0019,
       "current_weight": 0.0038,
       "notional_delta": -188.83,
-      "reason": "trimming on positive news flow \u2014 \"China's AI Breakthrough Triggers A Semiconductor Selloff\u2014What It Means For Investors\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"China's AI Breakthrough Triggers A Semiconductor Selloff\u2014What It Means For Investors\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=AI & Compute",
@@ -1097,11 +1086,11 @@
     },
     {
       "symbol": "MU",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.19,
-      "reason": "exiting on positive news flow \u2014 \"This New ETF Targets AI Memory Leaders and Weekly Cash Payouts\" \u00b7 theme score 24.6 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.1,
+      "reason": "trimming on positive news flow \u2014 \"This New ETF Targets AI Memory Leaders and Weekly Cash Payouts\" \u00b7 theme score 28.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.41%",
         "theme=Semiconductors (Broad)",
@@ -1141,14 +1130,13 @@
     {
       "symbol": "NOC",
       "action": "REDUCE",
-      "target_weight": 0.0192,
+      "target_weight": 0.0168,
       "current_weight": 0.0336,
-      "notional_delta": -1434.66,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going on With Northrop Grumman Stock Friday?\" \u00b7 overweight by 1.44% vs target \u2014 trim",
+      "notional_delta": -1676.65,
+      "reason": "trimming on mixed news flow \u2014 \"What's Going on With Northrop Grumman Stock Friday?\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.33%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 46.1 (starter), contribution 39.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1160,7 +1148,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -132.1,
-      "reason": "trimming on positive news flow \u2014 \"Nvidia's New AI Rival Could Reportedly Be Worth $20 Billion\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Nvidia's New AI Rival Could Reportedly Be Worth $20 Billion\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.47%",
         "theme=AI & Compute",
@@ -1171,15 +1159,14 @@
     },
     {
       "symbol": "OKTA",
-      "action": "HOLD",
-      "target_weight": 0.0117,
+      "action": "REDUCE",
+      "target_weight": 0.0046,
       "current_weight": 0.0092,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -461.21,
+      "reason": "theme score 33.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.60%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.3 (hold_small), contribution 52.7"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1200,15 +1187,14 @@
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0142,
+      "action": "REDUCE",
+      "target_weight": 0.0055,
       "current_weight": 0.0111,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -552.55,
+      "reason": "theme score 33.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.17%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.3 (hold_small), contribution 64.0"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1257,14 +1243,13 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0235,
+      "target_weight": 0.0186,
       "current_weight": 0.0372,
-      "notional_delta": -1372.39,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going on With Northrop Grumman Stock Friday?\" \u00b7 overweight by 1.37% vs target \u2014 trim",
+      "notional_delta": -1860.36,
+      "reason": "trimming on mixed news flow \u2014 \"What's Going on With Northrop Grumman Stock Friday?\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.30%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 46.1 (starter), contribution 48.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1329,7 +1314,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-24.01%",
         "theme=AI & Compute"
@@ -1353,11 +1338,11 @@
     },
     {
       "symbol": "TSM",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.23,
-      "reason": "exiting on positive news flow \u2014 \"President Trump Posts On Truth Social \"... Now, TSMC, the largest Leading Edge Semiconductor Chip Manufacturer in the World, has announced a\" \u00b7 theme score 24.6 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.12,
+      "reason": "trimming on positive news flow \u2014 \"President Trump Posts On Truth Social \"... Now, TSMC, the largest Leading Edge Semiconductor Chip Manufacturer in the World, has announced a\" \u00b7 theme score 28.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.34%",
         "theme=Semiconductors (Broad)",
@@ -1382,15 +1367,15 @@
     },
     {
       "symbol": "WFC",
-      "action": "HOLD",
-      "target_weight": 0.0453,
+      "action": "REDUCE",
+      "target_weight": 0.0378,
       "current_weight": 0.0466,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -881.42,
+      "reason": "overweight by 0.88% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.53%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.8 (buy), contribution 70.8"
+        "theme 'Financials & Rates' score 63.8 (buy), contribution 67.8"
       ],
       "theme_key": "financials"
     },
@@ -1412,11 +1397,11 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.03,
-      "reason": "theme score 24.6 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.02,
+      "reason": "theme score 28.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.58%",
         "theme=Semiconductors (Broad)"
@@ -1432,12 +1417,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.78,
-      "reason": "trimming on negative news flow \u2014 \"Stock Market Today: Dow, Nasdaq, S&P 500 Futures Slump as Trump Says U.S. Is Going 'Great'\u2014 Netflix, Coca-Cola, Nebius in Focus (UPDATED)\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.95%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1465,11 +1448,11 @@
     },
     {
       "symbol": "ASML",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.02,
-      "reason": "exiting on positive news flow \u2014 \"'ASML to Pay One-Time \u20ac20,000 Bonus to Staff as AI Propels Demand' - Bloomberg\" \u00b7 theme score 24.6 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.01,
+      "reason": "trimming on positive news flow \u2014 \"'ASML to Pay One-Time \u20ac20,000 Bonus to Staff as AI Propels Demand' - Bloomberg\" \u00b7 theme score 28.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.77%",
         "theme=Semiconductors (Broad)",
@@ -1483,11 +1466,11 @@
     },
     {
       "symbol": "BA",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0138,
       "current_weight": 0.0276,
-      "notional_delta": -2758.05,
-      "reason": "exiting on mixed news flow \u2014 \"UPDATE: After Months Of Safety Review, FAA Allows Boeing To Resume Issuing Certificates For New Airplanes\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1379.03,
+      "reason": "trimming on mixed news flow \u2014 \"UPDATE: After Months Of Safety Review, FAA Allows Boeing To Resume Issuing Certificates For New Airplanes\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.18%",
         "theme=Defense & Aerospace",
@@ -1501,17 +1484,15 @@
     },
     {
       "symbol": "BAC",
-      "action": "HOLD",
-      "target_weight": 0.0492,
+      "action": "REDUCE",
+      "target_weight": 0.0412,
       "current_weight": 0.0518,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Evercore ISI Group Maintains Outperform on Bank of America, Raises Price Target to $67\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1064.05,
+      "reason": "overweight by 1.06% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.82%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.8 (buy), contribution 76.9",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 63.8 (buy), contribution 73.9"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1539,16 +1520,14 @@
     },
     {
       "symbol": "CRWD",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.02,
-      "reason": "exiting on positive news flow \u2014 \"Stifel Maintains Buy on CrowdStrike Holdings, Raises Price Target to $230\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.01,
+      "reason": "theme score 33.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.78%",
-        "theme=Cybersecurity",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1625,15 +1604,14 @@
     },
     {
       "symbol": "FTNT",
-      "action": "HOLD",
-      "target_weight": 0.013,
+      "action": "REDUCE",
+      "target_weight": 0.005,
       "current_weight": 0.01,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"If You Invested $100 In Fortinet Stock 15 Years Ago, You Would Have This Much Today\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -497.69,
+      "reason": "trimming on mixed news flow \u2014 \"If You Invested $100 In Fortinet Stock 15 Years Ago, You Would Have This Much Today\" \u00b7 theme score 33.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.13%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.3 (hold_small), contribution 58.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1645,17 +1623,13 @@
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0224,
+      "target_weight": 0.0159,
       "current_weight": 0.0319,
-      "notional_delta": -944.92,
-      "reason": "trimming on contract win (positive) \u2014 \"Optex Systems Awarded $1.2M Contract From General Dynamics Land Systems Canada To Support The Light Armored Vehicle Weapon System Through 20\" \u00b7 overweight by 0.95% vs target \u2014 trim",
+      "notional_delta": -1591.66,
+      "reason": "theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.67%",
-        "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 46.1 (starter), contribution 46.1",
-        "news_source=benzinga",
-        "event=contract win",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1685,7 +1659,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -131.55,
-      "reason": "trimming on positive news flow \u2014 \"BMO Capital Maintains Outperform on Alphabet, Raises Price Target to $455\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"BMO Capital Maintains Outperform on Alphabet, Raises Price Target to $455\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.03%",
         "theme=AI & Compute",
@@ -1703,12 +1677,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.65,
-      "reason": "exiting on positive news flow \u2014 \"Evercore ISI Group Maintains Outperform on Goldman Sachs Group, Raises Price Target to $1210\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"BMO Capital Maintains Market Perform on Goldman Sachs Group, Lowers Price Target to $1150\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.76%",
         "theme=Financials & Rates",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1734,15 +1708,15 @@
     },
     {
       "symbol": "JPM",
-      "action": "HOLD",
-      "target_weight": 0.0449,
+      "action": "REDUCE",
+      "target_weight": 0.0374,
       "current_weight": 0.0434,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Tom Lee Says 'People Are Rage Quitting at the Bottom,' Compares Ethereum to Amazon, Nvidia, JPMorgan\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -596.51,
+      "reason": "trimming on positive news flow \u2014 \"Tom Lee Says 'People Are Rage Quitting at the Bottom,' Compares Ethereum to Amazon, Nvidia, JPMorgan\" \u00b7 overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.28%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.8 (buy), contribution 70.1",
+        "theme 'Financials & Rates' score 63.8 (buy), contribution 67.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1792,11 +1766,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -4.98,
-      "reason": "exiting on positive news flow \u2014 \"Chip Stocks Are Having Their Worst Month Since 2008: This Analyst Says Buy the Reset\" \u00b7 theme score 24.6 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -2.49,
+      "reason": "trimming on positive news flow \u2014 \"Chip Stocks Are Having Their Worst Month Since 2008: This Analyst Says Buy the Reset\" \u00b7 theme score 28.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.31%",
         "theme=Semiconductors (Broad)",
@@ -1832,7 +1806,7 @@
       "target_weight": 0.0015,
       "current_weight": 0.0029,
       "notional_delta": -145.13,
-      "reason": "trimming on positive news flow \u2014 \"China's AI Breakthrough Triggers A Semiconductor Selloff\u2014What It Means For Investors\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"China's AI Breakthrough Triggers A Semiconductor Selloff\u2014What It Means For Investors\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.26%",
         "theme=AI & Compute",
@@ -1884,7 +1858,7 @@
       "target_weight": 0.0019,
       "current_weight": 0.0038,
       "notional_delta": -188.83,
-      "reason": "trimming on positive news flow \u2014 \"China's AI Breakthrough Triggers A Semiconductor Selloff\u2014What It Means For Investors\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"China's AI Breakthrough Triggers A Semiconductor Selloff\u2014What It Means For Investors\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=AI & Compute",
@@ -1898,11 +1872,11 @@
     },
     {
       "symbol": "MU",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.19,
-      "reason": "exiting on positive news flow \u2014 \"This New ETF Targets AI Memory Leaders and Weekly Cash Payouts\" \u00b7 theme score 24.6 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.1,
+      "reason": "trimming on positive news flow \u2014 \"This New ETF Targets AI Memory Leaders and Weekly Cash Payouts\" \u00b7 theme score 28.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.41%",
         "theme=Semiconductors (Broad)",
@@ -1951,14 +1925,13 @@
     {
       "symbol": "NOC",
       "action": "REDUCE",
-      "target_weight": 0.0192,
+      "target_weight": 0.0168,
       "current_weight": 0.0336,
-      "notional_delta": -1434.66,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going on With Northrop Grumman Stock Friday?\" \u00b7 overweight by 1.44% vs target \u2014 trim",
+      "notional_delta": -1676.65,
+      "reason": "trimming on mixed news flow \u2014 \"What's Going on With Northrop Grumman Stock Friday?\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.33%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 46.1 (starter), contribution 39.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1973,7 +1946,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -132.1,
-      "reason": "trimming on positive news flow \u2014 \"Nvidia's New AI Rival Could Reportedly Be Worth $20 Billion\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Nvidia's New AI Rival Could Reportedly Be Worth $20 Billion\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.47%",
         "theme=AI & Compute",
@@ -1987,15 +1960,14 @@
     },
     {
       "symbol": "OKTA",
-      "action": "HOLD",
-      "target_weight": 0.0117,
+      "action": "REDUCE",
+      "target_weight": 0.0046,
       "current_weight": 0.0092,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -461.21,
+      "reason": "theme score 33.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.60%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.3 (hold_small), contribution 52.7"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2022,15 +1994,14 @@
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0142,
+      "action": "REDUCE",
+      "target_weight": 0.0055,
       "current_weight": 0.0111,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -552.55,
+      "reason": "theme score 33.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.17%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.3 (hold_small), contribution 64.0"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2091,14 +2062,13 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0235,
+      "target_weight": 0.0186,
       "current_weight": 0.0372,
-      "notional_delta": -1372.39,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going on With Northrop Grumman Stock Friday?\" \u00b7 overweight by 1.37% vs target \u2014 trim",
+      "notional_delta": -1860.36,
+      "reason": "trimming on mixed news flow \u2014 \"What's Going on With Northrop Grumman Stock Friday?\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.30%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 46.1 (starter), contribution 48.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2178,7 +2148,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "theme score 27.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 28.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-24.01%",
         "theme=AI & Compute"
@@ -2208,11 +2178,11 @@
     },
     {
       "symbol": "TSM",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.23,
-      "reason": "exiting on positive news flow \u2014 \"President Trump Posts On Truth Social \"... Now, TSMC, the largest Leading Edge Semiconductor Chip Manufacturer in the World, has announced a\" \u00b7 theme score 24.6 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.12,
+      "reason": "trimming on positive news flow \u2014 \"President Trump Posts On Truth Social \"... Now, TSMC, the largest Leading Edge Semiconductor Chip Manufacturer in the World, has announced a\" \u00b7 theme score 28.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.34%",
         "theme=Semiconductors (Broad)",
@@ -2243,15 +2213,15 @@
     },
     {
       "symbol": "WFC",
-      "action": "HOLD",
-      "target_weight": 0.0453,
+      "action": "REDUCE",
+      "target_weight": 0.0378,
       "current_weight": 0.0466,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -881.42,
+      "reason": "overweight by 0.88% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.53%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.8 (buy), contribution 70.8"
+        "theme 'Financials & Rates' score 63.8 (buy), contribution 67.8"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2277,10 +2247,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-05-30T23:46:27+00:00",
-      "v": 102420.15
-    },
     {
       "t": "2026-05-31T01:57:14+00:00",
       "v": 102420.15
@@ -4276,6 +4242,10 @@
     {
       "t": "2026-07-18T12:09:14+00:00",
       "v": 99928.89
+    },
+    {
+      "t": "2026-07-18T13:54:25+00:00",
+      "v": 99928.89
     }
   ],
   "breaking_news": [
@@ -4284,7 +4254,7 @@
       "summary": "A T-rex fossil billed as one of the world's largest specimens was sold for a record $50.1 million Tuesday to a mystery bidder. But many aren't happy about it.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/15/nx-s1-5894586/mystery-bidder-buys-t-rex",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4293,7 +4263,7 @@
       "summary": "AI is a fast-growing business expense. Some companies are cutting costs by switching to cheaper Chinese AI models.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/15/nx-s1-5886476/startups-cheap-chinese-ai-models",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4302,7 +4272,7 @@
       "summary": "Lagging consumer spending and business investment offset the boost from strong exports thanks partly to the boom in artificial intelligence.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/15/g-s1-133672/chinas-economy-grows-4-3-in-q2-slowest-since-late-2022",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4311,7 +4281,7 @@
       "summary": "The betting site Kalshi emerged as a dominant sports betting platform during the World Cup. But the company avoids billions of dollars in taxes by insisting it is not a sports gambling operator.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5884848/kalshi-sports-betting-prediction-markets-draftkings-fanduel-world-cup",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4320,7 +4290,7 @@
       "summary": "Business is booming for Snap-on, a Wisconsin company that has made tools for professional mechanics for more than a century.\u00a0It recently got a fact-finding visit from the head of the Chicago Federal Reserve Bank.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5894730/federal-reserve-looks-for-secret-sauce-behind-a-successful-wisconsin-tool-maker",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4329,7 +4299,7 @@
       "summary": "President Trump's face will appear on a new commemorative coin honoring the nation's 250th birthday. It's one of the many unusual places his likeness has popped up this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5897380/trump-coin-face-laws-treasury-250",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4338,7 +4308,7 @@
       "summary": "The decision comes two months after President Donald Trump met with Xi Jinping, potentially warming ties ahead of Xi's expected U.S. visit.<br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/g-s1-134269/china-signals-possible-return-of-u-s-trade-privileges-for-hong-kong",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4347,34 +4317,7 @@
       "summary": "Why are people who weren't born 25 years ago snapping up the digital camera of that era? Blame Taylor Swift, trend cycles, childhood nostalgia and smartphone fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/18/nx-s1-5896117/retro-digital-camera-analog-reboot",
-      "published_utc": "2026-07-18T12:09:18+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "One anti-war critic fined, another held as Russia clamps down on dissent",
-      "summary": "While Boris Nadezhdin is barred from running for parliament, blogger Ilya Remeslo is remanded in custody.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cn0n3y6ewn4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Indian activist on hunger strike for 20 days forcibly taken to hospital",
-      "summary": "Cockroach Janta Party founder Abhijeet Dipke has now begun an indefinite fast in Sonam Wangchuk's place.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cjej3dxxg2do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Laos says it can't determine cause of  tourist deaths linked to methanol",
-      "summary": "Officials say they have no evidence of poisoning over the 2024 deaths because autopsies were not conducted.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cdx8rj99endo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4383,26 +4326,35 @@
       "summary": "The comments could further fuel the row over the incident, which has seen Downing Street back calls for Fifa to investigate.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2rmjk0740o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
+    },
+    {
+      "headline": "Indian activist on hunger strike for 20 days forcibly taken to hospital",
+      "summary": "Cockroach Janta Party founder Abhijeet Dipke has now begun an indefinite fast in Sonam Wangchuk's place.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cjej3dxxg2do?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-18T13:54:29+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Laos says it can't determine cause of  tourist deaths linked to methanol",
+      "summary": "Officials say they have no evidence of poisoning over the 2024 deaths because autopsies were not conducted.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cdx8rj99endo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-18T13:54:29+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
     },
     {
       "headline": "Space start-up launches India\u2019s first commercial rocket designed for orbit",
       "summary": "India's first space-tech unicorn Skyroot Aerospace successfully launched Vikram-1 on Saturday.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/clyekv7rld3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Many Ukrainian soldiers outraged over removal of defence minister, troops tell BBC",
-      "summary": "Protests erupted in Ukraine on Thursday after Mykhailo Fedorov's removal - and now soldiers are also criticising the move.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cvg8w4dpjkwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
-      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4410,7 +4362,7 @@
       "summary": "Canadian leader Mark Carney says both the US and Canada have an equal responsibility to fight climate change, which experts say are worsening wildfire conditions.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4419,7 +4371,25 @@
       "summary": "Iran has retaliated against US allies in the region, with Kuwait reporting that a power and water plant had been hit.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cy748n8zx8ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:29+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Many Ukrainian soldiers outraged over removal of defence minister, troops tell BBC",
+      "summary": "Protests erupted in Ukraine on Thursday after Mykhailo Fedorov's removal - and now soldiers are also criticising the move.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cvg8w4dpjkwo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-18T13:54:29+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Russian online retail warehouses hit by deadly Ukrainian strikes",
+      "summary": "Drones targeted Wildberries facilities near Moscow and in Tambov. Ukraine's leader called them \"major logistics facilities\" supplying \"sanctioned components\".",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/clyxlm877p2o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-18T13:54:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4428,7 +4398,7 @@
       "summary": "Sarah and her husband have shared one account for 25 years, but she says managing it falls to her.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c5yz4wnz6jdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:28+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4437,7 +4407,7 @@
       "summary": "Big bucks are being made from the 2026 tournament off the field, but who is raking in the most, and who is losing out?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgrkek8lrzvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:28+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4446,7 +4416,7 @@
       "summary": "The UK government said taking the firm into public hands would safeguard \"a vital national capability\".",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cjd4kvxpd3do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:28+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4455,7 +4425,7 @@
       "summary": "The company has unveiled a massive new artificial intelligence model it says can take on top American firms.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cy9w4q8pgp0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T12:09:18+00:00",
+      "published_utc": "2026-07-18T13:54:28+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
