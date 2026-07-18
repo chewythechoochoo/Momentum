@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-18T20:35:34+00:00",
+  "generated_at_utc": "2026-07-18T21:32:46+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 583,
-  "last_success_utc": "2026-07-18T19:48:41+00:00",
+  "cycle_count": 584,
+  "last_success_utc": "2026-07-18T20:35:34+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -577,22 +577,6 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 41.77,
-      "raw_score": 41.77,
-      "band": "starter",
-      "weight": 0.0461,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 38.64,
-        "sentiment": 50.0,
-        "volume": 31.57,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 40.61,
@@ -614,8 +598,8 @@
       "score": 38.69,
       "raw_score": 52.1,
       "band": "hold_small",
-      "weight": 0.0348,
-      "confidence": 0.65,
+      "weight": 0.0369,
+      "confidence": 0.75,
       "components": {
         "momentum": 53.35,
         "sentiment": 50.0,
@@ -625,19 +609,19 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 35.08,
-      "raw_score": 45.96,
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 35.77,
+      "raw_score": 35.77,
       "band": "hold_small",
-      "weight": 0.0179,
-      "confidence": 0.75,
+      "weight": 0.0209,
+      "confidence": 0.7,
       "components": {
-        "momentum": 24.59,
-        "sentiment": 80.0,
-        "volume": 35.6,
+        "momentum": 38.64,
+        "sentiment": 30.0,
+        "volume": 31.57,
         "policy": 50.0,
-        "volatility_penalty": 10.88
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -673,6 +657,22 @@
       }
     },
     {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 26.08,
+      "raw_score": 36.96,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.85,
+      "components": {
+        "momentum": 24.59,
+        "sentiment": 50.0,
+        "volume": 35.6,
+        "policy": 50.0,
+        "volatility_penalty": 10.88
+      }
+    },
+    {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
       "score": 13.87,
@@ -705,30 +705,32 @@
     },
     {
       "symbol": "AMD",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -3.55,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -1.78,
+      "reason": "trimming on mixed news flow \u2014 \"Cathie Wood's ARK Innovation ETF Bleeds Assets as Investors Lose Patience\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.95%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "AMZN",
       "action": "REDUCE",
-      "target_weight": 0.0161,
+      "target_weight": 0.0074,
       "current_weight": 0.0371,
-      "notional_delta": -2102.87,
-      "reason": "trimming on mixed news flow \u2014 \"Maria Sharapova Once Revealed Her 'Steely Mentality' Made People Uncomfortable\u2014 It Also Built a Tennis Dynasty and a Portfolio of Winning Be\" \u00b7 overweight by 2.10% vs target \u2014 trim",
+      "notional_delta": -2972.25,
+      "reason": "trimming on negative news flow \u2014 \"Bill Ackman Losing Winning Streak as Pershing Square's Core Holdings Falter\" \u00b7 overweight by 2.97% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.04%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 41.8 (starter), contribution 47.1",
+        "theme 'Consumer Discretionary' score 35.8 (hold_small), contribution 41.1",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -838,10 +840,10 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0128,
+      "target_weight": 0.0136,
       "current_weight": 0.0202,
-      "notional_delta": -738.1,
-      "reason": "overweight by 0.74% vs target \u2014 trim",
+      "notional_delta": -658.16,
+      "reason": "overweight by 0.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.55%",
         "theme=EV & Clean Transport",
@@ -896,10 +898,10 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0092,
+      "target_weight": 0.0097,
       "current_weight": 0.0178,
-      "notional_delta": -859.67,
-      "reason": "overweight by 0.86% vs target \u2014 trim",
+      "notional_delta": -809.71,
+      "reason": "overweight by 0.81% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.99%",
         "theme=EV & Clean Transport",
@@ -909,15 +911,14 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0054,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -131.55,
+      "reason": "theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.03%",
-        "theme=AI & Compute",
-        "theme 'AI & Compute' score 35.1 (hold_small), contribution 43.0"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
@@ -939,14 +940,14 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0143,
+      "target_weight": 0.0064,
       "current_weight": 0.0341,
-      "notional_delta": -1980.41,
-      "reason": "overweight by 1.98% vs target \u2014 trim",
+      "notional_delta": -2769.85,
+      "reason": "overweight by 2.77% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 41.8 (starter), contribution 41.9"
+        "theme 'Consumer Discretionary' score 35.8 (hold_small), contribution 35.9"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -969,10 +970,10 @@
     {
       "symbol": "LCID",
       "action": "REDUCE",
-      "target_weight": 0.0128,
+      "target_weight": 0.0136,
       "current_weight": 0.0201,
-      "notional_delta": -724.49,
-      "reason": "overweight by 0.73% vs target \u2014 trim",
+      "notional_delta": -644.55,
+      "reason": "overweight by 0.65% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=5.93%",
         "theme=EV & Clean Transport",
@@ -1024,11 +1025,11 @@
     },
     {
       "symbol": "META",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0015,
       "current_weight": 0.0029,
-      "notional_delta": -290.25,
-      "reason": "exiting on mixed news flow \u2014 \"Meta Reportedly Negotiating $10 Billion AI Compute Deal With Anthropic\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -145.13,
+      "reason": "trimming on mixed news flow \u2014 \"Meta Reportedly Negotiating $10 Billion AI Compute Deal With Anthropic\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.26%",
         "theme=AI & Compute",
@@ -1069,17 +1070,16 @@
     },
     {
       "symbol": "MSFT",
-      "action": "HOLD",
-      "target_weight": 0.0077,
+      "action": "REDUCE",
+      "target_weight": 0.0019,
       "current_weight": 0.0038,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Warren Buffett Once Said He'd Pay $5 Million a Year to Play Online Bridge\u2014 He Actually Pays $95 and the Reason Is a Classic Economics Lesson\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -188.83,
+      "reason": "trimming on negative news flow \u2014 \"Bill Ackman Losing Winning Streak as Pershing Square's Core Holdings Falter\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 35.1 (hold_small), contribution 61.1",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1142,11 +1142,11 @@
     },
     {
       "symbol": "NVDA",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": -264.2,
-      "reason": "exiting on positive news flow \u2014 \"Nvidia's New AI Rival Could Reportedly Be Worth $20 Billion\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -132.1,
+      "reason": "trimming on positive news flow \u2014 \"Nvidia's New AI Rival Could Reportedly Be Worth $20 Billion\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.47%",
         "theme=AI & Compute",
@@ -1274,14 +1274,14 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0157,
+      "target_weight": 0.0071,
       "current_weight": 0.0391,
-      "notional_delta": -2341.37,
-      "reason": "overweight by 2.34% vs target \u2014 trim",
+      "notional_delta": -3200.76,
+      "reason": "overweight by 3.20% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.30%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 41.8 (starter), contribution 45.8"
+        "theme 'Consumer Discretionary' score 35.8 (hold_small), contribution 39.8"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1317,11 +1317,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.04,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.02,
+      "reason": "theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-24.01%",
         "theme=AI & Compute"
@@ -1334,7 +1334,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.16,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: PayPal, UnitedHealth, Netflix \u2014 And Stocks End Wild Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Top S&P 500 Stocks to Watch Next Week: Tesla, Google, Intel, GE Vernova\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.78%",
         "theme=EV & Clean Transport",
@@ -1426,14 +1426,16 @@
     },
     {
       "symbol": "AMD",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -3.55,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -1.78,
+      "reason": "trimming on mixed news flow \u2014 \"Cathie Wood's ARK Innovation ETF Bleeds Assets as Investors Lose Patience\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.95%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1443,16 +1445,16 @@
     {
       "symbol": "AMZN",
       "action": "REDUCE",
-      "target_weight": 0.0161,
+      "target_weight": 0.0074,
       "current_weight": 0.0371,
-      "notional_delta": -2102.87,
-      "reason": "trimming on mixed news flow \u2014 \"Maria Sharapova Once Revealed Her 'Steely Mentality' Made People Uncomfortable\u2014 It Also Built a Tennis Dynasty and a Portfolio of Winning Be\" \u00b7 overweight by 2.10% vs target \u2014 trim",
+      "notional_delta": -2972.25,
+      "reason": "trimming on negative news flow \u2014 \"Bill Ackman Losing Winning Streak as Pershing Square's Core Holdings Falter\" \u00b7 overweight by 2.97% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.04%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 41.8 (starter), contribution 47.1",
+        "theme 'Consumer Discretionary' score 35.8 (hold_small), contribution 41.1",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1586,10 +1588,10 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0128,
+      "target_weight": 0.0136,
       "current_weight": 0.0202,
-      "notional_delta": -738.1,
-      "reason": "overweight by 0.74% vs target \u2014 trim",
+      "notional_delta": -658.16,
+      "reason": "overweight by 0.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.55%",
         "theme=EV & Clean Transport",
@@ -1656,10 +1658,10 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0092,
+      "target_weight": 0.0097,
       "current_weight": 0.0178,
-      "notional_delta": -859.67,
-      "reason": "overweight by 0.86% vs target \u2014 trim",
+      "notional_delta": -809.71,
+      "reason": "overweight by 0.81% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.99%",
         "theme=EV & Clean Transport",
@@ -1672,15 +1674,14 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0054,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -131.55,
+      "reason": "theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.03%",
-        "theme=AI & Compute",
-        "theme 'AI & Compute' score 35.1 (hold_small), contribution 43.0"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1708,14 +1709,14 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0143,
+      "target_weight": 0.0064,
       "current_weight": 0.0341,
-      "notional_delta": -1980.41,
-      "reason": "overweight by 1.98% vs target \u2014 trim",
+      "notional_delta": -2769.85,
+      "reason": "overweight by 2.77% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 41.8 (starter), contribution 41.9"
+        "theme 'Consumer Discretionary' score 35.8 (hold_small), contribution 35.9"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1744,10 +1745,10 @@
     {
       "symbol": "LCID",
       "action": "REDUCE",
-      "target_weight": 0.0128,
+      "target_weight": 0.0136,
       "current_weight": 0.0201,
-      "notional_delta": -724.49,
-      "reason": "overweight by 0.73% vs target \u2014 trim",
+      "notional_delta": -644.55,
+      "reason": "overweight by 0.65% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=5.93%",
         "theme=EV & Clean Transport",
@@ -1811,11 +1812,11 @@
     },
     {
       "symbol": "META",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0015,
       "current_weight": 0.0029,
-      "notional_delta": -290.25,
-      "reason": "exiting on mixed news flow \u2014 \"Meta Reportedly Negotiating $10 Billion AI Compute Deal With Anthropic\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -145.13,
+      "reason": "trimming on mixed news flow \u2014 \"Meta Reportedly Negotiating $10 Billion AI Compute Deal With Anthropic\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.26%",
         "theme=AI & Compute",
@@ -1865,17 +1866,16 @@
     },
     {
       "symbol": "MSFT",
-      "action": "HOLD",
-      "target_weight": 0.0077,
+      "action": "REDUCE",
+      "target_weight": 0.0019,
       "current_weight": 0.0038,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Warren Buffett Once Said He'd Pay $5 Million a Year to Play Online Bridge\u2014 He Actually Pays $95 and the Reason Is a Classic Economics Lesson\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -188.83,
+      "reason": "trimming on negative news flow \u2014 \"Bill Ackman Losing Winning Streak as Pershing Square's Core Holdings Falter\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 35.1 (hold_small), contribution 61.1",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1953,11 +1953,11 @@
     },
     {
       "symbol": "NVDA",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": -264.2,
-      "reason": "exiting on positive news flow \u2014 \"Nvidia's New AI Rival Could Reportedly Be Worth $20 Billion\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -132.1,
+      "reason": "trimming on positive news flow \u2014 \"Nvidia's New AI Rival Could Reportedly Be Worth $20 Billion\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.47%",
         "theme=AI & Compute",
@@ -2112,14 +2112,14 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0157,
+      "target_weight": 0.0071,
       "current_weight": 0.0391,
-      "notional_delta": -2341.37,
-      "reason": "overweight by 2.34% vs target \u2014 trim",
+      "notional_delta": -3200.76,
+      "reason": "overweight by 3.20% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.30%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 41.8 (starter), contribution 45.8"
+        "theme 'Consumer Discretionary' score 35.8 (hold_small), contribution 39.8"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2164,11 +2164,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.04,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.02,
+      "reason": "theme score 26.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-24.01%",
         "theme=AI & Compute"
@@ -2184,7 +2184,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.16,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: PayPal, UnitedHealth, Netflix \u2014 And Stocks End Wild Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Top S&P 500 Stocks to Watch Next Week: Tesla, Google, Intel, GE Vernova\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.78%",
         "theme=EV & Clean Transport",
@@ -2273,10 +2273,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-05-31T16:21:35+00:00",
-      "v": 102420.15
-    },
     {
       "t": "2026-05-31T17:37:00+00:00",
       "v": 102420.15
@@ -4272,33 +4268,19 @@
     {
       "t": "2026-07-18T20:35:29+00:00",
       "v": 99928.89
+    },
+    {
+      "t": "2026-07-18T21:32:43+00:00",
+      "v": 99928.89
     }
   ],
   "breaking_news": [
-    {
-      "headline": "Mystery bidder buys T. rex nicknamed 'Gus' for a record $50 million",
-      "summary": "A T-rex fossil billed as one of the world's largest specimens was sold for a record $50.1 million Tuesday to a mystery bidder. But many aren't happy about it.",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/07/15/nx-s1-5894586/mystery-bidder-buys-t-rex",
-      "published_utc": "2026-07-18T20:35:34+00:00",
-      "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "American AI is expensive. Some startups are turning to cheap Chinese models",
-      "summary": "AI is a fast-growing business expense. Some companies are cutting costs by switching to cheaper Chinese AI models.",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/07/15/nx-s1-5886476/startups-cheap-chinese-ai-models",
-      "published_utc": "2026-07-18T20:35:34+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
     {
       "headline": "China's economy grows 4.3% in Q2, slowest since late 2022",
       "summary": "Lagging consumer spending and business investment offset the boost from strong exports thanks partly to the boom in artificial intelligence.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/15/g-s1-133672/chinas-economy-grows-4-3-in-q2-slowest-since-late-2022",
-      "published_utc": "2026-07-18T20:35:34+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4307,7 +4289,7 @@
       "summary": "The betting site Kalshi emerged as a dominant sports betting platform during the World Cup. But the company avoids billions of dollars in taxes by insisting it is not a sports gambling operator.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5884848/kalshi-sports-betting-prediction-markets-draftkings-fanduel-world-cup",
-      "published_utc": "2026-07-18T20:35:34+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4316,7 +4298,7 @@
       "summary": "Business is booming for Snap-on, a Wisconsin company that has made tools for professional mechanics for more than a century.\u00a0It recently got a fact-finding visit from the head of the Chicago Federal Reserve Bank.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5894730/federal-reserve-looks-for-secret-sauce-behind-a-successful-wisconsin-tool-maker",
-      "published_utc": "2026-07-18T20:35:34+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4325,7 +4307,7 @@
       "summary": "President Trump's face will appear on a new commemorative coin honoring the nation's 250th birthday. It's one of the many unusual places his likeness has popped up this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5897380/trump-coin-face-laws-treasury-250",
-      "published_utc": "2026-07-18T20:35:34+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4334,7 +4316,7 @@
       "summary": "The decision comes two months after President Donald Trump met with Xi Jinping, potentially warming ties ahead of Xi's expected U.S. visit.<br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/g-s1-134269/china-signals-possible-return-of-u-s-trade-privileges-for-hong-kong",
-      "published_utc": "2026-07-18T20:35:34+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4343,7 +4325,25 @@
       "summary": "Why are people who weren't born 25 years ago snapping up the digital camera of that era? Blame Taylor Swift, trend cycles, childhood nostalgia and smartphone fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/18/nx-s1-5896117/retro-digital-camera-analog-reboot",
-      "published_utc": "2026-07-18T20:35:34+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "A reporter's take on putting people at the center of stories about the economy",
+      "summary": "NPR's Stephen Bisaha breaks down how he reports on the economy, looking at the real lives behind numbers.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/07/18/nx-s1-5894703/a-reporters-take-on-putting-people-at-the-center-of-stories-about-the-economy",
+      "published_utc": "2026-07-18T21:32:46+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "We love you, Don Gonyea: Veteran NPR correspondent hangs up his mic after 4 decades",
+      "summary": "NPR's Don Gonyea's has retired after over 40 years. His friends and colleagues remember their favorite moments from his storied career.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/07/18/nx-s1-5866597/we-love-you-don-gonyea-veteran-npr-correspondent-hangs-up-his-mic-after-4-decades",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4352,7 +4352,7 @@
       "summary": "Canadian leader Mark Carney says both the US and Canada have an equal responsibility to fight climate change, which experts say are worsening wildfire conditions.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4361,7 +4361,7 @@
       "summary": "India's first space-tech unicorn Skyroot Aerospace successfully launched Vikram-1 on Saturday.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/clyekv7rld3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4370,7 +4370,7 @@
       "summary": "Officials say they have no evidence of poisoning over the 2024 deaths because autopsies were not conducted.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdx8rj99endo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4379,7 +4379,7 @@
       "summary": "Jens Spahn faced criticism over his use of a surrogate, a ban on which he previously backed.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cq56e9n1ddzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4388,7 +4388,7 @@
       "summary": "Protests erupted in Ukraine on Thursday after Mykhailo Fedorov's removal - and now soldiers are also criticising the move.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvg8w4dpjkwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4397,7 +4397,7 @@
       "summary": "Tam\u00e1s Sulyok, seen as an Orb\u00e1n loyalist, had until Saturday night to agree to end his term.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpd7q7eev7po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4406,7 +4406,7 @@
       "summary": "Drones targeted Wildberries facilities near Moscow and in Tambov. Ukraine's leader called them \"major logistics facilities\" supplying \"sanctioned components\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/clyxlm877p2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4415,7 +4415,7 @@
       "summary": "Iran and the US have traded strikes as hostilities re-escalated this week, with Tehran targeting US military facilities across the Gulf region.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cn8nynv8ze8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4424,7 +4424,7 @@
       "summary": "Sarah and her husband have shared one account for 25 years, but she says managing it falls to her.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c5yz4wnz6jdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4433,7 +4433,7 @@
       "summary": "Big bucks are being made from the 2026 tournament off the field, but who is raking in the most, and who is losing out?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgrkek8lrzvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4442,7 +4442,7 @@
       "summary": "The UK government said taking the firm into public hands would safeguard \"a vital national capability\".",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cjd4kvxpd3do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4451,7 +4451,7 @@
       "summary": "The company has unveiled a massive new artificial intelligence model it says can take on top American firms.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cy9w4q8pgp0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T20:35:33+00:00",
+      "published_utc": "2026-07-18T21:32:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
