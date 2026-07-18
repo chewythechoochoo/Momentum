@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-18T16:15:03+00:00",
+  "generated_at_utc": "2026-07-18T17:26:40+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 579,
-  "last_success_utc": "2026-07-18T15:10:12+00:00",
+  "cycle_count": 580,
+  "last_success_utc": "2026-07-18T16:15:03+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -550,8 +550,8 @@
       "score": 56.87,
       "raw_score": 56.98,
       "band": "buy",
-      "weight": 0.0903,
-      "confidence": 0.7,
+      "weight": 0.0876,
+      "confidence": 0.65,
       "components": {
         "momentum": 74.71,
         "sentiment": 50.0,
@@ -579,14 +579,14 @@
     {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
-      "score": 43.68,
-      "raw_score": 57.1,
+      "score": 47.69,
+      "raw_score": 61.1,
       "band": "starter",
-      "weight": 0.0576,
-      "confidence": 0.85,
+      "weight": 0.0662,
+      "confidence": 0.75,
       "components": {
         "momentum": 53.35,
-        "sentiment": 66.66,
+        "sentiment": 80.0,
         "volume": 53.82,
         "policy": 50.0,
         "volatility_penalty": 13.42
@@ -595,14 +595,14 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 35.72,
-      "raw_score": 38.72,
+      "score": 38.72,
+      "raw_score": 41.72,
       "band": "hold_small",
-      "weight": 0.0213,
-      "confidence": 0.75,
+      "weight": 0.036,
+      "confidence": 0.7,
       "components": {
         "momentum": 53.62,
-        "sentiment": 20.0,
+        "sentiment": 30.0,
         "volume": 28.85,
         "policy": 55.0,
         "volatility_penalty": 2.99
@@ -622,6 +622,22 @@
         "volume": 45.54,
         "policy": 50.0,
         "volatility_penalty": 30.0
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 29.11,
+      "raw_score": 29.11,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 33.78,
+        "sentiment": 10.0,
+        "volume": 35.49,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -654,22 +670,6 @@
         "volume": 35.6,
         "policy": 50.0,
         "volatility_penalty": 10.88
-      }
-    },
-    {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 26.11,
-      "raw_score": 26.11,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.9,
-      "components": {
-        "momentum": 33.78,
-        "sentiment": 0.0,
-        "volume": 35.49,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
       }
     },
     {
@@ -751,7 +751,7 @@
       "target_weight": 0.0138,
       "current_weight": 0.0276,
       "notional_delta": -1379.03,
-      "reason": "trimming on mixed news flow \u2014 \"UPDATE: After Months Of Safety Review, FAA Allows Boeing To Resume Issuing Certificates For New Airplanes\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"UPDATE: After Months Of Safety Review, FAA Allows Boeing To Resume Issuing Certificates For New Airplanes\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.18%",
         "theme=Defense & Aerospace",
@@ -777,7 +777,7 @@
     {
       "symbol": "COP",
       "action": "HOLD",
-      "target_weight": 0.0296,
+      "target_weight": 0.0288,
       "current_weight": 0.0298,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -804,7 +804,7 @@
     {
       "symbol": "CVX",
       "action": "HOLD",
-      "target_weight": 0.0296,
+      "target_weight": 0.0288,
       "current_weight": 0.0301,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -831,14 +831,14 @@
     {
       "symbol": "F",
       "action": "HOLD",
-      "target_weight": 0.021,
+      "target_weight": 0.024,
       "current_weight": 0.0202,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.55%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.7 (starter), contribution 55.0"
+        "theme 'EV & Clean Transport' score 47.7 (starter), contribution 59.0"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -876,7 +876,7 @@
       "target_weight": 0.0159,
       "current_weight": 0.0319,
       "notional_delta": -1591.66,
-      "reason": "theme score 26.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.67%",
         "theme=Defense & Aerospace"
@@ -886,14 +886,14 @@
     {
       "symbol": "GM",
       "action": "HOLD",
-      "target_weight": 0.0156,
+      "target_weight": 0.0182,
       "current_weight": 0.0178,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.99%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.7 (starter), contribution 40.9"
+        "theme 'EV & Clean Transport' score 47.7 (starter), contribution 44.9"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -958,30 +958,28 @@
     {
       "symbol": "LCID",
       "action": "HOLD",
-      "target_weight": 0.021,
+      "target_weight": 0.024,
       "current_weight": 0.0201,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"12 Consumer Discretionary Stocks Moving In Friday's Intraday Session\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.93%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.7 (starter), contribution 55.0",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 47.7 (starter), contribution 59.0"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.006,
+      "target_weight": 0.0102,
       "current_weight": 0.0186,
-      "notional_delta": -1254.96,
-      "reason": "trimming on M&A (mixed) \u2014 \"'Biotech Abivax re-engages investment bank Centerview for Big Pharma takeover talks' - La Lettre\" \u00b7 overweight by 1.26% vs target \u2014 trim",
+      "notional_delta": -835.26,
+      "reason": "trimming on M&A (mixed) \u2014 \"'Biotech Abivax re-engages investment bank Centerview for Big Pharma takeover talks' - La Lettre\" \u00b7 overweight by 0.84% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.23%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 35.7 (hold_small), contribution 35.1",
+        "theme 'Biotech & Pharma' score 38.7 (hold_small), contribution 38.1",
         "news_source=benzinga",
         "event=M&A",
         "news_sentiment=+0.00"
@@ -1123,12 +1121,10 @@
       "target_weight": 0.0168,
       "current_weight": 0.0336,
       "notional_delta": -1676.65,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going on With Northrop Grumman Stock Friday?\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.33%",
-        "theme=Defense & Aerospace",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense"
     },
@@ -1191,14 +1187,14 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0092,
+      "target_weight": 0.0153,
       "current_weight": 0.0207,
-      "notional_delta": -1150.92,
-      "reason": "trimming on negative news flow \u2014 \"Senator Who Opposes Ban on Congress Trading Discloses First Trades of 2026: Here\u2019s What He\u2019s Selling\" \u00b7 overweight by 1.15% vs target \u2014 trim",
+      "notional_delta": -541.35,
+      "reason": "trimming on negative news flow \u2014 \"Senator Who Opposes Ban on Congress Trading Discloses First Trades of 2026: Here\u2019s What He\u2019s Selling\" \u00b7 overweight by 0.54% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.78%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 35.7 (hold_small), contribution 53.9",
+        "theme 'Biotech & Pharma' score 38.7 (hold_small), contribution 56.9",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1236,7 +1232,7 @@
       "target_weight": 0.0186,
       "current_weight": 0.0372,
       "notional_delta": -1860.36,
-      "reason": "trimming on mixed news flow \u2014 \"NATO's $40 Billion Counter-Drone Push Puts These Defense ETFs in Focus\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"NATO's $40 Billion Counter-Drone Push Puts These Defense ETFs in Focus\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.30%",
         "theme=Defense & Aerospace",
@@ -1344,14 +1340,14 @@
     {
       "symbol": "VRTX",
       "action": "REDUCE",
-      "target_weight": 0.0061,
+      "target_weight": 0.0105,
       "current_weight": 0.0183,
-      "notional_delta": -1217.36,
-      "reason": "overweight by 1.22% vs target \u2014 trim",
+      "notional_delta": -777.67,
+      "reason": "overweight by 0.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.32%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 35.7 (hold_small), contribution 36.0"
+        "theme 'Biotech & Pharma' score 38.7 (hold_small), contribution 39.0"
       ],
       "theme_key": "biotech"
     },
@@ -1372,7 +1368,7 @@
     {
       "symbol": "XOM",
       "action": "HOLD",
-      "target_weight": 0.031,
+      "target_weight": 0.0301,
       "current_weight": 0.0311,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1458,7 +1454,7 @@
       "target_weight": 0.0138,
       "current_weight": 0.0276,
       "notional_delta": -1379.03,
-      "reason": "trimming on mixed news flow \u2014 \"UPDATE: After Months Of Safety Review, FAA Allows Boeing To Resume Issuing Certificates For New Airplanes\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"UPDATE: After Months Of Safety Review, FAA Allows Boeing To Resume Issuing Certificates For New Airplanes\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.18%",
         "theme=Defense & Aerospace",
@@ -1490,7 +1486,7 @@
     {
       "symbol": "COP",
       "action": "HOLD",
-      "target_weight": 0.0296,
+      "target_weight": 0.0288,
       "current_weight": 0.0298,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1523,7 +1519,7 @@
     {
       "symbol": "CVX",
       "action": "HOLD",
-      "target_weight": 0.0296,
+      "target_weight": 0.0288,
       "current_weight": 0.0301,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1556,14 +1552,14 @@
     {
       "symbol": "F",
       "action": "HOLD",
-      "target_weight": 0.021,
+      "target_weight": 0.024,
       "current_weight": 0.0202,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.55%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.7 (starter), contribution 55.0"
+        "theme 'EV & Clean Transport' score 47.7 (starter), contribution 59.0"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1610,7 +1606,7 @@
       "target_weight": 0.0159,
       "current_weight": 0.0319,
       "notional_delta": -1591.66,
-      "reason": "theme score 26.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.67%",
         "theme=Defense & Aerospace"
@@ -1623,14 +1619,14 @@
     {
       "symbol": "GM",
       "action": "HOLD",
-      "target_weight": 0.0156,
+      "target_weight": 0.0182,
       "current_weight": 0.0178,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.99%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.7 (starter), contribution 40.9"
+        "theme 'EV & Clean Transport' score 47.7 (starter), contribution 44.9"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1710,16 +1706,14 @@
     {
       "symbol": "LCID",
       "action": "HOLD",
-      "target_weight": 0.021,
+      "target_weight": 0.024,
       "current_weight": 0.0201,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"12 Consumer Discretionary Stocks Moving In Friday's Intraday Session\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.93%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 43.7 (starter), contribution 55.0",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 47.7 (starter), contribution 59.0"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1729,14 +1723,14 @@
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.006,
+      "target_weight": 0.0102,
       "current_weight": 0.0186,
-      "notional_delta": -1254.96,
-      "reason": "trimming on M&A (mixed) \u2014 \"'Biotech Abivax re-engages investment bank Centerview for Big Pharma takeover talks' - La Lettre\" \u00b7 overweight by 1.26% vs target \u2014 trim",
+      "notional_delta": -835.26,
+      "reason": "trimming on M&A (mixed) \u2014 \"'Biotech Abivax re-engages investment bank Centerview for Big Pharma takeover talks' - La Lettre\" \u00b7 overweight by 0.84% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.23%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 35.7 (hold_small), contribution 35.1",
+        "theme 'Biotech & Pharma' score 38.7 (hold_small), contribution 38.1",
         "news_source=benzinga",
         "event=M&A",
         "news_sentiment=+0.00"
@@ -1908,12 +1902,10 @@
       "target_weight": 0.0168,
       "current_weight": 0.0336,
       "notional_delta": -1676.65,
-      "reason": "trimming on mixed news flow \u2014 \"What's Going on With Northrop Grumman Stock Friday?\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.33%",
-        "theme=Defense & Aerospace",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1991,14 +1983,14 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0092,
+      "target_weight": 0.0153,
       "current_weight": 0.0207,
-      "notional_delta": -1150.92,
-      "reason": "trimming on negative news flow \u2014 \"Senator Who Opposes Ban on Congress Trading Discloses First Trades of 2026: Here\u2019s What He\u2019s Selling\" \u00b7 overweight by 1.15% vs target \u2014 trim",
+      "notional_delta": -541.35,
+      "reason": "trimming on negative news flow \u2014 \"Senator Who Opposes Ban on Congress Trading Discloses First Trades of 2026: Here\u2019s What He\u2019s Selling\" \u00b7 overweight by 0.54% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.78%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 35.7 (hold_small), contribution 53.9",
+        "theme 'Biotech & Pharma' score 38.7 (hold_small), contribution 56.9",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -2045,7 +2037,7 @@
       "target_weight": 0.0186,
       "current_weight": 0.0372,
       "notional_delta": -1860.36,
-      "reason": "trimming on mixed news flow \u2014 \"NATO's $40 Billion Counter-Drone Push Puts These Defense ETFs in Focus\" \u00b7 theme score 26.1 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"NATO's $40 Billion Counter-Drone Push Puts These Defense ETFs in Focus\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.30%",
         "theme=Defense & Aerospace",
@@ -2177,14 +2169,14 @@
     {
       "symbol": "VRTX",
       "action": "REDUCE",
-      "target_weight": 0.0061,
+      "target_weight": 0.0105,
       "current_weight": 0.0183,
-      "notional_delta": -1217.36,
-      "reason": "overweight by 1.22% vs target \u2014 trim",
+      "notional_delta": -777.67,
+      "reason": "overweight by 0.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.32%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 35.7 (hold_small), contribution 36.0"
+        "theme 'Biotech & Pharma' score 38.7 (hold_small), contribution 39.0"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2211,7 +2203,7 @@
     {
       "symbol": "XOM",
       "action": "HOLD",
-      "target_weight": 0.031,
+      "target_weight": 0.0301,
       "current_weight": 0.0311,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -2227,10 +2219,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-05-31T09:36:33+00:00",
-      "v": 102420.15
-    },
     {
       "t": "2026-05-31T11:20:12+00:00",
       "v": 102420.15
@@ -4226,6 +4214,10 @@
     {
       "t": "2026-07-18T16:15:01+00:00",
       "v": 99928.89
+    },
+    {
+      "t": "2026-07-18T17:26:36+00:00",
+      "v": 99928.89
     }
   ],
   "breaking_news": [
@@ -4234,7 +4226,7 @@
       "summary": "A T-rex fossil billed as one of the world's largest specimens was sold for a record $50.1 million Tuesday to a mystery bidder. But many aren't happy about it.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/15/nx-s1-5894586/mystery-bidder-buys-t-rex",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4243,7 +4235,7 @@
       "summary": "AI is a fast-growing business expense. Some companies are cutting costs by switching to cheaper Chinese AI models.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/15/nx-s1-5886476/startups-cheap-chinese-ai-models",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4252,7 +4244,7 @@
       "summary": "Lagging consumer spending and business investment offset the boost from strong exports thanks partly to the boom in artificial intelligence.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/15/g-s1-133672/chinas-economy-grows-4-3-in-q2-slowest-since-late-2022",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4261,7 +4253,7 @@
       "summary": "The betting site Kalshi emerged as a dominant sports betting platform during the World Cup. But the company avoids billions of dollars in taxes by insisting it is not a sports gambling operator.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5884848/kalshi-sports-betting-prediction-markets-draftkings-fanduel-world-cup",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4270,7 +4262,7 @@
       "summary": "Business is booming for Snap-on, a Wisconsin company that has made tools for professional mechanics for more than a century.\u00a0It recently got a fact-finding visit from the head of the Chicago Federal Reserve Bank.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5894730/federal-reserve-looks-for-secret-sauce-behind-a-successful-wisconsin-tool-maker",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4279,7 +4271,7 @@
       "summary": "President Trump's face will appear on a new commemorative coin honoring the nation's 250th birthday. It's one of the many unusual places his likeness has popped up this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5897380/trump-coin-face-laws-treasury-250",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4288,7 +4280,7 @@
       "summary": "The decision comes two months after President Donald Trump met with Xi Jinping, potentially warming ties ahead of Xi's expected U.S. visit.<br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/g-s1-134269/china-signals-possible-return-of-u-s-trade-privileges-for-hong-kong",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4297,7 +4289,7 @@
       "summary": "Why are people who weren't born 25 years ago snapping up the digital camera of that era? Blame Taylor Swift, trend cycles, childhood nostalgia and smartphone fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/18/nx-s1-5896117/retro-digital-camera-analog-reboot",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4306,7 +4298,7 @@
       "summary": "Cockroach Janta Party founder Abhijeet Dipke has now begun an indefinite fast in Sonam Wangchuk's place.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cjej3dxxg2do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4315,7 +4307,7 @@
       "summary": "Jens Spahn faced criticism over his use of a surrogate, a ban on which he previously backed.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cq56e9n1ddzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4324,7 +4316,7 @@
       "summary": "Officials say they have no evidence of poisoning over the 2024 deaths because autopsies were not conducted.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdx8rj99endo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4333,7 +4325,7 @@
       "summary": "India's first space-tech unicorn Skyroot Aerospace successfully launched Vikram-1 on Saturday.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/clyekv7rld3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4342,7 +4334,7 @@
       "summary": "Canadian leader Mark Carney says both the US and Canada have an equal responsibility to fight climate change, which experts say are worsening wildfire conditions.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4351,7 +4343,7 @@
       "summary": "Iran has retaliated against US allies in the region, with Kuwait reporting that a power and water plant had been hit.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cy748n8zx8ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4360,7 +4352,7 @@
       "summary": "Protests erupted in Ukraine on Thursday after Mykhailo Fedorov's removal - and now soldiers are also criticising the move.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvg8w4dpjkwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4369,7 +4361,7 @@
       "summary": "Drones targeted Wildberries facilities near Moscow and in Tambov. Ukraine's leader called them \"major logistics facilities\" supplying \"sanctioned components\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/clyxlm877p2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4378,7 +4370,7 @@
       "summary": "Sarah and her husband have shared one account for 25 years, but she says managing it falls to her.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c5yz4wnz6jdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4387,7 +4379,7 @@
       "summary": "Big bucks are being made from the 2026 tournament off the field, but who is raking in the most, and who is losing out?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgrkek8lrzvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4396,7 +4388,7 @@
       "summary": "The UK government said taking the firm into public hands would safeguard \"a vital national capability\".",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cjd4kvxpd3do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4405,7 +4397,7 @@
       "summary": "The company has unveiled a massive new artificial intelligence model it says can take on top American firms.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cy9w4q8pgp0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-18T16:15:03+00:00",
+      "published_utc": "2026-07-18T17:26:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
