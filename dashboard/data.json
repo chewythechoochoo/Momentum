@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-19T12:05:20+00:00",
+  "generated_at_utc": "2026-07-19T13:51:53+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 592,
-  "last_success_utc": "2026-07-19T10:58:46+00:00",
+  "cycle_count": 593,
+  "last_success_utc": "2026-07-19T12:05:20+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -529,22 +529,6 @@
   ],
   "themes": [
     {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 66.19,
-      "raw_score": 66.19,
-      "band": "buy",
-      "weight": 0.1373,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 49.49,
-        "sentiment": 92.85,
-        "volume": 60.17,
-        "policy": 65.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "oil_gas",
       "name": "Oil & Gas",
       "score": 64.75,
@@ -561,16 +545,32 @@
       }
     },
     {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 54.83,
+      "raw_score": 54.83,
+      "band": "starter",
+      "weight": 0.082,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 49.49,
+        "sentiment": 60.0,
+        "volume": 60.17,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 55.77,
-      "raw_score": 58.89,
-      "band": "buy",
-      "weight": 0.1026,
+      "score": 54.11,
+      "raw_score": 57.22,
+      "band": "starter",
+      "weight": 0.097,
       "confidence": 1.0,
       "components": {
         "momentum": 53.62,
-        "sentiment": 88.89,
+        "sentiment": 83.34,
         "volume": 28.85,
         "policy": 50.0,
         "volatility_penalty": 3.11
@@ -582,14 +582,30 @@
       "score": 53.46,
       "raw_score": 67.1,
       "band": "starter",
-      "weight": 0.0878,
-      "confidence": 0.85,
+      "weight": 0.0901,
+      "confidence": 0.9,
       "components": {
         "momentum": 53.35,
         "sentiment": 100.0,
         "volume": 53.82,
         "policy": 50.0,
         "volatility_penalty": 13.64
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 49.53,
+      "raw_score": 49.61,
+      "band": "starter",
+      "weight": 0.0715,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 33.78,
+        "sentiment": 80.0,
+        "volume": 35.49,
+        "policy": 50.0,
+        "volatility_penalty": 0.08
       }
     },
     {
@@ -625,32 +641,16 @@
       }
     },
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 40.53,
-      "raw_score": 40.61,
-      "band": "starter",
-      "weight": 0.044,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 33.78,
-        "sentiment": 50.0,
-        "volume": 35.49,
-        "policy": 50.0,
-        "volatility_penalty": 0.08
-      }
-    },
-    {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 33.86,
-      "raw_score": 47.13,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
+      "score": 35.44,
+      "raw_score": 48.71,
+      "band": "hold_small",
+      "weight": 0.0226,
       "confidence": 1.0,
       "components": {
         "momentum": 27.22,
-        "sentiment": 78.94,
+        "sentiment": 84.21,
         "volume": 32.81,
         "policy": 60.0,
         "volatility_penalty": 13.27
@@ -659,14 +659,14 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 21.8,
-      "raw_score": 32.96,
+      "score": 30.8,
+      "raw_score": 41.96,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.8,
+      "confidence": 0.85,
       "components": {
         "momentum": 24.59,
-        "sentiment": 36.66,
+        "sentiment": 66.66,
         "volume": 35.6,
         "policy": 50.0,
         "volatility_penalty": 11.15
@@ -675,14 +675,14 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 7.58,
-      "raw_score": 25.7,
+      "score": 14.78,
+      "raw_score": 32.9,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 0.7,
       "components": {
         "momentum": 6.74,
-        "sentiment": 30.0,
+        "sentiment": 54.0,
         "volume": 45.03,
         "policy": 50.0,
         "volatility_penalty": 18.12
@@ -696,7 +696,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "theme score 7.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 14.8 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-8.58%",
         "theme=Semiconductors (Broad)"
@@ -705,11 +705,11 @@
     },
     {
       "symbol": "AMD",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -3.55,
-      "reason": "exiting on mixed news flow \u2014 \"Cathie Wood's ARK Innovation ETF Bleeds Assets as Investors Lose Patience\" \u00b7 theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -1.78,
+      "reason": "trimming on mixed news flow \u2014 \"Cathie Wood's ARK Innovation ETF Bleeds Assets as Investors Lose Patience\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.95%",
         "theme=AI & Compute",
@@ -740,10 +740,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "theme score 7.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 14.8 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-3.77%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "news_source=benzinga",
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -753,26 +756,27 @@
       "target_weight": 0.0,
       "current_weight": 0.0276,
       "notional_delta": -2758.05,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.18%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=benzinga",
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "BAC",
-      "action": "HOLD",
-      "target_weight": 0.0485,
+      "action": "REDUCE",
+      "target_weight": 0.0293,
       "current_weight": 0.0518,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"BofA on GBP\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2253.2,
+      "reason": "overweight by 2.25% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.82%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 76.3",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 54.8 (starter), contribution 64.9"
       ],
       "theme_key": "financials"
     },
@@ -825,11 +829,11 @@
     },
     {
       "symbol": "ENPH",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.0,
-      "reason": "trimming on positive news flow \u2014 \"NextEra Energy Plans to Spend $59 Billion in Annual Capex Through 2032. Will This Massive Capital Outlay Pay Dividends for Shareholders?\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.01,
+      "reason": "exiting on positive news flow \u2014 \"3 Green Energy Stocks to Buy in July\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-16.23%",
         "theme=Clean Energy",
@@ -841,10 +845,10 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0316,
+      "target_weight": 0.0324,
       "current_weight": 0.0202,
-      "notional_delta": 1140.56,
-      "reason": "buying on mixed news flow \u2014 \"Ross Gerber Says EVs Can Reduce Oil Dependence, Emissions and Global Conflicts: 'Say No To War Over Oil'\" \u00b7 underweight by 1.14% vs target \u2014 add",
+      "notional_delta": 1220.5,
+      "reason": "buying on mixed news flow \u2014 \"Ross Gerber Says EVs Can Reduce Oil Dependence, Emissions and Global Conflicts: 'Say No To War Over Oil'\" \u00b7 underweight by 1.22% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.55%",
         "theme=EV & Clean Transport",
@@ -857,13 +861,14 @@
     {
       "symbol": "FSLR",
       "action": "REDUCE",
-      "target_weight": 0.0059,
+      "target_weight": 0.0058,
       "current_weight": 0.0118,
-      "notional_delta": -590.17,
-      "reason": "trimming on positive news flow \u2014 \"NextEra Energy Plans to Spend $59 Billion in Annual Capex Through 2032. Will This Massive Capital Outlay Pay Dividends for Shareholders?\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -600.75,
+      "reason": "trimming on positive news flow \u2014 \"3 Green Energy Stocks to Buy in July\" \u00b7 overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.04%",
         "theme=Clean Energy",
+        "theme 'Clean Energy' score 35.4 (hold_small), contribution 29.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -888,24 +893,24 @@
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0152,
+      "target_weight": 0.0246,
       "current_weight": 0.0319,
-      "notional_delta": -1664.4,
-      "reason": "overweight by 1.67% vs target \u2014 trim",
+      "notional_delta": -725.07,
+      "reason": "overweight by 0.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.67%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 40.5 (starter), contribution 40.6"
+        "theme 'Defense & Aerospace' score 49.5 (starter), contribution 49.6"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0246,
+      "target_weight": 0.0253,
       "current_weight": 0.0178,
-      "notional_delta": 679.23,
-      "reason": "underweight by 0.68% vs target \u2014 add",
+      "notional_delta": 749.18,
+      "reason": "underweight by 0.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.99%",
         "theme=EV & Clean Transport",
@@ -915,14 +920,17 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": -263.1,
-      "reason": "theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -131.55,
+      "reason": "trimming on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.03%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -932,12 +940,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.65,
-      "reason": "exiting on positive news flow \u2014 \"BofA on GBP\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.76%",
-        "theme=Financials & Rates",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials"
     },
@@ -957,16 +963,17 @@
     },
     {
       "symbol": "JPM",
-      "action": "HOLD",
-      "target_weight": 0.0442,
+      "action": "REDUCE",
+      "target_weight": 0.0262,
       "current_weight": 0.0434,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"BofA on GBP\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1715.72,
+      "reason": "trimming on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 overweight by 1.72% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.28%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 69.5",
-        "news_source=yahoo_rss",
+        "theme 'Financials & Rates' score 54.8 (starter), contribution 58.1",
+        "news_source=benzinga",
+        "event=M&A",
         "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
@@ -974,10 +981,10 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0315,
+      "target_weight": 0.0324,
       "current_weight": 0.0201,
-      "notional_delta": 1144.18,
-      "reason": "buying on mixed news flow \u2014 \"Ross Gerber Says EVs Can Reduce Oil Dependence, Emissions and Global Conflicts: 'Say No To War Over Oil'\" \u00b7 underweight by 1.14% vs target \u2014 add",
+      "notional_delta": 1234.11,
+      "reason": "buying on mixed news flow \u2014 \"Ross Gerber Says EVs Can Reduce Oil Dependence, Emissions and Global Conflicts: 'Say No To War Over Oil'\" \u00b7 underweight by 1.23% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.93%",
         "theme=EV & Clean Transport",
@@ -990,14 +997,14 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0306,
+      "target_weight": 0.0288,
       "current_weight": 0.0186,
-      "notional_delta": 1203.29,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly (LLY) Stock Looks Undervalued On Fair Value Yet Full On Earnings\" \u00b7 underweight by 1.20% vs target \u2014 add",
+      "notional_delta": 1023.42,
+      "reason": "buying on positive news flow \u2014 \"Eli Lilly (LLY) Stock Looks Undervalued On Fair Value Yet Full On Earnings\" \u00b7 underweight by 1.02% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.23%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 55.2",
+        "theme 'Biotech & Pharma' score 54.1 (starter), contribution 53.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1009,7 +1016,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -4.98,
-      "reason": "theme score 7.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 14.8 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-9.31%",
         "theme=Semiconductors (Broad)"
@@ -1031,15 +1038,16 @@
     },
     {
       "symbol": "META",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0015,
       "current_weight": 0.0029,
-      "notional_delta": -290.25,
-      "reason": "exiting on positive news flow \u2014 \"Samsung Lays Off Hundreds of US Employees While Relocating Headquarters to Texas: Report\" \u00b7 theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -145.13,
+      "reason": "trimming on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.26%",
         "theme=AI & Compute",
         "news_source=benzinga",
+        "event=M&A",
         "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
@@ -1065,27 +1073,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "exiting on positive news flow \u2014 \"BofA on GBP\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.98%",
-        "theme=Financials & Rates",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "MSFT",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0019,
       "current_weight": 0.0038,
-      "notional_delta": -377.66,
-      "reason": "exiting on negative news flow \u2014 \"Chamath Palihapitiya Warns AI Restrictions Could Leave America at an Economic and Security Disadvantage: 'The Future Is Open Source'\" \u00b7 theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -188.83,
+      "reason": "trimming on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1095,7 +1102,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.19,
-      "reason": "exiting on negative news flow \u2014 \"DRAM ETF Inflows Jump Despite Micron, Sandisk, Seagate Slump\" \u00b7 theme score 7.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on negative news flow \u2014 \"DRAM ETF Inflows Jump Despite Micron, Sandisk, Seagate Slump\" \u00b7 theme score 14.8 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-17.41%",
         "theme=Semiconductors (Broad)",
@@ -1106,16 +1113,17 @@
     },
     {
       "symbol": "NEE",
-      "action": "REDUCE",
-      "target_weight": 0.0076,
+      "action": "HOLD",
+      "target_weight": 0.0121,
       "current_weight": 0.0151,
-      "notional_delta": -756.42,
-      "reason": "trimming on negative news flow \u2014 \"BlackRock CEO Larry Fink Warned of an AI Power Crunch\u2014New York Just Halted Large Data Centers: CEG, VST, NEE in Focus\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"3 Green Energy Stocks to Buy in July\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.00%",
         "theme=Clean Energy",
+        "theme 'Clean Energy' score 35.4 (hold_small), contribution 61.7",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
     },
@@ -1135,29 +1143,30 @@
     {
       "symbol": "NOC",
       "action": "REDUCE",
-      "target_weight": 0.0127,
+      "target_weight": 0.0213,
       "current_weight": 0.0336,
-      "notional_delta": -2084.2,
-      "reason": "overweight by 2.09% vs target \u2014 trim",
+      "notional_delta": -1224.81,
+      "reason": "overweight by 1.23% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.33%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 40.5 (starter), contribution 33.9"
+        "theme 'Defense & Aerospace' score 49.5 (starter), contribution 42.9"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "NVDA",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": -264.2,
-      "reason": "exiting on negative news flow \u2014 \"Chamath Palihapitiya Warns AI Restrictions Could Leave America at an Economic and Security Disadvantage: 'The Future Is Open Source'\" \u00b7 theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -132.1,
+      "reason": "trimming on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.47%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1211,14 +1220,14 @@
     {
       "symbol": "PFE",
       "action": "BUY",
-      "target_weight": 0.041,
+      "target_weight": 0.039,
       "current_weight": 0.0207,
-      "notional_delta": 2026.82,
-      "reason": "buying on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Holds Top Rating\" \u00b7 underweight by 2.03% vs target \u2014 add",
+      "notional_delta": 1826.96,
+      "reason": "buying on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Holds Top Rating\" \u00b7 underweight by 1.83% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.78%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 74.1",
+        "theme 'Biotech & Pharma' score 54.1 (starter), contribution 72.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1257,14 +1266,14 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0161,
+      "target_weight": 0.0257,
       "current_weight": 0.0372,
-      "notional_delta": -2111.87,
-      "reason": "trimming on mixed news flow \u2014 \"NATO's $40 Billion Counter-Drone Push Puts These Defense ETFs in Focus\" \u00b7 overweight by 2.11% vs target \u2014 trim",
+      "notional_delta": -1152.55,
+      "reason": "trimming on mixed news flow \u2014 \"NATO's $40 Billion Counter-Drone Push Puts These Defense ETFs in Focus\" \u00b7 overweight by 1.15% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.30%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 40.5 (starter), contribution 42.8",
+        "theme 'Defense & Aerospace' score 49.5 (starter), contribution 51.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1272,11 +1281,11 @@
     },
     {
       "symbol": "RUN",
-      "action": "REDUCE",
-      "target_weight": 0.0031,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0062,
-      "notional_delta": -308.1,
-      "reason": "trimming on positive news flow \u2014 \"NextEra Energy Plans to Spend $59 Billion in Annual Capex Through 2032. Will This Massive Capital Outlay Pay Dividends for Shareholders?\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -616.21,
+      "reason": "exiting on positive news flow \u2014 \"3 Green Energy Stocks to Buy in July\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.87%",
         "theme=Clean Energy",
@@ -1301,11 +1310,11 @@
     },
     {
       "symbol": "SEDG",
-      "action": "REDUCE",
-      "target_weight": 0.0021,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0041,
-      "notional_delta": -205.95,
-      "reason": "trimming on positive news flow \u2014 \"NextEra Energy Plans to Spend $59 Billion in Annual Capex Through 2032. Will This Massive Capital Outlay Pay Dividends for Shareholders?\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -411.9,
+      "reason": "exiting on positive news flow \u2014 \"3 Green Energy Stocks to Buy in July\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.09%",
         "theme=Clean Energy",
@@ -1331,11 +1340,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.04,
-      "reason": "theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.02,
+      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-24.01%",
         "theme=AI & Compute"
@@ -1363,26 +1372,27 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.23,
-      "reason": "exiting on mixed news flow \u2014 \"SK Hynix, AST SpaceMobile, SpaceX: 5 Stocks Investors Couldn't Stop Buzzing About This Week\" \u00b7 theme score 7.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 14.8 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-8.34%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.031,
+      "target_weight": 0.0292,
       "current_weight": 0.0183,
-      "notional_delta": 1270.87,
-      "reason": "buying on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Holds Top Rating\" \u00b7 underweight by 1.27% vs target \u2014 add",
+      "notional_delta": 1091.0,
+      "reason": "buying on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Holds Top Rating\" \u00b7 underweight by 1.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.32%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 56.0",
+        "theme 'Biotech & Pharma' score 54.1 (starter), contribution 54.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1390,17 +1400,15 @@
     },
     {
       "symbol": "WFC",
-      "action": "HOLD",
-      "target_weight": 0.0446,
+      "action": "REDUCE",
+      "target_weight": 0.0265,
       "current_weight": 0.0466,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"BofA on GBP\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2010.62,
+      "reason": "overweight by 2.01% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.53%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 70.2",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 54.8 (starter), contribution 58.8"
       ],
       "theme_key": "financials"
     },
@@ -1428,7 +1436,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "theme score 7.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 14.8 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-8.58%",
         "theme=Semiconductors (Broad)"
@@ -1440,11 +1448,11 @@
     },
     {
       "symbol": "AMD",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -3.55,
-      "reason": "exiting on mixed news flow \u2014 \"Cathie Wood's ARK Innovation ETF Bleeds Assets as Investors Lose Patience\" \u00b7 theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -1.78,
+      "reason": "trimming on mixed news flow \u2014 \"Cathie Wood's ARK Innovation ETF Bleeds Assets as Investors Lose Patience\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-10.95%",
         "theme=AI & Compute",
@@ -1481,10 +1489,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "theme score 7.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 14.8 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-3.77%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "news_source=benzinga",
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1497,10 +1508,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0276,
       "notional_delta": -2758.05,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.18%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=benzinga",
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1509,17 +1523,15 @@
     },
     {
       "symbol": "BAC",
-      "action": "HOLD",
-      "target_weight": 0.0485,
+      "action": "REDUCE",
+      "target_weight": 0.0293,
       "current_weight": 0.0518,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"BofA on GBP\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2253.2,
+      "reason": "overweight by 2.25% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.82%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 76.3",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 54.8 (starter), contribution 64.9"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1584,11 +1596,11 @@
     },
     {
       "symbol": "ENPH",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.0,
-      "reason": "trimming on positive news flow \u2014 \"NextEra Energy Plans to Spend $59 Billion in Annual Capex Through 2032. Will This Massive Capital Outlay Pay Dividends for Shareholders?\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.01,
+      "reason": "exiting on positive news flow \u2014 \"3 Green Energy Stocks to Buy in July\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-16.23%",
         "theme=Clean Energy",
@@ -1603,10 +1615,10 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0316,
+      "target_weight": 0.0324,
       "current_weight": 0.0202,
-      "notional_delta": 1140.56,
-      "reason": "buying on mixed news flow \u2014 \"Ross Gerber Says EVs Can Reduce Oil Dependence, Emissions and Global Conflicts: 'Say No To War Over Oil'\" \u00b7 underweight by 1.14% vs target \u2014 add",
+      "notional_delta": 1220.5,
+      "reason": "buying on mixed news flow \u2014 \"Ross Gerber Says EVs Can Reduce Oil Dependence, Emissions and Global Conflicts: 'Say No To War Over Oil'\" \u00b7 underweight by 1.22% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.55%",
         "theme=EV & Clean Transport",
@@ -1622,13 +1634,14 @@
     {
       "symbol": "FSLR",
       "action": "REDUCE",
-      "target_weight": 0.0059,
+      "target_weight": 0.0058,
       "current_weight": 0.0118,
-      "notional_delta": -590.17,
-      "reason": "trimming on positive news flow \u2014 \"NextEra Energy Plans to Spend $59 Billion in Annual Capex Through 2032. Will This Massive Capital Outlay Pay Dividends for Shareholders?\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -600.75,
+      "reason": "trimming on positive news flow \u2014 \"3 Green Energy Stocks to Buy in July\" \u00b7 overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.04%",
         "theme=Clean Energy",
+        "theme 'Clean Energy' score 35.4 (hold_small), contribution 29.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1659,14 +1672,14 @@
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0152,
+      "target_weight": 0.0246,
       "current_weight": 0.0319,
-      "notional_delta": -1664.4,
-      "reason": "overweight by 1.67% vs target \u2014 trim",
+      "notional_delta": -725.07,
+      "reason": "overweight by 0.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.67%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 40.5 (starter), contribution 40.6"
+        "theme 'Defense & Aerospace' score 49.5 (starter), contribution 49.6"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1676,10 +1689,10 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0246,
+      "target_weight": 0.0253,
       "current_weight": 0.0178,
-      "notional_delta": 679.23,
-      "reason": "underweight by 0.68% vs target \u2014 add",
+      "notional_delta": 749.18,
+      "reason": "underweight by 0.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.99%",
         "theme=EV & Clean Transport",
@@ -1692,14 +1705,17 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": -263.1,
-      "reason": "theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -131.55,
+      "reason": "trimming on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.03%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1712,12 +1728,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.65,
-      "reason": "exiting on positive news flow \u2014 \"BofA on GBP\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.76%",
-        "theme=Financials & Rates",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1743,16 +1757,17 @@
     },
     {
       "symbol": "JPM",
-      "action": "HOLD",
-      "target_weight": 0.0442,
+      "action": "REDUCE",
+      "target_weight": 0.0262,
       "current_weight": 0.0434,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"BofA on GBP\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1715.72,
+      "reason": "trimming on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 overweight by 1.72% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.28%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 69.5",
-        "news_source=yahoo_rss",
+        "theme 'Financials & Rates' score 54.8 (starter), contribution 58.1",
+        "news_source=benzinga",
+        "event=M&A",
         "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
@@ -1763,10 +1778,10 @@
     {
       "symbol": "LCID",
       "action": "BUY",
-      "target_weight": 0.0315,
+      "target_weight": 0.0324,
       "current_weight": 0.0201,
-      "notional_delta": 1144.18,
-      "reason": "buying on mixed news flow \u2014 \"Ross Gerber Says EVs Can Reduce Oil Dependence, Emissions and Global Conflicts: 'Say No To War Over Oil'\" \u00b7 underweight by 1.14% vs target \u2014 add",
+      "notional_delta": 1234.11,
+      "reason": "buying on mixed news flow \u2014 \"Ross Gerber Says EVs Can Reduce Oil Dependence, Emissions and Global Conflicts: 'Say No To War Over Oil'\" \u00b7 underweight by 1.23% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.93%",
         "theme=EV & Clean Transport",
@@ -1782,14 +1797,14 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0306,
+      "target_weight": 0.0288,
       "current_weight": 0.0186,
-      "notional_delta": 1203.29,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly (LLY) Stock Looks Undervalued On Fair Value Yet Full On Earnings\" \u00b7 underweight by 1.20% vs target \u2014 add",
+      "notional_delta": 1023.42,
+      "reason": "buying on positive news flow \u2014 \"Eli Lilly (LLY) Stock Looks Undervalued On Fair Value Yet Full On Earnings\" \u00b7 underweight by 1.02% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.23%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 55.2",
+        "theme 'Biotech & Pharma' score 54.1 (starter), contribution 53.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1804,7 +1819,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -4.98,
-      "reason": "theme score 7.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 14.8 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-9.31%",
         "theme=Semiconductors (Broad)"
@@ -1832,15 +1847,16 @@
     },
     {
       "symbol": "META",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0015,
       "current_weight": 0.0029,
-      "notional_delta": -290.25,
-      "reason": "exiting on positive news flow \u2014 \"Samsung Lays Off Hundreds of US Employees While Relocating Headquarters to Texas: Report\" \u00b7 theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -145.13,
+      "reason": "trimming on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.26%",
         "theme=AI & Compute",
         "news_source=benzinga",
+        "event=M&A",
         "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
@@ -1872,12 +1888,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "exiting on positive news flow \u2014 \"BofA on GBP\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.98%",
-        "theme=Financials & Rates",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1886,16 +1900,17 @@
     },
     {
       "symbol": "MSFT",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0019,
       "current_weight": 0.0038,
-      "notional_delta": -377.66,
-      "reason": "exiting on negative news flow \u2014 \"Chamath Palihapitiya Warns AI Restrictions Could Leave America at an Economic and Security Disadvantage: 'The Future Is Open Source'\" \u00b7 theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -188.83,
+      "reason": "trimming on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.20%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1908,7 +1923,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.19,
-      "reason": "exiting on negative news flow \u2014 \"DRAM ETF Inflows Jump Despite Micron, Sandisk, Seagate Slump\" \u00b7 theme score 7.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on negative news flow \u2014 \"DRAM ETF Inflows Jump Despite Micron, Sandisk, Seagate Slump\" \u00b7 theme score 14.8 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-17.41%",
         "theme=Semiconductors (Broad)",
@@ -1922,16 +1937,17 @@
     },
     {
       "symbol": "NEE",
-      "action": "REDUCE",
-      "target_weight": 0.0076,
+      "action": "HOLD",
+      "target_weight": 0.0121,
       "current_weight": 0.0151,
-      "notional_delta": -756.42,
-      "reason": "trimming on negative news flow \u2014 \"BlackRock CEO Larry Fink Warned of an AI Power Crunch\u2014New York Just Halted Large Data Centers: CEG, VST, NEE in Focus\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"3 Green Energy Stocks to Buy in July\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.00%",
         "theme=Clean Energy",
+        "theme 'Clean Energy' score 35.4 (hold_small), contribution 61.7",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1957,14 +1973,14 @@
     {
       "symbol": "NOC",
       "action": "REDUCE",
-      "target_weight": 0.0127,
+      "target_weight": 0.0213,
       "current_weight": 0.0336,
-      "notional_delta": -2084.2,
-      "reason": "overweight by 2.09% vs target \u2014 trim",
+      "notional_delta": -1224.81,
+      "reason": "overweight by 1.23% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.33%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 40.5 (starter), contribution 33.9"
+        "theme 'Defense & Aerospace' score 49.5 (starter), contribution 42.9"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1973,16 +1989,17 @@
     },
     {
       "symbol": "NVDA",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": -264.2,
-      "reason": "exiting on negative news flow \u2014 \"Chamath Palihapitiya Warns AI Restrictions Could Leave America at an Economic and Security Disadvantage: 'The Future Is Open Source'\" \u00b7 theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -132.1,
+      "reason": "trimming on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.47%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2048,14 +2065,14 @@
     {
       "symbol": "PFE",
       "action": "BUY",
-      "target_weight": 0.041,
+      "target_weight": 0.039,
       "current_weight": 0.0207,
-      "notional_delta": 2026.82,
-      "reason": "buying on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Holds Top Rating\" \u00b7 underweight by 2.03% vs target \u2014 add",
+      "notional_delta": 1826.96,
+      "reason": "buying on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Holds Top Rating\" \u00b7 underweight by 1.83% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.78%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 74.1",
+        "theme 'Biotech & Pharma' score 54.1 (starter), contribution 72.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2103,14 +2120,14 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0161,
+      "target_weight": 0.0257,
       "current_weight": 0.0372,
-      "notional_delta": -2111.87,
-      "reason": "trimming on mixed news flow \u2014 \"NATO's $40 Billion Counter-Drone Push Puts These Defense ETFs in Focus\" \u00b7 overweight by 2.11% vs target \u2014 trim",
+      "notional_delta": -1152.55,
+      "reason": "trimming on mixed news flow \u2014 \"NATO's $40 Billion Counter-Drone Push Puts These Defense ETFs in Focus\" \u00b7 overweight by 1.15% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.30%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 40.5 (starter), contribution 42.8",
+        "theme 'Defense & Aerospace' score 49.5 (starter), contribution 51.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2121,11 +2138,11 @@
     },
     {
       "symbol": "RUN",
-      "action": "REDUCE",
-      "target_weight": 0.0031,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0062,
-      "notional_delta": -308.1,
-      "reason": "trimming on positive news flow \u2014 \"NextEra Energy Plans to Spend $59 Billion in Annual Capex Through 2032. Will This Massive Capital Outlay Pay Dividends for Shareholders?\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -616.21,
+      "reason": "exiting on positive news flow \u2014 \"3 Green Energy Stocks to Buy in July\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.87%",
         "theme=Clean Energy",
@@ -2156,11 +2173,11 @@
     },
     {
       "symbol": "SEDG",
-      "action": "REDUCE",
-      "target_weight": 0.0021,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0041,
-      "notional_delta": -205.95,
-      "reason": "trimming on positive news flow \u2014 \"NextEra Energy Plans to Spend $59 Billion in Annual Capex Through 2032. Will This Massive Capital Outlay Pay Dividends for Shareholders?\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -411.9,
+      "reason": "exiting on positive news flow \u2014 \"3 Green Energy Stocks to Buy in July\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.09%",
         "theme=Clean Energy",
@@ -2192,11 +2209,11 @@
     },
     {
       "symbol": "SMCI",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.04,
-      "reason": "theme score 21.8 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.02,
+      "reason": "theme score 30.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-24.01%",
         "theme=AI & Compute"
@@ -2230,12 +2247,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.23,
-      "reason": "exiting on mixed news flow \u2014 \"SK Hynix, AST SpaceMobile, SpaceX: 5 Stocks Investors Couldn't Stop Buzzing About This Week\" \u00b7 theme score 7.6 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on M&A (positive) \u2014 \"Consumer Tech (Jul 13-17): IBM Sees Worst Day On Record, Gemini 3.5 Pro Release Delayed, Uber Acquires Delivery Hero & More\" \u00b7 theme score 14.8 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-8.34%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "event=M&A",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2245,14 +2263,14 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.031,
+      "target_weight": 0.0292,
       "current_weight": 0.0183,
-      "notional_delta": 1270.87,
-      "reason": "buying on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Holds Top Rating\" \u00b7 underweight by 1.27% vs target \u2014 add",
+      "notional_delta": 1091.0,
+      "reason": "buying on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Holds Top Rating\" \u00b7 underweight by 1.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.32%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 56.0",
+        "theme 'Biotech & Pharma' score 54.1 (starter), contribution 54.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2263,17 +2281,15 @@
     },
     {
       "symbol": "WFC",
-      "action": "HOLD",
-      "target_weight": 0.0446,
+      "action": "REDUCE",
+      "target_weight": 0.0265,
       "current_weight": 0.0466,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"BofA on GBP\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -2010.62,
+      "reason": "overweight by 2.01% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.53%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 66.2 (buy), contribution 70.2",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 54.8 (starter), contribution 58.8"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2301,10 +2317,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-01T13:11:58+00:00",
-      "v": 102412.02
-    },
     {
       "t": "2026-06-01T19:03:01+00:00",
       "v": 103167.33
@@ -4300,6 +4312,10 @@
     {
       "t": "2026-07-19T12:05:15+00:00",
       "v": 99928.89
+    },
+    {
+      "t": "2026-07-19T13:51:48+00:00",
+      "v": 99928.89
     }
   ],
   "breaking_news": [
@@ -4308,7 +4324,7 @@
       "summary": "A T-rex fossil billed as one of the world's largest specimens was sold for a record $50.1 million Tuesday to a mystery bidder. But many aren't happy about it.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/15/nx-s1-5894586/mystery-bidder-buys-t-rex",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4317,7 +4333,7 @@
       "summary": "AI is a fast-growing business expense. Some companies are cutting costs by switching to cheaper Chinese AI models.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/15/nx-s1-5886476/startups-cheap-chinese-ai-models",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4326,7 +4342,7 @@
       "summary": "Lagging consumer spending and business investment offset the boost from strong exports thanks partly to the boom in artificial intelligence.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/15/g-s1-133672/chinas-economy-grows-4-3-in-q2-slowest-since-late-2022",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4335,7 +4351,7 @@
       "summary": "The betting site Kalshi emerged as a dominant sports betting platform during the World Cup. But the company avoids billions of dollars in taxes by insisting it is not a sports gambling operator.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5884848/kalshi-sports-betting-prediction-markets-draftkings-fanduel-world-cup",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4344,7 +4360,7 @@
       "summary": "Business is booming for Snap-on, a Wisconsin company that has made tools for professional mechanics for more than a century.\u00a0It recently got a fact-finding visit from the head of the Chicago Federal Reserve Bank.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5894730/federal-reserve-looks-for-secret-sauce-behind-a-successful-wisconsin-tool-maker",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4353,7 +4369,7 @@
       "summary": "President Trump's face will appear on a new commemorative coin honoring the nation's 250th birthday. It's one of the many unusual places his likeness has popped up this year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/nx-s1-5897380/trump-coin-face-laws-treasury-250",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4362,7 +4378,7 @@
       "summary": "The decision comes two months after President Donald Trump met with Xi Jinping, potentially warming ties ahead of Xi's expected U.S. visit.<br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/17/g-s1-134269/china-signals-possible-return-of-u-s-trade-privileges-for-hong-kong",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4371,7 +4387,7 @@
       "summary": "Why are people who weren't born 25 years ago snapping up the digital camera of that era? Blame Taylor Swift, trend cycles, childhood nostalgia and smartphone fatigue.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/18/nx-s1-5896117/retro-digital-camera-analog-reboot",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4380,7 +4396,7 @@
       "summary": "Jens Spahn faced criticism over his use of a surrogate, a ban on which he previously backed.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cq56e9n1ddzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4389,7 +4405,7 @@
       "summary": "Tam\u00e1s Sulyok, seen as an Orb\u00e1n loyalist, had until Saturday night to agree to end his term.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpd7q7eev7po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4398,7 +4414,7 @@
       "summary": "The vessel capsized between Georgetown and Port Kaituma, with 53 people so far rescued.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cm2gm99nrm7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4407,16 +4423,16 @@
       "summary": "He was arrested in 2021 during Cuba's largest anti-government protests in decades and spent five years \u2060in prison.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2k77p2r1xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "Russia launches major ballistic missile attack on Ukrainian cities",
-      "summary": "Four people are killed and at least 36 injured as Ukraine's two largest cities are targeted, as Kyiv continues its own assault on Russian infrastructure.",
+      "summary": "Five people are killed and at least 35 injured as Ukraine's two largest cities are targeted, as Kyiv continues its own assault on Russian infrastructure.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4425,16 +4441,16 @@
       "summary": "The Crown Prosecution Service says it has requested their extradition from the US, while their lawyer says they are innocent.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwymly9yd33o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "US and Iran exchange strikes after two US soldiers killed in Jordan",
+      "headline": "US and Iran trade fire after two US soldiers killed in Jordan",
       "summary": "Kuwait says an electricity and water plant is on fire after the second such attack in two days. Iran says US strikes hit an under-construction nuclear power plant.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cgk417jp83po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4443,7 +4459,7 @@
       "summary": "Economics editor Faisal Islam examines whether the north-west city can be a template for the entire country.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/clyl3z2xld8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4452,7 +4468,7 @@
       "summary": "Big bucks are being made from the 2026 tournament off the field, but who is raking in the most, and who is losing out?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cgrkek8lrzvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4461,7 +4477,7 @@
       "summary": "The UK data watchdog has received complaints after James Watt reportedly contacted former shareholders.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c4gw9pp0xlno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4470,7 +4486,7 @@
       "summary": "More than three million people in the UK work night shifts, which can greatly impact their health. What can be done to help them?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cp9errxl97go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4479,7 +4495,7 @@
       "summary": "The incoming PM is expected to announce fresh support for the North Sea from day one of his premiership.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c4g3l22ry6wo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-19T12:05:20+00:00",
+      "published_utc": "2026-07-19T13:51:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
