@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-25T10:51:19+00:00",
+  "generated_at_utc": "2026-07-25T11:59:23+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 671,
-  "last_success_utc": "2026-07-25T09:20:53+00:00",
+  "cycle_count": 672,
+  "last_success_utc": "2026-07-25T10:51:19+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -581,22 +581,6 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 59.36,
-      "raw_score": 59.36,
-      "band": "buy",
-      "weight": 0.1145,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 40.91,
-        "sentiment": 100.0,
-        "volume": 37.48,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "financials",
       "name": "Financials & Rates",
       "score": 50.74,
@@ -626,6 +610,22 @@
         "volume": 44.94,
         "policy": 70.0,
         "volatility_penalty": 11.45
+      }
+    },
+    {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 44.36,
+      "raw_score": 44.36,
+      "band": "starter",
+      "weight": 0.0645,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 40.91,
+        "sentiment": 50.0,
+        "volume": 37.48,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -677,35 +677,35 @@
       }
     },
     {
-      "key": "clean_energy",
-      "name": "Clean Energy",
-      "score": 30.02,
-      "raw_score": 42.38,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.85,
-      "components": {
-        "momentum": 12.78,
-        "sentiment": 80.0,
-        "volume": 41.33,
-        "policy": 50.0,
-        "volatility_penalty": 12.35
-      }
-    },
-    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 28.27,
       "raw_score": 58.27,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.9,
+      "confidence": 0.85,
       "components": {
         "momentum": 38.07,
         "sentiment": 100.0,
         "volume": 40.2,
         "policy": 50.0,
         "volatility_penalty": 30.0
+      }
+    },
+    {
+      "key": "clean_energy",
+      "name": "Clean Energy",
+      "score": 27.02,
+      "raw_score": 39.38,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 12.78,
+        "sentiment": 70.0,
+        "volume": 41.33,
+        "policy": 50.0,
+        "volatility_penalty": 12.35
       }
     }
   ],
@@ -867,7 +867,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "theme score 30.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-26.05%",
         "theme=Clean Energy"
@@ -894,7 +894,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -4.38,
-      "reason": "trimming on positive news flow \u2014 \"Roth Capital Reiterates Buy on First Solar, Maintains $300 Price Target\" \u00b7 theme score 30.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Roth Capital Reiterates Buy on First Solar, Maintains $300 Price Target\" \u00b7 theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.29%",
         "theme=Clean Energy",
@@ -979,15 +979,15 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.0381,
+      "action": "REDUCE",
+      "target_weight": 0.0215,
       "current_weight": 0.0365,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1494.2,
+      "reason": "overweight by 1.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 57.6"
+        "theme 'Consumer Discretionary' score 44.4 (starter), contribution 42.6"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1067,17 +1067,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0395,
+      "action": "REDUCE",
+      "target_weight": 0.0225,
       "current_weight": 0.0352,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Dell To Rally More Than 17%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1267.25,
+      "reason": "overweight by 1.27% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 59.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 44.4 (starter), contribution 44.7"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1160,7 +1158,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "trimming on earnings beat (positive) \u2014 \"NextEra Energy Q2 Earnings Beat Estimates as Renewable Backlog Hits 35.1 GW\" \u00b7 theme score 30.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on earnings beat (positive) \u2014 \"NextEra Energy Q2 Earnings Beat Estimates as Renewable Backlog Hits 35.1 GW\" \u00b7 theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=Clean Energy",
@@ -1324,7 +1322,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 30.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-18.52%",
         "theme=Clean Energy"
@@ -1333,15 +1331,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0369,
+      "action": "REDUCE",
+      "target_weight": 0.0205,
       "current_weight": 0.0351,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1454.35,
+      "reason": "overweight by 1.46% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 55.6"
+        "theme 'Consumer Discretionary' score 44.4 (starter), contribution 40.6"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1351,7 +1349,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "theme score 30.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-23.59%",
         "theme=Clean Energy"
@@ -1410,13 +1408,13 @@
       "target_weight": 0.0097,
       "current_weight": 0.012,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Why Wall Street Says Intel's Rich Valuation May Still Be Worth Paying\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.77%",
         "theme=Semiconductors (Broad)",
         "theme 'Semiconductors (Broad)' score 36.2 (hold_small), contribution 59.5",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1650,7 +1648,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "theme score 30.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-26.05%",
         "theme=Clean Energy"
@@ -1683,7 +1681,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0001,
       "notional_delta": -4.38,
-      "reason": "trimming on positive news flow \u2014 \"Roth Capital Reiterates Buy on First Solar, Maintains $300 Price Target\" \u00b7 theme score 30.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Roth Capital Reiterates Buy on First Solar, Maintains $300 Price Target\" \u00b7 theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.29%",
         "theme=Clean Energy",
@@ -1786,15 +1784,15 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.0381,
+      "action": "REDUCE",
+      "target_weight": 0.0215,
       "current_weight": 0.0365,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1494.2,
+      "reason": "overweight by 1.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 57.6"
+        "theme 'Consumer Discretionary' score 44.4 (starter), contribution 42.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1892,17 +1890,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0395,
+      "action": "REDUCE",
+      "target_weight": 0.0225,
       "current_weight": 0.0352,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Dell To Rally More Than 17%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1267.25,
+      "reason": "overweight by 1.27% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 59.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 44.4 (starter), contribution 44.7"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2003,7 +1999,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "trimming on earnings beat (positive) \u2014 \"NextEra Energy Q2 Earnings Beat Estimates as Renewable Backlog Hits 35.1 GW\" \u00b7 theme score 30.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on earnings beat (positive) \u2014 \"NextEra Energy Q2 Earnings Beat Estimates as Renewable Backlog Hits 35.1 GW\" \u00b7 theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.10%",
         "theme=Clean Energy",
@@ -2200,7 +2196,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 30.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-18.52%",
         "theme=Clean Energy"
@@ -2212,15 +2208,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0369,
+      "action": "REDUCE",
+      "target_weight": 0.0205,
       "current_weight": 0.0351,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1454.35,
+      "reason": "overweight by 1.46% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 55.6"
+        "theme 'Consumer Discretionary' score 44.4 (starter), contribution 40.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2233,7 +2229,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "theme score 30.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-23.59%",
         "theme=Clean Energy"
@@ -2304,13 +2300,13 @@
       "target_weight": 0.0097,
       "current_weight": 0.012,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Why Wall Street Says Intel's Rich Valuation May Still Be Worth Paying\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.77%",
         "theme=Semiconductors (Broad)",
         "theme 'Semiconductors (Broad)' score 36.2 (hold_small), contribution 59.5",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2369,10 +2365,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-10T17:33:36+00:00",
-      "v": 98351.33
-    },
     {
       "t": "2026-06-10T19:56:47+00:00",
       "v": 97768.21
@@ -4368,6 +4360,10 @@
     {
       "t": "2026-07-25T10:51:15+00:00",
       "v": 99922.37
+    },
+    {
+      "t": "2026-07-25T11:59:21+00:00",
+      "v": 99922.37
     }
   ],
   "breaking_news": [
@@ -4376,7 +4372,7 @@
       "summary": "<em>The New York Times </em>will argue in court Thursday that the White House is abusing the justice system to intimidate reporters over a story that angered President Trump.<strong>\u00a0</strong>",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5903854/trump-new-air-force-one-nyt-subpoenas",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.2,
       "is_policy": true
     },
@@ -4385,7 +4381,7 @@
       "summary": "The price of crude oil is rising again following Houthi claims of attacks on tankers in the Red Sea. What could it mean for gas prices, inflation and the global economy?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5904519/a-new-threat-in-the-middle-east-sends-oil-over-100-a-barrel-again",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4394,7 +4390,7 @@
       "summary": "Irondale, Alabama, rebranded its annual festival around AI, leading to online backlash that provoked a return to the original name.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5896481-e1/a-town-renamed-its-festival-ai-love-irondale-day-then-came-the-comments",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4403,7 +4399,7 @@
       "summary": "The United States will slap taxes of 10% to 12.5% on imports from 60 countries accounting for 99% of U.S. imports, charging that they have inadequately enforced bans on goods produced by forced labor.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/g-s1-135388/trump-tariffs-trade-country",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4412,7 +4408,7 @@
       "summary": "The Justice Department is dropping the subpoenas it filed demanding grand jury testimony and phone records from <em>New York Times</em> journalists after sharp questioning Thursday from a federal judge.<br /><br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5905732/nyt-subpoenas-trump-air-force-one-plane-qatar-security",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4421,7 +4417,7 @@
       "summary": "Australia and the European Union were among U.S. trade partners who criticized the tariffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906301/us-global-trump-tariffs-reaction",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4430,7 +4426,7 @@
       "summary": "A dozen states and the Writers Guild of America had challenged the merger.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906818/paramount-warner-bros-merger-pause-lawsuits",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4439,7 +4435,7 @@
       "summary": "Trump's determination to find new legal justifications for his tariffs threatens to prolong the uncertainty facing the U.S. and global economies.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/25/nx-s1-5905692/trump-tariffs-economy-inflation",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4448,7 +4444,7 @@
       "summary": "Prosecutors allege D4vd started abusing the girl when she was 13 and she had threatened to expose him.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr592qdj1ldo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4457,7 +4453,7 @@
       "summary": "Karim Khan denies allegations of engaging in an improper sexual relationship with a junior ICC staff member and seeking to stop her pursuing her complaint.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqjxddx12qqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4466,7 +4462,7 @@
       "summary": "Palestinians say villagers came under attack by settlers, while the Israeli military says a Palestinian stole a weapon and opened fire on hikers.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2rxmye4k3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4475,7 +4471,7 @@
       "summary": "Protests have continued over Zelensky's decision to dismiss Mykhailo Fedorov, and some commentators believe he has been damaged politically.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1d1gz3n99ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4484,7 +4480,7 @@
       "summary": "The event, attended by prominent members of the Ukrainian defence industry, was hit by ballistic missiles in the middle of the day.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj637zd1k1ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4493,7 +4489,7 @@
       "summary": "US military says it disabled a tanker that was attempting to evade the American blockade on Iranian ports.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj9d27v70j1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4502,7 +4498,7 @@
       "summary": "The event celebrated press freedom after the first dinner was cancelled by a shooting in April.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cd7le4ylev2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4511,7 +4507,7 @@
       "summary": "Imposed citing forced labour concerns, the levies replace a temporary global duty brought in after the US Supreme Court struck down tariffs in February.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgj61j6l08o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4520,7 +4516,7 @@
       "summary": "The threat of attack has never been higher, the boss of Europe's biggest defence contractor has warned.\nDr Charles Woodburn",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cx2lpjjpny9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4529,7 +4525,7 @@
       "summary": "Renewed tensions in the Middle East feed through to the costs faced by lenders, pushing up borrowing costs.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c70gknr7z1eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4538,7 +4534,7 @@
       "summary": "The BBC's Samira Hussain explains how President Trump's tariffs affect US economy, who pays the price, and whether they're working.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/videos/c5yw2xgnv2jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4547,7 +4543,7 @@
       "summary": "While the US tariffs imposed on the UK are effectively unchanged, other countries now have a better deal.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9v4ymwddwgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T10:51:19+00:00",
+      "published_utc": "2026-07-25T11:59:23+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
