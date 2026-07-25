@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-25T09:20:53+00:00",
+  "generated_at_utc": "2026-07-25T10:51:19+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 670,
-  "last_success_utc": "2026-07-25T07:35:04+00:00",
+  "cycle_count": 671,
+  "last_success_utc": "2026-07-25T09:20:53+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -629,16 +629,32 @@
       }
     },
     {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 39.92,
+      "raw_score": 43.15,
+      "band": "hold_small",
+      "weight": 0.0409,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 40.76,
+        "sentiment": 50.0,
+        "volume": 31.71,
+        "policy": 55.0,
+        "volatility_penalty": 3.23
+      }
+    },
+    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
-      "score": 36.21,
-      "raw_score": 50.01,
+      "score": 36.56,
+      "raw_score": 50.37,
       "band": "hold_small",
-      "weight": 0.0273,
+      "weight": 0.0294,
       "confidence": 1.0,
       "components": {
         "momentum": 43.43,
-        "sentiment": 58.83,
+        "sentiment": 60.0,
         "volume": 47.47,
         "policy": 55.0,
         "volatility_penalty": 13.81
@@ -658,22 +674,6 @@
         "volume": 31.47,
         "policy": 50.0,
         "volatility_penalty": 17.48
-      }
-    },
-    {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 33.92,
-      "raw_score": 37.15,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 40.76,
-        "sentiment": 30.0,
-        "volume": 31.71,
-        "policy": 55.0,
-        "volatility_penalty": 3.23
       }
     },
     {
@@ -877,14 +877,14 @@
     {
       "symbol": "F",
       "action": "HOLD",
-      "target_weight": 0.0099,
+      "target_weight": 0.0107,
       "current_weight": 0.0131,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 36.2 (hold_small), contribution 56.8"
+        "theme 'EV & Clean Transport' score 36.6 (hold_small), contribution 57.1"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -936,14 +936,14 @@
     {
       "symbol": "GM",
       "action": "HOLD",
-      "target_weight": 0.0133,
+      "target_weight": 0.0143,
       "current_weight": 0.0115,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.11%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 36.2 (hold_small), contribution 76.3",
+        "theme 'EV & Clean Transport' score 36.6 (hold_small), contribution 76.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1022,17 +1022,15 @@
     },
     {
       "symbol": "LLY",
-      "action": "REDUCE",
-      "target_weight": 0.0006,
+      "action": "BUY",
+      "target_weight": 0.0163,
       "current_weight": 0.0011,
-      "notional_delta": -57.39,
-      "reason": "trimming on legal risk (negative) \u2014 \"The Wall Street Journal Reported Earlier, Novo Nordisk Filed Preliminary Injunction Request In U.S. Court To Halt Eli Lilly GLP-1 Weight-Los\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1513.95,
+      "reason": "underweight by 1.52% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.82%",
         "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "event=legal risk",
-        "news_sentiment=-0.20"
+        "theme 'Biotech & Pharma' score 39.9 (hold_small), contribution 51.3"
       ],
       "theme_key": "biotech"
     },
@@ -1100,11 +1098,11 @@
     },
     {
       "symbol": "MRNA",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.88,
-      "reason": "theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1.76,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-32.19%",
         "theme=Biotech & Pharma"
@@ -1262,24 +1260,25 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.0004,
+      "action": "BUY",
+      "target_weight": 0.0124,
       "current_weight": 0.0009,
-      "notional_delta": -44.72,
-      "reason": "theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1149.61,
+      "reason": "underweight by 1.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.59%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "theme 'Biotech & Pharma' score 39.9 (hold_small), contribution 38.9"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "REGN",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.09,
-      "reason": "trimming on mixed news flow \u2014 \"Sanofi Drops Dupixent Successor Candidate After Assessing Data\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.17,
+      "reason": "exiting on mixed news flow \u2014 \"Sanofi Drops Dupixent Successor Candidate After Assessing Data\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.37%",
         "theme=Biotech & Pharma",
@@ -1423,14 +1422,15 @@
     },
     {
       "symbol": "VRTX",
-      "action": "REDUCE",
-      "target_weight": 0.0004,
+      "action": "BUY",
+      "target_weight": 0.0121,
       "current_weight": 0.0008,
-      "notional_delta": -37.56,
-      "reason": "theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1133.94,
+      "reason": "underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.01%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "theme 'Biotech & Pharma' score 39.9 (hold_small), contribution 38.2"
       ],
       "theme_key": "biotech"
     },
@@ -1663,14 +1663,14 @@
     {
       "symbol": "F",
       "action": "HOLD",
-      "target_weight": 0.0099,
+      "target_weight": 0.0107,
       "current_weight": 0.0131,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 36.2 (hold_small), contribution 56.8"
+        "theme 'EV & Clean Transport' score 36.6 (hold_small), contribution 57.1"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1734,14 +1734,14 @@
     {
       "symbol": "GM",
       "action": "HOLD",
-      "target_weight": 0.0133,
+      "target_weight": 0.0143,
       "current_weight": 0.0115,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.11%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 36.2 (hold_small), contribution 76.3",
+        "theme 'EV & Clean Transport' score 36.6 (hold_small), contribution 76.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1838,17 +1838,15 @@
     },
     {
       "symbol": "LLY",
-      "action": "REDUCE",
-      "target_weight": 0.0006,
+      "action": "BUY",
+      "target_weight": 0.0163,
       "current_weight": 0.0011,
-      "notional_delta": -57.39,
-      "reason": "trimming on legal risk (negative) \u2014 \"The Wall Street Journal Reported Earlier, Novo Nordisk Filed Preliminary Injunction Request In U.S. Court To Halt Eli Lilly GLP-1 Weight-Los\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1513.95,
+      "reason": "underweight by 1.52% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.82%",
         "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "event=legal risk",
-        "news_sentiment=-0.20"
+        "theme 'Biotech & Pharma' score 39.9 (hold_small), contribution 51.3"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1931,11 +1929,11 @@
     },
     {
       "symbol": "MRNA",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.88,
-      "reason": "theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1.76,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-32.19%",
         "theme=Biotech & Pharma"
@@ -2126,14 +2124,15 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.0004,
+      "action": "BUY",
+      "target_weight": 0.0124,
       "current_weight": 0.0009,
-      "notional_delta": -44.72,
-      "reason": "theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1149.61,
+      "reason": "underweight by 1.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.59%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "theme 'Biotech & Pharma' score 39.9 (hold_small), contribution 38.9"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2142,11 +2141,11 @@
     },
     {
       "symbol": "REGN",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.09,
-      "reason": "trimming on mixed news flow \u2014 \"Sanofi Drops Dupixent Successor Candidate After Assessing Data\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.17,
+      "reason": "exiting on mixed news flow \u2014 \"Sanofi Drops Dupixent Successor Candidate After Assessing Data\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.37%",
         "theme=Biotech & Pharma",
@@ -2320,14 +2319,15 @@
     },
     {
       "symbol": "VRTX",
-      "action": "REDUCE",
-      "target_weight": 0.0004,
+      "action": "BUY",
+      "target_weight": 0.0121,
       "current_weight": 0.0008,
-      "notional_delta": -37.56,
-      "reason": "theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 1133.94,
+      "reason": "underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.01%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "theme 'Biotech & Pharma' score 39.9 (hold_small), contribution 38.2"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2369,10 +2369,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-10T13:54:55+00:00",
-      "v": 99451.26
-    },
     {
       "t": "2026-06-10T17:33:36+00:00",
       "v": 98351.33
@@ -4368,6 +4364,10 @@
     {
       "t": "2026-07-25T09:20:51+00:00",
       "v": 99922.37
+    },
+    {
+      "t": "2026-07-25T10:51:15+00:00",
+      "v": 99922.37
     }
   ],
   "breaking_news": [
@@ -4376,7 +4376,7 @@
       "summary": "<em>The New York Times </em>will argue in court Thursday that the White House is abusing the justice system to intimidate reporters over a story that angered President Trump.<strong>\u00a0</strong>",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5903854/trump-new-air-force-one-nyt-subpoenas",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.2,
       "is_policy": true
     },
@@ -4385,7 +4385,7 @@
       "summary": "The price of crude oil is rising again following Houthi claims of attacks on tankers in the Red Sea. What could it mean for gas prices, inflation and the global economy?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5904519/a-new-threat-in-the-middle-east-sends-oil-over-100-a-barrel-again",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4394,7 +4394,7 @@
       "summary": "Irondale, Alabama, rebranded its annual festival around AI, leading to online backlash that provoked a return to the original name.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5896481-e1/a-town-renamed-its-festival-ai-love-irondale-day-then-came-the-comments",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4403,7 +4403,7 @@
       "summary": "The United States will slap taxes of 10% to 12.5% on imports from 60 countries accounting for 99% of U.S. imports, charging that they have inadequately enforced bans on goods produced by forced labor.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/g-s1-135388/trump-tariffs-trade-country",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4412,7 +4412,7 @@
       "summary": "The Justice Department is dropping the subpoenas it filed demanding grand jury testimony and phone records from <em>New York Times</em> journalists after sharp questioning Thursday from a federal judge.<br /><br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5905732/nyt-subpoenas-trump-air-force-one-plane-qatar-security",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4421,7 +4421,7 @@
       "summary": "Australia and the European Union were among U.S. trade partners who criticized the tariffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906301/us-global-trump-tariffs-reaction",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4430,7 +4430,7 @@
       "summary": "A dozen states and the Writers Guild of America had challenged the merger.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906818/paramount-warner-bros-merger-pause-lawsuits",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4439,25 +4439,7 @@
       "summary": "Trump's determination to find new legal justifications for his tariffs threatens to prolong the uncertainty facing the U.S. and global economies.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/25/nx-s1-5905692/trump-tariffs-economy-inflation",
-      "published_utc": "2026-07-25T09:20:53+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "ICC top prosecutor removed over sexual misconduct allegations",
-      "summary": "Karim Khan denies allegations of engaging in an improper sexual relationship with a junior ICC staff member and seeking to stop her pursuing her complaint.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cqjxddx12qqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Iran-backed Houthis claim missile attack on Saudi Arabia",
-      "summary": "US military says it disabled a tanker that was attempting to evade the American blockade on Iranian ports.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cj9d27v70j1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4466,7 +4448,16 @@
       "summary": "Prosecutors allege D4vd started abusing the girl when she was 13 and she had threatened to expose him.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr592qdj1ldo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "ICC top prosecutor removed over sexual misconduct allegations",
+      "summary": "Karim Khan denies allegations of engaging in an improper sexual relationship with a junior ICC staff member and seeking to stop her pursuing her complaint.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cqjxddx12qqo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4475,7 +4466,7 @@
       "summary": "Palestinians say villagers came under attack by settlers, while the Israeli military says a Palestinian stole a weapon and opened fire on hikers.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2rxmye4k3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4484,7 +4475,7 @@
       "summary": "Protests have continued over Zelensky's decision to dismiss Mykhailo Fedorov, and some commentators believe he has been damaged politically.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1d1gz3n99ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4493,25 +4484,34 @@
       "summary": "The event, attended by prominent members of the Ukrainian defence industry, was hit by ballistic missiles in the middle of the day.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj637zd1k1ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "More than 220,000 evacuated in France and Spain due to wildfires",
-      "summary": "French firefighters battle a blaze heading towards Bordeaux while officials in Madrid say they face the \"worst fire in the history of the region\".",
+      "headline": "Iran-backed Houthis claim missile attack on Saudi Arabia",
+      "summary": "US military says it disabled a tanker that was attempting to evade the American blockade on Iranian ports.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/czjlenp0xk8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cj9d27v70j1o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
+    },
+    {
+      "headline": "Trump takes swipes at press during White House Correspondents' Dinner",
+      "summary": "The event celebrated press freedom after the first dinner was cancelled by a shooting in April.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cd7le4ylev2o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-25T10:51:19+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": true
     },
     {
       "headline": "US hits dozens of countries with new wave of tariffs",
       "summary": "Imposed citing forced labour concerns, the levies replace a temporary global duty brought in after the US Supreme Court struck down tariffs in February.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgj61j6l08o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4520,7 +4520,7 @@
       "summary": "The threat of attack has never been higher, the boss of Europe's biggest defence contractor has warned.\nDr Charles Woodburn",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cx2lpjjpny9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4529,7 +4529,7 @@
       "summary": "Renewed tensions in the Middle East feed through to the costs faced by lenders, pushing up borrowing costs.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c70gknr7z1eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4538,7 +4538,7 @@
       "summary": "The BBC's Samira Hussain explains how President Trump's tariffs affect US economy, who pays the price, and whether they're working.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/videos/c5yw2xgnv2jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4547,7 +4547,7 @@
       "summary": "While the US tariffs imposed on the UK are effectively unchanged, other countries now have a better deal.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9v4ymwddwgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T09:20:53+00:00",
+      "published_utc": "2026-07-25T10:51:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
