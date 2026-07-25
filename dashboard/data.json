@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-25T19:54:03+00:00",
+  "generated_at_utc": "2026-07-25T21:06:11+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 678,
-  "last_success_utc": "2026-07-25T18:35:07+00:00",
+  "cycle_count": 679,
+  "last_success_utc": "2026-07-25T19:54:03+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -549,35 +549,35 @@
   ],
   "themes": [
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 70.39,
-      "raw_score": 71.41,
-      "band": "strong_buy",
-      "weight": 0.1281,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 83.78,
-        "sentiment": 70.0,
-        "volume": 59.48,
-        "policy": 50.0,
-        "volatility_penalty": 1.02
-      }
-    },
-    {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 64.67,
-      "raw_score": 65.19,
-      "band": "buy",
-      "weight": 0.1091,
-      "confidence": 0.65,
+      "score": 73.67,
+      "raw_score": 74.19,
+      "band": "strong_buy",
+      "weight": 0.1561,
+      "confidence": 1.0,
       "components": {
         "momentum": 89.71,
-        "sentiment": 50.0,
+        "sentiment": 80.0,
         "volume": 46.52,
         "policy": 50.0,
         "volatility_penalty": 0.52
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 67.39,
+      "raw_score": 68.41,
+      "band": "buy",
+      "weight": 0.1166,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 83.78,
+        "sentiment": 60.0,
+        "volume": 59.48,
+        "policy": 50.0,
+        "volatility_penalty": 1.02
       }
     },
     {
@@ -602,8 +602,8 @@
       "score": 50.74,
       "raw_score": 50.74,
       "band": "starter",
-      "weight": 0.0729,
-      "confidence": 0.7,
+      "weight": 0.0708,
+      "confidence": 0.65,
       "components": {
         "momentum": 56.18,
         "sentiment": 50.0,
@@ -618,8 +618,8 @@
       "score": 48.06,
       "raw_score": 61.87,
       "band": "starter",
-      "weight": 0.073,
-      "confidence": 0.9,
+      "weight": 0.0711,
+      "confidence": 0.85,
       "components": {
         "momentum": 43.43,
         "sentiment": 100.0,
@@ -634,8 +634,8 @@
       "score": 43.86,
       "raw_score": 43.86,
       "band": "starter",
-      "weight": 0.0566,
-      "confidence": 0.8,
+      "weight": 0.055,
+      "confidence": 0.75,
       "components": {
         "momentum": 40.91,
         "sentiment": 50.0,
@@ -796,32 +796,30 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0247,
+      "target_weight": 0.024,
       "current_weight": 0.0256,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.78%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 50.7 (starter), contribution 54.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 50.7 (starter), contribution 54.8"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "COP",
-      "action": "REDUCE",
-      "target_weight": 0.0359,
+      "action": "HOLD",
+      "target_weight": 0.0514,
       "current_weight": 0.0541,
-      "notional_delta": -1817.53,
-      "reason": "trimming on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 overweight by 1.82% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Energy Transfer vs. Occidental Petroleum: The Better Energy Buy for the Second Half of 2026\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.49%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 64.7 (buy), contribution 67.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Oil & Gas' score 73.7 (strong_buy), contribution 76.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -844,12 +842,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0443,
       "notional_delta": -4422.11,
-      "reason": "exiting on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Energy Transfer vs. Occidental Petroleum: The Better Energy Buy for the Second Half of 2026\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.86%",
         "theme=Oil & Gas",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -871,10 +869,10 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0261,
+      "target_weight": 0.0254,
       "current_weight": 0.0131,
-      "notional_delta": 1301.75,
-      "reason": "underweight by 1.30% vs target \u2014 add",
+      "notional_delta": 1231.8,
+      "reason": "underweight by 1.23% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=EV & Clean Transport",
@@ -915,14 +913,14 @@
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0424,
+      "target_weight": 0.0386,
       "current_weight": 0.0532,
-      "notional_delta": -1080.22,
-      "reason": "trimming on contract win (positive) \u2014 \"General Dynamics Wins a Cost-Plus-Award-Fee, Cost-Plus-Fixed-Fee, Cost-No-Fee Type Letter Contract, With A Not-To-Exceed Value Of $400.4M Fo\" \u00b7 overweight by 1.08% vs target \u2014 trim",
+      "notional_delta": -1459.93,
+      "reason": "trimming on contract win (positive) \u2014 \"General Dynamics Wins a Cost-Plus-Award-Fee, Cost-Plus-Fixed-Fee, Cost-No-Fee Type Letter Contract, With A Not-To-Exceed Value Of $400.4M Fo\" \u00b7 overweight by 1.46% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.94%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 70.4 (strong_buy), contribution 76.0",
+        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 73.0",
         "news_source=benzinga",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -932,16 +930,14 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0335,
+      "target_weight": 0.0326,
       "current_weight": 0.0115,
-      "notional_delta": 2201.29,
-      "reason": "buying on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 underweight by 2.20% vs target \u2014 add",
+      "notional_delta": 2111.36,
+      "reason": "underweight by 2.11% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.11%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 48.1 (starter), contribution 88.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 48.1 (starter), contribution 88.1"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -976,10 +972,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0188,
+      "target_weight": 0.0183,
       "current_weight": 0.0365,
-      "notional_delta": -1763.99,
-      "reason": "overweight by 1.77% vs target \u2014 trim",
+      "notional_delta": -1813.95,
+      "reason": "overweight by 1.82% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=Consumer Discretionary",
@@ -990,7 +986,7 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0275,
+      "target_weight": 0.0267,
       "current_weight": 0.0285,
       "notional_delta": 0.0,
       "reason": "holding on recall (mixed) \u2014 \"JPMorgan CEO Jamie Dimon Reveals the Chilling Moment He Knew It 'Might Be Goodbye' During Emergency Heart Surgery\u2014 and He Had One Request fo\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1037,16 +1033,14 @@
     {
       "symbol": "LMT",
       "action": "REDUCE",
-      "target_weight": 0.0425,
+      "target_weight": 0.0387,
       "current_weight": 0.0527,
-      "notional_delta": -1022.32,
-      "reason": "trimming on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 overweight by 1.02% vs target \u2014 trim",
+      "notional_delta": -1402.02,
+      "reason": "overweight by 1.40% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=9.92%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 70.4 (strong_buy), contribution 76.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 73.1"
       ],
       "theme_key": "defense"
     },
@@ -1066,10 +1060,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0198,
+      "target_weight": 0.0192,
       "current_weight": 0.0352,
-      "notional_delta": -1537.04,
-      "reason": "overweight by 1.54% vs target \u2014 trim",
+      "notional_delta": -1596.99,
+      "reason": "overweight by 1.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Consumer Discretionary",
@@ -1111,7 +1105,7 @@
     {
       "symbol": "MS",
       "action": "HOLD",
-      "target_weight": 0.0207,
+      "target_weight": 0.0201,
       "current_weight": 0.0221,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1230,10 +1224,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.86,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Energy Transfer vs. Occidental Petroleum: The Better Energy Buy for the Second Half of 2026\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=6.35%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1299,16 +1295,14 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0432,
+      "target_weight": 0.0393,
       "current_weight": 0.0537,
-      "notional_delta": -1049.45,
-      "reason": "trimming on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 overweight by 1.05% vs target \u2014 trim",
+      "notional_delta": -1439.15,
+      "reason": "overweight by 1.44% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.50%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 70.4 (strong_buy), contribution 77.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 74.4"
       ],
       "theme_key": "defense"
     },
@@ -1330,10 +1324,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.018,
+      "target_weight": 0.0175,
       "current_weight": 0.0351,
-      "notional_delta": -1704.15,
-      "reason": "overweight by 1.71% vs target \u2014 trim",
+      "notional_delta": -1754.11,
+      "reason": "overweight by 1.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Consumer Discretionary",
@@ -1358,15 +1352,17 @@
     },
     {
       "symbol": "SLB",
-      "action": "REDUCE",
-      "target_weight": 0.0368,
+      "action": "HOLD",
+      "target_weight": 0.0526,
       "current_weight": 0.056,
-      "notional_delta": -1920.67,
-      "reason": "overweight by 1.92% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Energy Transfer vs. Occidental Petroleum: The Better Energy Buy for the Second Half of 2026\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.94%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 64.7 (buy), contribution 69.0"
+        "theme 'Oil & Gas' score 73.7 (strong_buy), contribution 78.0",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1388,10 +1384,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0134,
+      "target_weight": 0.0131,
       "current_weight": 0.0,
-      "notional_delta": 1338.84,
-      "reason": "buying on positive news flow \u2014 \"Micron Stuck in a Bear Market: Will it Rebound or Crash Further?\" \u00b7 underweight by 1.34% vs target \u2014 add",
+      "notional_delta": 1308.86,
+      "reason": "buying on positive news flow \u2014 \"Micron Stuck in a Bear Market: Will it Rebound or Crash Further?\" \u00b7 underweight by 1.31% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=EV & Clean Transport",
@@ -1446,15 +1442,17 @@
     },
     {
       "symbol": "XOM",
-      "action": "REDUCE",
-      "target_weight": 0.0364,
+      "action": "HOLD",
+      "target_weight": 0.0521,
       "current_weight": 0.0542,
-      "notional_delta": -1779.64,
-      "reason": "overweight by 1.78% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Energy Transfer vs. Occidental Petroleum: The Better Energy Buy for the Second Half of 2026\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.46%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 64.7 (buy), contribution 68.3"
+        "theme 'Oil & Gas' score 73.7 (strong_buy), contribution 77.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     }
@@ -1564,16 +1562,14 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0247,
+      "target_weight": 0.024,
       "current_weight": 0.0256,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.78%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 50.7 (starter), contribution 54.8",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 50.7 (starter), contribution 54.8"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1582,17 +1578,17 @@
     },
     {
       "symbol": "COP",
-      "action": "REDUCE",
-      "target_weight": 0.0359,
+      "action": "HOLD",
+      "target_weight": 0.0514,
       "current_weight": 0.0541,
-      "notional_delta": -1817.53,
-      "reason": "trimming on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 overweight by 1.82% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Energy Transfer vs. Occidental Petroleum: The Better Energy Buy for the Second Half of 2026\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.49%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 64.7 (buy), contribution 67.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Oil & Gas' score 73.7 (strong_buy), contribution 76.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1621,12 +1617,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0443,
       "notional_delta": -4422.11,
-      "reason": "exiting on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Energy Transfer vs. Occidental Petroleum: The Better Energy Buy for the Second Half of 2026\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.86%",
         "theme=Oil & Gas",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1654,10 +1650,10 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0261,
+      "target_weight": 0.0254,
       "current_weight": 0.0131,
-      "notional_delta": 1301.75,
-      "reason": "underweight by 1.30% vs target \u2014 add",
+      "notional_delta": 1231.8,
+      "reason": "underweight by 1.23% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=EV & Clean Transport",
@@ -1707,14 +1703,14 @@
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0424,
+      "target_weight": 0.0386,
       "current_weight": 0.0532,
-      "notional_delta": -1080.22,
-      "reason": "trimming on contract win (positive) \u2014 \"General Dynamics Wins a Cost-Plus-Award-Fee, Cost-Plus-Fixed-Fee, Cost-No-Fee Type Letter Contract, With A Not-To-Exceed Value Of $400.4M Fo\" \u00b7 overweight by 1.08% vs target \u2014 trim",
+      "notional_delta": -1459.93,
+      "reason": "trimming on contract win (positive) \u2014 \"General Dynamics Wins a Cost-Plus-Award-Fee, Cost-Plus-Fixed-Fee, Cost-No-Fee Type Letter Contract, With A Not-To-Exceed Value Of $400.4M Fo\" \u00b7 overweight by 1.46% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.94%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 70.4 (strong_buy), contribution 76.0",
+        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 73.0",
         "news_source=benzinga",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -1727,16 +1723,14 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0335,
+      "target_weight": 0.0326,
       "current_weight": 0.0115,
-      "notional_delta": 2201.29,
-      "reason": "buying on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 underweight by 2.20% vs target \u2014 add",
+      "notional_delta": 2111.36,
+      "reason": "underweight by 2.11% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.11%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 48.1 (starter), contribution 88.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 48.1 (starter), contribution 88.1"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1780,10 +1774,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0188,
+      "target_weight": 0.0183,
       "current_weight": 0.0365,
-      "notional_delta": -1763.99,
-      "reason": "overweight by 1.77% vs target \u2014 trim",
+      "notional_delta": -1813.95,
+      "reason": "overweight by 1.82% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=Consumer Discretionary",
@@ -1797,7 +1791,7 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0275,
+      "target_weight": 0.0267,
       "current_weight": 0.0285,
       "notional_delta": 0.0,
       "reason": "holding on recall (mixed) \u2014 \"JPMorgan CEO Jamie Dimon Reveals the Chilling Moment He Knew It 'Might Be Goodbye' During Emergency Heart Surgery\u2014 and He Had One Request fo\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1853,16 +1847,14 @@
     {
       "symbol": "LMT",
       "action": "REDUCE",
-      "target_weight": 0.0425,
+      "target_weight": 0.0387,
       "current_weight": 0.0527,
-      "notional_delta": -1022.32,
-      "reason": "trimming on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 overweight by 1.02% vs target \u2014 trim",
+      "notional_delta": -1402.02,
+      "reason": "overweight by 1.40% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=9.92%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 70.4 (strong_buy), contribution 76.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 73.1"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1888,10 +1880,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0198,
+      "target_weight": 0.0192,
       "current_weight": 0.0352,
-      "notional_delta": -1537.04,
-      "reason": "overweight by 1.54% vs target \u2014 trim",
+      "notional_delta": -1596.99,
+      "reason": "overweight by 1.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Consumer Discretionary",
@@ -1942,7 +1934,7 @@
     {
       "symbol": "MS",
       "action": "HOLD",
-      "target_weight": 0.0207,
+      "target_weight": 0.0201,
       "current_weight": 0.0221,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -2085,10 +2077,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.86,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Energy Transfer vs. Occidental Petroleum: The Better Energy Buy for the Second Half of 2026\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=6.35%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2169,16 +2163,14 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0432,
+      "target_weight": 0.0393,
       "current_weight": 0.0537,
-      "notional_delta": -1049.45,
-      "reason": "trimming on mixed news flow \u2014 \"Oil Broke $100, Alphabet's AI Bill Scares Investors: What Moved Wall Street This Week\" \u00b7 overweight by 1.05% vs target \u2014 trim",
+      "notional_delta": -1439.15,
+      "reason": "overweight by 1.44% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.50%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 70.4 (strong_buy), contribution 77.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 74.4"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2206,10 +2198,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.018,
+      "target_weight": 0.0175,
       "current_weight": 0.0351,
-      "notional_delta": -1704.15,
-      "reason": "overweight by 1.71% vs target \u2014 trim",
+      "notional_delta": -1754.11,
+      "reason": "overweight by 1.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Consumer Discretionary",
@@ -2240,15 +2232,17 @@
     },
     {
       "symbol": "SLB",
-      "action": "REDUCE",
-      "target_weight": 0.0368,
+      "action": "HOLD",
+      "target_weight": 0.0526,
       "current_weight": 0.056,
-      "notional_delta": -1920.67,
-      "reason": "overweight by 1.92% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Energy Transfer vs. Occidental Petroleum: The Better Energy Buy for the Second Half of 2026\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.94%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 64.7 (buy), contribution 69.0"
+        "theme 'Oil & Gas' score 73.7 (strong_buy), contribution 78.0",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2276,10 +2270,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0134,
+      "target_weight": 0.0131,
       "current_weight": 0.0,
-      "notional_delta": 1338.84,
-      "reason": "buying on positive news flow \u2014 \"Micron Stuck in a Bear Market: Will it Rebound or Crash Further?\" \u00b7 underweight by 1.34% vs target \u2014 add",
+      "notional_delta": 1308.86,
+      "reason": "buying on positive news flow \u2014 \"Micron Stuck in a Bear Market: Will it Rebound or Crash Further?\" \u00b7 underweight by 1.31% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=EV & Clean Transport",
@@ -2346,15 +2340,17 @@
     },
     {
       "symbol": "XOM",
-      "action": "REDUCE",
-      "target_weight": 0.0364,
+      "action": "HOLD",
+      "target_weight": 0.0521,
       "current_weight": 0.0542,
-      "notional_delta": -1779.64,
-      "reason": "overweight by 1.78% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Energy Transfer vs. Occidental Petroleum: The Better Energy Buy for the Second Half of 2026\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.46%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 64.7 (buy), contribution 68.3"
+        "theme 'Oil & Gas' score 73.7 (strong_buy), contribution 77.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2363,10 +2359,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-11T17:00:27+00:00",
-      "v": 99208.16
-    },
     {
       "t": "2026-06-11T19:43:21+00:00",
       "v": 101124.07
@@ -4362,24 +4354,19 @@
     {
       "t": "2026-07-25T19:54:01+00:00",
       "v": 99922.37
+    },
+    {
+      "t": "2026-07-25T21:06:07+00:00",
+      "v": 99922.37
     }
   ],
   "breaking_news": [
-    {
-      "headline": "'New York Times' alleges White House abuses legal system to intimidate reporters",
-      "summary": "<em>The New York Times </em>will argue in court Thursday that the White House is abusing the justice system to intimidate reporters over a story that angered President Trump.<strong>\u00a0</strong>",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/07/23/nx-s1-5903854/trump-new-air-force-one-nyt-subpoenas",
-      "published_utc": "2026-07-25T19:54:03+00:00",
-      "sentiment_score": 0.2,
-      "is_policy": true
-    },
     {
       "headline": "A new threat in the Middle East sends oil over $100 a barrel again",
       "summary": "The price of crude oil is rising again following Houthi claims of attacks on tankers in the Red Sea. What could it mean for gas prices, inflation and the global economy?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5904519/a-new-threat-in-the-middle-east-sends-oil-over-100-a-barrel-again",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4388,7 +4375,7 @@
       "summary": "Irondale, Alabama, rebranded its annual festival around AI, leading to online backlash that provoked a return to the original name.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5896481-e1/a-town-renamed-its-festival-ai-love-irondale-day-then-came-the-comments",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4397,7 +4384,7 @@
       "summary": "The United States will slap taxes of 10% to 12.5% on imports from 60 countries accounting for 99% of U.S. imports, charging that they have inadequately enforced bans on goods produced by forced labor.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/g-s1-135388/trump-tariffs-trade-country",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4406,7 +4393,7 @@
       "summary": "The Justice Department is dropping the subpoenas it filed demanding grand jury testimony and phone records from <em>New York Times</em> journalists after sharp questioning Thursday from a federal judge.<br /><br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5905732/nyt-subpoenas-trump-air-force-one-plane-qatar-security",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4415,7 +4402,7 @@
       "summary": "Australia and the European Union were among U.S. trade partners who criticized the tariffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906301/us-global-trump-tariffs-reaction",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4424,7 +4411,7 @@
       "summary": "A dozen states and the Writers Guild of America had challenged the merger.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906818/paramount-warner-bros-merger-pause-lawsuits",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4433,7 +4420,16 @@
       "summary": "Trump's determination to find new legal justifications for his tariffs threatens to prolong the uncertainty facing the U.S. and global economies.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/25/nx-s1-5905692/trump-tariffs-economy-inflation",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "President Trump just implemented new tariffs. How are small businesses coping?",
+      "summary": "An NPR business correspondent explains how to cover the complex story of how small businesses are coping with tariffs.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/07/25/nx-s1-5900891/president-trump-just-implemented-new-tariffs-how-are-small-businesses-coping",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4442,7 +4438,7 @@
       "summary": "Karim Khan denies allegations of engaging in an improper sexual relationship with a junior ICC staff member and seeking to stop her pursuing her complaint.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqjxddx12qqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4451,7 +4447,7 @@
       "summary": "Palestinians say villagers came under attack by settlers, while the Israeli military says a Palestinian stole a weapon and opened fire on hikers.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2rxmye4k3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4460,7 +4456,7 @@
       "summary": "Protests have continued over Zelensky's decision to dismiss Mykhailo Fedorov, and some commentators believe he has been damaged politically.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1d1gz3n99ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4469,7 +4465,7 @@
       "summary": "The event, attended by prominent members of the Ukrainian defence industry, was hit by ballistic missiles in the middle of the day.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj637zd1k1ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4478,7 +4474,7 @@
       "summary": "US military says it disabled a tanker that was attempting to evade the American blockade on Iranian ports.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj9d27v70j1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4487,7 +4483,7 @@
       "summary": "The CJP protest has been the most visible expression of public anger against PM Narendra Modi's government in recent years.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdx828gj5xko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4496,7 +4492,7 @@
       "summary": "The event celebrated press freedom after the first dinner was cancelled by a shooting in April.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cd7le4ylev2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4505,7 +4501,7 @@
       "summary": "Spain's PM warns of \"complex hours\" ahead as authorities in France say they are far from bringing blazes burning near Bordeaux under control.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cd7le0d53y2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4514,7 +4510,7 @@
       "summary": "Imposed citing forced labour concerns, the levies replace a temporary global duty brought in after the US Supreme Court struck down tariffs in February.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgj61j6l08o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4523,7 +4519,7 @@
       "summary": "The threat of attack has never been higher, the boss of Europe's biggest defence contractor has warned.\nDr Charles Woodburn",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cx2lpjjpny9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4532,7 +4528,7 @@
       "summary": "Renewed tensions in the Middle East feed through to the costs faced by lenders, pushing up borrowing costs.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c70gknr7z1eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4541,7 +4537,7 @@
       "summary": "The BBC's Samira Hussain explains how President Trump's tariffs affect US economy, who pays the price, and whether they're working.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/videos/c5yw2xgnv2jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T19:54:03+00:00",
+      "published_utc": "2026-07-25T21:06:11+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
