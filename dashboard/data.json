@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-25T21:06:11+00:00",
+  "generated_at_utc": "2026-07-25T22:09:04+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 679,
-  "last_success_utc": "2026-07-25T19:54:03+00:00",
+  "cycle_count": 680,
+  "last_success_utc": "2026-07-25T21:06:11+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -549,6 +549,22 @@
   ],
   "themes": [
     {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 78.59,
+      "raw_score": 79.6,
+      "band": "strong_buy",
+      "weight": 0.1643,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 83.78,
+        "sentiment": 95.65,
+        "volume": 59.48,
+        "policy": 55.0,
+        "volatility_penalty": 1.02
+      }
+    },
+    {
       "key": "oil_gas",
       "name": "Oil & Gas",
       "score": 73.67,
@@ -562,22 +578,6 @@
         "volume": 46.52,
         "policy": 50.0,
         "volatility_penalty": 0.52
-      }
-    },
-    {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 67.39,
-      "raw_score": 68.41,
-      "band": "buy",
-      "weight": 0.1166,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 83.78,
-        "sentiment": 60.0,
-        "volume": 59.48,
-        "policy": 50.0,
-        "volatility_penalty": 1.02
       }
     },
     {
@@ -618,8 +618,8 @@
       "score": 48.06,
       "raw_score": 61.87,
       "band": "starter",
-      "weight": 0.0711,
-      "confidence": 0.85,
+      "weight": 0.073,
+      "confidence": 0.9,
       "components": {
         "momentum": 43.43,
         "sentiment": 100.0,
@@ -634,8 +634,8 @@
       "score": 43.86,
       "raw_score": 43.86,
       "band": "starter",
-      "weight": 0.055,
-      "confidence": 0.75,
+      "weight": 0.0566,
+      "confidence": 0.8,
       "components": {
         "momentum": 40.91,
         "sentiment": 50.0,
@@ -699,7 +699,7 @@
       "raw_score": 43.27,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.7,
+      "confidence": 0.65,
       "components": {
         "momentum": 38.07,
         "sentiment": 50.0,
@@ -743,12 +743,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on recall (mixed) \u2014 \"JPMorgan CEO Jamie Dimon Reveals the Chilling Moment He Knew It 'Might Be Goodbye' During Emergency Heart Surgery\u2014 and He Had One Request fo\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Tesla, Intel, Google All Dropped After Earnings - Will Microsoft, Amazon, Meta Follow?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.22%",
         "theme=Consumer Discretionary",
         "news_source=benzinga",
-        "event=recall",
         "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary"
@@ -786,10 +785,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"SpaceX (SPCX) Launches Northrop Grumman Repair Mission And Opens A New Service Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.59%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
@@ -869,10 +870,10 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0254,
+      "target_weight": 0.0261,
       "current_weight": 0.0131,
-      "notional_delta": 1231.8,
-      "reason": "underweight by 1.23% vs target \u2014 add",
+      "notional_delta": 1301.75,
+      "reason": "underweight by 1.30% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=EV & Clean Transport",
@@ -912,17 +913,16 @@
     },
     {
       "symbol": "GD",
-      "action": "REDUCE",
-      "target_weight": 0.0386,
+      "action": "HOLD",
+      "target_weight": 0.0544,
       "current_weight": 0.0532,
-      "notional_delta": -1459.93,
-      "reason": "trimming on contract win (positive) \u2014 \"General Dynamics Wins a Cost-Plus-Award-Fee, Cost-Plus-Fixed-Fee, Cost-No-Fee Type Letter Contract, With A Not-To-Exceed Value Of $400.4M Fo\" \u00b7 overweight by 1.46% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"SpaceX (SPCX) Launches Northrop Grumman Repair Mission And Opens A New Service Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.94%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 73.0",
-        "news_source=benzinga",
-        "event=contract win",
+        "theme 'Defense & Aerospace' score 78.6 (strong_buy), contribution 84.2",
+        "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
@@ -930,10 +930,10 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0326,
+      "target_weight": 0.0335,
       "current_weight": 0.0115,
-      "notional_delta": 2111.36,
-      "reason": "underweight by 2.11% vs target \u2014 add",
+      "notional_delta": 2201.29,
+      "reason": "underweight by 2.20% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.11%",
         "theme=EV & Clean Transport",
@@ -947,7 +947,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.08,
-      "reason": "exiting on mixed news flow \u2014 \"Trump Slams EU\u2019s Billion\u2011Dollar Tech Penalties Targeting US Companies\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Tesla, Intel, Google All Dropped After Earnings - Will Microsoft, Amazon, Meta Follow?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.27%",
         "theme=AI & Compute",
@@ -972,10 +972,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0183,
+      "target_weight": 0.0188,
       "current_weight": 0.0365,
-      "notional_delta": -1813.95,
-      "reason": "overweight by 1.82% vs target \u2014 trim",
+      "notional_delta": -1763.99,
+      "reason": "overweight by 1.77% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=Consumer Discretionary",
@@ -1032,15 +1032,17 @@
     },
     {
       "symbol": "LMT",
-      "action": "REDUCE",
-      "target_weight": 0.0387,
+      "action": "HOLD",
+      "target_weight": 0.0545,
       "current_weight": 0.0527,
-      "notional_delta": -1402.02,
-      "reason": "overweight by 1.40% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"SpaceX (SPCX) Launches Northrop Grumman Repair Mission And Opens A New Service Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=9.92%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 73.1"
+        "theme 'Defense & Aerospace' score 78.6 (strong_buy), contribution 84.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
@@ -1060,10 +1062,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0192,
+      "target_weight": 0.0198,
       "current_weight": 0.0352,
-      "notional_delta": -1596.99,
-      "reason": "overweight by 1.60% vs target \u2014 trim",
+      "notional_delta": -1537.04,
+      "reason": "overweight by 1.54% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Consumer Discretionary",
@@ -1077,7 +1079,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.35,
-      "reason": "exiting on mixed news flow \u2014 \"Trump Slams EU\u2019s Billion\u2011Dollar Tech Penalties Targeting US Companies\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Tesla, Intel, Google All Dropped After Earnings - Will Microsoft, Amazon, Meta Follow?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.87%",
         "theme=AI & Compute",
@@ -1122,7 +1124,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.18,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: IBM, Super Micro, Tesla\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Tesla, Intel, Google All Dropped After Earnings - Will Microsoft, Amazon, Meta Follow?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.91%",
         "theme=AI & Compute",
@@ -1180,10 +1182,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0528,
       "notional_delta": -5271.05,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"SpaceX (SPCX) Launches Northrop Grumman Repair Mission And Opens A New Service Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.39%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
@@ -1209,12 +1213,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.44,
-      "reason": "exiting on mixed news flow \u2014 \"Pantera, Bain Bet $52.5M That \u2018Proof Of Human\u2019 Will Become The Internet\u2019s Next Infrastructure Layer\" \u00b7 theme score 13.3 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 13.3 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-8.75%",
-        "theme=Cybersecurity",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1294,15 +1296,17 @@
     },
     {
       "symbol": "RTX",
-      "action": "REDUCE",
-      "target_weight": 0.0393,
+      "action": "HOLD",
+      "target_weight": 0.0554,
       "current_weight": 0.0537,
-      "notional_delta": -1439.15,
-      "reason": "overweight by 1.44% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"SpaceX (SPCX) Launches Northrop Grumman Repair Mission And Opens A New Service Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.50%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 74.4"
+        "theme 'Defense & Aerospace' score 78.6 (strong_buy), contribution 85.6",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
     },
@@ -1324,10 +1328,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0175,
+      "target_weight": 0.018,
       "current_weight": 0.0351,
-      "notional_delta": -1754.11,
-      "reason": "overweight by 1.76% vs target \u2014 trim",
+      "notional_delta": -1704.15,
+      "reason": "overweight by 1.71% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Consumer Discretionary",
@@ -1384,10 +1388,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0131,
+      "target_weight": 0.0134,
       "current_weight": 0.0,
-      "notional_delta": 1308.86,
-      "reason": "buying on positive news flow \u2014 \"Micron Stuck in a Bear Market: Will it Rebound or Crash Further?\" \u00b7 underweight by 1.31% vs target \u2014 add",
+      "notional_delta": 1338.84,
+      "reason": "buying on positive news flow \u2014 \"Micron Stuck in a Bear Market: Will it Rebound or Crash Further?\" \u00b7 underweight by 1.34% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=EV & Clean Transport",
@@ -1497,12 +1501,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on recall (mixed) \u2014 \"JPMorgan CEO Jamie Dimon Reveals the Chilling Moment He Knew It 'Might Be Goodbye' During Emergency Heart Surgery\u2014 and He Had One Request fo\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Tesla, Intel, Google All Dropped After Earnings - Will Microsoft, Amazon, Meta Follow?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.22%",
         "theme=Consumer Discretionary",
         "news_source=benzinga",
-        "event=recall",
         "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary",
@@ -1549,10 +1552,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"SpaceX (SPCX) Launches Northrop Grumman Repair Mission And Opens A New Service Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.59%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1650,10 +1655,10 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0254,
+      "target_weight": 0.0261,
       "current_weight": 0.0131,
-      "notional_delta": 1231.8,
-      "reason": "underweight by 1.23% vs target \u2014 add",
+      "notional_delta": 1301.75,
+      "reason": "underweight by 1.30% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=EV & Clean Transport",
@@ -1702,17 +1707,16 @@
     },
     {
       "symbol": "GD",
-      "action": "REDUCE",
-      "target_weight": 0.0386,
+      "action": "HOLD",
+      "target_weight": 0.0544,
       "current_weight": 0.0532,
-      "notional_delta": -1459.93,
-      "reason": "trimming on contract win (positive) \u2014 \"General Dynamics Wins a Cost-Plus-Award-Fee, Cost-Plus-Fixed-Fee, Cost-No-Fee Type Letter Contract, With A Not-To-Exceed Value Of $400.4M Fo\" \u00b7 overweight by 1.46% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"SpaceX (SPCX) Launches Northrop Grumman Repair Mission And Opens A New Service Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.94%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 73.0",
-        "news_source=benzinga",
-        "event=contract win",
+        "theme 'Defense & Aerospace' score 78.6 (strong_buy), contribution 84.2",
+        "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
@@ -1723,10 +1727,10 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0326,
+      "target_weight": 0.0335,
       "current_weight": 0.0115,
-      "notional_delta": 2111.36,
-      "reason": "underweight by 2.11% vs target \u2014 add",
+      "notional_delta": 2201.29,
+      "reason": "underweight by 2.20% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.11%",
         "theme=EV & Clean Transport",
@@ -1743,7 +1747,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.08,
-      "reason": "exiting on mixed news flow \u2014 \"Trump Slams EU\u2019s Billion\u2011Dollar Tech Penalties Targeting US Companies\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Tesla, Intel, Google All Dropped After Earnings - Will Microsoft, Amazon, Meta Follow?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.27%",
         "theme=AI & Compute",
@@ -1774,10 +1778,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0183,
+      "target_weight": 0.0188,
       "current_weight": 0.0365,
-      "notional_delta": -1813.95,
-      "reason": "overweight by 1.82% vs target \u2014 trim",
+      "notional_delta": -1763.99,
+      "reason": "overweight by 1.77% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=Consumer Discretionary",
@@ -1846,15 +1850,17 @@
     },
     {
       "symbol": "LMT",
-      "action": "REDUCE",
-      "target_weight": 0.0387,
+      "action": "HOLD",
+      "target_weight": 0.0545,
       "current_weight": 0.0527,
-      "notional_delta": -1402.02,
-      "reason": "overweight by 1.40% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"SpaceX (SPCX) Launches Northrop Grumman Repair Mission And Opens A New Service Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=9.92%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 73.1"
+        "theme 'Defense & Aerospace' score 78.6 (strong_buy), contribution 84.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1880,10 +1886,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0192,
+      "target_weight": 0.0198,
       "current_weight": 0.0352,
-      "notional_delta": -1596.99,
-      "reason": "overweight by 1.60% vs target \u2014 trim",
+      "notional_delta": -1537.04,
+      "reason": "overweight by 1.54% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Consumer Discretionary",
@@ -1900,7 +1906,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.35,
-      "reason": "exiting on mixed news flow \u2014 \"Trump Slams EU\u2019s Billion\u2011Dollar Tech Penalties Targeting US Companies\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Tesla, Intel, Google All Dropped After Earnings - Will Microsoft, Amazon, Meta Follow?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.87%",
         "theme=AI & Compute",
@@ -1954,7 +1960,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.18,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: IBM, Super Micro, Tesla\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Tesla, Intel, Google All Dropped After Earnings - Will Microsoft, Amazon, Meta Follow?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.91%",
         "theme=AI & Compute",
@@ -2024,10 +2030,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0528,
       "notional_delta": -5271.05,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"SpaceX (SPCX) Launches Northrop Grumman Repair Mission And Opens A New Service Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.39%",
-        "theme=Defense & Aerospace"
+        "theme=Defense & Aerospace",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2059,12 +2067,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.44,
-      "reason": "exiting on mixed news flow \u2014 \"Pantera, Bain Bet $52.5M That \u2018Proof Of Human\u2019 Will Become The Internet\u2019s Next Infrastructure Layer\" \u00b7 theme score 13.3 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 13.3 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-8.75%",
-        "theme=Cybersecurity",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2162,15 +2168,17 @@
     },
     {
       "symbol": "RTX",
-      "action": "REDUCE",
-      "target_weight": 0.0393,
+      "action": "HOLD",
+      "target_weight": 0.0554,
       "current_weight": 0.0537,
-      "notional_delta": -1439.15,
-      "reason": "overweight by 1.44% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"SpaceX (SPCX) Launches Northrop Grumman Repair Mission And Opens A New Service Market\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.50%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 67.4 (buy), contribution 74.4"
+        "theme 'Defense & Aerospace' score 78.6 (strong_buy), contribution 85.6",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2198,10 +2206,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0175,
+      "target_weight": 0.018,
       "current_weight": 0.0351,
-      "notional_delta": -1754.11,
-      "reason": "overweight by 1.76% vs target \u2014 trim",
+      "notional_delta": -1704.15,
+      "reason": "overweight by 1.71% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Consumer Discretionary",
@@ -2270,10 +2278,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0131,
+      "target_weight": 0.0134,
       "current_weight": 0.0,
-      "notional_delta": 1308.86,
-      "reason": "buying on positive news flow \u2014 \"Micron Stuck in a Bear Market: Will it Rebound or Crash Further?\" \u00b7 underweight by 1.31% vs target \u2014 add",
+      "notional_delta": 1338.84,
+      "reason": "buying on positive news flow \u2014 \"Micron Stuck in a Bear Market: Will it Rebound or Crash Further?\" \u00b7 underweight by 1.34% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=EV & Clean Transport",
@@ -2359,10 +2367,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-11T19:43:21+00:00",
-      "v": 101124.07
-    },
     {
       "t": "2026-06-11T21:52:26+00:00",
       "v": 100821.47
@@ -4358,6 +4362,10 @@
     {
       "t": "2026-07-25T21:06:07+00:00",
       "v": 99922.37
+    },
+    {
+      "t": "2026-07-25T22:09:01+00:00",
+      "v": 99922.37
     }
   ],
   "breaking_news": [
@@ -4366,7 +4374,7 @@
       "summary": "The price of crude oil is rising again following Houthi claims of attacks on tankers in the Red Sea. What could it mean for gas prices, inflation and the global economy?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5904519/a-new-threat-in-the-middle-east-sends-oil-over-100-a-barrel-again",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4375,7 +4383,7 @@
       "summary": "Irondale, Alabama, rebranded its annual festival around AI, leading to online backlash that provoked a return to the original name.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5896481-e1/a-town-renamed-its-festival-ai-love-irondale-day-then-came-the-comments",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4384,7 +4392,7 @@
       "summary": "The United States will slap taxes of 10% to 12.5% on imports from 60 countries accounting for 99% of U.S. imports, charging that they have inadequately enforced bans on goods produced by forced labor.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/g-s1-135388/trump-tariffs-trade-country",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4393,7 +4401,7 @@
       "summary": "The Justice Department is dropping the subpoenas it filed demanding grand jury testimony and phone records from <em>New York Times</em> journalists after sharp questioning Thursday from a federal judge.<br /><br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5905732/nyt-subpoenas-trump-air-force-one-plane-qatar-security",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4402,7 +4410,7 @@
       "summary": "Australia and the European Union were among U.S. trade partners who criticized the tariffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906301/us-global-trump-tariffs-reaction",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4411,7 +4419,7 @@
       "summary": "A dozen states and the Writers Guild of America had challenged the merger.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906818/paramount-warner-bros-merger-pause-lawsuits",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4420,7 +4428,7 @@
       "summary": "Trump's determination to find new legal justifications for his tariffs threatens to prolong the uncertainty facing the U.S. and global economies.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/25/nx-s1-5905692/trump-tariffs-economy-inflation",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4429,16 +4437,7 @@
       "summary": "An NPR business correspondent explains how to cover the complex story of how small businesses are coping with tariffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/25/nx-s1-5900891/president-trump-just-implemented-new-tariffs-how-are-small-businesses-coping",
-      "published_utc": "2026-07-25T21:06:11+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "ICC top prosecutor removed over sexual misconduct allegations",
-      "summary": "Karim Khan denies allegations of engaging in an improper sexual relationship with a junior ICC staff member and seeking to stop her pursuing her complaint.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cqjxddx12qqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4447,7 +4446,7 @@
       "summary": "Palestinians say villagers came under attack by settlers, while the Israeli military says a Palestinian stole a weapon and opened fire on hikers.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2rxmye4k3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4456,7 +4455,7 @@
       "summary": "Protests have continued over Zelensky's decision to dismiss Mykhailo Fedorov, and some commentators believe he has been damaged politically.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1d1gz3n99ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4465,7 +4464,7 @@
       "summary": "The event, attended by prominent members of the Ukrainian defence industry, was hit by ballistic missiles in the middle of the day.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj637zd1k1ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4474,7 +4473,7 @@
       "summary": "US military says it disabled a tanker that was attempting to evade the American blockade on Iranian ports.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj9d27v70j1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4483,7 +4482,7 @@
       "summary": "The CJP protest has been the most visible expression of public anger against PM Narendra Modi's government in recent years.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdx828gj5xko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4492,16 +4491,25 @@
       "summary": "The event celebrated press freedom after the first dinner was cancelled by a shooting in April.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cd7le4ylev2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
+    },
+    {
+      "headline": "Several injured at Berlin Pride after reports vehicle drove into crowd, police say",
+      "summary": "Police say an intensive manhunt is under way after the incident in Berlin's city centre.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/clyqzylz3zno?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-25T22:09:04+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
     },
     {
       "headline": "More than 250,000 flee wildfires in France and Spain",
       "summary": "Spain's PM warns of \"complex hours\" ahead as authorities in France say they are far from bringing blazes burning near Bordeaux under control.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cd7le0d53y2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4510,7 +4518,7 @@
       "summary": "Imposed citing forced labour concerns, the levies replace a temporary global duty brought in after the US Supreme Court struck down tariffs in February.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgj61j6l08o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4519,7 +4527,7 @@
       "summary": "The threat of attack has never been higher, the boss of Europe's biggest defence contractor has warned.\nDr Charles Woodburn",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cx2lpjjpny9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4528,7 +4536,7 @@
       "summary": "Renewed tensions in the Middle East feed through to the costs faced by lenders, pushing up borrowing costs.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c70gknr7z1eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4537,7 +4545,7 @@
       "summary": "The BBC's Samira Hussain explains how President Trump's tariffs affect US economy, who pays the price, and whether they're working.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/videos/c5yw2xgnv2jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-25T21:06:11+00:00",
+      "published_utc": "2026-07-25T22:09:04+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
