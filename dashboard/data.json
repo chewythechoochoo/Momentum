@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-26T07:27:44+00:00",
+  "generated_at_utc": "2026-07-26T09:37:18+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 684,
-  "last_success_utc": "2026-07-26T04:47:48+00:00",
+  "cycle_count": 685,
+  "last_success_utc": "2026-07-26T07:27:44+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -583,16 +583,16 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 55.86,
-      "raw_score": 55.86,
+      "score": 59.36,
+      "raw_score": 59.36,
       "band": "buy",
-      "weight": 0.0926,
-      "confidence": 0.8,
+      "weight": 0.1059,
+      "confidence": 0.85,
       "components": {
         "momentum": 40.91,
-        "sentiment": 90.0,
+        "sentiment": 100.0,
         "volume": 37.48,
-        "policy": 50.0,
+        "policy": 55.0,
         "volatility_penalty": 0.0
       }
     },
@@ -610,22 +610,6 @@
         "volume": 31.71,
         "policy": 60.0,
         "volatility_penalty": 3.26
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 51.5,
-      "raw_score": 63.04,
-      "band": "starter",
-      "weight": 0.0839,
-      "confidence": 0.9,
-      "components": {
-        "momentum": 47.63,
-        "sentiment": 100.0,
-        "volume": 44.94,
-        "policy": 50.0,
-        "volatility_penalty": 11.54
       }
     },
     {
@@ -658,6 +642,22 @@
         "volume": 47.47,
         "policy": 50.0,
         "volatility_penalty": 13.91
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 44.0,
+      "raw_score": 55.54,
+      "band": "starter",
+      "weight": 0.0618,
+      "confidence": 0.95,
+      "components": {
+        "momentum": 47.63,
+        "sentiment": 75.0,
+        "volume": 44.94,
+        "policy": 50.0,
+        "volatility_penalty": 11.54
       }
     },
     {
@@ -725,15 +725,15 @@
     },
     {
       "symbol": "AMD",
-      "action": "HOLD",
-      "target_weight": 0.029,
+      "action": "REDUCE",
+      "target_weight": 0.0214,
       "current_weight": 0.0267,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -531.47,
+      "reason": "overweight by 0.53% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 51.5 (starter), contribution 67.7"
+        "theme 'AI & Compute' score 44.0 (starter), contribution 60.2"
       ],
       "theme_key": "ai_compute"
     },
@@ -768,14 +768,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0263,
+      "target_weight": 0.0192,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Samsung, Broadcom Ink $200 Billion AI Chip Pact Through 2030 as Foundry Race With TSMC Heats Up\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 51.5 (starter), contribution 61.5",
+        "theme 'AI & Compute' score 44.0 (starter), contribution 54.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -973,15 +973,15 @@
     },
     {
       "symbol": "HD",
-      "action": "REDUCE",
-      "target_weight": 0.0308,
+      "action": "HOLD",
+      "target_weight": 0.0353,
       "current_weight": 0.0365,
-      "notional_delta": -564.92,
-      "reason": "overweight by 0.57% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 55.9 (buy), contribution 54.1"
+        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 57.6"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1064,14 +1064,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.032,
+      "target_weight": 0.0366,
       "current_weight": 0.0352,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 55.9 (buy), contribution 56.2"
+        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 59.7"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1081,12 +1081,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.35,
-      "reason": "exiting on positive news flow \u2014 \"Demis Hassabis Backs Jensen Huang's AI Vision, Says 'A Strong and Secure Open Ecosystem Is Important' for Global AI Growth\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"David Sacks Warns Anthropic Doesn't Want Competition: 'You're Going to Basically Put a Dagger Through the Heart of the Entire American Open \" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.87%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1126,12 +1126,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.18,
-      "reason": "exiting on positive news flow \u2014 \"Demis Hassabis Backs Jensen Huang's AI Vision, Says 'A Strong and Secure Open Ecosystem Is Important' for Global AI Growth\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"David Sacks Warns Anthropic Doesn't Want Competition: 'You're Going to Basically Put a Dagger Through the Heart of the Entire American Open \" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.91%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1195,17 +1195,17 @@
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0286,
+      "action": "REDUCE",
+      "target_weight": 0.0211,
       "current_weight": 0.0265,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Demis Hassabis Backs Jensen Huang's AI Vision, Says 'A Strong and Secure Open Ecosystem Is Important' for Global AI Growth\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -539.6,
+      "reason": "trimming on negative news flow \u2014 \"David Sacks Warns Anthropic Doesn't Want Competition: 'You're Going to Basically Put a Dagger Through the Heart of the Entire American Open \" \u00b7 overweight by 0.54% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 51.5 (starter), contribution 66.8",
+        "theme 'AI & Compute' score 44.0 (starter), contribution 59.3",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1329,15 +1329,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "REDUCE",
-      "target_weight": 0.0297,
+      "action": "HOLD",
+      "target_weight": 0.0341,
       "current_weight": 0.0351,
-      "notional_delta": -535.06,
-      "reason": "overweight by 0.54% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 55.9 (buy), contribution 52.1"
+        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 55.6"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1484,15 +1484,15 @@
     },
     {
       "symbol": "AMD",
-      "action": "HOLD",
-      "target_weight": 0.029,
+      "action": "REDUCE",
+      "target_weight": 0.0214,
       "current_weight": 0.0267,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -531.47,
+      "reason": "overweight by 0.53% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.17%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 51.5 (starter), contribution 67.7"
+        "theme 'AI & Compute' score 44.0 (starter), contribution 60.2"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1536,14 +1536,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0263,
+      "target_weight": 0.0192,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Samsung, Broadcom Ink $200 Billion AI Chip Pact Through 2030 as Foundry Race With TSMC Heats Up\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 51.5 (starter), contribution 61.5",
+        "theme 'AI & Compute' score 44.0 (starter), contribution 54.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1783,15 +1783,15 @@
     },
     {
       "symbol": "HD",
-      "action": "REDUCE",
-      "target_weight": 0.0308,
+      "action": "HOLD",
+      "target_weight": 0.0353,
       "current_weight": 0.0365,
-      "notional_delta": -564.92,
-      "reason": "overweight by 0.57% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 55.9 (buy), contribution 54.1"
+        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 57.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1892,14 +1892,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.032,
+      "target_weight": 0.0366,
       "current_weight": 0.0352,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 55.9 (buy), contribution 56.2"
+        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 59.7"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1912,12 +1912,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.35,
-      "reason": "exiting on positive news flow \u2014 \"Demis Hassabis Backs Jensen Huang's AI Vision, Says 'A Strong and Secure Open Ecosystem Is Important' for Global AI Growth\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"David Sacks Warns Anthropic Doesn't Want Competition: 'You're Going to Basically Put a Dagger Through the Heart of the Entire American Open \" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.87%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1966,12 +1966,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.18,
-      "reason": "exiting on positive news flow \u2014 \"Demis Hassabis Backs Jensen Huang's AI Vision, Says 'A Strong and Secure Open Ecosystem Is Important' for Global AI Growth\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"David Sacks Warns Anthropic Doesn't Want Competition: 'You're Going to Basically Put a Dagger Through the Heart of the Entire American Open \" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.91%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2050,17 +2050,17 @@
     },
     {
       "symbol": "NVDA",
-      "action": "HOLD",
-      "target_weight": 0.0286,
+      "action": "REDUCE",
+      "target_weight": 0.0211,
       "current_weight": 0.0265,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Demis Hassabis Backs Jensen Huang's AI Vision, Says 'A Strong and Secure Open Ecosystem Is Important' for Global AI Growth\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -539.6,
+      "reason": "trimming on negative news flow \u2014 \"David Sacks Warns Anthropic Doesn't Want Competition: 'You're Going to Basically Put a Dagger Through the Heart of the Entire American Open \" \u00b7 overweight by 0.54% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 51.5 (starter), contribution 66.8",
+        "theme 'AI & Compute' score 44.0 (starter), contribution 59.3",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2211,15 +2211,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "REDUCE",
-      "target_weight": 0.0297,
+      "action": "HOLD",
+      "target_weight": 0.0341,
       "current_weight": 0.0351,
-      "notional_delta": -535.06,
-      "reason": "overweight by 0.54% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 55.9 (buy), contribution 52.1"
+        "theme 'Consumer Discretionary' score 59.4 (buy), contribution 55.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2375,10 +2375,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-12T11:56:17+00:00",
-      "v": 101234.66
-    },
     {
       "t": "2026-06-12T15:36:01+00:00",
       "v": 101863.96
@@ -4374,6 +4370,10 @@
     {
       "t": "2026-07-26T07:27:41+00:00",
       "v": 99922.37
+    },
+    {
+      "t": "2026-07-26T09:37:14+00:00",
+      "v": 99922.37
     }
   ],
   "breaking_news": [
@@ -4382,7 +4382,7 @@
       "summary": "The price of crude oil is rising again following Houthi claims of attacks on tankers in the Red Sea. What could it mean for gas prices, inflation and the global economy?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5904519/a-new-threat-in-the-middle-east-sends-oil-over-100-a-barrel-again",
-      "published_utc": "2026-07-26T07:27:44+00:00",
+      "published_utc": "2026-07-26T09:37:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4391,7 +4391,7 @@
       "summary": "Irondale, Alabama, rebranded its annual festival around AI, leading to online backlash that provoked a return to the original name.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5896481-e1/a-town-renamed-its-festival-ai-love-irondale-day-then-came-the-comments",
-      "published_utc": "2026-07-26T07:27:44+00:00",
+      "published_utc": "2026-07-26T09:37:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4400,7 +4400,7 @@
       "summary": "The United States will slap taxes of 10% to 12.5% on imports from 60 countries accounting for 99% of U.S. imports, charging that they have inadequately enforced bans on goods produced by forced labor.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/g-s1-135388/trump-tariffs-trade-country",
-      "published_utc": "2026-07-26T07:27:44+00:00",
+      "published_utc": "2026-07-26T09:37:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4409,7 +4409,7 @@
       "summary": "The Justice Department is dropping the subpoenas it filed demanding grand jury testimony and phone records from <em>New York Times</em> journalists after sharp questioning Thursday from a federal judge.<br /><br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5905732/nyt-subpoenas-trump-air-force-one-plane-qatar-security",
-      "published_utc": "2026-07-26T07:27:44+00:00",
+      "published_utc": "2026-07-26T09:37:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4418,7 +4418,7 @@
       "summary": "Australia and the European Union were among U.S. trade partners who criticized the tariffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906301/us-global-trump-tariffs-reaction",
-      "published_utc": "2026-07-26T07:27:44+00:00",
+      "published_utc": "2026-07-26T09:37:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4427,7 +4427,7 @@
       "summary": "A dozen states and the Writers Guild of America had challenged the merger.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906818/paramount-warner-bros-merger-pause-lawsuits",
-      "published_utc": "2026-07-26T07:27:44+00:00",
+      "published_utc": "2026-07-26T09:37:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4436,7 +4436,7 @@
       "summary": "Trump's determination to find new legal justifications for his tariffs threatens to prolong the uncertainty facing the U.S. and global economies.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/25/nx-s1-5905692/trump-tariffs-economy-inflation",
-      "published_utc": "2026-07-26T07:27:44+00:00",
+      "published_utc": "2026-07-26T09:37:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4445,16 +4445,7 @@
       "summary": "An NPR business correspondent explains how to cover the complex story of how small businesses are coping with tariffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/25/nx-s1-5900891/president-trump-just-implemented-new-tariffs-how-are-small-businesses-coping",
-      "published_utc": "2026-07-26T07:27:44+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "ICC top prosecutor removed over sexual misconduct allegations",
-      "summary": "Karim Khan denies allegations of engaging in an improper sexual relationship with a junior ICC staff member and seeking to stop her pursuing her complaint.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cqjxddx12qqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "published_utc": "2026-07-26T09:37:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4463,7 +4454,7 @@
       "summary": "Palestinians say villagers came under attack by settlers, while the Israeli military says a Palestinian stole a weapon and opened fire on hikers.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2rxmye4k3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "published_utc": "2026-07-26T09:37:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4472,7 +4463,7 @@
       "summary": "Protests have continued over Zelensky's decision to dismiss Mykhailo Fedorov, and some commentators believe he has been damaged politically.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1d1gz3n99ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "published_utc": "2026-07-26T09:37:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4481,7 +4472,7 @@
       "summary": "The event, attended by prominent members of the Ukrainian defence industry, was hit by ballistic missiles in the middle of the day.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj637zd1k1ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "published_utc": "2026-07-26T09:37:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4490,7 +4481,7 @@
       "summary": "US military says it disabled a tanker that was attempting to evade the American blockade on Iranian ports.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj9d27v70j1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "published_utc": "2026-07-26T09:37:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4499,7 +4490,7 @@
       "summary": "The CJP protest has been the most visible expression of public anger against PM Narendra Modi's government in recent years.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdx828gj5xko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "published_utc": "2026-07-26T09:37:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4508,7 +4499,7 @@
       "summary": "The event celebrated press freedom after the first dinner was cancelled by a shooting in April.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cd7le4ylev2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "published_utc": "2026-07-26T09:37:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4517,25 +4508,25 @@
       "summary": "More than 340,000 people have now been evacuated from wildfires in France and Spain.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/clyj8k4nn5jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "published_utc": "2026-07-26T09:37:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Watch: Another day, more Trump tariffs - but are they working?",
-      "summary": "The BBC's Samira Hussain explains how President Trump's tariffs affect US economy, who pays the price, and whether they're working.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/videos/c5yw2xgnv2jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "headline": "What we know so far about the Berlin Pride ramming attack",
+      "summary": "A police manhunt is underway after a suspect rammed a car into a crowd at a Pride event in the German capital on Saturday night.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cevmdxz4872o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-26T09:37:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "UK mortgage rates rise to highest level for a month",
-      "summary": "Renewed tensions in the Middle East feed through to the costs faced by lenders, pushing up borrowing costs.",
+      "headline": "Long overdue, life-changing or frivolous? Your thoughts on wedding rule changes",
+      "summary": "The government wants to relax wedding laws so couples can get married almost anywhere.",
       "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/c70gknr7z1eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cvg8wlwzjx9o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-26T09:37:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4544,7 +4535,16 @@
       "summary": "While the US tariffs imposed on the UK are effectively unchanged, other countries now have a better deal.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9v4ymwddwgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "published_utc": "2026-07-26T09:37:17+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Paramount and Warner Bros pause $110bn merger amid legal challenge",
+      "summary": "Until a judge reaches a final verdict \u2013 or until 1 June 2027 \u2013 the Hollywood studios will remain completely separate, competing operations.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/c8en74yz5e7o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-07-26T09:37:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4553,7 +4553,7 @@
       "summary": "The US president says fines against Google, as well as Apple, Meta and Amazon, should be \"entirely reversed.\"",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgjenp4680o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T07:27:43+00:00",
+      "published_utc": "2026-07-26T09:37:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
