@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-26T14:12:43+00:00",
+  "generated_at_utc": "2026-07-26T15:34:44+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 688,
-  "last_success_utc": "2026-07-26T12:34:23+00:00",
+  "cycle_count": 689,
+  "last_success_utc": "2026-07-26T14:12:43+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -597,13 +597,29 @@
       }
     },
     {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 47.74,
+      "raw_score": 47.74,
+      "band": "starter",
+      "weight": 0.0625,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 56.18,
+        "sentiment": 40.0,
+        "volume": 41.35,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
       "score": 45.36,
       "raw_score": 45.36,
       "band": "starter",
-      "weight": 0.0662,
-      "confidence": 0.95,
+      "weight": 0.0628,
+      "confidence": 0.85,
       "components": {
         "momentum": 40.91,
         "sentiment": 50.0,
@@ -613,29 +629,13 @@
       }
     },
     {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 44.74,
-      "raw_score": 44.74,
-      "band": "starter",
-      "weight": 0.0559,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 56.18,
-        "sentiment": 30.0,
-        "volume": 41.35,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
       "score": 41.96,
       "raw_score": 55.87,
       "band": "starter",
-      "weight": 0.0565,
-      "confidence": 1.0,
+      "weight": 0.0551,
+      "confidence": 0.95,
       "components": {
         "momentum": 43.43,
         "sentiment": 80.0,
@@ -802,15 +802,15 @@
     },
     {
       "symbol": "BAC",
-      "action": "REDUCE",
-      "target_weight": 0.019,
+      "action": "HOLD",
+      "target_weight": 0.0212,
       "current_weight": 0.0256,
-      "notional_delta": -664.2,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.78%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.7 (starter), contribution 48.8"
+        "theme 'Financials & Rates' score 47.7 (starter), contribution 51.8"
       ],
       "theme_key": "financials"
     },
@@ -878,10 +878,10 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0205,
+      "target_weight": 0.02,
       "current_weight": 0.0131,
-      "notional_delta": 742.18,
-      "reason": "underweight by 0.74% vs target \u2014 add",
+      "notional_delta": 692.22,
+      "reason": "underweight by 0.69% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=EV & Clean Transport",
@@ -938,10 +938,10 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0266,
+      "target_weight": 0.0259,
       "current_weight": 0.0115,
-      "notional_delta": 1511.83,
-      "reason": "underweight by 1.51% vs target \u2014 add",
+      "notional_delta": 1441.88,
+      "reason": "underweight by 1.44% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.11%",
         "theme=EV & Clean Transport",
@@ -980,10 +980,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.022,
+      "target_weight": 0.0209,
       "current_weight": 0.0365,
-      "notional_delta": -1444.23,
-      "reason": "overweight by 1.45% vs target \u2014 trim",
+      "notional_delta": -1554.15,
+      "reason": "overweight by 1.56% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=Consumer Discretionary",
@@ -993,15 +993,15 @@
     },
     {
       "symbol": "JPM",
-      "action": "REDUCE",
-      "target_weight": 0.0214,
+      "action": "HOLD",
+      "target_weight": 0.0238,
       "current_weight": 0.0285,
-      "notional_delta": -706.91,
-      "reason": "trimming on layoffs (negative) \u2014 \"Intel Layoffs, Musk's Micron Moment, $200 Billion Samsung-Broadcom Pact and More: This Week in Tech\" \u00b7 overweight by 0.71% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on layoffs (negative) \u2014 \"Intel Layoffs, Musk's Micron Moment, $200 Billion Samsung-Broadcom Pact and More: This Week in Tech\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.20%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.7 (starter), contribution 55.1",
+        "theme 'Financials & Rates' score 47.7 (starter), contribution 58.1",
         "news_source=benzinga",
         "event=layoffs",
         "news_sentiment=-0.20"
@@ -1072,10 +1072,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0231,
+      "target_weight": 0.0219,
       "current_weight": 0.0352,
-      "notional_delta": -1207.29,
-      "reason": "overweight by 1.21% vs target \u2014 trim",
+      "notional_delta": -1327.2,
+      "reason": "overweight by 1.33% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Consumer Discretionary",
@@ -1117,15 +1117,15 @@
     },
     {
       "symbol": "MS",
-      "action": "REDUCE",
-      "target_weight": 0.0155,
+      "action": "HOLD",
+      "target_weight": 0.0176,
       "current_weight": 0.0221,
-      "notional_delta": -657.19,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.41%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.7 (starter), contribution 39.9"
+        "theme 'Financials & Rates' score 47.7 (starter), contribution 42.9"
       ],
       "theme_key": "financials"
     },
@@ -1339,10 +1339,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.021,
+      "target_weight": 0.02,
       "current_weight": 0.0351,
-      "notional_delta": -1404.38,
-      "reason": "overweight by 1.41% vs target \u2014 trim",
+      "notional_delta": -1504.31,
+      "reason": "overweight by 1.51% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Consumer Discretionary",
@@ -1395,10 +1395,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0094,
+      "target_weight": 0.0092,
       "current_weight": 0.0,
-      "notional_delta": 939.15,
-      "reason": "buying on negative news flow \u2014 \"Musk's Net Worth Down By More Than $600 Billion as SpaceX, Tesla Woes Mount\" \u00b7 underweight by 0.94% vs target \u2014 add",
+      "notional_delta": 919.16,
+      "reason": "buying on negative news flow \u2014 \"Musk's Net Worth Down By More Than $600 Billion as SpaceX, Tesla Woes Mount\" \u00b7 underweight by 0.92% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=EV & Clean Transport",
@@ -1582,15 +1582,15 @@
     },
     {
       "symbol": "BAC",
-      "action": "REDUCE",
-      "target_weight": 0.019,
+      "action": "HOLD",
+      "target_weight": 0.0212,
       "current_weight": 0.0256,
-      "notional_delta": -664.2,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.78%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.7 (starter), contribution 48.8"
+        "theme 'Financials & Rates' score 47.7 (starter), contribution 51.8"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1673,10 +1673,10 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0205,
+      "target_weight": 0.02,
       "current_weight": 0.0131,
-      "notional_delta": 742.18,
-      "reason": "underweight by 0.74% vs target \u2014 add",
+      "notional_delta": 692.22,
+      "reason": "underweight by 0.69% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.71%",
         "theme=EV & Clean Transport",
@@ -1745,10 +1745,10 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0266,
+      "target_weight": 0.0259,
       "current_weight": 0.0115,
-      "notional_delta": 1511.83,
-      "reason": "underweight by 1.51% vs target \u2014 add",
+      "notional_delta": 1441.88,
+      "reason": "underweight by 1.44% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.11%",
         "theme=EV & Clean Transport",
@@ -1796,10 +1796,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.022,
+      "target_weight": 0.0209,
       "current_weight": 0.0365,
-      "notional_delta": -1444.23,
-      "reason": "overweight by 1.45% vs target \u2014 trim",
+      "notional_delta": -1554.15,
+      "reason": "overweight by 1.56% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=Consumer Discretionary",
@@ -1812,15 +1812,15 @@
     },
     {
       "symbol": "JPM",
-      "action": "REDUCE",
-      "target_weight": 0.0214,
+      "action": "HOLD",
+      "target_weight": 0.0238,
       "current_weight": 0.0285,
-      "notional_delta": -706.91,
-      "reason": "trimming on layoffs (negative) \u2014 \"Intel Layoffs, Musk's Micron Moment, $200 Billion Samsung-Broadcom Pact and More: This Week in Tech\" \u00b7 overweight by 0.71% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on layoffs (negative) \u2014 \"Intel Layoffs, Musk's Micron Moment, $200 Billion Samsung-Broadcom Pact and More: This Week in Tech\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.20%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.7 (starter), contribution 55.1",
+        "theme 'Financials & Rates' score 47.7 (starter), contribution 58.1",
         "news_source=benzinga",
         "event=layoffs",
         "news_sentiment=-0.20"
@@ -1906,10 +1906,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0231,
+      "target_weight": 0.0219,
       "current_weight": 0.0352,
-      "notional_delta": -1207.29,
-      "reason": "overweight by 1.21% vs target \u2014 trim",
+      "notional_delta": -1327.2,
+      "reason": "overweight by 1.33% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.56%",
         "theme=Consumer Discretionary",
@@ -1960,15 +1960,15 @@
     },
     {
       "symbol": "MS",
-      "action": "REDUCE",
-      "target_weight": 0.0155,
+      "action": "HOLD",
+      "target_weight": 0.0176,
       "current_weight": 0.0221,
-      "notional_delta": -657.19,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.41%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.7 (starter), contribution 39.9"
+        "theme 'Financials & Rates' score 47.7 (starter), contribution 42.9"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2227,10 +2227,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.021,
+      "target_weight": 0.02,
       "current_weight": 0.0351,
-      "notional_delta": -1404.38,
-      "reason": "overweight by 1.41% vs target \u2014 trim",
+      "notional_delta": -1504.31,
+      "reason": "overweight by 1.51% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Consumer Discretionary",
@@ -2295,10 +2295,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0094,
+      "target_weight": 0.0092,
       "current_weight": 0.0,
-      "notional_delta": 939.15,
-      "reason": "buying on negative news flow \u2014 \"Musk's Net Worth Down By More Than $600 Billion as SpaceX, Tesla Woes Mount\" \u00b7 underweight by 0.94% vs target \u2014 add",
+      "notional_delta": 919.16,
+      "reason": "buying on negative news flow \u2014 \"Musk's Net Worth Down By More Than $600 Billion as SpaceX, Tesla Woes Mount\" \u00b7 underweight by 0.92% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.47%",
         "theme=EV & Clean Transport",
@@ -2387,10 +2387,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-12T22:12:58+00:00",
-      "v": 101331.94
-    },
     {
       "t": "2026-06-12T23:56:57+00:00",
       "v": 101488.98
@@ -4386,6 +4382,10 @@
     {
       "t": "2026-07-26T14:12:39+00:00",
       "v": 99922.37
+    },
+    {
+      "t": "2026-07-26T15:34:39+00:00",
+      "v": 99922.37
     }
   ],
   "breaking_news": [
@@ -4394,7 +4394,7 @@
       "summary": "The United States will slap taxes of 10% to 12.5% on imports from 60 countries accounting for 99% of U.S. imports, charging that they have inadequately enforced bans on goods produced by forced labor.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/g-s1-135388/trump-tariffs-trade-country",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4403,7 +4403,7 @@
       "summary": "The Justice Department is dropping the subpoenas it filed demanding grand jury testimony and phone records from <em>New York Times</em> journalists after sharp questioning Thursday from a federal judge.<br /><br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/23/nx-s1-5905732/nyt-subpoenas-trump-air-force-one-plane-qatar-security",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4412,7 +4412,7 @@
       "summary": "Australia and the European Union were among U.S. trade partners who criticized the tariffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906301/us-global-trump-tariffs-reaction",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4421,7 +4421,7 @@
       "summary": "A dozen states and the Writers Guild of America had challenged the merger.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/24/nx-s1-5906818/paramount-warner-bros-merger-pause-lawsuits",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4430,7 +4430,7 @@
       "summary": "Trump's determination to find new legal justifications for his tariffs threatens to prolong the uncertainty facing the U.S. and global economies.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/25/nx-s1-5905692/trump-tariffs-economy-inflation",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4439,7 +4439,7 @@
       "summary": "An NPR business correspondent explains how to cover the complex story of how small businesses are coping with tariffs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/25/nx-s1-5900891/president-trump-just-implemented-new-tariffs-how-are-small-businesses-coping",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4448,7 +4448,7 @@
       "summary": "A year after President Trump signed a law ending six decades of federal funding of public media, it's a time of reinvention, innovation and clear anxiety at public tv and radio stations nationwide.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/26/nx-s1-5884022/pbs-npr-public-radio-tv-funding-trump",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4457,7 +4457,7 @@
       "summary": "Oil prices surpassed $100 a barrel last week. NPR's Ayesha Rascoe speaks to Bob McNally, founder of the research firm Rapidan Energy Group, about how the Iran war is disrupting oil supplies.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/26/nx-s1-5905738/oil-prices-are-climbing-again-heres-why-this-time-could-be-different",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4466,7 +4466,7 @@
       "summary": "US military says it disabled a tanker that was attempting to evade the American blockade on Iranian ports.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj9d27v70j1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4475,7 +4475,7 @@
       "summary": "Protests have continued over Zelensky's decision to dismiss Mykhailo Fedorov, and some commentators believe he has been damaged politically.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1d1gz3n99ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4484,7 +4484,7 @@
       "summary": "The event, attended by prominent members of the Ukrainian defence industry, was hit by ballistic missiles in the middle of the day.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj637zd1k1ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4493,7 +4493,7 @@
       "summary": "The CJP protest has been the most visible expression of public anger against PM Narendra Modi's government in recent years.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cdx828gj5xko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4502,7 +4502,7 @@
       "summary": "The event celebrated press freedom after the first dinner was cancelled by a shooting in April.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cd7le4ylev2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4511,7 +4511,7 @@
       "summary": "More than 330,000 people have now been evacuated from wildfires across France and Spain.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/clyj8k4nn5jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4520,7 +4520,7 @@
       "summary": "The latest attacks come two days after a clash between settlers and Palestinians near the village of Tell, which left four Palestinians and two Israelis dead.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cjrv77gl4deo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4529,7 +4529,7 @@
       "summary": "A police manhunt is under way after a suspect rammed a car into a crowd at a Pride event in the German capital on Saturday night.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cevmdxz4872o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:43+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4538,7 +4538,7 @@
       "summary": "While the US tariffs imposed on the UK are effectively unchanged, other countries now have a better deal.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9v4ymwddwgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:42+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4547,7 +4547,7 @@
       "summary": "Until a judge reaches a final verdict \u2013 or until 1 June 2027 \u2013 the Hollywood studios will remain completely separate, competing operations.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c8en74yz5e7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:42+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4556,7 +4556,7 @@
       "summary": "The US president says fines against Google, as well as Apple, Meta and Amazon, should be \"entirely reversed.\"",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvgjenp4680o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:42+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4565,7 +4565,7 @@
       "summary": "Hugging Face said the hack was done at superhuman speed by an AI with little or no human guidance.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cd9w22n9e4go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-07-26T14:12:42+00:00",
+      "published_utc": "2026-07-26T15:34:44+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     }
