@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-01T04:47:22+00:00",
+  "generated_at_utc": "2026-08-01T07:20:22+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 758,
-  "last_success_utc": "2026-08-01T01:20:22+00:00",
+  "cycle_count": 759,
+  "last_success_utc": "2026-08-01T04:47:22+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -541,14 +541,14 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 70.1,
-      "raw_score": 70.91,
-      "band": "strong_buy",
-      "weight": 0.1502,
+      "score": 69.53,
+      "raw_score": 70.33,
+      "band": "buy",
+      "weight": 0.1484,
       "confidence": 1.0,
       "components": {
         "momentum": 57.47,
-        "sentiment": 98.0,
+        "sentiment": 96.08,
         "volume": 65.08,
         "policy": 55.0,
         "volatility_penalty": 0.8
@@ -557,17 +557,33 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 63.9,
-      "raw_score": 64.81,
+      "score": 62.4,
+      "raw_score": 63.31,
       "band": "buy",
-      "weight": 0.1297,
+      "weight": 0.1247,
       "confidence": 1.0,
       "components": {
         "momentum": 67.9,
-        "sentiment": 75.0,
+        "sentiment": 70.0,
         "volume": 50.73,
         "policy": 50.0,
         "volatility_penalty": 0.91
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 61.85,
+      "raw_score": 62.8,
+      "band": "buy",
+      "weight": 0.1167,
+      "confidence": 0.9,
+      "components": {
+        "momentum": 58.2,
+        "sentiment": 75.0,
+        "volume": 60.11,
+        "policy": 50.0,
+        "volatility_penalty": 0.95
       }
     },
     {
@@ -587,32 +603,16 @@
       }
     },
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 59.34,
-      "raw_score": 60.3,
-      "band": "buy",
-      "weight": 0.1059,
-      "confidence": 0.85,
-      "components": {
-        "momentum": 58.2,
-        "sentiment": 66.66,
-        "volume": 60.11,
-        "policy": 50.0,
-        "volatility_penalty": 0.95
-      }
-    },
-    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
-      "score": 50.43,
-      "raw_score": 64.73,
+      "score": 53.16,
+      "raw_score": 67.46,
       "band": "starter",
-      "weight": 0.0848,
+      "weight": 0.0939,
       "confidence": 1.0,
       "components": {
         "momentum": 55.85,
-        "sentiment": 90.91,
+        "sentiment": 100.0,
         "volume": 48.1,
         "policy": 55.0,
         "volatility_penalty": 14.3
@@ -637,15 +637,15 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 48.53,
-      "raw_score": 61.04,
+      "score": 47.95,
+      "raw_score": 60.46,
       "band": "starter",
-      "weight": 0.0784,
+      "weight": 0.0765,
       "confidence": 1.0,
       "components": {
         "momentum": 55.05,
-        "sentiment": 73.34,
-        "volume": 57.61,
+        "sentiment": 71.43,
+        "volume": 57.57,
         "policy": 55.0,
         "volatility_penalty": 12.51
       }
@@ -653,15 +653,15 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 45.03,
-      "raw_score": 56.13,
+      "score": 45.02,
+      "raw_score": 56.12,
       "band": "starter",
       "weight": 0.0651,
       "confidence": 0.95,
       "components": {
         "momentum": 37.91,
         "sentiment": 80.0,
-        "volume": 59.81,
+        "volume": 59.76,
         "policy": 50.0,
         "volatility_penalty": 11.1
       }
@@ -718,16 +718,17 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0532,
+      "target_weight": 0.0526,
       "current_weight": 0.0507,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"UBS Maintains Buy on Amazon.com, Raises Price Target to $318\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on legal risk (negative) \u2014 \"Amazon's 'Wild Caught' and 'Sustainable' Seafood Labels Are Just Greenwashing, New Lawsuit Claims\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=12.54%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 70.1 (strong_buy), contribution 83.6",
+        "theme 'Consumer Discretionary' score 69.5 (buy), contribution 83.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -747,14 +748,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0209,
+      "target_weight": 0.0203,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Michael Burry Just Turned His Guns on Nvidia, Micron and SOXX \u2014 ETF Investors Are Watching the Fallout\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.36%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 48.5 (starter), contribution 54.6",
+        "theme 'AI & Compute' score 48.0 (starter), contribution 54.1",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -762,15 +763,15 @@
     },
     {
       "symbol": "BA",
-      "action": "REDUCE",
-      "target_weight": 0.0396,
+      "action": "HOLD",
+      "target_weight": 0.0435,
       "current_weight": 0.0475,
-      "notional_delta": -787.31,
-      "reason": "trimming on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 overweight by 0.79% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.67%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.3 (buy), contribution 69.4",
+        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 71.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -793,14 +794,14 @@
     {
       "symbol": "COP",
       "action": "HOLD",
-      "target_weight": 0.0433,
+      "target_weight": 0.0416,
       "current_weight": 0.0425,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.26%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 58.0"
+        "theme 'Oil & Gas' score 62.4 (buy), contribution 56.5"
       ],
       "theme_key": "oil_gas"
     },
@@ -820,14 +821,14 @@
     {
       "symbol": "CVX",
       "action": "HOLD",
-      "target_weight": 0.0463,
+      "target_weight": 0.0446,
       "current_weight": 0.0449,
       "notional_delta": 0.0,
       "reason": "holding on earnings beat (positive) \u2014 \"Exxon Mobil Misses Profit Mark After Refinery Maintenance Blunts Oil Price Windfall\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.59%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 62.2",
+        "theme 'Oil & Gas' score 62.4 (buy), contribution 60.7",
         "news_source=benzinga",
         "event=earnings beat",
         "news_sentiment=+0.20"
@@ -853,14 +854,14 @@
     {
       "symbol": "F",
       "action": "HOLD",
-      "target_weight": 0.0306,
+      "target_weight": 0.0338,
       "current_weight": 0.0295,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Ford Motor Stock Dips Friday: What's Driving the Post-Earnings Reset?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 50.4 (starter), contribution 74.2",
+        "theme 'EV & Clean Transport' score 53.2 (starter), contribution 77.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -876,7 +877,7 @@
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 45.0 (starter), contribution 69.6",
+        "theme 'Clean Energy' score 45.0 (starter), contribution 69.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -901,28 +902,28 @@
     {
       "symbol": "GD",
       "action": "HOLD",
-      "target_weight": 0.0311,
+      "target_weight": 0.0344,
       "current_weight": 0.0343,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.17%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.3 (buy), contribution 54.4"
+        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 56.9"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "GM",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0377,
       "current_weight": 0.0364,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"'GM to launch new in-vehicle AI system later this year' - CNBC\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 50.4 (starter), contribution 83.1",
+        "theme 'EV & Clean Transport' score 53.2 (starter), contribution 85.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -931,14 +932,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0285,
+      "target_weight": 0.0279,
       "current_weight": 0.0303,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Wonder Boy Blowup Sparks Massive Semiconductor Rally; Kospi Up 18%; Amazon Helps, Apple Disappoints\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=7.08%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 48.5 (starter), contribution 74.7",
+        "theme 'AI & Compute' score 48.0 (starter), contribution 74.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -977,15 +978,15 @@
     },
     {
       "symbol": "LCID",
-      "action": "HOLD",
-      "target_weight": 0.0198,
+      "action": "BUY",
+      "target_weight": 0.0223,
       "current_weight": 0.0161,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Lucid Stock Holds Above $7 Support: Can Prince Alwaleed's Stake Fuel a Rebound?\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 612.97,
+      "reason": "buying on positive news flow \u2014 \"Lucid Stock Holds Above $7 Support: Can Prince Alwaleed's Stake Fuel a Rebound?\" \u00b7 underweight by 0.62% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-9.45%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 50.4 (starter), contribution 48.0",
+        "theme 'EV & Clean Transport' score 53.2 (starter), contribution 50.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1010,7 +1011,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0528,
       "notional_delta": -5226.27,
-      "reason": "exiting on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Trump Says US Hasn't Approved Ukraine's Patriot Missile Production Request Despite Zelenskyy Promise: 'They Can Someday Turn on You'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=7.41%",
         "theme=Defense & Aerospace",
@@ -1037,14 +1038,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0472,
+      "target_weight": 0.0467,
       "current_weight": 0.0432,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Mizuho Maintains Neutral on McDonald's, Lowers Price Target to $290\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 70.1 (strong_buy), contribution 74.2",
+        "theme 'Consumer Discretionary' score 69.5 (buy), contribution 73.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1098,14 +1099,14 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.029,
+      "target_weight": 0.0283,
       "current_weight": 0.0343,
-      "notional_delta": -523.37,
-      "reason": "trimming on negative news flow \u2014 \"Fed's Warsh Sparks Bond Selloff, Apple Warns of '100-Year' Memory Flood: What Moved Markets This Week\" \u00b7 overweight by 0.53% vs target \u2014 trim",
+      "notional_delta": -592.7,
+      "reason": "trimming on negative news flow \u2014 \"Fed's Warsh Sparks Bond Selloff, Apple Warns of '100-Year' Memory Flood: What Moved Markets This Week\" \u00b7 overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.44%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 48.5 (starter), contribution 76.0",
+        "theme 'AI & Compute' score 48.0 (starter), contribution 75.4",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1275,14 +1276,14 @@
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.0352,
+      "target_weight": 0.0388,
       "current_weight": 0.04,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Pratt & Whitney Receives ~$1.3B Contract For F135 Engine Spare Parts\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.47%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.3 (buy), contribution 61.7",
+        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 64.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1304,14 +1305,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0497,
+      "target_weight": 0.0491,
       "current_weight": 0.0488,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"BTIG Reiterates Buy on Starbucks, Maintains $115 Price Target\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.74%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 70.1 (strong_buy), contribution 78.2",
+        "theme 'Consumer Discretionary' score 69.5 (buy), contribution 77.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1421,14 +1422,14 @@
     {
       "symbol": "XOM",
       "action": "HOLD",
-      "target_weight": 0.04,
+      "target_weight": 0.0384,
       "current_weight": 0.0396,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.33%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 53.7",
+        "theme 'Oil & Gas' score 62.4 (buy), contribution 52.2",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1471,16 +1472,17 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0532,
+      "target_weight": 0.0526,
       "current_weight": 0.0507,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"UBS Maintains Buy on Amazon.com, Raises Price Target to $318\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on legal risk (negative) \u2014 \"Amazon's 'Wild Caught' and 'Sustainable' Seafood Labels Are Just Greenwashing, New Lawsuit Claims\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=12.54%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 70.1 (strong_buy), contribution 83.6",
+        "theme 'Consumer Discretionary' score 69.5 (buy), contribution 83.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1506,14 +1508,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0209,
+      "target_weight": 0.0203,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Michael Burry Just Turned His Guns on Nvidia, Micron and SOXX \u2014 ETF Investors Are Watching the Fallout\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.36%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 48.5 (starter), contribution 54.6",
+        "theme 'AI & Compute' score 48.0 (starter), contribution 54.1",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1524,15 +1526,15 @@
     },
     {
       "symbol": "BA",
-      "action": "REDUCE",
-      "target_weight": 0.0396,
+      "action": "HOLD",
+      "target_weight": 0.0435,
       "current_weight": 0.0475,
-      "notional_delta": -787.31,
-      "reason": "trimming on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 overweight by 0.79% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.67%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.3 (buy), contribution 69.4",
+        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 71.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1561,14 +1563,14 @@
     {
       "symbol": "COP",
       "action": "HOLD",
-      "target_weight": 0.0433,
+      "target_weight": 0.0416,
       "current_weight": 0.0425,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.26%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 58.0"
+        "theme 'Oil & Gas' score 62.4 (buy), contribution 56.5"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1594,14 +1596,14 @@
     {
       "symbol": "CVX",
       "action": "HOLD",
-      "target_weight": 0.0463,
+      "target_weight": 0.0446,
       "current_weight": 0.0449,
       "notional_delta": 0.0,
       "reason": "holding on earnings beat (positive) \u2014 \"Exxon Mobil Misses Profit Mark After Refinery Maintenance Blunts Oil Price Windfall\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.59%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 62.2",
+        "theme 'Oil & Gas' score 62.4 (buy), contribution 60.7",
         "news_source=benzinga",
         "event=earnings beat",
         "news_sentiment=+0.20"
@@ -1633,14 +1635,14 @@
     {
       "symbol": "F",
       "action": "HOLD",
-      "target_weight": 0.0306,
+      "target_weight": 0.0338,
       "current_weight": 0.0295,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Ford Motor Stock Dips Friday: What's Driving the Post-Earnings Reset?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 50.4 (starter), contribution 74.2",
+        "theme 'EV & Clean Transport' score 53.2 (starter), contribution 77.0",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1659,7 +1661,7 @@
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 45.0 (starter), contribution 69.6",
+        "theme 'Clean Energy' score 45.0 (starter), contribution 69.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1690,14 +1692,14 @@
     {
       "symbol": "GD",
       "action": "HOLD",
-      "target_weight": 0.0311,
+      "target_weight": 0.0344,
       "current_weight": 0.0343,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.17%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.3 (buy), contribution 54.4"
+        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 56.9"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1707,14 +1709,14 @@
     {
       "symbol": "GM",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0377,
       "current_weight": 0.0364,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"'GM to launch new in-vehicle AI system later this year' - CNBC\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 50.4 (starter), contribution 83.1",
+        "theme 'EV & Clean Transport' score 53.2 (starter), contribution 85.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1726,14 +1728,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0285,
+      "target_weight": 0.0279,
       "current_weight": 0.0303,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Wonder Boy Blowup Sparks Massive Semiconductor Rally; Kospi Up 18%; Amazon Helps, Apple Disappoints\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=7.08%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 48.5 (starter), contribution 74.7",
+        "theme 'AI & Compute' score 48.0 (starter), contribution 74.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1781,15 +1783,15 @@
     },
     {
       "symbol": "LCID",
-      "action": "HOLD",
-      "target_weight": 0.0198,
+      "action": "BUY",
+      "target_weight": 0.0223,
       "current_weight": 0.0161,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Lucid Stock Holds Above $7 Support: Can Prince Alwaleed's Stake Fuel a Rebound?\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 612.97,
+      "reason": "buying on positive news flow \u2014 \"Lucid Stock Holds Above $7 Support: Can Prince Alwaleed's Stake Fuel a Rebound?\" \u00b7 underweight by 0.62% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-9.45%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 50.4 (starter), contribution 48.0",
+        "theme 'EV & Clean Transport' score 53.2 (starter), contribution 50.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1820,7 +1822,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0528,
       "notional_delta": -5226.27,
-      "reason": "exiting on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Trump Says US Hasn't Approved Ukraine's Patriot Missile Production Request Despite Zelenskyy Promise: 'They Can Someday Turn on You'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=7.41%",
         "theme=Defense & Aerospace",
@@ -1853,14 +1855,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0472,
+      "target_weight": 0.0467,
       "current_weight": 0.0432,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Mizuho Maintains Neutral on McDonald's, Lowers Price Target to $290\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 70.1 (strong_buy), contribution 74.2",
+        "theme 'Consumer Discretionary' score 69.5 (buy), contribution 73.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1926,14 +1928,14 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.029,
+      "target_weight": 0.0283,
       "current_weight": 0.0343,
-      "notional_delta": -523.37,
-      "reason": "trimming on negative news flow \u2014 \"Fed's Warsh Sparks Bond Selloff, Apple Warns of '100-Year' Memory Flood: What Moved Markets This Week\" \u00b7 overweight by 0.53% vs target \u2014 trim",
+      "notional_delta": -592.7,
+      "reason": "trimming on negative news flow \u2014 \"Fed's Warsh Sparks Bond Selloff, Apple Warns of '100-Year' Memory Flood: What Moved Markets This Week\" \u00b7 overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.44%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 48.5 (starter), contribution 76.0",
+        "theme 'AI & Compute' score 48.0 (starter), contribution 75.4",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -2139,14 +2141,14 @@
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.0352,
+      "target_weight": 0.0388,
       "current_weight": 0.04,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Pratt & Whitney Receives ~$1.3B Contract For F135 Engine Spare Parts\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.47%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 59.3 (buy), contribution 61.7",
+        "theme 'Defense & Aerospace' score 61.9 (buy), contribution 64.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2174,14 +2176,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0497,
+      "target_weight": 0.0491,
       "current_weight": 0.0488,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"BTIG Reiterates Buy on Starbucks, Maintains $115 Price Target\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.74%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 70.1 (strong_buy), contribution 78.2",
+        "theme 'Consumer Discretionary' score 69.5 (buy), contribution 77.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2315,14 +2317,14 @@
     {
       "symbol": "XOM",
       "action": "HOLD",
-      "target_weight": 0.04,
+      "target_weight": 0.0384,
       "current_weight": 0.0396,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.33%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 63.9 (buy), contribution 53.7",
+        "theme 'Oil & Gas' score 62.4 (buy), contribution 52.2",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -2350,10 +2352,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-20T22:54:47+00:00",
-      "v": 102913.11
-    },
     {
       "t": "2026-06-21T00:19:41+00:00",
       "v": 102913.11
@@ -4349,6 +4347,10 @@
     {
       "t": "2026-08-01T04:47:21+00:00",
       "v": 99039.51
+    },
+    {
+      "t": "2026-08-01T07:20:19+00:00",
+      "v": 99039.51
     }
   ],
   "breaking_news": [
@@ -4357,7 +4359,7 @@
       "summary": "The bankruptcy rate has risen about 48% between 2022 and 2025, although it's still below pre-pandemic levels.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/29/nx-s1-5896065/personal-bankruptcy-rates-rising",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4366,7 +4368,7 @@
       "summary": "The Federal Reserve left its benchmark interest rate unchanged Wednesday.  Fed policymakers say they remain committed to curbing stubborn inflation.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/29/nx-s1-5910558/federal-reserve-interest-rates-inflation",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4375,7 +4377,7 @@
       "summary": "Housing has long been the largest source of wealth for middle income families. But many renters cannot afford to buy as housing prices soar, which could fuel a generational divide.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5910711/renter-owner-wealth-gap",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4384,7 +4386,7 @@
       "summary": "The U.S. economy grew at an annual rate of 1.5% in the spring, according to the Commerce Department. That's a modest slowdown from the previous quarter \u2014 but consumer spending picked up steam.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913230/economy-gdp-inflation",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4393,7 +4395,7 @@
       "summary": "European soccer associations said they would boycott the World Cup unless FIFA reverses a controversial deal to sell minority stakes to the marquee soccer tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913664/world-cup-fifa-uefa-gianni-infantino",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4402,7 +4404,7 @@
       "summary": "Solo living, solo travel, and solo dining are all being embraced as more adults are choosing to remain single. Many Americans aren't interested in dating, and being single is a symbol of autonomy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/g-s1-136079/single-adult-solo-choice",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4411,7 +4413,7 @@
       "summary": "The 30-year fixed-rate mortgage reached 6.66% on average Thursday.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913851/mortgage-rates-one-year-high-july-2026",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4420,52 +4422,16 @@
       "summary": "FIFA abandoned a plan to create a commercial venture and then sell stakes to minority investors, just days after unveiling it. The plan drew sharp condemnation \u2014 and a boycott from European nations.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/31/nx-s1-5915820/fifa-world-cup-gianni-infantino",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "Spain sending troops as thousands enter enclave of Ceuta from Morocco",
-      "summary": "At least 18 people drown as migrants try to swim to Spanish territory amid scenes of chaos at the border.",
+      "headline": "India's 'cockroach' protesters have wounds consistent with pellet-gun fire, say experts",
+      "summary": "Ballistic experts say the dozens of tiny round punctures are tell-tale signs of pellet gun injuries.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cg4drwzkrkxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "UK rapper Yung Filly found not guilty of raping woman after Australian show",
-      "summary": "The YouTuber has been found guilty for two counts of assault over the 2024 incident in Perth.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/crrv7vk0knro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Fifa says 'nobody selling football' as plan continues",
-      "summary": "Football's governing body Fifa plans to continue the consultation process after Uefa threatens to boycott World Cups.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/sport/football/articles/c79glnx1y55o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Hundreds escape Greek wildfire by sea as blazes continue across Europe",
-      "summary": "Around 500 people, mostly tourists, are evacuated by boat from Agios Vasileios after becoming trapped.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c0kmzx8vpv4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Peru's ex-president leaves jail after 15-year jail term for corruption overturned",
-      "summary": "Ollanta Humala had been convicted of money laundering offences alongside his wife in 2025.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cx2j9nj88rro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c74gwvygkjdo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4474,17 +4440,44 @@
       "summary": "The bodies of two other climbers have already been recovered from the mountain, while others are still missing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cddjz1r01l8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Bowen: Plan for Hamas to disarm faces big obstacles, yet it offers rare hope for Gaza",
-      "summary": "The realities of politics, war, zero trust, the deaths of thousands and the destruction of Gaza will make any agreement very complicated.",
+      "headline": "Hundreds escape Greek wildfire by sea as blazes continue across Europe",
+      "summary": "Around 500 people, mostly tourists, are evacuated by boat from Agios Vasileios after becoming trapped.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c2dkje4p4klo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c0kmzx8vpv4o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Peru's ex-president leaves jail after 15-year jail term for corruption overturned",
+      "summary": "Ollanta Humala had been convicted of money laundering offences alongside his wife in 2025.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cx2j9nj88rro?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-08-01T07:20:22+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Russian strikes on Kyiv kill at least nine, Ukraine officials say",
+      "summary": "The attack comes as Moscow escalates deadly ballistic missile attacks on the Ukrainian capital.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/ce973yvk7pko?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-08-01T07:20:22+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Israeli West Bank settler tells BBC attacks on Palestinians are justified as revenge",
+      "summary": "Settler violence against Palestinians is on the rise in the West Bank, as settlements and outposts expand.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c4g4djgdyk2o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-08-01T07:20:22+00:00",
+      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -4492,8 +4485,17 @@
       "summary": "Spain said most had returned to Morocco by Friday evening, as Italy suspended its Schengen agreement on free movement with Madrid.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2kp639yx4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Fifa scraps controversial World Cup investment plan",
+      "summary": "Football's world governing body Fifa abandons plans to sell off stakes in its major competitions after widespread opposition to president Gianni Infantino's proposal.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/sport/football/articles/czekr6kn58po?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-08-01T07:20:22+00:00",
+      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -4501,7 +4503,7 @@
       "summary": "Could you live communally in a disused building in exchange for a heavily discounted rent? Property guardians show us around.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj4kvge1pyvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4510,7 +4512,7 @@
       "summary": "The price of unleaded hits 160p a litre, according to motoring group the RAC, as oil prices remain elevated.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4519,7 +4521,7 @@
       "summary": "Indian strawberry farmers rely on varieties imported from the US and Europe, but that could change.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c8x274xxxpwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4528,7 +4530,7 @@
       "summary": "The new chancellor pledged to move money and power out of Westminster, and into every postcode around Britain.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cjd4yz35x8go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T04:47:22+00:00",
+      "published_utc": "2026-08-01T07:20:22+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
