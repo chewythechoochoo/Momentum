@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-01T15:14:22+00:00",
+  "generated_at_utc": "2026-08-01T16:26:41+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 764,
-  "last_success_utc": "2026-08-01T14:02:49+00:00",
+  "cycle_count": 765,
+  "last_success_utc": "2026-08-01T15:14:22+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -541,14 +541,14 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 67.98,
-      "raw_score": 68.78,
+      "score": 66.7,
+      "raw_score": 67.5,
       "band": "buy",
-      "weight": 0.1433,
+      "weight": 0.139,
       "confidence": 1.0,
       "components": {
         "momentum": 57.47,
-        "sentiment": 90.91,
+        "sentiment": 86.66,
         "volume": 65.08,
         "policy": 55.0,
         "volatility_penalty": 0.8
@@ -573,14 +573,14 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 55.74,
-      "raw_score": 59.28,
-      "band": "buy",
-      "weight": 0.0897,
-      "confidence": 0.75,
+      "score": 52.74,
+      "raw_score": 56.28,
+      "band": "starter",
+      "weight": 0.0786,
+      "confidence": 0.7,
       "components": {
         "momentum": 49.24,
-        "sentiment": 80.0,
+        "sentiment": 70.0,
         "volume": 52.91,
         "policy": 50.0,
         "volatility_penalty": 3.53
@@ -619,6 +619,22 @@
       }
     },
     {
+      "key": "oil_gas",
+      "name": "Oil & Gas",
+      "score": 47.4,
+      "raw_score": 48.31,
+      "band": "starter",
+      "weight": 0.0653,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 67.9,
+        "sentiment": 20.0,
+        "volume": 50.73,
+        "policy": 50.0,
+        "volatility_penalty": 0.91
+      }
+    },
+    {
       "key": "ai_compute",
       "name": "AI & Compute",
       "score": 41.52,
@@ -632,22 +648,6 @@
         "volume": 57.57,
         "policy": 55.0,
         "volatility_penalty": 12.51
-      }
-    },
-    {
-      "key": "oil_gas",
-      "name": "Oil & Gas",
-      "score": 41.4,
-      "raw_score": 42.31,
-      "band": "starter",
-      "weight": 0.0506,
-      "confidence": 0.85,
-      "components": {
-        "momentum": 67.9,
-        "sentiment": 0.0,
-        "volume": 50.73,
-        "policy": 50.0,
-        "volatility_penalty": 0.91
       }
     },
     {
@@ -689,7 +689,7 @@
       "raw_score": 23.45,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.9,
+      "confidence": 0.85,
       "components": {
         "momentum": 14.74,
         "sentiment": 0.0,
@@ -718,14 +718,14 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0508,
+      "target_weight": 0.0494,
       "current_weight": 0.0507,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"SK Hynix, Meta, Apple, and More: 5 Stocks Investors Couldn't Stop Buzzing About this Week\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=12.54%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 68.0 (buy), contribution 81.5",
+        "theme 'Consumer Discretionary' score 66.7 (buy), contribution 80.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -793,14 +793,14 @@
     {
       "symbol": "COP",
       "action": "REDUCE",
-      "target_weight": 0.0169,
+      "target_weight": 0.0218,
       "current_weight": 0.0425,
-      "notional_delta": -2531.46,
-      "reason": "overweight by 2.56% vs target \u2014 trim",
+      "notional_delta": -2046.17,
+      "reason": "overweight by 2.07% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.26%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.4 (starter), contribution 35.5"
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 41.5"
       ],
       "theme_key": "oil_gas"
     },
@@ -820,16 +820,14 @@
     {
       "symbol": "CVX",
       "action": "REDUCE",
-      "target_weight": 0.0188,
+      "target_weight": 0.024,
       "current_weight": 0.0449,
-      "notional_delta": -2580.84,
-      "reason": "trimming on mixed news flow \u2014 \"Chevron CEO Says Co. Is In Discussions With A Number Of Parties To Be Involved In Potential Pipelines Out Of Iraq\" \u00b7 overweight by 2.61% vs target \u2014 trim",
+      "notional_delta": -2065.83,
+      "reason": "overweight by 2.09% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.59%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.4 (starter), contribution 39.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 45.7"
       ],
       "theme_key": "oil_gas"
     },
@@ -853,13 +851,11 @@
       "target_weight": 0.0332,
       "current_weight": 0.0295,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Ford Motor Stock Dips Friday: What's Driving the Post-Earnings Reset?\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.7 (starter), contribution 76.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 52.7 (starter), contribution 76.5"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1027,14 +1023,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.045,
+      "target_weight": 0.0436,
       "current_weight": 0.0432,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Mizuho Maintains Neutral on McDonald's, Lowers Price Target to $290\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 68.0 (buy), contribution 72.1",
+        "theme 'Consumer Discretionary' score 66.7 (buy), contribution 70.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1058,17 +1054,14 @@
     {
       "symbol": "MRNA",
       "action": "REDUCE",
-      "target_weight": 0.0233,
+      "target_weight": 0.0201,
       "current_weight": 0.0347,
-      "notional_delta": -1133.48,
-      "reason": "trimming on earnings beat (positive) \u2014 \"Moderna Burns Cash, Suffers Fresh Vaccine Setback\" \u00b7 overweight by 1.14% vs target \u2014 trim",
+      "notional_delta": -1450.41,
+      "reason": "overweight by 1.46% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.7 (buy), contribution 44.0",
-        "news_source=benzinga",
-        "event=earnings beat",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 52.7 (starter), contribution 41.0"
       ],
       "theme_key": "biotech"
     },
@@ -1218,14 +1211,14 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0356,
+      "target_weight": 0.0315,
       "current_weight": 0.0466,
-      "notional_delta": -1089.96,
-      "reason": "overweight by 1.10% vs target \u2014 trim",
+      "notional_delta": -1496.02,
+      "reason": "overweight by 1.51% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.7 (buy), contribution 67.3"
+        "theme 'Biotech & Pharma' score 52.7 (starter), contribution 64.3"
       ],
       "theme_key": "biotech"
     },
@@ -1289,14 +1282,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0474,
+      "target_weight": 0.046,
       "current_weight": 0.0488,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Live On CNBC, Stephanie Link Announces Bought More Starbucks\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.74%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 68.0 (buy), contribution 76.0",
+        "theme 'Consumer Discretionary' score 66.7 (buy), contribution 74.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1376,14 +1369,14 @@
     {
       "symbol": "VRTX",
       "action": "REDUCE",
-      "target_weight": 0.0308,
+      "target_weight": 0.0271,
       "current_weight": 0.0403,
-      "notional_delta": -938.29,
-      "reason": "overweight by 0.95% vs target \u2014 trim",
+      "notional_delta": -1304.74,
+      "reason": "overweight by 1.32% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.84%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.7 (buy), contribution 58.3"
+        "theme 'Biotech & Pharma' score 52.7 (starter), contribution 55.3"
       ],
       "theme_key": "biotech"
     },
@@ -1404,14 +1397,14 @@
     {
       "symbol": "XOM",
       "action": "REDUCE",
-      "target_weight": 0.0148,
+      "target_weight": 0.0195,
       "current_weight": 0.0396,
-      "notional_delta": -2453.25,
-      "reason": "trimming on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 overweight by 2.48% vs target \u2014 trim",
+      "notional_delta": -1987.77,
+      "reason": "trimming on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 overweight by 2.01% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.33%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.4 (starter), contribution 31.2",
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 37.2",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1453,14 +1446,14 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0508,
+      "target_weight": 0.0494,
       "current_weight": 0.0507,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"SK Hynix, Meta, Apple, and More: 5 Stocks Investors Couldn't Stop Buzzing About this Week\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=12.54%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 68.0 (buy), contribution 81.5",
+        "theme 'Consumer Discretionary' score 66.7 (buy), contribution 80.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1543,14 +1536,14 @@
     {
       "symbol": "COP",
       "action": "REDUCE",
-      "target_weight": 0.0169,
+      "target_weight": 0.0218,
       "current_weight": 0.0425,
-      "notional_delta": -2531.46,
-      "reason": "overweight by 2.56% vs target \u2014 trim",
+      "notional_delta": -2046.17,
+      "reason": "overweight by 2.07% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.26%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.4 (starter), contribution 35.5"
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 41.5"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1576,16 +1569,14 @@
     {
       "symbol": "CVX",
       "action": "REDUCE",
-      "target_weight": 0.0188,
+      "target_weight": 0.024,
       "current_weight": 0.0449,
-      "notional_delta": -2580.84,
-      "reason": "trimming on mixed news flow \u2014 \"Chevron CEO Says Co. Is In Discussions With A Number Of Parties To Be Involved In Potential Pipelines Out Of Iraq\" \u00b7 overweight by 2.61% vs target \u2014 trim",
+      "notional_delta": -2065.83,
+      "reason": "overweight by 2.09% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.59%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.4 (starter), contribution 39.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 45.7"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1615,13 +1606,11 @@
       "target_weight": 0.0332,
       "current_weight": 0.0295,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Ford Motor Stock Dips Friday: What's Driving the Post-Earnings Reset?\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.7 (starter), contribution 76.5",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 52.7 (starter), contribution 76.5"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1825,14 +1814,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.045,
+      "target_weight": 0.0436,
       "current_weight": 0.0432,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Mizuho Maintains Neutral on McDonald's, Lowers Price Target to $290\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 68.0 (buy), contribution 72.1",
+        "theme 'Consumer Discretionary' score 66.7 (buy), contribution 70.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1862,17 +1851,14 @@
     {
       "symbol": "MRNA",
       "action": "REDUCE",
-      "target_weight": 0.0233,
+      "target_weight": 0.0201,
       "current_weight": 0.0347,
-      "notional_delta": -1133.48,
-      "reason": "trimming on earnings beat (positive) \u2014 \"Moderna Burns Cash, Suffers Fresh Vaccine Setback\" \u00b7 overweight by 1.14% vs target \u2014 trim",
+      "notional_delta": -1450.41,
+      "reason": "overweight by 1.46% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.7 (buy), contribution 44.0",
-        "news_source=benzinga",
-        "event=earnings beat",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 52.7 (starter), contribution 41.0"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2055,14 +2041,14 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0356,
+      "target_weight": 0.0315,
       "current_weight": 0.0466,
-      "notional_delta": -1089.96,
-      "reason": "overweight by 1.10% vs target \u2014 trim",
+      "notional_delta": -1496.02,
+      "reason": "overweight by 1.51% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.7 (buy), contribution 67.3"
+        "theme 'Biotech & Pharma' score 52.7 (starter), contribution 64.3"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2141,14 +2127,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0474,
+      "target_weight": 0.046,
       "current_weight": 0.0488,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Live On CNBC, Stephanie Link Announces Bought More Starbucks\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.74%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 68.0 (buy), contribution 76.0",
+        "theme 'Consumer Discretionary' score 66.7 (buy), contribution 74.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2246,14 +2232,14 @@
     {
       "symbol": "VRTX",
       "action": "REDUCE",
-      "target_weight": 0.0308,
+      "target_weight": 0.0271,
       "current_weight": 0.0403,
-      "notional_delta": -938.29,
-      "reason": "overweight by 0.95% vs target \u2014 trim",
+      "notional_delta": -1304.74,
+      "reason": "overweight by 1.32% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.84%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 55.7 (buy), contribution 58.3"
+        "theme 'Biotech & Pharma' score 52.7 (starter), contribution 55.3"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2280,14 +2266,14 @@
     {
       "symbol": "XOM",
       "action": "REDUCE",
-      "target_weight": 0.0148,
+      "target_weight": 0.0195,
       "current_weight": 0.0396,
-      "notional_delta": -2453.25,
-      "reason": "trimming on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 overweight by 2.48% vs target \u2014 trim",
+      "notional_delta": -1987.77,
+      "reason": "trimming on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 overweight by 2.01% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.33%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 41.4 (starter), contribution 31.2",
+        "theme 'Oil & Gas' score 47.4 (starter), contribution 37.2",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -2314,10 +2300,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-21T16:18:56+00:00",
-      "v": 102913.11
-    },
     {
       "t": "2026-06-21T18:00:36+00:00",
       "v": 102913.11
@@ -4313,6 +4295,10 @@
     {
       "t": "2026-08-01T15:14:18+00:00",
       "v": 99039.47
+    },
+    {
+      "t": "2026-08-01T16:26:38+00:00",
+      "v": 99039.47
     }
   ],
   "breaking_news": [
@@ -4321,7 +4307,7 @@
       "summary": "The U.S. economy grew at an annual rate of 1.5% in the spring, according to the Commerce Department. That's a modest slowdown from the previous quarter \u2014 but consumer spending picked up steam.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913230/economy-gdp-inflation",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4330,7 +4316,7 @@
       "summary": "European soccer associations said they would boycott the World Cup unless FIFA reverses a controversial deal to sell minority stakes to the marquee soccer tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913664/world-cup-fifa-uefa-gianni-infantino",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4339,7 +4325,7 @@
       "summary": "Solo living, solo travel, and solo dining are all being embraced as more adults are choosing to remain single. Many Americans aren't interested in dating, and being single is a symbol of autonomy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/g-s1-136079/single-adult-solo-choice",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4348,7 +4334,7 @@
       "summary": "The 30-year fixed-rate mortgage reached 6.66% on average Thursday.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913851/mortgage-rates-one-year-high-july-2026",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4357,7 +4343,7 @@
       "summary": "Chevron reported its highest quarterly earnings ever. Shell had its second-biggest quarter, and ExxonMobil doubled its earnings compared with the same time last year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/31/nx-s1-5910660/big-oil-earnings-q2-2026",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4366,7 +4352,7 @@
       "summary": "FIFA abandoned a plan to create a commercial venture and then sell stakes to minority investors, just days after unveiling it. The plan drew sharp condemnation \u2014 and a boycott from European nations.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/31/nx-s1-5915820/fifa-world-cup-gianni-infantino",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4375,7 +4361,7 @@
       "summary": "OpenAI and Anthropic say their models broke into other companies' systems during testing, raising security concerns amid a heated debate over how to regulate AI.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/08/01/nx-s1-5914852/anthropic-openai-models-hack-cybersecurity",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4384,7 +4370,7 @@
       "summary": "The president's media company is offering investors early access to his Truth Social feed for up to $100,000 a month. Experts say the service may violate insider trading laws.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/08/01/nx-s1-5912219/trump-truth-social-access-insider-trading",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4393,16 +4379,7 @@
       "summary": "Ballistic experts say the dozens of tiny round punctures are tell-tale signs of pellet gun injuries.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c74gwvygkjdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Hundreds escape Greek wildfire by sea as blazes continue across Europe",
-      "summary": "Around 500 people, mostly tourists, are evacuated by boat from Agios Vasileios after becoming trapped.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c0kmzx8vpv4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4411,8 +4388,17 @@
       "summary": "Ollanta Humala had been convicted of money laundering offences alongside his wife in 2025.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2j9nj88rro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Current Ebola outbreak worst ever in DR Congo, WHO says",
+      "summary": "The current strain has so far killed 1,587 people, and there is currently no approved vaccine or treatment.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cy07qe0knvzo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-08-01T16:26:41+00:00",
+      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -4420,7 +4406,7 @@
       "summary": "The attack comes as Moscow escalates deadly ballistic missile attacks on the Ukrainian capital.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ce973yvk7pko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4429,7 +4415,7 @@
       "summary": "The renowned mountaineer was known for scaling the world's 14 highest peaks in just over six months in 2019.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/clyljq79kdko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4438,7 +4424,7 @@
       "summary": "Settler violence against Palestinians is on the rise in the West Bank, as settlements and outposts expand.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4g4djgdyk2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4447,7 +4433,7 @@
       "summary": "The governing body of European football says Fifa president Gianni Infantino has \"failed to deliver\" on promises he made when elected 10 years ago.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/sport/football/articles/c04kr2nv3v3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4456,7 +4442,7 @@
       "summary": "Italy has temporarily suspended the Schengen arrangement with Spain as Prime Minister Giorgia Meloni called scenes in Ceuta \"shocking\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2v91xn1z9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4465,7 +4451,7 @@
       "summary": "The price of unleaded hits 160p a litre, according to motoring group the RAC, as oil prices remain elevated.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4474,7 +4460,7 @@
       "summary": "Indian strawberry farmers rely on varieties imported from the US and Europe, but that could change.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c8x274xxxpwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4483,7 +4469,7 @@
       "summary": "The Chancellor said the Budget on 28 October would \u201cmeet our fiscal rules\u201d and give families \"stability\" to plan for the future.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cjd4yz35x8go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4492,7 +4478,7 @@
       "summary": "Under the terms of the deal, Argos will still operate in Sainsbury's shops, sell Habitat products, and offer Nectar points.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cpw9yrl4p2qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T15:14:22+00:00",
+      "published_utc": "2026-08-01T16:26:41+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     }
