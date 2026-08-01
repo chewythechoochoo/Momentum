@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-01T18:47:11+00:00",
+  "generated_at_utc": "2026-08-01T20:01:56+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 767,
-  "last_success_utc": "2026-08-01T17:38:22+00:00",
+  "cycle_count": 768,
+  "last_success_utc": "2026-08-01T18:47:11+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -541,30 +541,46 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 64.7,
-      "raw_score": 65.51,
+      "score": 63.54,
+      "raw_score": 64.34,
       "band": "buy",
-      "weight": 0.1323,
+      "weight": 0.1285,
       "confidence": 1.0,
       "components": {
         "momentum": 57.47,
-        "sentiment": 80.0,
+        "sentiment": 77.78,
         "volume": 65.08,
-        "policy": 55.0,
+        "policy": 50.0,
         "volatility_penalty": 0.8
+      }
+    },
+    {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 59.24,
+      "raw_score": 62.78,
+      "band": "buy",
+      "weight": 0.1141,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 49.24,
+        "sentiment": 90.0,
+        "volume": 52.91,
+        "policy": 55.0,
+        "volatility_penalty": 3.53
       }
     },
     {
       "key": "defense",
       "name": "Defense & Aerospace",
-      "score": 60.35,
-      "raw_score": 61.3,
+      "score": 57.35,
+      "raw_score": 58.3,
       "band": "buy",
-      "weight": 0.1002,
-      "confidence": 0.7,
+      "weight": 0.089,
+      "confidence": 0.65,
       "components": {
         "momentum": 58.2,
-        "sentiment": 70.0,
+        "sentiment": 60.0,
         "volume": 60.11,
         "policy": 50.0,
         "volatility_penalty": 0.95
@@ -573,65 +589,33 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 58.36,
-      "raw_score": 58.36,
-      "band": "buy",
-      "weight": 0.1112,
-      "confidence": 1.0,
+      "score": 54.86,
+      "raw_score": 54.86,
+      "band": "starter",
+      "weight": 0.0846,
+      "confidence": 0.7,
       "components": {
         "momentum": 48.54,
-        "sentiment": 75.0,
+        "sentiment": 70.0,
         "volume": 47.24,
-        "policy": 70.0,
+        "policy": 50.0,
         "volatility_penalty": 0.0
       }
     },
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 53.4,
-      "raw_score": 54.31,
+      "score": 54.4,
+      "raw_score": 55.31,
       "band": "starter",
-      "weight": 0.0781,
-      "confidence": 0.65,
+      "weight": 0.0833,
+      "confidence": 0.7,
       "components": {
         "momentum": 67.9,
-        "sentiment": 40.0,
+        "sentiment": 43.34,
         "volume": 50.73,
         "policy": 50.0,
         "volatility_penalty": 0.91
-      }
-    },
-    {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 52.66,
-      "raw_score": 66.96,
-      "band": "starter",
-      "weight": 0.0876,
-      "confidence": 0.9,
-      "components": {
-        "momentum": 55.85,
-        "sentiment": 100.0,
-        "volume": 48.1,
-        "policy": 50.0,
-        "volatility_penalty": 14.3
-      }
-    },
-    {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 49.74,
-      "raw_score": 53.28,
-      "band": "starter",
-      "weight": 0.068,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 49.24,
-        "sentiment": 60.0,
-        "volume": 52.91,
-        "policy": 50.0,
-        "volatility_penalty": 3.53
       }
     },
     {
@@ -653,14 +637,14 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 45.27,
-      "raw_score": 56.37,
+      "score": 45.0,
+      "raw_score": 56.09,
       "band": "starter",
-      "weight": 0.0676,
+      "weight": 0.0667,
       "confidence": 1.0,
       "components": {
         "momentum": 37.91,
-        "sentiment": 79.17,
+        "sentiment": 78.26,
         "volume": 59.76,
         "policy": 55.0,
         "volatility_penalty": 11.1
@@ -669,8 +653,8 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 34.02,
-      "raw_score": 46.53,
+      "score": 33.52,
+      "raw_score": 46.03,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
@@ -678,21 +662,37 @@
         "momentum": 55.05,
         "sentiment": 25.0,
         "volume": 57.57,
-        "policy": 55.0,
+        "policy": 50.0,
         "volatility_penalty": 12.51
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 25.66,
+      "raw_score": 39.96,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 55.85,
+        "sentiment": 10.0,
+        "volume": 48.1,
+        "policy": 50.0,
+        "volatility_penalty": 14.3
       }
     },
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 3.04,
-      "raw_score": 23.45,
+      "score": 13.04,
+      "raw_score": 33.45,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 0.85,
       "components": {
         "momentum": 14.74,
-        "sentiment": 0.0,
+        "sentiment": 33.34,
         "volume": 62.77,
         "policy": 50.0,
         "volatility_penalty": 20.41
@@ -706,7 +706,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 13.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.38%",
         "theme=Semiconductors (Broad)",
@@ -718,16 +718,16 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0471,
+      "target_weight": 0.0458,
       "current_weight": 0.0507,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=12.54%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.7 (buy), contribution 78.2",
+        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 77.1",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -737,7 +737,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0059,
       "notional_delta": -580.15,
-      "reason": "theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 13.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-1.75%",
         "theme=Semiconductors (Broad)"
@@ -750,58 +750,56 @@
       "target_weight": 0.0112,
       "current_weight": 0.0224,
       "notional_delta": -1111.52,
-      "reason": "trimming on negative news flow \u2014 \"Michael Burry Just Turned His Guns on Nvidia, Micron and SOXX \u2014 ETF Investors Are Watching the Fallout\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"If You Invested $1000 In Broadcom Stock 5 Years Ago, You Would Have This Much Today\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.36%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "BA",
       "action": "REDUCE",
-      "target_weight": 0.0374,
+      "target_weight": 0.0334,
       "current_weight": 0.0475,
-      "notional_delta": -1005.2,
-      "reason": "trimming on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 overweight by 1.01% vs target \u2014 trim",
+      "notional_delta": -1401.36,
+      "reason": "overweight by 1.41% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.67%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.4 (buy), contribution 70.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 57.4 (buy), contribution 67.4"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "BAC",
-      "action": "BUY",
-      "target_weight": 0.0375,
+      "action": "HOLD",
+      "target_weight": 0.0285,
       "current_weight": 0.0242,
-      "notional_delta": 1317.29,
-      "reason": "buying on positive news flow \u2014 \"Newell Brands (NWL) Stock Gets Fair Value Boost As Analysts Weigh Stabilising Demand\" \u00b7 underweight by 1.33% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Warren Buffett Says You Don't Need 20 Right Calls To Get Rich \u2014 '4 Or 5 Will Probably Do It'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.57%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 58.4 (buy), contribution 57.9",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 54.9 (starter), contribution 54.4",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "COP",
       "action": "REDUCE",
-      "target_weight": 0.0261,
+      "target_weight": 0.0278,
       "current_weight": 0.0425,
-      "notional_delta": -1620.3,
-      "reason": "overweight by 1.64% vs target \u2014 trim",
+      "notional_delta": -1451.93,
+      "reason": "overweight by 1.47% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.26%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 53.4 (starter), contribution 47.5"
+        "theme 'Oil & Gas' score 54.4 (starter), contribution 48.5"
       ],
       "theme_key": "oil_gas"
     },
@@ -824,28 +822,28 @@
     {
       "symbol": "CVX",
       "action": "REDUCE",
-      "target_weight": 0.0283,
+      "target_weight": 0.0302,
       "current_weight": 0.0449,
-      "notional_delta": -1639.96,
-      "reason": "overweight by 1.66% vs target \u2014 trim",
+      "notional_delta": -1451.79,
+      "reason": "overweight by 1.47% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.59%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 53.4 (starter), contribution 51.7"
+        "theme 'Oil & Gas' score 54.4 (starter), contribution 52.7"
       ],
       "theme_key": "oil_gas"
     },
     {
       "symbol": "ENPH",
       "action": "HOLD",
-      "target_weight": 0.0213,
+      "target_weight": 0.021,
       "current_weight": 0.0193,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.11%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 45.3 (starter), contribution 54.3",
+        "theme 'Clean Energy' score 45.0 (starter), contribution 54.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -853,29 +851,28 @@
     },
     {
       "symbol": "F",
-      "action": "HOLD",
-      "target_weight": 0.0316,
+      "action": "REDUCE",
+      "target_weight": 0.0147,
       "current_weight": 0.0295,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1459.27,
+      "reason": "theme score 25.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.14%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.7 (starter), contribution 76.5"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "FSLR",
       "action": "HOLD",
-      "target_weight": 0.0274,
+      "target_weight": 0.0271,
       "current_weight": 0.0256,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 45.3 (starter), contribution 69.8",
+        "theme 'Clean Energy' score 45.0 (starter), contribution 69.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -900,29 +897,28 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.0294,
+      "action": "REDUCE",
+      "target_weight": 0.026,
       "current_weight": 0.0343,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -820.16,
+      "reason": "overweight by 0.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.15%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.4 (buy), contribution 55.4"
+        "theme 'Defense & Aerospace' score 57.4 (buy), contribution 52.4"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "GM",
-      "action": "HOLD",
-      "target_weight": 0.0353,
+      "action": "REDUCE",
+      "target_weight": 0.0182,
       "current_weight": 0.0364,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1804.81,
+      "reason": "theme score 25.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.97%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.7 (starter), contribution 85.3"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -932,7 +928,7 @@
       "target_weight": 0.0151,
       "current_weight": 0.0303,
       "notional_delta": -1498.33,
-      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=7.08%",
         "theme=AI & Compute"
@@ -945,42 +941,39 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Newell Brands (NWL) Stock Gets Fair Value Boost As Analysts Weigh Stabilising Demand\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.16%",
-        "theme=Financials & Rates",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "JPM",
-      "action": "BUY",
-      "target_weight": 0.0356,
+      "action": "HOLD",
+      "target_weight": 0.027,
       "current_weight": 0.023,
-      "notional_delta": 1249.1,
-      "reason": "buying on positive news flow \u2014 \"Newell Brands (NWL) Stock Gets Fair Value Boost As Analysts Weigh Stabilising Demand\" \u00b7 underweight by 1.26% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.86%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 58.4 (buy), contribution 55.0",
-        "news_source=yahoo_rss",
+        "theme 'Financials & Rates' score 54.9 (starter), contribution 51.5",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "LCID",
-      "action": "HOLD",
-      "target_weight": 0.0207,
+      "action": "REDUCE",
+      "target_weight": 0.0081,
       "current_weight": 0.0161,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -797.81,
+      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 theme score 25.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.45%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.7 (starter), contribution 50.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -992,10 +985,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0335,
       "notional_delta": -3319.52,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Rebounds After Sell-Off\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.71%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1020,7 +1015,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0065,
       "notional_delta": -639.6,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 13.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-2.99%",
         "theme=Semiconductors (Broad)",
@@ -1032,14 +1027,16 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0414,
+      "target_weight": 0.0402,
       "current_weight": 0.0432,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"Steve Jobs Once Told Bill Gates Microsoft Had 'Absolutely No Taste' and the Tech Boss Fired Back, Saying the iPad Was Just a 'Nice Reader' \u2014\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.7 (buy), contribution 68.8"
+        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 67.7",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1049,26 +1046,28 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.16,
-      "reason": "trimming on negative news flow \u2014 \"Fed's Warsh Sparks Bond Selloff, Apple Warns of '100-Year' Memory Flood: What Moved Markets This Week\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"SK Hynix, Meta, Apple, and More: 5 Stocks Investors Couldn't Stop Buzzing About this Week\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.83%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "MRNA",
-      "action": "REDUCE",
-      "target_weight": 0.0171,
+      "action": "HOLD",
+      "target_weight": 0.0301,
       "current_weight": 0.0347,
-      "notional_delta": -1747.53,
-      "reason": "overweight by 1.76% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Rebounds After Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 49.7 (starter), contribution 38.0"
+        "theme 'Biotech & Pharma' score 59.2 (buy), contribution 47.5",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1078,11 +1077,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.74,
-      "reason": "exiting on positive news flow \u2014 \"Newell Brands (NWL) Stock Gets Fair Value Boost As Analysts Weigh Stabilising Demand\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.25%",
         "theme=Financials & Rates",
-        "news_source=yahoo_rss",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
@@ -1093,12 +1092,12 @@
       "target_weight": 0.0171,
       "current_weight": 0.0343,
       "notional_delta": -1697.76,
-      "reason": "trimming on mixed news flow \u2014 \"Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Steve Jobs Once Told Bill Gates Microsoft Had 'Absolutely No Taste' and the Tech Boss Fired Back, Saying the iPad Was Just a 'Nice Reader' \u2014\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=3.44%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1108,26 +1107,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "exiting on negative news flow \u2014 \"Michael Burry Just Turned His Guns on Nvidia, Micron and SOXX \u2014 ETF Investors Are Watching the Fallout\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 theme score 13.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-17.63%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.0188,
+      "target_weight": 0.0186,
       "current_weight": 0.0129,
-      "notional_delta": 588.31,
-      "reason": "buying on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 underweight by 0.59% vs target \u2014 add",
+      "notional_delta": 568.5,
+      "reason": "buying on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 underweight by 0.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.63%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 45.3 (starter), contribution 48.0",
+        "theme 'Clean Energy' score 45.0 (starter), contribution 47.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1152,12 +1151,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0532,
       "notional_delta": -5273.39,
-      "reason": "exiting on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.43%",
-        "theme=Defense & Aerospace",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense"
     },
@@ -1167,12 +1164,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.18,
-      "reason": "trimming on mixed news flow \u2014 \"Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.61%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1223,15 +1220,17 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.0275,
+      "action": "HOLD",
+      "target_weight": 0.0449,
       "current_weight": 0.0466,
-      "notional_delta": -1892.18,
-      "reason": "overweight by 1.91% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Rebounds After Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 49.7 (starter), contribution 61.3"
+        "theme 'Biotech & Pharma' score 59.2 (buy), contribution 70.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1241,41 +1240,41 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.2,
-      "reason": "exiting on positive news flow \u2014 \"RBC Capital Maintains Sector Perform on Regeneron Pharmaceuticals, Raises Price Target to $737\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Rebounds After Sell-Off\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=13.50%",
         "theme=Biotech & Pharma",
-        "news_source=benzinga",
+        "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "RIVN",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"RBC Capital Maintains Sector Perform on Rivian Automotive, Raises Price Target to $16\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 theme score 25.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-14.93%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0333,
+      "target_weight": 0.0296,
       "current_weight": 0.04,
-      "notional_delta": -659.6,
-      "reason": "overweight by 0.67% vs target \u2014 trim",
+      "notional_delta": -1026.05,
+      "reason": "overweight by 1.04% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.4 (buy), contribution 62.7"
+        "theme 'Defense & Aerospace' score 57.4 (buy), contribution 59.7"
       ],
       "theme_key": "defense"
     },
@@ -1296,15 +1295,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0438,
+      "action": "REDUCE",
+      "target_weight": 0.0425,
       "current_weight": 0.0488,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -623.73,
+      "reason": "overweight by 0.63% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.74%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.7 (buy), contribution 72.8"
+        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 71.6"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1342,7 +1341,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.06,
-      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.21%",
         "theme=AI & Compute"
@@ -1351,16 +1350,16 @@
     },
     {
       "symbol": "TSLA",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.15,
-      "reason": "exiting on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.08,
+      "reason": "trimming on negative news flow \u2014 \"Elon Musk's Net Worth Down Nearly $700 Billion Amid Tesla, SpaceX Merger Rumors\" \u00b7 theme score 25.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.57%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1370,7 +1369,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0154,
       "notional_delta": -1528.79,
-      "reason": "exiting on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 theme score 13.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-0.78%",
         "theme=Semiconductors (Broad)",
@@ -1381,47 +1380,47 @@
     },
     {
       "symbol": "VRTX",
-      "action": "REDUCE",
-      "target_weight": 0.0235,
+      "action": "HOLD",
+      "target_weight": 0.0392,
       "current_weight": 0.0403,
-      "notional_delta": -1661.28,
-      "reason": "overweight by 1.68% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Rebounds After Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.84%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 49.7 (starter), contribution 52.3"
+        "theme 'Biotech & Pharma' score 59.2 (buy), contribution 61.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0381,
+      "target_weight": 0.0291,
       "current_weight": 0.0241,
-      "notional_delta": 1389.75,
-      "reason": "buying on positive news flow \u2014 \"Newell Brands (NWL) Stock Gets Fair Value Boost As Analysts Weigh Stabilising Demand\" \u00b7 underweight by 1.40% vs target \u2014 add",
+      "notional_delta": 498.39,
+      "reason": "underweight by 0.50% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.99%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 58.4 (buy), contribution 58.9",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 54.9 (starter), contribution 55.4"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "XOM",
       "action": "REDUCE",
-      "target_weight": 0.0237,
+      "target_weight": 0.0253,
       "current_weight": 0.0396,
-      "notional_delta": -1571.8,
-      "reason": "trimming on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 overweight by 1.59% vs target \u2014 trim",
+      "notional_delta": -1413.34,
+      "reason": "trimming on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 overweight by 1.43% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.33%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 53.4 (starter), contribution 43.2",
+        "theme 'Oil & Gas' score 54.4 (starter), contribution 44.2",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1450,7 +1449,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 13.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.38%",
         "theme=Semiconductors (Broad)",
@@ -1465,16 +1464,16 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0471,
+      "target_weight": 0.0458,
       "current_weight": 0.0507,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=12.54%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.7 (buy), contribution 78.2",
+        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 77.1",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1487,7 +1486,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0059,
       "notional_delta": -580.15,
-      "reason": "theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 13.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-1.75%",
         "theme=Semiconductors (Broad)"
@@ -1503,12 +1502,12 @@
       "target_weight": 0.0112,
       "current_weight": 0.0224,
       "notional_delta": -1111.52,
-      "reason": "trimming on negative news flow \u2014 \"Michael Burry Just Turned His Guns on Nvidia, Micron and SOXX \u2014 ETF Investors Are Watching the Fallout\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"If You Invested $1000 In Broadcom Stock 5 Years Ago, You Would Have This Much Today\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.36%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1518,16 +1517,14 @@
     {
       "symbol": "BA",
       "action": "REDUCE",
-      "target_weight": 0.0374,
+      "target_weight": 0.0334,
       "current_weight": 0.0475,
-      "notional_delta": -1005.2,
-      "reason": "trimming on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 overweight by 1.01% vs target \u2014 trim",
+      "notional_delta": -1401.36,
+      "reason": "overweight by 1.41% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.67%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.4 (buy), contribution 70.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 57.4 (buy), contribution 67.4"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1536,17 +1533,17 @@
     },
     {
       "symbol": "BAC",
-      "action": "BUY",
-      "target_weight": 0.0375,
+      "action": "HOLD",
+      "target_weight": 0.0285,
       "current_weight": 0.0242,
-      "notional_delta": 1317.29,
-      "reason": "buying on positive news flow \u2014 \"Newell Brands (NWL) Stock Gets Fair Value Boost As Analysts Weigh Stabilising Demand\" \u00b7 underweight by 1.33% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Warren Buffett Says You Don't Need 20 Right Calls To Get Rich \u2014 '4 Or 5 Will Probably Do It'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.57%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 58.4 (buy), contribution 57.9",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 54.9 (starter), contribution 54.4",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1556,14 +1553,14 @@
     {
       "symbol": "COP",
       "action": "REDUCE",
-      "target_weight": 0.0261,
+      "target_weight": 0.0278,
       "current_weight": 0.0425,
-      "notional_delta": -1620.3,
-      "reason": "overweight by 1.64% vs target \u2014 trim",
+      "notional_delta": -1451.93,
+      "reason": "overweight by 1.47% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.26%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 53.4 (starter), contribution 47.5"
+        "theme 'Oil & Gas' score 54.4 (starter), contribution 48.5"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1592,14 +1589,14 @@
     {
       "symbol": "CVX",
       "action": "REDUCE",
-      "target_weight": 0.0283,
+      "target_weight": 0.0302,
       "current_weight": 0.0449,
-      "notional_delta": -1639.96,
-      "reason": "overweight by 1.66% vs target \u2014 trim",
+      "notional_delta": -1451.79,
+      "reason": "overweight by 1.47% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.59%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 53.4 (starter), contribution 51.7"
+        "theme 'Oil & Gas' score 54.4 (starter), contribution 52.7"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1609,14 +1606,14 @@
     {
       "symbol": "ENPH",
       "action": "HOLD",
-      "target_weight": 0.0213,
+      "target_weight": 0.021,
       "current_weight": 0.0193,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.11%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 45.3 (starter), contribution 54.3",
+        "theme 'Clean Energy' score 45.0 (starter), contribution 54.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1627,15 +1624,14 @@
     },
     {
       "symbol": "F",
-      "action": "HOLD",
-      "target_weight": 0.0316,
+      "action": "REDUCE",
+      "target_weight": 0.0147,
       "current_weight": 0.0295,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1459.27,
+      "reason": "theme score 25.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.14%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.7 (starter), contribution 76.5"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1645,14 +1641,14 @@
     {
       "symbol": "FSLR",
       "action": "HOLD",
-      "target_weight": 0.0274,
+      "target_weight": 0.0271,
       "current_weight": 0.0256,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 45.3 (starter), contribution 69.8",
+        "theme 'Clean Energy' score 45.0 (starter), contribution 69.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1683,15 +1679,15 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.0294,
+      "action": "REDUCE",
+      "target_weight": 0.026,
       "current_weight": 0.0343,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -820.16,
+      "reason": "overweight by 0.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.15%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.4 (buy), contribution 55.4"
+        "theme 'Defense & Aerospace' score 57.4 (buy), contribution 52.4"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1700,15 +1696,14 @@
     },
     {
       "symbol": "GM",
-      "action": "HOLD",
-      "target_weight": 0.0353,
+      "action": "REDUCE",
+      "target_weight": 0.0182,
       "current_weight": 0.0364,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -1804.81,
+      "reason": "theme score 25.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.97%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.7 (starter), contribution 85.3"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1721,7 +1716,7 @@
       "target_weight": 0.0151,
       "current_weight": 0.0303,
       "notional_delta": -1498.33,
-      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=7.08%",
         "theme=AI & Compute"
@@ -1737,12 +1732,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"Newell Brands (NWL) Stock Gets Fair Value Boost As Analysts Weigh Stabilising Demand\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.16%",
-        "theme=Financials & Rates",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1751,16 +1744,16 @@
     },
     {
       "symbol": "JPM",
-      "action": "BUY",
-      "target_weight": 0.0356,
+      "action": "HOLD",
+      "target_weight": 0.027,
       "current_weight": 0.023,
-      "notional_delta": 1249.1,
-      "reason": "buying on positive news flow \u2014 \"Newell Brands (NWL) Stock Gets Fair Value Boost As Analysts Weigh Stabilising Demand\" \u00b7 underweight by 1.26% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.86%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 58.4 (buy), contribution 55.0",
-        "news_source=yahoo_rss",
+        "theme 'Financials & Rates' score 54.9 (starter), contribution 51.5",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
@@ -1770,15 +1763,14 @@
     },
     {
       "symbol": "LCID",
-      "action": "HOLD",
-      "target_weight": 0.0207,
+      "action": "REDUCE",
+      "target_weight": 0.0081,
       "current_weight": 0.0161,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -797.81,
+      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 theme score 25.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.45%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 52.7 (starter), contribution 50.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1793,10 +1785,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0335,
       "notional_delta": -3319.52,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Rebounds After Sell-Off\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.71%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1827,7 +1821,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0065,
       "notional_delta": -639.6,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 13.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-2.99%",
         "theme=Semiconductors (Broad)",
@@ -1842,14 +1836,16 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0414,
+      "target_weight": 0.0402,
       "current_weight": 0.0432,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"Steve Jobs Once Told Bill Gates Microsoft Had 'Absolutely No Taste' and the Tech Boss Fired Back, Saying the iPad Was Just a 'Nice Reader' \u2014\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.7 (buy), contribution 68.8"
+        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 67.7",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1862,12 +1858,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.16,
-      "reason": "trimming on negative news flow \u2014 \"Fed's Warsh Sparks Bond Selloff, Apple Warns of '100-Year' Memory Flood: What Moved Markets This Week\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"SK Hynix, Meta, Apple, and More: 5 Stocks Investors Couldn't Stop Buzzing About this Week\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.83%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1876,15 +1872,17 @@
     },
     {
       "symbol": "MRNA",
-      "action": "REDUCE",
-      "target_weight": 0.0171,
+      "action": "HOLD",
+      "target_weight": 0.0301,
       "current_weight": 0.0347,
-      "notional_delta": -1747.53,
-      "reason": "overweight by 1.76% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Rebounds After Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 49.7 (starter), contribution 38.0"
+        "theme 'Biotech & Pharma' score 59.2 (buy), contribution 47.5",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1897,11 +1895,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.74,
-      "reason": "exiting on positive news flow \u2014 \"Newell Brands (NWL) Stock Gets Fair Value Boost As Analysts Weigh Stabilising Demand\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.25%",
         "theme=Financials & Rates",
-        "news_source=yahoo_rss",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
@@ -1915,12 +1913,12 @@
       "target_weight": 0.0171,
       "current_weight": 0.0343,
       "notional_delta": -1697.76,
-      "reason": "trimming on mixed news flow \u2014 \"Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Steve Jobs Once Told Bill Gates Microsoft Had 'Absolutely No Taste' and the Tech Boss Fired Back, Saying the iPad Was Just a 'Nice Reader' \u2014\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=3.44%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1933,12 +1931,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "exiting on negative news flow \u2014 \"Michael Burry Just Turned His Guns on Nvidia, Micron and SOXX \u2014 ETF Investors Are Watching the Fallout\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 theme score 13.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-17.63%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1948,14 +1946,14 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.0188,
+      "target_weight": 0.0186,
       "current_weight": 0.0129,
-      "notional_delta": 588.31,
-      "reason": "buying on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 underweight by 0.59% vs target \u2014 add",
+      "notional_delta": 568.5,
+      "reason": "buying on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 underweight by 0.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.63%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 45.3 (starter), contribution 48.0",
+        "theme 'Clean Energy' score 45.0 (starter), contribution 47.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1986,12 +1984,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0532,
       "notional_delta": -5273.39,
-      "reason": "exiting on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.43%",
-        "theme=Defense & Aerospace",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2004,12 +2000,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.18,
-      "reason": "trimming on mixed news flow \u2014 \"Top Four Nasdaq 100 Stocks to Watch Next Week: AMD, Uber, Palantir, Airbnb\" \u00b7 theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.61%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2072,15 +2068,17 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.0275,
+      "action": "HOLD",
+      "target_weight": 0.0449,
       "current_weight": 0.0466,
-      "notional_delta": -1892.18,
-      "reason": "overweight by 1.91% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Rebounds After Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 49.7 (starter), contribution 61.3"
+        "theme 'Biotech & Pharma' score 59.2 (buy), contribution 70.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2093,11 +2091,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.2,
-      "reason": "exiting on positive news flow \u2014 \"RBC Capital Maintains Sector Perform on Regeneron Pharmaceuticals, Raises Price Target to $737\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Rebounds After Sell-Off\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=13.50%",
         "theme=Biotech & Pharma",
-        "news_source=benzinga",
+        "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
@@ -2107,16 +2105,16 @@
     },
     {
       "symbol": "RIVN",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"RBC Capital Maintains Sector Perform on Rivian Automotive, Raises Price Target to $16\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 theme score 25.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-14.93%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2126,14 +2124,14 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0333,
+      "target_weight": 0.0296,
       "current_weight": 0.04,
-      "notional_delta": -659.6,
-      "reason": "overweight by 0.67% vs target \u2014 trim",
+      "notional_delta": -1026.05,
+      "reason": "overweight by 1.04% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 60.4 (buy), contribution 62.7"
+        "theme 'Defense & Aerospace' score 57.4 (buy), contribution 59.7"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2160,15 +2158,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0438,
+      "action": "REDUCE",
+      "target_weight": 0.0425,
       "current_weight": 0.0488,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -623.73,
+      "reason": "overweight by 0.63% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.74%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.7 (buy), contribution 72.8"
+        "theme 'Consumer Discretionary' score 63.5 (buy), contribution 71.6"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2215,7 +2213,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.06,
-      "reason": "theme score 34.0 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 33.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.21%",
         "theme=AI & Compute"
@@ -2227,16 +2225,16 @@
     },
     {
       "symbol": "TSLA",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.15,
-      "reason": "exiting on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.08,
+      "reason": "trimming on negative news flow \u2014 \"Elon Musk's Net Worth Down Nearly $700 Billion Amid Tesla, SpaceX Merger Rumors\" \u00b7 theme score 25.7 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.57%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2249,7 +2247,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0154,
       "notional_delta": -1528.79,
-      "reason": "exiting on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 theme score 13.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-0.78%",
         "theme=Semiconductors (Broad)",
@@ -2263,15 +2261,17 @@
     },
     {
       "symbol": "VRTX",
-      "action": "REDUCE",
-      "target_weight": 0.0235,
+      "action": "HOLD",
+      "target_weight": 0.0392,
       "current_weight": 0.0403,
-      "notional_delta": -1661.28,
-      "reason": "overweight by 1.68% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Google Rebounds After Sell-Off\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.84%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 49.7 (starter), contribution 52.3"
+        "theme 'Biotech & Pharma' score 59.2 (buy), contribution 61.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2281,16 +2281,14 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0381,
+      "target_weight": 0.0291,
       "current_weight": 0.0241,
-      "notional_delta": 1389.75,
-      "reason": "buying on positive news flow \u2014 \"Newell Brands (NWL) Stock Gets Fair Value Boost As Analysts Weigh Stabilising Demand\" \u00b7 underweight by 1.40% vs target \u2014 add",
+      "notional_delta": 498.39,
+      "reason": "underweight by 0.50% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.99%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 58.4 (buy), contribution 58.9",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 54.9 (starter), contribution 55.4"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2300,16 +2298,16 @@
     {
       "symbol": "XOM",
       "action": "REDUCE",
-      "target_weight": 0.0237,
+      "target_weight": 0.0253,
       "current_weight": 0.0396,
-      "notional_delta": -1571.8,
-      "reason": "trimming on negative news flow \u2014 \"Ray Dalio Says US Is in Decline: 'Threats No Longer Work' in a World Where Order Breaks Down\" \u00b7 overweight by 1.59% vs target \u2014 trim",
+      "notional_delta": -1413.34,
+      "reason": "trimming on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 overweight by 1.43% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.33%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 53.4 (starter), contribution 43.2",
+        "theme 'Oil & Gas' score 54.4 (starter), contribution 44.2",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2338,10 +2336,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-21T21:39:47+00:00",
-      "v": 102913.11
-    },
     {
       "t": "2026-06-21T22:55:37+00:00",
       "v": 102913.11
@@ -4337,6 +4331,10 @@
     {
       "t": "2026-08-01T18:47:06+00:00",
       "v": 99039.47
+    },
+    {
+      "t": "2026-08-01T20:01:52+00:00",
+      "v": 99039.47
     }
   ],
   "breaking_news": [
@@ -4345,7 +4343,7 @@
       "summary": "The U.S. economy grew at an annual rate of 1.5% in the spring, according to the Commerce Department. That's a modest slowdown from the previous quarter \u2014 but consumer spending picked up steam.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913230/economy-gdp-inflation",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4354,7 +4352,7 @@
       "summary": "European soccer associations said they would boycott the World Cup unless FIFA reverses a controversial deal to sell minority stakes to the marquee soccer tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913664/world-cup-fifa-uefa-gianni-infantino",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:56+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4363,7 +4361,7 @@
       "summary": "Solo living, solo travel, and solo dining are all being embraced as more adults are choosing to remain single. Many Americans aren't interested in dating, and being single is a symbol of autonomy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/g-s1-136079/single-adult-solo-choice",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4372,7 +4370,7 @@
       "summary": "The 30-year fixed-rate mortgage reached 6.66% on average Thursday.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913851/mortgage-rates-one-year-high-july-2026",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4381,7 +4379,7 @@
       "summary": "Chevron reported its highest quarterly earnings ever. Shell had its second-biggest quarter, and ExxonMobil doubled its earnings compared with the same time last year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/31/nx-s1-5910660/big-oil-earnings-q2-2026",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4390,7 +4388,7 @@
       "summary": "FIFA abandoned a plan to create a commercial venture and then sell stakes to minority investors, just days after unveiling it. The plan drew sharp condemnation \u2014 and a boycott from European nations.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/31/nx-s1-5915820/fifa-world-cup-gianni-infantino",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:56+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4399,7 +4397,7 @@
       "summary": "The president's media company is offering investors early access to his Truth Social feed for up to $100,000 a month. Experts say the service may violate insider trading laws.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/08/01/nx-s1-5912219/trump-truth-social-access-insider-trading",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4408,16 +4406,16 @@
       "summary": "OpenAI and Anthropic say their models broke into other companies' systems during testing, raising security concerns amid a heated debate over how to regulate AI.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/08/01/nx-s1-5914852/anthropic-openai-models-hack-cybersecurity",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:56+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Peru's ex-president leaves jail after 15-year jail term for corruption overturned",
-      "summary": "Ollanta Humala had been convicted of money laundering offences alongside his wife in 2025.",
+      "headline": "Three killed in Moscow restaurant explosion",
+      "summary": "The deadly blast took place in a venue near the centre of the city, but the cause is currently unclear.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cx2j9nj88rro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c86n4ljxp63o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4426,7 +4424,7 @@
       "summary": "The current strain has so far killed 1,587 people, and there is currently no approved vaccine or treatment.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cy07qe0knvzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4435,7 +4433,7 @@
       "summary": "The attack comes as Moscow escalates deadly ballistic missile attacks on the Ukrainian capital.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ce973yvk7pko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4444,7 +4442,7 @@
       "summary": "The renowned mountaineer was known for scaling the world's 14 highest peaks in just over six months in 2019.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/clyljq79kdko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4453,7 +4451,7 @@
       "summary": "Some 19 major Italian cities - including Rome, Milan and Naples - are already on red alert, and by Monday all but two will be.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr7k4gdrgljo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4462,7 +4460,7 @@
       "summary": "Settler violence against Palestinians is on the rise in the West Bank, as settlements and outposts expand.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4g4djgdyk2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4471,7 +4469,7 @@
       "summary": "The leadership of Fifa is publicly questioned by football's governing bodies in Europe, North and Central America and the Caribbean.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/sport/football/articles/c04kr2nv3v3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4480,7 +4478,7 @@
       "summary": "Italy has temporarily suspended the Schengen arrangement with Spain as Prime Minister Giorgia Meloni called scenes in Ceuta \"shocking\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2v91xn1z9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4489,7 +4487,7 @@
       "summary": "The price of unleaded hits 160p a litre, according to motoring group the RAC, as oil prices remain elevated.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4498,7 +4496,7 @@
       "summary": "Indian strawberry farmers rely on varieties imported from the US and Europe, but that could change.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c8x274xxxpwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4507,7 +4505,7 @@
       "summary": "The Chancellor said the Budget on 28 October would \u201cmeet our fiscal rules\u201d and give families \"stability\" to plan for the future.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cjd4yz35x8go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4516,7 +4514,7 @@
       "summary": "Under the terms of the deal, Argos will still operate in Sainsbury's shops, sell Habitat products, and offer Nectar points.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cpw9yrl4p2qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T18:47:11+00:00",
+      "published_utc": "2026-08-01T20:01:55+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     }
