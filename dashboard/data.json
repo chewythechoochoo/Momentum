@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-01T11:03:56+00:00",
+  "generated_at_utc": "2026-08-01T12:10:46+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 761,
-  "last_success_utc": "2026-08-01T09:30:28+00:00",
+  "cycle_count": 762,
+  "last_success_utc": "2026-08-01T11:03:56+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -539,35 +539,35 @@
   ],
   "themes": [
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 69.35,
-      "raw_score": 70.3,
-      "band": "buy",
-      "weight": 0.1367,
-      "confidence": 0.85,
-      "components": {
-        "momentum": 58.2,
-        "sentiment": 100.0,
-        "volume": 60.11,
-        "policy": 50.0,
-        "volatility_penalty": 0.95
-      }
-    },
-    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 69.31,
-      "raw_score": 70.11,
+      "score": 69.2,
+      "raw_score": 70.01,
       "band": "buy",
-      "weight": 0.1477,
+      "weight": 0.1473,
       "confidence": 1.0,
       "components": {
         "momentum": 57.47,
-        "sentiment": 95.35,
+        "sentiment": 95.0,
         "volume": 65.08,
         "policy": 55.0,
         "volatility_penalty": 0.8
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 63.35,
+      "raw_score": 64.3,
+      "band": "buy",
+      "weight": 0.1119,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 58.2,
+        "sentiment": 80.0,
+        "volume": 60.11,
+        "policy": 50.0,
+        "volatility_penalty": 0.95
       }
     },
     {
@@ -576,8 +576,8 @@
       "score": 61.74,
       "raw_score": 65.28,
       "band": "buy",
-      "weight": 0.1194,
-      "confidence": 0.95,
+      "weight": 0.1163,
+      "confidence": 0.9,
       "components": {
         "momentum": 49.24,
         "sentiment": 100.0,
@@ -706,7 +706,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "exiting on mixed news flow \u2014 \"Here's How Much $100 Invested In Applied Materials 20 Years Ago Would Be Worth Today\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.38%",
         "theme=Semiconductors (Broad)",
@@ -718,14 +718,14 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0524,
+      "target_weight": 0.0522,
       "current_weight": 0.0507,
       "notional_delta": 0.0,
       "reason": "holding on legal risk (negative) \u2014 \"Amazon's 'Wild Caught' and 'Sustainable' Seafood Labels Are Just Greenwashing, New Lawsuit Claims\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=12.54%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 69.3 (buy), contribution 82.8",
+        "theme 'Consumer Discretionary' score 69.2 (buy), contribution 82.7",
         "news_source=benzinga",
         "event=legal risk",
         "news_sentiment=-0.20"
@@ -763,15 +763,15 @@
     },
     {
       "symbol": "BA",
-      "action": "HOLD",
-      "target_weight": 0.0504,
+      "action": "REDUCE",
+      "target_weight": 0.0416,
       "current_weight": 0.0475,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -589.23,
+      "reason": "trimming on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 overweight by 0.59% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.67%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 69.3 (buy), contribution 79.4",
+        "theme 'Defense & Aerospace' score 63.4 (buy), contribution 73.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -901,15 +901,15 @@
     },
     {
       "symbol": "GD",
-      "action": "BUY",
-      "target_weight": 0.0409,
+      "action": "HOLD",
+      "target_weight": 0.0331,
       "current_weight": 0.0343,
-      "notional_delta": 655.53,
-      "reason": "underweight by 0.66% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.15%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 69.3 (buy), contribution 64.4"
+        "theme 'Defense & Aerospace' score 63.4 (buy), contribution 58.4"
       ],
       "theme_key": "defense"
     },
@@ -1026,7 +1026,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0065,
       "notional_delta": -639.6,
-      "reason": "exiting on mixed news flow \u2014 \"AMD Stock Is Gaining Friday: What's Going On?\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-2.99%",
         "theme=Semiconductors (Broad)",
@@ -1038,14 +1038,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0464,
+      "target_weight": 0.0463,
       "current_weight": 0.0432,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Mizuho Maintains Neutral on McDonald's, Lowers Price Target to $290\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 69.3 (buy), contribution 73.4",
+        "theme 'Consumer Discretionary' score 69.2 (buy), contribution 73.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1069,7 +1069,7 @@
     {
       "symbol": "MRNA",
       "action": "HOLD",
-      "target_weight": 0.0318,
+      "target_weight": 0.031,
       "current_weight": 0.0347,
       "notional_delta": 0.0,
       "reason": "holding on earnings beat (positive) \u2014 \"Moderna Burns Cash, Suffers Fresh Vaccine Setback\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1232,7 +1232,7 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0467,
+      "target_weight": 0.0455,
       "current_weight": 0.0466,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1275,17 +1275,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "BUY",
-      "target_weight": 0.0455,
+      "action": "HOLD",
+      "target_weight": 0.0372,
       "current_weight": 0.04,
-      "notional_delta": 548.68,
-      "reason": "buying on positive news flow \u2014 \"Pratt & Whitney Receives ~$1.3B Contract For F135 Engine Spare Parts\" \u00b7 underweight by 0.55% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 69.3 (buy), contribution 71.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 63.4 (buy), contribution 65.7"
       ],
       "theme_key": "defense"
     },
@@ -1305,14 +1303,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0489,
+      "target_weight": 0.0488,
       "current_weight": 0.0488,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Live On CNBC, Stephanie Link Announces Bought More Starbucks\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.74%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 69.3 (buy), contribution 77.4",
+        "theme 'Consumer Discretionary' score 69.2 (buy), contribution 77.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1367,12 +1365,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.15,
-      "reason": "exiting on positive news flow \u2014 \"Wonder Boy Blowup Sparks Massive Semiconductor Rally; Kospi Up 18%; Amazon Helps, Apple Disappoints\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.57%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1394,7 +1392,7 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0409,
+      "target_weight": 0.0399,
       "current_weight": 0.0403,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1457,7 +1455,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "exiting on mixed news flow \u2014 \"Here's How Much $100 Invested In Applied Materials 20 Years Ago Would Be Worth Today\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.38%",
         "theme=Semiconductors (Broad)",
@@ -1472,14 +1470,14 @@
     {
       "symbol": "AMZN",
       "action": "HOLD",
-      "target_weight": 0.0524,
+      "target_weight": 0.0522,
       "current_weight": 0.0507,
       "notional_delta": 0.0,
       "reason": "holding on legal risk (negative) \u2014 \"Amazon's 'Wild Caught' and 'Sustainable' Seafood Labels Are Just Greenwashing, New Lawsuit Claims\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=12.54%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 69.3 (buy), contribution 82.8",
+        "theme 'Consumer Discretionary' score 69.2 (buy), contribution 82.7",
         "news_source=benzinga",
         "event=legal risk",
         "news_sentiment=-0.20"
@@ -1526,15 +1524,15 @@
     },
     {
       "symbol": "BA",
-      "action": "HOLD",
-      "target_weight": 0.0504,
+      "action": "REDUCE",
+      "target_weight": 0.0416,
       "current_weight": 0.0475,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -589.23,
+      "reason": "trimming on positive news flow \u2014 \"Space Force Fosters Development For Next-generation Test, Training Technology; Awards Contract To 15 Firms\" \u00b7 overweight by 0.59% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.67%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 69.3 (buy), contribution 79.4",
+        "theme 'Defense & Aerospace' score 63.4 (buy), contribution 73.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1691,15 +1689,15 @@
     },
     {
       "symbol": "GD",
-      "action": "BUY",
-      "target_weight": 0.0409,
+      "action": "HOLD",
+      "target_weight": 0.0331,
       "current_weight": 0.0343,
-      "notional_delta": 655.53,
-      "reason": "underweight by 0.66% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.15%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 69.3 (buy), contribution 64.4"
+        "theme 'Defense & Aerospace' score 63.4 (buy), contribution 58.4"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1840,7 +1838,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0065,
       "notional_delta": -639.6,
-      "reason": "exiting on mixed news flow \u2014 \"AMD Stock Is Gaining Friday: What's Going On?\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 theme score 3.0 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-2.99%",
         "theme=Semiconductors (Broad)",
@@ -1855,14 +1853,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0464,
+      "target_weight": 0.0463,
       "current_weight": 0.0432,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Mizuho Maintains Neutral on McDonald's, Lowers Price Target to $290\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.60%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 69.3 (buy), contribution 73.4",
+        "theme 'Consumer Discretionary' score 69.2 (buy), contribution 73.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1892,7 +1890,7 @@
     {
       "symbol": "MRNA",
       "action": "HOLD",
-      "target_weight": 0.0318,
+      "target_weight": 0.031,
       "current_weight": 0.0347,
       "notional_delta": 0.0,
       "reason": "holding on earnings beat (positive) \u2014 \"Moderna Burns Cash, Suffers Fresh Vaccine Setback\" \u00b7 within 50bps of target \u2014 no trade",
@@ -2088,7 +2086,7 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0467,
+      "target_weight": 0.0455,
       "current_weight": 0.0466,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -2140,17 +2138,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "BUY",
-      "target_weight": 0.0455,
+      "action": "HOLD",
+      "target_weight": 0.0372,
       "current_weight": 0.04,
-      "notional_delta": 548.68,
-      "reason": "buying on positive news flow \u2014 \"Pratt & Whitney Receives ~$1.3B Contract For F135 Engine Spare Parts\" \u00b7 underweight by 0.55% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.17%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 69.3 (buy), contribution 71.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 63.4 (buy), contribution 65.7"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2176,14 +2172,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0489,
+      "target_weight": 0.0488,
       "current_weight": 0.0488,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Live On CNBC, Stephanie Link Announces Bought More Starbucks\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.74%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 69.3 (buy), contribution 77.4",
+        "theme 'Consumer Discretionary' score 69.2 (buy), contribution 77.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2250,12 +2246,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.15,
-      "reason": "exiting on positive news flow \u2014 \"Wonder Boy Blowup Sparks Massive Semiconductor Rally; Kospi Up 18%; Amazon Helps, Apple Disappoints\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls And Bears: Amazon, Microsoft, SpaceX\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.57%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2283,7 +2279,7 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0409,
+      "target_weight": 0.0399,
       "current_weight": 0.0403,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -2352,10 +2348,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-21T09:28:30+00:00",
-      "v": 102913.11
-    },
     {
       "t": "2026-06-21T12:00:29+00:00",
       "v": 102913.11
@@ -4351,6 +4343,10 @@
     {
       "t": "2026-08-01T11:03:54+00:00",
       "v": 99039.47
+    },
+    {
+      "t": "2026-08-01T12:10:41+00:00",
+      "v": 99039.47
     }
   ],
   "breaking_news": [
@@ -4359,7 +4355,7 @@
       "summary": "The U.S. economy grew at an annual rate of 1.5% in the spring, according to the Commerce Department. That's a modest slowdown from the previous quarter \u2014 but consumer spending picked up steam.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913230/economy-gdp-inflation",
-      "published_utc": "2026-08-01T11:03:56+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4368,7 +4364,7 @@
       "summary": "European soccer associations said they would boycott the World Cup unless FIFA reverses a controversial deal to sell minority stakes to the marquee soccer tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913664/world-cup-fifa-uefa-gianni-infantino",
-      "published_utc": "2026-08-01T11:03:56+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4377,7 +4373,7 @@
       "summary": "Solo living, solo travel, and solo dining are all being embraced as more adults are choosing to remain single. Many Americans aren't interested in dating, and being single is a symbol of autonomy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/g-s1-136079/single-adult-solo-choice",
-      "published_utc": "2026-08-01T11:03:56+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4386,7 +4382,7 @@
       "summary": "The 30-year fixed-rate mortgage reached 6.66% on average Thursday.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913851/mortgage-rates-one-year-high-july-2026",
-      "published_utc": "2026-08-01T11:03:56+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4395,7 +4391,7 @@
       "summary": "Chevron reported its highest quarterly earnings ever. Shell had its second-biggest quarter, and ExxonMobil doubled its earnings compared with the same time last year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/31/nx-s1-5910660/big-oil-earnings-q2-2026",
-      "published_utc": "2026-08-01T11:03:56+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4404,7 +4400,7 @@
       "summary": "FIFA abandoned a plan to create a commercial venture and then sell stakes to minority investors, just days after unveiling it. The plan drew sharp condemnation \u2014 and a boycott from European nations.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/31/nx-s1-5915820/fifa-world-cup-gianni-infantino",
-      "published_utc": "2026-08-01T11:03:56+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4413,7 +4409,7 @@
       "summary": "The president's media company is offering investors early access to his Truth Social feed for up to $100,000 a month. Experts say the service may violate insider trading laws.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/08/01/nx-s1-5912219/trump-truth-social-access-insider-trading",
-      "published_utc": "2026-08-01T11:03:56+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4422,7 +4418,7 @@
       "summary": "OpenAI and Anthropic say their models broke into other companies' systems during testing, raising security concerns amid a heated debate over how to regulate AI.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/08/01/nx-s1-5914852/anthropic-openai-models-hack-cybersecurity",
-      "published_utc": "2026-08-01T11:03:56+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4431,7 +4427,7 @@
       "summary": "Ballistic experts say the dozens of tiny round punctures are tell-tale signs of pellet gun injuries.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c74gwvygkjdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4440,7 +4436,7 @@
       "summary": "Around 500 people, mostly tourists, are evacuated by boat from Agios Vasileios after becoming trapped.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c0kmzx8vpv4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4449,7 +4445,7 @@
       "summary": "Ollanta Humala had been convicted of money laundering offences alongside his wife in 2025.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2j9nj88rro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4458,16 +4454,16 @@
       "summary": "Poor weather has been hampering the search for seven still missing after Thursday's avalanche on Broad Peak.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cddjz1r01l8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Russian strikes on Kyiv kill at least nine, Ukraine officials say",
+      "headline": "Nine killed in strikes on Kyiv, as Ukraine sinks Russian container ship",
       "summary": "The attack comes as Moscow escalates deadly ballistic missile attacks on the Ukrainian capital.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ce973yvk7pko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4476,16 +4472,16 @@
       "summary": "Settler violence against Palestinians is on the rise in the West Bank, as settlements and outposts expand.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c4g4djgdyk2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
     {
-      "headline": "Uefa has 'lost confidence' in Fifa leadership",
+      "headline": "Uefa has 'lost confidence' in Infantino's Fifa leadership",
       "summary": "The governing body of European football says Fifa president Gianni Infantino has \"failed to deliver\" on promises he made when elected 10 years ago.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/sport/football/articles/c04kr2nv3v3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4494,7 +4490,7 @@
       "summary": "Italy has temporarily suspended the Schengen arrangement with Spain as Prime Minister Giorgia Meloni called scenes in Ceuta \"shocking\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cx2v91xn1z9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4503,7 +4499,7 @@
       "summary": "Could you live communally in a disused building in exchange for a heavily discounted rent? Property guardians show us around.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj4kvge1pyvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4512,7 +4508,7 @@
       "summary": "The price of unleaded hits 160p a litre, according to motoring group the RAC, as oil prices remain elevated.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4521,7 +4517,7 @@
       "summary": "Indian strawberry farmers rely on varieties imported from the US and Europe, but that could change.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c8x274xxxpwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4530,7 +4526,7 @@
       "summary": "The Chancellor said the Budget on 28 October would \u201cmeet our fiscal rules\u201d and give families \"stability\" to plan for the future.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cjd4yz35x8go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-01T11:03:55+00:00",
+      "published_utc": "2026-08-01T12:10:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
