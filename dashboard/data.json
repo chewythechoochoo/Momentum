@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-02T17:40:26+00:00",
+  "generated_at_utc": "2026-08-02T18:45:36+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 781,
-  "last_success_utc": "2026-08-02T16:26:56+00:00",
+  "cycle_count": 782,
+  "last_success_utc": "2026-08-02T17:40:26+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -624,8 +624,8 @@
       "score": 46.32,
       "raw_score": 58.53,
       "band": "starter",
-      "weight": 0.0711,
-      "confidence": 1.0,
+      "weight": 0.0693,
+      "confidence": 0.95,
       "components": {
         "momentum": 55.05,
         "sentiment": 66.66,
@@ -637,14 +637,14 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 44.45,
-      "raw_score": 55.8,
+      "score": 44.74,
+      "raw_score": 56.09,
       "band": "starter",
-      "weight": 0.0648,
+      "weight": 0.0658,
       "confidence": 1.0,
       "components": {
         "momentum": 37.91,
-        "sentiment": 77.28,
+        "sentiment": 78.26,
         "volume": 59.76,
         "policy": 55.0,
         "volatility_penalty": 11.35
@@ -685,14 +685,14 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 29.78,
-      "raw_score": 50.45,
+      "score": 26.78,
+      "raw_score": 47.45,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.8,
+      "confidence": 0.75,
       "components": {
         "momentum": 14.74,
-        "sentiment": 90.0,
+        "sentiment": 80.0,
         "volume": 62.77,
         "policy": 50.0,
         "volatility_penalty": 20.67
@@ -706,7 +706,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 26.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-12.38%",
         "theme=Semiconductors (Broad)"
@@ -735,7 +735,7 @@
       "target_weight": 0.0029,
       "current_weight": 0.0059,
       "notional_delta": -290.08,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 26.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.75%",
         "theme=Semiconductors (Broad)"
@@ -745,7 +745,7 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0196,
+      "target_weight": 0.0191,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -834,14 +834,14 @@
     {
       "symbol": "ENPH",
       "action": "HOLD",
-      "target_weight": 0.0204,
+      "target_weight": 0.0207,
       "current_weight": 0.0193,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.11%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 44.5 (starter), contribution 53.3",
+        "theme 'Clean Energy' score 44.7 (starter), contribution 53.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -866,14 +866,14 @@
     {
       "symbol": "FSLR",
       "action": "HOLD",
-      "target_weight": 0.0263,
+      "target_weight": 0.0267,
       "current_weight": 0.0256,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 44.5 (starter), contribution 69.0",
+        "theme 'Clean Energy' score 44.7 (starter), contribution 69.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -924,11 +924,11 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0256,
+      "action": "REDUCE",
+      "target_weight": 0.025,
       "current_weight": 0.0303,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -520.67,
+      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 overweight by 0.53% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=7.08%",
         "theme=AI & Compute",
@@ -1019,7 +1019,7 @@
       "target_weight": 0.0032,
       "current_weight": 0.0065,
       "notional_delta": -319.8,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 26.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.99%",
         "theme=Semiconductors (Broad)"
@@ -1089,10 +1089,10 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.0259,
+      "target_weight": 0.0252,
       "current_weight": 0.0343,
-      "notional_delta": -830.4,
-      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 overweight by 0.84% vs target \u2014 trim",
+      "notional_delta": -899.72,
+      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 overweight by 0.91% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.44%",
         "theme=AI & Compute",
@@ -1108,7 +1108,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "trimming on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 theme score 26.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.63%",
         "theme=Semiconductors (Broad)",
@@ -1120,14 +1120,14 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.0181,
+      "target_weight": 0.0184,
       "current_weight": 0.0129,
-      "notional_delta": 518.98,
-      "reason": "buying on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 underweight by 0.52% vs target \u2014 add",
+      "notional_delta": 548.69,
+      "reason": "buying on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 underweight by 0.55% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.63%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 44.5 (starter), contribution 47.4",
+        "theme 'Clean Energy' score 44.7 (starter), contribution 47.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1364,7 +1364,7 @@
       "target_weight": 0.0077,
       "current_weight": 0.0154,
       "notional_delta": -764.4,
-      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 theme score 26.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.78%",
         "theme=Semiconductors (Broad)",
@@ -1438,7 +1438,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 26.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-12.38%",
         "theme=Semiconductors (Broad)"
@@ -1473,7 +1473,7 @@
       "target_weight": 0.0029,
       "current_weight": 0.0059,
       "notional_delta": -290.08,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 26.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.75%",
         "theme=Semiconductors (Broad)"
@@ -1486,7 +1486,7 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0196,
+      "target_weight": 0.0191,
       "current_weight": 0.0224,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1593,14 +1593,14 @@
     {
       "symbol": "ENPH",
       "action": "HOLD",
-      "target_weight": 0.0204,
+      "target_weight": 0.0207,
       "current_weight": 0.0193,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.11%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 44.5 (starter), contribution 53.3",
+        "theme 'Clean Energy' score 44.7 (starter), contribution 53.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1631,14 +1631,14 @@
     {
       "symbol": "FSLR",
       "action": "HOLD",
-      "target_weight": 0.0263,
+      "target_weight": 0.0267,
       "current_weight": 0.0256,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 44.5 (starter), contribution 69.0",
+        "theme 'Clean Energy' score 44.7 (starter), contribution 69.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1701,11 +1701,11 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0256,
+      "action": "REDUCE",
+      "target_weight": 0.025,
       "current_weight": 0.0303,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -520.67,
+      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 overweight by 0.53% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=7.08%",
         "theme=AI & Compute",
@@ -1814,7 +1814,7 @@
       "target_weight": 0.0032,
       "current_weight": 0.0065,
       "notional_delta": -319.8,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 26.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.99%",
         "theme=Semiconductors (Broad)"
@@ -1899,10 +1899,10 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.0259,
+      "target_weight": 0.0252,
       "current_weight": 0.0343,
-      "notional_delta": -830.4,
-      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 overweight by 0.84% vs target \u2014 trim",
+      "notional_delta": -899.72,
+      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 overweight by 0.91% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.44%",
         "theme=AI & Compute",
@@ -1921,7 +1921,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "trimming on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"S&P 500 Earnings Growth Hits 47.4%, Best Since 2021\" \u00b7 theme score 26.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.63%",
         "theme=Semiconductors (Broad)",
@@ -1936,14 +1936,14 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.0181,
+      "target_weight": 0.0184,
       "current_weight": 0.0129,
-      "notional_delta": 518.98,
-      "reason": "buying on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 underweight by 0.52% vs target \u2014 add",
+      "notional_delta": 548.69,
+      "reason": "buying on positive news flow \u2014 \"Bloom Energy vs. NextEra Energy: Is a Fuel Cell Upstart or Renewable Energy Titan the Better Buy in 2026?\" \u00b7 underweight by 0.55% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.63%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 44.5 (starter), contribution 47.4",
+        "theme 'Clean Energy' score 44.7 (starter), contribution 47.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2231,7 +2231,7 @@
       "target_weight": 0.0077,
       "current_weight": 0.0154,
       "notional_delta": -764.4,
-      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 theme score 26.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.78%",
         "theme=Semiconductors (Broad)",
@@ -2314,10 +2314,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-23T17:42:35+00:00",
-      "v": 101098.04
-    },
     {
       "t": "2026-06-23T19:45:07+00:00",
       "v": 100811.39
@@ -4313,24 +4309,19 @@
     {
       "t": "2026-08-02T17:40:23+00:00",
       "v": 99039.47
+    },
+    {
+      "t": "2026-08-02T18:45:33+00:00",
+      "v": 99039.47
     }
   ],
   "breaking_news": [
-    {
-      "headline": "The economy slowed a bit -- but Americans continued to spend",
-      "summary": "The U.S. economy grew at an annual rate of 1.5% in the spring, according to the Commerce Department. That's a modest slowdown from the previous quarter \u2014 but consumer spending picked up steam.",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/07/30/nx-s1-5913230/economy-gdp-inflation",
-      "published_utc": "2026-08-02T17:40:26+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
     {
       "headline": "European soccer leaders to boycott  the World Cup in an unprecedented step",
       "summary": "European soccer associations said they would boycott the World Cup unless FIFA reverses a controversial deal to sell minority stakes to the marquee soccer tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913664/world-cup-fifa-uefa-gianni-infantino",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4339,7 +4330,7 @@
       "summary": "Solo living, solo travel, and solo dining are all being embraced as more adults are choosing to remain single. Many Americans aren't interested in dating, and being single is a symbol of autonomy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/g-s1-136079/single-adult-solo-choice",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4348,7 +4339,7 @@
       "summary": "The 30-year fixed-rate mortgage reached 6.66% on average Thursday.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913851/mortgage-rates-one-year-high-july-2026",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4357,7 +4348,7 @@
       "summary": "Chevron reported its highest quarterly earnings ever. Shell had its second-biggest quarter, and ExxonMobil doubled its earnings compared with the same time last year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/31/nx-s1-5910660/big-oil-earnings-q2-2026",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4366,7 +4357,7 @@
       "summary": "FIFA abandoned a plan to create a commercial venture and then sell stakes to minority investors, just days after unveiling it. The plan drew sharp condemnation \u2014 and a boycott from European nations.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/31/nx-s1-5915820/fifa-world-cup-gianni-infantino",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4375,7 +4366,7 @@
       "summary": "The president's media company is offering investors early access to his Truth Social feed for up to $100,000 a month. Experts say the service may violate insider trading laws.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/08/01/nx-s1-5912219/trump-truth-social-access-insider-trading",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4384,8 +4375,17 @@
       "summary": "OpenAI and Anthropic say their models broke into other companies' systems during testing, raising security concerns amid a heated debate over how to regulate AI.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/08/01/nx-s1-5914852/anthropic-openai-models-hack-cybersecurity",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Capital One says it closed Trump Organization accounts over money-laundering concerns",
+      "summary": "The bank is asking a judge to permanently dismiss a lawsuit from Trump-affiliated businesses, arguing a monthslong internal review \u2014 not the Jan. 6 riot \u2014 explains why hundreds of accounts were shut down in 2021.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/08/02/g-s1-136834/capital-one-trump-bank-anti-money-laundering",
+      "published_utc": "2026-08-02T18:45:36+00:00",
+      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -4393,7 +4393,7 @@
       "summary": "Yonatan Netanyahu was the only Israeli soldier to die as he led a mission to free more than 100 hostages.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c9v471x89m3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4402,7 +4402,7 @@
       "summary": "The Foxtrot Network is thought to be responsible for about 35 murders in Europe, and uses violence-as-a-service tactics.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/czrjyevmv61o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4411,7 +4411,7 @@
       "summary": "The vessel with at least 250 people on board caught fire off Madura island.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c74g0wjvlrxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4420,7 +4420,7 @@
       "summary": "Russia's military says it attacked Ukraine's ports and vessels in the Black Sea overnight.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c998gg5pe09o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4429,7 +4429,7 @@
       "summary": "The Ceuta crossings have shaken Europe politically, exposing divisions over the sensitive issue of migration, the BBC's Sarah Rainsford writes.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c62vl925dqdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4438,7 +4438,7 @@
       "summary": "Israel says it was targeting military operatives in the strikes on Gaza City, Khan Younis and Deir el-Balah.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/czjlvvkzj20o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4447,7 +4447,7 @@
       "summary": "The US president claims Iran and other Middle Eastern countries asked Washington to hold off on any attack as the \"perimeters\" of a deal had been agreed.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cjwx74qgld2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4456,7 +4456,7 @@
       "summary": "One Danish and one Greek national died in the incident, while a British pilot and another Greek crew member survived.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c1417713ve6o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:36+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4465,7 +4465,7 @@
       "summary": "Could you live communally in a disused building in exchange for a heavily discounted rent? Property guardians show us around.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj4kvge1pyvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4474,7 +4474,7 @@
       "summary": "The price of unleaded hits 160p a litre, according to motoring group the RAC, as oil prices remain elevated.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4483,7 +4483,7 @@
       "summary": "The Chancellor said the Budget on 28 October would \u201cmeet our fiscal rules\u201d and give families \"stability\" to plan for the future.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cjd4yz35x8go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4492,7 +4492,7 @@
       "summary": "Under the terms of the deal, Argos will still operate in Sainsbury's shops, sell Habitat products, and offer Nectar points.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cpw9yrl4p2qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T17:40:26+00:00",
+      "published_utc": "2026-08-02T18:45:35+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     }
