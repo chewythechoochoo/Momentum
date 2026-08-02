@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-02T12:13:10+00:00",
+  "generated_at_utc": "2026-08-02T14:04:19+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 777,
-  "last_success_utc": "2026-08-02T11:05:06+00:00",
+  "cycle_count": 778,
+  "last_success_utc": "2026-08-02T12:13:10+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -587,22 +587,6 @@
       }
     },
     {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 56.34,
-      "raw_score": 59.78,
-      "band": "buy",
-      "weight": 0.1045,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 49.24,
-        "sentiment": 80.0,
-        "volume": 52.91,
-        "policy": 55.0,
-        "volatility_penalty": 3.44
-      }
-    },
-    {
       "key": "financials",
       "name": "Financials & Rates",
       "score": 54.86,
@@ -632,6 +616,22 @@
         "volume": 51.85,
         "policy": 55.0,
         "volatility_penalty": 27.39
+      }
+    },
+    {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 46.84,
+      "raw_score": 50.28,
+      "band": "starter",
+      "weight": 0.0601,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 49.24,
+        "sentiment": 50.0,
+        "volume": 52.91,
+        "policy": 50.0,
+        "volatility_penalty": 3.44
       }
     },
     {
@@ -669,14 +669,14 @@
     {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
-      "score": 40.39,
-      "raw_score": 54.96,
-      "band": "starter",
-      "weight": 0.0449,
-      "confidence": 0.75,
+      "score": 39.39,
+      "raw_score": 53.96,
+      "band": "hold_small",
+      "weight": 0.0394,
+      "confidence": 0.7,
       "components": {
         "momentum": 55.85,
-        "sentiment": 60.0,
+        "sentiment": 56.66,
         "volume": 48.1,
         "policy": 50.0,
         "volatility_penalty": 14.57
@@ -850,14 +850,14 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0164,
+      "target_weight": 0.0145,
       "current_weight": 0.0295,
-      "notional_delta": -1294.3,
-      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 overweight by 1.31% vs target \u2014 trim",
+      "notional_delta": -1482.47,
+      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 overweight by 1.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 40.4 (starter), contribution 64.5",
+        "theme 'EV & Clean Transport' score 39.4 (hold_small), contribution 63.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -914,14 +914,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0187,
+      "target_weight": 0.0165,
       "current_weight": 0.0364,
-      "notional_delta": -1757.58,
-      "reason": "overweight by 1.77% vs target \u2014 trim",
+      "notional_delta": -1975.47,
+      "reason": "overweight by 1.99% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 40.4 (starter), contribution 73.3"
+        "theme 'EV & Clean Transport' score 39.4 (hold_small), contribution 72.3"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -973,16 +973,14 @@
     {
       "symbol": "LCID",
       "action": "REDUCE",
-      "target_weight": 0.0097,
+      "target_weight": 0.0085,
       "current_weight": 0.0161,
-      "notional_delta": -634.93,
-      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 overweight by 0.64% vs target \u2014 trim",
+      "notional_delta": -753.78,
+      "reason": "overweight by 0.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-9.45%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 40.4 (starter), contribution 38.2",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 39.4 (hold_small), contribution 37.2"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -992,12 +990,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0335,
       "notional_delta": -3319.52,
-      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Earnings Volatility Watch: SanDisk and Nine Other Stocks Could Swing Up To 17.5% This Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.71%",
         "theme=Biotech & Pharma",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
     },
@@ -1063,16 +1061,14 @@
     {
       "symbol": "MRNA",
       "action": "REDUCE",
-      "target_weight": 0.0271,
+      "target_weight": 0.0147,
       "current_weight": 0.0347,
-      "notional_delta": -757.13,
-      "reason": "trimming on positive news flow \u2014 \"Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom\" \u00b7 overweight by 0.76% vs target \u2014 trim",
+      "notional_delta": -1985.22,
+      "reason": "overweight by 2.00% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 44.5",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 46.8 (starter), contribution 35.0"
       ],
       "theme_key": "biotech"
     },
@@ -1228,16 +1224,14 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0414,
+      "target_weight": 0.0246,
       "current_weight": 0.0466,
-      "notional_delta": -515.53,
-      "reason": "trimming on positive news flow \u2014 \"Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom\" \u00b7 overweight by 0.52% vs target \u2014 trim",
+      "notional_delta": -2179.39,
+      "reason": "overweight by 2.20% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 67.8",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 46.8 (starter), contribution 58.3"
       ],
       "theme_key": "biotech"
     },
@@ -1247,12 +1241,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.2,
-      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=13.50%",
-        "theme=Biotech & Pharma",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech"
     },
@@ -1262,12 +1254,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.93%",
-        "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1389,17 +1379,15 @@
     },
     {
       "symbol": "VRTX",
-      "action": "HOLD",
-      "target_weight": 0.0359,
+      "action": "REDUCE",
+      "target_weight": 0.0208,
       "current_weight": 0.0403,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1928.69,
+      "reason": "overweight by 1.95% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.84%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 58.8",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 46.8 (starter), contribution 49.3"
       ],
       "theme_key": "biotech"
     },
@@ -1631,14 +1619,14 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0164,
+      "target_weight": 0.0145,
       "current_weight": 0.0295,
-      "notional_delta": -1294.3,
-      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 overweight by 1.31% vs target \u2014 trim",
+      "notional_delta": -1482.47,
+      "reason": "trimming on positive news flow \u2014 \"Consumer Tech (July 27-31): AI Boom Drives Tech Earnings As Apple, Amazon Lead Markets & More\" \u00b7 overweight by 1.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.14%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 40.4 (starter), contribution 64.5",
+        "theme 'EV & Clean Transport' score 39.4 (hold_small), contribution 63.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1707,14 +1695,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0187,
+      "target_weight": 0.0165,
       "current_weight": 0.0364,
-      "notional_delta": -1757.58,
-      "reason": "overweight by 1.77% vs target \u2014 trim",
+      "notional_delta": -1975.47,
+      "reason": "overweight by 1.99% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.97%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 40.4 (starter), contribution 73.3"
+        "theme 'EV & Clean Transport' score 39.4 (hold_small), contribution 72.3"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1778,16 +1766,14 @@
     {
       "symbol": "LCID",
       "action": "REDUCE",
-      "target_weight": 0.0097,
+      "target_weight": 0.0085,
       "current_weight": 0.0161,
-      "notional_delta": -634.93,
-      "reason": "trimming on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 overweight by 0.64% vs target \u2014 trim",
+      "notional_delta": -753.78,
+      "reason": "overweight by 0.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-9.45%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 40.4 (starter), contribution 38.2",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 39.4 (hold_small), contribution 37.2"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1800,12 +1786,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0335,
       "notional_delta": -3319.52,
-      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Earnings Volatility Watch: SanDisk and Nine Other Stocks Could Swing Up To 17.5% This Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.71%",
         "theme=Biotech & Pharma",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1886,16 +1872,14 @@
     {
       "symbol": "MRNA",
       "action": "REDUCE",
-      "target_weight": 0.0271,
+      "target_weight": 0.0147,
       "current_weight": 0.0347,
-      "notional_delta": -757.13,
-      "reason": "trimming on positive news flow \u2014 \"Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom\" \u00b7 overweight by 0.76% vs target \u2014 trim",
+      "notional_delta": -1985.22,
+      "reason": "overweight by 2.00% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 44.5",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 46.8 (starter), contribution 35.0"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2084,16 +2068,14 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0414,
+      "target_weight": 0.0246,
       "current_weight": 0.0466,
-      "notional_delta": -515.53,
-      "reason": "trimming on positive news flow \u2014 \"Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom\" \u00b7 overweight by 0.52% vs target \u2014 trim",
+      "notional_delta": -2179.39,
+      "reason": "overweight by 2.20% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 67.8",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 46.8 (starter), contribution 58.3"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2106,12 +2088,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.2,
-      "reason": "exiting on positive news flow \u2014 \"Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=13.50%",
-        "theme=Biotech & Pharma",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2124,12 +2104,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on mixed news flow \u2014 \"Elon Musk Plans $100 Million Republican Midterm Push, Despite Earlier Political Fallout for Tesla\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-14.93%",
-        "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2278,17 +2256,15 @@
     },
     {
       "symbol": "VRTX",
-      "action": "HOLD",
-      "target_weight": 0.0359,
+      "action": "REDUCE",
+      "target_weight": 0.0208,
       "current_weight": 0.0403,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1928.69,
+      "reason": "overweight by 1.95% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.84%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 56.3 (buy), contribution 58.8",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 46.8 (starter), contribution 49.3"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2352,10 +2328,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-23T06:03:54+00:00",
-      "v": 101373.74
-    },
     {
       "t": "2026-06-23T10:01:10+00:00",
       "v": 100714.61
@@ -4351,6 +4323,10 @@
     {
       "t": "2026-08-02T12:13:06+00:00",
       "v": 99039.47
+    },
+    {
+      "t": "2026-08-02T14:04:15+00:00",
+      "v": 99039.47
     }
   ],
   "breaking_news": [
@@ -4359,7 +4335,7 @@
       "summary": "The U.S. economy grew at an annual rate of 1.5% in the spring, according to the Commerce Department. That's a modest slowdown from the previous quarter \u2014 but consumer spending picked up steam.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913230/economy-gdp-inflation",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4368,7 +4344,7 @@
       "summary": "European soccer associations said they would boycott the World Cup unless FIFA reverses a controversial deal to sell minority stakes to the marquee soccer tournament.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913664/world-cup-fifa-uefa-gianni-infantino",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4377,7 +4353,7 @@
       "summary": "Solo living, solo travel, and solo dining are all being embraced as more adults are choosing to remain single. Many Americans aren't interested in dating, and being single is a symbol of autonomy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/g-s1-136079/single-adult-solo-choice",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4386,7 +4362,7 @@
       "summary": "The 30-year fixed-rate mortgage reached 6.66% on average Thursday.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/30/nx-s1-5913851/mortgage-rates-one-year-high-july-2026",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4395,7 +4371,7 @@
       "summary": "Chevron reported its highest quarterly earnings ever. Shell had its second-biggest quarter, and ExxonMobil doubled its earnings compared with the same time last year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/31/nx-s1-5910660/big-oil-earnings-q2-2026",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4404,7 +4380,7 @@
       "summary": "FIFA abandoned a plan to create a commercial venture and then sell stakes to minority investors, just days after unveiling it. The plan drew sharp condemnation \u2014 and a boycott from European nations.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/07/31/nx-s1-5915820/fifa-world-cup-gianni-infantino",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4413,7 +4389,7 @@
       "summary": "The president's media company is offering investors early access to his Truth Social feed for up to $100,000 a month. Experts say the service may violate insider trading laws.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/08/01/nx-s1-5912219/trump-truth-social-access-insider-trading",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4422,7 +4398,7 @@
       "summary": "OpenAI and Anthropic say their models broke into other companies' systems during testing, raising security concerns amid a heated debate over how to regulate AI.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/08/01/nx-s1-5914852/anthropic-openai-models-hack-cybersecurity",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4431,7 +4407,7 @@
       "summary": "Pastore, who played Salvatore \"Big Pussy\" Bonpensiero in the hit US show, was found at his home in New York City, US media report.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cm2gz0epljgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4440,7 +4416,7 @@
       "summary": "Some 19 major Italian cities - including Rome, Milan and Naples - are already on red alert, and by Monday all but two will be.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr7k4gdrgljo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4449,7 +4425,7 @@
       "summary": "The small plane was flying over the Nazca Lines \u200barchaeological site when it crashed, according to local reports.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c70g132erlko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4458,7 +4434,7 @@
       "summary": "Pressure is building on Gianni Infantino. Can he survive as Fifa president after the implosion of the controversial World Cup investment plan?",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/sport/football/articles/c9w0djx2g92o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4467,7 +4443,7 @@
       "summary": "The Foxtrot Network is thought to be responsible for about 35 murders in Europe, and uses violence-as-a-service tactics.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/czrjyevmv61o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4476,7 +4452,7 @@
       "summary": "The vessel with at least 250 people on board caught fire off Madura island.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c74g0wjvlrxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4485,7 +4461,7 @@
       "summary": "The Ceuta crossings have shaken Europe politically, exposing divisions over the sensitive issue of migration, the BBC's Sarah Rainsford writes.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c62vl925dqdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4494,7 +4470,7 @@
       "summary": "The US president claims Iran and other Middle Eastern countries asked Washington to hold off on any attack as the \"perimeters\" of a deal had been agreed.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cjwx74qgld2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4503,7 +4479,7 @@
       "summary": "Could you live communally in a disused building in exchange for a heavily discounted rent? Property guardians show us around.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj4kvge1pyvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4512,7 +4488,7 @@
       "summary": "The price of unleaded hits 160p a litre, according to motoring group the RAC, as oil prices remain elevated.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4521,7 +4497,7 @@
       "summary": "The Chancellor said the Budget on 28 October would \u201cmeet our fiscal rules\u201d and give families \"stability\" to plan for the future.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cjd4yz35x8go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4530,7 +4506,7 @@
       "summary": "Under the terms of the deal, Argos will still operate in Sainsbury's shops, sell Habitat products, and offer Nectar points.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cpw9yrl4p2qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-08-02T12:13:10+00:00",
+      "published_utc": "2026-08-02T14:04:19+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     }
