@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-06T20:32:32+00:00",
+  "generated_at_utc": "2026-09-06T22:18:40+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 837,
-  "last_success_utc": "2026-09-06T18:14:38+00:00",
+  "cycle_count": 838,
+  "last_success_utc": "2026-09-06T20:32:32+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -567,14 +567,14 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 65.33,
-      "raw_score": 65.33,
+      "score": 59.33,
+      "raw_score": 59.33,
       "band": "buy",
-      "weight": 0.121,
-      "confidence": 0.8,
+      "weight": 0.0973,
+      "confidence": 0.7,
       "components": {
         "momentum": 56.44,
-        "sentiment": 90.0,
+        "sentiment": 70.0,
         "volume": 53.76,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -583,14 +583,14 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 57.61,
-      "raw_score": 65.44,
+      "score": 57.28,
+      "raw_score": 65.11,
       "band": "buy",
-      "weight": 0.1087,
+      "weight": 0.1076,
       "confidence": 1.0,
       "components": {
         "momentum": 58.48,
-        "sentiment": 90.0,
+        "sentiment": 88.89,
         "volume": 50.27,
         "policy": 50.0,
         "volatility_penalty": 7.83
@@ -645,22 +645,6 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 38.99,
-      "raw_score": 38.99,
-      "band": "hold_small",
-      "weight": 0.0417,
-      "confidence": 0.9,
-      "components": {
-        "momentum": 24.02,
-        "sentiment": 50.0,
-        "volume": 46.92,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 37.08,
@@ -707,6 +691,22 @@
         "policy": 50.0,
         "volatility_penalty": 9.88
       }
+    },
+    {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 26.99,
+      "raw_score": 26.99,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 24.02,
+        "sentiment": 10.0,
+        "volume": 46.92,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
     }
   ],
   "decisions": [
@@ -725,11 +725,11 @@
     },
     {
       "symbol": "AMZN",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0141,
       "current_weight": 0.0282,
-      "notional_delta": -3014.7,
-      "reason": "exiting on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1507.35,
+      "reason": "trimming on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=6.12%",
         "theme=Consumer Discretionary",
@@ -758,12 +758,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "exiting on positive news flow \u2014 \"Michael Dell\u2019s Net Worth Up $110 Billion So Far 2026: Why the Surge May Continue\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.71%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -786,14 +786,14 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0371,
+      "target_weight": 0.0296,
       "current_weight": 0.0,
-      "notional_delta": 3970.13,
-      "reason": "buying on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 underweight by 3.71% vs target \u2014 add",
+      "notional_delta": 3167.5,
+      "reason": "buying on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 underweight by 2.96% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 65.3 (buy), contribution 65.1",
+        "theme 'Financials & Rates' score 59.3 (buy), contribution 59.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -964,14 +964,13 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0141,
+      "target_weight": 0.0138,
       "current_weight": 0.0275,
-      "notional_delta": -1438.58,
-      "reason": "trimming on mixed news flow \u2014 \"America's Housing Market Is Going K-Shaped \u2014 AI Millionaires Are Buying While Everyone Else Sits Out\" \u00b7 overweight by 1.34% vs target \u2014 trim",
+      "notional_delta": -1473.76,
+      "reason": "trimming on mixed news flow \u2014 \"America's Housing Market Is Going K-Shaped \u2014 AI Millionaires Are Buying While Everyone Else Sits Out\" \u00b7 theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.67%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.0 (hold_small), contribution 37.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1011,7 +1010,7 @@
       "target_weight": 0.021,
       "current_weight": 0.0371,
       "notional_delta": -1721.23,
-      "reason": "trimming on positive news flow \u2014 \"Here's Why Billionaires Stanley Druckenmiller and Ken Griffin Are Loading Up on Eli Lilly Stock\" \u00b7 overweight by 1.61% vs target \u2014 trim",
+      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s $100B incretin opportunity: Is more upside coming?\" \u00b7 overweight by 1.61% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.36%",
         "theme=Biotech & Pharma",
@@ -1051,28 +1050,27 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0139,
+      "target_weight": 0.0124,
       "current_weight": 0.0248,
-      "notional_delta": -1169.72,
-      "reason": "overweight by 1.09% vs target \u2014 trim",
+      "notional_delta": -1328.63,
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.83%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.0 (hold_small), contribution 37.0"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
       "action": "BUY",
-      "target_weight": 0.0397,
+      "target_weight": 0.0394,
       "current_weight": 0.0,
-      "notional_delta": 4248.22,
-      "reason": "underweight by 3.97% vs target \u2014 add",
+      "notional_delta": 4216.11,
+      "reason": "underweight by 3.94% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.53%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.6 (buy), contribution 78.0"
+        "theme 'AI & Compute' score 57.3 (buy), contribution 77.6"
       ],
       "theme_key": "ai_compute"
     },
@@ -1082,7 +1080,7 @@
       "target_weight": 0.0,
       "current_weight": 0.1022,
       "notional_delta": -10940.51,
-      "reason": "exiting on positive news flow \u2014 \"Here's Why Billionaires Stanley Druckenmiller and Ken Griffin Are Loading Up on Eli Lilly Stock\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Eli Lilly\u2019s $100B incretin opportunity: Is more upside coming?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=151.72%",
         "theme=Biotech & Pharma",
@@ -1093,15 +1091,15 @@
     },
     {
       "symbol": "MS",
-      "action": "BUY",
-      "target_weight": 0.0382,
+      "action": "HOLD",
+      "target_weight": 0.0306,
       "current_weight": 0.0268,
-      "notional_delta": 1219.54,
-      "reason": "buying on mixed news flow \u2014 \"Salesforce Stock Has Surged as AI and Anthropic Bets Pay Off, But Technical Risks Remain\" \u00b7 underweight by 1.14% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Salesforce Stock Has Surged as AI and Anthropic Bets Pay Off, But Technical Risks Remain\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.41%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 65.3 (buy), contribution 67.1",
+        "theme 'Financials & Rates' score 59.3 (buy), contribution 61.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1156,11 +1154,11 @@
     },
     {
       "symbol": "NKE",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.49,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.24,
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.85%",
         "theme=Consumer Discretionary"
@@ -1183,14 +1181,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0395,
+      "target_weight": 0.0392,
       "current_weight": 0.0385,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy Stock Faces Key Risks as Growth Fuels S&P 500 Index Inclusion\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.6 (buy), contribution 77.6",
+        "theme 'AI & Compute' score 57.3 (buy), contribution 77.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1246,7 +1244,7 @@
       "target_weight": 0.0277,
       "current_weight": 0.0455,
       "notional_delta": -1902.25,
-      "reason": "trimming on positive news flow \u2014 \"Here's Why Billionaires Stanley Druckenmiller and Ken Griffin Are Loading Up on Eli Lilly Stock\" \u00b7 overweight by 1.78% vs target \u2014 trim",
+      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s $100B incretin opportunity: Is more upside coming?\" \u00b7 overweight by 1.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=13.33%",
         "theme=Biotech & Pharma",
@@ -1262,7 +1260,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.22,
-      "reason": "exiting on positive news flow \u2014 \"Here's Why Billionaires Stanley Druckenmiller and Ken Griffin Are Loading Up on Eli Lilly Stock\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Eli Lilly\u2019s $100B incretin opportunity: Is more upside coming?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=23.19%",
         "theme=Biotech & Pharma",
@@ -1316,15 +1314,14 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0138,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 1476.06,
-      "reason": "underweight by 1.38% vs target \u2014 add",
+      "notional_delta": -0.39,
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.21%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.0 (hold_small), contribution 36.8"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1407,7 +1404,7 @@
       "target_weight": 0.0259,
       "current_weight": 0.0366,
       "notional_delta": -1140.32,
-      "reason": "trimming on positive news flow \u2014 \"Here's Why Billionaires Stanley Druckenmiller and Ken Griffin Are Loading Up on Eli Lilly Stock\" \u00b7 overweight by 1.07% vs target \u2014 trim",
+      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s $100B incretin opportunity: Is more upside coming?\" \u00b7 overweight by 1.07% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=14.04%",
         "theme=Biotech & Pharma",
@@ -1420,14 +1417,14 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0457,
+      "target_weight": 0.0371,
       "current_weight": 0.0258,
-      "notional_delta": 2128.51,
-      "reason": "underweight by 1.99% vs target \u2014 add",
+      "notional_delta": 1208.17,
+      "reason": "underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.53%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 65.3 (buy), contribution 80.2"
+        "theme 'Financials & Rates' score 59.3 (buy), contribution 74.2"
       ],
       "theme_key": "financials"
     },
@@ -1464,10 +1461,10 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0294,
+      "target_weight": 0.0291,
       "current_weight": 0.0,
-      "notional_delta": 3146.3,
-      "reason": "new position \u2014 theme 'AI & Compute' score 57.6 (buy), contribution 57.7",
+      "notional_delta": 3114.2,
+      "reason": "new position \u2014 theme 'AI & Compute' score 57.3 (buy), contribution 57.4",
       "factors": [
         "ret_5d=2.58%",
         "rel_vol_5d=0.86",
@@ -1495,11 +1492,11 @@
     },
     {
       "symbol": "AMZN",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0141,
       "current_weight": 0.0282,
-      "notional_delta": -3014.7,
-      "reason": "exiting on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1507.35,
+      "reason": "trimming on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=6.12%",
         "theme=Consumer Discretionary",
@@ -1534,12 +1531,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "exiting on positive news flow \u2014 \"Michael Dell\u2019s Net Worth Up $110 Billion So Far 2026: Why the Surge May Continue\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.71%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1568,14 +1565,14 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0371,
+      "target_weight": 0.0296,
       "current_weight": 0.0,
-      "notional_delta": 3970.13,
-      "reason": "buying on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 underweight by 3.71% vs target \u2014 add",
+      "notional_delta": 3167.5,
+      "reason": "buying on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 underweight by 2.96% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 65.3 (buy), contribution 65.1",
+        "theme 'Financials & Rates' score 59.3 (buy), contribution 59.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1782,14 +1779,13 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0141,
+      "target_weight": 0.0138,
       "current_weight": 0.0275,
-      "notional_delta": -1438.58,
-      "reason": "trimming on mixed news flow \u2014 \"America's Housing Market Is Going K-Shaped \u2014 AI Millionaires Are Buying While Everyone Else Sits Out\" \u00b7 overweight by 1.34% vs target \u2014 trim",
+      "notional_delta": -1473.76,
+      "reason": "trimming on mixed news flow \u2014 \"America's Housing Market Is Going K-Shaped \u2014 AI Millionaires Are Buying While Everyone Else Sits Out\" \u00b7 theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.67%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.0 (hold_small), contribution 37.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1838,7 +1834,7 @@
       "target_weight": 0.021,
       "current_weight": 0.0371,
       "notional_delta": -1721.23,
-      "reason": "trimming on positive news flow \u2014 \"Here's Why Billionaires Stanley Druckenmiller and Ken Griffin Are Loading Up on Eli Lilly Stock\" \u00b7 overweight by 1.61% vs target \u2014 trim",
+      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s $100B incretin opportunity: Is more upside coming?\" \u00b7 overweight by 1.61% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.36%",
         "theme=Biotech & Pharma",
@@ -1887,14 +1883,13 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0139,
+      "target_weight": 0.0124,
       "current_weight": 0.0248,
-      "notional_delta": -1169.72,
-      "reason": "overweight by 1.09% vs target \u2014 trim",
+      "notional_delta": -1328.63,
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.83%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.0 (hold_small), contribution 37.0"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1904,14 +1899,14 @@
     {
       "symbol": "META",
       "action": "BUY",
-      "target_weight": 0.0397,
+      "target_weight": 0.0394,
       "current_weight": 0.0,
-      "notional_delta": 4248.22,
-      "reason": "underweight by 3.97% vs target \u2014 add",
+      "notional_delta": 4216.11,
+      "reason": "underweight by 3.94% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.53%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.6 (buy), contribution 78.0"
+        "theme 'AI & Compute' score 57.3 (buy), contribution 77.6"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1924,7 +1919,7 @@
       "target_weight": 0.0,
       "current_weight": 0.1022,
       "notional_delta": -10940.51,
-      "reason": "exiting on positive news flow \u2014 \"Here's Why Billionaires Stanley Druckenmiller and Ken Griffin Are Loading Up on Eli Lilly Stock\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Eli Lilly\u2019s $100B incretin opportunity: Is more upside coming?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=151.72%",
         "theme=Biotech & Pharma",
@@ -1938,15 +1933,15 @@
     },
     {
       "symbol": "MS",
-      "action": "BUY",
-      "target_weight": 0.0382,
+      "action": "HOLD",
+      "target_weight": 0.0306,
       "current_weight": 0.0268,
-      "notional_delta": 1219.54,
-      "reason": "buying on mixed news flow \u2014 \"Salesforce Stock Has Surged as AI and Anthropic Bets Pay Off, But Technical Risks Remain\" \u00b7 underweight by 1.14% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Salesforce Stock Has Surged as AI and Anthropic Bets Pay Off, But Technical Risks Remain\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.41%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 65.3 (buy), contribution 67.1",
+        "theme 'Financials & Rates' score 59.3 (buy), contribution 61.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2013,11 +2008,11 @@
     },
     {
       "symbol": "NKE",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.49,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.24,
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.85%",
         "theme=Consumer Discretionary"
@@ -2046,14 +2041,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0395,
+      "target_weight": 0.0392,
       "current_weight": 0.0385,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy Stock Faces Key Risks as Growth Fuels S&P 500 Index Inclusion\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.6 (buy), contribution 77.6",
+        "theme 'AI & Compute' score 57.3 (buy), contribution 77.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2121,7 +2116,7 @@
       "target_weight": 0.0277,
       "current_weight": 0.0455,
       "notional_delta": -1902.25,
-      "reason": "trimming on positive news flow \u2014 \"Here's Why Billionaires Stanley Druckenmiller and Ken Griffin Are Loading Up on Eli Lilly Stock\" \u00b7 overweight by 1.78% vs target \u2014 trim",
+      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s $100B incretin opportunity: Is more upside coming?\" \u00b7 overweight by 1.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=13.33%",
         "theme=Biotech & Pharma",
@@ -2140,7 +2135,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.22,
-      "reason": "exiting on positive news flow \u2014 \"Here's Why Billionaires Stanley Druckenmiller and Ken Griffin Are Loading Up on Eli Lilly Stock\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Eli Lilly\u2019s $100B incretin opportunity: Is more upside coming?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=23.19%",
         "theme=Biotech & Pharma",
@@ -2206,15 +2201,14 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0138,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 1476.06,
-      "reason": "underweight by 1.38% vs target \u2014 add",
+      "notional_delta": -0.39,
+      "reason": "theme score 27.0 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.21%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.0 (hold_small), contribution 36.8"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2315,7 +2309,7 @@
       "target_weight": 0.0259,
       "current_weight": 0.0366,
       "notional_delta": -1140.32,
-      "reason": "trimming on positive news flow \u2014 \"Here's Why Billionaires Stanley Druckenmiller and Ken Griffin Are Loading Up on Eli Lilly Stock\" \u00b7 overweight by 1.07% vs target \u2014 trim",
+      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s $100B incretin opportunity: Is more upside coming?\" \u00b7 overweight by 1.07% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=14.04%",
         "theme=Biotech & Pharma",
@@ -2331,14 +2325,14 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0457,
+      "target_weight": 0.0371,
       "current_weight": 0.0258,
-      "notional_delta": 2128.51,
-      "reason": "underweight by 1.99% vs target \u2014 add",
+      "notional_delta": 1208.17,
+      "reason": "underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.53%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 65.3 (buy), contribution 80.2"
+        "theme 'Financials & Rates' score 59.3 (buy), contribution 74.2"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2384,10 +2378,10 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0294,
+      "target_weight": 0.0291,
       "current_weight": 0.0,
-      "notional_delta": 3146.3,
-      "reason": "new position \u2014 theme 'AI & Compute' score 57.6 (buy), contribution 57.7",
+      "notional_delta": 3114.2,
+      "reason": "new position \u2014 theme 'AI & Compute' score 57.3 (buy), contribution 57.4",
       "factors": [
         "ret_5d=2.58%",
         "rel_vol_5d=0.86",
@@ -2400,10 +2394,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-28T19:50:18+00:00",
-      "v": 101646.92
-    },
     {
       "t": "2026-06-28T20:54:28+00:00",
       "v": 101646.92
@@ -4399,6 +4389,10 @@
     {
       "t": "2026-09-06T20:32:26+00:00",
       "v": 107017.06
+    },
+    {
+      "t": "2026-09-06T22:18:35+00:00",
+      "v": 107017.06
     }
   ],
   "breaking_news": [
@@ -4407,7 +4401,7 @@
       "summary": "The IRS slashed its auditing staff last year \u2014 but the move may have backfired as tax collections from enforcement efforts plummeted, an Inspector General report shows.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/02/nx-s1-5954022/irs-tax-collection-job-reductions",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4416,7 +4410,7 @@
       "summary": "Fox News abruptly announced it had cut ties with anchor Maria Bartiromo after more than a dozen years.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/03/nx-s1-5955645/maria-bartiromo-fox-news",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4425,7 +4419,7 @@
       "summary": "The price of diesel has reached an all-time high, a result of the war in Iran and Ukraine's attacks on Russian refineries. That will matter across the supply chain.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5948016/diesel-price-record-high",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:40+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4434,7 +4428,7 @@
       "summary": "How do you know if a secondhand luxury good bought online is real? That's at the heart of a lawsuit filed by Chanel against the luxury reseller, The RealReal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5946396/how-do-you-know-if-its-real-luxury-reseller-faces-chanel-lawsuit",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:40+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4443,7 +4437,7 @@
       "summary": "Changing SNAP eligibility actually can change consumption habits.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5955821/pulling-the-snap-lever-why-gen-zers-bet-invest-differently",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4452,7 +4446,7 @@
       "summary": "A report from Labor Department investigators found former Labor Secretary Lori Chavez-DeRemer violated her own department's policy prohibiting harassment. She resigned in April.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5958601/labor-department-inspector-general-secretary-chavez-deremer",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4461,7 +4455,7 @@
       "summary": "NPR's Ayesha Rascoe talks to former State Department energy envoy David Goldwyn about how the war in Iran continues to affect gas and diesel prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/06/nx-s1-5954175/former-state-department-energy-envoy-on-how-the-war-in-iran-is-impacting-gas-prices",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4470,25 +4464,16 @@
       "summary": "President Trump's latest executive orders allows ranchers to sell meat directly to consumers. Ranchers have been upset over Trump's plan to boost beef imports in a bid to lower prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/06/nx-s1-5959146/trump-issues-new-executive-orders-on-beef-sales-to-pacify-american-cattle-ranchers",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
-    },
-    {
-      "headline": "Mistrial declared in Lindsay Clancy murder case, after jury deadlocks",
-      "summary": "The mistrial now puts the murder case - and Clancy's future - in limbo as to whether she will be held criminally liable in the deaths of her three kids.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cpwlrj2je1po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:32+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
     },
     {
       "headline": "Prince William to attend King Harald's funeral in Norway",
       "summary": "The Prince of Wales will represent the King at the funeral of Harald V in Oslo next week.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cp301rw6kvro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4497,7 +4482,7 @@
       "summary": "The comments came a day after Washington said it had struck Iranian oil tankers in response to Tehran's attacks on US warships in the region.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cp8d56w7d9po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:39+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4506,7 +4491,7 @@
       "summary": "Sarah Khalifa is best known for her TV programme Mission Impossible which dealt with crime issues.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5y7gk9knnlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4515,7 +4500,7 @@
       "summary": "As many as 50 people are thought to have been inside the five-storey hostel when it came down.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c8r6ezx1jmro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4524,17 +4509,17 @@
       "summary": "More than 170,000 airline passengers are stranded after ash was detected in airspace near Jakarta following the eruptions.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvgy5k4n07ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "German far-right set for big win in eastern state, projections show",
-      "summary": "Germany's AfD has hailed a \"historic result\" and is projected to win more than 44% of the vote, far ahead of the conservative CDU on 18.4%.",
+      "headline": "Peace talks rich in symbolism but fundamental differences between Russia and Ukraine remain",
+      "summary": "Despite talks between US envoys and both Putin and Zelensky, the expectation in Kyiv is the fighting will continue, writes James Landale.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cy4zejgz3z9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:32+00:00",
-      "sentiment_score": 0.2,
+      "url": "https://www.bbc.co.uk/news/articles/c980j5m8mpro?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-06T22:18:39+00:00",
+      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4542,7 +4527,16 @@
       "summary": "There was no announcement of a major breakthrough, after Steve Witkoff and Jared Kushner travelled to Kyiv.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6248nvqy8po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:32+00:00",
+      "published_utc": "2026-09-06T22:18:39+00:00",
+      "sentiment_score": 0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "Germany's far-right AfD set for big win in eastern state, just short of majority",
+      "summary": "Germany's AfD has hailed a \"historic result\" and is projected to win 44% of the vote, far ahead of the conservatives on 17%.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cy4zejgz3z9o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-06T22:18:39+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4551,7 +4545,7 @@
       "summary": "The firm says it needs to save about \u00a31.7bn over the next two years.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c4gkr3p0ql7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:31+00:00",
+      "published_utc": "2026-09-06T22:18:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4560,7 +4554,7 @@
       "summary": "The price of unleaded hits 163p a litre, according to motoring group the RAC, as oil prices remain elevated.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:31+00:00",
+      "published_utc": "2026-09-06T22:18:39+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4569,7 +4563,7 @@
       "summary": "Demand for avocados is booming in India and local growers hope to grab more of the market.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/clyjzpgv29do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:31+00:00",
+      "published_utc": "2026-09-06T22:18:39+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4578,7 +4572,7 @@
       "summary": "The government is set to give the go-ahead for the gas field off the coast of Aberdeen, the BBC understands.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj9xe09jz4eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T20:32:31+00:00",
+      "published_utc": "2026-09-06T22:18:39+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     }
