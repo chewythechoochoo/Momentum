@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-06T04:30:19+00:00",
+  "generated_at_utc": "2026-09-06T08:52:57+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 832,
-  "last_success_utc": "2026-09-06T00:01:12+00:00",
+  "cycle_count": 833,
+  "last_success_utc": "2026-09-06T04:30:19+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -567,14 +567,14 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 59.33,
-      "raw_score": 59.33,
+      "score": 62.33,
+      "raw_score": 62.33,
       "band": "buy",
-      "weight": 0.0973,
-      "confidence": 0.7,
+      "weight": 0.1089,
+      "confidence": 0.75,
       "components": {
         "momentum": 56.44,
-        "sentiment": 70.0,
+        "sentiment": 80.0,
         "volume": 53.76,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -583,14 +583,14 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 58.11,
-      "raw_score": 65.94,
+      "score": 56.11,
+      "raw_score": 63.94,
       "band": "buy",
-      "weight": 0.1104,
+      "weight": 0.1037,
       "confidence": 1.0,
       "components": {
         "momentum": 58.48,
-        "sentiment": 90.0,
+        "sentiment": 83.34,
         "volume": 50.27,
         "policy": 55.0,
         "volatility_penalty": 7.83
@@ -631,16 +631,16 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 49.48,
-      "raw_score": 59.82,
+      "score": 48.7,
+      "raw_score": 59.04,
       "band": "starter",
-      "weight": 0.0816,
+      "weight": 0.079,
       "confidence": 1.0,
       "components": {
         "momentum": 45.29,
-        "sentiment": 88.89,
+        "sentiment": 84.62,
         "volume": 50.21,
-        "policy": 50.0,
+        "policy": 55.0,
         "volatility_penalty": 10.35
       }
     },
@@ -661,38 +661,6 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 41.89,
-      "raw_score": 51.77,
-      "band": "starter",
-      "weight": 0.0493,
-      "confidence": 0.75,
-      "components": {
-        "momentum": 51.51,
-        "sentiment": 50.0,
-        "volume": 55.83,
-        "policy": 50.0,
-        "volatility_penalty": 9.88
-      }
-    },
-    {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 39.49,
-      "raw_score": 39.49,
-      "band": "hold_small",
-      "weight": 0.0411,
-      "confidence": 0.75,
-      "components": {
-        "momentum": 24.02,
-        "sentiment": 50.0,
-        "volume": 46.92,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 34.9,
@@ -706,6 +674,38 @@
         "volume": 64.33,
         "policy": 50.0,
         "volatility_penalty": 11.85
+      }
+    },
+    {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 34.49,
+      "raw_score": 34.49,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.85,
+      "components": {
+        "momentum": 24.02,
+        "sentiment": 33.34,
+        "volume": 46.92,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 29.89,
+      "raw_score": 39.77,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 51.51,
+        "sentiment": 10.0,
+        "volume": 55.83,
+        "policy": 50.0,
+        "volatility_penalty": 9.88
       }
     }
   ],
@@ -725,16 +725,16 @@
     },
     {
       "symbol": "AMZN",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0141,
       "current_weight": 0.0282,
-      "notional_delta": -3014.7,
-      "reason": "exiting on positive news flow \u2014 \"Michael Dell\u2019s Net Worth Up $110 Billion So Far 2026: Why the Surge May Continue\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1507.35,
+      "reason": "trimming on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=6.12%",
         "theme=Consumer Discretionary",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -786,14 +786,16 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0296,
+      "target_weight": 0.0333,
       "current_weight": 0.0,
-      "notional_delta": 3167.5,
-      "reason": "underweight by 2.96% vs target \u2014 add",
+      "notional_delta": 3563.46,
+      "reason": "buying on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 underweight by 3.33% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 59.1"
+        "theme 'Financials & Rates' score 62.3 (buy), contribution 62.1",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -859,29 +861,28 @@
     },
     {
       "symbol": "F",
-      "action": "BUY",
-      "target_weight": 0.0195,
+      "action": "REDUCE",
+      "target_weight": 0.0006,
       "current_weight": 0.0013,
-      "notional_delta": 1948.68,
-      "reason": "underweight by 1.82% vs target \u2014 add",
+      "notional_delta": -69.08,
+      "reason": "theme score 29.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.39%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 71.5"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "FSLR",
       "action": "HOLD",
-      "target_weight": 0.0252,
+      "target_weight": 0.0243,
       "current_weight": 0.0213,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Tesla and Google Just Joined a New Bet on the Electric Grid\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-8.63%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 49.5 (starter), contribution 56.3",
+        "theme 'Clean Energy' score 48.7 (starter), contribution 55.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -917,15 +918,14 @@
     },
     {
       "symbol": "GM",
-      "action": "BUY",
-      "target_weight": 0.016,
+      "action": "REDUCE",
+      "target_weight": 0.0006,
       "current_weight": 0.0013,
-      "notional_delta": 1574.54,
-      "reason": "underweight by 1.47% vs target \u2014 add",
+      "notional_delta": -68.86,
+      "reason": "theme score 29.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.16%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 58.7"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -935,12 +935,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0313,
       "notional_delta": -3345.29,
-      "reason": "exiting on mixed news flow \u2014 \"Elon Musk Says Chess Will Be \u2018Fully Solved\u2019 One Day \u2014 Chess.com Fires Back With a Brutal Two-Word Roast\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.53%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -950,7 +950,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0243,
       "notional_delta": -2603.64,
-      "reason": "exiting on positive news flow \u2014 \"Michael Dell\u2019s Net Worth Up $110 Billion So Far 2026: Why the Surge May Continue\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Financials & Rates",
@@ -962,14 +962,13 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0139,
+      "target_weight": 0.0138,
       "current_weight": 0.0275,
-      "notional_delta": -1459.98,
-      "reason": "trimming on negative news flow \u2014 \"Republican Congressman Bearish on Stocks? $7 Million+ Sold in 2026, Including 28 Recent Moves\" \u00b7 overweight by 1.36% vs target \u2014 trim",
+      "notional_delta": -1473.76,
+      "reason": "trimming on negative news flow \u2014 \"Republican Congressman Bearish on Stocks? $7 Million+ Sold in 2026, Including 28 Recent Moves\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.67%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.5 (hold_small), contribution 38.1",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -981,20 +980,22 @@
       "target_weight": 0.0,
       "current_weight": 0.0362,
       "notional_delta": -3875.48,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.29%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "LCID",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0003,
       "current_weight": 0.0006,
-      "notional_delta": -63.07,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -31.53,
+      "reason": "theme score 29.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-40.98%",
         "theme=EV & Clean Transport"
@@ -1049,28 +1050,27 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0136,
+      "target_weight": 0.0124,
       "current_weight": 0.0248,
-      "notional_delta": -1201.82,
-      "reason": "overweight by 1.12% vs target \u2014 trim",
+      "notional_delta": -1328.63,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.83%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.5 (hold_small), contribution 37.5"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
       "action": "BUY",
-      "target_weight": 0.0403,
+      "target_weight": 0.038,
       "current_weight": 0.0,
-      "notional_delta": 4312.43,
-      "reason": "underweight by 4.03% vs target \u2014 add",
+      "notional_delta": 4066.29,
+      "reason": "underweight by 3.80% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.53%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.1 (buy), contribution 78.5"
+        "theme 'AI & Compute' score 56.1 (buy), contribution 76.5"
       ],
       "theme_key": "ai_compute"
     },
@@ -1092,15 +1092,15 @@
     },
     {
       "symbol": "MS",
-      "action": "HOLD",
-      "target_weight": 0.0306,
+      "action": "BUY",
+      "target_weight": 0.0343,
       "current_weight": 0.0268,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Anthropic's $2 Trillion IPO Approaches: The Companies Poised to Benefit\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 802.17,
+      "reason": "buying on mixed news flow \u2014 \"Anthropic's $2 Trillion IPO Approaches: The Companies Poised to Benefit\" \u00b7 underweight by 0.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.41%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 61.1",
+        "theme 'Financials & Rates' score 62.3 (buy), contribution 64.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1140,14 +1140,14 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.0319,
+      "target_weight": 0.0309,
       "current_weight": 0.0,
-      "notional_delta": 3413.62,
-      "reason": "buying on positive news flow \u2014 \"Tesla and Google Just Joined a New Bet on the Electric Grid\" \u00b7 underweight by 3.19% vs target \u2014 add",
+      "notional_delta": 3306.6,
+      "reason": "buying on positive news flow \u2014 \"Tesla and Google Just Joined a New Bet on the Electric Grid\" \u00b7 underweight by 3.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.97%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 49.5 (starter), contribution 71.3",
+        "theme 'Clean Energy' score 48.7 (starter), contribution 70.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1155,11 +1155,11 @@
     },
     {
       "symbol": "NKE",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.49,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.24,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.85%",
         "theme=Consumer Discretionary"
@@ -1184,14 +1184,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0401,
+      "target_weight": 0.0378,
       "current_weight": 0.0385,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Foxconn Says Q3 Will Beat Expectations As AI Demand Surges, August Revenue Hits Record\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.1 (buy), contribution 78.1",
+        "theme 'AI & Compute' score 56.1 (buy), contribution 76.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1275,11 +1275,11 @@
     },
     {
       "symbol": "RIVN",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "theme score 29.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-12.02%",
         "theme=EV & Clean Transport"
@@ -1305,14 +1305,14 @@
     {
       "symbol": "RUN",
       "action": "BUY",
-      "target_weight": 0.0245,
+      "target_weight": 0.0237,
       "current_weight": 0.0174,
-      "notional_delta": 760.73,
-      "reason": "buying on positive news flow \u2014 \"Tesla and Google Just Joined a New Bet on the Electric Grid\" \u00b7 underweight by 0.71% vs target \u2014 add",
+      "notional_delta": 675.12,
+      "reason": "buying on positive news flow \u2014 \"Tesla and Google Just Joined a New Bet on the Electric Grid\" \u00b7 underweight by 0.63% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-15.57%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 49.5 (starter), contribution 54.8",
+        "theme 'Clean Energy' score 48.7 (starter), contribution 54.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1320,15 +1320,14 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0136,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 1454.65,
-      "reason": "underweight by 1.36% vs target \u2014 add",
+      "notional_delta": -0.39,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.21%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.5 (hold_small), contribution 37.3"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1377,17 +1376,16 @@
     },
     {
       "symbol": "TSLA",
-      "action": "BUY",
-      "target_weight": 0.0137,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 1465.98,
-      "reason": "buying on mixed news flow \u2014 \"This Week in Tesla: Elon Musk Touts 'Golden Era' With Cybercab Amid Fleet Expansion\" \u00b7 underweight by 1.37% vs target \u2014 add",
+      "notional_delta": -0.08,
+      "reason": "trimming on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 theme score 29.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=9.38%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 50.2",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1424,14 +1422,14 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0371,
+      "target_weight": 0.0413,
       "current_weight": 0.0258,
-      "notional_delta": 1208.17,
-      "reason": "underweight by 1.13% vs target \u2014 add",
+      "notional_delta": 1657.64,
+      "reason": "underweight by 1.55% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.53%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 74.2"
+        "theme 'Financials & Rates' score 62.3 (buy), contribution 77.2"
       ],
       "theme_key": "financials"
     },
@@ -1469,10 +1467,10 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0299,
+      "target_weight": 0.0279,
       "current_weight": 0.0,
-      "notional_delta": 3199.81,
-      "reason": "new position \u2014 theme 'AI & Compute' score 58.1 (buy), contribution 58.2",
+      "notional_delta": 2985.78,
+      "reason": "new position \u2014 theme 'AI & Compute' score 56.1 (buy), contribution 56.2",
       "factors": [
         "ret_5d=2.58%",
         "rel_vol_5d=0.86",
@@ -1500,16 +1498,16 @@
     },
     {
       "symbol": "AMZN",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0141,
       "current_weight": 0.0282,
-      "notional_delta": -3014.7,
-      "reason": "exiting on positive news flow \u2014 \"Michael Dell\u2019s Net Worth Up $110 Billion So Far 2026: Why the Surge May Continue\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -1507.35,
+      "reason": "trimming on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=6.12%",
         "theme=Consumer Discretionary",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1573,14 +1571,16 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0296,
+      "target_weight": 0.0333,
       "current_weight": 0.0,
-      "notional_delta": 3167.5,
-      "reason": "underweight by 2.96% vs target \u2014 add",
+      "notional_delta": 3563.46,
+      "reason": "buying on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 underweight by 3.33% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 59.1"
+        "theme 'Financials & Rates' score 62.3 (buy), contribution 62.1",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1661,15 +1661,14 @@
     },
     {
       "symbol": "F",
-      "action": "BUY",
-      "target_weight": 0.0195,
+      "action": "REDUCE",
+      "target_weight": 0.0006,
       "current_weight": 0.0013,
-      "notional_delta": 1948.68,
-      "reason": "underweight by 1.82% vs target \u2014 add",
+      "notional_delta": -69.08,
+      "reason": "theme score 29.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.39%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 71.5"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1679,14 +1678,14 @@
     {
       "symbol": "FSLR",
       "action": "HOLD",
-      "target_weight": 0.0252,
+      "target_weight": 0.0243,
       "current_weight": 0.0213,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Tesla and Google Just Joined a New Bet on the Electric Grid\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-8.63%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 49.5 (starter), contribution 56.3",
+        "theme 'Clean Energy' score 48.7 (starter), contribution 55.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1731,15 +1730,14 @@
     },
     {
       "symbol": "GM",
-      "action": "BUY",
-      "target_weight": 0.016,
+      "action": "REDUCE",
+      "target_weight": 0.0006,
       "current_weight": 0.0013,
-      "notional_delta": 1574.54,
-      "reason": "underweight by 1.47% vs target \u2014 add",
+      "notional_delta": -68.86,
+      "reason": "theme score 29.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.16%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 58.7"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1752,12 +1750,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0313,
       "notional_delta": -3345.29,
-      "reason": "exiting on mixed news flow \u2014 \"Elon Musk Says Chess Will Be \u2018Fully Solved\u2019 One Day \u2014 Chess.com Fires Back With a Brutal Two-Word Roast\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.53%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1770,7 +1768,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0243,
       "notional_delta": -2603.64,
-      "reason": "exiting on positive news flow \u2014 \"Michael Dell\u2019s Net Worth Up $110 Billion So Far 2026: Why the Surge May Continue\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Financials & Rates",
@@ -1785,14 +1783,13 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0139,
+      "target_weight": 0.0138,
       "current_weight": 0.0275,
-      "notional_delta": -1459.98,
-      "reason": "trimming on negative news flow \u2014 \"Republican Congressman Bearish on Stocks? $7 Million+ Sold in 2026, Including 28 Recent Moves\" \u00b7 overweight by 1.36% vs target \u2014 trim",
+      "notional_delta": -1473.76,
+      "reason": "trimming on negative news flow \u2014 \"Republican Congressman Bearish on Stocks? $7 Million+ Sold in 2026, Including 28 Recent Moves\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.67%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.5 (hold_small), contribution 38.1",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1807,10 +1804,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0362,
       "notional_delta": -3875.48,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.29%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1819,11 +1818,11 @@
     },
     {
       "symbol": "LCID",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0003,
       "current_weight": 0.0006,
-      "notional_delta": -63.07,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -31.53,
+      "reason": "theme score 29.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-40.98%",
         "theme=EV & Clean Transport"
@@ -1890,14 +1889,13 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0136,
+      "target_weight": 0.0124,
       "current_weight": 0.0248,
-      "notional_delta": -1201.82,
-      "reason": "overweight by 1.12% vs target \u2014 trim",
+      "notional_delta": -1328.63,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-6.83%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.5 (hold_small), contribution 37.5"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1907,14 +1905,14 @@
     {
       "symbol": "META",
       "action": "BUY",
-      "target_weight": 0.0403,
+      "target_weight": 0.038,
       "current_weight": 0.0,
-      "notional_delta": 4312.43,
-      "reason": "underweight by 4.03% vs target \u2014 add",
+      "notional_delta": 4066.29,
+      "reason": "underweight by 3.80% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.53%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.1 (buy), contribution 78.5"
+        "theme 'AI & Compute' score 56.1 (buy), contribution 76.5"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1942,15 +1940,15 @@
     },
     {
       "symbol": "MS",
-      "action": "HOLD",
-      "target_weight": 0.0306,
+      "action": "BUY",
+      "target_weight": 0.0343,
       "current_weight": 0.0268,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Anthropic's $2 Trillion IPO Approaches: The Companies Poised to Benefit\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 802.17,
+      "reason": "buying on mixed news flow \u2014 \"Anthropic's $2 Trillion IPO Approaches: The Companies Poised to Benefit\" \u00b7 underweight by 0.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.41%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 61.1",
+        "theme 'Financials & Rates' score 62.3 (buy), contribution 64.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1999,14 +1997,14 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.0319,
+      "target_weight": 0.0309,
       "current_weight": 0.0,
-      "notional_delta": 3413.62,
-      "reason": "buying on positive news flow \u2014 \"Tesla and Google Just Joined a New Bet on the Electric Grid\" \u00b7 underweight by 3.19% vs target \u2014 add",
+      "notional_delta": 3306.6,
+      "reason": "buying on positive news flow \u2014 \"Tesla and Google Just Joined a New Bet on the Electric Grid\" \u00b7 underweight by 3.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.97%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 49.5 (starter), contribution 71.3",
+        "theme 'Clean Energy' score 48.7 (starter), contribution 70.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2017,11 +2015,11 @@
     },
     {
       "symbol": "NKE",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.49,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.24,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.85%",
         "theme=Consumer Discretionary"
@@ -2052,14 +2050,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0401,
+      "target_weight": 0.0378,
       "current_weight": 0.0385,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Foxconn Says Q3 Will Beat Expectations As AI Demand Surges, August Revenue Hits Record\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.1 (buy), contribution 78.1",
+        "theme 'AI & Compute' score 56.1 (buy), contribution 76.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2161,11 +2159,11 @@
     },
     {
       "symbol": "RIVN",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "theme score 29.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-12.02%",
         "theme=EV & Clean Transport"
@@ -2197,14 +2195,14 @@
     {
       "symbol": "RUN",
       "action": "BUY",
-      "target_weight": 0.0245,
+      "target_weight": 0.0237,
       "current_weight": 0.0174,
-      "notional_delta": 760.73,
-      "reason": "buying on positive news flow \u2014 \"Tesla and Google Just Joined a New Bet on the Electric Grid\" \u00b7 underweight by 0.71% vs target \u2014 add",
+      "notional_delta": 675.12,
+      "reason": "buying on positive news flow \u2014 \"Tesla and Google Just Joined a New Bet on the Electric Grid\" \u00b7 underweight by 0.63% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-15.57%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 49.5 (starter), contribution 54.8",
+        "theme 'Clean Energy' score 48.7 (starter), contribution 54.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2215,15 +2213,14 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0136,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 1454.65,
-      "reason": "underweight by 1.36% vs target \u2014 add",
+      "notional_delta": -0.39,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.21%",
-        "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 39.5 (hold_small), contribution 37.3"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2284,17 +2281,16 @@
     },
     {
       "symbol": "TSLA",
-      "action": "BUY",
-      "target_weight": 0.0137,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 1465.98,
-      "reason": "buying on mixed news flow \u2014 \"This Week in Tesla: Elon Musk Touts 'Golden Era' With Cybercab Amid Fleet Expansion\" \u00b7 underweight by 1.37% vs target \u2014 add",
+      "notional_delta": -0.08,
+      "reason": "trimming on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 theme score 29.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=9.38%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 41.9 (starter), contribution 50.2",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2340,14 +2336,14 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0371,
+      "target_weight": 0.0413,
       "current_weight": 0.0258,
-      "notional_delta": 1208.17,
-      "reason": "underweight by 1.13% vs target \u2014 add",
+      "notional_delta": 1657.64,
+      "reason": "underweight by 1.55% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.53%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 74.2"
+        "theme 'Financials & Rates' score 62.3 (buy), contribution 77.2"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2394,10 +2390,10 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0299,
+      "target_weight": 0.0279,
       "current_weight": 0.0,
-      "notional_delta": 3199.81,
-      "reason": "new position \u2014 theme 'AI & Compute' score 58.1 (buy), contribution 58.2",
+      "notional_delta": 2985.78,
+      "reason": "new position \u2014 theme 'AI & Compute' score 56.1 (buy), contribution 56.2",
       "factors": [
         "ret_5d=2.58%",
         "rel_vol_5d=0.86",
@@ -2410,10 +2406,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-28T12:19:51+00:00",
-      "v": 101646.92
-    },
     {
       "t": "2026-06-28T14:20:21+00:00",
       "v": 101646.92
@@ -4409,6 +4401,10 @@
     {
       "t": "2026-09-06T04:30:13+00:00",
       "v": 107017.06
+    },
+    {
+      "t": "2026-09-06T08:52:53+00:00",
+      "v": 107017.06
     }
   ],
   "breaking_news": [
@@ -4417,7 +4413,7 @@
       "summary": "The suits say that recommendations to alert police about the alleged shooter were nixed by OpenAI's global affairs team, led by veteran political strategist Chris Lehane. OpenAI denies the claims.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/02/nx-s1-5953021/openai-tumbler-ridge-mass-shooting",
-      "published_utc": "2026-09-06T04:30:19+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4426,7 +4422,7 @@
       "summary": "Chevron is the largest foreign oil operator in Venezuela. The deal will expand its footprint at a time of political and economic uncertainty for Venezuela.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/02/nx-s1-5952190/chevron-venezuela-oil-deal",
-      "published_utc": "2026-09-06T04:30:19+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4435,7 +4431,7 @@
       "summary": "The IRS slashed its auditing staff last year \u2014 but the move may have backfired as tax collections from enforcement efforts plummeted, an Inspector General report shows.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/02/nx-s1-5954022/irs-tax-collection-job-reductions",
-      "published_utc": "2026-09-06T04:30:19+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4444,7 +4440,7 @@
       "summary": "Fox News abruptly announced it had cut ties with anchor Maria Bartiromo after more than a dozen years.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/03/nx-s1-5955645/maria-bartiromo-fox-news",
-      "published_utc": "2026-09-06T04:30:19+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4453,7 +4449,7 @@
       "summary": "The price of diesel has reached an all-time high, a result of the war in Iran and Ukraine's attacks on Russian refineries. That will matter across the supply chain.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5948016/diesel-price-record-high",
-      "published_utc": "2026-09-06T04:30:19+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4462,7 +4458,7 @@
       "summary": "How do you know if a secondhand luxury good bought online is real? That's at the heart of a lawsuit filed by Chanel against the luxury reseller, The RealReal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5946396/how-do-you-know-if-its-real-luxury-reseller-faces-chanel-lawsuit",
-      "published_utc": "2026-09-06T04:30:19+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4471,7 +4467,7 @@
       "summary": "Changing SNAP eligibility actually can change consumption habits.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5955821/pulling-the-snap-lever-why-gen-zers-bet-invest-differently",
-      "published_utc": "2026-09-06T04:30:19+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4480,7 +4476,7 @@
       "summary": "A report from Labor Department investigators found former Labor Secretary Lori Chavez-DeRemer violated her own department's policy prohibiting harassment. She resigned in April.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5958601/labor-department-inspector-general-secretary-chavez-deremer",
-      "published_utc": "2026-09-06T04:30:19+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4489,16 +4485,7 @@
       "summary": "The US president says the move will help ranchers, but conservationists say it could derail efforts to recover populations.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c62k677d4lzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "What different world maps get right - and what they get wrong",
-      "summary": "As the UN adopts a new world map to reflect Africa's true size, let's take a closer look at what different maps get right and wrong.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cly5r60v4mro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4507,7 +4494,7 @@
       "summary": "The mistrial now puts the murder case - and Clancy's future - in limbo as to whether she will be held criminally liable in the deaths of her three kids.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpwlrj2je1po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4516,7 +4503,7 @@
       "summary": "The Prince of Wales will represent the King at the funeral of Harald V in Oslo next week.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cp301rw6kvro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4525,16 +4512,25 @@
       "summary": "Chandika Shrestha was airlifted to hospital after spending more than 10 days in her partially buried house.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/videos/c4gd24d1d0do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "TV presenter among 11 sentenced to death in Egypt drugs case",
+      "headline": "Volcano eruption triggers flight suspensions at Indonesia's main airport",
+      "summary": "More than 20,000 passengers are stranded after ash was detected in airspace near Jakarta following the eruptions.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cvgy5k4n07ko?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-06T08:52:57+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "TV presenter among 12 sentenced to death in Egypt drugs case",
       "summary": "Sarah Khalifa is best known for her TV programme Mission Impossible which dealt with crime issues.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5y7gk9knnlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4543,34 +4539,34 @@
       "summary": "The US says it hit three Iranian oil tankers, while Iran says it targeted three US-linked ships.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj64rrne643o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "US envoys set for Ukraine talks after meeting Putin in Moscow",
-      "summary": "Steve Witkoff and Jared Kushner leave Moscow talks with hopes for \"equally productive meetings\" in Ukraine.",
+      "headline": "US envoys set for Ukraine talks after meeting Putin in Russia",
+      "summary": "It will be the first trip by Steve Witkoff and Jared Kushner, Trump's top negotiators, to Kyiv.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6248nvqy8po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Xbox caps cloud gaming at 15 hours a month for Game Pass subscribers",
-      "summary": "Xbox said the limits were due to the rising cost of cloud gaming, and would allow it to invest more in its performance",
+      "headline": "UK petrol prices hit highest level since Iran war began",
+      "summary": "The price of unleaded hits 163p a litre, according to motoring group the RAC, as oil prices remain elevated.",
       "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cj06zd4l99lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Volkswagen board approves plan to cut another 50,000 jobs",
-      "summary": "The group - which includes Audi, Porsche, Skoda as well as the VW brand - plans to cut a total of 100,000 posts by 2030.",
+      "headline": "Prosecco, cakes and beauty products - how to get birthday freebies and why there's a catch",
+      "summary": "Cake, coffee, make-up and burgers are just some of the free things you can get on your birthday.",
       "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cx2z0kvy4n4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c5y4jr4yr2eo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4579,17 +4575,17 @@
       "summary": "Demand for avocados is booming in India and local growers hope to grab more of the market.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/clyjzpgv29do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
+      "published_utc": "2026-09-06T08:52:57+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
     {
-      "headline": "UK petrol prices hit highest level since Iran war began",
-      "summary": "The price of unleaded hits 163p a litre, according to motoring group the RAC, as oil prices remain elevated.",
+      "headline": "Controversial Jackdaw gas field set to be approved in weeks, sources say",
+      "summary": "The government is set to give the go-ahead for the gas field off the coast of Aberdeen, the BBC understands.",
       "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T04:30:18+00:00",
-      "sentiment_score": 0.0,
+      "url": "https://www.bbc.co.uk/news/articles/cj9xe09jz4eo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-06T08:52:57+00:00",
+      "sentiment_score": 0.2,
       "is_policy": false
     }
   ],
