@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-06T15:57:23+00:00",
+  "generated_at_utc": "2026-09-06T18:14:38+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 835,
-  "last_success_utc": "2026-09-06T12:51:31+00:00",
+  "cycle_count": 836,
+  "last_success_utc": "2026-09-06T15:57:23+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -583,17 +583,33 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 57.88,
-      "raw_score": 65.72,
+      "score": 58.47,
+      "raw_score": 66.3,
       "band": "buy",
-      "weight": 0.1096,
+      "weight": 0.1116,
       "confidence": 1.0,
       "components": {
         "momentum": 58.48,
-        "sentiment": 90.91,
+        "sentiment": 92.85,
         "volume": 50.27,
         "policy": 50.0,
         "volatility_penalty": 7.83
+      }
+    },
+    {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 57.77,
+      "raw_score": 68.39,
+      "band": "buy",
+      "weight": 0.0983,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 68.14,
+        "sentiment": 90.0,
+        "volume": 45.69,
+        "policy": 50.0,
+        "volatility_penalty": 10.62
       }
     },
     {
@@ -610,22 +626,6 @@
         "volume": 57.59,
         "policy": 50.0,
         "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 51.77,
-      "raw_score": 62.39,
-      "band": "starter",
-      "weight": 0.0758,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 68.14,
-        "sentiment": 70.0,
-        "volume": 45.69,
-        "policy": 50.0,
-        "volatility_penalty": 10.62
       }
     },
     {
@@ -741,14 +741,14 @@
     {
       "symbol": "ASML",
       "action": "BUY",
-      "target_weight": 0.0244,
+      "target_weight": 0.0317,
       "current_weight": 0.016,
-      "notional_delta": 903.99,
-      "reason": "underweight by 0.84% vs target \u2014 add",
+      "notional_delta": 1685.21,
+      "reason": "underweight by 1.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.23%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 51.8 (starter), contribution 56.6"
+        "theme 'Semiconductors (Broad)' score 57.8 (buy), contribution 62.6"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -805,12 +805,13 @@
       "target_weight": 0.0509,
       "current_weight": 0.0181,
       "notional_delta": 3514.55,
-      "reason": "buying on positive news flow \u2014 \"Chevron's Iraq Bet Isn't the Real Dividend Growth Story. Here's What Is.\" \u00b7 underweight by 3.28% vs target \u2014 add",
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 3.28% vs target \u2014 add",
       "factors": [
         "unrealized_pl=13.10%",
         "theme=Oil & Gas",
         "theme 'Oil & Gas' score 70.7 (strong_buy), contribution 74.1",
         "news_source=yahoo_rss",
+        "event=dividend",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
@@ -834,12 +835,13 @@
       "target_weight": 0.0524,
       "current_weight": 0.0446,
       "notional_delta": 835.64,
-      "reason": "buying on positive news flow \u2014 \"Chevron's Iraq Bet Isn't the Real Dividend Growth Story. Here's What Is.\" \u00b7 underweight by 0.78% vs target \u2014 add",
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 0.78% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.59%",
         "theme=Oil & Gas",
         "theme 'Oil & Gas' score 70.7 (strong_buy), contribution 76.2",
         "news_source=yahoo_rss",
+        "event=dividend",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
@@ -1067,14 +1069,14 @@
     {
       "symbol": "META",
       "action": "BUY",
-      "target_weight": 0.0401,
+      "target_weight": 0.0408,
       "current_weight": 0.0,
-      "notional_delta": 4291.02,
-      "reason": "underweight by 4.01% vs target \u2014 add",
+      "notional_delta": 4365.94,
+      "reason": "underweight by 4.08% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.53%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.9 (buy), contribution 78.2"
+        "theme 'AI & Compute' score 58.5 (buy), contribution 78.8"
       ],
       "theme_key": "ai_compute"
     },
@@ -1127,14 +1129,14 @@
     {
       "symbol": "MU",
       "action": "BUY",
-      "target_weight": 0.0241,
+      "target_weight": 0.0314,
       "current_weight": 0.0,
-      "notional_delta": 2579.09,
-      "reason": "buying on positive news flow \u2014 \"SCHD ETF Officially Becomes Biggest Dividend Fund as Price and Inflows Jump\" \u00b7 underweight by 2.41% vs target \u2014 add",
+      "notional_delta": 3360.32,
+      "reason": "buying on positive news flow \u2014 \"Micron and SanDisk Stocks Rebound as Investors Bet on AI Boom, Cheap Valuations\" \u00b7 underweight by 3.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.75%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 51.8 (starter), contribution 55.9",
+        "theme 'Semiconductors (Broad)' score 57.8 (buy), contribution 61.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1187,14 +1189,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0399,
+      "target_weight": 0.0405,
       "current_weight": 0.0385,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Bloom Energy Stock Faces Key Risks as Growth Fuels S&P 500 Index Inclusion\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.9 (buy), contribution 77.8",
+        "theme 'AI & Compute' score 58.5 (buy), contribution 78.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1219,11 +1221,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0497,
       "notional_delta": -5316.18,
-      "reason": "exiting on positive news flow \u2014 \"Chevron's Iraq Bet Isn't the Real Dividend Growth Story. Here's What Is.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=6.19%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
+        "event=dividend",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
@@ -1354,11 +1357,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0614,
       "notional_delta": -6571.54,
-      "reason": "exiting on positive news flow \u2014 \"Chevron's Iraq Bet Isn't the Real Dividend Growth Story. Here's What Is.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=12.19%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
+        "event=dividend",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
@@ -1394,14 +1398,14 @@
     {
       "symbol": "TSM",
       "action": "BUY",
-      "target_weight": 0.0274,
+      "target_weight": 0.0352,
       "current_weight": 0.0176,
-      "notional_delta": 1052.03,
-      "reason": "underweight by 0.98% vs target \u2014 add",
+      "notional_delta": 1886.77,
+      "reason": "underweight by 1.76% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 51.8 (starter), contribution 63.5"
+        "theme 'Semiconductors (Broad)' score 57.8 (buy), contribution 69.5"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1441,12 +1445,13 @@
       "target_weight": 0.0479,
       "current_weight": 0.0,
       "notional_delta": 5125.87,
-      "reason": "buying on positive news flow \u2014 \"Chevron's Iraq Bet Isn't the Real Dividend Growth Story. Here's What Is.\" \u00b7 underweight by 4.79% vs target \u2014 add",
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 4.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.73%",
         "theme=Oil & Gas",
         "theme 'Oil & Gas' score 70.7 (strong_buy), contribution 69.7",
         "news_source=yahoo_rss",
+        "event=dividend",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
@@ -1467,10 +1472,10 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0297,
+      "target_weight": 0.0303,
       "current_weight": 0.0,
-      "notional_delta": 3178.41,
-      "reason": "new position \u2014 theme 'AI & Compute' score 57.9 (buy), contribution 58.0",
+      "notional_delta": 3242.62,
+      "reason": "new position \u2014 theme 'AI & Compute' score 58.5 (buy), contribution 58.6",
       "factors": [
         "ret_5d=2.58%",
         "rel_vol_5d=0.86",
@@ -1517,14 +1522,14 @@
     {
       "symbol": "ASML",
       "action": "BUY",
-      "target_weight": 0.0244,
+      "target_weight": 0.0317,
       "current_weight": 0.016,
-      "notional_delta": 903.99,
-      "reason": "underweight by 0.84% vs target \u2014 add",
+      "notional_delta": 1685.21,
+      "reason": "underweight by 1.57% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.23%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 51.8 (starter), contribution 56.6"
+        "theme 'Semiconductors (Broad)' score 57.8 (buy), contribution 62.6"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1593,12 +1598,13 @@
       "target_weight": 0.0509,
       "current_weight": 0.0181,
       "notional_delta": 3514.55,
-      "reason": "buying on positive news flow \u2014 \"Chevron's Iraq Bet Isn't the Real Dividend Growth Story. Here's What Is.\" \u00b7 underweight by 3.28% vs target \u2014 add",
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 3.28% vs target \u2014 add",
       "factors": [
         "unrealized_pl=13.10%",
         "theme=Oil & Gas",
         "theme 'Oil & Gas' score 70.7 (strong_buy), contribution 74.1",
         "news_source=yahoo_rss",
+        "event=dividend",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
@@ -1628,12 +1634,13 @@
       "target_weight": 0.0524,
       "current_weight": 0.0446,
       "notional_delta": 835.64,
-      "reason": "buying on positive news flow \u2014 \"Chevron's Iraq Bet Isn't the Real Dividend Growth Story. Here's What Is.\" \u00b7 underweight by 0.78% vs target \u2014 add",
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 0.78% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.59%",
         "theme=Oil & Gas",
         "theme 'Oil & Gas' score 70.7 (strong_buy), contribution 76.2",
         "news_source=yahoo_rss",
+        "event=dividend",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
@@ -1909,14 +1916,14 @@
     {
       "symbol": "META",
       "action": "BUY",
-      "target_weight": 0.0401,
+      "target_weight": 0.0408,
       "current_weight": 0.0,
-      "notional_delta": 4291.02,
-      "reason": "underweight by 4.01% vs target \u2014 add",
+      "notional_delta": 4365.94,
+      "reason": "underweight by 4.08% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.53%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.9 (buy), contribution 78.2"
+        "theme 'AI & Compute' score 58.5 (buy), contribution 78.8"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1981,14 +1988,14 @@
     {
       "symbol": "MU",
       "action": "BUY",
-      "target_weight": 0.0241,
+      "target_weight": 0.0314,
       "current_weight": 0.0,
-      "notional_delta": 2579.09,
-      "reason": "buying on positive news flow \u2014 \"SCHD ETF Officially Becomes Biggest Dividend Fund as Price and Inflows Jump\" \u00b7 underweight by 2.41% vs target \u2014 add",
+      "notional_delta": 3360.32,
+      "reason": "buying on positive news flow \u2014 \"Micron and SanDisk Stocks Rebound as Investors Bet on AI Boom, Cheap Valuations\" \u00b7 underweight by 3.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.75%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 51.8 (starter), contribution 55.9",
+        "theme 'Semiconductors (Broad)' score 57.8 (buy), contribution 61.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2053,14 +2060,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0399,
+      "target_weight": 0.0405,
       "current_weight": 0.0385,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Bloom Energy Stock Faces Key Risks as Growth Fuels S&P 500 Index Inclusion\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.9 (buy), contribution 77.8",
+        "theme 'AI & Compute' score 58.5 (buy), contribution 78.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2091,11 +2098,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0497,
       "notional_delta": -5316.18,
-      "reason": "exiting on positive news flow \u2014 \"Chevron's Iraq Bet Isn't the Real Dividend Growth Story. Here's What Is.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=6.19%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
+        "event=dividend",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
@@ -2253,11 +2261,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0614,
       "notional_delta": -6571.54,
-      "reason": "exiting on positive news flow \u2014 \"Chevron's Iraq Bet Isn't the Real Dividend Growth Story. Here's What Is.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=12.19%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
+        "event=dividend",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
@@ -2302,14 +2311,14 @@
     {
       "symbol": "TSM",
       "action": "BUY",
-      "target_weight": 0.0274,
+      "target_weight": 0.0352,
       "current_weight": 0.0176,
-      "notional_delta": 1052.03,
-      "reason": "underweight by 0.98% vs target \u2014 add",
+      "notional_delta": 1886.77,
+      "reason": "underweight by 1.76% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 51.8 (starter), contribution 63.5"
+        "theme 'Semiconductors (Broad)' score 57.8 (buy), contribution 69.5"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2358,12 +2367,13 @@
       "target_weight": 0.0479,
       "current_weight": 0.0,
       "notional_delta": 5125.87,
-      "reason": "buying on positive news flow \u2014 \"Chevron's Iraq Bet Isn't the Real Dividend Growth Story. Here's What Is.\" \u00b7 underweight by 4.79% vs target \u2014 add",
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 4.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.73%",
         "theme=Oil & Gas",
         "theme 'Oil & Gas' score 70.7 (strong_buy), contribution 69.7",
         "news_source=yahoo_rss",
+        "event=dividend",
         "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
@@ -2390,10 +2400,10 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0297,
+      "target_weight": 0.0303,
       "current_weight": 0.0,
-      "notional_delta": 3178.41,
-      "reason": "new position \u2014 theme 'AI & Compute' score 57.9 (buy), contribution 58.0",
+      "notional_delta": 3242.62,
+      "reason": "new position \u2014 theme 'AI & Compute' score 58.5 (buy), contribution 58.6",
       "factors": [
         "ret_5d=2.58%",
         "rel_vol_5d=0.86",
@@ -2406,10 +2416,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-28T16:53:00+00:00",
-      "v": 101646.92
-    },
     {
       "t": "2026-06-28T18:16:16+00:00",
       "v": 101646.92
@@ -4405,6 +4411,10 @@
     {
       "t": "2026-09-06T15:57:19+00:00",
       "v": 107017.06
+    },
+    {
+      "t": "2026-09-06T18:14:35+00:00",
+      "v": 107017.06
     }
   ],
   "breaking_news": [
@@ -4413,7 +4423,7 @@
       "summary": "The IRS slashed its auditing staff last year \u2014 but the move may have backfired as tax collections from enforcement efforts plummeted, an Inspector General report shows.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/02/nx-s1-5954022/irs-tax-collection-job-reductions",
-      "published_utc": "2026-09-06T15:57:23+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4422,7 +4432,7 @@
       "summary": "Fox News abruptly announced it had cut ties with anchor Maria Bartiromo after more than a dozen years.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/03/nx-s1-5955645/maria-bartiromo-fox-news",
-      "published_utc": "2026-09-06T15:57:23+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4431,7 +4441,7 @@
       "summary": "The price of diesel has reached an all-time high, a result of the war in Iran and Ukraine's attacks on Russian refineries. That will matter across the supply chain.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5948016/diesel-price-record-high",
-      "published_utc": "2026-09-06T15:57:23+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4440,7 +4450,7 @@
       "summary": "How do you know if a secondhand luxury good bought online is real? That's at the heart of a lawsuit filed by Chanel against the luxury reseller, The RealReal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5946396/how-do-you-know-if-its-real-luxury-reseller-faces-chanel-lawsuit",
-      "published_utc": "2026-09-06T15:57:23+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4449,7 +4459,7 @@
       "summary": "Changing SNAP eligibility actually can change consumption habits.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5955821/pulling-the-snap-lever-why-gen-zers-bet-invest-differently",
-      "published_utc": "2026-09-06T15:57:23+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4458,7 +4468,7 @@
       "summary": "A report from Labor Department investigators found former Labor Secretary Lori Chavez-DeRemer violated her own department's policy prohibiting harassment. She resigned in April.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5958601/labor-department-inspector-general-secretary-chavez-deremer",
-      "published_utc": "2026-09-06T15:57:23+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4467,7 +4477,7 @@
       "summary": "NPR's Ayesha Rascoe talks to former State Department energy envoy David Goldwyn about how the war in Iran continues to affect gas and diesel prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/06/nx-s1-5954175/former-state-department-energy-envoy-on-how-the-war-in-iran-is-impacting-gas-prices",
-      "published_utc": "2026-09-06T15:57:23+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4476,25 +4486,16 @@
       "summary": "President Trump's latest executive orders allows ranchers to sell meat directly to consumers. Ranchers have been upset over Trump's plan to boost beef imports in a bid to lower prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/06/nx-s1-5959146/trump-issues-new-executive-orders-on-beef-sales-to-pacify-american-cattle-ranchers",
-      "published_utc": "2026-09-06T15:57:23+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
-    },
-    {
-      "headline": "Trump signs order to remove endangered species protection for grey wolves",
-      "summary": "The US president says the move will help ranchers, but conservationists say it could derail efforts to recover populations.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c62k677d4lzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
     },
     {
       "headline": "Mistrial declared in Lindsay Clancy murder case, after jury deadlocks",
       "summary": "The mistrial now puts the murder case - and Clancy's future - in limbo as to whether she will be held criminally liable in the deaths of her three kids.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpwlrj2je1po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4503,17 +4504,17 @@
       "summary": "The Prince of Wales will represent the King at the funeral of Harald V in Oslo next week.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cp301rw6kvro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "US and Iran trade retaliatory attacks on ships as conflict flares",
-      "summary": "The US says it hit three Iranian oil tankers, while Iran says it targeted three US-linked ships.",
+      "headline": "Iran warns of 'faster, heavier, more painful response' to US attacks",
+      "summary": "The comments came a day after Washington said it had struck Iranian oil tankers in response to Tehran's attacks on US warships in the region.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cj64rrne643o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
-      "sentiment_score": 0.0,
+      "url": "https://www.bbc.co.uk/news/articles/cp8d56w7d9po?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-06T18:14:38+00:00",
+      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -4521,7 +4522,7 @@
       "summary": "Sarah Khalifa is best known for her TV programme Mission Impossible which dealt with crime issues.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5y7gk9knnlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4530,17 +4531,26 @@
       "summary": "As many as 50 people are thought to have been inside the five-storey hostel when it came down.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c8r6ezx1jmro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Volcano eruption leaves 150,000 passengers stranded in Indonesia",
-      "summary": "More than 150,000 airline passengers are stranded after ash was detected in airspace near Jakarta following the eruptions.",
+      "headline": "Volcano eruption leaves 170,000 passengers stranded in Indonesia",
+      "summary": "More than 170,000 airline passengers are stranded after ash was detected in airspace near Jakarta following the eruptions.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvgy5k4n07ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "German far-right set for big win in eastern state - projections",
+      "summary": "Germany's AfD has hailed a \"historic result\" and is projected to win more than 44% of the vote, far ahead of the conservative CDU on 18.4%.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cy4zejgz3z9o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-06T18:14:38+00:00",
+      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -4548,7 +4558,7 @@
       "summary": "Steve Witkoff tells reporters the US team feels \"encouraged\" by a \"substantive\" and important discussion.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6248nvqy8po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4557,7 +4567,7 @@
       "summary": "The firm says it needs to save about \u00a31.7bn over the next two years.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c4gkr3p0ql7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4566,7 +4576,7 @@
       "summary": "The price of unleaded hits 163p a litre, according to motoring group the RAC, as oil prices remain elevated.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4575,7 +4585,7 @@
       "summary": "Demand for avocados is booming in India and local growers hope to grab more of the market.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/clyjzpgv29do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4584,7 +4594,7 @@
       "summary": "The government is set to give the go-ahead for the gas field off the coast of Aberdeen, the BBC understands.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cj9xe09jz4eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-06T15:57:22+00:00",
+      "published_utc": "2026-09-06T18:14:38+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     }
