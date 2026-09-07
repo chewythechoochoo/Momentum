@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-07T15:19:54+00:00",
+  "generated_at_utc": "2026-09-07T19:18:00+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 842,
-  "last_success_utc": "2026-09-07T09:44:12+00:00",
+  "cycle_count": 843,
+  "last_success_utc": "2026-09-07T15:19:54+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -567,16 +567,16 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 54.54,
-      "raw_score": 65.39,
-      "band": "starter",
-      "weight": 0.0862,
-      "confidence": 0.75,
+      "score": 58.04,
+      "raw_score": 68.89,
+      "band": "buy",
+      "weight": 0.0991,
+      "confidence": 0.8,
       "components": {
         "momentum": 68.14,
-        "sentiment": 80.0,
+        "sentiment": 90.0,
         "volume": 45.69,
-        "policy": 50.0,
+        "policy": 55.0,
         "volatility_penalty": 10.85
       }
     },
@@ -597,51 +597,19 @@
       }
     },
     {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 51.51,
-      "raw_score": 68.15,
-      "band": "starter",
-      "weight": 0.0884,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 59.68,
-        "sentiment": 100.0,
-        "volume": 43.9,
-        "policy": 55.0,
-        "volatility_penalty": 16.65
-      }
-    },
-    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 46.99,
-      "raw_score": 58.6,
+      "score": 46.81,
+      "raw_score": 58.42,
       "band": "starter",
-      "weight": 0.0733,
+      "weight": 0.0727,
       "confidence": 1.0,
       "components": {
         "momentum": 34.72,
-        "sentiment": 89.47,
+        "sentiment": 88.89,
         "volume": 64.33,
         "policy": 50.0,
         "volatility_penalty": 11.61
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 44.91,
-      "raw_score": 52.78,
-      "band": "starter",
-      "weight": 0.0664,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 58.48,
-        "sentiment": 44.45,
-        "volume": 50.27,
-        "policy": 60.0,
-        "volatility_penalty": 7.86
       }
     },
     {
@@ -658,6 +626,22 @@
         "volume": 46.92,
         "policy": 55.0,
         "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 42.08,
+      "raw_score": 49.94,
+      "band": "starter",
+      "weight": 0.0569,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 58.48,
+        "sentiment": 33.34,
+        "volume": 50.27,
+        "policy": 65.0,
+        "volatility_penalty": 7.86
       }
     },
     {
@@ -693,13 +677,29 @@
       }
     },
     {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 36.01,
+      "raw_score": 52.65,
+      "band": "hold_small",
+      "weight": 0.0215,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 59.68,
+        "sentiment": 50.0,
+        "volume": 43.9,
+        "policy": 50.0,
+        "volatility_penalty": 16.65
+      }
+    },
+    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
       "score": 34.28,
       "raw_score": 44.27,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.85,
+      "confidence": 0.9,
       "components": {
         "momentum": 51.51,
         "sentiment": 25.0,
@@ -741,14 +741,16 @@
     {
       "symbol": "ASML",
       "action": "BUY",
-      "target_weight": 0.0278,
+      "target_weight": 0.032,
       "current_weight": 0.016,
-      "notional_delta": 1267.85,
-      "reason": "underweight by 1.18% vs target \u2014 add",
+      "notional_delta": 1717.32,
+      "reason": "buying on positive news flow \u2014 \"Brent Jumps to $97, German AfD Party Wins Big: Stock Market Today\" \u00b7 underweight by 1.60% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.23%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 54.5 (starter), contribution 59.4"
+        "theme 'Semiconductors (Broad)' score 58.0 (buy), contribution 62.9",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -814,14 +816,14 @@
     {
       "symbol": "CRWD",
       "action": "BUY",
-      "target_weight": 0.0216,
+      "target_weight": 0.0214,
       "current_weight": 0.0,
-      "notional_delta": 2311.55,
-      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 2.16% vs target \u2014 add",
+      "notional_delta": 2290.15,
+      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 2.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.06%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.0 (starter), contribution 38.8",
+        "theme 'Cybersecurity' score 46.8 (starter), contribution 38.6",
         "news_source=yahoo_rss",
         "event=earnings beat",
         "news_sentiment=+0.20"
@@ -1001,16 +1003,14 @@
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.0252,
+      "target_weight": 0.0058,
       "current_weight": 0.0371,
-      "notional_delta": -1271.76,
-      "reason": "trimming on positive news flow \u2014 \"Lilly vs. J&J: Betting on Breakout Growth or Built-In Stability?\" \u00b7 overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -3347.89,
+      "reason": "overweight by 3.13% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.36%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 51.5 (starter), contribution 56.1",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 36.0 (hold_small), contribution 40.6"
       ],
       "theme_key": "biotech"
     },
@@ -1047,7 +1047,7 @@
       "target_weight": 0.0216,
       "current_weight": 0.0248,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Could Spark a Selloff in These Struggling Stocks \u2014 IBM, Tesla, AppLovin Among Names at Risk\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"10 Consumer Discretionary Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.83%",
         "theme=Consumer Discretionary",
@@ -1060,14 +1060,14 @@
     {
       "symbol": "META",
       "action": "BUY",
-      "target_weight": 0.0249,
+      "target_weight": 0.0215,
       "current_weight": 0.0,
-      "notional_delta": 2664.37,
-      "reason": "buying on negative news flow \u2014 \"Dan Ives Warns 10%-15% of US Data Center Projects Could Be Cut as AI Boom Faces Political Backlash, Calls It the \u2018Biggest Threat\u2019\" \u00b7 underweight by 2.49% vs target \u2014 add",
+      "notional_delta": 2300.51,
+      "reason": "buying on negative news flow \u2014 \"Dan Ives Warns 10%-15% of US Data Center Projects Could Be Cut as AI Boom Faces Political Backlash, Calls It the \u2018Biggest Threat\u2019\" \u00b7 underweight by 2.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.53%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 44.9 (starter), contribution 66.1",
+        "theme 'AI & Compute' score 42.1 (starter), contribution 63.2",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1079,12 +1079,12 @@
       "target_weight": 0.0,
       "current_weight": 0.1022,
       "notional_delta": -10940.51,
-      "reason": "exiting on positive news flow \u2014 \"Lilly vs. J&J: Betting on Breakout Growth or Built-In Stability?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"8 Health Care Stocks Whale Activity In Today\u2019s Session\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=151.72%",
         "theme=Biotech & Pharma",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
     },
@@ -1122,16 +1122,16 @@
     {
       "symbol": "MU",
       "action": "BUY",
-      "target_weight": 0.0274,
+      "target_weight": 0.0316,
       "current_weight": 0.0,
-      "notional_delta": 2932.25,
-      "reason": "buying on positive news flow \u2014 \"Micron and SanDisk Stocks Rebound as Investors Bet on AI Boom, Cheap Valuations\" \u00b7 underweight by 2.74% vs target \u2014 add",
+      "notional_delta": 3381.72,
+      "reason": "buying on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 underweight by 3.16% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.75%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 54.5 (starter), contribution 58.6",
+        "theme 'Semiconductors (Broad)' score 58.0 (buy), contribution 62.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1155,10 +1155,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.49,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"10 Consumer Discretionary Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.85%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1178,30 +1180,30 @@
     {
       "symbol": "NVDA",
       "action": "REDUCE",
-      "target_weight": 0.0245,
+      "target_weight": 0.0212,
       "current_weight": 0.0385,
-      "notional_delta": -1495.67,
-      "reason": "trimming on negative news flow \u2014 \"OpenAI Scientist Sounds the Alarm on AI, Warns \u2018No One Is Prepared\u2019 for What Comes Next \u2014 Hopes for \u2018Voluntary Slowdowns\u2019 in AI Development\" \u00b7 overweight by 1.40% vs target \u2014 trim",
+      "notional_delta": -1848.82,
+      "reason": "trimming on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 overweight by 1.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=10.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 44.9 (starter), contribution 65.0",
+        "theme 'AI & Compute' score 42.1 (starter), contribution 62.2",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "OKTA",
       "action": "BUY",
-      "target_weight": 0.03,
+      "target_weight": 0.0298,
       "current_weight": 0.007,
-      "notional_delta": 2459.85,
-      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 2.30% vs target \u2014 add",
+      "notional_delta": 2438.45,
+      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 2.28% vs target \u2014 add",
       "factors": [
         "unrealized_pl=23.15%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.0 (starter), contribution 53.9",
+        "theme 'Cybersecurity' score 46.8 (starter), contribution 53.7",
         "news_source=yahoo_rss",
         "event=earnings beat",
         "news_sentiment=+0.20"
@@ -1240,16 +1242,14 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0326,
+      "target_weight": 0.0082,
       "current_weight": 0.0455,
-      "notional_delta": -1377.87,
-      "reason": "trimming on positive news flow \u2014 \"Lilly vs. J&J: Betting on Breakout Growth or Built-In Stability?\" \u00b7 overweight by 1.29% vs target \u2014 trim",
+      "notional_delta": -3989.08,
+      "reason": "overweight by 3.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=13.33%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 51.5 (starter), contribution 72.8",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 36.0 (hold_small), contribution 57.3"
       ],
       "theme_key": "biotech"
     },
@@ -1259,12 +1259,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.22,
-      "reason": "exiting on positive news flow \u2014 \"Lilly vs. J&J: Betting on Breakout Growth or Built-In Stability?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=23.19%",
-        "theme=Biotech & Pharma",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech"
     },
@@ -1315,7 +1313,7 @@
       "target_weight": 0.0215,
       "current_weight": 0.0,
       "notional_delta": 2300.09,
-      "reason": "buying on mixed news flow \u2014 \"Is the Stock Market Open on Labor Day 2026? Here's What's Open and What's Closed\" \u00b7 underweight by 2.15% vs target \u2014 add",
+      "reason": "buying on mixed news flow \u2014 \"10 Consumer Discretionary Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 underweight by 2.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.21%",
         "theme=Consumer Discretionary",
@@ -1370,42 +1368,40 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.08,
-      "reason": "trimming on negative news flow \u2014 \"TSLA Critic Gordon Johnson Rips Cybercab Launch After Elon Musk's \u2018Storm of Cybercabs\u2019 Promise: \u2018The Robotaxi Story Was Never About Robotaxi\" \u00b7 theme score 34.3 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"10 Consumer Discretionary Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 theme score 34.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=9.38%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "TSM",
       "action": "BUY",
-      "target_weight": 0.031,
+      "target_weight": 0.0355,
       "current_weight": 0.0176,
-      "notional_delta": 1437.29,
-      "reason": "underweight by 1.34% vs target \u2014 add",
+      "notional_delta": 1918.87,
+      "reason": "underweight by 1.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 54.5 (starter), contribution 66.3"
+        "theme 'Semiconductors (Broad)' score 58.0 (buy), contribution 69.8"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "VRTX",
       "action": "REDUCE",
-      "target_weight": 0.0306,
+      "target_weight": 0.0075,
       "current_weight": 0.0366,
-      "notional_delta": -637.34,
-      "reason": "trimming on positive news flow \u2014 \"Lilly vs. J&J: Betting on Breakout Growth or Built-In Stability?\" \u00b7 overweight by 0.60% vs target \u2014 trim",
+      "notional_delta": -3109.43,
+      "reason": "overweight by 2.91% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=14.04%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 51.5 (starter), contribution 68.2",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 36.0 (hold_small), contribution 52.7"
       ],
       "theme_key": "biotech"
     },
@@ -1442,14 +1438,14 @@
     {
       "symbol": "ZS",
       "action": "BUY",
-      "target_weight": 0.0216,
+      "target_weight": 0.0215,
       "current_weight": 0.0079,
-      "notional_delta": 1461.12,
-      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 1.37% vs target \u2014 add",
+      "notional_delta": 1450.42,
+      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 1.36% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.27%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.0 (starter), contribution 38.8",
+        "theme 'Cybersecurity' score 46.8 (starter), contribution 38.6",
         "news_source=yahoo_rss",
         "event=earnings beat",
         "news_sentiment=+0.20"
@@ -1459,10 +1455,10 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0169,
+      "target_weight": 0.0143,
       "current_weight": 0.0,
-      "notional_delta": 1808.59,
-      "reason": "new position \u2014 theme 'AI & Compute' score 44.9 (starter), contribution 44.8",
+      "notional_delta": 1530.34,
+      "reason": "new position \u2014 theme 'AI & Compute' score 42.1 (starter), contribution 42.0",
       "factors": [
         "ret_5d=2.58%",
         "rel_vol_5d=0.86",
@@ -1509,14 +1505,16 @@
     {
       "symbol": "ASML",
       "action": "BUY",
-      "target_weight": 0.0278,
+      "target_weight": 0.032,
       "current_weight": 0.016,
-      "notional_delta": 1267.85,
-      "reason": "underweight by 1.18% vs target \u2014 add",
+      "notional_delta": 1717.32,
+      "reason": "buying on positive news flow \u2014 \"Brent Jumps to $97, German AfD Party Wins Big: Stock Market Today\" \u00b7 underweight by 1.60% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.23%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 54.5 (starter), contribution 59.4"
+        "theme 'Semiconductors (Broad)' score 58.0 (buy), contribution 62.9",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1597,14 +1595,14 @@
     {
       "symbol": "CRWD",
       "action": "BUY",
-      "target_weight": 0.0216,
+      "target_weight": 0.0214,
       "current_weight": 0.0,
-      "notional_delta": 2311.55,
-      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 2.16% vs target \u2014 add",
+      "notional_delta": 2290.15,
+      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 2.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.06%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.0 (starter), contribution 38.8",
+        "theme 'Cybersecurity' score 46.8 (starter), contribution 38.6",
         "news_source=yahoo_rss",
         "event=earnings beat",
         "news_sentiment=+0.20"
@@ -1823,16 +1821,14 @@
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.0252,
+      "target_weight": 0.0058,
       "current_weight": 0.0371,
-      "notional_delta": -1271.76,
-      "reason": "trimming on positive news flow \u2014 \"Lilly vs. J&J: Betting on Breakout Growth or Built-In Stability?\" \u00b7 overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -3347.89,
+      "reason": "overweight by 3.13% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.36%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 51.5 (starter), contribution 56.1",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 36.0 (hold_small), contribution 40.6"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1878,7 +1874,7 @@
       "target_weight": 0.0216,
       "current_weight": 0.0248,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"OpenAI, Anthropic IPOs Could Spark a Selloff in These Struggling Stocks \u2014 IBM, Tesla, AppLovin Among Names at Risk\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"10 Consumer Discretionary Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.83%",
         "theme=Consumer Discretionary",
@@ -1894,14 +1890,14 @@
     {
       "symbol": "META",
       "action": "BUY",
-      "target_weight": 0.0249,
+      "target_weight": 0.0215,
       "current_weight": 0.0,
-      "notional_delta": 2664.37,
-      "reason": "buying on negative news flow \u2014 \"Dan Ives Warns 10%-15% of US Data Center Projects Could Be Cut as AI Boom Faces Political Backlash, Calls It the \u2018Biggest Threat\u2019\" \u00b7 underweight by 2.49% vs target \u2014 add",
+      "notional_delta": 2300.51,
+      "reason": "buying on negative news flow \u2014 \"Dan Ives Warns 10%-15% of US Data Center Projects Could Be Cut as AI Boom Faces Political Backlash, Calls It the \u2018Biggest Threat\u2019\" \u00b7 underweight by 2.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.53%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 44.9 (starter), contribution 66.1",
+        "theme 'AI & Compute' score 42.1 (starter), contribution 63.2",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1916,12 +1912,12 @@
       "target_weight": 0.0,
       "current_weight": 0.1022,
       "notional_delta": -10940.51,
-      "reason": "exiting on positive news flow \u2014 \"Lilly vs. J&J: Betting on Breakout Growth or Built-In Stability?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"8 Health Care Stocks Whale Activity In Today\u2019s Session\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=151.72%",
         "theme=Biotech & Pharma",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1968,16 +1964,16 @@
     {
       "symbol": "MU",
       "action": "BUY",
-      "target_weight": 0.0274,
+      "target_weight": 0.0316,
       "current_weight": 0.0,
-      "notional_delta": 2932.25,
-      "reason": "buying on positive news flow \u2014 \"Micron and SanDisk Stocks Rebound as Investors Bet on AI Boom, Cheap Valuations\" \u00b7 underweight by 2.74% vs target \u2014 add",
+      "notional_delta": 3381.72,
+      "reason": "buying on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 underweight by 3.16% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.75%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 54.5 (starter), contribution 58.6",
+        "theme 'Semiconductors (Broad)' score 58.0 (buy), contribution 62.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2007,10 +2003,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.49,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"10 Consumer Discretionary Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.85%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2036,16 +2034,16 @@
     {
       "symbol": "NVDA",
       "action": "REDUCE",
-      "target_weight": 0.0245,
+      "target_weight": 0.0212,
       "current_weight": 0.0385,
-      "notional_delta": -1495.67,
-      "reason": "trimming on negative news flow \u2014 \"OpenAI Scientist Sounds the Alarm on AI, Warns \u2018No One Is Prepared\u2019 for What Comes Next \u2014 Hopes for \u2018Voluntary Slowdowns\u2019 in AI Development\" \u00b7 overweight by 1.40% vs target \u2014 trim",
+      "notional_delta": -1848.82,
+      "reason": "trimming on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 overweight by 1.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=10.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 44.9 (starter), contribution 65.0",
+        "theme 'AI & Compute' score 42.1 (starter), contribution 62.2",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2055,14 +2053,14 @@
     {
       "symbol": "OKTA",
       "action": "BUY",
-      "target_weight": 0.03,
+      "target_weight": 0.0298,
       "current_weight": 0.007,
-      "notional_delta": 2459.85,
-      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 2.30% vs target \u2014 add",
+      "notional_delta": 2438.45,
+      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 2.28% vs target \u2014 add",
       "factors": [
         "unrealized_pl=23.15%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.0 (starter), contribution 53.9",
+        "theme 'Cybersecurity' score 46.8 (starter), contribution 53.7",
         "news_source=yahoo_rss",
         "event=earnings beat",
         "news_sentiment=+0.20"
@@ -2110,16 +2108,14 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0326,
+      "target_weight": 0.0082,
       "current_weight": 0.0455,
-      "notional_delta": -1377.87,
-      "reason": "trimming on positive news flow \u2014 \"Lilly vs. J&J: Betting on Breakout Growth or Built-In Stability?\" \u00b7 overweight by 1.29% vs target \u2014 trim",
+      "notional_delta": -3989.08,
+      "reason": "overweight by 3.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=13.33%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 51.5 (starter), contribution 72.8",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 36.0 (hold_small), contribution 57.3"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2132,12 +2128,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.22,
-      "reason": "exiting on positive news flow \u2014 \"Lilly vs. J&J: Betting on Breakout Growth or Built-In Stability?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=23.19%",
-        "theme=Biotech & Pharma",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2200,7 +2194,7 @@
       "target_weight": 0.0215,
       "current_weight": 0.0,
       "notional_delta": 2300.09,
-      "reason": "buying on mixed news flow \u2014 \"Is the Stock Market Open on Labor Day 2026? Here's What's Open and What's Closed\" \u00b7 underweight by 2.15% vs target \u2014 add",
+      "reason": "buying on mixed news flow \u2014 \"10 Consumer Discretionary Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 underweight by 2.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.21%",
         "theme=Consumer Discretionary",
@@ -2267,12 +2261,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.08,
-      "reason": "trimming on negative news flow \u2014 \"TSLA Critic Gordon Johnson Rips Cybercab Launch After Elon Musk's \u2018Storm of Cybercabs\u2019 Promise: \u2018The Robotaxi Story Was Never About Robotaxi\" \u00b7 theme score 34.3 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"10 Consumer Discretionary Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 theme score 34.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=9.38%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2282,14 +2276,14 @@
     {
       "symbol": "TSM",
       "action": "BUY",
-      "target_weight": 0.031,
+      "target_weight": 0.0355,
       "current_weight": 0.0176,
-      "notional_delta": 1437.29,
-      "reason": "underweight by 1.34% vs target \u2014 add",
+      "notional_delta": 1918.87,
+      "reason": "underweight by 1.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.47%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 54.5 (starter), contribution 66.3"
+        "theme 'Semiconductors (Broad)' score 58.0 (buy), contribution 69.8"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2299,16 +2293,14 @@
     {
       "symbol": "VRTX",
       "action": "REDUCE",
-      "target_weight": 0.0306,
+      "target_weight": 0.0075,
       "current_weight": 0.0366,
-      "notional_delta": -637.34,
-      "reason": "trimming on positive news flow \u2014 \"Lilly vs. J&J: Betting on Breakout Growth or Built-In Stability?\" \u00b7 overweight by 0.60% vs target \u2014 trim",
+      "notional_delta": -3109.43,
+      "reason": "overweight by 2.91% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=14.04%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 51.5 (starter), contribution 68.2",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Biotech & Pharma' score 36.0 (hold_small), contribution 52.7"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2354,14 +2346,14 @@
     {
       "symbol": "ZS",
       "action": "BUY",
-      "target_weight": 0.0216,
+      "target_weight": 0.0215,
       "current_weight": 0.0079,
-      "notional_delta": 1461.12,
-      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 1.37% vs target \u2014 add",
+      "notional_delta": 1450.42,
+      "reason": "buying on earnings beat (positive) \u2014 \"Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter\" \u00b7 underweight by 1.36% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.27%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.0 (starter), contribution 38.8",
+        "theme 'Cybersecurity' score 46.8 (starter), contribution 38.6",
         "news_source=yahoo_rss",
         "event=earnings beat",
         "news_sentiment=+0.20"
@@ -2374,10 +2366,10 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0169,
+      "target_weight": 0.0143,
       "current_weight": 0.0,
-      "notional_delta": 1808.59,
-      "reason": "new position \u2014 theme 'AI & Compute' score 44.9 (starter), contribution 44.8",
+      "notional_delta": 1530.34,
+      "reason": "new position \u2014 theme 'AI & Compute' score 42.1 (starter), contribution 42.0",
       "factors": [
         "ret_5d=2.58%",
         "rel_vol_5d=0.86",
@@ -2390,10 +2382,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-29T07:02:08+00:00",
-      "v": 102021.82
-    },
     {
       "t": "2026-06-29T12:07:07+00:00",
       "v": 102190.62
@@ -4389,6 +4377,10 @@
     {
       "t": "2026-09-07T15:19:51+00:00",
       "v": 107017.06
+    },
+    {
+      "t": "2026-09-07T19:17:58+00:00",
+      "v": 107017.06
     }
   ],
   "breaking_news": [
@@ -4397,7 +4389,7 @@
       "summary": "The IRS slashed its auditing staff last year \u2014 but the move may have backfired as tax collections from enforcement efforts plummeted, an Inspector General report shows.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/02/nx-s1-5954022/irs-tax-collection-job-reductions",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:18:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4406,7 +4398,7 @@
       "summary": "Fox News abruptly announced it had cut ties with anchor Maria Bartiromo after more than a dozen years.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/03/nx-s1-5955645/maria-bartiromo-fox-news",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:18:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4415,7 +4407,7 @@
       "summary": "The price of diesel has reached an all-time high, a result of the war in Iran and Ukraine's attacks on Russian refineries. That will matter across the supply chain.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5948016/diesel-price-record-high",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:18:00+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4424,7 +4416,7 @@
       "summary": "How do you know if a secondhand luxury good bought online is real? That's at the heart of a lawsuit filed by Chanel against the luxury reseller, The RealReal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5946396/how-do-you-know-if-its-real-luxury-reseller-faces-chanel-lawsuit",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:18:00+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4433,7 +4425,7 @@
       "summary": "Changing SNAP eligibility actually can change consumption habits.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5955821/pulling-the-snap-lever-why-gen-zers-bet-invest-differently",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:18:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4442,7 +4434,7 @@
       "summary": "A report from Labor Department investigators found former Labor Secretary Lori Chavez-DeRemer violated her own department's policy prohibiting harassment. She resigned in April.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5958601/labor-department-inspector-general-secretary-chavez-deremer",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:18:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4451,7 +4443,7 @@
       "summary": "NPR's Ayesha Rascoe talks to former State Department energy envoy David Goldwyn about how the war in Iran continues to affect gas and diesel prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/06/nx-s1-5954175/former-state-department-energy-envoy-on-how-the-war-in-iran-is-impacting-gas-prices",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:18:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4460,43 +4452,16 @@
       "summary": "President Trump's latest executive orders allows ranchers to sell meat directly to consumers. Ranchers have been upset over Trump's plan to boost beef imports in a bid to lower prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/06/nx-s1-5959146/trump-issues-new-executive-orders-on-beef-sales-to-pacify-american-cattle-ranchers",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:18:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
-    },
-    {
-      "headline": "Burundians rush to leave Kenya ahead of crackdown on unregistered traders",
-      "summary": "Kenya is due to start enforcing measures to restrict foreign nationals from operating small-scale businesses.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c158wwl22xko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Austria's Islamic headscarf ban in force as under-14s go back to school",
-      "summary": "The government says the law is intended to protect the rights of young girls, but critics say it is fuelling anti-Muslim feeling.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cwyz74xn8q8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
-      "sentiment_score": -0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Nepal observes national day of mourning for victims of flash flood disaster",
-      "summary": "Flags flew at half mast on the 13th day since the disaster, the last day of the Hindu mourning period.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c2kw1qek7gdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
     },
     {
       "headline": "Kyiv air raid alerts at record high as Russia launches round-the-clock strikes",
       "summary": "Schools, businesses and public transport are all struggling with the surge in Russian air attacks.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cjdvx9pz44ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:17:59+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4505,8 +4470,35 @@
       "summary": "The footage and other evidence the FBI failed to share undermine Omar al-Bayoumi's 25 years of denials.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr4vn1e207go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:17:59+00:00",
       "sentiment_score": -0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "Nepal observes national day of mourning for victims of flash flood disaster",
+      "summary": "Flags flew at half mast on the 13th day since the disaster, the last day of the Hindu mourning period.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c2kw1qek7gdo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T19:17:59+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Grindr to pay \u00a326m to settle claims it allegedly shared users' HIV status",
+      "summary": "The long-running claim alleges Grindr breached UK privacy laws by sharing data with third parties.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cn8e63qdqwzo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T19:17:59+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Investigators begin work on why cargo plane overran Miami runway",
+      "summary": "Five people died and five others were injured as the Amazon plane overshot the runway after landing at Miami International Airport.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c0e3p1j7n3ro?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T19:17:59+00:00",
+      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4514,7 +4506,16 @@
       "summary": "Lebanon says a recent Israeli escalation is jeopardising a US-brokered ceasefire meant to end the conflict between Israel and Hezbollah.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5yl96vz0edo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:17:59+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Thousands turn out in Serbia for funeral of  'Butcher of Bosnia' Ratko Mladi\u0107",
+      "summary": "Mladi\u0107 was jailed for genocide during the 1990s Bosnian war and the EU warned Serbia not to glorify the convicted war criminal.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cn5dkk7yw74o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T19:17:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4523,35 +4524,8 @@
       "summary": "The far-right party is trying to form a government in the state after falling three seats short of a majority.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpd0113082eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:17:59+00:00",
       "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Flight price rises due to 'foolish leaders' starting wars, Virgin's Branson says",
-      "summary": "Middle East tensions have choked the production and transportation of oil, causing a surge in the price of car and jet fuels.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cje8wx2qw9vo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
-      "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Probe begins into why cargo plane overran Miami runway",
-      "summary": "Five people died and five others were injured as the Amazon plane overshot the runway after landing at Miami International Airport.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/c0e3p1j7n3ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
-      "sentiment_score": -0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Why are European countries moving their gold out of North America?",
-      "summary": "The Netherlands has relocated 86 tonnes of the shiny stuff - what's going on?",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cvgyn8q8gqxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
-      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4559,7 +4533,7 @@
       "summary": "It comes as Beijing is aiming to reshape its economy in the face of a number of challenges.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cx2z37qj4wno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:17:59+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4568,7 +4542,25 @@
       "summary": "The cuts come as the carmaker struggles with Chinese competition, US tariffs, and the transition to electric vehicles.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c36lx560jjko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T15:19:54+00:00",
+      "published_utc": "2026-09-07T19:17:59+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Why are European countries moving their gold out of North America?",
+      "summary": "The Netherlands has relocated 86 tonnes of the shiny stuff - what's going on?",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/cvgyn8q8gqxo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T19:17:59+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "The \u00a370 refund letter that isn't a scam",
+      "summary": "About one million people - mostly women - are owed pension tax relief and will be contacted by HMRC.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/c23x0kd8eleo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T19:17:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
