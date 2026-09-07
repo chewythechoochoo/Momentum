@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-07T04:35:45+00:00",
+  "generated_at_utc": "2026-09-07T09:44:12+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 840,
-  "last_success_utc": "2026-09-07T00:05:25+00:00",
+  "cycle_count": 841,
+  "last_success_utc": "2026-09-07T04:35:45+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -551,49 +551,17 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 70.47,
-      "raw_score": 70.49,
-      "band": "strong_buy",
-      "weight": 0.1508,
+      "score": 69.43,
+      "raw_score": 69.46,
+      "band": "buy",
+      "weight": 0.1481,
       "confidence": 1.0,
       "components": {
         "momentum": 68.01,
-        "sentiment": 87.5,
+        "sentiment": 85.72,
         "volume": 55.19,
-        "policy": 60.0,
+        "policy": 55.0,
         "volatility_penalty": 0.02
-      }
-    },
-    {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 59.33,
-      "raw_score": 59.33,
-      "band": "buy",
-      "weight": 0.0973,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 56.44,
-        "sentiment": 70.0,
-        "volume": 53.76,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 54.58,
-      "raw_score": 62.44,
-      "band": "starter",
-      "weight": 0.0986,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 58.48,
-        "sentiment": 80.0,
-        "volume": 50.27,
-        "policy": 50.0,
-        "volatility_penalty": 7.86
       }
     },
     {
@@ -610,6 +578,70 @@
         "volume": 45.69,
         "policy": 50.0,
         "volatility_penalty": 10.85
+      }
+    },
+    {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 54.49,
+      "raw_score": 54.49,
+      "band": "starter",
+      "weight": 0.0909,
+      "confidence": 0.85,
+      "components": {
+        "momentum": 24.02,
+        "sentiment": 100.0,
+        "volume": 46.92,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 54.08,
+      "raw_score": 61.94,
+      "band": "starter",
+      "weight": 0.0969,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 58.48,
+        "sentiment": 75.0,
+        "volume": 50.27,
+        "policy": 60.0,
+        "volatility_penalty": 7.86
+      }
+    },
+    {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 53.33,
+      "raw_score": 53.33,
+      "band": "starter",
+      "weight": 0.0803,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 56.44,
+        "sentiment": 50.0,
+        "volume": 53.76,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 50.78,
+      "raw_score": 60.77,
+      "band": "starter",
+      "weight": 0.0752,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 51.51,
+        "sentiment": 80.0,
+        "volume": 55.83,
+        "policy": 50.0,
+        "volatility_penalty": 9.99
       }
     },
     {
@@ -675,38 +707,6 @@
         "policy": 50.0,
         "volatility_penalty": 11.61
       }
-    },
-    {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 29.78,
-      "raw_score": 39.77,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.8,
-      "components": {
-        "momentum": 51.51,
-        "sentiment": 10.0,
-        "volume": 55.83,
-        "policy": 50.0,
-        "volatility_penalty": 9.99
-      }
-    },
-    {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 23.99,
-      "raw_score": 23.99,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.85,
-      "components": {
-        "momentum": 24.02,
-        "sentiment": 0.0,
-        "volume": 46.92,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
     }
   ],
   "decisions": [
@@ -729,12 +729,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0282,
       "notional_delta": -3014.7,
-      "reason": "exiting on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 theme score 24.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on positive news flow \u2014 \"Amazon, Meta Are Now Serious Competition to Uncle Sam: Big Tech's AI Debt Boom 'Driving' Treasury Yields Higher, Says Market Commentator\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=6.12%",
         "theme=Consumer Discretionary",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -786,30 +786,28 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0296,
+      "target_weight": 0.0242,
       "current_weight": 0.0,
-      "notional_delta": 3167.5,
-      "reason": "buying on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 underweight by 2.96% vs target \u2014 add",
+      "notional_delta": 2589.61,
+      "reason": "underweight by 2.42% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 59.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 53.1"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0508,
+      "target_weight": 0.0499,
       "current_weight": 0.0181,
-      "notional_delta": 3503.85,
-      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 3.27% vs target \u2014 add",
+      "notional_delta": 3407.53,
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 3.18% vs target \u2014 add",
       "factors": [
         "unrealized_pl=13.10%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 70.5 (strong_buy), contribution 73.8",
+        "theme 'Oil & Gas' score 69.4 (buy), contribution 72.8",
         "news_source=yahoo_rss",
         "event=dividend",
         "news_sentiment=+0.20"
@@ -832,14 +830,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0523,
+      "target_weight": 0.0514,
       "current_weight": 0.0446,
-      "notional_delta": 824.94,
-      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 0.77% vs target \u2014 add",
+      "notional_delta": 728.62,
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 0.68% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.59%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 70.5 (strong_buy), contribution 76.0",
+        "theme 'Oil & Gas' score 69.4 (buy), contribution 75.0",
         "news_source=yahoo_rss",
         "event=dividend",
         "news_sentiment=+0.20"
@@ -863,14 +861,15 @@
     },
     {
       "symbol": "F",
-      "action": "REDUCE",
-      "target_weight": 0.0006,
+      "action": "BUY",
+      "target_weight": 0.0292,
       "current_weight": 0.0013,
-      "notional_delta": -69.08,
-      "reason": "trimming on mixed news flow \u2014 \"Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More\" \u00b7 theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2986.74,
+      "reason": "buying on mixed news flow \u2014 \"Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More\" \u00b7 underweight by 2.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.39%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 50.8 (starter), contribution 80.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -920,14 +919,15 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0006,
+      "action": "BUY",
+      "target_weight": 0.0246,
       "current_weight": 0.0013,
-      "notional_delta": -68.86,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2494.89,
+      "reason": "underweight by 2.33% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.16%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 50.8 (starter), contribution 67.7"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -937,12 +937,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0313,
       "notional_delta": -3345.29,
-      "reason": "exiting on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Amazon, Meta Are Now Serious Competition to Uncle Sam: Big Tech's AI Debt Boom 'Driving' Treasury Yields Higher, Says Market Commentator\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.53%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -952,25 +952,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0243,
       "notional_delta": -2603.64,
-      "reason": "exiting on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"The College Degree Was Supposed to Be the Advantage. The Job Market Is Telling a Different Story\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Financials & Rates",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "HD",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "HOLD",
+      "target_weight": 0.0306,
       "current_weight": 0.0275,
-      "notional_delta": -2947.52,
-      "reason": "exiting on mixed news flow \u2014 \"America's Housing Market Is Going K-Shaped \u2014 AI Millionaires Are Buying While Everyone Else Sits Out\" \u00b7 theme score 24.0 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Is the Stock Market Open on Labor Day 2026? Here's What's Open and What's Closed\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.67%",
         "theme=Consumer Discretionary",
+        "theme 'Consumer Discretionary' score 54.5 (starter), contribution 53.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -982,22 +983,20 @@
       "target_weight": 0.0,
       "current_weight": 0.0362,
       "notional_delta": -3875.48,
-      "reason": "exiting on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.29%",
-        "theme=Financials & Rates",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "LCID",
-      "action": "REDUCE",
-      "target_weight": 0.0003,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0006,
-      "notional_delta": -31.53,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -63.07,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-40.98%",
         "theme=EV & Clean Transport"
@@ -1049,28 +1048,33 @@
     },
     {
       "symbol": "MCD",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0302,
       "current_weight": 0.0248,
-      "notional_delta": -2657.25,
-      "reason": "theme score 24.0 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": 574.66,
+      "reason": "buying on mixed news flow \u2014 \"Is the Stock Market Open on Labor Day 2026? Here's What's Open and What's Closed\" \u00b7 underweight by 0.54% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-6.83%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "theme 'Consumer Discretionary' score 54.5 (starter), contribution 52.5",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
       "action": "BUY",
-      "target_weight": 0.0364,
+      "target_weight": 0.0358,
       "current_weight": 0.0,
-      "notional_delta": 3895.06,
-      "reason": "underweight by 3.64% vs target \u2014 add",
+      "notional_delta": 3830.85,
+      "reason": "buying on positive news flow \u2014 \"Amazon, Meta Are Now Serious Competition to Uncle Sam: Big Tech's AI Debt Boom 'Driving' Treasury Yields Higher, Says Market Commentator\" \u00b7 underweight by 3.58% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.53%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 54.6 (starter), contribution 75.8"
+        "theme 'AI & Compute' score 54.1 (starter), contribution 75.2",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1092,14 +1096,14 @@
     {
       "symbol": "MS",
       "action": "HOLD",
-      "target_weight": 0.0306,
+      "target_weight": 0.0251,
       "current_weight": 0.0268,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Salesforce Stock Has Surged as AI and Anthropic Bets Pay Off, But Technical Risks Remain\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.41%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 61.1",
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 55.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1111,12 +1115,12 @@
       "target_weight": 0.0,
       "current_weight": 0.035,
       "notional_delta": -3740.72,
-      "reason": "exiting on mixed news flow \u2014 \"Salesforce Stock Has Surged as AI and Anthropic Bets Pay Off, But Technical Risks Remain\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Kevin O'Leary Says Entrepreneurs Must Do One Thing to Survive: Listen to the Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=7.85%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1158,7 +1162,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.49,
-      "reason": "theme score 24.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.85%",
         "theme=Consumer Discretionary"
@@ -1181,14 +1185,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0359,
+      "target_weight": 0.0354,
       "current_weight": 0.0385,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy Stock Faces Key Risks as Growth Fuels S&P 500 Index Inclusion\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 54.6 (starter), contribution 74.7",
+        "theme 'AI & Compute' score 54.1 (starter), contribution 74.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1272,11 +1276,11 @@
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-12.02%",
         "theme=EV & Clean Transport"
@@ -1315,14 +1319,17 @@
     },
     {
       "symbol": "SBUX",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0301,
       "current_weight": 0.0,
-      "notional_delta": -0.78,
-      "reason": "theme score 24.0 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": 3220.44,
+      "reason": "buying on mixed news flow \u2014 \"Is the Stock Market Open on Labor Day 2026? Here's What's Open and What's Closed\" \u00b7 underweight by 3.01% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.21%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "theme 'Consumer Discretionary' score 54.5 (starter), contribution 52.3",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1372,16 +1379,17 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0214,
       "current_weight": 0.0,
-      "notional_delta": -0.08,
-      "reason": "trimming on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2290.01,
+      "reason": "buying on positive news flow \u2014 \"Cathie Wood Says AI Revolution Could Supercharge Global Growth \u2014 TSLA, COIN and CRSP Stocks Are Among Her Top Bets\" \u00b7 underweight by 2.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.38%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 50.8 (starter), contribution 59.0",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1418,28 +1426,28 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0371,
+      "target_weight": 0.031,
       "current_weight": 0.0258,
-      "notional_delta": 1208.17,
-      "reason": "underweight by 1.13% vs target \u2014 add",
+      "notional_delta": 555.36,
+      "reason": "underweight by 0.52% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.53%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 74.2"
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 68.2"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0478,
+      "target_weight": 0.0469,
       "current_weight": 0.0,
-      "notional_delta": 5115.16,
-      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 4.78% vs target \u2014 add",
+      "notional_delta": 5018.85,
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 4.69% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.73%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 70.5 (strong_buy), contribution 69.5",
+        "theme 'Oil & Gas' score 69.4 (buy), contribution 68.5",
         "news_source=yahoo_rss",
         "event=dividend",
         "news_sentiment=+0.20"
@@ -1462,10 +1470,10 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0262,
+      "target_weight": 0.0257,
       "current_weight": 0.0,
-      "notional_delta": 2803.85,
-      "reason": "new position \u2014 theme 'AI & Compute' score 54.6 (starter), contribution 54.5",
+      "notional_delta": 2750.34,
+      "reason": "new position \u2014 theme 'AI & Compute' score 54.1 (starter), contribution 54.0",
       "factors": [
         "ret_5d=2.58%",
         "rel_vol_5d=0.86",
@@ -1497,12 +1505,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0282,
       "notional_delta": -3014.7,
-      "reason": "exiting on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 theme score 24.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on positive news flow \u2014 \"Amazon, Meta Are Now Serious Competition to Uncle Sam: Big Tech's AI Debt Boom 'Driving' Treasury Yields Higher, Says Market Commentator\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=6.12%",
         "theme=Consumer Discretionary",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1566,16 +1574,14 @@
     {
       "symbol": "BAC",
       "action": "BUY",
-      "target_weight": 0.0296,
+      "target_weight": 0.0242,
       "current_weight": 0.0,
-      "notional_delta": 3167.5,
-      "reason": "buying on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 underweight by 2.96% vs target \u2014 add",
+      "notional_delta": 2589.61,
+      "reason": "underweight by 2.42% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.87%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 59.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 53.1"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1585,14 +1591,14 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0508,
+      "target_weight": 0.0499,
       "current_weight": 0.0181,
-      "notional_delta": 3503.85,
-      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 3.27% vs target \u2014 add",
+      "notional_delta": 3407.53,
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 3.18% vs target \u2014 add",
       "factors": [
         "unrealized_pl=13.10%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 70.5 (strong_buy), contribution 73.8",
+        "theme 'Oil & Gas' score 69.4 (buy), contribution 72.8",
         "news_source=yahoo_rss",
         "event=dividend",
         "news_sentiment=+0.20"
@@ -1621,14 +1627,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0523,
+      "target_weight": 0.0514,
       "current_weight": 0.0446,
-      "notional_delta": 824.94,
-      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 0.77% vs target \u2014 add",
+      "notional_delta": 728.62,
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 0.68% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.59%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 70.5 (strong_buy), contribution 76.0",
+        "theme 'Oil & Gas' score 69.4 (buy), contribution 75.0",
         "news_source=yahoo_rss",
         "event=dividend",
         "news_sentiment=+0.20"
@@ -1658,14 +1664,15 @@
     },
     {
       "symbol": "F",
-      "action": "REDUCE",
-      "target_weight": 0.0006,
+      "action": "BUY",
+      "target_weight": 0.0292,
       "current_weight": 0.0013,
-      "notional_delta": -69.08,
-      "reason": "trimming on mixed news flow \u2014 \"Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More\" \u00b7 theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2986.74,
+      "reason": "buying on mixed news flow \u2014 \"Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control On Hormuz & More\" \u00b7 underweight by 2.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.39%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 50.8 (starter), contribution 80.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1727,14 +1734,15 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0006,
+      "action": "BUY",
+      "target_weight": 0.0246,
       "current_weight": 0.0013,
-      "notional_delta": -68.86,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2494.89,
+      "reason": "underweight by 2.33% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.16%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 50.8 (starter), contribution 67.7"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1747,12 +1755,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0313,
       "notional_delta": -3345.29,
-      "reason": "exiting on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Amazon, Meta Are Now Serious Competition to Uncle Sam: Big Tech's AI Debt Boom 'Driving' Treasury Yields Higher, Says Market Commentator\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.53%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1765,12 +1773,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0243,
       "notional_delta": -2603.64,
-      "reason": "exiting on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"The College Degree Was Supposed to Be the Advantage. The Job Market Is Telling a Different Story\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.94%",
         "theme=Financials & Rates",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1779,14 +1787,15 @@
     },
     {
       "symbol": "HD",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "HOLD",
+      "target_weight": 0.0306,
       "current_weight": 0.0275,
-      "notional_delta": -2947.52,
-      "reason": "exiting on mixed news flow \u2014 \"America's Housing Market Is Going K-Shaped \u2014 AI Millionaires Are Buying While Everyone Else Sits Out\" \u00b7 theme score 24.0 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Is the Stock Market Open on Labor Day 2026? Here's What's Open and What's Closed\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.67%",
         "theme=Consumer Discretionary",
+        "theme 'Consumer Discretionary' score 54.5 (starter), contribution 53.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1801,12 +1810,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0362,
       "notional_delta": -3875.48,
-      "reason": "exiting on positive news flow \u2014 \"AI Adoption Spreads Beyond Tech as Finance, Manufacturing Businesses Race to Catch Up\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.29%",
-        "theme=Financials & Rates",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1815,11 +1822,11 @@
     },
     {
       "symbol": "LCID",
-      "action": "REDUCE",
-      "target_weight": 0.0003,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0006,
-      "notional_delta": -31.53,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -63.07,
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-40.98%",
         "theme=EV & Clean Transport"
@@ -1883,14 +1890,17 @@
     },
     {
       "symbol": "MCD",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0302,
       "current_weight": 0.0248,
-      "notional_delta": -2657.25,
-      "reason": "theme score 24.0 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": 574.66,
+      "reason": "buying on mixed news flow \u2014 \"Is the Stock Market Open on Labor Day 2026? Here's What's Open and What's Closed\" \u00b7 underweight by 0.54% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-6.83%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "theme 'Consumer Discretionary' score 54.5 (starter), contribution 52.5",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1900,14 +1910,16 @@
     {
       "symbol": "META",
       "action": "BUY",
-      "target_weight": 0.0364,
+      "target_weight": 0.0358,
       "current_weight": 0.0,
-      "notional_delta": 3895.06,
-      "reason": "underweight by 3.64% vs target \u2014 add",
+      "notional_delta": 3830.85,
+      "reason": "buying on positive news flow \u2014 \"Amazon, Meta Are Now Serious Competition to Uncle Sam: Big Tech's AI Debt Boom 'Driving' Treasury Yields Higher, Says Market Commentator\" \u00b7 underweight by 3.58% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.53%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 54.6 (starter), contribution 75.8"
+        "theme 'AI & Compute' score 54.1 (starter), contribution 75.2",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1935,14 +1947,14 @@
     {
       "symbol": "MS",
       "action": "HOLD",
-      "target_weight": 0.0306,
+      "target_weight": 0.0251,
       "current_weight": 0.0268,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Salesforce Stock Has Surged as AI and Anthropic Bets Pay Off, But Technical Risks Remain\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.41%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 61.1",
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 55.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1957,12 +1969,12 @@
       "target_weight": 0.0,
       "current_weight": 0.035,
       "notional_delta": -3740.72,
-      "reason": "exiting on mixed news flow \u2014 \"Salesforce Stock Has Surged as AI and Anthropic Bets Pay Off, But Technical Risks Remain\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Kevin O'Leary Says Entrepreneurs Must Do One Thing to Survive: Listen to the Market\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=7.85%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2013,7 +2025,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.49,
-      "reason": "theme score 24.0 < exit threshold 25 \u2014 fully exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.85%",
         "theme=Consumer Discretionary"
@@ -2042,14 +2054,14 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.0359,
+      "target_weight": 0.0354,
       "current_weight": 0.0385,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Bloom Energy Stock Faces Key Risks as Growth Fuels S&P 500 Index Inclusion\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=10.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 54.6 (starter), contribution 74.7",
+        "theme 'AI & Compute' score 54.1 (starter), contribution 74.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2151,11 +2163,11 @@
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-12.02%",
         "theme=EV & Clean Transport"
@@ -2203,14 +2215,17 @@
     },
     {
       "symbol": "SBUX",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0301,
       "current_weight": 0.0,
-      "notional_delta": -0.78,
-      "reason": "theme score 24.0 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": 3220.44,
+      "reason": "buying on mixed news flow \u2014 \"Is the Stock Market Open on Labor Day 2026? Here's What's Open and What's Closed\" \u00b7 underweight by 3.01% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.21%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "theme 'Consumer Discretionary' score 54.5 (starter), contribution 52.3",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2272,16 +2287,17 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
-      "target_weight": 0.0,
+      "action": "BUY",
+      "target_weight": 0.0214,
       "current_weight": 0.0,
-      "notional_delta": -0.08,
-      "reason": "trimming on negative news flow \u2014 \"Gary Black Says Tesla Has Solved Unsupervised Autonomy, but Competition Is the Bigger Threat\" \u00b7 theme score 29.8 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 2290.01,
+      "reason": "buying on positive news flow \u2014 \"Cathie Wood Says AI Revolution Could Supercharge Global Growth \u2014 TSLA, COIN and CRSP Stocks Are Among Her Top Bets\" \u00b7 underweight by 2.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.38%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 50.8 (starter), contribution 59.0",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2327,14 +2343,14 @@
     {
       "symbol": "WFC",
       "action": "BUY",
-      "target_weight": 0.0371,
+      "target_weight": 0.031,
       "current_weight": 0.0258,
-      "notional_delta": 1208.17,
-      "reason": "underweight by 1.13% vs target \u2014 add",
+      "notional_delta": 555.36,
+      "reason": "underweight by 0.52% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.53%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 59.3 (buy), contribution 74.2"
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 68.2"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2344,14 +2360,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0478,
+      "target_weight": 0.0469,
       "current_weight": 0.0,
-      "notional_delta": 5115.16,
-      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 4.78% vs target \u2014 add",
+      "notional_delta": 5018.85,
+      "reason": "buying on dividend (positive) \u2014 \"How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?\" \u00b7 underweight by 4.69% vs target \u2014 add",
       "factors": [
         "unrealized_pl=3.73%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 70.5 (strong_buy), contribution 69.5",
+        "theme 'Oil & Gas' score 69.4 (buy), contribution 68.5",
         "news_source=yahoo_rss",
         "event=dividend",
         "news_sentiment=+0.20"
@@ -2380,10 +2396,10 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0262,
+      "target_weight": 0.0257,
       "current_weight": 0.0,
-      "notional_delta": 2803.85,
-      "reason": "new position \u2014 theme 'AI & Compute' score 54.6 (starter), contribution 54.5",
+      "notional_delta": 2750.34,
+      "reason": "new position \u2014 theme 'AI & Compute' score 54.1 (starter), contribution 54.0",
       "factors": [
         "ret_5d=2.58%",
         "rel_vol_5d=0.86",
@@ -2396,10 +2412,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-06-28T23:35:21+00:00",
-      "v": 101646.92
-    },
     {
       "t": "2026-06-29T01:54:13+00:00",
       "v": 101905.88
@@ -4395,6 +4407,10 @@
     {
       "t": "2026-09-07T04:35:40+00:00",
       "v": 107017.06
+    },
+    {
+      "t": "2026-09-07T09:44:08+00:00",
+      "v": 107017.06
     }
   ],
   "breaking_news": [
@@ -4403,7 +4419,7 @@
       "summary": "The IRS slashed its auditing staff last year \u2014 but the move may have backfired as tax collections from enforcement efforts plummeted, an Inspector General report shows.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/02/nx-s1-5954022/irs-tax-collection-job-reductions",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4412,7 +4428,7 @@
       "summary": "Fox News abruptly announced it had cut ties with anchor Maria Bartiromo after more than a dozen years.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/03/nx-s1-5955645/maria-bartiromo-fox-news",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4421,7 +4437,7 @@
       "summary": "The price of diesel has reached an all-time high, a result of the war in Iran and Ukraine's attacks on Russian refineries. That will matter across the supply chain.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5948016/diesel-price-record-high",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4430,7 +4446,7 @@
       "summary": "How do you know if a secondhand luxury good bought online is real? That's at the heart of a lawsuit filed by Chanel against the luxury reseller, The RealReal.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5946396/how-do-you-know-if-its-real-luxury-reseller-faces-chanel-lawsuit",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4439,7 +4455,7 @@
       "summary": "Changing SNAP eligibility actually can change consumption habits.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5955821/pulling-the-snap-lever-why-gen-zers-bet-invest-differently",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4448,7 +4464,7 @@
       "summary": "A report from Labor Department investigators found former Labor Secretary Lori Chavez-DeRemer violated her own department's policy prohibiting harassment. She resigned in April.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/04/nx-s1-5958601/labor-department-inspector-general-secretary-chavez-deremer",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4457,7 +4473,7 @@
       "summary": "NPR's Ayesha Rascoe talks to former State Department energy envoy David Goldwyn about how the war in Iran continues to affect gas and diesel prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/06/nx-s1-5954175/former-state-department-energy-envoy-on-how-the-war-in-iran-is-impacting-gas-prices",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4466,7 +4482,7 @@
       "summary": "President Trump's latest executive orders allows ranchers to sell meat directly to consumers. Ranchers have been upset over Trump's plan to boost beef imports in a bid to lower prices.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/06/nx-s1-5959146/trump-issues-new-executive-orders-on-beef-sales-to-pacify-american-cattle-ranchers",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4475,25 +4491,16 @@
       "summary": "The government says the law is intended to protect the rights of young girls, but critics say it is fuelling anti-Muslim feeling.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwyz74xn8q8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "Volcano eruption leaves 170,000 passengers stranded in Indonesia",
-      "summary": "More than 170,000 airline passengers are stranded after ash was detected in airspace near Jakarta following the eruptions.",
+      "headline": "Indonesia volcano eruption leaves 270,000 stranded as airports extend closure",
+      "summary": "Anak Krakatau, which lies about 150km from the capital Jakarta, began erupting late on Friday.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cvgy5k4n07ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Peace talks rich in symbolism but fundamental differences between Russia and Ukraine remain",
-      "summary": "Despite talks between US envoys and both Putin and Zelensky, the expectation in Kyiv is the fighting will continue, writes James Landale.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c980j5m8mpro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/czezydp4l97o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4502,53 +4509,71 @@
       "summary": "There was no announcement of a major breakthrough, after Steve Witkoff and Jared Kushner travelled to Kyiv.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6248nvqy8po?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
     {
-      "headline": "Europe wrestles with impact of historic regional gains for Germany's AfD",
-      "summary": "The BBC's Europe editor Katya Adler sees the far-right win in Saxony-Anhalt state ringing alarm bells for the EU and traditional parties.",
+      "headline": "New videos of man in 9/11 lawsuit reveal extremist links",
+      "summary": "The footage and other evidence the FBI failed to share undermine Omar al-Bayoumi's 25 years of denials.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c986w38r4j5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
-      "sentiment_score": 0.2,
+      "url": "https://www.bbc.co.uk/news/articles/cr4vn1e207go?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T09:44:12+00:00",
+      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "Germany's far-right AfD set for big win in eastern state, just short of majority",
-      "summary": "Germany's AfD hails a \"historic result\" and is projected to win 44% of the vote in Saxony-Anhalt, far ahead of the conservatives on 17%.",
+      "headline": "Israeli strikes in southern Lebanese village kill nine",
+      "summary": "Lebanon says a recent Israeli escalation is jeopardising a US-brokered ceasefire meant to end the conflict between Israel and Hezbollah.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c5yl96vz0edo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T09:44:12+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Germany's far-right AfD hails big victory in east, but falls short of majority",
+      "summary": "Preliminary results give the Alternative for Germany a big margin of victory - almost 44% of the vote.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cy4zejgz3z9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "More funding needed to boost construction jobs for young people, housing boss says",
+      "summary": "Recent analysis showed the construction sector needs an extra 2,200 workers a year to meet demand.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/cwyzd53rq9jo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
     {
-      "headline": "Trump calls for interest rate cut after jobs figures raise hike bets",
-      "summary": "The president's remarks came as stronger-than-expected jobs figures added to growing expectations that rates could be increased.",
+      "headline": "Flight price rises due to 'foolish leaders' starting wars, Virgin's Branson says",
+      "summary": "Middle East tensions have choked the production and transportation of oil, causing a surge in the price of car and jet fuels.",
       "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cy0zx2pkpx9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": true
+      "url": "https://www.bbc.co.uk/news/articles/cje8wx2qw9vo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T09:44:12+00:00",
+      "sentiment_score": 0.2,
+      "is_policy": false
     },
     {
-      "headline": "Aviation faces hotter, stormier skies \u2013 and passengers might have to accept more disruption",
-      "summary": "Are people going to have to increasingly accept more delays and diversions as the effects of climate change intensify?",
+      "headline": "Why are European countries moving their gold out of North America?",
+      "summary": "The Netherlands has relocated 86 tonnes of the shiny stuff - what's going on?",
       "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cm274p8m88lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cvgyn8q8gqxo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Stock up on food to prepare for extreme weather, minister says",
-      "summary": "Dame Angela Eagle warns the weather event could lead to extreme storms this winter.",
+      "headline": "Chancellor to say UK economy 'turning a corner' despite debt concerns",
+      "summary": "John Healey will detail plans to spread growth more widely across the UK, ahead of his first Budget.",
       "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cp931m8n3p5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
-      "sentiment_score": -0.2,
+      "url": "https://www.bbc.co.uk/news/articles/cgjqg450w28o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-07T09:44:12+00:00",
+      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -4556,7 +4581,7 @@
       "summary": "It comes as Beijing is aiming to reshape its economy in the face of a number of challenges.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cx2z37qj4wno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4565,16 +4590,7 @@
       "summary": "Five people are dead and five seriously injured after a Boeing 767-300 cargo plane \"overran\" the runway and caught fire, officials say.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c0e3p1j7n3ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "The \u00a370 refund letter that isn't a scam",
-      "summary": "About one million people - mostly women - are owed pension tax relief and will be contacted by HMRC.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/c23x0kd8eleo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-07T04:35:45+00:00",
+      "published_utc": "2026-09-07T09:44:12+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
