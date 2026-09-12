@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-12T11:13:46+00:00",
+  "generated_at_utc": "2026-09-12T14:14:18+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 875,
-  "last_success_utc": "2026-09-12T06:28:26+00:00",
+  "cycle_count": 876,
+  "last_success_utc": "2026-09-12T11:13:46+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -597,35 +597,35 @@
       }
     },
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 54.4,
-      "raw_score": 54.4,
-      "band": "starter",
-      "weight": 0.098,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 29.0,
-        "sentiment": 91.66,
-        "volume": 51.51,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 53.65,
-      "raw_score": 61.42,
+      "score": 54.65,
+      "raw_score": 62.42,
       "band": "starter",
-      "weight": 0.0955,
+      "weight": 0.0988,
       "confidence": 1.0,
       "components": {
         "momentum": 60.39,
-        "sentiment": 66.66,
+        "sentiment": 70.0,
         "volume": 51.3,
         "policy": 70.0,
         "volatility_penalty": 7.77
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 53.9,
+      "raw_score": 53.9,
+      "band": "starter",
+      "weight": 0.0963,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 29.0,
+        "sentiment": 90.0,
+        "volume": 51.51,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -699,7 +699,7 @@
       "raw_score": 39.86,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.8,
+      "confidence": 0.85,
       "components": {
         "momentum": 32.82,
         "sentiment": 50.0,
@@ -729,14 +729,14 @@
     {
       "symbol": "AMD",
       "action": "HOLD",
-      "target_weight": 0.0313,
+      "target_weight": 0.0324,
       "current_weight": 0.0334,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"What's Going On With AMD Stock Friday?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=4.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 53.6 (starter), contribution 65.7",
+        "theme 'AI & Compute' score 54.6 (starter), contribution 66.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -775,30 +775,30 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0284,
+      "target_weight": 0.0294,
       "current_weight": 0.0265,
       "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Broadcom\u2019s VMware Overhaul Could Trigger EU Probe\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.39%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 53.6 (starter), contribution 59.6",
+        "theme 'AI & Compute' score 54.6 (starter), contribution 60.6",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "BA",
       "action": "HOLD",
-      "target_weight": 0.0349,
+      "target_weight": 0.0343,
       "current_weight": 0.0354,
       "notional_delta": 0.0,
       "reason": "holding on contract win (positive) \u2014 \"$131.23 Billion on Paper: What The Boeing Company (BA)\u2019s F-15 Ceiling Contract Really Means for Investors\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.03%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 59.1",
+        "theme 'Defense & Aerospace' score 53.9 (starter), contribution 58.6",
         "news_source=yahoo_rss",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -1029,7 +1029,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "exiting on mixed news flow \u2014 \"10 Health Care Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 theme score 23.3 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: GameStop, Marvell, Robinhood\" \u00b7 theme score 23.3 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-5.56%",
         "theme=Biotech & Pharma",
@@ -1041,14 +1041,14 @@
     {
       "symbol": "LMT",
       "action": "HOLD",
-      "target_weight": 0.033,
+      "target_weight": 0.0324,
       "current_weight": 0.0299,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Can Northrop Grumman's European Expansion Drive Growth?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.78%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 55.9",
+        "theme 'Defense & Aerospace' score 53.9 (starter), contribution 55.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1073,27 +1073,27 @@
       "target_weight": 0.0349,
       "current_weight": 0.0343,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"ServiceNow To Rally More Than 18%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Jollibee Ditches US IPO, Calls Hong Kong A Natural Market For Listing International Business\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.16%",
         "theme=Consumer Discretionary",
         "theme 'Consumer Discretionary' score 56.3 (buy), contribution 55.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0358,
+      "target_weight": 0.037,
       "current_weight": 0.0345,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Houthi Victory Raises Risks; Hotter CPI Pushes Fed Rate-Hike Odds To 88%\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.63%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 53.6 (starter), contribution 75.3",
+        "theme 'AI & Compute' score 54.6 (starter), contribution 76.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1283,14 +1283,14 @@
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.0302,
+      "target_weight": 0.0296,
       "current_weight": 0.0267,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"RTX Corporation (RTX) Doubles Down on Defense Manufacturing \u2014 Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.43%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 51.2",
+        "theme 'Defense & Aerospace' score 53.9 (starter), contribution 50.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1476,14 +1476,14 @@
     {
       "symbol": "AMD",
       "action": "HOLD",
-      "target_weight": 0.0313,
+      "target_weight": 0.0324,
       "current_weight": 0.0334,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"What's Going On With AMD Stock Friday?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=4.38%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 53.6 (starter), contribution 65.7",
+        "theme 'AI & Compute' score 54.6 (starter), contribution 66.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1531,16 +1531,16 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.0284,
+      "target_weight": 0.0294,
       "current_weight": 0.0265,
       "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Broadcom\u2019s VMware Overhaul Could Trigger EU Probe\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"10 Information Technology Stocks Whale Activity In Today\u2019s Session\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.39%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 53.6 (starter), contribution 59.6",
+        "theme 'AI & Compute' score 54.6 (starter), contribution 60.6",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1550,14 +1550,14 @@
     {
       "symbol": "BA",
       "action": "HOLD",
-      "target_weight": 0.0349,
+      "target_weight": 0.0343,
       "current_weight": 0.0354,
       "notional_delta": 0.0,
       "reason": "holding on contract win (positive) \u2014 \"$131.23 Billion on Paper: What The Boeing Company (BA)\u2019s F-15 Ceiling Contract Really Means for Investors\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.03%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 59.1",
+        "theme 'Defense & Aerospace' score 53.9 (starter), contribution 58.6",
         "news_source=yahoo_rss",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -1836,7 +1836,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "exiting on mixed news flow \u2014 \"10 Health Care Stocks With Whale Alerts In Today\u2019s Session\" \u00b7 theme score 23.3 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: GameStop, Marvell, Robinhood\" \u00b7 theme score 23.3 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-5.56%",
         "theme=Biotech & Pharma",
@@ -1851,14 +1851,14 @@
     {
       "symbol": "LMT",
       "action": "HOLD",
-      "target_weight": 0.033,
+      "target_weight": 0.0324,
       "current_weight": 0.0299,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Can Northrop Grumman's European Expansion Drive Growth?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.78%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 55.9",
+        "theme 'Defense & Aerospace' score 53.9 (starter), contribution 55.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1889,13 +1889,13 @@
       "target_weight": 0.0349,
       "current_weight": 0.0343,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"ServiceNow To Rally More Than 18%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Jollibee Ditches US IPO, Calls Hong Kong A Natural Market For Listing International Business\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.16%",
         "theme=Consumer Discretionary",
         "theme 'Consumer Discretionary' score 56.3 (buy), contribution 55.1",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1905,14 +1905,14 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0358,
+      "target_weight": 0.037,
       "current_weight": 0.0345,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Houthi Victory Raises Risks; Hotter CPI Pushes Fed Rate-Hike Odds To 88%\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.63%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 53.6 (starter), contribution 75.3",
+        "theme 'AI & Compute' score 54.6 (starter), contribution 76.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2144,14 +2144,14 @@
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.0302,
+      "target_weight": 0.0296,
       "current_weight": 0.0267,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"RTX Corporation (RTX) Doubles Down on Defense Manufacturing \u2014 Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.43%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.4 (starter), contribution 51.2",
+        "theme 'Defense & Aerospace' score 53.9 (starter), contribution 50.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2351,10 +2351,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-02T20:11:38+00:00",
-      "v": 100458.88
-    },
     {
       "t": "2026-07-02T21:38:41+00:00",
       "v": 100351.18
@@ -4350,6 +4346,10 @@
     {
       "t": "2026-09-12T11:13:43+00:00",
       "v": 105343.59
+    },
+    {
+      "t": "2026-09-12T14:14:14+00:00",
+      "v": 105343.59
     }
   ],
   "breaking_news": [
@@ -4358,7 +4358,7 @@
       "summary": "Realtors around the U.S. are being asked to explain how data centers could affect home values. But a new study shows there is no universal answer.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5964912/data-centers-growing-footprint-have-a-varying-effect-on-property-values",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4367,7 +4367,7 @@
       "summary": "Many financial technology companies are applying to become banks. The Indicator finds out what it takes to go through this process and what benefits come with a bank charter.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5955727/fintech-companies-are-applying-to-become-banks-heres-what-it-takes-to-become-one",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4376,7 +4376,7 @@
       "summary": "For decades, the U.S. and Canadian auto supply chains have been tightly woven together. The trade war is threatening to unravel a complex system.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5961530/canada-trade-war-auto-parts-supply-chain",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4385,7 +4385,7 @@
       "summary": "In the Oscar-winning filmmaker's latest documentary, director Alex Gibney investigates the rise of Elon Musk and says what's behind Musk's success are distressing truths.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5962167/alex-gibney-elon-musk-documentary-review",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4394,7 +4394,7 @@
       "summary": "Diesel prices in the U.S. has hit yet another record, soaring past $6 a gallon on average as Washington's war with Iran disrupts the world's flow of fuel",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/g-s1-142842/us-diesel-6-a-gallon",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4403,7 +4403,7 @@
       "summary": "Why Patagonia might become a new data center hub",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5966498/is-patagonia-the-new-data-center-hub-harley-davidsons-role-in-the-trade-war",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4412,7 +4412,7 @@
       "summary": "Many Iranians lost their jobs because of the war and the U.S. blockade. Now some are even losing their backup jobs as sanctions tighten.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/g-s1-142935/iran-us-war-jobs-economy",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4421,16 +4421,7 @@
       "summary": "As an Anthropic resignation and OpenAI agents' hack on Hugging Face capture public attention, some researchers worry the industry is racing too fast to develop powerful AI while safety measures lag.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/12/nx-s1-5950588/openai-anthropic-ai-safety-researchers-hacks",
-      "published_utc": "2026-09-12T11:13:46+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Ukraine faces 'toughest winter' since Russia's full-scale invasion, UN official tells BBC",
-      "summary": "A senior UN official tells the BBC there is a race against the clock to ensure access to power and water through winter.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cwyz59yyqk4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4439,16 +4430,34 @@
       "summary": "Tasia Fortune's body was found  in the lot of an abandoned home in Mississippi in August.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqjkejq5750o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
+      "headline": "Record heatwaves in France set to make champagne stronger",
+      "summary": "Winemakers can produce bubbly up to 15% ABV following an unusual harvest that produced sweeter grapes.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cvgydvrlep1o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-12T14:14:18+00:00",
+      "sentiment_score": 0.2,
+      "is_policy": false
+    },
+    {
       "headline": "Passenger train derails in France leaving at least 44 injured",
-      "summary": "France's transport minister says 180 passengers were on board the train operating the Rouen-Caen route in Normandy.",
+      "summary": "Local officials say186 passengers were on board the train operating the Rouen-Caen route in Normandy.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c8d37dm8d8mo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "'It's like a dog set loose on us' - fear over Kenya's crackdown on foreign traders",
+      "summary": "The authorities have struggled to contain the fallout, as frightened migrants flee the country.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c4g5kxw4wd7o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4457,25 +4466,16 @@
       "summary": "Access to the burnt-out boat has been slowed by toxic fumes and lingering heat, the country's coast guard says.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwyz755yeg9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "'Never, ever forget' - America marks 25th anniversary of 9/11 attacks",
-      "summary": "In New York, the Pentagon and Pennsylvania, solemn ceremonies commemorate the landmark anniversary.",
+      "headline": "Ukraine faces 'toughest winter' since Russia's full-scale invasion, UN official tells BBC",
+      "summary": "A senior UN official tells the BBC there is a race against the clock to ensure access to power and water through winter.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/clyjqvjzlwno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Tragic death of woman who testified against father in notorious mafia murder of mother",
-      "summary": "Denise Cosco testified against the powerful 'Ndrangheta clan and her own father over the murder of her mother in Italy.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c39mr81j2j1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cwyz59yyqk4o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4484,7 +4484,7 @@
       "summary": "Trump is holding meetings in Dublin before attending the Irish Open golf tournament in Doonbeg, County Clare.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cy0zvx15rywo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4493,7 +4493,7 @@
       "summary": "Iraq removes a military commander and opens investigations into the attack that came from an area bordering Iran.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c62m933465eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:18+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4502,7 +4502,7 @@
       "summary": "Flight disruption has ruined holidays and left passengers sleeping on airport floors - so what are their rights?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cy9znljypnjo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4511,7 +4511,7 @@
       "summary": "The government says the work will support thousands of jobs across the UK.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cd94y7d7qyzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4520,7 +4520,7 @@
       "summary": "Europe has some promising battery tech, but can it make up ground lost to Chinese battery giants?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cjeg8ly0qd3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4529,7 +4529,7 @@
       "summary": "Molly and Taylor Haylett explain the changes to how they managed their finances when they started a family.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cde02k65427o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-12T11:13:46+00:00",
+      "published_utc": "2026-09-12T14:14:17+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
