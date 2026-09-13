@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-13T06:44:49+00:00",
+  "generated_at_utc": "2026-09-13T12:20:46+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 882,
-  "last_success_utc": "2026-09-13T01:23:49+00:00",
+  "cycle_count": 883,
+  "last_success_utc": "2026-09-13T06:44:49+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -613,38 +613,6 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 46.56,
-      "raw_score": 54.93,
-      "band": "starter",
-      "weight": 0.0629,
-      "confidence": 0.75,
-      "components": {
-        "momentum": 39.57,
-        "sentiment": 80.0,
-        "volume": 50.51,
-        "policy": 50.0,
-        "volatility_penalty": 8.37
-      }
-    },
-    {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 46.11,
-      "raw_score": 46.11,
-      "band": "starter",
-      "weight": 0.0616,
-      "confidence": 0.75,
-      "components": {
-        "momentum": 49.51,
-        "sentiment": 40.0,
-        "volume": 46.52,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
       "score": 45.99,
@@ -677,6 +645,22 @@
       }
     },
     {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 40.11,
+      "raw_score": 40.11,
+      "band": "starter",
+      "weight": 0.0441,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 49.51,
+        "sentiment": 20.0,
+        "volume": 46.52,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 39.35,
@@ -690,6 +674,22 @@
         "volume": 42.57,
         "policy": 50.0,
         "volatility_penalty": 10.6
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 37.56,
+      "raw_score": 45.93,
+      "band": "hold_small",
+      "weight": 0.0318,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 39.57,
+        "sentiment": 50.0,
+        "volume": 50.51,
+        "policy": 50.0,
+        "volatility_penalty": 8.37
       }
     },
     {
@@ -803,14 +803,14 @@
     {
       "symbol": "BAC",
       "action": "REDUCE",
-      "target_weight": 0.02,
+      "target_weight": 0.0143,
       "current_weight": 0.0394,
-      "notional_delta": -2041.45,
-      "reason": "overweight by 1.94% vs target \u2014 trim",
+      "notional_delta": -2641.9,
+      "reason": "overweight by 2.51% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.1 (starter), contribution 44.8"
+        "theme 'Financials & Rates' score 40.1 (starter), contribution 38.8"
       ],
       "theme_key": "financials"
     },
@@ -866,7 +866,7 @@
       "target_weight": 0.0277,
       "current_weight": 0.0191,
       "notional_delta": 904.08,
-      "reason": "buying on positive news flow \u2014 \"SolarEdge Technologies to See Continued Solar Revenue, Margin Growth, RBC Capital Markets Says\" \u00b7 underweight by 0.86% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"SolarEdge Targets $2.4B by 2029, Bets on AI Data Center Power Growth\" \u00b7 underweight by 0.86% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.02%",
         "theme=Clean Energy",
@@ -879,14 +879,14 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0194,
+      "target_weight": 0.0096,
       "current_weight": 0.0311,
-      "notional_delta": -1232.79,
-      "reason": "overweight by 1.17% vs target \u2014 trim",
+      "notional_delta": -2265.16,
+      "reason": "overweight by 2.15% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.6 (starter), contribution 46.8"
+        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 37.8"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -896,13 +896,12 @@
       "target_weight": 0.0317,
       "current_weight": 0.02,
       "notional_delta": 1230.58,
-      "reason": "buying on policy tailwind (positive) \u2014 \"First Solar (FSLR) Gets Bullish Coverage Despite Recent Stock Weakness\" \u00b7 underweight by 1.17% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"SolarEdge Targets $2.4B by 2029, Bets on AI Data Center Power Growth\" \u00b7 underweight by 1.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.46%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 51.0 (starter), contribution 65.3",
         "news_source=yahoo_rss",
-        "event=policy tailwind",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
@@ -941,14 +940,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0218,
+      "target_weight": 0.0111,
       "current_weight": 0.0271,
-      "notional_delta": -554.47,
-      "reason": "overweight by 0.53% vs target \u2014 trim",
+      "notional_delta": -1681.65,
+      "reason": "overweight by 1.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.64%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.6 (starter), contribution 52.7"
+        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 43.7"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -973,12 +972,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0273,
       "notional_delta": -2877.88,
-      "reason": "exiting on positive news flow \u2014 \"David Sacks Slams 'Whistleblower' Jacob Coxon\u2019s Claims on AI Risk to Humans, Raises Questions Ahead of Anthropic IPO\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"This Week in Tesla: Democratic Lawmaker Demands Self-Driving Scrutiny, Cybercab Production, and More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.89%",
         "theme=Financials & Rates",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials"
     },
@@ -1114,14 +1113,14 @@
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0187,
+      "target_weight": 0.0132,
       "current_weight": 0.0371,
-      "notional_delta": -1943.11,
-      "reason": "trimming on mixed news flow \u2014 \"Blue Owl, KKR, Blackstone, Apollo Global Stocks Retreat as Private Credit Risks Remain\" \u00b7 overweight by 1.84% vs target \u2014 trim",
+      "notional_delta": -2522.5,
+      "reason": "trimming on mixed news flow \u2014 \"Blue Owl, KKR, Blackstone, Apollo Global Stocks Retreat as Private Credit Risks Remain\" \u00b7 overweight by 2.39% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.1 (starter), contribution 41.8",
+        "theme 'Financials & Rates' score 40.1 (starter), contribution 35.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1163,7 +1162,7 @@
       "target_weight": 0.0274,
       "current_weight": 0.0159,
       "notional_delta": 1211.86,
-      "reason": "buying on positive news flow \u2014 \"NEE Stock Trades at a Premium Valuation: Buy, Hold or Stay Away?\" \u00b7 underweight by 1.15% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"SolarEdge Targets $2.4B by 2029, Bets on AI Data Center Power Growth\" \u00b7 underweight by 1.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.66%",
         "theme=Clean Energy",
@@ -1277,14 +1276,14 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0217,
+      "target_weight": 0.0111,
       "current_weight": 0.0319,
-      "notional_delta": -1071.34,
-      "reason": "overweight by 1.02% vs target \u2014 trim",
+      "notional_delta": -2187.98,
+      "reason": "overweight by 2.08% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.47%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.6 (starter), contribution 52.5"
+        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 43.5"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1310,7 +1309,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0081,
       "notional_delta": -855.73,
-      "reason": "exiting on positive news flow \u2014 \"SolarEdge Technologies to See Continued Solar Revenue, Margin Growth, RBC Capital Markets Says\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"SolarEdge Targets $2.4B by 2029, Bets on AI Data Center Power Growth\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-20.11%",
         "theme=Clean Energy",
@@ -1338,7 +1337,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0155,
       "notional_delta": -1635.53,
-      "reason": "exiting on positive news flow \u2014 \"SolarEdge Technologies to See Continued Solar Revenue, Margin Growth, RBC Capital Markets Says\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"SolarEdge Targets $2.4B by 2029, Bets on AI Data Center Power Growth\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.93%",
         "theme=Clean Energy",
@@ -1381,12 +1380,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.1,
-      "reason": "exiting on positive news flow \u2014 \"Consumer Tech (Sep 7-11): Apple Launches First Foldable iPhone, XPeng Commissioned IRON Humanoid Robot Production & More\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"This Week in Tesla: Democratic Lawmaker Demands Self-Driving Scrutiny, Cybercab Production, and More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1420,14 +1419,14 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0228,
+      "target_weight": 0.0166,
       "current_weight": 0.0434,
-      "notional_delta": -2166.24,
-      "reason": "overweight by 2.06% vs target \u2014 trim",
+      "notional_delta": -2819.37,
+      "reason": "overweight by 2.68% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.14%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.1 (starter), contribution 51.1"
+        "theme 'Financials & Rates' score 40.1 (starter), contribution 45.1"
       ],
       "theme_key": "financials"
     },
@@ -1576,14 +1575,14 @@
     {
       "symbol": "BAC",
       "action": "REDUCE",
-      "target_weight": 0.02,
+      "target_weight": 0.0143,
       "current_weight": 0.0394,
-      "notional_delta": -2041.45,
-      "reason": "overweight by 1.94% vs target \u2014 trim",
+      "notional_delta": -2641.9,
+      "reason": "overweight by 2.51% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.1 (starter), contribution 44.8"
+        "theme 'Financials & Rates' score 40.1 (starter), contribution 38.8"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1651,7 +1650,7 @@
       "target_weight": 0.0277,
       "current_weight": 0.0191,
       "notional_delta": 904.08,
-      "reason": "buying on positive news flow \u2014 \"SolarEdge Technologies to See Continued Solar Revenue, Margin Growth, RBC Capital Markets Says\" \u00b7 underweight by 0.86% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"SolarEdge Targets $2.4B by 2029, Bets on AI Data Center Power Growth\" \u00b7 underweight by 0.86% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.02%",
         "theme=Clean Energy",
@@ -1667,14 +1666,14 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0194,
+      "target_weight": 0.0096,
       "current_weight": 0.0311,
-      "notional_delta": -1232.79,
-      "reason": "overweight by 1.17% vs target \u2014 trim",
+      "notional_delta": -2265.16,
+      "reason": "overweight by 2.15% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.6 (starter), contribution 46.8"
+        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 37.8"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1687,13 +1686,12 @@
       "target_weight": 0.0317,
       "current_weight": 0.02,
       "notional_delta": 1230.58,
-      "reason": "buying on policy tailwind (positive) \u2014 \"First Solar (FSLR) Gets Bullish Coverage Despite Recent Stock Weakness\" \u00b7 underweight by 1.17% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"SolarEdge Targets $2.4B by 2029, Bets on AI Data Center Power Growth\" \u00b7 underweight by 1.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.46%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 51.0 (starter), contribution 65.3",
         "news_source=yahoo_rss",
-        "event=policy tailwind",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
@@ -1741,14 +1739,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0218,
+      "target_weight": 0.0111,
       "current_weight": 0.0271,
-      "notional_delta": -554.47,
-      "reason": "overweight by 0.53% vs target \u2014 trim",
+      "notional_delta": -1681.65,
+      "reason": "overweight by 1.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.64%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.6 (starter), contribution 52.7"
+        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 43.7"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1779,12 +1777,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0273,
       "notional_delta": -2877.88,
-      "reason": "exiting on positive news flow \u2014 \"David Sacks Slams 'Whistleblower' Jacob Coxon\u2019s Claims on AI Risk to Humans, Raises Questions Ahead of Anthropic IPO\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"This Week in Tesla: Democratic Lawmaker Demands Self-Driving Scrutiny, Cybercab Production, and More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.89%",
         "theme=Financials & Rates",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1950,14 +1948,14 @@
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0187,
+      "target_weight": 0.0132,
       "current_weight": 0.0371,
-      "notional_delta": -1943.11,
-      "reason": "trimming on mixed news flow \u2014 \"Blue Owl, KKR, Blackstone, Apollo Global Stocks Retreat as Private Credit Risks Remain\" \u00b7 overweight by 1.84% vs target \u2014 trim",
+      "notional_delta": -2522.5,
+      "reason": "trimming on mixed news flow \u2014 \"Blue Owl, KKR, Blackstone, Apollo Global Stocks Retreat as Private Credit Risks Remain\" \u00b7 overweight by 2.39% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.1 (starter), contribution 41.8",
+        "theme 'Financials & Rates' score 40.1 (starter), contribution 35.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2008,7 +2006,7 @@
       "target_weight": 0.0274,
       "current_weight": 0.0159,
       "notional_delta": 1211.86,
-      "reason": "buying on positive news flow \u2014 \"NEE Stock Trades at a Premium Valuation: Buy, Hold or Stay Away?\" \u00b7 underweight by 1.15% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"SolarEdge Targets $2.4B by 2029, Bets on AI Data Center Power Growth\" \u00b7 underweight by 1.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.66%",
         "theme=Clean Energy",
@@ -2146,14 +2144,14 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0217,
+      "target_weight": 0.0111,
       "current_weight": 0.0319,
-      "notional_delta": -1071.34,
-      "reason": "overweight by 1.02% vs target \u2014 trim",
+      "notional_delta": -2187.98,
+      "reason": "overweight by 2.08% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.47%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 46.6 (starter), contribution 52.5"
+        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 43.5"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2185,7 +2183,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0081,
       "notional_delta": -855.73,
-      "reason": "exiting on positive news flow \u2014 \"SolarEdge Technologies to See Continued Solar Revenue, Margin Growth, RBC Capital Markets Says\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"SolarEdge Targets $2.4B by 2029, Bets on AI Data Center Power Growth\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-20.11%",
         "theme=Clean Energy",
@@ -2219,7 +2217,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0155,
       "notional_delta": -1635.53,
-      "reason": "exiting on positive news flow \u2014 \"SolarEdge Technologies to See Continued Solar Revenue, Margin Growth, RBC Capital Markets Says\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"SolarEdge Targets $2.4B by 2029, Bets on AI Data Center Power Growth\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.93%",
         "theme=Clean Energy",
@@ -2271,12 +2269,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.1,
-      "reason": "exiting on positive news flow \u2014 \"Consumer Tech (Sep 7-11): Apple Launches First Foldable iPhone, XPeng Commissioned IRON Humanoid Robot Production & More\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"This Week in Tesla: Democratic Lawmaker Demands Self-Driving Scrutiny, Cybercab Production, and More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2319,14 +2317,14 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0228,
+      "target_weight": 0.0166,
       "current_weight": 0.0434,
-      "notional_delta": -2166.24,
-      "reason": "overweight by 2.06% vs target \u2014 trim",
+      "notional_delta": -2819.37,
+      "reason": "overweight by 2.68% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.14%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 46.1 (starter), contribution 51.1"
+        "theme 'Financials & Rates' score 40.1 (starter), contribution 45.1"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2373,10 +2371,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-03T12:22:31+00:00",
-      "v": 100509.06
-    },
     {
       "t": "2026-07-03T14:56:41+00:00",
       "v": 100509.06
@@ -4372,24 +4366,19 @@
     {
       "t": "2026-09-13T06:44:45+00:00",
       "v": 105343.59
+    },
+    {
+      "t": "2026-09-13T12:20:41+00:00",
+      "v": 105343.59
     }
   ],
   "breaking_news": [
-    {
-      "headline": "As data centers spread, not all U.S. housing markets react the same way",
-      "summary": "Realtors around the U.S. are being asked to explain how data centers could affect home values. But a new study shows there is no universal answer.",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/09/11/nx-s1-5964912/data-centers-growing-footprint-have-a-varying-effect-on-property-values",
-      "published_utc": "2026-09-13T06:44:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
     {
       "headline": "Fintech companies are applying to become banks. Here's what it takes to become one",
       "summary": "Many financial technology companies are applying to become banks. The Indicator finds out what it takes to go through this process and what benefits come with a bank charter.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5955727/fintech-companies-are-applying-to-become-banks-heres-what-it-takes-to-become-one",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4398,7 +4387,7 @@
       "summary": "For decades, the U.S. and Canadian auto supply chains have been tightly woven together. The trade war is threatening to unravel a complex system.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5961530/canada-trade-war-auto-parts-supply-chain",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4407,7 +4396,7 @@
       "summary": "In the Oscar-winning filmmaker's latest documentary, director Alex Gibney investigates the rise of Elon Musk and says what's behind Musk's success are distressing truths.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5962167/alex-gibney-elon-musk-documentary-review",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4416,7 +4405,7 @@
       "summary": "Diesel prices in the U.S. has hit yet another record, soaring past $6 a gallon on average as Washington's war with Iran disrupts the world's flow of fuel",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/g-s1-142842/us-diesel-6-a-gallon",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4425,7 +4414,7 @@
       "summary": "Why Patagonia might become a new data center hub",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5966498/is-patagonia-the-new-data-center-hub-harley-davidsons-role-in-the-trade-war",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4434,7 +4423,7 @@
       "summary": "Many Iranians lost their jobs because of the war and the U.S. blockade. Now some are even losing their backup jobs as sanctions tighten.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/g-s1-142935/iran-us-war-jobs-economy",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4443,43 +4432,34 @@
       "summary": "Dario Amodei and Sam Altman are the latest to urge caution amid fears the industry is racing too fast to build powerful AI while safety measures lag.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/12/nx-s1-5950588/openai-anthropic-ai-safety-researchers-hacks",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Death toll from Philippines ferry fire rises to 76, with more still missing",
-      "summary": "Access to the burnt-out boat has been slowed by toxic fumes and lingering heat, the country's coast guard says.",
+      "headline": "A new tax incentive could lead to more films being made in the U.S. rather than abroad",
+      "summary": "President Trump and Congress are weighing in on potential federal tax incentives for film production. It's hoped the tax credit would keep production of films and TV in the U.S. rather than overseas.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/09/13/nx-s1-5962169/a-new-tax-incentive-could-lead-to-more-films-being-made-in-the-u-s-rather-than-abroad",
+      "published_utc": "2026-09-13T12:20:46+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": true
+    },
+    {
+      "headline": "Afghan woman deported from US in first use of 'alien terrorist' court",
+      "summary": "The legal US resident was never charged with a crime, but was deported due to her family links to terrorism.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cwyz755yeg9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c3eqpd9zgl9o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Uganda's King Oyo buried amid calls for unity over his successor",
-      "summary": "A TV news presenter has been named as the traditional kingdom of Tooro's new monarch but the late king's family claim he chose an heir.",
+      "headline": "Only Roland Garros towel left, says Ukraine tennis player after Russian strike hits flat",
+      "summary": "Dayana Yastremska says her flat took a \"direct hit\" by a Russian missile in Odesa, and all that left was her Roland Garros towel.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c0lr7k4k4zyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "French officials investigate if malicious act caused train derailment",
-      "summary": "Officials say a rail fragment was found on the tracks after Friday's crash of a passenger train that left 44 people injured.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c33kp533nn6o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Fire at nursing home in Chile kills 16 residents",
-      "summary": "Ten people were evacuated from the home in Araucan\u00eda region in central Chile.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cy4zpp20w77o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c4gr33g3evlo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4488,7 +4468,16 @@
       "summary": "Nobody could have predicted that today's main global headline would be Trump's desire to see a unified Ireland.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwyzppd1d5lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "published_utc": "2026-09-13T12:20:46+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Russians seek answers over hundreds missing after Ukraine's 2024 incursion",
+      "summary": "Officials say more than 300 Russians remain missing after the 2024 Kursk offensive, but no-one really knows the true figure.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c62ene9kr71o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4497,52 +4486,25 @@
       "summary": "Some people fired in the wake of Kirk's assassination have won big settlements from employers, others have had to start over from scratch.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj06jgl9qzlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "Saudi Arabia shuts key oil pipeline after drone attack launched from Iraq",
-      "summary": "Iraq removes a military commander and opens investigations into the attack that came from an area bordering Iran.",
+      "headline": "Six dead, 107 rescued from Indonesian ferry that went missing in Java Sea",
+      "summary": "Ships and helicopters are searching for the remaining 130 missing people from the Virgo Transport 8 ship, which had encountered bad weather.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c62m933465eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cvgykzgljlyo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Anthropic boss Dario Amodei calls for AI development to slow down",
-      "summary": "The call comes amid growing concerns that AI models may become able to inflict serious damage worldwide.",
+      "headline": "Iran war reshapes Brics ties but also exposes divisions",
+      "summary": "Brics members agree they need a new global order but it's harder to answer what should replace it and how to get there.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c14dpgm0rg4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Air traffic chaos and compensation: 'Shutdown cost us more than \u00a31,000'",
-      "summary": "Flight disruption has ruined holidays and left passengers sleeping on airport floors - so what are their rights?",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cy9znljypnjo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Alstom to build new battery-electric train fleet",
-      "summary": "The government says the work will support thousands of jobs across the UK.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cd94y7d7qyzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Can Europe recharge its battery industry?",
-      "summary": "Europe has some promising battery tech, but can it make up ground lost to Chinese battery giants?",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cjeg8ly0qd3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/ce8767g4jdpo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4551,8 +4513,44 @@
       "summary": "The economy expanded by 0.4%, official figures show, whereas analysts had predicted no growth.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cq5xjlvn71lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T06:44:49+00:00",
+      "published_utc": "2026-09-13T12:20:46+00:00",
       "sentiment_score": 0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "Interest rates could rise again across the world \u2013 here's why",
+      "summary": "As countries grapple with energy costs pushing up inflation, this month will see how central banks respond.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/cew9nkx7v9eo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T12:20:46+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "'Skimpflation' warning as tinned mackerel alternative hits more supermarket shelves",
+      "summary": "Consumer group Which? has called the sale of jack mackerel, a cheaper, less nutritious species of fish, an example of \"skimpflation\".",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/crm9xk9eg88o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T12:20:46+00:00",
+      "sentiment_score": -0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "Ryanair boss O'Leary defends 'high-fare rapists' airlines remarks",
+      "summary": "O'Leary has said airline passengers \"can't afford to fly with the high-fare rapists around Europe\".",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/c5yejw9pjjyo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T12:20:46+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "US prices remain high as fuel costs squeeze household budgets",
+      "summary": "Prices in the US rose 3.4% in the 12 months to August,  according to the latest official report on inflation.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/cly41rdkrleo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T12:20:46+00:00",
+      "sentiment_score": 0.0,
       "is_policy": false
     }
   ],
