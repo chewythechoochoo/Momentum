@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-13T12:20:46+00:00",
+  "generated_at_utc": "2026-09-13T16:31:54+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 883,
-  "last_success_utc": "2026-09-13T06:44:49+00:00",
+  "cycle_count": 884,
+  "last_success_utc": "2026-09-13T12:20:46+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -551,14 +551,14 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 58.92,
-      "raw_score": 58.92,
+      "score": 60.7,
+      "raw_score": 60.7,
       "band": "buy",
-      "weight": 0.1131,
+      "weight": 0.119,
       "confidence": 1.0,
       "components": {
         "momentum": 66.29,
-        "sentiment": 58.34,
+        "sentiment": 64.28,
         "volume": 49.51,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -578,6 +578,22 @@
         "volume": 51.3,
         "policy": 50.0,
         "volatility_penalty": 7.53
+      }
+    },
+    {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 55.84,
+      "raw_score": 55.84,
+      "band": "buy",
+      "weight": 0.1028,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 26.29,
+        "sentiment": 100.0,
+        "volume": 49.11,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -629,22 +645,6 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 40.34,
-      "raw_score": 40.34,
-      "band": "starter",
-      "weight": 0.0422,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 26.29,
-        "sentiment": 50.0,
-        "volume": 49.11,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "financials",
       "name": "Financials & Rates",
       "score": 40.11,
@@ -679,14 +679,14 @@
     {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
-      "score": 37.56,
-      "raw_score": 45.93,
-      "band": "hold_small",
-      "weight": 0.0318,
-      "confidence": 0.8,
+      "score": 32.56,
+      "raw_score": 40.93,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.95,
       "components": {
         "momentum": 39.57,
-        "sentiment": 50.0,
+        "sentiment": 33.34,
         "volume": 50.51,
         "policy": 50.0,
         "volatility_penalty": 8.37
@@ -695,16 +695,16 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 23.1,
-      "raw_score": 39.86,
+      "score": 30.6,
+      "raw_score": 47.36,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.65,
+      "confidence": 1.0,
       "components": {
         "momentum": 32.82,
-        "sentiment": 50.0,
+        "sentiment": 66.66,
         "volume": 33.67,
-        "policy": 50.0,
+        "policy": 75.0,
         "volatility_penalty": 16.76
       }
     }
@@ -742,17 +742,18 @@
     },
     {
       "symbol": "AMZN",
-      "action": "REDUCE",
-      "target_weight": 0.0143,
+      "action": "HOLD",
+      "target_weight": 0.0347,
       "current_weight": 0.0347,
-      "notional_delta": -2144.37,
-      "reason": "trimming on mixed news flow \u2014 \"A Dating App Is Outperforming Apple, Meta and Microsoft on This Metric\u2014 Only Nvidia Can Claim a Higher Number\" \u00b7 overweight by 2.04% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on policy tailwind (positive) \u2014 \"Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.97%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 40.3 (starter), contribution 39.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 55.2",
+        "news_source=yahoo_rss",
+        "event=policy tailwind",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -820,7 +821,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0323,
       "notional_delta": -3402.32,
-      "reason": "exiting on positive news flow \u2014 \"Exxon's 2030 Targets Call for $35 Billion More in Cash Flow. Here's the Milestone That Tells You It's on Track By 2028.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Oil Above $100 Is Creating a New Opportunity Beyond the Major Producers\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=8.78%",
         "theme=Oil & Gas",
@@ -835,7 +836,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "exiting on positive news flow \u2014 \"Zscaler Conference: AI Agents, Agentic SOC Fuel Zero-Trust Growth Ambitions\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Fortinet Sees AI, Neocloud Buildout Fueling Network Security Demand\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.01%",
         "theme=Cybersecurity",
@@ -847,14 +848,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0363,
+      "target_weight": 0.0383,
       "current_weight": 0.0308,
-      "notional_delta": 581.9,
-      "reason": "buying on positive news flow \u2014 \"Exxon's 2030 Targets Call for $35 Billion More in Cash Flow. Here's the Milestone That Tells You It's on Track By 2028.\" \u00b7 underweight by 0.55% vs target \u2014 add",
+      "notional_delta": 792.59,
+      "reason": "buying on positive news flow \u2014 \"Oil Above $100 Is Creating a New Opportunity Beyond the Major Producers\" \u00b7 underweight by 0.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.57%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 58.9 (buy), contribution 57.4",
+        "theme 'Oil & Gas' score 60.7 (buy), contribution 59.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -879,14 +880,13 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0096,
+      "target_weight": 0.0156,
       "current_weight": 0.0311,
-      "notional_delta": -2265.16,
-      "reason": "overweight by 2.15% vs target \u2014 trim",
+      "notional_delta": -1638.23,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.90%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 37.8"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -912,7 +912,7 @@
       "target_weight": 0.0176,
       "current_weight": 0.0047,
       "notional_delta": 1362.26,
-      "reason": "buying on positive news flow \u2014 \"Zscaler Conference: AI Agents, Agentic SOC Fuel Zero-Trust Growth Ambitions\" \u00b7 underweight by 1.29% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Fortinet Sees AI, Neocloud Buildout Fueling Network Security Demand\" \u00b7 underweight by 1.29% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.91%",
         "theme=Cybersecurity",
@@ -940,14 +940,13 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0111,
+      "target_weight": 0.0135,
       "current_weight": 0.0271,
-      "notional_delta": -1681.65,
-      "reason": "overweight by 1.60% vs target \u2014 trim",
+      "notional_delta": -1425.48,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.64%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 43.7"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -983,15 +982,18 @@
     },
     {
       "symbol": "HD",
-      "action": "REDUCE",
-      "target_weight": 0.0138,
+      "action": "HOLD",
+      "target_weight": 0.0338,
       "current_weight": 0.0337,
-      "notional_delta": -2091.95,
-      "reason": "overweight by 1.99% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on policy tailwind (positive) \u2014 \"Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.08%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 40.3 (starter), contribution 38.3"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 53.8",
+        "news_source=yahoo_rss",
+        "event=policy tailwind",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1012,11 +1014,11 @@
     },
     {
       "symbol": "LCID",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0003,
       "current_weight": 0.0005,
-      "notional_delta": -56.87,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -28.43,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-46.78%",
         "theme=EV & Clean Transport"
@@ -1025,16 +1027,16 @@
     },
     {
       "symbol": "LLY",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: GameStop, Marvell, Robinhood\" \u00b7 theme score 23.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s (LLY) GLP-1 Growth Made It a Core \u201cRunning Back\u201d Stock for Jim Cramer\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.56%",
         "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1069,15 +1071,18 @@
     },
     {
       "symbol": "MCD",
-      "action": "REDUCE",
-      "target_weight": 0.0141,
+      "action": "HOLD",
+      "target_weight": 0.0343,
       "current_weight": 0.0343,
-      "notional_delta": -2123.72,
-      "reason": "overweight by 2.02% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on policy tailwind (positive) \u2014 \"Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.16%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 40.3 (starter), contribution 39.1"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 54.6",
+        "news_source=yahoo_rss",
+        "event=policy tailwind",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1087,26 +1092,26 @@
       "target_weight": 0.0377,
       "current_weight": 0.0345,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"A Dating App Is Outperforming Apple, Meta and Microsoft on This Metric\u2014 Only Nvidia Can Claim a Higher Number\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.63%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.9 (buy), contribution 80.2",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'AI & Compute' score 58.9 (buy), contribution 80.2"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "MRNA",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0008,
       "current_weight": 0.0016,
-      "notional_delta": -168.88,
-      "reason": "theme score 23.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -84.44,
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=149.86%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1132,12 +1137,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.12,
-      "reason": "exiting on mixed news flow \u2014 \"A Dating App Is Outperforming Apple, Meta and Microsoft on This Metric\u2014 Only Nvidia Can Claim a Higher Number\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.23%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
@@ -1147,7 +1150,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "exiting on positive news flow \u2014 \"DRAM ETF Outflows Surge as the Memory Stocks Remain in a Bear Market\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Cybersecurity Stocks May See Upside Even As AI Industry\u2019s \u2018Pace The Frontier\u2019 Push Triggers Chipmaker Sell-Off Risks\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.39%",
         "theme=Semiconductors (Broad)",
@@ -1178,10 +1181,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0195,
       "notional_delta": -2054.03,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on policy tailwind (positive) \u2014 \"Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.27%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "news_source=yahoo_rss",
+        "event=policy tailwind",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1206,7 +1212,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0044,
       "notional_delta": -461.32,
-      "reason": "exiting on positive news flow \u2014 \"Zscaler Conference: AI Agents, Agentic SOC Fuel Zero-Trust Growth Ambitions\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Fortinet Sees AI, Neocloud Buildout Fueling Network Security Demand\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.84%",
         "theme=Cybersecurity",
@@ -1218,14 +1224,14 @@
     {
       "symbol": "OXY",
       "action": "BUY",
-      "target_weight": 0.0376,
+      "target_weight": 0.0396,
       "current_weight": 0.0303,
-      "notional_delta": 769.62,
-      "reason": "buying on positive news flow \u2014 \"Exxon's 2030 Targets Call for $35 Billion More in Cash Flow. Here's the Milestone That Tells You It's on Track By 2028.\" \u00b7 underweight by 0.73% vs target \u2014 add",
+      "notional_delta": 980.31,
+      "reason": "buying on positive news flow \u2014 \"Oil Above $100 Is Creating a New Opportunity Beyond the Major Producers\" \u00b7 underweight by 0.93% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.00%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 58.9 (buy), contribution 59.4",
+        "theme 'Oil & Gas' score 60.7 (buy), contribution 61.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1237,7 +1243,7 @@
       "target_weight": 0.0163,
       "current_weight": 0.0045,
       "notional_delta": 1237.8,
-      "reason": "buying on positive news flow \u2014 \"Zscaler Conference: AI Agents, Agentic SOC Fuel Zero-Trust Growth Ambitions\" \u00b7 underweight by 1.18% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Fortinet Sees AI, Neocloud Buildout Fueling Network Security Demand\" \u00b7 underweight by 1.18% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.17%",
         "theme=Cybersecurity",
@@ -1249,41 +1255,44 @@
     },
     {
       "symbol": "PFE",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0004,
       "current_weight": 0.0007,
-      "notional_delta": -73.99,
-      "reason": "theme score 23.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -36.99,
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=8.07%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "REGN",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.21,
-      "reason": "theme score 23.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.1,
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=16.31%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0111,
+      "target_weight": 0.0159,
       "current_weight": 0.0319,
-      "notional_delta": -2187.98,
-      "reason": "overweight by 2.08% vs target \u2014 trim",
+      "notional_delta": -1678.65,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.47%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 43.5"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1324,10 +1333,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.29,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on policy tailwind (positive) \u2014 \"Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.35%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "news_source=yahoo_rss",
+        "event=policy tailwind",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1352,7 +1364,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.36,
-      "reason": "exiting on positive news flow \u2014 \"Exxon's 2030 Targets Call for $35 Billion More in Cash Flow. Here's the Milestone That Tells You It's on Track By 2028.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Oil Above $100 Is Creating a New Opportunity Beyond the Major Producers\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=7.90%",
         "theme=Oil & Gas",
@@ -1376,16 +1388,16 @@
     },
     {
       "symbol": "TSLA",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.1,
-      "reason": "exiting on negative news flow \u2014 \"This Week in Tesla: Democratic Lawmaker Demands Self-Driving Scrutiny, Cybercab Production, and More\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.05,
+      "reason": "trimming on positive news flow \u2014 \"Cybersecurity Stocks May See Upside Even As AI Industry\u2019s \u2018Pace The Frontier\u2019 Push Triggers Chipmaker Sell-Off Risks\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1405,14 +1417,16 @@
     },
     {
       "symbol": "VRTX",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0003,
       "current_weight": 0.0005,
-      "notional_delta": -57.55,
-      "reason": "theme score 23.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -28.78,
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=5.95%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1433,14 +1447,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0392,
+      "target_weight": 0.0412,
       "current_weight": 0.0315,
-      "notional_delta": 815.67,
-      "reason": "buying on positive news flow \u2014 \"Exxon's 2030 Targets Call for $35 Billion More in Cash Flow. Here's the Milestone That Tells You It's on Track By 2028.\" \u00b7 underweight by 0.77% vs target \u2014 add",
+      "notional_delta": 1026.35,
+      "reason": "buying on positive news flow \u2014 \"Oil Above $100 Is Creating a New Opportunity Beyond the Major Producers\" \u00b7 underweight by 0.97% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.84%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 58.9 (buy), contribution 61.9",
+        "theme 'Oil & Gas' score 60.7 (buy), contribution 63.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1452,7 +1466,7 @@
       "target_weight": 0.0122,
       "current_weight": 0.0044,
       "notional_delta": 820.51,
-      "reason": "buying on positive news flow \u2014 \"Zscaler Conference: AI Agents, Agentic SOC Fuel Zero-Trust Growth Ambitions\" \u00b7 underweight by 0.78% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Fortinet Sees AI, Neocloud Buildout Fueling Network Security Demand\" \u00b7 underweight by 0.78% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.51%",
         "theme=Cybersecurity",
@@ -1502,17 +1516,18 @@
     },
     {
       "symbol": "AMZN",
-      "action": "REDUCE",
-      "target_weight": 0.0143,
+      "action": "HOLD",
+      "target_weight": 0.0347,
       "current_weight": 0.0347,
-      "notional_delta": -2144.37,
-      "reason": "trimming on mixed news flow \u2014 \"A Dating App Is Outperforming Apple, Meta and Microsoft on This Metric\u2014 Only Nvidia Can Claim a Higher Number\" \u00b7 overweight by 2.04% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on policy tailwind (positive) \u2014 \"Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.97%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 40.3 (starter), contribution 39.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 55.2",
+        "news_source=yahoo_rss",
+        "event=policy tailwind",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1595,7 +1610,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0323,
       "notional_delta": -3402.32,
-      "reason": "exiting on positive news flow \u2014 \"Exxon's 2030 Targets Call for $35 Billion More in Cash Flow. Here's the Milestone That Tells You It's on Track By 2028.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Oil Above $100 Is Creating a New Opportunity Beyond the Major Producers\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=8.78%",
         "theme=Oil & Gas",
@@ -1613,7 +1628,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "exiting on positive news flow \u2014 \"Zscaler Conference: AI Agents, Agentic SOC Fuel Zero-Trust Growth Ambitions\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Fortinet Sees AI, Neocloud Buildout Fueling Network Security Demand\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.01%",
         "theme=Cybersecurity",
@@ -1628,14 +1643,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0363,
+      "target_weight": 0.0383,
       "current_weight": 0.0308,
-      "notional_delta": 581.9,
-      "reason": "buying on positive news flow \u2014 \"Exxon's 2030 Targets Call for $35 Billion More in Cash Flow. Here's the Milestone That Tells You It's on Track By 2028.\" \u00b7 underweight by 0.55% vs target \u2014 add",
+      "notional_delta": 792.59,
+      "reason": "buying on positive news flow \u2014 \"Oil Above $100 Is Creating a New Opportunity Beyond the Major Producers\" \u00b7 underweight by 0.75% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.57%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 58.9 (buy), contribution 57.4",
+        "theme 'Oil & Gas' score 60.7 (buy), contribution 59.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1666,14 +1681,13 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0096,
+      "target_weight": 0.0156,
       "current_weight": 0.0311,
-      "notional_delta": -2265.16,
-      "reason": "overweight by 2.15% vs target \u2014 trim",
+      "notional_delta": -1638.23,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.90%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 37.8"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1705,7 +1719,7 @@
       "target_weight": 0.0176,
       "current_weight": 0.0047,
       "notional_delta": 1362.26,
-      "reason": "buying on positive news flow \u2014 \"Zscaler Conference: AI Agents, Agentic SOC Fuel Zero-Trust Growth Ambitions\" \u00b7 underweight by 1.29% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Fortinet Sees AI, Neocloud Buildout Fueling Network Security Demand\" \u00b7 underweight by 1.29% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.91%",
         "theme=Cybersecurity",
@@ -1739,14 +1753,13 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0111,
+      "target_weight": 0.0135,
       "current_weight": 0.0271,
-      "notional_delta": -1681.65,
-      "reason": "overweight by 1.60% vs target \u2014 trim",
+      "notional_delta": -1425.48,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.64%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 43.7"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1791,15 +1804,18 @@
     },
     {
       "symbol": "HD",
-      "action": "REDUCE",
-      "target_weight": 0.0138,
+      "action": "HOLD",
+      "target_weight": 0.0338,
       "current_weight": 0.0337,
-      "notional_delta": -2091.95,
-      "reason": "overweight by 1.99% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on policy tailwind (positive) \u2014 \"Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.08%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 40.3 (starter), contribution 38.3"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 53.8",
+        "news_source=yahoo_rss",
+        "event=policy tailwind",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1826,11 +1842,11 @@
     },
     {
       "symbol": "LCID",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0003,
       "current_weight": 0.0005,
-      "notional_delta": -56.87,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -28.43,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-46.78%",
         "theme=EV & Clean Transport"
@@ -1842,16 +1858,16 @@
     },
     {
       "symbol": "LLY",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: GameStop, Marvell, Robinhood\" \u00b7 theme score 23.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s (LLY) GLP-1 Growth Made It a Core \u201cRunning Back\u201d Stock for Jim Cramer\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.56%",
         "theme=Biotech & Pharma",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1895,15 +1911,18 @@
     },
     {
       "symbol": "MCD",
-      "action": "REDUCE",
-      "target_weight": 0.0141,
+      "action": "HOLD",
+      "target_weight": 0.0343,
       "current_weight": 0.0343,
-      "notional_delta": -2123.72,
-      "reason": "overweight by 2.02% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on policy tailwind (positive) \u2014 \"Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.16%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 40.3 (starter), contribution 39.1"
+        "theme 'Consumer Discretionary' score 55.8 (buy), contribution 54.6",
+        "news_source=yahoo_rss",
+        "event=policy tailwind",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1916,13 +1935,11 @@
       "target_weight": 0.0377,
       "current_weight": 0.0345,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"A Dating App Is Outperforming Apple, Meta and Microsoft on This Metric\u2014 Only Nvidia Can Claim a Higher Number\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.63%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 58.9 (buy), contribution 80.2",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'AI & Compute' score 58.9 (buy), contribution 80.2"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1931,14 +1948,16 @@
     },
     {
       "symbol": "MRNA",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0008,
       "current_weight": 0.0016,
-      "notional_delta": -168.88,
-      "reason": "theme score 23.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -84.44,
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=149.86%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1970,12 +1989,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.12,
-      "reason": "exiting on mixed news flow \u2014 \"A Dating App Is Outperforming Apple, Meta and Microsoft on This Metric\u2014 Only Nvidia Can Claim a Higher Number\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.23%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1988,7 +2005,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "exiting on positive news flow \u2014 \"DRAM ETF Outflows Surge as the Memory Stocks Remain in a Bear Market\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Cybersecurity Stocks May See Upside Even As AI Industry\u2019s \u2018Pace The Frontier\u2019 Push Triggers Chipmaker Sell-Off Risks\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.39%",
         "theme=Semiconductors (Broad)",
@@ -2025,10 +2042,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0195,
       "notional_delta": -2054.03,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on policy tailwind (positive) \u2014 \"Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.27%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "news_source=yahoo_rss",
+        "event=policy tailwind",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2059,7 +2079,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0044,
       "notional_delta": -461.32,
-      "reason": "exiting on positive news flow \u2014 \"Zscaler Conference: AI Agents, Agentic SOC Fuel Zero-Trust Growth Ambitions\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Fortinet Sees AI, Neocloud Buildout Fueling Network Security Demand\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.84%",
         "theme=Cybersecurity",
@@ -2074,14 +2094,14 @@
     {
       "symbol": "OXY",
       "action": "BUY",
-      "target_weight": 0.0376,
+      "target_weight": 0.0396,
       "current_weight": 0.0303,
-      "notional_delta": 769.62,
-      "reason": "buying on positive news flow \u2014 \"Exxon's 2030 Targets Call for $35 Billion More in Cash Flow. Here's the Milestone That Tells You It's on Track By 2028.\" \u00b7 underweight by 0.73% vs target \u2014 add",
+      "notional_delta": 980.31,
+      "reason": "buying on positive news flow \u2014 \"Oil Above $100 Is Creating a New Opportunity Beyond the Major Producers\" \u00b7 underweight by 0.93% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.00%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 58.9 (buy), contribution 59.4",
+        "theme 'Oil & Gas' score 60.7 (buy), contribution 61.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2096,7 +2116,7 @@
       "target_weight": 0.0163,
       "current_weight": 0.0045,
       "notional_delta": 1237.8,
-      "reason": "buying on positive news flow \u2014 \"Zscaler Conference: AI Agents, Agentic SOC Fuel Zero-Trust Growth Ambitions\" \u00b7 underweight by 1.18% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Fortinet Sees AI, Neocloud Buildout Fueling Network Security Demand\" \u00b7 underweight by 1.18% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.17%",
         "theme=Cybersecurity",
@@ -2111,14 +2131,16 @@
     },
     {
       "symbol": "PFE",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0004,
       "current_weight": 0.0007,
-      "notional_delta": -73.99,
-      "reason": "theme score 23.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -36.99,
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=8.07%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2127,14 +2149,16 @@
     },
     {
       "symbol": "REGN",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.21,
-      "reason": "theme score 23.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.1,
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=16.31%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2144,14 +2168,13 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0111,
+      "target_weight": 0.0159,
       "current_weight": 0.0319,
-      "notional_delta": -2187.98,
-      "reason": "overweight by 2.08% vs target \u2014 trim",
+      "notional_delta": -1678.65,
+      "reason": "theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.47%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 37.6 (hold_small), contribution 43.5"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2201,10 +2224,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.29,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on policy tailwind (positive) \u2014 \"Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.35%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "news_source=yahoo_rss",
+        "event=policy tailwind",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2235,7 +2261,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.36,
-      "reason": "exiting on positive news flow \u2014 \"Exxon's 2030 Targets Call for $35 Billion More in Cash Flow. Here's the Milestone That Tells You It's on Track By 2028.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Oil Above $100 Is Creating a New Opportunity Beyond the Major Producers\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=7.90%",
         "theme=Oil & Gas",
@@ -2265,16 +2291,16 @@
     },
     {
       "symbol": "TSLA",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.1,
-      "reason": "exiting on negative news flow \u2014 \"This Week in Tesla: Democratic Lawmaker Demands Self-Driving Scrutiny, Cybercab Production, and More\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.05,
+      "reason": "trimming on positive news flow \u2014 \"Cybersecurity Stocks May See Upside Even As AI Industry\u2019s \u2018Pace The Frontier\u2019 Push Triggers Chipmaker Sell-Off Risks\" \u00b7 theme score 32.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.80%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2300,14 +2326,16 @@
     },
     {
       "symbol": "VRTX",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0003,
       "current_weight": 0.0005,
-      "notional_delta": -57.55,
-      "reason": "theme score 23.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -28.78,
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=5.95%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2334,14 +2362,14 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0392,
+      "target_weight": 0.0412,
       "current_weight": 0.0315,
-      "notional_delta": 815.67,
-      "reason": "buying on positive news flow \u2014 \"Exxon's 2030 Targets Call for $35 Billion More in Cash Flow. Here's the Milestone That Tells You It's on Track By 2028.\" \u00b7 underweight by 0.77% vs target \u2014 add",
+      "notional_delta": 1026.35,
+      "reason": "buying on positive news flow \u2014 \"Oil Above $100 Is Creating a New Opportunity Beyond the Major Producers\" \u00b7 underweight by 0.97% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.84%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 58.9 (buy), contribution 61.9",
+        "theme 'Oil & Gas' score 60.7 (buy), contribution 63.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2356,7 +2384,7 @@
       "target_weight": 0.0122,
       "current_weight": 0.0044,
       "notional_delta": 820.51,
-      "reason": "buying on positive news flow \u2014 \"Zscaler Conference: AI Agents, Agentic SOC Fuel Zero-Trust Growth Ambitions\" \u00b7 underweight by 0.78% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Fortinet Sees AI, Neocloud Buildout Fueling Network Security Demand\" \u00b7 underweight by 0.78% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.51%",
         "theme=Cybersecurity",
@@ -2371,10 +2399,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-03T14:56:41+00:00",
-      "v": 100509.06
-    },
     {
       "t": "2026-07-03T16:43:27+00:00",
       "v": 100509.06
@@ -4370,6 +4394,10 @@
     {
       "t": "2026-09-13T12:20:41+00:00",
       "v": 105343.59
+    },
+    {
+      "t": "2026-09-13T16:31:50+00:00",
+      "v": 105343.59
     }
   ],
   "breaking_news": [
@@ -4378,7 +4406,7 @@
       "summary": "Many financial technology companies are applying to become banks. The Indicator finds out what it takes to go through this process and what benefits come with a bank charter.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5955727/fintech-companies-are-applying-to-become-banks-heres-what-it-takes-to-become-one",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4387,7 +4415,7 @@
       "summary": "For decades, the U.S. and Canadian auto supply chains have been tightly woven together. The trade war is threatening to unravel a complex system.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5961530/canada-trade-war-auto-parts-supply-chain",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4396,7 +4424,7 @@
       "summary": "In the Oscar-winning filmmaker's latest documentary, director Alex Gibney investigates the rise of Elon Musk and says what's behind Musk's success are distressing truths.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5962167/alex-gibney-elon-musk-documentary-review",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4405,7 +4433,7 @@
       "summary": "Diesel prices in the U.S. has hit yet another record, soaring past $6 a gallon on average as Washington's war with Iran disrupts the world's flow of fuel",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/g-s1-142842/us-diesel-6-a-gallon",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:54+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4414,7 +4442,7 @@
       "summary": "Why Patagonia might become a new data center hub",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5966498/is-patagonia-the-new-data-center-hub-harley-davidsons-role-in-the-trade-war",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4423,7 +4451,7 @@
       "summary": "Many Iranians lost their jobs because of the war and the U.S. blockade. Now some are even losing their backup jobs as sanctions tighten.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/g-s1-142935/iran-us-war-jobs-economy",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4432,7 +4460,7 @@
       "summary": "Dario Amodei and Sam Altman are the latest to urge caution amid fears the industry is racing too fast to build powerful AI while safety measures lag.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/12/nx-s1-5950588/openai-anthropic-ai-safety-researchers-hacks",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4441,61 +4469,34 @@
       "summary": "President Trump and Congress are weighing in on potential federal tax incentives for film production. It's hoped the tax credit would keep production of films and TV in the U.S. rather than overseas.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/13/nx-s1-5962169/a-new-tax-incentive-could-lead-to-more-films-being-made-in-the-u-s-rather-than-abroad",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:54+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
     {
-      "headline": "Afghan woman deported from US in first use of 'alien terrorist' court",
-      "summary": "The legal US resident was never charged with a crime, but was deported due to her family links to terrorism.",
+      "headline": "US congressman swims to safety after his plane is forced to land on a lake",
+      "summary": "The small plane carrying Rep Tom Tiffany had a mechanical issue that forced the pilot to make an emergency landing on a Wisconsin lake.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c3eqpd9zgl9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c5y5d87x72zo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T16:31:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Only Roland Garros towel left, says Ukraine tennis player after Russian strike hits flat",
-      "summary": "Dayana Yastremska says her flat took a \"direct hit\" by a Russian missile in Odesa, and all that left was her Roland Garros towel.",
+      "headline": "Legendary Canadian boxer George Chuvalo dies aged 89",
+      "summary": "The heavyweight champion took on the likes of Muhammad Ali and Joe Frazier, and was known for never once getting knocked out or knocked down.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c4gr33g3evlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cy8zv8v1z7zo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T16:31:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Trump's comments on a united Ireland may have targeted audience across the Atlantic",
-      "summary": "Nobody could have predicted that today's main global headline would be Trump's desire to see a unified Ireland.",
+      "headline": "Trump doubles down on united Ireland comments on day two of visit",
+      "summary": "The US president was speaking at the Irish Open on Sunday and said \"many people agree\" with his comments.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cwyzppd1d5lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Russians seek answers over hundreds missing after Ukraine's 2024 incursion",
-      "summary": "Officials say more than 300 Russians remain missing after the 2024 Kursk offensive, but no-one really knows the true figure.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c62ene9kr71o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "They lost their jobs after posting about Charlie Kirk, but some have no regrets",
-      "summary": "Some people fired in the wake of Kirk's assassination have won big settlements from employers, others have had to start over from scratch.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cj06jgl9qzlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
-      "sentiment_score": -0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Six dead, 107 rescued from Indonesian ferry that went missing in Java Sea",
-      "summary": "Ships and helicopters are searching for the remaining 130 missing people from the Virgo Transport 8 ship, which had encountered bad weather.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cvgykzgljlyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cx2z79n0eeno?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T16:31:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4504,7 +4505,34 @@
       "summary": "Brics members agree they need a new global order but it's harder to answer what should replace it and how to get there.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ce8767g4jdpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:53+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Turkish police detain dozens in raids on gay bars and homes of LGBTQ+ activists",
+      "summary": "Human rights groups in Turkey have accused the government of using a family- values campaign to target the LGBTQ+ community.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cpve191wy47o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T16:31:53+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Six dead, 130 missing after Indonesian ferry capsizes in Java Sea",
+      "summary": "Ships and helicopters are searching for those missing from the Virgo Transport 8 ship, which had encountered bad weather.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cvgykzgljlyo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T16:31:53+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Russia struck train near Poland border shortly after Boris Johnson and top European officials passed through",
+      "summary": "The former UK PM said \"I don't know what warped logic drove Putin to blow up a stationary Ukrainian locomotive on the Polish border this morning\".",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cy5zg41dkqwo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T16:31:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4513,7 +4541,7 @@
       "summary": "The economy expanded by 0.4%, official figures show, whereas analysts had predicted no growth.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cq5xjlvn71lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:53+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4522,7 +4550,7 @@
       "summary": "As countries grapple with energy costs pushing up inflation, this month will see how central banks respond.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cew9nkx7v9eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4531,7 +4559,7 @@
       "summary": "Consumer group Which? has called the sale of jack mackerel, a cheaper, less nutritious species of fish, an example of \"skimpflation\".",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/crm9xk9eg88o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:53+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4540,7 +4568,7 @@
       "summary": "O'Leary has said airline passengers \"can't afford to fly with the high-fare rapists around Europe\".",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c5yejw9pjjyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4549,7 +4577,7 @@
       "summary": "Prices in the US rose 3.4% in the 12 months to August,  according to the latest official report on inflation.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cly41rdkrleo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T12:20:46+00:00",
+      "published_utc": "2026-09-13T16:31:53+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
