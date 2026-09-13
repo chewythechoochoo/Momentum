@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-13T21:24:31+00:00",
+  "generated_at_utc": "2026-09-13T23:28:15+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 886,
-  "last_success_utc": "2026-09-13T18:55:58+00:00",
+  "cycle_count": 887,
+  "last_success_utc": "2026-09-13T21:24:31+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -549,6 +549,22 @@
   ],
   "themes": [
     {
+      "key": "oil_gas",
+      "name": "Oil & Gas",
+      "score": 62.92,
+      "raw_score": 62.92,
+      "band": "buy",
+      "weight": 0.1074,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 66.29,
+        "sentiment": 70.0,
+        "volume": 49.51,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "ai_compute",
       "name": "AI & Compute",
       "score": 62.39,
@@ -562,22 +578,6 @@
         "volume": 51.3,
         "policy": 55.0,
         "volatility_penalty": 7.53
-      }
-    },
-    {
-      "key": "oil_gas",
-      "name": "Oil & Gas",
-      "score": 56.92,
-      "raw_score": 56.92,
-      "band": "buy",
-      "weight": 0.0878,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 66.29,
-        "sentiment": 50.0,
-        "volume": 49.51,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
       }
     },
     {
@@ -677,22 +677,6 @@
       }
     },
     {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 30.6,
-      "raw_score": 47.36,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 32.82,
-        "sentiment": 66.66,
-        "volume": 33.67,
-        "policy": 75.0,
-        "volatility_penalty": 16.76
-      }
-    },
-    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
       "score": 28.56,
@@ -706,6 +690,22 @@
         "volume": 50.51,
         "policy": 50.0,
         "volatility_penalty": 8.37
+      }
+    },
+    {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 28.1,
+      "raw_score": 44.86,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 32.82,
+        "sentiment": 58.34,
+        "volume": 33.67,
+        "policy": 75.0,
+        "volatility_penalty": 16.76
       }
     }
   ],
@@ -845,16 +845,16 @@
     {
       "symbol": "CVX",
       "action": "HOLD",
-      "target_weight": 0.0282,
+      "target_weight": 0.0346,
       "current_weight": 0.0308,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Dow Jones Index Outlook: Top Stock Market News This Week\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Energy Stocks Surge Past Tech Companies Amid Escalating US-Iran Conflict\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=9.57%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.9 (buy), contribution 55.4",
+        "theme 'Oil & Gas' score 62.9 (buy), contribution 61.4",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1027,7 +1027,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s (LLY) GLP-1 Growth Made It a Core \u201cRunning Back\u201d Stock for Jim Cramer\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s (LLY) GLP-1 Growth Made It a Core \u201cRunning Back\u201d Stock for Jim Cramer\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.56%",
         "theme=Biotech & Pharma",
@@ -1103,7 +1103,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0016,
       "notional_delta": -84.44,
-      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=149.86%",
         "theme=Biotech & Pharma",
@@ -1219,15 +1219,15 @@
     },
     {
       "symbol": "OXY",
-      "action": "HOLD",
-      "target_weight": 0.0292,
+      "action": "BUY",
+      "target_weight": 0.0357,
       "current_weight": 0.0303,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 569.47,
+      "reason": "underweight by 0.54% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.00%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.9 (buy), contribution 57.4"
+        "theme 'Oil & Gas' score 62.9 (buy), contribution 63.4"
       ],
       "theme_key": "oil_gas"
     },
@@ -1253,7 +1253,7 @@
       "target_weight": 0.0004,
       "current_weight": 0.0007,
       "notional_delta": -36.99,
-      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=8.07%",
         "theme=Biotech & Pharma",
@@ -1268,7 +1268,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.1,
-      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=16.31%",
         "theme=Biotech & Pharma",
@@ -1412,7 +1412,7 @@
       "target_weight": 0.0003,
       "current_weight": 0.0005,
       "notional_delta": -28.78,
-      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=5.95%",
         "theme=Biotech & Pharma",
@@ -1437,15 +1437,17 @@
     },
     {
       "symbol": "XOM",
-      "action": "HOLD",
-      "target_weight": 0.0305,
+      "action": "BUY",
+      "target_weight": 0.0371,
       "current_weight": 0.0315,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 594.44,
+      "reason": "buying on positive news flow \u2014 \"Energy Stocks Surge Past Tech Companies Amid Escalating US-Iran Conflict\" \u00b7 underweight by 0.56% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.84%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.9 (buy), contribution 59.9"
+        "theme 'Oil & Gas' score 62.9 (buy), contribution 65.9",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1629,16 +1631,16 @@
     {
       "symbol": "CVX",
       "action": "HOLD",
-      "target_weight": 0.0282,
+      "target_weight": 0.0346,
       "current_weight": 0.0308,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Dow Jones Index Outlook: Top Stock Market News This Week\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Energy Stocks Surge Past Tech Companies Amid Escalating US-Iran Conflict\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=9.57%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.9 (buy), contribution 55.4",
+        "theme 'Oil & Gas' score 62.9 (buy), contribution 61.4",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1847,7 +1849,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s (LLY) GLP-1 Growth Made It a Core \u201cRunning Back\u201d Stock for Jim Cramer\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Eli Lilly\u2019s (LLY) GLP-1 Growth Made It a Core \u201cRunning Back\u201d Stock for Jim Cramer\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.56%",
         "theme=Biotech & Pharma",
@@ -1938,7 +1940,7 @@
       "target_weight": 0.0008,
       "current_weight": 0.0016,
       "notional_delta": -84.44,
-      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=149.86%",
         "theme=Biotech & Pharma",
@@ -2078,15 +2080,15 @@
     },
     {
       "symbol": "OXY",
-      "action": "HOLD",
-      "target_weight": 0.0292,
+      "action": "BUY",
+      "target_weight": 0.0357,
       "current_weight": 0.0303,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 569.47,
+      "reason": "underweight by 0.54% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.00%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.9 (buy), contribution 57.4"
+        "theme 'Oil & Gas' score 62.9 (buy), contribution 63.4"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2118,7 +2120,7 @@
       "target_weight": 0.0004,
       "current_weight": 0.0007,
       "notional_delta": -36.99,
-      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=8.07%",
         "theme=Biotech & Pharma",
@@ -2136,7 +2138,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.1,
-      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=16.31%",
         "theme=Biotech & Pharma",
@@ -2310,7 +2312,7 @@
       "target_weight": 0.0003,
       "current_weight": 0.0005,
       "notional_delta": -28.78,
-      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 30.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Vertex Pharmaceuticals Maps Growth Beyond CF at Cantor Conference\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=5.95%",
         "theme=Biotech & Pharma",
@@ -2341,15 +2343,17 @@
     },
     {
       "symbol": "XOM",
-      "action": "HOLD",
-      "target_weight": 0.0305,
+      "action": "BUY",
+      "target_weight": 0.0371,
       "current_weight": 0.0315,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 594.44,
+      "reason": "buying on positive news flow \u2014 \"Energy Stocks Surge Past Tech Companies Amid Escalating US-Iran Conflict\" \u00b7 underweight by 0.56% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.84%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.9 (buy), contribution 59.9"
+        "theme 'Oil & Gas' score 62.9 (buy), contribution 65.9",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2377,10 +2381,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-03T19:47:37+00:00",
-      "v": 100509.06
-    },
     {
       "t": "2026-07-03T20:48:52+00:00",
       "v": 100509.06
@@ -4376,6 +4376,10 @@
     {
       "t": "2026-09-13T21:24:25+00:00",
       "v": 105343.59
+    },
+    {
+      "t": "2026-09-13T23:28:12+00:00",
+      "v": 105343.59
     }
   ],
   "breaking_news": [
@@ -4384,7 +4388,7 @@
       "summary": "Many financial technology companies are applying to become banks. The Indicator finds out what it takes to go through this process and what benefits come with a bank charter.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5955727/fintech-companies-are-applying-to-become-banks-heres-what-it-takes-to-become-one",
-      "published_utc": "2026-09-13T21:24:31+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4393,7 +4397,7 @@
       "summary": "For decades, the U.S. and Canadian auto supply chains have been tightly woven together. The trade war is threatening to unravel a complex system.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5961530/canada-trade-war-auto-parts-supply-chain",
-      "published_utc": "2026-09-13T21:24:31+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4402,7 +4406,7 @@
       "summary": "In the Oscar-winning filmmaker's latest documentary, director Alex Gibney investigates the rise of Elon Musk and says what's behind Musk's success are distressing truths.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5962167/alex-gibney-elon-musk-documentary-review",
-      "published_utc": "2026-09-13T21:24:31+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4411,7 +4415,7 @@
       "summary": "Diesel prices in the U.S. has hit yet another record, soaring past $6 a gallon on average as Washington's war with Iran disrupts the world's flow of fuel",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/g-s1-142842/us-diesel-6-a-gallon",
-      "published_utc": "2026-09-13T21:24:31+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4420,7 +4424,7 @@
       "summary": "Why Patagonia might become a new data center hub",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/nx-s1-5966498/is-patagonia-the-new-data-center-hub-harley-davidsons-role-in-the-trade-war",
-      "published_utc": "2026-09-13T21:24:31+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4429,7 +4433,7 @@
       "summary": "Many Iranians lost their jobs because of the war and the U.S. blockade. Now some are even losing their backup jobs as sanctions tighten.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/11/g-s1-142935/iran-us-war-jobs-economy",
-      "published_utc": "2026-09-13T21:24:31+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4438,7 +4442,7 @@
       "summary": "Dario Amodei and Sam Altman are the latest to urge caution amid fears the industry is racing too fast to build powerful AI while safety measures lag.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/12/nx-s1-5950588/openai-anthropic-ai-safety-researchers-hacks",
-      "published_utc": "2026-09-13T21:24:31+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4447,17 +4451,8 @@
       "summary": "President Trump and Congress are weighing in on potential federal tax incentives for film production. It's hoped the tax credit would keep production of films and TV in the U.S. rather than overseas.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/13/nx-s1-5962169/a-new-tax-incentive-could-lead-to-more-films-being-made-in-the-u-s-rather-than-abroad",
-      "published_utc": "2026-09-13T21:24:31+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
-      "is_policy": true
-    },
-    {
-      "headline": "Trump says he will remove all Irish whiskey tariffs as he ends two-day visit",
-      "summary": "Whiskey distilled in the Republic of Ireland faces the standard 15% tariff which applies to EU goods entering the US.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cx2z79n0eeno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
-      "sentiment_score": -0.2,
       "is_policy": true
     },
     {
@@ -4465,7 +4460,7 @@
       "summary": "Brics members agree they need a new global order but it's harder to answer what should replace it and how to get there.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ce8767g4jdpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4474,7 +4469,7 @@
       "summary": "Human rights groups in Turkey have accused the government of using a family- values campaign to target the LGBTQ+ community.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cpve191wy47o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4483,17 +4478,17 @@
       "summary": "Ships and helicopters are searching for those missing from the Virgo Transport 8 ship, which had encountered bad weather.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvgykzgljlyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "Swedish party blocs tied after Sunday vote, projections say",
-      "summary": "With 50% of the votes counted, the two main blocs were separated by only 20,000 votes, Sweden public broadvasteer SVT said.",
+      "summary": "A partial count by Sweden's election authority projected that left-wing opposition bloc would win a one-seat majority.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c0qx5d79kdeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
-      "sentiment_score": 0.0,
+      "published_utc": "2026-09-13T23:28:15+00:00",
+      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -4501,7 +4496,7 @@
       "summary": "While pacing AI development might sound like a quick fix, it is far from an easy solution.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwyzp47py48o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4510,7 +4505,7 @@
       "summary": "The US President said \"negative forces\" were airing concerns about \"things that won't happen\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c7v48vp31mdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4519,25 +4514,7 @@
       "summary": "The former UK PM said \"I don't know what warped logic drove Putin to blow up a stationary Ukrainian locomotive on the Polish border this morning\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cy5zg41dkqwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Ryanair boss O'Leary defends 'high-fare rapists' airlines remarks",
-      "summary": "O'Leary has said airline passengers \"can't afford to fly with the high-fare rapists around Europe\".",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/c5yejw9pjjyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Interest rates could rise again across the world \u2013 here's why",
-      "summary": "As countries grapple with energy costs pushing up inflation, this month will see how central banks respond.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cew9nkx7v9eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4546,8 +4523,17 @@
       "summary": "Consumer group Which? has called the sale of jack mackerel, a cheaper, less nutritious species of fish, an example of \"skimpflation\".",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/crm9xk9eg88o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": -0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "Interest rates could rise again across the world \u2013 here's why",
+      "summary": "As countries grapple with energy costs pushing up inflation, this month will see how central banks respond.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/cew9nkx7v9eo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T23:28:15+00:00",
+      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4555,7 +4541,25 @@
       "summary": "Boss Lord Richard Walker says it would be the the first UK high street brand to operate there.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cd94kze0y9qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-13T21:24:30+00:00",
+      "published_utc": "2026-09-13T23:28:15+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Trump says he will remove all Irish whiskey tariffs as he ends two-day visit",
+      "summary": "Whiskey distilled in the Republic of Ireland faces the standard 15% tariff which applies to EU goods entering the US.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/cx2z79n0eeno?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T23:28:15+00:00",
+      "sentiment_score": -0.2,
+      "is_policy": true
+    },
+    {
+      "headline": "Anthropic boss Dario Amodei calls for AI development to slow down",
+      "summary": "The call comes amid growing concerns that AI models may become able to inflict serious damage worldwide.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/c14dpgm0rg4o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-13T23:28:15+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
