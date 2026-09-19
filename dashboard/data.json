@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-19T16:47:20+00:00",
+  "generated_at_utc": "2026-09-19T19:01:42+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 922,
-  "last_success_utc": "2026-09-19T13:24:45+00:00",
+  "cycle_count": 923,
+  "last_success_utc": "2026-09-19T16:47:20+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -549,22 +549,6 @@
   ],
   "themes": [
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 61.64,
-      "raw_score": 68.81,
-      "band": "buy",
-      "weight": 0.1221,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 64.16,
-        "sentiment": 83.34,
-        "volume": 55.73,
-        "policy": 70.0,
-        "volatility_penalty": 7.17
-      }
-    },
-    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 58.55,
@@ -581,35 +565,19 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 53.94,
-      "raw_score": 53.94,
-      "band": "starter",
-      "weight": 0.0965,
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 55.64,
+      "raw_score": 62.81,
+      "band": "buy",
+      "weight": 0.1021,
       "confidence": 1.0,
       "components": {
-        "momentum": 24.55,
-        "sentiment": 83.34,
-        "volume": 63.1,
-        "policy": 65.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 53.13,
-      "raw_score": 63.46,
-      "band": "starter",
-      "weight": 0.082,
-      "confidence": 0.75,
-      "components": {
-        "momentum": 52.92,
-        "sentiment": 80.0,
-        "volume": 63.96,
-        "policy": 55.0,
-        "volatility_penalty": 10.33
+        "momentum": 64.16,
+        "sentiment": 66.66,
+        "volume": 55.73,
+        "policy": 60.0,
+        "volatility_penalty": 7.17
       }
     },
     {
@@ -618,8 +586,8 @@
       "score": 52.04,
       "raw_score": 52.04,
       "band": "starter",
-      "weight": 0.0879,
-      "confidence": 0.95,
+      "weight": 0.0856,
+      "confidence": 0.9,
       "components": {
         "momentum": 23.98,
         "sentiment": 75.0,
@@ -645,19 +613,19 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 44.71,
-      "raw_score": 52.36,
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 47.94,
+      "raw_score": 47.94,
       "band": "starter",
-      "weight": 0.0641,
-      "confidence": 0.95,
+      "weight": 0.0707,
+      "confidence": 0.85,
       "components": {
-        "momentum": 19.11,
-        "sentiment": 85.72,
-        "volume": 60.01,
-        "policy": 70.0,
-        "volatility_penalty": 7.65
+        "momentum": 24.55,
+        "sentiment": 66.66,
+        "volume": 63.1,
+        "policy": 55.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -677,19 +645,19 @@
       }
     },
     {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 43.52,
-      "raw_score": 59.81,
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 43.63,
+      "raw_score": 53.96,
       "band": "starter",
-      "weight": 0.054,
-      "confidence": 0.75,
+      "weight": 0.0512,
+      "confidence": 0.65,
       "components": {
-        "momentum": 50.47,
-        "sentiment": 80.0,
-        "volume": 53.11,
+        "momentum": 52.92,
+        "sentiment": 50.0,
+        "volume": 63.96,
         "policy": 50.0,
-        "volatility_penalty": 16.29
+        "volatility_penalty": 10.33
       }
     },
     {
@@ -707,6 +675,38 @@
         "policy": 60.0,
         "volatility_penalty": 10.55
       }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 35.49,
+      "raw_score": 43.15,
+      "band": "hold_small",
+      "weight": 0.0201,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 19.11,
+        "sentiment": 60.0,
+        "volume": 60.01,
+        "policy": 55.0,
+        "volatility_penalty": 7.65
+      }
+    },
+    {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 34.52,
+      "raw_score": 50.81,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 50.47,
+        "sentiment": 50.0,
+        "volume": 53.11,
+        "policy": 50.0,
+        "volatility_penalty": 16.29
+      }
     }
   ],
   "decisions": [
@@ -716,26 +716,26 @@
       "target_weight": 0.0,
       "current_weight": 0.004,
       "notional_delta": -417.38,
-      "reason": "exiting on positive news flow \u2014 \"Bitcoin Tops $80,000, S&P 500 Slips as Yields Reclaim 5%: Stock Market Today\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.77%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0409,
+      "target_weight": 0.0342,
       "current_weight": 0.0291,
-      "notional_delta": 1212.59,
-      "reason": "buying on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 underweight by 1.18% vs target \u2014 add",
+      "notional_delta": 521.87,
+      "reason": "buying on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 underweight by 0.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.86%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 61.6 (buy), contribution 72.5",
+        "theme 'AI & Compute' score 55.6 (buy), contribution 66.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -758,15 +758,15 @@
     },
     {
       "symbol": "ASML",
-      "action": "HOLD",
-      "target_weight": 0.0254,
+      "action": "REDUCE",
+      "target_weight": 0.0156,
       "current_weight": 0.0242,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -884.73,
+      "reason": "overweight by 0.86% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.1 (starter), contribution 54.2"
+        "theme 'Semiconductors (Broad)' score 43.6 (starter), contribution 44.7"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -876,15 +876,15 @@
     },
     {
       "symbol": "F",
-      "action": "HOLD",
-      "target_weight": 0.0193,
+      "action": "REDUCE",
+      "target_weight": 0.0059,
       "current_weight": 0.0214,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Fed Raises Rates, Yields Hit 2007 Highs as Fuel Costs Set Records: This Week On Wall Street\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1597.89,
+      "reason": "trimming on positive news flow \u2014 \"Fed Raises Rates, Yields Hit 2007 Highs as Fuel Costs Set Records: This Week On Wall Street\" \u00b7 overweight by 1.55% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.11%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 43.5",
+        "theme 'EV & Clean Transport' score 35.5 (hold_small), contribution 34.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -938,15 +938,15 @@
     },
     {
       "symbol": "GM",
-      "action": "HOLD",
-      "target_weight": 0.0221,
+      "action": "REDUCE",
+      "target_weight": 0.007,
       "current_weight": 0.0189,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Fed Raises Rates, Yields Hit 2007 Highs as Fuel Costs Set Records: This Week On Wall Street\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1228.39,
+      "reason": "trimming on positive news flow \u2014 \"Fed Raises Rates, Yields Hit 2007 Highs as Fuel Costs Set Records: This Week On Wall Street\" \u00b7 overweight by 1.19% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.76%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 49.7",
+        "theme 'EV & Clean Transport' score 35.5 (hold_small), contribution 40.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -955,26 +955,26 @@
     {
       "symbol": "GOOGL",
       "action": "BUY",
-      "target_weight": 0.0419,
+      "target_weight": 0.0351,
       "current_weight": 0.0293,
-      "notional_delta": 1295.27,
-      "reason": "buying on positive news flow \u2014 \"S&P Growth Is a Feature, Not a Bug, Goldman Says\" \u00b7 underweight by 1.26% vs target \u2014 add",
+      "notional_delta": 594.24,
+      "reason": "buying on mixed news flow \u2014 \"Google's Gemini Goes Rogue, Hacks 3 Companies During Cybersecurity Test \u2014 Here\u2019s What Happened (UPDATED)\" \u00b7 underweight by 0.58% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.94%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 61.6 (buy), contribution 74.2",
+        "theme 'AI & Compute' score 55.6 (buy), contribution 68.2",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "GS",
       "action": "BUY",
-      "target_weight": 0.0262,
+      "target_weight": 0.0256,
       "current_weight": 0.0128,
-      "notional_delta": 1384.16,
-      "reason": "buying on legal risk (negative) \u2014 \"This Week in TSLA: Elon Musk Touts Roadster Debut, Fuels SpaceX Merger  Talks and More\" \u00b7 underweight by 1.34% vs target \u2014 add",
+      "notional_delta": 1322.31,
+      "reason": "buying on legal risk (negative) \u2014 \"This Week in TSLA: Elon Musk Touts Roadster Debut, Fuels SpaceX Merger  Talks and More\" \u00b7 underweight by 1.28% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-9.32%",
         "theme=Financials & Rates",
@@ -987,22 +987,22 @@
     },
     {
       "symbol": "HD",
-      "action": "BUY",
-      "target_weight": 0.0312,
+      "action": "HOLD",
+      "target_weight": 0.0228,
       "current_weight": 0.0246,
-      "notional_delta": 682.77,
-      "reason": "underweight by 0.66% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.38%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 53.9 (starter), contribution 52.9"
+        "theme 'Consumer Discretionary' score 47.9 (starter), contribution 46.9"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.035,
+      "target_weight": 0.0341,
       "current_weight": 0.0328,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Crude Oil Price Rises on Hyperliquid as Houthi Hits Riyadh Airport\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1030,17 +1030,14 @@
     },
     {
       "symbol": "LLY",
-      "action": "BUY",
-      "target_weight": 0.0222,
+      "action": "REDUCE",
+      "target_weight": 0.0083,
       "current_weight": 0.0166,
-      "notional_delta": 572.33,
-      "reason": "buying on positive news flow \u2014 \"This $3 Biotech Could Be Worth $11.45, Analyst Says\" \u00b7 underweight by 0.56% vs target \u2014 add",
+      "notional_delta": -858.17,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.75%",
-        "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 43.5 (starter), contribution 71.9",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech"
     },
@@ -1064,26 +1061,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0041,
       "notional_delta": -425.19,
-      "reason": "exiting on positive news flow \u2014 \"Bitcoin Tops $80,000, S&P 500 Slips as Yields Reclaim 5%: Stock Market Today\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.75%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "MCD",
-      "action": "BUY",
-      "target_weight": 0.034,
+      "action": "HOLD",
+      "target_weight": 0.0251,
       "current_weight": 0.0261,
-      "notional_delta": 811.47,
-      "reason": "buying on mixed news flow \u2014 \"Congressman Ditches Magnificent Seven Stocks for Consumer Staples: Here's What He Bought\" \u00b7 underweight by 0.79% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Congressman Ditches Magnificent Seven Stocks for Consumer Staples: Here's What He Bought\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.93%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 53.9 (starter), contribution 57.6",
+        "theme 'Consumer Discretionary' score 47.9 (starter), contribution 51.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1091,31 +1088,30 @@
     },
     {
       "symbol": "META",
-      "action": "BUY",
-      "target_weight": 0.0394,
+      "action": "HOLD",
+      "target_weight": 0.0328,
       "current_weight": 0.0287,
-      "notional_delta": 1099.13,
-      "reason": "buying on positive news flow \u2014 \"S&P Growth Is a Feature, Not a Bug, Goldman Says\" \u00b7 underweight by 1.07% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Nvidia CEO Jensen Huang Rejects Calls to Slow Down AI Development: \u2018We Are Going to Go as Fast We Can, But\u2026'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.58%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 61.6 (buy), contribution 69.7",
+        "theme 'AI & Compute' score 55.6 (buy), contribution 63.7",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "MRNA",
-      "action": "HOLD",
-      "target_weight": 0.0133,
+      "action": "REDUCE",
+      "target_weight": 0.0051,
       "current_weight": 0.0101,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: Generac, Salesforce, Netflix\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -522.31,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: Generac, Salesforce, Netflix\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.97%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 43.5 (starter), contribution 43.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1124,7 +1120,7 @@
     {
       "symbol": "MS",
       "action": "HOLD",
-      "target_weight": 0.0266,
+      "target_weight": 0.0259,
       "current_weight": 0.0299,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1152,17 +1148,17 @@
     },
     {
       "symbol": "MU",
-      "action": "HOLD",
-      "target_weight": 0.0278,
+      "action": "REDUCE",
+      "target_weight": 0.0174,
       "current_weight": 0.0317,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Bitcoin Tops $80,000, S&P 500 Slips as Yields Reclaim 5%: Stock Market Today\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1474.94,
+      "reason": "trimming on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 overweight by 1.43% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.25%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.1 (starter), contribution 59.3",
+        "theme 'Semiconductors (Broad)' score 43.6 (starter), contribution 49.8",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1255,25 +1251,24 @@
     },
     {
       "symbol": "PFE",
-      "action": "HOLD",
-      "target_weight": 0.0185,
+      "action": "REDUCE",
+      "target_weight": 0.0069,
       "current_weight": 0.0138,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -712.04,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.29%",
-        "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 43.5 (starter), contribution 60.1"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "REGN",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.21,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.1,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=16.81%",
         "theme=Biotech & Pharma"
@@ -1325,15 +1320,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0312,
+      "action": "HOLD",
+      "target_weight": 0.0228,
       "current_weight": 0.0224,
-      "notional_delta": 908.23,
-      "reason": "underweight by 0.88% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.27%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 53.9 (starter), contribution 52.9"
+        "theme 'Consumer Discretionary' score 47.9 (starter), contribution 46.9"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1380,15 +1375,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "HOLD",
-      "target_weight": 0.0226,
+      "action": "REDUCE",
+      "target_weight": 0.0072,
       "current_weight": 0.0202,
-      "notional_delta": 0.0,
-      "reason": "holding on legal risk (negative) \u2014 \"This Week in TSLA: Elon Musk Touts Roadster Debut, Fuels SpaceX Merger  Talks and More\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1337.87,
+      "reason": "trimming on legal risk (negative) \u2014 \"This Week in TSLA: Elon Musk Touts Roadster Debut, Fuels SpaceX Merger  Talks and More\" \u00b7 overweight by 1.30% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 50.9",
+        "theme 'EV & Clean Transport' score 35.5 (hold_small), contribution 41.6",
         "news_source=benzinga",
         "event=legal risk",
         "news_sentiment=-0.20"
@@ -1398,14 +1393,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0289,
+      "target_weight": 0.0182,
       "current_weight": 0.0371,
-      "notional_delta": -849.29,
-      "reason": "trimming on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 overweight by 0.82% vs target \u2014 trim",
+      "notional_delta": -1952.39,
+      "reason": "trimming on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 overweight by 1.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.82%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.1 (starter), contribution 61.7",
+        "theme 'Semiconductors (Broad)' score 43.6 (starter), contribution 52.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1413,11 +1408,11 @@
     },
     {
       "symbol": "VRTX",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=4.50%",
         "theme=Biotech & Pharma"
@@ -1473,12 +1468,12 @@
       "target_weight": 0.0,
       "current_weight": 0.004,
       "notional_delta": -417.38,
-      "reason": "exiting on positive news flow \u2014 \"Bitcoin Tops $80,000, S&P 500 Slips as Yields Reclaim 5%: Stock Market Today\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.77%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1488,14 +1483,14 @@
     {
       "symbol": "AMD",
       "action": "BUY",
-      "target_weight": 0.0409,
+      "target_weight": 0.0342,
       "current_weight": 0.0291,
-      "notional_delta": 1212.59,
-      "reason": "buying on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 underweight by 1.18% vs target \u2014 add",
+      "notional_delta": 521.87,
+      "reason": "buying on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 underweight by 0.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.86%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 61.6 (buy), contribution 72.5",
+        "theme 'AI & Compute' score 55.6 (buy), contribution 66.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1524,15 +1519,15 @@
     },
     {
       "symbol": "ASML",
-      "action": "HOLD",
-      "target_weight": 0.0254,
+      "action": "REDUCE",
+      "target_weight": 0.0156,
       "current_weight": 0.0242,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -884.73,
+      "reason": "overweight by 0.86% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.1 (starter), contribution 54.2"
+        "theme 'Semiconductors (Broad)' score 43.6 (starter), contribution 44.7"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1666,15 +1661,15 @@
     },
     {
       "symbol": "F",
-      "action": "HOLD",
-      "target_weight": 0.0193,
+      "action": "REDUCE",
+      "target_weight": 0.0059,
       "current_weight": 0.0214,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Fed Raises Rates, Yields Hit 2007 Highs as Fuel Costs Set Records: This Week On Wall Street\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1597.89,
+      "reason": "trimming on positive news flow \u2014 \"Fed Raises Rates, Yields Hit 2007 Highs as Fuel Costs Set Records: This Week On Wall Street\" \u00b7 overweight by 1.55% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.11%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 43.5",
+        "theme 'EV & Clean Transport' score 35.5 (hold_small), contribution 34.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1740,15 +1735,15 @@
     },
     {
       "symbol": "GM",
-      "action": "HOLD",
-      "target_weight": 0.0221,
+      "action": "REDUCE",
+      "target_weight": 0.007,
       "current_weight": 0.0189,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Fed Raises Rates, Yields Hit 2007 Highs as Fuel Costs Set Records: This Week On Wall Street\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1228.39,
+      "reason": "trimming on positive news flow \u2014 \"Fed Raises Rates, Yields Hit 2007 Highs as Fuel Costs Set Records: This Week On Wall Street\" \u00b7 overweight by 1.19% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.76%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 49.7",
+        "theme 'EV & Clean Transport' score 35.5 (hold_small), contribution 40.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1760,16 +1755,16 @@
     {
       "symbol": "GOOGL",
       "action": "BUY",
-      "target_weight": 0.0419,
+      "target_weight": 0.0351,
       "current_weight": 0.0293,
-      "notional_delta": 1295.27,
-      "reason": "buying on positive news flow \u2014 \"S&P Growth Is a Feature, Not a Bug, Goldman Says\" \u00b7 underweight by 1.26% vs target \u2014 add",
+      "notional_delta": 594.24,
+      "reason": "buying on mixed news flow \u2014 \"Google's Gemini Goes Rogue, Hacks 3 Companies During Cybersecurity Test \u2014 Here\u2019s What Happened (UPDATED)\" \u00b7 underweight by 0.58% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.94%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 61.6 (buy), contribution 74.2",
+        "theme 'AI & Compute' score 55.6 (buy), contribution 68.2",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1779,10 +1774,10 @@
     {
       "symbol": "GS",
       "action": "BUY",
-      "target_weight": 0.0262,
+      "target_weight": 0.0256,
       "current_weight": 0.0128,
-      "notional_delta": 1384.16,
-      "reason": "buying on legal risk (negative) \u2014 \"This Week in TSLA: Elon Musk Touts Roadster Debut, Fuels SpaceX Merger  Talks and More\" \u00b7 underweight by 1.34% vs target \u2014 add",
+      "notional_delta": 1322.31,
+      "reason": "buying on legal risk (negative) \u2014 \"This Week in TSLA: Elon Musk Touts Roadster Debut, Fuels SpaceX Merger  Talks and More\" \u00b7 underweight by 1.28% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-9.32%",
         "theme=Financials & Rates",
@@ -1798,15 +1793,15 @@
     },
     {
       "symbol": "HD",
-      "action": "BUY",
-      "target_weight": 0.0312,
+      "action": "HOLD",
+      "target_weight": 0.0228,
       "current_weight": 0.0246,
-      "notional_delta": 682.77,
-      "reason": "underweight by 0.66% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.38%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 53.9 (starter), contribution 52.9"
+        "theme 'Consumer Discretionary' score 47.9 (starter), contribution 46.9"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1816,7 +1811,7 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.035,
+      "target_weight": 0.0341,
       "current_weight": 0.0328,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Crude Oil Price Rises on Hyperliquid as Houthi Hits Riyadh Airport\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1850,17 +1845,14 @@
     },
     {
       "symbol": "LLY",
-      "action": "BUY",
-      "target_weight": 0.0222,
+      "action": "REDUCE",
+      "target_weight": 0.0083,
       "current_weight": 0.0166,
-      "notional_delta": 572.33,
-      "reason": "buying on positive news flow \u2014 \"This $3 Biotech Could Be Worth $11.45, Analyst Says\" \u00b7 underweight by 0.56% vs target \u2014 add",
+      "notional_delta": -858.17,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.75%",
-        "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 43.5 (starter), contribution 71.9",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1890,12 +1882,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0041,
       "notional_delta": -425.19,
-      "reason": "exiting on positive news flow \u2014 \"Bitcoin Tops $80,000, S&P 500 Slips as Yields Reclaim 5%: Stock Market Today\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.75%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1904,15 +1896,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "BUY",
-      "target_weight": 0.034,
+      "action": "HOLD",
+      "target_weight": 0.0251,
       "current_weight": 0.0261,
-      "notional_delta": 811.47,
-      "reason": "buying on mixed news flow \u2014 \"Congressman Ditches Magnificent Seven Stocks for Consumer Staples: Here's What He Bought\" \u00b7 underweight by 0.79% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Congressman Ditches Magnificent Seven Stocks for Consumer Staples: Here's What He Bought\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.93%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 53.9 (starter), contribution 57.6",
+        "theme 'Consumer Discretionary' score 47.9 (starter), contribution 51.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1923,17 +1915,17 @@
     },
     {
       "symbol": "META",
-      "action": "BUY",
-      "target_weight": 0.0394,
+      "action": "HOLD",
+      "target_weight": 0.0328,
       "current_weight": 0.0287,
-      "notional_delta": 1099.13,
-      "reason": "buying on positive news flow \u2014 \"S&P Growth Is a Feature, Not a Bug, Goldman Says\" \u00b7 underweight by 1.07% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Nvidia CEO Jensen Huang Rejects Calls to Slow Down AI Development: \u2018We Are Going to Go as Fast We Can, But\u2026'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.58%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 61.6 (buy), contribution 69.7",
+        "theme 'AI & Compute' score 55.6 (buy), contribution 63.7",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1942,15 +1934,14 @@
     },
     {
       "symbol": "MRNA",
-      "action": "HOLD",
-      "target_weight": 0.0133,
+      "action": "REDUCE",
+      "target_weight": 0.0051,
       "current_weight": 0.0101,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: Generac, Salesforce, Netflix\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -522.31,
+      "reason": "trimming on mixed news flow \u2014 \"Benzinga Bulls and Bears: Generac, Salesforce, Netflix\" \u00b7 theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.97%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 43.5 (starter), contribution 43.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1962,7 +1953,7 @@
     {
       "symbol": "MS",
       "action": "HOLD",
-      "target_weight": 0.0266,
+      "target_weight": 0.0259,
       "current_weight": 0.0299,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1996,17 +1987,17 @@
     },
     {
       "symbol": "MU",
-      "action": "HOLD",
-      "target_weight": 0.0278,
+      "action": "REDUCE",
+      "target_weight": 0.0174,
       "current_weight": 0.0317,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Bitcoin Tops $80,000, S&P 500 Slips as Yields Reclaim 5%: Stock Market Today\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1474.94,
+      "reason": "trimming on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 overweight by 1.43% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.25%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.1 (starter), contribution 59.3",
+        "theme 'Semiconductors (Broad)' score 43.6 (starter), contribution 49.8",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2120,15 +2111,14 @@
     },
     {
       "symbol": "PFE",
-      "action": "HOLD",
-      "target_weight": 0.0185,
+      "action": "REDUCE",
+      "target_weight": 0.0069,
       "current_weight": 0.0138,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -712.04,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.29%",
-        "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 43.5 (starter), contribution 60.1"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2137,11 +2127,11 @@
     },
     {
       "symbol": "REGN",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.21,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.1,
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=16.81%",
         "theme=Biotech & Pharma"
@@ -2205,15 +2195,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0312,
+      "action": "HOLD",
+      "target_weight": 0.0228,
       "current_weight": 0.0224,
-      "notional_delta": 908.23,
-      "reason": "underweight by 0.88% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.27%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 53.9 (starter), contribution 52.9"
+        "theme 'Consumer Discretionary' score 47.9 (starter), contribution 46.9"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2272,15 +2262,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "HOLD",
-      "target_weight": 0.0226,
+      "action": "REDUCE",
+      "target_weight": 0.0072,
       "current_weight": 0.0202,
-      "notional_delta": 0.0,
-      "reason": "holding on legal risk (negative) \u2014 \"This Week in TSLA: Elon Musk Touts Roadster Debut, Fuels SpaceX Merger  Talks and More\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1337.87,
+      "reason": "trimming on legal risk (negative) \u2014 \"This Week in TSLA: Elon Musk Touts Roadster Debut, Fuels SpaceX Merger  Talks and More\" \u00b7 overweight by 1.30% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.13%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.7 (starter), contribution 50.9",
+        "theme 'EV & Clean Transport' score 35.5 (hold_small), contribution 41.6",
         "news_source=benzinga",
         "event=legal risk",
         "news_sentiment=-0.20"
@@ -2293,14 +2283,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0289,
+      "target_weight": 0.0182,
       "current_weight": 0.0371,
-      "notional_delta": -849.29,
-      "reason": "trimming on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 overweight by 0.82% vs target \u2014 trim",
+      "notional_delta": -1952.39,
+      "reason": "trimming on mixed news flow \u2014 \"$3.2T Chip Boom: Which Semiconductor ETFs Get The Biggest Slice?\" \u00b7 overweight by 1.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.82%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.1 (starter), contribution 61.7",
+        "theme 'Semiconductors (Broad)' score 43.6 (starter), contribution 52.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2311,11 +2301,11 @@
     },
     {
       "symbol": "VRTX",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "theme score 34.5 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=4.50%",
         "theme=Biotech & Pharma"
@@ -2377,10 +2367,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-06T14:47:09+00:00",
-      "v": 100383.55
-    },
     {
       "t": "2026-07-06T17:31:02+00:00",
       "v": 101010.32
@@ -4376,6 +4362,10 @@
     {
       "t": "2026-09-19T16:47:19+00:00",
       "v": 103093.07
+    },
+    {
+      "t": "2026-09-19T19:01:38+00:00",
+      "v": 103093.07
     }
   ],
   "breaking_news": [
@@ -4384,7 +4374,7 @@
       "summary": "A bacterial infection is wiping out Florida's citrus trees. Growers hope a rootstock developed with gene-editing technology could keep the disease at bay.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5966501/trees-gene-editing-florida-citrus-industry",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4393,7 +4383,7 @@
       "summary": "Warren Buffett is stepping down as chairman of Berkshire Hathaway after serving in the role for more than 50 years. His son, Howard, will become Berkshire Hathaway's new chairman",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5973852/warren-buffett-steps-down",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4402,7 +4392,7 @@
       "summary": "Ms. Rachel has conquered YouTube, Netflix and the toy aisle. Now she's making an album, with real instruments, big feelings and her littlest listeners in mind.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5938847/ms-rachel-mr-aron-new-album-im-so-happy",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4411,7 +4401,7 @@
       "summary": "Oil supplies are falling, sulfur prices are threatening food costs, and we measure Lego against Hollywood",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/09/18/nx-s1-5974103/what-expensive-sulfur-means-for-your-dinner-table",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4420,7 +4410,7 @@
       "summary": "An informal network of dialogues at think tanks and universities is bringing together experts from the U.S. and China to talk about the shared perils of AI \u2014 and possible paths forward.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5971481/trump-xi-meeting-ai-track-two-talks",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4429,7 +4419,7 @@
       "summary": "The president chalked the ban up to what he called unfavorable coverage, and he threatened that bans on other media companies could be coming.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/g-s1-144112/trump-ban-cnn-msnow-politico-white-house-media",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -4438,7 +4428,7 @@
       "summary": "Status trackers are ubiquitous on online apps and ordering. We have the story the seminal Domino's Pizza Tracker that led to many copies, and we check on why many of the trackers now aren't accurate.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5896338/how-a-pizza-app-changed-our-relationship-with-waiting",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4447,34 +4437,16 @@
       "summary": "The Federal Reserve just raised interest rates this week for the first time this year. So how does it actually work? And what does it mean for the economy \u2014 and the rest of us? Here are some answers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/19/nx-s1-5969816/federal-reserve-interest-rate-inflation-economy",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.2,
       "is_policy": true
-    },
-    {
-      "headline": "At least 21 killed after vehicle loaded with explosives rams Pakistan mosque",
-      "summary": "A four-year-old child is among those killed in the attack, during which gunmen also opened fire on a police facility.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/ckn9wenz8wjwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Millions without power as Cuba hit by latest major blackout",
-      "summary": "Widespread power outages have become increasingly common due to fuel shortages made worse by a US blockade.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c6j9x4387lzxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
     },
     {
       "headline": "Shark attack prompts rare kill order in Western Australia as victim named",
       "summary": "Greg O'Neill \"loved the ocean\", his family say, as police boats and helicopters patrol Perth's beaches in search of his body and the shark that attacked him.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqwyzdnk442lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4483,7 +4455,7 @@
       "summary": "Dineo Motapane is one of nine recent victims whose deaths have left a nation traumatised over the level of violence against women.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cjkg71e67k17o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4492,7 +4464,7 @@
       "summary": "The bill is named after the late Senator Lindsey Graham, a staunch advocate of aid for Ukraine.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqvgy34ndj4eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4501,25 +4473,43 @@
       "summary": "The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Trump says he is banning CNN and Politico from White House",
-      "summary": "The US president has had a tense and fiery relationship with the US media throughout his political career.",
+      "headline": "Converse pulls 'deeply upsetting' advert after backlash",
+      "summary": "Social media users say an image from the brand's Instagram account resembled a KKK hood and hanging.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c6e30580jqjpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/crwyzj53pl1lo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Journalists denied White House access after Trump banned some media outlets",
+      "summary": "CNN, MS NOW and Politico reporters' White House press badges were confiscated, the outlets reported.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cj4gklz9dxplo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-19T19:01:42+00:00",
+      "sentiment_score": -0.2,
       "is_policy": true
+    },
+    {
+      "headline": "Houthis claim attack on Saudi capital after smoke seen rising near Riyadh airport",
+      "summary": "The King Khalid International Airport incident caused hours of flight disruptions and comes amid an escalating conflict with Houthi rebels in Yemen.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-19T19:01:42+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
     },
     {
       "headline": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control'",
       "summary": "Denmark and the US have reached an agreement after months of threats from Donald Trump to annex the territory.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4528,7 +4518,7 @@
       "summary": "A report on the future of Thames Water, urging the government to take action, has been published.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c6qjk9q1wpqeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4537,7 +4527,7 @@
       "summary": "A committee report says the government has not set out how British Steel will become profitable.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cklyjzv4nl7wo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4546,7 +4536,7 @@
       "summary": "Training systems that allow robots to negotiate the real world are getting more sophisticated.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c79g0j3d4q9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4555,7 +4545,7 @@
       "summary": "The share of UK mortgages with smaller deposits is the highest it's been since 2008. The BBC spoke to borrowers about how they manage the risks.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvj64w204y58o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-19T16:47:20+00:00",
+      "published_utc": "2026-09-19T19:01:42+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
