@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-20T18:55:07+00:00",
+  "generated_at_utc": "2026-09-20T21:29:38+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 930,
-  "last_success_utc": "2026-09-20T16:17:59+00:00",
+  "cycle_count": 931,
+  "last_success_utc": "2026-09-20T18:55:07+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -567,14 +567,14 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 57.8,
-      "raw_score": 64.81,
+      "score": 59.3,
+      "raw_score": 66.31,
       "band": "buy",
-      "weight": 0.1011,
-      "confidence": 0.85,
+      "weight": 0.1143,
+      "confidence": 1.0,
       "components": {
         "momentum": 64.16,
-        "sentiment": 75.0,
+        "sentiment": 80.0,
         "volume": 55.73,
         "policy": 55.0,
         "volatility_penalty": 7.02
@@ -594,22 +594,6 @@
         "volume": 67.64,
         "policy": 55.0,
         "volatility_penalty": 0.86
-      }
-    },
-    {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 52.49,
-      "raw_score": 52.49,
-      "band": "starter",
-      "weight": 0.0916,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 24.55,
-        "sentiment": 81.82,
-        "volume": 63.1,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
       }
     },
     {
@@ -645,13 +629,29 @@
       }
     },
     {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 48.44,
+      "raw_score": 48.44,
+      "band": "starter",
+      "weight": 0.0664,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 24.55,
+        "sentiment": 70.0,
+        "volume": 63.1,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 46.7,
       "raw_score": 46.7,
       "band": "starter",
-      "weight": 0.0597,
-      "confidence": 0.65,
+      "weight": 0.0633,
+      "confidence": 0.75,
       "components": {
         "momentum": 34.82,
         "sentiment": 50.0,
@@ -663,14 +663,14 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 42.44,
-      "raw_score": 53.1,
+      "score": 42.03,
+      "raw_score": 52.69,
       "band": "starter",
-      "weight": 0.0581,
+      "weight": 0.0568,
       "confidence": 1.0,
       "components": {
         "momentum": 24.0,
-        "sentiment": 88.89,
+        "sentiment": 87.5,
         "volume": 54.18,
         "policy": 60.0,
         "volatility_penalty": 10.66
@@ -679,14 +679,14 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 41.54,
-      "raw_score": 41.54,
-      "band": "starter",
-      "weight": 0.0455,
-      "confidence": 0.65,
+      "score": 38.54,
+      "raw_score": 38.54,
+      "band": "hold_small",
+      "weight": 0.0351,
+      "confidence": 0.7,
       "components": {
         "momentum": 23.98,
-        "sentiment": 40.0,
+        "sentiment": 30.0,
         "volume": 72.23,
         "policy": 55.0,
         "volatility_penalty": 0.0
@@ -725,15 +725,15 @@
     },
     {
       "symbol": "AMD",
-      "action": "HOLD",
-      "target_weight": 0.0335,
+      "action": "BUY",
+      "target_weight": 0.0379,
       "current_weight": 0.0291,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 903.31,
+      "reason": "underweight by 0.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.86%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.8 (buy), contribution 68.3"
+        "theme 'AI & Compute' score 59.3 (buy), contribution 69.8"
       ],
       "theme_key": "ai_compute"
     },
@@ -743,11 +743,11 @@
       "target_weight": 0.0,
       "current_weight": 0.026,
       "notional_delta": -2682.35,
-      "reason": "exiting on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Nvidia Stock Keeps Failing to Retest Its Record High as Headwinds Rise\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Consumer Discretionary",
-        "news_source=yahoo_rss",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
@@ -772,7 +772,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0267,
       "notional_delta": -2754.75,
-      "reason": "exiting on positive news flow \u2014 \"Broadcom Stock Remains in Bear Territory as Analysts Signal a Floor\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Nvidia Stock Keeps Failing to Retest Its Record High as Headwinds Rise\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.59%",
         "theme=AI & Compute",
@@ -787,7 +787,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0256,
       "notional_delta": -2641.65,
-      "reason": "exiting on mixed news flow \u2014 \"Trump Says Son Donald Trump Jr. \u2018Paid\u2019 Russian Boxing Chief Umar Kremlev Over Bahamas Wedding Gift\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Boeing Stock Falls Again Ahead of Trump and Xi Talks and a Possible Big China Order\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.19%",
         "theme=Defense & Aerospace",
@@ -893,14 +893,14 @@
     {
       "symbol": "FSLR",
       "action": "HOLD",
-      "target_weight": 0.0148,
+      "target_weight": 0.0145,
       "current_weight": 0.0136,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"NextEra\u2019s Nuclear Bet Just Got a $1.9 Billion Boost\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.56%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.4 (starter), contribution 36.6",
+        "theme 'Clean Energy' score 42.0 (starter), contribution 36.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -925,11 +925,11 @@
     },
     {
       "symbol": "GD",
-      "action": "REDUCE",
-      "target_weight": 0.0192,
+      "action": "HOLD",
+      "target_weight": 0.0203,
       "current_weight": 0.0251,
-      "notional_delta": -608.65,
-      "reason": "overweight by 0.59% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.72%",
         "theme=Defense & Aerospace",
@@ -955,58 +955,58 @@
     {
       "symbol": "GOOGL",
       "action": "BUY",
-      "target_weight": 0.0353,
+      "target_weight": 0.0399,
       "current_weight": 0.0293,
-      "notional_delta": 614.86,
-      "reason": "underweight by 0.60% vs target \u2014 add",
+      "notional_delta": 1089.08,
+      "reason": "underweight by 1.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.94%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.8 (buy), contribution 71.9"
+        "theme 'AI & Compute' score 59.3 (buy), contribution 73.4"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "GS",
       "action": "HOLD",
-      "target_weight": 0.0131,
+      "target_weight": 0.01,
       "current_weight": 0.0128,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-9.32%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 41.5 (starter), contribution 31.8"
+        "theme 'Financials & Rates' score 38.5 (hold_small), contribution 28.8"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "HD",
-      "action": "BUY",
-      "target_weight": 0.0296,
+      "action": "HOLD",
+      "target_weight": 0.0214,
       "current_weight": 0.0246,
-      "notional_delta": 517.83,
-      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.50% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.38%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 51.5",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 47.4"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "JPM",
       "action": "REDUCE",
-      "target_weight": 0.019,
+      "target_weight": 0.0149,
       "current_weight": 0.0328,
-      "notional_delta": -1425.54,
-      "reason": "overweight by 1.38% vs target \u2014 trim",
+      "notional_delta": -1848.22,
+      "reason": "trimming on mixed news flow \u2014 \"Bessent Meets Chinese Vice Premier He Lifeng Ahead of High-Stakes Trump-Xi Summit\" \u00b7 overweight by 1.79% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.36%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 41.5 (starter), contribution 46.0"
+        "theme 'Financials & Rates' score 38.5 (hold_small), contribution 43.0",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials"
     },
@@ -1029,7 +1029,7 @@
       "target_weight": 0.0326,
       "current_weight": 0.0166,
       "notional_delta": 1644.5,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly (LLY) Stock Fair Value Edges Higher As Analysts Back GLP 1 Growth\" \u00b7 underweight by 1.60% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Pfizer Says Its Biggest Headwinds Are Finally Easing. Does That Change the Story for This Ultra-High-Yield Dividend Stock?\" \u00b7 underweight by 1.60% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Biotech & Pharma",
@@ -1041,11 +1041,11 @@
     },
     {
       "symbol": "LMT",
-      "action": "REDUCE",
-      "target_weight": 0.023,
+      "action": "HOLD",
+      "target_weight": 0.0244,
       "current_weight": 0.0285,
-      "notional_delta": -566.39,
-      "reason": "overweight by 0.55% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.70%",
         "theme=Defense & Aerospace",
@@ -1068,31 +1068,29 @@
     },
     {
       "symbol": "MCD",
-      "action": "BUY",
-      "target_weight": 0.0324,
+      "action": "HOLD",
+      "target_weight": 0.0236,
       "current_weight": 0.0261,
-      "notional_delta": 646.52,
-      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.63% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.93%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 56.2",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 52.1"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0323,
+      "action": "BUY",
+      "target_weight": 0.0366,
       "current_weight": 0.0287,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Box CEO Says Companies Will Have to \u2018Build Something That Agents Want\u2019 as AI Agents Become New Consumers\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 810.47,
+      "reason": "buying on mixed news flow \u2014 \"Shorts Prevail as Oklo and NuScale Stocks Dive as SMR Risks Rise\" \u00b7 underweight by 0.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.58%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.8 (buy), contribution 65.9",
+        "theme 'AI & Compute' score 59.3 (buy), contribution 67.4",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1104,7 +1102,7 @@
       "target_weight": 0.0206,
       "current_weight": 0.0101,
       "notional_delta": 1079.09,
-      "reason": "buying on positive news flow \u2014 \"2 High-Yield Dividend Stocks to Buy and 1 to Avoid\" \u00b7 underweight by 1.05% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Pfizer Says Its Biggest Headwinds Are Finally Easing. Does That Change the Story for This Ultra-High-Yield Dividend Stock?\" \u00b7 underweight by 1.05% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.97%",
         "theme=Biotech & Pharma",
@@ -1117,14 +1115,14 @@
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0134,
+      "target_weight": 0.0102,
       "current_weight": 0.0299,
-      "notional_delta": -1696.44,
-      "reason": "overweight by 1.65% vs target \u2014 trim",
+      "notional_delta": -2026.34,
+      "reason": "overweight by 1.97% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.05%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 41.5 (starter), contribution 32.4"
+        "theme 'Financials & Rates' score 38.5 (hold_small), contribution 29.4"
       ],
       "theme_key": "financials"
     },
@@ -1134,10 +1132,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0275,
       "notional_delta": -2837.54,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Nvidia Stock Keeps Failing to Retest Its Record High as Headwinds Rise\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.02%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1160,14 +1160,14 @@
     {
       "symbol": "NEE",
       "action": "HOLD",
-      "target_weight": 0.0225,
+      "target_weight": 0.022,
       "current_weight": 0.0202,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"NextEra\u2019s Nuclear Bet Just Got a $1.9 Billion Boost\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.65%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.4 (starter), contribution 55.4",
+        "theme 'Clean Energy' score 42.0 (starter), contribution 55.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1179,12 +1179,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0228,
       "notional_delta": -2354.64,
-      "reason": "exiting on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Nike Stock Hits New Low as On Holding Competition Heats Up, Yields Spike, and S&P 500 Removal Nears\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Consumer Discretionary",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1255,7 +1255,7 @@
       "target_weight": 0.0276,
       "current_weight": 0.0138,
       "notional_delta": 1421.3,
-      "reason": "buying on positive news flow \u2014 \"2 High-Yield Dividend Stocks to Buy and 1 to Avoid\" \u00b7 underweight by 1.38% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Pfizer Says Its Biggest Headwinds Are Finally Easing. Does That Change the Story for This Ultra-High-Yield Dividend Stock?\" \u00b7 underweight by 1.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.29%",
         "theme=Biotech & Pharma",
@@ -1271,7 +1271,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.21,
-      "reason": "exiting on positive news flow \u2014 \"2 High-Yield Dividend Stocks to Buy and 1 to Avoid\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Pfizer Says Its Biggest Headwinds Are Finally Easing. Does That Change the Story for This Ultra-High-Yield Dividend Stock?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=16.81%",
         "theme=Biotech & Pharma",
@@ -1296,7 +1296,7 @@
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.0175,
+      "target_weight": 0.0186,
       "current_weight": 0.0222,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1310,14 +1310,14 @@
     {
       "symbol": "RUN",
       "action": "BUY",
-      "target_weight": 0.0208,
+      "target_weight": 0.0203,
       "current_weight": 0.0138,
-      "notional_delta": 719.69,
-      "reason": "buying on positive news flow \u2014 \"NextEra\u2019s Nuclear Bet Just Got a $1.9 Billion Boost\" \u00b7 underweight by 0.70% vs target \u2014 add",
+      "notional_delta": 668.14,
+      "reason": "buying on positive news flow \u2014 \"NextEra\u2019s Nuclear Bet Just Got a $1.9 Billion Boost\" \u00b7 underweight by 0.65% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.28%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.4 (starter), contribution 51.3",
+        "theme 'Clean Energy' score 42.0 (starter), contribution 50.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1325,17 +1325,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0296,
+      "action": "HOLD",
+      "target_weight": 0.0214,
       "current_weight": 0.0224,
-      "notional_delta": 743.28,
-      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.72% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.27%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 51.4",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 47.4"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1417,7 +1415,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "exiting on positive news flow \u2014 \"2 High-Yield Dividend Stocks to Buy and 1 to Avoid\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Pfizer Says Its Biggest Headwinds Are Finally Easing. Does That Change the Story for This Ultra-High-Yield Dividend Stock?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=4.50%",
         "theme=Biotech & Pharma",
@@ -1492,15 +1490,15 @@
     },
     {
       "symbol": "AMD",
-      "action": "HOLD",
-      "target_weight": 0.0335,
+      "action": "BUY",
+      "target_weight": 0.0379,
       "current_weight": 0.0291,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 903.31,
+      "reason": "underweight by 0.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=6.86%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.8 (buy), contribution 68.3"
+        "theme 'AI & Compute' score 59.3 (buy), contribution 69.8"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1513,11 +1511,11 @@
       "target_weight": 0.0,
       "current_weight": 0.026,
       "notional_delta": -2682.35,
-      "reason": "exiting on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Nvidia Stock Keeps Failing to Retest Its Record High as Headwinds Rise\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Consumer Discretionary",
-        "news_source=yahoo_rss",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
@@ -1548,7 +1546,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0267,
       "notional_delta": -2754.75,
-      "reason": "exiting on positive news flow \u2014 \"Broadcom Stock Remains in Bear Territory as Analysts Signal a Floor\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Nvidia Stock Keeps Failing to Retest Its Record High as Headwinds Rise\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.59%",
         "theme=AI & Compute",
@@ -1566,7 +1564,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0256,
       "notional_delta": -2641.65,
-      "reason": "exiting on mixed news flow \u2014 \"Trump Says Son Donald Trump Jr. \u2018Paid\u2019 Russian Boxing Chief Umar Kremlev Over Bahamas Wedding Gift\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Boeing Stock Falls Again Ahead of Trump and Xi Talks and a Possible Big China Order\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.19%",
         "theme=Defense & Aerospace",
@@ -1693,14 +1691,14 @@
     {
       "symbol": "FSLR",
       "action": "HOLD",
-      "target_weight": 0.0148,
+      "target_weight": 0.0145,
       "current_weight": 0.0136,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"NextEra\u2019s Nuclear Bet Just Got a $1.9 Billion Boost\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.56%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.4 (starter), contribution 36.6",
+        "theme 'Clean Energy' score 42.0 (starter), contribution 36.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1731,11 +1729,11 @@
     },
     {
       "symbol": "GD",
-      "action": "REDUCE",
-      "target_weight": 0.0192,
+      "action": "HOLD",
+      "target_weight": 0.0203,
       "current_weight": 0.0251,
-      "notional_delta": -608.65,
-      "reason": "overweight by 0.59% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.72%",
         "theme=Defense & Aerospace",
@@ -1767,14 +1765,14 @@
     {
       "symbol": "GOOGL",
       "action": "BUY",
-      "target_weight": 0.0353,
+      "target_weight": 0.0399,
       "current_weight": 0.0293,
-      "notional_delta": 614.86,
-      "reason": "underweight by 0.60% vs target \u2014 add",
+      "notional_delta": 1089.08,
+      "reason": "underweight by 1.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.94%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.8 (buy), contribution 71.9"
+        "theme 'AI & Compute' score 59.3 (buy), contribution 73.4"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1784,14 +1782,14 @@
     {
       "symbol": "GS",
       "action": "HOLD",
-      "target_weight": 0.0131,
+      "target_weight": 0.01,
       "current_weight": 0.0128,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-9.32%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 41.5 (starter), contribution 31.8"
+        "theme 'Financials & Rates' score 38.5 (hold_small), contribution 28.8"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1800,17 +1798,15 @@
     },
     {
       "symbol": "HD",
-      "action": "BUY",
-      "target_weight": 0.0296,
+      "action": "HOLD",
+      "target_weight": 0.0214,
       "current_weight": 0.0246,
-      "notional_delta": 517.83,
-      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.50% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.38%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 51.5",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 47.4"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1820,14 +1816,16 @@
     {
       "symbol": "JPM",
       "action": "REDUCE",
-      "target_weight": 0.019,
+      "target_weight": 0.0149,
       "current_weight": 0.0328,
-      "notional_delta": -1425.54,
-      "reason": "overweight by 1.38% vs target \u2014 trim",
+      "notional_delta": -1848.22,
+      "reason": "trimming on mixed news flow \u2014 \"Bessent Meets Chinese Vice Premier He Lifeng Ahead of High-Stakes Trump-Xi Summit\" \u00b7 overweight by 1.79% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.36%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 41.5 (starter), contribution 46.0"
+        "theme 'Financials & Rates' score 38.5 (hold_small), contribution 43.0",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1856,7 +1854,7 @@
       "target_weight": 0.0326,
       "current_weight": 0.0166,
       "notional_delta": 1644.5,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly (LLY) Stock Fair Value Edges Higher As Analysts Back GLP 1 Growth\" \u00b7 underweight by 1.60% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Pfizer Says Its Biggest Headwinds Are Finally Easing. Does That Change the Story for This Ultra-High-Yield Dividend Stock?\" \u00b7 underweight by 1.60% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.75%",
         "theme=Biotech & Pharma",
@@ -1871,11 +1869,11 @@
     },
     {
       "symbol": "LMT",
-      "action": "REDUCE",
-      "target_weight": 0.023,
+      "action": "HOLD",
+      "target_weight": 0.0244,
       "current_weight": 0.0285,
-      "notional_delta": -566.39,
-      "reason": "overweight by 0.55% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.70%",
         "theme=Defense & Aerospace",
@@ -1904,17 +1902,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "BUY",
-      "target_weight": 0.0324,
+      "action": "HOLD",
+      "target_weight": 0.0236,
       "current_weight": 0.0261,
-      "notional_delta": 646.52,
-      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.63% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.93%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 56.2",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 52.1"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1923,15 +1919,15 @@
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0323,
+      "action": "BUY",
+      "target_weight": 0.0366,
       "current_weight": 0.0287,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Box CEO Says Companies Will Have to \u2018Build Something That Agents Want\u2019 as AI Agents Become New Consumers\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 810.47,
+      "reason": "buying on mixed news flow \u2014 \"Shorts Prevail as Oklo and NuScale Stocks Dive as SMR Risks Rise\" \u00b7 underweight by 0.79% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.58%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 57.8 (buy), contribution 65.9",
+        "theme 'AI & Compute' score 59.3 (buy), contribution 67.4",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1946,7 +1942,7 @@
       "target_weight": 0.0206,
       "current_weight": 0.0101,
       "notional_delta": 1079.09,
-      "reason": "buying on positive news flow \u2014 \"2 High-Yield Dividend Stocks to Buy and 1 to Avoid\" \u00b7 underweight by 1.05% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Pfizer Says Its Biggest Headwinds Are Finally Easing. Does That Change the Story for This Ultra-High-Yield Dividend Stock?\" \u00b7 underweight by 1.05% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.97%",
         "theme=Biotech & Pharma",
@@ -1962,14 +1958,14 @@
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0134,
+      "target_weight": 0.0102,
       "current_weight": 0.0299,
-      "notional_delta": -1696.44,
-      "reason": "overweight by 1.65% vs target \u2014 trim",
+      "notional_delta": -2026.34,
+      "reason": "overweight by 1.97% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.05%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 41.5 (starter), contribution 32.4"
+        "theme 'Financials & Rates' score 38.5 (hold_small), contribution 29.4"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1982,10 +1978,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0275,
       "notional_delta": -2837.54,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Nvidia Stock Keeps Failing to Retest Its Record High as Headwinds Rise\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.02%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2014,14 +2012,14 @@
     {
       "symbol": "NEE",
       "action": "HOLD",
-      "target_weight": 0.0225,
+      "target_weight": 0.022,
       "current_weight": 0.0202,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"NextEra\u2019s Nuclear Bet Just Got a $1.9 Billion Boost\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.65%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.4 (starter), contribution 55.4",
+        "theme 'Clean Energy' score 42.0 (starter), contribution 55.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2036,12 +2034,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0228,
       "notional_delta": -2354.64,
-      "reason": "exiting on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Nike Stock Hits New Low as On Holding Competition Heats Up, Yields Spike, and S&P 500 Removal Nears\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Consumer Discretionary",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2127,7 +2125,7 @@
       "target_weight": 0.0276,
       "current_weight": 0.0138,
       "notional_delta": 1421.3,
-      "reason": "buying on positive news flow \u2014 \"2 High-Yield Dividend Stocks to Buy and 1 to Avoid\" \u00b7 underweight by 1.38% vs target \u2014 add",
+      "reason": "buying on positive news flow \u2014 \"Pfizer Says Its Biggest Headwinds Are Finally Easing. Does That Change the Story for This Ultra-High-Yield Dividend Stock?\" \u00b7 underweight by 1.38% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.29%",
         "theme=Biotech & Pharma",
@@ -2146,7 +2144,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.21,
-      "reason": "exiting on positive news flow \u2014 \"2 High-Yield Dividend Stocks to Buy and 1 to Avoid\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Pfizer Says Its Biggest Headwinds Are Finally Easing. Does That Change the Story for This Ultra-High-Yield Dividend Stock?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=16.81%",
         "theme=Biotech & Pharma",
@@ -2177,7 +2175,7 @@
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.0175,
+      "target_weight": 0.0186,
       "current_weight": 0.0222,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -2194,14 +2192,14 @@
     {
       "symbol": "RUN",
       "action": "BUY",
-      "target_weight": 0.0208,
+      "target_weight": 0.0203,
       "current_weight": 0.0138,
-      "notional_delta": 719.69,
-      "reason": "buying on positive news flow \u2014 \"NextEra\u2019s Nuclear Bet Just Got a $1.9 Billion Boost\" \u00b7 underweight by 0.70% vs target \u2014 add",
+      "notional_delta": 668.14,
+      "reason": "buying on positive news flow \u2014 \"NextEra\u2019s Nuclear Bet Just Got a $1.9 Billion Boost\" \u00b7 underweight by 0.65% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.28%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.4 (starter), contribution 51.3",
+        "theme 'Clean Energy' score 42.0 (starter), contribution 50.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2212,17 +2210,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0296,
+      "action": "HOLD",
+      "target_weight": 0.0214,
       "current_weight": 0.0224,
-      "notional_delta": 743.28,
-      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.72% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.27%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 51.4",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Consumer Discretionary' score 48.4 (starter), contribution 47.4"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2322,7 +2318,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.0,
-      "reason": "exiting on positive news flow \u2014 \"2 High-Yield Dividend Stocks to Buy and 1 to Avoid\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Pfizer Says Its Biggest Headwinds Are Finally Easing. Does That Change the Story for This Ultra-High-Yield Dividend Stock?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=4.50%",
         "theme=Biotech & Pharma",
@@ -2391,10 +2387,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-07T11:17:36+00:00",
-      "v": 101228.98
-    },
     {
       "t": "2026-07-07T13:30:08+00:00",
       "v": 101169.36
@@ -4390,6 +4382,10 @@
     {
       "t": "2026-09-20T18:55:02+00:00",
       "v": 103093.07
+    },
+    {
+      "t": "2026-09-20T21:29:35+00:00",
+      "v": 103093.07
     }
   ],
   "breaking_news": [
@@ -4398,7 +4394,7 @@
       "summary": "Warren Buffett is stepping down as chairman of Berkshire Hathaway after serving in the role for more than 50 years. His son, Howard, will become Berkshire Hathaway's new chairman",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5973852/warren-buffett-steps-down",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4407,7 +4403,7 @@
       "summary": "Ms. Rachel has conquered YouTube, Netflix and the toy aisle. Now she's making an album, with real instruments, big feelings and her littlest listeners in mind.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5938847/ms-rachel-mr-aron-new-album-im-so-happy",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4416,7 +4412,7 @@
       "summary": "Oil supplies are falling, sulfur prices are threatening food costs, and we measure Lego against Hollywood",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/09/18/nx-s1-5974103/what-expensive-sulfur-means-for-your-dinner-table",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4425,7 +4421,7 @@
       "summary": "An informal network of dialogues at think tanks and universities is bringing together experts from the U.S. and China to talk about the shared perils of AI \u2014 and possible paths forward.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5971481/trump-xi-meeting-ai-track-two-talks",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4434,7 +4430,7 @@
       "summary": "The president chalked the ban up to what he called unfavorable coverage, and he threatened that bans on other media companies could be coming.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/g-s1-144112/trump-ban-cnn-msnow-politico-white-house-media",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -4443,7 +4439,7 @@
       "summary": "Status trackers are ubiquitous on online apps and ordering. We have the story the seminal Domino's Pizza Tracker that led to many copies, and we check on why many of the trackers now aren't accurate.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5896338/how-a-pizza-app-changed-our-relationship-with-waiting",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4452,7 +4448,7 @@
       "summary": "The Federal Reserve just raised interest rates this week for the first time this year. So how does it actually work? And what does it mean for the economy \u2014 and the rest of us? Here are some answers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/19/nx-s1-5969816/federal-reserve-interest-rate-inflation-economy",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.2,
       "is_policy": true
     },
@@ -4461,25 +4457,7 @@
       "summary": "Fox Corp. must turn over hundreds of documents that could shed light on how founder Rupert Murdoch handled some of his media companies' biggest scandals.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/20/nx-s1-5974900/fox-shareholders-murdoch-lawsuit",
-      "published_utc": "2026-09-20T18:55:07+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control'",
-      "summary": "Denmark and the US have reached an agreement after months of threats from Donald Trump to annex the territory.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Our head teacher was an abuser. We joined forces to get justice - now we're married",
-      "summary": "Students spent years collecting evidence against their Indonesian principal, before falling in love.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cg4d9vly636o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4488,7 +4466,7 @@
       "summary": "Social media users say an image from the brand's Instagram account resembled a KKK hood and hanging.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/crwyzj53pl1lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4497,7 +4475,25 @@
       "summary": "A reported strike on a fuel depot at Riyadh airport caused delays on Saturday, as Saudi Arabia says it shot down a ballistic missile aimed at the capital.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Sister of Pakistan's ex-PM Imran Khan arrested",
+      "summary": "Aleema Khanum is accused of mobilising her brother\u2019s supporters ahead of country-wide protests.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cm36l2pye2kwo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-20T21:29:38+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Man, 82, dies after beach fight with 76-year-old over sunlounger in Greece",
+      "summary": "One eyewitness said the scene was so chaotic that screaming could be heard from the other end of the beach.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cqm27pnyd294o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4506,7 +4502,7 @@
       "summary": "Trump said the updated plans were at the request of the US military and for national security purposes.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqdj4pez00dzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4515,7 +4511,7 @@
       "summary": "The singer spoke about Israel and Gaza after Macklemore was dropped from his tour for making pro-Palestinian remarks on stage.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cm780ll1de18o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4524,7 +4520,7 @@
       "summary": "Moscow's mayor says 450 drones were downed during the overnight barrage, in which two people died.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4533,7 +4529,7 @@
       "summary": "Exit polls show damaging losses for Merz's centre-right CDU party in the states of Berlin and Mecklenburg-Vorpommern.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvwyz29n0nn2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4542,7 +4538,7 @@
       "summary": "The bank said it \"assumed\" there would be economic red lines, like oil at $100 a barrel, that the US would be unwilling the cross.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cq0m3gmv8n7ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4551,7 +4547,7 @@
       "summary": "The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4560,7 +4556,7 @@
       "summary": "Ineos founder Sir Jim Ratcliffe tells the BBC he thinks the country is \"on the slide\" and calls for more investment in the North Sea.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cm0463619r1no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4569,7 +4565,7 @@
       "summary": "Deputy leader Daisy Cooper also proposes a Growth and Defence Partnership with the EU in a speech to her party conference.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cqrk31k7pprlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T18:55:07+00:00",
+      "published_utc": "2026-09-20T21:29:38+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     }
