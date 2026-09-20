@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-20T16:17:59+00:00",
+  "generated_at_utc": "2026-09-20T18:55:07+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 929,
-  "last_success_utc": "2026-09-20T12:16:26+00:00",
+  "cycle_count": 930,
+  "last_success_utc": "2026-09-20T16:17:59+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -565,67 +565,67 @@
       }
     },
     {
-      "key": "oil_gas",
-      "name": "Oil & Gas",
-      "score": 56.4,
-      "raw_score": 57.26,
-      "band": "buy",
-      "weight": 0.1047,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 27.19,
-        "sentiment": 92.85,
-        "volume": 67.64,
-        "policy": 50.0,
-        "volatility_penalty": 0.86
-      }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 53.49,
-      "raw_score": 64.03,
-      "band": "starter",
-      "weight": 0.095,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 52.92,
-        "sentiment": 78.57,
-        "volume": 63.96,
-        "policy": 65.0,
-        "volatility_penalty": 10.54
-      }
-    },
-    {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 50.3,
-      "raw_score": 57.31,
-      "band": "starter",
-      "weight": 0.0759,
-      "confidence": 0.8,
+      "score": 57.8,
+      "raw_score": 64.81,
+      "band": "buy",
+      "weight": 0.1011,
+      "confidence": 0.85,
       "components": {
         "momentum": 64.16,
-        "sentiment": 50.0,
+        "sentiment": 75.0,
         "volume": 55.73,
         "policy": 55.0,
         "volatility_penalty": 7.02
       }
     },
     {
+      "key": "oil_gas",
+      "name": "Oil & Gas",
+      "score": 56.74,
+      "raw_score": 57.6,
+      "band": "buy",
+      "weight": 0.1058,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 27.19,
+        "sentiment": 92.31,
+        "volume": 67.64,
+        "policy": 55.0,
+        "volatility_penalty": 0.86
+      }
+    },
+    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 50.26,
-      "raw_score": 50.26,
+      "score": 52.49,
+      "raw_score": 52.49,
       "band": "starter",
-      "weight": 0.0842,
+      "weight": 0.0916,
       "confidence": 1.0,
       "components": {
         "momentum": 24.55,
-        "sentiment": 72.72,
+        "sentiment": 81.82,
         "volume": 63.1,
-        "policy": 60.0,
+        "policy": 55.0,
         "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 49.42,
+      "raw_score": 59.96,
+      "band": "starter",
+      "weight": 0.0692,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 52.92,
+        "sentiment": 70.0,
+        "volume": 63.96,
+        "policy": 50.0,
+        "volatility_penalty": 10.54
       }
     },
     {
@@ -716,26 +716,24 @@
       "target_weight": 0.0,
       "current_weight": 0.004,
       "notional_delta": -417.38,
-      "reason": "exiting on positive news flow \u2014 \"Should You Buy Micron Stock Before Its Next Earnings Report?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.77%",
-        "theme=Semiconductors (Broad)",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "AMD",
       "action": "HOLD",
-      "target_weight": 0.0251,
+      "target_weight": 0.0335,
       "current_weight": 0.0291,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=6.86%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 50.3 (starter), contribution 60.8"
+        "theme 'AI & Compute' score 57.8 (buy), contribution 68.3"
       ],
       "theme_key": "ai_compute"
     },
@@ -745,29 +743,26 @@
       "target_weight": 0.0,
       "current_weight": 0.026,
       "notional_delta": -2682.35,
-      "reason": "exiting on policy headwind (negative) \u2014 \"The $986 Million Reason Nike\u2019s Comeback Story Doesn\u2019t Add Up\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Consumer Discretionary",
         "news_source=yahoo_rss",
-        "event=policy headwind",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "ASML",
-      "action": "BUY",
-      "target_weight": 0.0294,
+      "action": "HOLD",
+      "target_weight": 0.0213,
       "current_weight": 0.0242,
-      "notional_delta": 537.95,
-      "reason": "buying on positive news flow \u2014 \"Should You Buy Micron Stock Before Its Next Earnings Report?\" \u00b7 underweight by 0.52% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.5 (starter), contribution 54.6",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Semiconductors (Broad)' score 49.4 (starter), contribution 50.5"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -820,16 +815,16 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0308,
+      "target_weight": 0.0311,
       "current_weight": 0.0197,
-      "notional_delta": 1143.79,
-      "reason": "buying on negative news flow \u2014 \"ExxonMobil Stock And Oil Majors Facing New Pressure On Global Supply Routes\" \u00b7 underweight by 1.11% vs target \u2014 add",
+      "notional_delta": 1174.72,
+      "reason": "buying on positive news flow \u2014 \"Chevron CEO sends a strong message on oil price and the economy\" \u00b7 underweight by 1.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.90%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.4 (buy), contribution 49.8",
+        "theme 'Oil & Gas' score 56.7 (buy), contribution 50.1",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -852,14 +847,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0374,
+      "target_weight": 0.0378,
       "current_weight": 0.0234,
-      "notional_delta": 1438.92,
-      "reason": "buying on positive news flow \u2014 \"Chevron (CVX) Supercharges its Venezuela Bet with More Oil Rigs\" \u00b7 underweight by 1.40% vs target \u2014 add",
+      "notional_delta": 1480.16,
+      "reason": "buying on positive news flow \u2014 \"Chevron CEO sends a strong message on oil price and the economy\" \u00b7 underweight by 1.44% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.83%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.4 (buy), contribution 60.5",
+        "theme 'Oil & Gas' score 56.7 (buy), contribution 60.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -959,15 +954,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0266,
+      "action": "BUY",
+      "target_weight": 0.0353,
       "current_weight": 0.0293,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 614.86,
+      "reason": "underweight by 0.60% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.94%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 50.3 (starter), contribution 64.4"
+        "theme 'AI & Compute' score 57.8 (buy), contribution 71.9"
       ],
       "theme_key": "ai_compute"
     },
@@ -987,18 +982,17 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.0272,
+      "action": "BUY",
+      "target_weight": 0.0296,
       "current_weight": 0.0246,
-      "notional_delta": 0.0,
-      "reason": "holding on policy headwind (negative) \u2014 \"The $986 Million Reason Nike\u2019s Comeback Story Doesn\u2019t Add Up\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 517.83,
+      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.50% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.38%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.3 (starter), contribution 49.2",
+        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 51.5",
         "news_source=yahoo_rss",
-        "event=policy headwind",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1065,43 +1059,40 @@
       "target_weight": 0.0,
       "current_weight": 0.0041,
       "notional_delta": -425.19,
-      "reason": "exiting on positive news flow \u2014 \"Should You Buy Micron Stock Before Its Next Earnings Report?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.75%",
-        "theme=Semiconductors (Broad)",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0298,
+      "action": "BUY",
+      "target_weight": 0.0324,
       "current_weight": 0.0261,
-      "notional_delta": 0.0,
-      "reason": "holding on policy headwind (negative) \u2014 \"The $986 Million Reason Nike\u2019s Comeback Story Doesn\u2019t Add Up\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 646.52,
+      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.63% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.93%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.3 (starter), contribution 54.0",
+        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 56.2",
         "news_source=yahoo_rss",
-        "event=policy headwind",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0241,
+      "target_weight": 0.0323,
       "current_weight": 0.0287,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Box CEO Says Companies Will Have to \u2018Build Something That Agents Want\u2019 as AI Agents Become New Consumers\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.58%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 50.3 (starter), contribution 58.4",
+        "theme 'AI & Compute' score 57.8 (buy), contribution 65.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1152,16 +1143,16 @@
     },
     {
       "symbol": "MU",
-      "action": "HOLD",
-      "target_weight": 0.0321,
+      "action": "REDUCE",
+      "target_weight": 0.0234,
       "current_weight": 0.0317,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Should You Buy Micron Stock Before Its Next Earnings Report?\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -856.38,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Eyes a Big Move as Closely Watched Q4 Earnings Report Nears\" \u00b7 overweight by 0.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.25%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.5 (starter), contribution 59.6",
-        "news_source=yahoo_rss",
+        "theme 'Semiconductors (Broad)' score 49.4 (starter), contribution 55.5",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
@@ -1188,13 +1179,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0228,
       "notional_delta": -2354.64,
-      "reason": "exiting on policy headwind (negative) \u2014 \"The $986 Million Reason Nike\u2019s Comeback Story Doesn\u2019t Add Up\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Consumer Discretionary",
         "news_source=yahoo_rss",
-        "event=policy headwind",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1233,12 +1223,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.26,
-      "reason": "exiting on negative news flow \u2014 \"ExxonMobil Stock And Oil Majors Facing New Pressure On Global Supply Routes\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Chevron CEO sends a strong message on oil price and the economy\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.04%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1335,18 +1325,17 @@
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0272,
+      "action": "BUY",
+      "target_weight": 0.0296,
       "current_weight": 0.0224,
-      "notional_delta": 0.0,
-      "reason": "holding on policy headwind (negative) \u2014 \"The $986 Million Reason Nike\u2019s Comeback Story Doesn\u2019t Add Up\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 743.28,
+      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.72% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.27%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.3 (starter), contribution 49.2",
+        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 51.4",
         "news_source=yahoo_rss",
-        "event=policy headwind",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1371,12 +1360,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.15,
-      "reason": "exiting on negative news flow \u2014 \"ExxonMobil Stock And Oil Majors Facing New Pressure On Global Supply Routes\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Chevron CEO sends a strong message on oil price and the economy\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.61%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1410,17 +1399,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "HOLD",
-      "target_weight": 0.0335,
+      "action": "REDUCE",
+      "target_weight": 0.0245,
       "current_weight": 0.0371,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Should You Buy Micron Stock Before Its Next Earnings Report?\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1302.9,
+      "reason": "overweight by 1.26% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.82%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.5 (starter), contribution 62.2",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Semiconductors (Broad)' score 49.4 (starter), contribution 58.1"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1455,16 +1442,16 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0365,
+      "target_weight": 0.0369,
       "current_weight": 0.0216,
-      "notional_delta": 1532.66,
-      "reason": "buying on negative news flow \u2014 \"ExxonMobil Stock And Oil Majors Facing New Pressure On Global Supply Routes\" \u00b7 underweight by 1.49% vs target \u2014 add",
+      "notional_delta": 1573.9,
+      "reason": "buying on positive news flow \u2014 \"Chevron CEO sends a strong message on oil price and the economy\" \u00b7 underweight by 1.53% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.40%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.4 (buy), contribution 59.0",
+        "theme 'Oil & Gas' score 56.7 (buy), contribution 59.4",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1493,12 +1480,10 @@
       "target_weight": 0.0,
       "current_weight": 0.004,
       "notional_delta": -417.38,
-      "reason": "exiting on positive news flow \u2014 \"Should You Buy Micron Stock Before Its Next Earnings Report?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.77%",
-        "theme=Semiconductors (Broad)",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1508,14 +1493,14 @@
     {
       "symbol": "AMD",
       "action": "HOLD",
-      "target_weight": 0.0251,
+      "target_weight": 0.0335,
       "current_weight": 0.0291,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=6.86%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 50.3 (starter), contribution 60.8"
+        "theme 'AI & Compute' score 57.8 (buy), contribution 68.3"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1528,13 +1513,12 @@
       "target_weight": 0.0,
       "current_weight": 0.026,
       "notional_delta": -2682.35,
-      "reason": "exiting on policy headwind (negative) \u2014 \"The $986 Million Reason Nike\u2019s Comeback Story Doesn\u2019t Add Up\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.08%",
         "theme=Consumer Discretionary",
         "news_source=yahoo_rss",
-        "event=policy headwind",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1543,17 +1527,15 @@
     },
     {
       "symbol": "ASML",
-      "action": "BUY",
-      "target_weight": 0.0294,
+      "action": "HOLD",
+      "target_weight": 0.0213,
       "current_weight": 0.0242,
-      "notional_delta": 537.95,
-      "reason": "buying on positive news flow \u2014 \"Should You Buy Micron Stock Before Its Next Earnings Report?\" \u00b7 underweight by 0.52% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.18%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.5 (starter), contribution 54.6",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Semiconductors (Broad)' score 49.4 (starter), contribution 50.5"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1618,16 +1600,16 @@
     {
       "symbol": "COP",
       "action": "BUY",
-      "target_weight": 0.0308,
+      "target_weight": 0.0311,
       "current_weight": 0.0197,
-      "notional_delta": 1143.79,
-      "reason": "buying on negative news flow \u2014 \"ExxonMobil Stock And Oil Majors Facing New Pressure On Global Supply Routes\" \u00b7 underweight by 1.11% vs target \u2014 add",
+      "notional_delta": 1174.72,
+      "reason": "buying on positive news flow \u2014 \"Chevron CEO sends a strong message on oil price and the economy\" \u00b7 underweight by 1.14% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.90%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.4 (buy), contribution 49.8",
+        "theme 'Oil & Gas' score 56.7 (buy), contribution 50.1",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1656,14 +1638,14 @@
     {
       "symbol": "CVX",
       "action": "BUY",
-      "target_weight": 0.0374,
+      "target_weight": 0.0378,
       "current_weight": 0.0234,
-      "notional_delta": 1438.92,
-      "reason": "buying on positive news flow \u2014 \"Chevron (CVX) Supercharges its Venezuela Bet with More Oil Rigs\" \u00b7 underweight by 1.40% vs target \u2014 add",
+      "notional_delta": 1480.16,
+      "reason": "buying on positive news flow \u2014 \"Chevron CEO sends a strong message on oil price and the economy\" \u00b7 underweight by 1.44% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.83%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.4 (buy), contribution 60.5",
+        "theme 'Oil & Gas' score 56.7 (buy), contribution 60.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1784,15 +1766,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0266,
+      "action": "BUY",
+      "target_weight": 0.0353,
       "current_weight": 0.0293,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 614.86,
+      "reason": "underweight by 0.60% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.94%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 50.3 (starter), contribution 64.4"
+        "theme 'AI & Compute' score 57.8 (buy), contribution 71.9"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1818,18 +1800,17 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.0272,
+      "action": "BUY",
+      "target_weight": 0.0296,
       "current_weight": 0.0246,
-      "notional_delta": 0.0,
-      "reason": "holding on policy headwind (negative) \u2014 \"The $986 Million Reason Nike\u2019s Comeback Story Doesn\u2019t Add Up\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 517.83,
+      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.50% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.38%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.3 (starter), contribution 49.2",
+        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 51.5",
         "news_source=yahoo_rss",
-        "event=policy headwind",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1911,12 +1892,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0041,
       "notional_delta": -425.19,
-      "reason": "exiting on positive news flow \u2014 \"Should You Buy Micron Stock Before Its Next Earnings Report?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.75%",
-        "theme=Semiconductors (Broad)",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1925,18 +1904,17 @@
     },
     {
       "symbol": "MCD",
-      "action": "HOLD",
-      "target_weight": 0.0298,
+      "action": "BUY",
+      "target_weight": 0.0324,
       "current_weight": 0.0261,
-      "notional_delta": 0.0,
-      "reason": "holding on policy headwind (negative) \u2014 \"The $986 Million Reason Nike\u2019s Comeback Story Doesn\u2019t Add Up\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 646.52,
+      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.63% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.93%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.3 (starter), contribution 54.0",
+        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 56.2",
         "news_source=yahoo_rss",
-        "event=policy headwind",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1946,14 +1924,14 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0241,
+      "target_weight": 0.0323,
       "current_weight": 0.0287,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Box CEO Says Companies Will Have to \u2018Build Something That Agents Want\u2019 as AI Agents Become New Consumers\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.58%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 50.3 (starter), contribution 58.4",
+        "theme 'AI & Compute' score 57.8 (buy), contribution 65.9",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2016,16 +1994,16 @@
     },
     {
       "symbol": "MU",
-      "action": "HOLD",
-      "target_weight": 0.0321,
+      "action": "REDUCE",
+      "target_weight": 0.0234,
       "current_weight": 0.0317,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Should You Buy Micron Stock Before Its Next Earnings Report?\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -856.38,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Eyes a Big Move as Closely Watched Q4 Earnings Report Nears\" \u00b7 overweight by 0.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.25%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.5 (starter), contribution 59.6",
-        "news_source=yahoo_rss",
+        "theme 'Semiconductors (Broad)' score 49.4 (starter), contribution 55.5",
+        "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
@@ -2058,13 +2036,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0228,
       "notional_delta": -2354.64,
-      "reason": "exiting on policy headwind (negative) \u2014 \"The $986 Million Reason Nike\u2019s Comeback Story Doesn\u2019t Add Up\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.79%",
         "theme=Consumer Discretionary",
         "news_source=yahoo_rss",
-        "event=policy headwind",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2112,12 +2089,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.26,
-      "reason": "exiting on negative news flow \u2014 \"ExxonMobil Stock And Oil Majors Facing New Pressure On Global Supply Routes\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Chevron CEO sends a strong message on oil price and the economy\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.04%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2235,18 +2212,17 @@
     },
     {
       "symbol": "SBUX",
-      "action": "HOLD",
-      "target_weight": 0.0272,
+      "action": "BUY",
+      "target_weight": 0.0296,
       "current_weight": 0.0224,
-      "notional_delta": 0.0,
-      "reason": "holding on policy headwind (negative) \u2014 \"The $986 Million Reason Nike\u2019s Comeback Story Doesn\u2019t Add Up\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 743.28,
+      "reason": "buying on positive news flow \u2014 \"Dutch Bros and McDonald's Hit 52-Week Lows on the Same Day. Here's Why Only One Is a Buy Now.\" \u00b7 underweight by 0.72% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.27%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 50.3 (starter), contribution 49.2",
+        "theme 'Consumer Discretionary' score 52.5 (starter), contribution 51.4",
         "news_source=yahoo_rss",
-        "event=policy headwind",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2277,12 +2253,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -2.15,
-      "reason": "exiting on negative news flow \u2014 \"ExxonMobil Stock And Oil Majors Facing New Pressure On Global Supply Routes\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Chevron CEO sends a strong message on oil price and the economy\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.61%",
         "theme=Oil & Gas",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2325,17 +2301,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "HOLD",
-      "target_weight": 0.0335,
+      "action": "REDUCE",
+      "target_weight": 0.0245,
       "current_weight": 0.0371,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Should You Buy Micron Stock Before Its Next Earnings Report?\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1302.9,
+      "reason": "overweight by 1.26% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.82%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 53.5 (starter), contribution 62.2",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Semiconductors (Broad)' score 49.4 (starter), contribution 58.1"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2379,16 +2353,16 @@
     {
       "symbol": "XOM",
       "action": "BUY",
-      "target_weight": 0.0365,
+      "target_weight": 0.0369,
       "current_weight": 0.0216,
-      "notional_delta": 1532.66,
-      "reason": "buying on negative news flow \u2014 \"ExxonMobil Stock And Oil Majors Facing New Pressure On Global Supply Routes\" \u00b7 underweight by 1.49% vs target \u2014 add",
+      "notional_delta": 1573.9,
+      "reason": "buying on positive news flow \u2014 \"Chevron CEO sends a strong message on oil price and the economy\" \u00b7 underweight by 1.53% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.40%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 56.4 (buy), contribution 59.0",
+        "theme 'Oil & Gas' score 56.7 (buy), contribution 59.4",
         "news_source=yahoo_rss",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2417,10 +2391,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-07T07:56:28+00:00",
-      "v": 100770.28
-    },
     {
       "t": "2026-07-07T11:17:36+00:00",
       "v": 101228.98
@@ -4416,6 +4386,10 @@
     {
       "t": "2026-09-20T16:17:55+00:00",
       "v": 103093.07
+    },
+    {
+      "t": "2026-09-20T18:55:02+00:00",
+      "v": 103093.07
     }
   ],
   "breaking_news": [
@@ -4424,7 +4398,7 @@
       "summary": "Warren Buffett is stepping down as chairman of Berkshire Hathaway after serving in the role for more than 50 years. His son, Howard, will become Berkshire Hathaway's new chairman",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5973852/warren-buffett-steps-down",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4433,7 +4407,7 @@
       "summary": "Ms. Rachel has conquered YouTube, Netflix and the toy aisle. Now she's making an album, with real instruments, big feelings and her littlest listeners in mind.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5938847/ms-rachel-mr-aron-new-album-im-so-happy",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4442,7 +4416,7 @@
       "summary": "Oil supplies are falling, sulfur prices are threatening food costs, and we measure Lego against Hollywood",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/09/18/nx-s1-5974103/what-expensive-sulfur-means-for-your-dinner-table",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4451,7 +4425,7 @@
       "summary": "An informal network of dialogues at think tanks and universities is bringing together experts from the U.S. and China to talk about the shared perils of AI \u2014 and possible paths forward.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5971481/trump-xi-meeting-ai-track-two-talks",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4460,7 +4434,7 @@
       "summary": "The president chalked the ban up to what he called unfavorable coverage, and he threatened that bans on other media companies could be coming.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/g-s1-144112/trump-ban-cnn-msnow-politico-white-house-media",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -4469,7 +4443,7 @@
       "summary": "Status trackers are ubiquitous on online apps and ordering. We have the story the seminal Domino's Pizza Tracker that led to many copies, and we check on why many of the trackers now aren't accurate.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/18/nx-s1-5896338/how-a-pizza-app-changed-our-relationship-with-waiting",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4478,7 +4452,7 @@
       "summary": "The Federal Reserve just raised interest rates this week for the first time this year. So how does it actually work? And what does it mean for the economy \u2014 and the rest of us? Here are some answers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/19/nx-s1-5969816/federal-reserve-interest-rate-inflation-economy",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.2,
       "is_policy": true
     },
@@ -4487,7 +4461,7 @@
       "summary": "Fox Corp. must turn over hundreds of documents that could shed light on how founder Rupert Murdoch handled some of his media companies' biggest scandals.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/20/nx-s1-5974900/fox-shareholders-murdoch-lawsuit",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4496,16 +4470,7 @@
       "summary": "Denmark and the US have reached an agreement after months of threats from Donald Trump to annex the territory.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:59+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Cultural treasures are being destroyed worldwide - so why is no-one being punished?",
-      "summary": "A cauldron of conflicts is bubbling across the world, with cultural monuments being destroyed. These people are fighting against it.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cvgy1q2k2z0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4514,7 +4479,16 @@
       "summary": "Students spent years collecting evidence against their Indonesian principal, before falling in love.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cg4d9vly636o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Converse pulls 'deeply upsetting' advert after backlash",
+      "summary": "Social media users say an image from the brand's Instagram account resembled a KKK hood and hanging.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/crwyzj53pl1lo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4523,25 +4497,16 @@
       "summary": "A reported strike on a fuel depot at Riyadh airport caused delays on Saturday, as Saudi Arabia says it shot down a ballistic missile aimed at the capital.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Trump says his planned triumphal arch will double as a military complex to store ammunition",
+      "headline": "Trump says triumphal arch will be military complex with drones and snipers",
       "summary": "Trump said the updated plans were at the request of the US military and for national security purposes.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqdj4pez00dzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:59+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "German elections under way which could decide fate of Chancellor Merz",
-      "summary": "The chancellor is facing intense political pressure which will increase if his party struggles in Sunday's polls.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cme8xj6g2ny7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4550,7 +4515,7 @@
       "summary": "The singer spoke about Israel and Gaza after Macklemore was dropped from his tour for making pro-Palestinian remarks on stage.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cm780ll1de18o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4559,7 +4524,16 @@
       "summary": "Moscow's mayor says 450 drones were downed during the overnight barrage, in which two people died.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:59+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "German Chancellor Merz calls state election a 'disaster' for his party but vows to stay on",
+      "summary": "Exit polls show damaging losses for Merz's centre-right CDU party in the states of Berlin and Mecklenburg-Vorpommern.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cvwyz29n0nn2o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4568,7 +4542,7 @@
       "summary": "The bank said it \"assumed\" there would be economic red lines, like oil at $100 a barrel, that the US would be unwilling the cross.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cq0m3gmv8n7ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:58+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4577,7 +4551,7 @@
       "summary": "The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:58+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4586,7 +4560,7 @@
       "summary": "Ineos founder Sir Jim Ratcliffe tells the BBC he thinks the country is \"on the slide\" and calls for more investment in the North Sea.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cm0463619r1no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:58+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4595,7 +4569,7 @@
       "summary": "Deputy leader Daisy Cooper also proposes a Growth and Defence Partnership with the EU in a speech to her party conference.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cqrk31k7pprlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-20T16:17:58+00:00",
+      "published_utc": "2026-09-20T18:55:07+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     }
