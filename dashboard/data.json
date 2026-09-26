@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-26T21:04:41+00:00",
+  "generated_at_utc": "2026-09-26T23:35:02+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 966,
-  "last_success_utc": "2026-09-26T17:59:49+00:00",
+  "cycle_count": 967,
+  "last_success_utc": "2026-09-26T21:04:41+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -593,14 +593,14 @@
     {
       "key": "defense",
       "name": "Defense & Aerospace",
-      "score": 54.34,
-      "raw_score": 54.34,
+      "score": 54.13,
+      "raw_score": 54.13,
       "band": "starter",
-      "weight": 0.0978,
+      "weight": 0.0971,
       "confidence": 1.0,
       "components": {
         "momentum": 26.81,
-        "sentiment": 94.44,
+        "sentiment": 93.75,
         "volume": 51.41,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -623,22 +623,6 @@
       }
     },
     {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 47.96,
-      "raw_score": 64.04,
-      "band": "starter",
-      "weight": 0.0651,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 68.98,
-        "sentiment": 70.0,
-        "volume": 49.72,
-        "policy": 55.0,
-        "volatility_penalty": 16.07
-      }
-    },
-    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
       "score": 47.33,
@@ -652,6 +636,22 @@
         "volume": 43.07,
         "policy": 50.0,
         "volatility_penalty": 4.82
+      }
+    },
+    {
+      "key": "cybersecurity",
+      "name": "Cybersecurity",
+      "score": 46.47,
+      "raw_score": 59.99,
+      "band": "starter",
+      "weight": 0.0716,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 58.72,
+        "sentiment": 75.0,
+        "volume": 42.5,
+        "policy": 55.0,
+        "volatility_penalty": 13.52
       }
     },
     {
@@ -687,19 +687,19 @@
       }
     },
     {
-      "key": "cybersecurity",
-      "name": "Cybersecurity",
-      "score": 43.25,
-      "raw_score": 56.77,
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 41.46,
+      "raw_score": 57.54,
       "band": "starter",
-      "weight": 0.0608,
-      "confidence": 1.0,
+      "weight": 0.0453,
+      "confidence": 0.65,
       "components": {
-        "momentum": 58.72,
-        "sentiment": 64.28,
-        "volume": 42.5,
-        "policy": 55.0,
-        "volatility_penalty": 13.52
+        "momentum": 68.98,
+        "sentiment": 50.0,
+        "volume": 49.72,
+        "policy": 50.0,
+        "volatility_penalty": 16.07
       }
     },
     {
@@ -793,16 +793,16 @@
     {
       "symbol": "BA",
       "action": "HOLD",
-      "target_weight": 0.0371,
+      "target_weight": 0.0368,
       "current_weight": 0.0327,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Boeing (BA) Reaches a Tentative Deal with Engineers. Will Higher Pay Help it Avoid a Strike?\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.3 (starter), contribution 64.6",
+        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 64.4",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense"
     },
@@ -837,15 +837,15 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.0204,
+      "action": "HOLD",
+      "target_weight": 0.024,
       "current_weight": 0.0282,
-      "notional_delta": -808.12,
-      "reason": "trimming on positive news flow \u2014 \"Why Did CrowdStrike Holdings (CRWD) Move Today?\" \u00b7 overweight by 0.78% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Why Did CrowdStrike Holdings (CRWD) Move Today?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.25%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 43.2 (starter), contribution 56.3",
+        "theme 'Cybersecurity' score 46.5 (starter), contribution 59.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -915,14 +915,14 @@
     {
       "symbol": "FTNT",
       "action": "REDUCE",
-      "target_weight": 0.0194,
+      "target_weight": 0.0229,
       "current_weight": 0.0318,
-      "notional_delta": -1286.95,
-      "reason": "trimming on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 overweight by 1.24% vs target \u2014 trim",
+      "notional_delta": -924.72,
+      "reason": "trimming on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 overweight by 0.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.51%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 43.2 (starter), contribution 53.3",
+        "theme 'Cybersecurity' score 46.5 (starter), contribution 56.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -934,12 +934,12 @@
       "target_weight": 0.0,
       "current_weight": 0.017,
       "notional_delta": -1759.68,
-      "reason": "exiting on positive news flow \u2014 \"GD vs. LMT: Which Defense Dividend Stock Will Crush Retirement Income Goals?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.29%",
         "theme=Defense & Aerospace",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense"
     },
@@ -1033,34 +1033,33 @@
     },
     {
       "symbol": "LLY",
-      "action": "HOLD",
-      "target_weight": 0.0208,
+      "action": "REDUCE",
+      "target_weight": 0.0144,
       "current_weight": 0.0209,
-      "notional_delta": 0.0,
-      "reason": "holding on FDA approval (positive) \u2014 \"Eli Lilly Receives FDA Approval For Olumiant In Pediatric Patients Aged 12 And Older With Severe Alopecia Areata\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -670.75,
+      "reason": "trimming on mixed news flow \u2014 \"'We Don't Know What the Risks Are': GLP-1 Pill Boom Fuels Hundreds of Apps, but Research Is Lagging\" \u00b7 overweight by 0.65% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 48.0 (starter), contribution 66.2",
+        "theme 'Biotech & Pharma' score 41.5 (starter), contribution 59.7",
         "news_source=benzinga",
-        "event=FDA approval",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "LMT",
       "action": "HOLD",
-      "target_weight": 0.03,
+      "target_weight": 0.0298,
       "current_weight": 0.0296,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"GD vs. LMT: Which Defense Dividend Stock Will Crush Retirement Income Goals?\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.71%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.3 (starter), contribution 52.2",
+        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 52.0",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense"
     },
@@ -1203,12 +1202,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.9,
-      "reason": "exiting on positive news flow \u2014 \"Northrop Grumman (NOC) Lands Navy Radar Deal On Undervalued Stock Narrative\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.81%",
         "theme=Defense & Aerospace",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense"
     },
@@ -1230,14 +1229,14 @@
     {
       "symbol": "OKTA",
       "action": "REDUCE",
-      "target_weight": 0.021,
+      "target_weight": 0.0247,
       "current_weight": 0.0323,
-      "notional_delta": -1174.35,
-      "reason": "trimming on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 overweight by 1.13% vs target \u2014 trim",
+      "notional_delta": -791.43,
+      "reason": "trimming on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 overweight by 0.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.72%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 43.2 (starter), contribution 57.8",
+        "theme 'Cybersecurity' score 46.5 (starter), contribution 61.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1273,15 +1272,15 @@
     },
     {
       "symbol": "PFE",
-      "action": "HOLD",
-      "target_weight": 0.022,
+      "action": "REDUCE",
+      "target_weight": 0.0153,
       "current_weight": 0.0218,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -674.26,
+      "reason": "overweight by 0.65% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.89%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 48.0 (starter), contribution 69.9"
+        "theme 'Biotech & Pharma' score 41.5 (starter), contribution 63.4"
       ],
       "theme_key": "biotech"
     },
@@ -1315,16 +1314,16 @@
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.0307,
+      "target_weight": 0.0305,
       "current_weight": 0.0299,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"The Saskatchewan Indian Institute of Technologies and Boeing Celebrate Grand Opening of Expanded Saskatchewan Aviation Learning Centre\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.21%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.3 (starter), contribution 53.5",
+        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 53.3",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense"
     },
@@ -1431,15 +1430,15 @@
     },
     {
       "symbol": "VRTX",
-      "action": "HOLD",
-      "target_weight": 0.0222,
+      "action": "REDUCE",
+      "target_weight": 0.0155,
       "current_weight": 0.0225,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -726.28,
+      "reason": "overweight by 0.70% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.80%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 48.0 (starter), contribution 70.6"
+        "theme 'Biotech & Pharma' score 41.5 (starter), contribution 64.1"
       ],
       "theme_key": "biotech"
     },
@@ -1579,16 +1578,16 @@
     {
       "symbol": "BA",
       "action": "HOLD",
-      "target_weight": 0.0371,
+      "target_weight": 0.0368,
       "current_weight": 0.0327,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Boeing (BA) Reaches a Tentative Deal with Engineers. Will Higher Pay Help it Avoid a Strike?\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.3 (starter), contribution 64.6",
+        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 64.4",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1632,15 +1631,15 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.0204,
+      "action": "HOLD",
+      "target_weight": 0.024,
       "current_weight": 0.0282,
-      "notional_delta": -808.12,
-      "reason": "trimming on positive news flow \u2014 \"Why Did CrowdStrike Holdings (CRWD) Move Today?\" \u00b7 overweight by 0.78% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Why Did CrowdStrike Holdings (CRWD) Move Today?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.25%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 43.2 (starter), contribution 56.3",
+        "theme 'Cybersecurity' score 46.5 (starter), contribution 59.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1725,14 +1724,14 @@
     {
       "symbol": "FTNT",
       "action": "REDUCE",
-      "target_weight": 0.0194,
+      "target_weight": 0.0229,
       "current_weight": 0.0318,
-      "notional_delta": -1286.95,
-      "reason": "trimming on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 overweight by 1.24% vs target \u2014 trim",
+      "notional_delta": -924.72,
+      "reason": "trimming on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 overweight by 0.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.51%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 43.2 (starter), contribution 53.3",
+        "theme 'Cybersecurity' score 46.5 (starter), contribution 56.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1747,12 +1746,12 @@
       "target_weight": 0.0,
       "current_weight": 0.017,
       "notional_delta": -1759.68,
-      "reason": "exiting on positive news flow \u2014 \"GD vs. LMT: Which Defense Dividend Stock Will Crush Retirement Income Goals?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.29%",
         "theme=Defense & Aerospace",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1867,18 +1866,17 @@
     },
     {
       "symbol": "LLY",
-      "action": "HOLD",
-      "target_weight": 0.0208,
+      "action": "REDUCE",
+      "target_weight": 0.0144,
       "current_weight": 0.0209,
-      "notional_delta": 0.0,
-      "reason": "holding on FDA approval (positive) \u2014 \"Eli Lilly Receives FDA Approval For Olumiant In Pediatric Patients Aged 12 And Older With Severe Alopecia Areata\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -670.75,
+      "reason": "trimming on mixed news flow \u2014 \"'We Don't Know What the Risks Are': GLP-1 Pill Boom Fuels Hundreds of Apps, but Research Is Lagging\" \u00b7 overweight by 0.65% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 48.0 (starter), contribution 66.2",
+        "theme 'Biotech & Pharma' score 41.5 (starter), contribution 59.7",
         "news_source=benzinga",
-        "event=FDA approval",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1888,16 +1886,16 @@
     {
       "symbol": "LMT",
       "action": "HOLD",
-      "target_weight": 0.03,
+      "target_weight": 0.0298,
       "current_weight": 0.0296,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"GD vs. LMT: Which Defense Dividend Stock Will Crush Retirement Income Goals?\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.71%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.3 (starter), contribution 52.2",
+        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 52.0",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2070,12 +2068,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.9,
-      "reason": "exiting on positive news flow \u2014 \"Northrop Grumman (NOC) Lands Navy Radar Deal On Undervalued Stock Narrative\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.81%",
         "theme=Defense & Aerospace",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2103,14 +2101,14 @@
     {
       "symbol": "OKTA",
       "action": "REDUCE",
-      "target_weight": 0.021,
+      "target_weight": 0.0247,
       "current_weight": 0.0323,
-      "notional_delta": -1174.35,
-      "reason": "trimming on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 overweight by 1.13% vs target \u2014 trim",
+      "notional_delta": -791.43,
+      "reason": "trimming on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 overweight by 0.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.72%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 43.2 (starter), contribution 57.8",
+        "theme 'Cybersecurity' score 46.5 (starter), contribution 61.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2155,15 +2153,15 @@
     },
     {
       "symbol": "PFE",
-      "action": "HOLD",
-      "target_weight": 0.022,
+      "action": "REDUCE",
+      "target_weight": 0.0153,
       "current_weight": 0.0218,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -674.26,
+      "reason": "overweight by 0.65% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.89%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 48.0 (starter), contribution 69.9"
+        "theme 'Biotech & Pharma' score 41.5 (starter), contribution 63.4"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2206,16 +2204,16 @@
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.0307,
+      "target_weight": 0.0305,
       "current_weight": 0.0299,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"The Saskatchewan Indian Institute of Technologies and Boeing Celebrate Grand Opening of Expanded Saskatchewan Aviation Learning Centre\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.21%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.3 (starter), contribution 53.5",
+        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 53.3",
         "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2346,15 +2344,15 @@
     },
     {
       "symbol": "VRTX",
-      "action": "HOLD",
-      "target_weight": 0.0222,
+      "action": "REDUCE",
+      "target_weight": 0.0155,
       "current_weight": 0.0225,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -726.28,
+      "reason": "overweight by 0.70% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.80%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 48.0 (starter), contribution 70.6"
+        "theme 'Biotech & Pharma' score 41.5 (starter), contribution 64.1"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2418,10 +2416,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-10T22:13:37+00:00",
-      "v": 101607.7
-    },
     {
       "t": "2026-07-10T23:25:54+00:00",
       "v": 101573.26
@@ -4417,6 +4411,10 @@
     {
       "t": "2026-09-26T21:04:37+00:00",
       "v": 103493.62
+    },
+    {
+      "t": "2026-09-26T23:34:59+00:00",
+      "v": 103493.62
     }
   ],
   "breaking_news": [
@@ -4425,7 +4423,7 @@
       "summary": "eBay became the latest online retailer to ban the sale of airbags and many of their components. Aftermarket parts can be risky if they turn out to be fake or defective.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/24/nx-s1-5978124/ebay-bans-airbags-faulty-counterfeit-auto-parts",
-      "published_utc": "2026-09-26T21:04:41+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4434,7 +4432,7 @@
       "summary": "Despite lower poverty overall, the rate for seniors has been steadily rising in recent years. A new AARP survey sheds light on how those over 50 are struggling in the crucial time before retirement.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/24/nx-s1-5979857/senior-adult-poverty-affordability",
-      "published_utc": "2026-09-26T21:04:41+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4443,7 +4441,7 @@
       "summary": "Rates have climbed more than a full percentage point since the U.S. war against Iran started.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/24/nx-s1-5977796/mortgage-rates-freddie-mac-homebuying",
-      "published_utc": "2026-09-26T21:04:41+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4452,17 +4450,8 @@
       "summary": "The most coveted real estate in business might just be the choicest shelf space of national big box retail. We go inside the room and the process of how stores choose what you can and can't buy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/24/nx-s1-5978930/how-stores-choose-what-to-put-on-their-shelves-like-say-planet-moneys-board-game",
-      "published_utc": "2026-09-26T21:04:41+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "American farmers are hurting -- and worried about their futures",
-      "summary": "Farmers who grow soybeans, corn, cotton and other crops are facing another year of losses as soaring fuel and fertilizer costs offset higher revenues.",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/09/25/nx-s1-5979886/farmers-crops-economy-diesel-fertilizer",
-      "published_utc": "2026-09-26T21:04:41+00:00",
-      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4470,7 +4459,16 @@
       "summary": "The U.S. has tapped into its strategic oil reserve to help drive down rising gasoline prices in the wake of the war with Iran. Can oil from Venezuela help fill it back up?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/25/nx-s1-5965797/strategic-petroleum-reserve-low-level-venezuela",
-      "published_utc": "2026-09-26T21:04:41+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "American farmers are hurting -- and worried about their futures",
+      "summary": "Farmers who grow soybeans, corn, cotton and other crops are facing another year of losses as soaring fuel and fertilizer costs offset higher revenues.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/09/25/nx-s1-5979886/farmers-crops-economy-diesel-fertilizer",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4479,7 +4477,7 @@
       "summary": "How does one price a cemetery plot? Are they using dynamic pricing to figure it out? We tackle that question and many more in this week's Indicator newsletter.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/09/25/nx-s1-5980393/why-this-pokemon-set-is-dropping-in-value",
-      "published_utc": "2026-09-26T21:04:41+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4488,17 +4486,8 @@
       "summary": "In Houston, Aga's Indian-Pakistani restaurant serves around 4,000 meals a day and according to Uber Eats, it has the most takeout orders in the world on the their platform.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/25/nx-s1-5979107/agas-restaurant-in-houston-is-number-one-in-the-world-for-uber-eats-deliveries",
-      "published_utc": "2026-09-26T21:04:41+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Tenth woman's body found in South Africa suburb as police probe killings",
-      "summary": "The deaths have sparked a national outcry about the scale of violence against women in the country.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c3vgyyj8q807o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
-      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
@@ -4506,16 +4495,34 @@
       "summary": "An emergency has been declared across the capital of Thailand as days of heavy rain leave the city inundated.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ck1wxx8n2x3zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Nor'easter storm brings coastal flooding, as New York and New Jersey declare emergency",
+      "headline": "Mother of woman found hanging in tree shocked as police say body was staged",
+      "summary": "Christy Spivey tells the BBC she only has more questions now police think Tasia Fortune's body was put in the tree after her death.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cq4gmmdl52rgo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-26T23:35:02+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Republic of Ireland to wear black armbands for Israel game",
+      "summary": "Republic of Ireland players intend to wear black armbands \"in recognition of all lives lost in the [Gaza] conflict\" for match against Israel.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/sport/football/articles/ckddvv5dn4eyo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-26T23:35:02+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Nor'easter brings flooding as New York and New Jersey declare emergency",
       "summary": "Tens of millions of people from Maine to Virginia are in the path of the powerful storm.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ck1wxxzn5jndo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4524,17 +4531,8 @@
       "summary": "Germany's education minister has branded the ban on the small brass memorial plaques a \"scandal\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqm2mm4y5dkko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": -0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Security lapses at Utah campus where Charlie Kirk was killed, review says",
-      "summary": "The indpendent report also says Kirk's aides insisted he speak outdoors, overriding concerns from campus officials.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cq4g55r76d9lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
-      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4542,7 +4540,7 @@
       "summary": "Four Americans and a Greek national are among those killed in a suspected gas explosion, officials said.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4551,16 +4549,16 @@
       "summary": "Around 700,000 people gathered in central Paris to hear the Catholic leader speak and offer prayer.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cm4gjjwvvlzro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
-      "summary": "The US president says Tehran had only put forward the proposal because it is losing the war.",
+      "summary": "Iran's foreign minister acknowledges Trump's comments, but adds that Tehran is waiting for the \"definitive views\" of mediators.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4569,7 +4567,7 @@
       "summary": "Where do America's X-plane projects fit in an era of cheap drones?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9q92x359xdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4578,7 +4576,7 @@
       "summary": "The average price of a litre of diesel at the pump stands at 198.32p, according to the RAC motoring body.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4587,7 +4585,7 @@
       "summary": "The EU had said X \"deceives users\" by selling blue ticks without \"meaningfully verifying\" accounts.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cq0m373ee0v0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4596,7 +4594,7 @@
       "summary": "His stake in DRJB Holdings has entitled him to almost half of its \u00a385.5m in dividend payments.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/crkgww5j0yzwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-26T21:04:40+00:00",
+      "published_utc": "2026-09-26T23:35:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
