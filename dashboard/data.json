@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-27T13:08:40+00:00",
+  "generated_at_utc": "2026-09-27T17:50:02+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 970,
-  "last_success_utc": "2026-09-27T07:12:15+00:00",
+  "cycle_count": 971,
+  "last_success_utc": "2026-09-27T13:08:40+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -559,6 +559,22 @@
   ],
   "themes": [
     {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 68.53,
+      "raw_score": 73.6,
+      "band": "buy",
+      "weight": 0.1306,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 80.61,
+        "sentiment": 90.0,
+        "volume": 46.78,
+        "policy": 50.0,
+        "volatility_penalty": 5.07
+      }
+    },
+    {
       "key": "ai_compute",
       "name": "AI & Compute",
       "score": 66.04,
@@ -575,19 +591,19 @@
       }
     },
     {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 62.53,
-      "raw_score": 67.6,
-      "band": "buy",
-      "weight": 0.1063,
-      "confidence": 0.7,
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 54.85,
+      "raw_score": 70.81,
+      "band": "starter",
+      "weight": 0.0995,
+      "confidence": 1.0,
       "components": {
-        "momentum": 80.61,
-        "sentiment": 70.0,
-        "volume": 46.78,
-        "policy": 50.0,
-        "volatility_penalty": 5.07
+        "momentum": 68.98,
+        "sentiment": 90.91,
+        "volume": 49.72,
+        "policy": 60.0,
+        "volatility_penalty": 15.96
       }
     },
     {
@@ -602,6 +618,22 @@
         "momentum": 26.81,
         "sentiment": 93.34,
         "volume": 51.41,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 53.3,
+      "raw_score": 53.3,
+      "band": "starter",
+      "weight": 0.0825,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 35.58,
+        "sentiment": 80.0,
+        "volume": 50.33,
         "policy": 50.0,
         "volatility_penalty": 0.0
       }
@@ -623,18 +655,34 @@
       }
     },
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 47.32,
+      "raw_score": 52.15,
+      "band": "starter",
+      "weight": 0.0632,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 43.84,
+        "sentiment": 70.0,
+        "volume": 43.07,
+        "policy": 50.0,
+        "volatility_penalty": 4.83
+      }
+    },
+    {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 45.01,
-      "raw_score": 45.08,
+      "score": 45.51,
+      "raw_score": 45.58,
       "band": "starter",
-      "weight": 0.055,
+      "weight": 0.0564,
       "confidence": 0.65,
       "components": {
         "momentum": 33.9,
         "sentiment": 60.0,
         "volume": 42.61,
-        "policy": 50.0,
+        "policy": 55.0,
         "volatility_penalty": 0.07
       }
     },
@@ -655,64 +703,16 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 44.32,
-      "raw_score": 49.15,
-      "band": "starter",
-      "weight": 0.0531,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 43.84,
-        "sentiment": 60.0,
-        "volume": 43.07,
-        "policy": 50.0,
-        "volatility_penalty": 4.83
-      }
-    },
-    {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 44.3,
-      "raw_score": 44.3,
-      "band": "starter",
-      "weight": 0.0531,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 35.58,
-        "sentiment": 50.0,
-        "volume": 50.33,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 41.58,
-      "raw_score": 57.54,
-      "band": "starter",
-      "weight": 0.0456,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 68.98,
-        "sentiment": 50.0,
-        "volume": 49.72,
-        "policy": 50.0,
-        "volatility_penalty": 15.96
-      }
-    },
-    {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 38.58,
-      "raw_score": 49.64,
+      "score": 38.15,
+      "raw_score": 49.21,
       "band": "hold_small",
-      "weight": 0.0415,
+      "weight": 0.0389,
       "confidence": 1.0,
       "components": {
         "momentum": 19.53,
-        "sentiment": 80.0,
+        "sentiment": 78.57,
         "volume": 54.15,
         "policy": 70.0,
         "volatility_penalty": 11.06
@@ -722,15 +722,15 @@
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.0353,
+      "action": "HOLD",
+      "target_weight": 0.0434,
       "current_weight": 0.0436,
-      "notional_delta": -858.72,
-      "reason": "overweight by 0.83% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=4.07%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 68.3"
+        "theme 'Semiconductors (Broad)' score 68.5 (buy), contribution 74.3"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -763,15 +763,15 @@
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0348,
+      "action": "HOLD",
+      "target_weight": 0.0428,
       "current_weight": 0.0451,
-      "notional_delta": -1065.13,
-      "reason": "overweight by 1.03% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.24%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 67.3"
+        "theme 'Semiconductors (Broad)' score 68.5 (buy), contribution 73.3"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -806,15 +806,15 @@
     },
     {
       "symbol": "BAC",
-      "action": "HOLD",
-      "target_weight": 0.0169,
+      "action": "BUY",
+      "target_weight": 0.0265,
       "current_weight": 0.0188,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 798.97,
+      "reason": "underweight by 0.77% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.80%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.3 (starter), contribution 42.7"
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 51.7"
       ],
       "theme_key": "financials"
     },
@@ -850,28 +850,30 @@
     {
       "symbol": "CVX",
       "action": "REDUCE",
-      "target_weight": 0.0167,
+      "target_weight": 0.0172,
       "current_weight": 0.03,
-      "notional_delta": -1379.84,
-      "reason": "overweight by 1.33% vs target \u2014 trim",
+      "notional_delta": -1328.1,
+      "reason": "trimming on positive news flow \u2014 \"White House Has Few Options Left as Diesel Prices Surge Toward $7\" \u00b7 overweight by 1.28% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.39%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 45.0 (starter), contribution 41.3"
+        "theme 'Oil & Gas' score 45.5 (starter), contribution 41.8",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
     {
       "symbol": "ENPH",
       "action": "HOLD",
-      "target_weight": 0.0131,
+      "target_weight": 0.0123,
       "current_weight": 0.0124,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Enphase Energy (ENPH) Stock Looks Near Fair Value On Cash Flow\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-7.24%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 38.6 (hold_small), contribution 34.7",
+        "theme 'Clean Energy' score 38.1 (hold_small), contribution 34.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -895,14 +897,14 @@
     {
       "symbol": "FSLR",
       "action": "HOLD",
-      "target_weight": 0.0128,
+      "target_weight": 0.012,
       "current_weight": 0.0114,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"FSLR Stock Heads For Its Worst Week In Over A Month \u2014 Roth Says US Polysilicon Crackdown Could Provide A Tailwind\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-11.71%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 38.6 (hold_small), contribution 33.9",
+        "theme 'Clean Energy' score 38.1 (hold_small), contribution 33.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -942,14 +944,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0169,
+      "target_weight": 0.0202,
       "current_weight": 0.0335,
-      "notional_delta": -1714.01,
-      "reason": "trimming on positive news flow \u2014 \"Trump Declares \u2018America Is Back\u2019 as New Fuel Economy Standards \u2018Terminate\u2019 Biden-Era \u2018EV Mandate\u2019: \u2018Big Day for American Auto Workers\u2019\" \u00b7 overweight by 1.66% vs target \u2014 trim",
+      "notional_delta": -1372.48,
+      "reason": "trimming on positive news flow \u2014 \"Trump Declares \u2018America Is Back\u2019 as New Fuel Economy Standards \u2018Terminate\u2019 Biden-Era \u2018EV Mandate\u2019: \u2018Big Day for American Auto Workers\u2019\" \u00b7 overweight by 1.33% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.86%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 54.1",
+        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 57.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -972,15 +974,15 @@
     },
     {
       "symbol": "GS",
-      "action": "HOLD",
-      "target_weight": 0.0187,
+      "action": "BUY",
+      "target_weight": 0.0289,
       "current_weight": 0.0208,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Mark Zuckerberg Loses Nearly $9 Billion in One Day as Meta Stock Slides 4% After Goldman Questions AI Spending Payoff\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 839.79,
+      "reason": "buying on mixed news flow \u2014 \"Top Three S&P 500 Stocks to Watch This Week: Micron, Accenture, Tesla\" \u00b7 underweight by 0.81% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-6.80%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.3 (starter), contribution 47.3",
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 56.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1002,15 +1004,15 @@
     },
     {
       "symbol": "JPM",
-      "action": "HOLD",
-      "target_weight": 0.0174,
+      "action": "BUY",
+      "target_weight": 0.0271,
       "current_weight": 0.014,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1350.69,
+      "reason": "underweight by 1.31% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.25%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.3 (starter), contribution 43.9"
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 52.9"
       ],
       "theme_key": "financials"
     },
@@ -1029,17 +1031,18 @@
     },
     {
       "symbol": "LLY",
-      "action": "REDUCE",
-      "target_weight": 0.0146,
+      "action": "BUY",
+      "target_weight": 0.0322,
       "current_weight": 0.0209,
-      "notional_delta": -650.05,
-      "reason": "trimming on mixed news flow \u2014 \"'We Don't Know What the Risks Are': GLP-1 Pill Boom Fuels Hundreds of Apps, but Research Is Lagging\" \u00b7 overweight by 0.63% vs target \u2014 trim",
+      "notional_delta": 1171.43,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Foundayo\u2019s Early Growth Is Raising Lilly (LLY)\u2019s Revenue Expectations. But Can It Outrun Pricing Pressure?\" \u00b7 underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 41.6 (starter), contribution 60.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 54.9 (starter), contribution 73.5",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1107,10 +1110,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0226,
       "notional_delta": -2336.35,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"A Jury Awarded Nektar $90 Million From Eli Lilly. Here\u2019s Why the Stock Barely Moved\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=12.94%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1120,10 +1125,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0194,
       "notional_delta": -2011.73,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Solana Price Prediction as SOL ETF and Staking Inflows Jump\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.13%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -1147,26 +1154,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.04,
-      "reason": "exiting on positive news flow \u2014 \"Micron Stock Clears Key Resistance as Analysts Predict 352% Revenue Surge\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Dow Jones and Nasdaq 100 Outlook: Three Catalysts to Watch This Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=8.90%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "NEE",
       "action": "HOLD",
-      "target_weight": 0.0156,
+      "target_weight": 0.0147,
       "current_weight": 0.0176,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Anthropic Needs Gigawatts of Power It Doesn't Have. This Dividend-Paying Industrial Sells It.\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"NextEra Energy (NEE), What Is Behind The Fresh Attention?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.75%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 38.6 (hold_small), contribution 41.5",
+        "theme 'Clean Energy' score 38.1 (hold_small), contribution 41.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.00"
       ],
@@ -1178,7 +1185,7 @@
       "target_weight": 0.021,
       "current_weight": 0.0238,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Earnings Volatility Watch: Micron Sets The Week, But Six Other Stocks Are Priced To Swing More\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Dow Jones and Nasdaq 100 Outlook: Three Catalysts to Watch This Week\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.81%",
         "theme=Consumer Discretionary",
@@ -1264,15 +1271,17 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.0154,
+      "action": "BUY",
+      "target_weight": 0.0335,
       "current_weight": 0.0218,
-      "notional_delta": -663.91,
-      "reason": "overweight by 0.64% vs target \u2014 trim",
+      "notional_delta": 1209.32,
+      "reason": "buying on positive news flow \u2014 \"A Jury Awarded Nektar $90 Million From Eli Lilly. Here\u2019s Why the Stock Barely Moved\" \u00b7 underweight by 1.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.89%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 41.6 (starter), contribution 63.4"
+        "theme 'Biotech & Pharma' score 54.9 (starter), contribution 76.7",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1282,24 +1291,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.21,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"A Jury Awarded Nektar $90 Million From Eli Lilly. Here\u2019s Why the Stock Barely Moved\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=17.28%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0186,
+      "target_weight": 0.0221,
       "current_weight": 0.0353,
-      "notional_delta": -1726.86,
-      "reason": "overweight by 1.67% vs target \u2014 trim",
+      "notional_delta": -1364.63,
+      "reason": "overweight by 1.32% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 59.5"
+        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 62.5"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1366,14 +1377,14 @@
     {
       "symbol": "SLB",
       "action": "REDUCE",
-      "target_weight": 0.0202,
+      "target_weight": 0.0207,
       "current_weight": 0.036,
-      "notional_delta": -1635.38,
-      "reason": "overweight by 1.58% vs target \u2014 trim",
+      "notional_delta": -1583.64,
+      "reason": "overweight by 1.53% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.83%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 45.0 (starter), contribution 49.9"
+        "theme 'Oil & Gas' score 45.5 (starter), contribution 50.4"
       ],
       "theme_key": "oil_gas"
     },
@@ -1395,42 +1406,46 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0176,
+      "target_weight": 0.0209,
       "current_weight": 0.0344,
-      "notional_delta": -1737.83,
-      "reason": "overweight by 1.68% vs target \u2014 trim",
+      "notional_delta": -1396.3,
+      "reason": "trimming on mixed news flow \u2014 \"Top Three S&P 500 Stocks to Watch This Week: Micron, Accenture, Tesla\" \u00b7 overweight by 1.35% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.59%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 56.2"
+        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 59.2",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0362,
+      "action": "HOLD",
+      "target_weight": 0.0444,
       "current_weight": 0.0468,
-      "notional_delta": -1097.29,
-      "reason": "overweight by 1.06% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.17%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 70.1"
+        "theme 'Semiconductors (Broad)' score 68.5 (buy), contribution 76.1"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "VRTX",
-      "action": "REDUCE",
-      "target_weight": 0.0156,
+      "action": "BUY",
+      "target_weight": 0.0338,
       "current_weight": 0.0225,
-      "notional_delta": -715.93,
-      "reason": "overweight by 0.69% vs target \u2014 trim",
+      "notional_delta": 1167.65,
+      "reason": "buying on positive news flow \u2014 \"A Jury Awarded Nektar $90 Million From Eli Lilly. Here\u2019s Why the Stock Barely Moved\" \u00b7 underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.80%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 41.6 (starter), contribution 64.1"
+        "theme 'Biotech & Pharma' score 54.9 (starter), contribution 77.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1450,16 +1465,14 @@
     {
       "symbol": "XOM",
       "action": "REDUCE",
-      "target_weight": 0.0181,
+      "target_weight": 0.0185,
       "current_weight": 0.0322,
-      "notional_delta": -1458.21,
-      "reason": "trimming on positive news flow \u2014 \"Why US Diesel Prices Could Stay High Even If Oil Tumbles: A Global Refinery Shortage\" \u00b7 overweight by 1.41% vs target \u2014 trim",
+      "notional_delta": -1416.81,
+      "reason": "overweight by 1.37% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 45.0 (starter), contribution 44.6",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Oil & Gas' score 45.5 (starter), contribution 45.1"
       ],
       "theme_key": "oil_gas"
     },
@@ -1482,15 +1495,15 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.0353,
+      "action": "HOLD",
+      "target_weight": 0.0434,
       "current_weight": 0.0436,
-      "notional_delta": -858.72,
-      "reason": "overweight by 0.83% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=4.07%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 68.3"
+        "theme 'Semiconductors (Broad)' score 68.5 (buy), contribution 74.3"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1532,15 +1545,15 @@
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0348,
+      "action": "HOLD",
+      "target_weight": 0.0428,
       "current_weight": 0.0451,
-      "notional_delta": -1065.13,
-      "reason": "overweight by 1.03% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.24%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 67.3"
+        "theme 'Semiconductors (Broad)' score 68.5 (buy), contribution 73.3"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1584,15 +1597,15 @@
     },
     {
       "symbol": "BAC",
-      "action": "HOLD",
-      "target_weight": 0.0169,
+      "action": "BUY",
+      "target_weight": 0.0265,
       "current_weight": 0.0188,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 798.97,
+      "reason": "underweight by 0.77% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.80%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.3 (starter), contribution 42.7"
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 51.7"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1637,14 +1650,16 @@
     {
       "symbol": "CVX",
       "action": "REDUCE",
-      "target_weight": 0.0167,
+      "target_weight": 0.0172,
       "current_weight": 0.03,
-      "notional_delta": -1379.84,
-      "reason": "overweight by 1.33% vs target \u2014 trim",
+      "notional_delta": -1328.1,
+      "reason": "trimming on positive news flow \u2014 \"White House Has Few Options Left as Diesel Prices Surge Toward $7\" \u00b7 overweight by 1.28% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.39%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 45.0 (starter), contribution 41.3"
+        "theme 'Oil & Gas' score 45.5 (starter), contribution 41.8",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1654,14 +1669,14 @@
     {
       "symbol": "ENPH",
       "action": "HOLD",
-      "target_weight": 0.0131,
+      "target_weight": 0.0123,
       "current_weight": 0.0124,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Enphase Energy (ENPH) Stock Looks Near Fair Value On Cash Flow\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-7.24%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 38.6 (hold_small), contribution 34.7",
+        "theme 'Clean Energy' score 38.1 (hold_small), contribution 34.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1691,14 +1706,14 @@
     {
       "symbol": "FSLR",
       "action": "HOLD",
-      "target_weight": 0.0128,
+      "target_weight": 0.012,
       "current_weight": 0.0114,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"FSLR Stock Heads For Its Worst Week In Over A Month \u2014 Roth Says US Polysilicon Crackdown Could Provide A Tailwind\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-11.71%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 38.6 (hold_small), contribution 33.9",
+        "theme 'Clean Energy' score 38.1 (hold_small), contribution 33.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1747,14 +1762,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0169,
+      "target_weight": 0.0202,
       "current_weight": 0.0335,
-      "notional_delta": -1714.01,
-      "reason": "trimming on positive news flow \u2014 \"Trump Declares \u2018America Is Back\u2019 as New Fuel Economy Standards \u2018Terminate\u2019 Biden-Era \u2018EV Mandate\u2019: \u2018Big Day for American Auto Workers\u2019\" \u00b7 overweight by 1.66% vs target \u2014 trim",
+      "notional_delta": -1372.48,
+      "reason": "trimming on positive news flow \u2014 \"Trump Declares \u2018America Is Back\u2019 as New Fuel Economy Standards \u2018Terminate\u2019 Biden-Era \u2018EV Mandate\u2019: \u2018Big Day for American Auto Workers\u2019\" \u00b7 overweight by 1.33% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.86%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 54.1",
+        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 57.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1783,15 +1798,15 @@
     },
     {
       "symbol": "GS",
-      "action": "HOLD",
-      "target_weight": 0.0187,
+      "action": "BUY",
+      "target_weight": 0.0289,
       "current_weight": 0.0208,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Mark Zuckerberg Loses Nearly $9 Billion in One Day as Meta Stock Slides 4% After Goldman Questions AI Spending Payoff\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 839.79,
+      "reason": "buying on mixed news flow \u2014 \"Top Three S&P 500 Stocks to Watch This Week: Micron, Accenture, Tesla\" \u00b7 underweight by 0.81% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-6.80%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.3 (starter), contribution 47.3",
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 56.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1819,15 +1834,15 @@
     },
     {
       "symbol": "JPM",
-      "action": "HOLD",
-      "target_weight": 0.0174,
+      "action": "BUY",
+      "target_weight": 0.0271,
       "current_weight": 0.014,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": 1350.69,
+      "reason": "underweight by 1.31% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.25%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.3 (starter), contribution 43.9"
+        "theme 'Financials & Rates' score 53.3 (starter), contribution 52.9"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1852,17 +1867,18 @@
     },
     {
       "symbol": "LLY",
-      "action": "REDUCE",
-      "target_weight": 0.0146,
+      "action": "BUY",
+      "target_weight": 0.0322,
       "current_weight": 0.0209,
-      "notional_delta": -650.05,
-      "reason": "trimming on mixed news flow \u2014 \"'We Don't Know What the Risks Are': GLP-1 Pill Boom Fuels Hundreds of Apps, but Research Is Lagging\" \u00b7 overweight by 0.63% vs target \u2014 trim",
+      "notional_delta": 1171.43,
+      "reason": "buying on analyst upgrade (positive) \u2014 \"Foundayo\u2019s Early Growth Is Raising Lilly (LLY)\u2019s Revenue Expectations. But Can It Outrun Pricing Pressure?\" \u00b7 underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 41.6 (starter), contribution 60.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 54.9 (starter), contribution 73.5",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1945,10 +1961,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0226,
       "notional_delta": -2336.35,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"A Jury Awarded Nektar $90 Million From Eli Lilly. Here\u2019s Why the Stock Barely Moved\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=12.94%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1961,10 +1979,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0194,
       "notional_delta": -2011.73,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Solana Price Prediction as SOL ETF and Staking Inflows Jump\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.13%",
-        "theme=Financials & Rates"
+        "theme=Financials & Rates",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1994,12 +2014,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.04,
-      "reason": "exiting on positive news flow \u2014 \"Micron Stock Clears Key Resistance as Analysts Predict 352% Revenue Surge\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Dow Jones and Nasdaq 100 Outlook: Three Catalysts to Watch This Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=8.90%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2009,14 +2029,14 @@
     {
       "symbol": "NEE",
       "action": "HOLD",
-      "target_weight": 0.0156,
+      "target_weight": 0.0147,
       "current_weight": 0.0176,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Anthropic Needs Gigawatts of Power It Doesn't Have. This Dividend-Paying Industrial Sells It.\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"NextEra Energy (NEE), What Is Behind The Fresh Attention?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.75%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 38.6 (hold_small), contribution 41.5",
+        "theme 'Clean Energy' score 38.1 (hold_small), contribution 41.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.00"
       ],
@@ -2031,7 +2051,7 @@
       "target_weight": 0.021,
       "current_weight": 0.0238,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Earnings Volatility Watch: Micron Sets The Week, But Six Other Stocks Are Priced To Swing More\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Dow Jones and Nasdaq 100 Outlook: Three Catalysts to Watch This Week\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.81%",
         "theme=Consumer Discretionary",
@@ -2135,15 +2155,17 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.0154,
+      "action": "BUY",
+      "target_weight": 0.0335,
       "current_weight": 0.0218,
-      "notional_delta": -663.91,
-      "reason": "overweight by 0.64% vs target \u2014 trim",
+      "notional_delta": 1209.32,
+      "reason": "buying on positive news flow \u2014 \"A Jury Awarded Nektar $90 Million From Eli Lilly. Here\u2019s Why the Stock Barely Moved\" \u00b7 underweight by 1.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.89%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 41.6 (starter), contribution 63.4"
+        "theme 'Biotech & Pharma' score 54.9 (starter), contribution 76.7",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2156,10 +2178,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.21,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"A Jury Awarded Nektar $90 Million From Eli Lilly. Here\u2019s Why the Stock Barely Moved\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=17.28%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2169,14 +2193,14 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0186,
+      "target_weight": 0.0221,
       "current_weight": 0.0353,
-      "notional_delta": -1726.86,
-      "reason": "overweight by 1.67% vs target \u2014 trim",
+      "notional_delta": -1364.63,
+      "reason": "overweight by 1.32% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 59.5"
+        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 62.5"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2258,14 +2282,14 @@
     {
       "symbol": "SLB",
       "action": "REDUCE",
-      "target_weight": 0.0202,
+      "target_weight": 0.0207,
       "current_weight": 0.036,
-      "notional_delta": -1635.38,
-      "reason": "overweight by 1.58% vs target \u2014 trim",
+      "notional_delta": -1583.64,
+      "reason": "overweight by 1.53% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.83%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 45.0 (starter), contribution 49.9"
+        "theme 'Oil & Gas' score 45.5 (starter), contribution 50.4"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2293,14 +2317,16 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0176,
+      "target_weight": 0.0209,
       "current_weight": 0.0344,
-      "notional_delta": -1737.83,
-      "reason": "overweight by 1.68% vs target \u2014 trim",
+      "notional_delta": -1396.3,
+      "reason": "trimming on mixed news flow \u2014 \"Top Three S&P 500 Stocks to Watch This Week: Micron, Accenture, Tesla\" \u00b7 overweight by 1.35% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.59%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 56.2"
+        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 59.2",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2309,15 +2335,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0362,
+      "action": "HOLD",
+      "target_weight": 0.0444,
       "current_weight": 0.0468,
-      "notional_delta": -1097.29,
-      "reason": "overweight by 1.06% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.17%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 70.1"
+        "theme 'Semiconductors (Broad)' score 68.5 (buy), contribution 76.1"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2326,15 +2352,17 @@
     },
     {
       "symbol": "VRTX",
-      "action": "REDUCE",
-      "target_weight": 0.0156,
+      "action": "BUY",
+      "target_weight": 0.0338,
       "current_weight": 0.0225,
-      "notional_delta": -715.93,
-      "reason": "overweight by 0.69% vs target \u2014 trim",
+      "notional_delta": 1167.65,
+      "reason": "buying on positive news flow \u2014 \"A Jury Awarded Nektar $90 Million From Eli Lilly. Here\u2019s Why the Stock Barely Moved\" \u00b7 underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.80%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 41.6 (starter), contribution 64.1"
+        "theme 'Biotech & Pharma' score 54.9 (starter), contribution 77.3",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2360,16 +2388,14 @@
     {
       "symbol": "XOM",
       "action": "REDUCE",
-      "target_weight": 0.0181,
+      "target_weight": 0.0185,
       "current_weight": 0.0322,
-      "notional_delta": -1458.21,
-      "reason": "trimming on positive news flow \u2014 \"Why US Diesel Prices Could Stay High Even If Oil Tumbles: A Global Refinery Shortage\" \u00b7 overweight by 1.41% vs target \u2014 trim",
+      "notional_delta": -1416.81,
+      "reason": "overweight by 1.37% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.14%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 45.0 (starter), contribution 44.6",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Oil & Gas' score 45.5 (starter), contribution 45.1"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2396,10 +2422,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-11T06:57:05+00:00",
-      "v": 101558.64
-    },
     {
       "t": "2026-07-11T08:57:08+00:00",
       "v": 101558.55
@@ -4395,6 +4417,10 @@
     {
       "t": "2026-09-27T13:08:37+00:00",
       "v": 103493.62
+    },
+    {
+      "t": "2026-09-27T17:49:58+00:00",
+      "v": 103493.62
     }
   ],
   "breaking_news": [
@@ -4403,7 +4429,7 @@
       "summary": "Despite lower poverty overall, the rate for seniors has been steadily rising in recent years. A new AARP survey sheds light on how those over 50 are struggling in the crucial time before retirement.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/24/nx-s1-5979857/senior-adult-poverty-affordability",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4412,7 +4438,7 @@
       "summary": "Rates have climbed more than a full percentage point since the U.S. war against Iran started.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/24/nx-s1-5977796/mortgage-rates-freddie-mac-homebuying",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4421,17 +4447,8 @@
       "summary": "The most coveted real estate in business might just be the choicest shelf space of national big box retail. We go inside the room and the process of how stores choose what you can and can't buy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/24/nx-s1-5978930/how-stores-choose-what-to-put-on-their-shelves-like-say-planet-moneys-board-game",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "American farmers are hurting -- and worried about their futures",
-      "summary": "Farmers who grow soybeans, corn, cotton and other crops are facing another year of losses as soaring fuel and fertilizer costs offset higher revenues.",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/09/25/nx-s1-5979886/farmers-crops-economy-diesel-fertilizer",
-      "published_utc": "2026-09-27T13:08:40+00:00",
-      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4439,7 +4456,16 @@
       "summary": "The U.S. has tapped into its strategic oil reserve to help drive down rising gasoline prices in the wake of the war with Iran. Can oil from Venezuela help fill it back up?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/25/nx-s1-5965797/strategic-petroleum-reserve-low-level-venezuela",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "American farmers are hurting -- and worried about their futures",
+      "summary": "Farmers who grow soybeans, corn, cotton and other crops are facing another year of losses as soaring fuel and fertilizer costs offset higher revenues.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/09/25/nx-s1-5979886/farmers-crops-economy-diesel-fertilizer",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4448,7 +4474,7 @@
       "summary": "How does one price a cemetery plot? Are they using dynamic pricing to figure it out? We tackle that question and many more in this week's Indicator newsletter.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/09/25/nx-s1-5980393/why-this-pokemon-set-is-dropping-in-value",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4457,7 +4483,7 @@
       "summary": "In Houston, Aga's Indian-Pakistani restaurant serves around 4,000 meals a day and according to Uber Eats, it has the most takeout orders in the world on the their platform.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/25/nx-s1-5979107/agas-restaurant-in-houston-is-number-one-in-the-world-for-uber-eats-deliveries",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4466,25 +4492,34 @@
       "summary": "Tech companies are betting that people will connect with AI using something other than smartphones. Meta is going all-in on glasses, after launching its new AI agent Muse.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/27/nx-s1-5980407/everyone-is-racing-to-create-an-ai-device-meta-thinks-it-has-one",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "British national among six dead in building explosion close to Acropolis in Athens",
-      "summary": "Four Americans and a Greek national are among those killed in a suspected gas explosion, officials said.",
+      "headline": "'Scourge' of abuse must be rooted out, says Pope during Lourdes visit",
+      "summary": "Pope Leo spoke to bishops before leading a service attended by thousands of worshippers in France.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cm5y5nj8ejj8o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Nor'easter brings flooding as New York and New Jersey declare emergency",
-      "summary": "Tens of millions of people from Maine to Virginia are in the path of the powerful storm.",
+      "headline": "Venezuela releases dozens of political prisoners as election calls grow",
+      "summary": "A slew of dissidents being released from long-term detention comes days after the nation's interim leader met the US president.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c620lrw2xr12o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-27T17:50:02+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "One dead as nor'easter storm pummels New York and New Jersey",
+      "summary": "Tens of millions of people from Maine to Virginia found themselves in the path of the powerful weather system.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ck1wxxzn5jndo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4493,25 +4528,25 @@
       "summary": "The victims of the crash have not yet been identified, Quebec provincial police told the BBC.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c3grvv7p81lqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Ten climbers missing after avalanche hits Himalayan base camp",
-      "summary": "The Nepali team was preparing to take overseas climbers up the Himlung Himal peak.",
+      "headline": "Two bodies found after avalanche hits Himalayan climbing group",
+      "summary": "Rescuers are looking for at least 10 Nepalese people who were preparing to take climbers up the Himlung Himal peak.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwjdvml9e897o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Killer Christa Pike is to be executed within days but her defence say she's a victim too",
+      "headline": "Killer Christa Pike to be executed within days - but her defence say she's a victim too",
       "summary": "Lawyers for Pike, who killed a fellow student in 1995, say she should get clemency and would not be sentenced to death if the crime happened today.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6pwl9g9ne1lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4520,16 +4555,7 @@
       "summary": "The two attacks hours apart come as the country struggles to stop high levels of gang-related armed violence.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "'Scourge' of abuse must be rooted out, says Pope, during Lourdes visit",
-      "summary": "Pope Leo spoke to bishops before leading a service attended by thousands of worshippers in France.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cm5y5nj8ejj8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4538,7 +4564,7 @@
       "summary": "The foreign minister says Tehran is waiting for an official rejection of a deal, despite the US President's comments.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cmvgyyw2jeego?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4547,7 +4573,7 @@
       "summary": "The UK's busiest airport cautions it may miss the government target of 2035 as ministers say the deadline has \"always been ambitious\".",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/crx2zz401935o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4556,7 +4582,7 @@
       "summary": "What's the smallest amount of money you would ask a friend to pay you back?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cmly439q4y27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4565,7 +4591,7 @@
       "summary": "Where do America's X-plane projects fit in an era of cheap drones?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9q92x359xdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4574,7 +4600,7 @@
       "summary": "Premier League clubs are seeking legal advice as to whether they would have a compensation claim over the Manchester City 115 charges case.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/sport/football/articles/cr89jjwy4nqpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T13:08:40+00:00",
+      "published_utc": "2026-09-27T17:50:02+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
