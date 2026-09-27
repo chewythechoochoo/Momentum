@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-27T07:12:15+00:00",
+  "generated_at_utc": "2026-09-27T13:08:40+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 969,
-  "last_success_utc": "2026-09-27T01:47:10+00:00",
+  "cycle_count": 970,
+  "last_success_utc": "2026-09-27T07:12:15+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -561,14 +561,14 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 63.04,
-      "raw_score": 68.24,
+      "score": 66.04,
+      "raw_score": 71.24,
       "band": "buy",
-      "weight": 0.1109,
-      "confidence": 0.75,
+      "weight": 0.1231,
+      "confidence": 0.8,
       "components": {
         "momentum": 70.88,
-        "sentiment": 80.0,
+        "sentiment": 90.0,
         "volume": 54.44,
         "policy": 50.0,
         "volatility_penalty": 5.2
@@ -577,14 +577,14 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 59.53,
-      "raw_score": 64.6,
+      "score": 62.53,
+      "raw_score": 67.6,
       "band": "buy",
-      "weight": 0.095,
-      "confidence": 0.65,
+      "weight": 0.1063,
+      "confidence": 0.7,
       "components": {
         "momentum": 80.61,
-        "sentiment": 60.0,
+        "sentiment": 70.0,
         "volume": 46.78,
         "policy": 50.0,
         "volatility_penalty": 5.07
@@ -593,14 +593,14 @@
     {
       "key": "defense",
       "name": "Defense & Aerospace",
-      "score": 54.13,
-      "raw_score": 54.13,
+      "score": 54.01,
+      "raw_score": 54.01,
       "band": "starter",
-      "weight": 0.0971,
+      "weight": 0.0967,
       "confidence": 1.0,
       "components": {
         "momentum": 26.81,
-        "sentiment": 93.75,
+        "sentiment": 93.34,
         "volume": 51.41,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -609,33 +609,17 @@
     {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 50.95,
-      "raw_score": 64.66,
+      "score": 51.28,
+      "raw_score": 64.99,
       "band": "starter",
-      "weight": 0.0865,
+      "weight": 0.0876,
       "confidence": 1.0,
       "components": {
         "momentum": 58.72,
-        "sentiment": 88.89,
+        "sentiment": 90.0,
         "volume": 42.5,
         "policy": 60.0,
         "volatility_penalty": 13.71
-      }
-    },
-    {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 47.32,
-      "raw_score": 52.15,
-      "band": "starter",
-      "weight": 0.0632,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 43.84,
-        "sentiment": 70.0,
-        "volume": 43.07,
-        "policy": 50.0,
-        "volatility_penalty": 4.83
       }
     },
     {
@@ -668,6 +652,22 @@
         "volume": 62.26,
         "policy": 50.0,
         "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 44.32,
+      "raw_score": 49.15,
+      "band": "starter",
+      "weight": 0.0531,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 43.84,
+        "sentiment": 60.0,
+        "volume": 43.07,
+        "policy": 50.0,
+        "volatility_penalty": 4.83
       }
     },
     {
@@ -723,30 +723,28 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0315,
+      "target_weight": 0.0353,
       "current_weight": 0.0436,
-      "notional_delta": -1252.0,
-      "reason": "overweight by 1.21% vs target \u2014 trim",
+      "notional_delta": -858.72,
+      "reason": "overweight by 0.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.07%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 59.5 (buy), contribution 65.3"
+        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 68.3"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "AMD",
       "action": "HOLD",
-      "target_weight": 0.035,
+      "target_weight": 0.0389,
       "current_weight": 0.0399,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: Costco, KB Home, McDonald\u2019s\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=12.89%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 63.0 (buy), contribution 72.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'AI & Compute' score 66.0 (buy), contribution 75.3"
       ],
       "theme_key": "ai_compute"
     },
@@ -766,14 +764,14 @@
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.031,
+      "target_weight": 0.0348,
       "current_weight": 0.0451,
-      "notional_delta": -1458.41,
-      "reason": "overweight by 1.41% vs target \u2014 trim",
+      "notional_delta": -1065.13,
+      "reason": "overweight by 1.03% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.24%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 59.5 (buy), contribution 64.3"
+        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 67.3"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -793,14 +791,14 @@
     {
       "symbol": "BA",
       "action": "HOLD",
-      "target_weight": 0.0369,
+      "target_weight": 0.0368,
       "current_weight": 0.0327,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 64.6",
+        "theme 'Defense & Aerospace' score 54.0 (starter), contribution 64.5",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -836,14 +834,14 @@
     {
       "symbol": "CRWD",
       "action": "HOLD",
-      "target_weight": 0.029,
+      "target_weight": 0.0294,
       "current_weight": 0.0282,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Why Did CrowdStrike Holdings (CRWD) Move Today?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.25%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 51.0 (starter), contribution 63.9",
+        "theme 'Cybersecurity' score 51.3 (starter), contribution 64.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -913,14 +911,14 @@
     {
       "symbol": "FTNT",
       "action": "HOLD",
-      "target_weight": 0.0277,
+      "target_weight": 0.0281,
       "current_weight": 0.0318,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.51%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 51.0 (starter), contribution 61.0",
+        "theme 'Cybersecurity' score 51.3 (starter), contribution 61.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -944,14 +942,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0202,
+      "target_weight": 0.0169,
       "current_weight": 0.0335,
-      "notional_delta": -1372.48,
-      "reason": "trimming on positive news flow \u2014 \"Trump Declares \u2018America Is Back\u2019 as New Fuel Economy Standards \u2018Terminate\u2019 Biden-Era \u2018EV Mandate\u2019: \u2018Big Day for American Auto Workers\u2019\" \u00b7 overweight by 1.33% vs target \u2014 trim",
+      "notional_delta": -1714.01,
+      "reason": "trimming on positive news flow \u2014 \"Trump Declares \u2018America Is Back\u2019 as New Fuel Economy Standards \u2018Terminate\u2019 Biden-Era \u2018EV Mandate\u2019: \u2018Big Day for American Auto Workers\u2019\" \u00b7 overweight by 1.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.86%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 57.1",
+        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 54.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -963,10 +961,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.09,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Sam Altman, Dario Amodei Asked to Face Australian Senate After OpenAI AI Agent Breaches Medicare Portal\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.02%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -1046,14 +1046,14 @@
     {
       "symbol": "LMT",
       "action": "HOLD",
-      "target_weight": 0.0297,
+      "target_weight": 0.0296,
       "current_weight": 0.0296,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.71%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 52.0",
+        "theme 'Defense & Aerospace' score 54.0 (starter), contribution 51.8",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -1078,26 +1078,24 @@
       "target_weight": 0.0,
       "current_weight": 0.0307,
       "notional_delta": -3178.66,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: Costco, KB Home, McDonald\u2019s\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.26%",
-        "theme=Consumer Discretionary",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.038,
+      "target_weight": 0.0421,
       "current_weight": 0.0487,
-      "notional_delta": -1106.92,
-      "reason": "trimming on mixed news flow \u2014 \"Mark Zuckerberg Loses Nearly $9 Billion in One Day as Meta Stock Slides 4% After Goldman Questions AI Spending Payoff\" \u00b7 overweight by 1.07% vs target \u2014 trim",
+      "notional_delta": -682.59,
+      "reason": "trimming on mixed news flow \u2014 \"Mark Zuckerberg Loses Nearly $9 Billion in One Day as Meta Stock Slides 4% After Goldman Questions AI Spending Payoff\" \u00b7 overweight by 0.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=7.16%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 63.0 (buy), contribution 78.5",
+        "theme 'AI & Compute' score 66.0 (buy), contribution 81.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1132,14 +1130,14 @@
     {
       "symbol": "MSFT",
       "action": "HOLD",
-      "target_weight": 0.038,
+      "target_weight": 0.0422,
       "current_weight": 0.042,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.26%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 63.0 (buy), contribution 78.7"
+        "theme 'AI & Compute' score 66.0 (buy), contribution 81.7"
       ],
       "theme_key": "ai_compute"
     },
@@ -1180,7 +1178,7 @@
       "target_weight": 0.021,
       "current_weight": 0.0238,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Nike Stock Has Become Oversold. Will Upcoming Earnings Lead to a Reversal?\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Earnings Volatility Watch: Micron Sets The Week, But Six Other Stocks Are Priced To Swing More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.81%",
         "theme=Consumer Discretionary",
@@ -1223,14 +1221,14 @@
     {
       "symbol": "OKTA",
       "action": "HOLD",
-      "target_weight": 0.0297,
+      "target_weight": 0.0301,
       "current_weight": 0.0323,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"AI Pivot Can Give Okta (OKTA)\u2019s Growth Engine a Second Gear\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.72%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 51.0 (starter), contribution 65.4",
+        "theme 'Cybersecurity' score 51.3 (starter), contribution 65.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1294,28 +1292,28 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0221,
+      "target_weight": 0.0186,
       "current_weight": 0.0353,
-      "notional_delta": -1364.63,
-      "reason": "overweight by 1.32% vs target \u2014 trim",
+      "notional_delta": -1726.86,
+      "reason": "overweight by 1.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 62.5"
+        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 59.5"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.0305,
+      "target_weight": 0.0303,
       "current_weight": 0.0299,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.21%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 53.3",
+        "theme 'Defense & Aerospace' score 54.0 (starter), contribution 53.2",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -1385,40 +1383,40 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.19,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Consumer Tech (Sep 21-25): Meta Launches Muse & Smart Glasses, US-China Ensure AI Remains \"Under Human Control,\" & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=52.65%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0209,
+      "target_weight": 0.0176,
       "current_weight": 0.0344,
-      "notional_delta": -1396.3,
-      "reason": "trimming on mixed news flow \u2014 \"This Week in TSLA: Elon Musk Teases Tesla Roadster, FSD's Brussels Speed Limit Violations, And More\" \u00b7 overweight by 1.35% vs target \u2014 trim",
+      "notional_delta": -1737.83,
+      "reason": "overweight by 1.68% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.59%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 59.2",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 56.2"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0324,
+      "target_weight": 0.0362,
       "current_weight": 0.0468,
-      "notional_delta": -1490.56,
-      "reason": "overweight by 1.44% vs target \u2014 trim",
+      "notional_delta": -1097.29,
+      "reason": "overweight by 1.06% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.17%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 59.5 (buy), contribution 67.1"
+        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 70.1"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1485,14 +1483,14 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0315,
+      "target_weight": 0.0353,
       "current_weight": 0.0436,
-      "notional_delta": -1252.0,
-      "reason": "overweight by 1.21% vs target \u2014 trim",
+      "notional_delta": -858.72,
+      "reason": "overweight by 0.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.07%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 59.5 (buy), contribution 65.3"
+        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 68.3"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1502,16 +1500,14 @@
     {
       "symbol": "AMD",
       "action": "HOLD",
-      "target_weight": 0.035,
+      "target_weight": 0.0389,
       "current_weight": 0.0399,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Benzinga Bulls and Bears: Costco, KB Home, McDonald\u2019s\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=12.89%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 63.0 (buy), contribution 72.3",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'AI & Compute' score 66.0 (buy), contribution 75.3"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1537,14 +1533,14 @@
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.031,
+      "target_weight": 0.0348,
       "current_weight": 0.0451,
-      "notional_delta": -1458.41,
-      "reason": "overweight by 1.41% vs target \u2014 trim",
+      "notional_delta": -1065.13,
+      "reason": "overweight by 1.03% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.24%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 59.5 (buy), contribution 64.3"
+        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 67.3"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1570,14 +1566,14 @@
     {
       "symbol": "BA",
       "action": "HOLD",
-      "target_weight": 0.0369,
+      "target_weight": 0.0368,
       "current_weight": 0.0327,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.31%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 64.6",
+        "theme 'Defense & Aerospace' score 54.0 (starter), contribution 64.5",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -1622,14 +1618,14 @@
     {
       "symbol": "CRWD",
       "action": "HOLD",
-      "target_weight": 0.029,
+      "target_weight": 0.0294,
       "current_weight": 0.0282,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Why Did CrowdStrike Holdings (CRWD) Move Today?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.25%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 51.0 (starter), contribution 63.9",
+        "theme 'Cybersecurity' score 51.3 (starter), contribution 64.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1714,14 +1710,14 @@
     {
       "symbol": "FTNT",
       "action": "HOLD",
-      "target_weight": 0.0277,
+      "target_weight": 0.0281,
       "current_weight": 0.0318,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.51%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 51.0 (starter), contribution 61.0",
+        "theme 'Cybersecurity' score 51.3 (starter), contribution 61.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1751,14 +1747,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0202,
+      "target_weight": 0.0169,
       "current_weight": 0.0335,
-      "notional_delta": -1372.48,
-      "reason": "trimming on positive news flow \u2014 \"Trump Declares \u2018America Is Back\u2019 as New Fuel Economy Standards \u2018Terminate\u2019 Biden-Era \u2018EV Mandate\u2019: \u2018Big Day for American Auto Workers\u2019\" \u00b7 overweight by 1.33% vs target \u2014 trim",
+      "notional_delta": -1714.01,
+      "reason": "trimming on positive news flow \u2014 \"Trump Declares \u2018America Is Back\u2019 as New Fuel Economy Standards \u2018Terminate\u2019 Biden-Era \u2018EV Mandate\u2019: \u2018Big Day for American Auto Workers\u2019\" \u00b7 overweight by 1.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.86%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 57.1",
+        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 54.1",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1773,10 +1769,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.09,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Sam Altman, Dario Amodei Asked to Face Australian Senate After OpenAI AI Agent Breaches Medicare Portal\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.02%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1874,14 +1872,14 @@
     {
       "symbol": "LMT",
       "action": "HOLD",
-      "target_weight": 0.0297,
+      "target_weight": 0.0296,
       "current_weight": 0.0296,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.71%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 52.0",
+        "theme 'Defense & Aerospace' score 54.0 (starter), contribution 51.8",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -1912,12 +1910,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0307,
       "notional_delta": -3178.66,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: Costco, KB Home, McDonald\u2019s\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.26%",
-        "theme=Consumer Discretionary",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1927,14 +1923,14 @@
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.038,
+      "target_weight": 0.0421,
       "current_weight": 0.0487,
-      "notional_delta": -1106.92,
-      "reason": "trimming on mixed news flow \u2014 \"Mark Zuckerberg Loses Nearly $9 Billion in One Day as Meta Stock Slides 4% After Goldman Questions AI Spending Payoff\" \u00b7 overweight by 1.07% vs target \u2014 trim",
+      "notional_delta": -682.59,
+      "reason": "trimming on mixed news flow \u2014 \"Mark Zuckerberg Loses Nearly $9 Billion in One Day as Meta Stock Slides 4% After Goldman Questions AI Spending Payoff\" \u00b7 overweight by 0.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=7.16%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 63.0 (buy), contribution 78.5",
+        "theme 'AI & Compute' score 66.0 (buy), contribution 81.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1978,14 +1974,14 @@
     {
       "symbol": "MSFT",
       "action": "HOLD",
-      "target_weight": 0.038,
+      "target_weight": 0.0422,
       "current_weight": 0.042,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.26%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 63.0 (buy), contribution 78.7"
+        "theme 'AI & Compute' score 66.0 (buy), contribution 81.7"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2035,7 +2031,7 @@
       "target_weight": 0.021,
       "current_weight": 0.0238,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Nike Stock Has Become Oversold. Will Upcoming Earnings Lead to a Reversal?\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Earnings Volatility Watch: Micron Sets The Week, But Six Other Stocks Are Priced To Swing More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.81%",
         "theme=Consumer Discretionary",
@@ -2087,14 +2083,14 @@
     {
       "symbol": "OKTA",
       "action": "HOLD",
-      "target_weight": 0.0297,
+      "target_weight": 0.0301,
       "current_weight": 0.0323,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Okta's New Capabilities Should Help Accelerate Sales Growth, Macquarie Says\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"AI Pivot Can Give Okta (OKTA)\u2019s Growth Engine a Second Gear\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.72%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 51.0 (starter), contribution 65.4",
+        "theme 'Cybersecurity' score 51.3 (starter), contribution 65.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2173,14 +2169,14 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0221,
+      "target_weight": 0.0186,
       "current_weight": 0.0353,
-      "notional_delta": -1364.63,
-      "reason": "overweight by 1.32% vs target \u2014 trim",
+      "notional_delta": -1726.86,
+      "reason": "overweight by 1.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 62.5"
+        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 59.5"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2190,14 +2186,14 @@
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.0305,
+      "target_weight": 0.0303,
       "current_weight": 0.0299,
       "notional_delta": 0.0,
       "reason": "holding on negative news flow \u2014 \"A 737 MAX Software Glitch Gives Boeing Investors a Fresh Headache\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.21%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.1 (starter), contribution 53.3",
+        "theme 'Defense & Aerospace' score 54.0 (starter), contribution 53.2",
         "news_source=yahoo_rss",
         "news_sentiment=-0.20"
       ],
@@ -2282,10 +2278,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.19,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Consumer Tech (Sep 21-25): Meta Launches Muse & Smart Glasses, US-China Ensure AI Remains \"Under Human Control,\" & More\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=52.65%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2295,16 +2293,14 @@
     {
       "symbol": "TSLA",
       "action": "REDUCE",
-      "target_weight": 0.0209,
+      "target_weight": 0.0176,
       "current_weight": 0.0344,
-      "notional_delta": -1396.3,
-      "reason": "trimming on mixed news flow \u2014 \"This Week in TSLA: Elon Musk Teases Tesla Roadster, FSD's Brussels Speed Limit Violations, And More\" \u00b7 overweight by 1.35% vs target \u2014 trim",
+      "notional_delta": -1737.83,
+      "reason": "overweight by 1.68% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.59%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.3 (starter), contribution 59.2",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 44.3 (starter), contribution 56.2"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2314,14 +2310,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.0324,
+      "target_weight": 0.0362,
       "current_weight": 0.0468,
-      "notional_delta": -1490.56,
-      "reason": "overweight by 1.44% vs target \u2014 trim",
+      "notional_delta": -1097.29,
+      "reason": "overweight by 1.06% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.17%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 59.5 (buy), contribution 67.1"
+        "theme 'Semiconductors (Broad)' score 62.5 (buy), contribution 70.1"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2400,10 +2396,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-11T04:25:46+00:00",
-      "v": 101558.64
-    },
     {
       "t": "2026-07-11T06:57:05+00:00",
       "v": 101558.64
@@ -4399,24 +4391,19 @@
     {
       "t": "2026-09-27T07:12:11+00:00",
       "v": 103493.62
+    },
+    {
+      "t": "2026-09-27T13:08:37+00:00",
+      "v": 103493.62
     }
   ],
   "breaking_news": [
-    {
-      "headline": "eBay bans airbag sales as concerns about faulty or counterfeit parts rise",
-      "summary": "eBay became the latest online retailer to ban the sale of airbags and many of their components. Aftermarket parts can be risky if they turn out to be fake or defective.",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/09/24/nx-s1-5978124/ebay-bans-airbags-faulty-counterfeit-auto-parts",
-      "published_utc": "2026-09-27T07:12:15+00:00",
-      "sentiment_score": -0.2,
-      "is_policy": false
-    },
     {
       "headline": "The economic squeeze is pushing up poverty rates for older adults",
       "summary": "Despite lower poverty overall, the rate for seniors has been steadily rising in recent years. A new AARP survey sheds light on how those over 50 are struggling in the crucial time before retirement.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/24/nx-s1-5979857/senior-adult-poverty-affordability",
-      "published_utc": "2026-09-27T07:12:15+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4425,7 +4412,7 @@
       "summary": "Rates have climbed more than a full percentage point since the U.S. war against Iran started.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/24/nx-s1-5977796/mortgage-rates-freddie-mac-homebuying",
-      "published_utc": "2026-09-27T07:12:15+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4434,7 +4421,7 @@
       "summary": "The most coveted real estate in business might just be the choicest shelf space of national big box retail. We go inside the room and the process of how stores choose what you can and can't buy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/24/nx-s1-5978930/how-stores-choose-what-to-put-on-their-shelves-like-say-planet-moneys-board-game",
-      "published_utc": "2026-09-27T07:12:15+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4443,7 +4430,7 @@
       "summary": "Farmers who grow soybeans, corn, cotton and other crops are facing another year of losses as soaring fuel and fertilizer costs offset higher revenues.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/25/nx-s1-5979886/farmers-crops-economy-diesel-fertilizer",
-      "published_utc": "2026-09-27T07:12:15+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4452,7 +4439,7 @@
       "summary": "The U.S. has tapped into its strategic oil reserve to help drive down rising gasoline prices in the wake of the war with Iran. Can oil from Venezuela help fill it back up?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/25/nx-s1-5965797/strategic-petroleum-reserve-low-level-venezuela",
-      "published_utc": "2026-09-27T07:12:15+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4461,7 +4448,7 @@
       "summary": "How does one price a cemetery plot? Are they using dynamic pricing to figure it out? We tackle that question and many more in this week's Indicator newsletter.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/09/25/nx-s1-5980393/why-this-pokemon-set-is-dropping-in-value",
-      "published_utc": "2026-09-27T07:12:15+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4470,16 +4457,25 @@
       "summary": "In Houston, Aga's Indian-Pakistani restaurant serves around 4,000 meals a day and according to Uber Eats, it has the most takeout orders in the world on the their platform.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/09/25/nx-s1-5979107/agas-restaurant-in-houston-is-number-one-in-the-world-for-uber-eats-deliveries",
-      "published_utc": "2026-09-27T07:12:15+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Republic of Ireland to wear black armbands for Israel game",
-      "summary": "Republic of Ireland players intend to wear black armbands \"in recognition of all lives lost in the [Gaza] conflict\" for match against Israel.",
+      "headline": "Everyone is racing to create an AI device. Meta thinks it has one",
+      "summary": "Tech companies are betting that people will connect with AI using something other than smartphones. Meta is going all-in on glasses, after launching its new AI agent Muse.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/09/27/nx-s1-5980407/everyone-is-racing-to-create-an-ai-device-meta-thinks-it-has-one",
+      "published_utc": "2026-09-27T13:08:40+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "British national among six dead in building explosion close to Acropolis in Athens",
+      "summary": "Four Americans and a Greek national are among those killed in a suspected gas explosion, officials said.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/sport/football/articles/ckddvv5dn4eyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4488,34 +4484,7 @@
       "summary": "Tens of millions of people from Maine to Virginia are in the path of the powerful storm.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ck1wxxzn5jndo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "German town bans 'stumbling stone' memorials to Nazi victims",
-      "summary": "Germany's education minister has branded the ban on the small brass memorial plaques a \"scandal\".",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cqm2mm4y5dkko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
-      "sentiment_score": -0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "British national among six dead in building explosion close to Acropolis in Athens",
-      "summary": "Four Americans and a Greek national are among those killed in a suspected gas explosion, officials said.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Pope praises young people's 'energy and commitment' at huge open-air Mass in Paris",
-      "summary": "Around 700,000 people gathered in central Paris to hear the Catholic leader speak and offer prayer.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cm4gjjwvvlzro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4524,43 +4493,70 @@
       "summary": "The victims of the crash have not yet been identified, Quebec provincial police told the BBC.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c3grvv7p81lqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Christa Pike to be first woman executed in Tennessee in 200 years - but her defence say she's a victim too",
+      "headline": "Ten climbers missing after avalanche hits Himalayan base camp",
+      "summary": "The Nepali team was preparing to take overseas climbers up the Himlung Himal peak.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cwjdvml9e897o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-27T13:08:40+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Killer Christa Pike is to be executed within days but her defence say she's a victim too",
       "summary": "Lawyers for Pike, who killed a fellow student in 1995, say she should get clemency and would not be sentenced to death if the crime happened today.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6pwl9g9ne1lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Iran waiting for official US response after Trump rejects Hormuz deal, minister says",
-      "summary": "The foreign minister says the US has not officially rejected the deal, despite comments from Donald Trump on Saturday.",
+      "headline": "Two mass shootings in South Africa leave 27 dead",
+      "summary": "The two attacks hours apart come as the country struggles to stop high levels of gang-related armed violence.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-27T13:08:40+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "'Scourge' of abuse must be rooted out, says Pope, during Lourdes visit",
+      "summary": "Pope Leo spoke to bishops before leading a service attended by thousands of worshippers in France.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cm5y5nj8ejj8o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-27T13:08:40+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Iranian minister says only negotiation can end conflict after Trump rejects Hormuz deal",
+      "summary": "The foreign minister says Tehran is waiting for an official rejection of a deal, despite the US President's comments.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cmvgyyw2jeego?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "US backs Elon Musk's bid to overturn \u20ac120m EU fine against X",
-      "summary": "The EU had said X \"deceives users\" by selling blue ticks without \"meaningfully verifying\" accounts.",
+      "headline": "Heathrow Airport warns third runway could be delayed by four years",
+      "summary": "The UK's busiest airport cautions it may miss the government target of 2035 as ministers say the deadline has \"always been ambitious\".",
       "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cq0m373ee0v0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
-      "sentiment_score": 0.0,
+      "url": "https://www.bbc.co.uk/news/articles/crx2zz401935o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-27T13:08:40+00:00",
+      "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "Sir David Beckham nets \u00a338.5m after World Cup ad deals",
-      "summary": "His stake in DRJB Holdings has entitled him to almost half of its \u00a385.5m in dividend payments.",
+      "headline": "'We're all broke': Would you chase a friend for \u00a35?",
+      "summary": "What's the smallest amount of money you would ask a friend to pay you back?",
       "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/crkgww5j0yzwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cmly439q4y27o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4569,16 +4565,16 @@
       "summary": "Where do America's X-plane projects fit in an era of cheap drones?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9q92x359xdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "'We're all broke': Would you chase a friend for \u00a35?",
-      "summary": "What's the smallest amount of money you would ask a friend to pay you back?",
+      "headline": "Clubs seek legal advice over Man City charges compensation",
+      "summary": "Premier League clubs are seeking legal advice as to whether they would have a compensation claim over the Manchester City 115 charges case.",
       "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cmly439q4y27o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-09-27T07:12:14+00:00",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cr89jjwy4nqpo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-09-27T13:08:40+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
