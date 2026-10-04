@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-04T11:21:16+00:00",
+  "generated_at_utc": "2026-10-04T15:54:00+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1004,
-  "last_success_utc": "2026-10-04T05:44:44+00:00",
+  "cycle_count": 1005,
+  "last_success_utc": "2026-10-04T11:21:16+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -551,14 +551,14 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 70.45,
-      "raw_score": 75.03,
-      "band": "strong_buy",
-      "weight": 0.1319,
-      "confidence": 0.75,
+      "score": 67.45,
+      "raw_score": 72.03,
+      "band": "buy",
+      "weight": 0.1203,
+      "confidence": 0.7,
       "components": {
         "momentum": 90.81,
-        "sentiment": 80.0,
+        "sentiment": 70.0,
         "volume": 48.5,
         "policy": 50.0,
         "volatility_penalty": 4.57
@@ -581,22 +581,6 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 57.04,
-      "raw_score": 57.04,
-      "band": "buy",
-      "weight": 0.1015,
-      "confidence": 0.9,
-      "components": {
-        "momentum": 26.66,
-        "sentiment": 100.0,
-        "volume": 56.89,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
       "score": 55.66,
@@ -613,18 +597,18 @@
       }
     },
     {
-      "key": "defense",
-      "name": "Defense & Aerospace",
-      "score": 53.03,
-      "raw_score": 53.03,
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 51.04,
+      "raw_score": 51.04,
       "band": "starter",
-      "weight": 0.0934,
-      "confidence": 1.0,
+      "weight": 0.076,
+      "confidence": 0.75,
       "components": {
-        "momentum": 23.83,
-        "sentiment": 86.66,
-        "volume": 59.97,
-        "policy": 55.0,
+        "momentum": 26.66,
+        "sentiment": 80.0,
+        "volume": 56.89,
+        "policy": 50.0,
         "volatility_penalty": 0.0
       }
     },
@@ -647,17 +631,33 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 43.17,
-      "raw_score": 49.12,
+      "score": 42.67,
+      "raw_score": 48.62,
       "band": "starter",
-      "weight": 0.0606,
+      "weight": 0.0589,
       "confidence": 1.0,
       "components": {
         "momentum": 43.56,
         "sentiment": 46.16,
         "volume": 49.28,
-        "policy": 80.0,
+        "policy": 75.0,
         "volatility_penalty": 5.96
+      }
+    },
+    {
+      "key": "defense",
+      "name": "Defense & Aerospace",
+      "score": 41.53,
+      "raw_score": 41.53,
+      "band": "starter",
+      "weight": 0.0455,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 23.83,
+        "sentiment": 50.0,
+        "volume": 59.97,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -679,16 +679,16 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 38.01,
-      "raw_score": 53.95,
+      "score": 38.94,
+      "raw_score": 54.89,
       "band": "hold_small",
-      "weight": 0.0381,
+      "weight": 0.0436,
       "confidence": 1.0,
       "components": {
         "momentum": 26.25,
-        "sentiment": 92.31,
+        "sentiment": 93.75,
         "volume": 51.31,
-        "policy": 55.0,
+        "policy": 60.0,
         "volatility_penalty": 15.94
       }
     },
@@ -699,7 +699,7 @@
       "raw_score": 38.78,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.65,
+      "confidence": 0.75,
       "components": {
         "momentum": 20.64,
         "sentiment": 50.0,
@@ -713,14 +713,14 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0421,
+      "target_weight": 0.0384,
       "current_weight": 0.0537,
-      "notional_delta": -1201.82,
-      "reason": "overweight by 1.16% vs target \u2014 trim",
+      "notional_delta": -1584.31,
+      "reason": "overweight by 1.53% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=12.58%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 70.5 (strong_buy), contribution 72.3"
+        "theme 'Semiconductors (Broad)' score 67.5 (buy), contribution 69.3"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -730,26 +730,24 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.38,
-      "reason": "exiting on mixed news flow \u2014 \"Micron, Nike, Meta and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.47%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "AMZN",
-      "action": "BUY",
-      "target_weight": 0.0368,
+      "action": "HOLD",
+      "target_weight": 0.0278,
       "current_weight": 0.0233,
-      "notional_delta": 1391.48,
-      "reason": "buying on positive news flow \u2014 \"Trump Defends Data Centers at Ohio Rally: 'You Can't Just Turn Them Off. They'll Go to China'\" \u00b7 underweight by 1.35% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Trump Defends Data Centers at Ohio Rally: 'You Can't Just Turn Them Off. They'll Go to China'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.14%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 67.9",
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 61.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -758,14 +756,14 @@
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.0448,
+      "target_weight": 0.0408,
       "current_weight": 0.0538,
-      "notional_delta": -934.74,
-      "reason": "overweight by 0.90% vs target \u2014 trim",
+      "notional_delta": -1348.25,
+      "reason": "overweight by 1.30% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=7.23%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 70.5 (strong_buy), contribution 76.8"
+        "theme 'Semiconductors (Broad)' score 67.5 (buy), contribution 73.8"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -786,17 +784,17 @@
     },
     {
       "symbol": "BA",
-      "action": "HOLD",
-      "target_weight": 0.033,
+      "action": "REDUCE",
+      "target_weight": 0.0163,
       "current_weight": 0.0331,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1737.09,
+      "reason": "trimming on mixed news flow \u2014 \"Boeing Avoids Strike As Musk Takes Aim At Delta, Tesla Delays Roadster Reveal and Ford Sales Slide: This Week In Mobility\" \u00b7 overweight by 1.68% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.53%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 57.8",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 41.5 (starter), contribution 46.3",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "defense"
     },
@@ -863,14 +861,14 @@
     {
       "symbol": "ENPH",
       "action": "BUY",
-      "target_weight": 0.0228,
+      "target_weight": 0.0222,
       "current_weight": 0.0049,
-      "notional_delta": 1849.23,
-      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.79% vs target \u2014 add",
+      "notional_delta": 1787.2,
+      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.73% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.86%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 43.2 (starter), contribution 60.1",
+        "theme 'Clean Energy' score 42.7 (starter), contribution 59.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -882,10 +880,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.31,
-      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"Boeing Avoids Strike As Musk Takes Aim At Delta, Tesla Delays Roadster Reveal and Ford Sales Slide: This Week In Mobility\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.08%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -922,17 +922,15 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.0314,
+      "action": "REDUCE",
+      "target_weight": 0.0153,
       "current_weight": 0.0317,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1692.08,
+      "reason": "overweight by 1.64% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.55%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 55.1",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 41.5 (starter), contribution 43.6"
       ],
       "theme_key": "defense"
     },
@@ -955,7 +953,7 @@
       "target_weight": 0.037,
       "current_weight": 0.0357,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Elizabeth Warren Targets Trump, Big Tech Over 'Massive Tax Breaks' for AI and Data Centers: 'People... Are Worried About AI'\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"President Trump On Sunday, Announced Formation Of Super Intelligence Force To Coordinate Federal Government Super Intelligence Efforts, Led \" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.35%",
         "theme=AI & Compute",
@@ -1023,14 +1021,14 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0129,
+      "target_weight": 0.0147,
       "current_weight": 0.0029,
-      "notional_delta": 1029.44,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 1.00% vs target \u2014 add",
+      "notional_delta": 1215.52,
+      "reason": "buying on positive news flow \u2014 \"Amgen vs. Vertex Pharmaceuticals: Which Biotech Stock Is a Better Buy in 2026?\" \u00b7 underweight by 1.18% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.70%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 49.5",
+        "theme 'Biotech & Pharma' score 38.9 (hold_small), contribution 50.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1042,12 +1040,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0267,
       "notional_delta": -2764.12,
-      "reason": "exiting on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.72%",
-        "theme=Defense & Aerospace",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense"
     },
@@ -1066,15 +1062,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "BUY",
-      "target_weight": 0.0305,
+      "action": "HOLD",
+      "target_weight": 0.0226,
       "current_weight": 0.0181,
-      "notional_delta": 1287.01,
-      "reason": "underweight by 1.24% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.19%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 56.4"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 50.4"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1099,7 +1095,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0013,
       "notional_delta": -135.9,
-      "reason": "exiting on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Amgen vs. Vertex Pharmaceuticals: Which Biotech Stock Is a Better Buy in 2026?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=3.07%",
         "theme=Biotech & Pharma",
@@ -1156,14 +1152,14 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.022,
+      "target_weight": 0.0215,
       "current_weight": 0.0048,
-      "notional_delta": 1781.25,
-      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.72% vs target \u2014 add",
+      "notional_delta": 1729.57,
+      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.67% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.69%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 43.2 (starter), contribution 58.2",
+        "theme 'Clean Energy' score 42.7 (starter), contribution 57.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1175,12 +1171,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.84,
-      "reason": "exiting on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.81%",
-        "theme=Defense & Aerospace",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense"
     },
@@ -1250,14 +1244,14 @@
     {
       "symbol": "PFE",
       "action": "BUY",
-      "target_weight": 0.0132,
+      "target_weight": 0.0151,
       "current_weight": 0.0036,
-      "notional_delta": 991.12,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 0.96% vs target \u2014 add",
+      "notional_delta": 1187.54,
+      "reason": "buying on positive news flow \u2014 \"Amgen vs. Vertex Pharmaceuticals: Which Biotech Stock Is a Better Buy in 2026?\" \u00b7 underweight by 1.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.17%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 50.7",
+        "theme 'Biotech & Pharma' score 38.9 (hold_small), contribution 51.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1269,7 +1263,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.19,
-      "reason": "exiting on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Amgen vs. Vertex Pharmaceuticals: Which Biotech Stock Is a Better Buy in 2026?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=9.42%",
         "theme=Biotech & Pharma",
@@ -1293,17 +1287,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.029,
+      "action": "REDUCE",
+      "target_weight": 0.0138,
       "current_weight": 0.0331,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1991.06,
+      "reason": "overweight by 1.93% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-3.15%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 50.9",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 41.5 (starter), contribution 39.4"
       ],
       "theme_key": "defense"
     },
@@ -1324,29 +1316,29 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0342,
+      "action": "HOLD",
+      "target_weight": 0.0256,
       "current_weight": 0.0209,
-      "notional_delta": 1370.35,
-      "reason": "underweight by 1.33% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.02%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 63.1"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 57.1"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "SEDG",
       "action": "BUY",
-      "target_weight": 0.0158,
+      "target_weight": 0.0153,
       "current_weight": 0.0,
-      "notional_delta": 1632.96,
-      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.58% vs target \u2014 add",
+      "notional_delta": 1581.27,
+      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.53% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-7.23%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 43.2 (starter), contribution 41.6",
+        "theme 'Clean Energy' score 42.7 (starter), contribution 41.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1386,7 +1378,7 @@
       "target_weight": 0.012,
       "current_weight": 0.0239,
       "notional_delta": -1237.48,
-      "reason": "trimming on mixed news flow \u2014 \"Tesla Robotaxi's Nighttime Problem? Elon Musk Says It's 'Grey Kittens on Grey Tarmac'\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"This Week in TSLA: Elon Musk Trims Optimus Memory, Roadster Delays And More\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.19%",
         "theme=EV & Clean Transport",
@@ -1398,28 +1390,28 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.045,
+      "target_weight": 0.0411,
       "current_weight": 0.0516,
-      "notional_delta": -678.76,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -1081.93,
+      "reason": "overweight by 1.05% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=5.66%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 70.5 (strong_buy), contribution 77.2"
+        "theme 'Semiconductors (Broad)' score 67.5 (buy), contribution 74.2"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.012,
+      "target_weight": 0.0138,
       "current_weight": 0.0034,
-      "notional_delta": 889.79,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 0.86% vs target \u2014 add",
+      "notional_delta": 1075.87,
+      "reason": "buying on positive news flow \u2014 \"Amgen vs. Vertex Pharmaceuticals: Which Biotech Stock Is a Better Buy in 2026?\" \u00b7 underweight by 1.04% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.44%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 46.2",
+        "theme 'Biotech & Pharma' score 38.9 (hold_small), contribution 47.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1475,14 +1467,14 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0421,
+      "target_weight": 0.0384,
       "current_weight": 0.0537,
-      "notional_delta": -1201.82,
-      "reason": "overweight by 1.16% vs target \u2014 trim",
+      "notional_delta": -1584.31,
+      "reason": "overweight by 1.53% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=12.58%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 70.5 (strong_buy), contribution 72.3"
+        "theme 'Semiconductors (Broad)' score 67.5 (buy), contribution 69.3"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1495,12 +1487,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.38,
-      "reason": "exiting on mixed news flow \u2014 \"Micron, Nike, Meta and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.47%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1509,15 +1499,15 @@
     },
     {
       "symbol": "AMZN",
-      "action": "BUY",
-      "target_weight": 0.0368,
+      "action": "HOLD",
+      "target_weight": 0.0278,
       "current_weight": 0.0233,
-      "notional_delta": 1391.48,
-      "reason": "buying on positive news flow \u2014 \"Trump Defends Data Centers at Ohio Rally: 'You Can't Just Turn Them Off. They'll Go to China'\" \u00b7 underweight by 1.35% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Trump Defends Data Centers at Ohio Rally: 'You Can't Just Turn Them Off. They'll Go to China'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.14%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 67.9",
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 61.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1529,14 +1519,14 @@
     {
       "symbol": "ASML",
       "action": "REDUCE",
-      "target_weight": 0.0448,
+      "target_weight": 0.0408,
       "current_weight": 0.0538,
-      "notional_delta": -934.74,
-      "reason": "overweight by 0.90% vs target \u2014 trim",
+      "notional_delta": -1348.25,
+      "reason": "overweight by 1.30% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=7.23%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 70.5 (strong_buy), contribution 76.8"
+        "theme 'Semiconductors (Broad)' score 67.5 (buy), contribution 73.8"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1563,17 +1553,17 @@
     },
     {
       "symbol": "BA",
-      "action": "HOLD",
-      "target_weight": 0.033,
+      "action": "REDUCE",
+      "target_weight": 0.0163,
       "current_weight": 0.0331,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1737.09,
+      "reason": "trimming on mixed news flow \u2014 \"Boeing Avoids Strike As Musk Takes Aim At Delta, Tesla Delays Roadster Reveal and Ford Sales Slide: This Week In Mobility\" \u00b7 overweight by 1.68% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.53%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 57.8",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 41.5 (starter), contribution 46.3",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1655,14 +1645,14 @@
     {
       "symbol": "ENPH",
       "action": "BUY",
-      "target_weight": 0.0228,
+      "target_weight": 0.0222,
       "current_weight": 0.0049,
-      "notional_delta": 1849.23,
-      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.79% vs target \u2014 add",
+      "notional_delta": 1787.2,
+      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.73% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.86%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 43.2 (starter), contribution 60.1",
+        "theme 'Clean Energy' score 42.7 (starter), contribution 59.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1677,10 +1667,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.31,
-      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"Boeing Avoids Strike As Musk Takes Aim At Delta, Tesla Delays Roadster Reveal and Ford Sales Slide: This Week In Mobility\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.08%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1726,17 +1718,15 @@
     },
     {
       "symbol": "GD",
-      "action": "HOLD",
-      "target_weight": 0.0314,
+      "action": "REDUCE",
+      "target_weight": 0.0153,
       "current_weight": 0.0317,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1692.08,
+      "reason": "overweight by 1.64% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.55%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 55.1",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 41.5 (starter), contribution 43.6"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1765,7 +1755,7 @@
       "target_weight": 0.037,
       "current_weight": 0.0357,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Elizabeth Warren Targets Trump, Big Tech Over 'Massive Tax Breaks' for AI and Data Centers: 'People... Are Worried About AI'\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"President Trump On Sunday, Announced Formation Of Super Intelligence Force To Coordinate Federal Government Super Intelligence Efforts, Led \" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.35%",
         "theme=AI & Compute",
@@ -1848,14 +1838,14 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0129,
+      "target_weight": 0.0147,
       "current_weight": 0.0029,
-      "notional_delta": 1029.44,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 1.00% vs target \u2014 add",
+      "notional_delta": 1215.52,
+      "reason": "buying on positive news flow \u2014 \"Amgen vs. Vertex Pharmaceuticals: Which Biotech Stock Is a Better Buy in 2026?\" \u00b7 underweight by 1.18% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.70%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 49.5",
+        "theme 'Biotech & Pharma' score 38.9 (hold_small), contribution 50.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1870,12 +1860,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0267,
       "notional_delta": -2764.12,
-      "reason": "exiting on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-3.72%",
-        "theme=Defense & Aerospace",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1900,15 +1888,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "BUY",
-      "target_weight": 0.0305,
+      "action": "HOLD",
+      "target_weight": 0.0226,
       "current_weight": 0.0181,
-      "notional_delta": 1287.01,
-      "reason": "underweight by 1.24% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.19%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 56.4"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 50.4"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1939,7 +1927,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0013,
       "notional_delta": -135.9,
-      "reason": "exiting on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Amgen vs. Vertex Pharmaceuticals: Which Biotech Stock Is a Better Buy in 2026?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=3.07%",
         "theme=Biotech & Pharma",
@@ -2008,14 +1996,14 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.022,
+      "target_weight": 0.0215,
       "current_weight": 0.0048,
-      "notional_delta": 1781.25,
-      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.72% vs target \u2014 add",
+      "notional_delta": 1729.57,
+      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.67% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.69%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 43.2 (starter), contribution 58.2",
+        "theme 'Clean Energy' score 42.7 (starter), contribution 57.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2030,12 +2018,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.84,
-      "reason": "exiting on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.81%",
-        "theme=Defense & Aerospace",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Defense & Aerospace"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2120,14 +2106,14 @@
     {
       "symbol": "PFE",
       "action": "BUY",
-      "target_weight": 0.0132,
+      "target_weight": 0.0151,
       "current_weight": 0.0036,
-      "notional_delta": 991.12,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 0.96% vs target \u2014 add",
+      "notional_delta": 1187.54,
+      "reason": "buying on positive news flow \u2014 \"Amgen vs. Vertex Pharmaceuticals: Which Biotech Stock Is a Better Buy in 2026?\" \u00b7 underweight by 1.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.17%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 50.7",
+        "theme 'Biotech & Pharma' score 38.9 (hold_small), contribution 51.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2142,7 +2128,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.19,
-      "reason": "exiting on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Amgen vs. Vertex Pharmaceuticals: Which Biotech Stock Is a Better Buy in 2026?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=9.42%",
         "theme=Biotech & Pharma",
@@ -2172,17 +2158,15 @@
     },
     {
       "symbol": "RTX",
-      "action": "HOLD",
-      "target_weight": 0.029,
+      "action": "REDUCE",
+      "target_weight": 0.0138,
       "current_weight": 0.0331,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1991.06,
+      "reason": "overweight by 1.93% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-3.15%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 50.9",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 41.5 (starter), contribution 39.4"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2209,15 +2193,15 @@
     },
     {
       "symbol": "SBUX",
-      "action": "BUY",
-      "target_weight": 0.0342,
+      "action": "HOLD",
+      "target_weight": 0.0256,
       "current_weight": 0.0209,
-      "notional_delta": 1370.35,
-      "reason": "underweight by 1.33% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.02%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 57.0 (buy), contribution 63.1"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 57.1"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2227,14 +2211,14 @@
     {
       "symbol": "SEDG",
       "action": "BUY",
-      "target_weight": 0.0158,
+      "target_weight": 0.0153,
       "current_weight": 0.0,
-      "notional_delta": 1632.96,
-      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.58% vs target \u2014 add",
+      "notional_delta": 1581.27,
+      "reason": "buying on positive news flow \u2014 \"Dominion Energy vs. NextEra Energy: One Dividend Strategy Will Crush the Other\" \u00b7 underweight by 1.53% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-7.23%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 43.2 (starter), contribution 41.6",
+        "theme 'Clean Energy' score 42.7 (starter), contribution 41.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2283,7 +2267,7 @@
       "target_weight": 0.012,
       "current_weight": 0.0239,
       "notional_delta": -1237.48,
-      "reason": "trimming on mixed news flow \u2014 \"Tesla Robotaxi's Nighttime Problem? Elon Musk Says It's 'Grey Kittens on Grey Tarmac'\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"This Week in TSLA: Elon Musk Trims Optimus Memory, Roadster Delays And More\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.19%",
         "theme=EV & Clean Transport",
@@ -2298,14 +2282,14 @@
     {
       "symbol": "TSM",
       "action": "REDUCE",
-      "target_weight": 0.045,
+      "target_weight": 0.0411,
       "current_weight": 0.0516,
-      "notional_delta": -678.76,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -1081.93,
+      "reason": "overweight by 1.05% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=5.66%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 70.5 (strong_buy), contribution 77.2"
+        "theme 'Semiconductors (Broad)' score 67.5 (buy), contribution 74.2"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2315,14 +2299,14 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.012,
+      "target_weight": 0.0138,
       "current_weight": 0.0034,
-      "notional_delta": 889.79,
-      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 0.86% vs target \u2014 add",
+      "notional_delta": 1075.87,
+      "reason": "buying on positive news flow \u2014 \"Amgen vs. Vertex Pharmaceuticals: Which Biotech Stock Is a Better Buy in 2026?\" \u00b7 underweight by 1.04% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.44%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 46.2",
+        "theme 'Biotech & Pharma' score 38.9 (hold_small), contribution 47.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2387,10 +2371,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-13T13:10:13+00:00",
-      "v": 101488.37
-    },
     {
       "t": "2026-07-13T16:01:19+00:00",
       "v": 100808.17
@@ -4386,24 +4366,19 @@
     {
       "t": "2026-10-04T11:21:11+00:00",
       "v": 103377.61
+    },
+    {
+      "t": "2026-10-04T15:53:57+00:00",
+      "v": 103377.61
     }
   ],
   "breaking_news": [
-    {
-      "headline": "Breweries adapt as tastes in beer change",
-      "summary": "The craft beer market is saturated and tastes are changing. Brewers are coming with innovative ways to attract customers.",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/10/01/nx-s1-5973297/breweries-adapt-as-tastes-in-beer-change",
-      "published_utc": "2026-10-04T11:21:16+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
     {
       "headline": "The U.S. Senate is up for grabs. Can this Ohio Democrat win back working class votes?",
       "summary": "After 32 years in Congress, Ohio's Sherrod Brown lost his Senate seat in 2024 as many working class voters turned out for Trump. Now Brown is counting on union voters to send him back to Washington.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/02/nx-s1-5981096/ohio-senate-sherrod-brown-labor-workers",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:54:00+00:00",
       "sentiment_score": 0.2,
       "is_policy": true
     },
@@ -4412,7 +4387,7 @@
       "summary": "San Francisco leaders say AI-powered cameras helped drive a dramatic decline in car crime. We examine the evidence \u2014 and whether the city can keep its high-tech dragnet without sacrificing civil liberties.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/10/02/g-s1-146060/san-franciscos-car-crime-has-plunged-how-much-credit-does-flock-deserve",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:54:00+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4421,7 +4396,7 @@
       "summary": "Diesel hasn't always been more expensive than other gasoline. Then in 2004, a switch happened due to air quality standards, demand, and taxes. In this week's Indicator newsletter, we dig into diesel prices, what kind of fun people are buyin",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/10/02/nx-s1-5988075/why-is-diesel-more-expensive-than-regular-gas",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:54:00+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4430,7 +4405,7 @@
       "summary": "U.S. employers added 29,000 jobs in September as the unemployment rate inched up to 4.2%. Job gains for July and August were revised down by a total of 60,000 jobs, extending a lackluster run for the job market.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/02/nx-s1-5989140/jobs-labor-wages-federal-reserve",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:54:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4439,7 +4414,7 @@
       "summary": "The lawsuit says the prominent conservative podcaster falsely claimed the protesters were assaulting ICE officers during demonstrations at an ICE facility in Illinois last year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/02/nx-s1-5989413/benny-johnson-defamation-lawsuit-ice-protesters",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:54:00+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4448,7 +4423,7 @@
       "summary": "The U.S. economy added fewer jobs than expected last month and unemployment ticked up to 4.2%. NPR's Scott Simon talks to Betsey Stevenson, an economist at the University of Michigan.<br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/03/nx-s1-5989546/economist-betsey-stevenson-breaks-down-the-gender-gap-in-recent-hiring-reports",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:54:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4457,43 +4432,16 @@
       "summary": "The family members of two Fox News journalists killed while covering the war in Ukraine are suing the network, saying it put getting the story ahead of its people.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/04/nx-s1-5737621/fox-news-ukraine-deaths",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:54:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "US father and son arrested after 'gas station heroin' deaths",
-      "summary": "They are accused of selling at least one student derivatives of kratom, often called \"gas station heroin\" in the US.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c6qjnlk4r2jjo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Debris found from plane that went missing off US coast",
-      "summary": "The aircraft lost communication with flight controllers after significantly dropping in altitude, according to flight data.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cme3x85013llo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "What to know about Brazil's election pitting Lula against Fl\u00e1vio Bolsonaro",
-      "summary": "Polls suggest the election will be a closely run contest between the left-wing incumbent and his right-wing rival.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c6wyz0r2n0djo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "'Anger in the streets': Tens of thousands protest in Spain over housing crisis",
-      "summary": "More than 50 protests took place on Saturday after the government failed to get emergency legislation through parliament.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "headline": "G7 countries reluctantly agree to tap their fuel reserves to help the U.S.",
+      "summary": "G7 nations plan to release large amounts of diesel fuel soon, but European countries were not entirely happy about the agreement.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/10/04/nx-s1-5989670/g7-countries-reluctantly-agree-to-tap-their-fuel-reserves-to-help-the-u-s",
+      "published_utc": "2026-10-04T15:54:00+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4502,16 +4450,25 @@
       "summary": "Michael Kotlikoff described the allegations of a woman who says she was drugged and gang raped as \"deeply disturbing\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckly0leelnz4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:53:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Tennessee prison chief to resign after Christa Pike's failed execution",
-      "summary": "Pike's lawyers said the failure \"goes far beyond any one person\". Pike is in critical condition after surviving two lethal injections.",
+      "headline": "What to know about Brazil's election pitting Lula against Fl\u00e1vio Bolsonaro",
+      "summary": "Polls suggest the election will be a closely run contest between the left-wing incumbent and his right-wing rival.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c6wyz0r2n0djo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-04T15:53:59+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "US Marine arrested over murder of woman in Okinawa, Japan",
+      "summary": "Japan's government lodged a formal protest with the US, demanding that military officials take action.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cme3xw4yy28do?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-04T15:53:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4520,16 +4477,43 @@
       "summary": "State police and the country's security agency are looking into the co-pilot, who attempted to take control of a Flydubai plane travelling to Israel.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cxly4nym57q9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:53:59+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Ethiopian rebel forces withdraw from Tigray regional capital",
+      "summary": "Two residents in Mekelle tell the BBC pro-government forces have taken control of the city.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-04T15:53:59+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Yemen announces military campaign to reclaim land from Iran-backed Houthis",
+      "summary": "The Yemeni president's announcement comes amid an exchange of strikes between the Houthis and the Saudi-led coalition.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cx8dzj9vpp01o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-04T15:53:59+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Watch: What we know about Russian strikes on Kyiv bridges",
+      "summary": "BBC Ukraine correspondent Dan Johnson is near Kyiv's Northern Bridge, which has been hit for the second day in a row.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/videos/cmglwkyl9djyo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-04T15:53:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "Kyiv bridge hit in further Russian drone attack as German chancellor makes surprise visit",
-      "summary": "Unverified video shows a drone hitting the Northern Bridge as vehicles move across it, creating a large fireball.",
+      "summary": "Footage shows a drone hitting the Pivnichyi (Northern) Bridge as vehicles move across it, creating a large fireball.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckreyjzzzywqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:53:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4538,7 +4522,7 @@
       "summary": "Restrictions are being put on products with high sugar, fat and salt content, but the meal deal lives on.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cmwyzye21463o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:53:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4547,7 +4531,7 @@
       "summary": "Several self-inflicted mistakes have cost the biggest sportswear brand on the planet in recent years.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c6je85jzk9y7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:53:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4556,7 +4540,7 @@
       "summary": "Cuban exiles in Florida are increasingly hopeful that regime change in Cuba is now on the horizon.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ckrerylrlg9vo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:53:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4565,7 +4549,7 @@
       "summary": "A growing number of people are opting out of these schemes due to cost-of-living pressures.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c68xk0ndqz8jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T11:21:16+00:00",
+      "published_utc": "2026-10-04T15:53:59+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
