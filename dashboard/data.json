@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-04T05:44:44+00:00",
+  "generated_at_utc": "2026-10-04T11:21:16+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1003,
-  "last_success_utc": "2026-10-03T23:55:17+00:00",
+  "cycle_count": 1004,
+  "last_success_utc": "2026-10-04T05:44:44+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -567,16 +567,16 @@
     {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 68.02,
-      "raw_score": 71.91,
+      "score": 61.52,
+      "raw_score": 65.41,
       "band": "buy",
-      "weight": 0.1398,
-      "confidence": 0.95,
+      "weight": 0.1217,
+      "confidence": 1.0,
       "components": {
         "momentum": 67.48,
-        "sentiment": 100.0,
+        "sentiment": 80.0,
         "volume": 44.58,
-        "policy": 60.0,
+        "policy": 55.0,
         "volatility_penalty": 3.89
       }
     },
@@ -615,14 +615,14 @@
     {
       "key": "defense",
       "name": "Defense & Aerospace",
-      "score": 54.88,
-      "raw_score": 54.88,
+      "score": 53.03,
+      "raw_score": 53.03,
       "band": "starter",
-      "weight": 0.0996,
+      "weight": 0.0934,
       "confidence": 1.0,
       "components": {
         "momentum": 23.83,
-        "sentiment": 92.85,
+        "sentiment": 86.66,
         "volume": 59.97,
         "policy": 55.0,
         "volatility_penalty": 0.0
@@ -645,38 +645,6 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 45.64,
-      "raw_score": 49.5,
-      "band": "starter",
-      "weight": 0.0688,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 20.64,
-        "sentiment": 85.72,
-        "volume": 52.64,
-        "policy": 50.0,
-        "volatility_penalty": 3.86
-      }
-    },
-    {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 44.23,
-      "raw_score": 44.23,
-      "band": "starter",
-      "weight": 0.0545,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 20.23,
-        "sentiment": 70.0,
-        "volume": 50.68,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "clean_energy",
       "name": "Clean Energy",
       "score": 43.17,
@@ -693,19 +661,51 @@
       }
     },
     {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 41.23,
+      "raw_score": 41.23,
+      "band": "starter",
+      "weight": 0.0446,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 20.23,
+        "sentiment": 60.0,
+        "volume": 50.68,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 37.82,
-      "raw_score": 53.76,
+      "score": 38.01,
+      "raw_score": 53.95,
       "band": "hold_small",
-      "weight": 0.0369,
+      "weight": 0.0381,
       "confidence": 1.0,
       "components": {
         "momentum": 26.25,
-        "sentiment": 91.66,
+        "sentiment": 92.31,
         "volume": 51.31,
         "policy": 55.0,
         "volatility_penalty": 15.94
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 34.92,
+      "raw_score": 38.78,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 20.64,
+        "sentiment": 50.0,
+        "volume": 52.64,
+        "policy": 50.0,
+        "volatility_penalty": 3.86
       }
     }
   ],
@@ -775,24 +775,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0312,
       "notional_delta": -3228.87,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"LinkedIn Cofounder Defends Massive AI Infrastructure Spending, Says AI Capital Is 'the Only Reason We\u2019re Not in a Recession'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.49%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "BA",
       "action": "HOLD",
-      "target_weight": 0.0351,
+      "target_weight": 0.033,
       "current_weight": 0.0331,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.53%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.9 (starter), contribution 59.7",
+        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 57.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -876,16 +878,14 @@
     },
     {
       "symbol": "F",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.62,
-      "reason": "exiting on positive news flow \u2014 \"Trump tariffs a mixed bag for US auto industry\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.31,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.08%",
-        "theme=EV & Clean Transport",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -923,14 +923,14 @@
     {
       "symbol": "GD",
       "action": "HOLD",
-      "target_weight": 0.0335,
+      "target_weight": 0.0314,
       "current_weight": 0.0317,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.55%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.9 (starter), contribution 56.9",
+        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 55.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -938,31 +938,28 @@
     },
     {
       "symbol": "GM",
-      "action": "HOLD",
-      "target_weight": 0.0204,
+      "action": "REDUCE",
+      "target_weight": 0.0104,
       "current_weight": 0.0209,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Trump tariffs a mixed bag for US auto industry\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1079.23,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.01%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 45.6 (starter), contribution 40.6",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "GOOGL",
-      "action": "BUY",
-      "target_weight": 0.0429,
+      "action": "HOLD",
+      "target_weight": 0.037,
       "current_weight": 0.0357,
-      "notional_delta": 745.41,
-      "reason": "buying on mixed news flow \u2014 \"Elizabeth Warren Targets Trump, Big Tech Over 'Massive Tax Breaks' for AI and Data Centers: 'People... Are Worried About AI'\" \u00b7 underweight by 0.72% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Elizabeth Warren Targets Trump, Big Tech Over 'Massive Tax Breaks' for AI and Data Centers: 'People... Are Worried About AI'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 68.0 (buy), contribution 65.3",
+        "theme 'AI & Compute' score 61.5 (buy), contribution 58.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -999,45 +996,42 @@
     {
       "symbol": "JPM",
       "action": "REDUCE",
-      "target_weight": 0.0178,
+      "target_weight": 0.0145,
       "current_weight": 0.0297,
-      "notional_delta": -1227.58,
-      "reason": "overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -1568.73,
+      "reason": "overweight by 1.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.25%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.2 (starter), contribution 43.5"
+        "theme 'Financials & Rates' score 41.2 (starter), contribution 40.5"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "LCID",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0001,
       "current_weight": 0.0001,
-      "notional_delta": -13.89,
-      "reason": "exiting on positive news flow \u2014 \"Trump tariffs a mixed bag for US auto industry\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -6.95,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-47.92%",
-        "theme=EV & Clean Transport",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0125,
+      "target_weight": 0.0129,
       "current_weight": 0.0029,
-      "notional_delta": 988.09,
-      "reason": "buying on FDA approval (positive) \u2014 \"Lilly's Jaypirca (pirtobrutinib), the first-and-only approved non-covalent BTK inhibitor, receives expanded indication from U.S. FDA for cer\" \u00b7 underweight by 0.96% vs target \u2014 add",
+      "notional_delta": 1029.44,
+      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 1.00% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.70%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 37.8 (hold_small), contribution 49.3",
+        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 49.5",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
@@ -1090,12 +1084,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0472,
       "notional_delta": -4881.58,
-      "reason": "exiting on mixed news flow \u2014 \"Elizabeth Warren Targets Trump, Big Tech Over 'Massive Tax Breaks' for AI and Data Centers: 'People... Are Worried About AI'\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Apple, Meta And Jim Cramer Set the Tone for AI, iPhone and Vision Pro Moves: This Week in Apple\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=3.80%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1105,12 +1099,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0013,
       "notional_delta": -135.9,
-      "reason": "exiting on FDA approval (positive) \u2014 \"Lilly's Jaypirca (pirtobrutinib), the first-and-only approved non-covalent BTK inhibitor, receives expanded indication from U.S. FDA for cer\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=3.07%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
@@ -1118,32 +1111,30 @@
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0186,
+      "target_weight": 0.0152,
       "current_weight": 0.031,
-      "notional_delta": -1277.5,
-      "reason": "trimming on positive news flow \u2014 \"Anthropic Commits $100 Million Behind AI Talent Push, Plans to Train 10,000 Engineers by 2027 as IPO Looms\" \u00b7 overweight by 1.24% vs target \u2014 trim",
+      "notional_delta": -1628.98,
+      "reason": "overweight by 1.58% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.48%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.2 (starter), contribution 45.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 41.2 (starter), contribution 42.4"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "MSFT",
-      "action": "BUY",
-      "target_weight": 0.044,
+      "action": "HOLD",
+      "target_weight": 0.0381,
       "current_weight": 0.0373,
-      "notional_delta": 696.98,
-      "reason": "buying on mixed news flow \u2014 \"Elizabeth Warren Targets Trump, Big Tech Over 'Massive Tax Breaks' for AI and Data Centers: 'People... Are Worried About AI'\" \u00b7 underweight by 0.67% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on negative news flow \u2014 \"Bernie Sanders Warns AI Could Become Smarter Than Humans: 'Do Not Want to Wait Around'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.14%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 68.0 (buy), contribution 67.0",
+        "theme 'AI & Compute' score 61.5 (buy), contribution 60.5",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1196,16 +1187,16 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.053,
+      "target_weight": 0.0467,
       "current_weight": 0.0481,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Trump Defends Data Centers at Ohio Rally: 'You Can't Just Turn Them Off. They'll Go to China'\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"Bernie Sanders Warns AI Could Become Smarter Than Humans: 'Do Not Want to Wait Around'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.75%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 68.0 (buy), contribution 80.7",
+        "theme 'AI & Compute' score 61.5 (buy), contribution 74.2",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1259,16 +1250,15 @@
     {
       "symbol": "PFE",
       "action": "BUY",
-      "target_weight": 0.0128,
+      "target_weight": 0.0132,
       "current_weight": 0.0036,
-      "notional_delta": 949.77,
-      "reason": "buying on FDA approval (positive) \u2014 \"Lilly's Jaypirca (pirtobrutinib), the first-and-only approved non-covalent BTK inhibitor, receives expanded indication from U.S. FDA for cer\" \u00b7 underweight by 0.92% vs target \u2014 add",
+      "notional_delta": 991.12,
+      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 0.96% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.17%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 37.8 (hold_small), contribution 50.5",
+        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 50.7",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
@@ -1279,43 +1269,39 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.19,
-      "reason": "exiting on FDA approval (positive) \u2014 \"Lilly's Jaypirca (pirtobrutinib), the first-and-only approved non-covalent BTK inhibitor, receives expanded indication from U.S. FDA for cer\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=9.42%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "RIVN",
-      "action": "HOLD",
-      "target_weight": 0.0206,
+      "action": "REDUCE",
+      "target_weight": 0.0089,
       "current_weight": 0.0178,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Trump tariffs a mixed bag for US auto industry\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -921.18,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.13%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 45.6 (starter), contribution 40.9",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.031,
+      "target_weight": 0.029,
       "current_weight": 0.0331,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.15%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.9 (starter), contribution 52.7",
+        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 50.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1396,17 +1382,16 @@
     },
     {
       "symbol": "TSLA",
-      "action": "HOLD",
-      "target_weight": 0.0278,
+      "action": "REDUCE",
+      "target_weight": 0.012,
       "current_weight": 0.0239,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Trump tariffs a mixed bag for US auto industry\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1237.48,
+      "reason": "trimming on mixed news flow \u2014 \"Tesla Robotaxi's Nighttime Problem? Elon Musk Says It's 'Grey Kittens on Grey Tarmac'\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.19%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 45.6 (starter), contribution 55.2",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1427,16 +1412,15 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0117,
+      "target_weight": 0.012,
       "current_weight": 0.0034,
-      "notional_delta": 858.78,
-      "reason": "buying on FDA approval (positive) \u2014 \"Lilly's Jaypirca (pirtobrutinib), the first-and-only approved non-covalent BTK inhibitor, receives expanded indication from U.S. FDA for cer\" \u00b7 underweight by 0.83% vs target \u2014 add",
+      "notional_delta": 889.79,
+      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 0.86% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.44%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 37.8 (hold_small), contribution 46.1",
+        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 46.2",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
@@ -1444,14 +1428,14 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0181,
+      "target_weight": 0.0149,
       "current_weight": 0.0301,
-      "notional_delta": -1238.24,
-      "reason": "overweight by 1.20% vs target \u2014 trim",
+      "notional_delta": -1569.05,
+      "reason": "overweight by 1.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.03%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.2 (starter), contribution 44.3"
+        "theme 'Financials & Rates' score 41.2 (starter), contribution 41.3"
       ],
       "theme_key": "financials"
     },
@@ -1565,10 +1549,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0312,
       "notional_delta": -3228.87,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"LinkedIn Cofounder Defends Massive AI Infrastructure Spending, Says AI Capital Is 'the Only Reason We\u2019re Not in a Recession'\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.49%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1578,14 +1564,14 @@
     {
       "symbol": "BA",
       "action": "HOLD",
-      "target_weight": 0.0351,
+      "target_weight": 0.033,
       "current_weight": 0.0331,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.53%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.9 (starter), contribution 59.7",
+        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 57.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1687,16 +1673,14 @@
     },
     {
       "symbol": "F",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.62,
-      "reason": "exiting on positive news flow \u2014 \"Trump tariffs a mixed bag for US auto industry\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.31,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.08%",
-        "theme=EV & Clean Transport",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1743,14 +1727,14 @@
     {
       "symbol": "GD",
       "action": "HOLD",
-      "target_weight": 0.0335,
+      "target_weight": 0.0314,
       "current_weight": 0.0317,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.55%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.9 (starter), contribution 56.9",
+        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 55.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1761,17 +1745,14 @@
     },
     {
       "symbol": "GM",
-      "action": "HOLD",
-      "target_weight": 0.0204,
+      "action": "REDUCE",
+      "target_weight": 0.0104,
       "current_weight": 0.0209,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Trump tariffs a mixed bag for US auto industry\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1079.23,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.01%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 45.6 (starter), contribution 40.6",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1780,15 +1761,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "BUY",
-      "target_weight": 0.0429,
+      "action": "HOLD",
+      "target_weight": 0.037,
       "current_weight": 0.0357,
-      "notional_delta": 745.41,
-      "reason": "buying on mixed news flow \u2014 \"Elizabeth Warren Targets Trump, Big Tech Over 'Massive Tax Breaks' for AI and Data Centers: 'People... Are Worried About AI'\" \u00b7 underweight by 0.72% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Elizabeth Warren Targets Trump, Big Tech Over 'Massive Tax Breaks' for AI and Data Centers: 'People... Are Worried About AI'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.35%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 68.0 (buy), contribution 65.3",
+        "theme 'AI & Compute' score 61.5 (buy), contribution 58.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1834,14 +1815,14 @@
     {
       "symbol": "JPM",
       "action": "REDUCE",
-      "target_weight": 0.0178,
+      "target_weight": 0.0145,
       "current_weight": 0.0297,
-      "notional_delta": -1227.58,
-      "reason": "overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -1568.73,
+      "reason": "overweight by 1.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.25%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.2 (starter), contribution 43.5"
+        "theme 'Financials & Rates' score 41.2 (starter), contribution 40.5"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1850,16 +1831,14 @@
     },
     {
       "symbol": "LCID",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0001,
       "current_weight": 0.0001,
-      "notional_delta": -13.89,
-      "reason": "exiting on positive news flow \u2014 \"Trump tariffs a mixed bag for US auto industry\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -6.95,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-47.92%",
-        "theme=EV & Clean Transport",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1869,16 +1848,15 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0125,
+      "target_weight": 0.0129,
       "current_weight": 0.0029,
-      "notional_delta": 988.09,
-      "reason": "buying on FDA approval (positive) \u2014 \"Lilly's Jaypirca (pirtobrutinib), the first-and-only approved non-covalent BTK inhibitor, receives expanded indication from U.S. FDA for cer\" \u00b7 underweight by 0.96% vs target \u2014 add",
+      "notional_delta": 1029.44,
+      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 1.00% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.70%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 37.8 (hold_small), contribution 49.3",
+        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 49.5",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
@@ -1943,12 +1921,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0472,
       "notional_delta": -4881.58,
-      "reason": "exiting on mixed news flow \u2014 \"Elizabeth Warren Targets Trump, Big Tech Over 'Massive Tax Breaks' for AI and Data Centers: 'People... Are Worried About AI'\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Apple, Meta And Jim Cramer Set the Tone for AI, iPhone and Vision Pro Moves: This Week in Apple\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=3.80%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1961,12 +1939,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0013,
       "notional_delta": -135.9,
-      "reason": "exiting on FDA approval (positive) \u2014 \"Lilly's Jaypirca (pirtobrutinib), the first-and-only approved non-covalent BTK inhibitor, receives expanded indication from U.S. FDA for cer\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=3.07%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
@@ -1977,16 +1954,14 @@
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0186,
+      "target_weight": 0.0152,
       "current_weight": 0.031,
-      "notional_delta": -1277.5,
-      "reason": "trimming on positive news flow \u2014 \"Anthropic Commits $100 Million Behind AI Talent Push, Plans to Train 10,000 Engineers by 2027 as IPO Looms\" \u00b7 overweight by 1.24% vs target \u2014 trim",
+      "notional_delta": -1628.98,
+      "reason": "overweight by 1.58% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.48%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.2 (starter), contribution 45.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 41.2 (starter), contribution 42.4"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1995,17 +1970,17 @@
     },
     {
       "symbol": "MSFT",
-      "action": "BUY",
-      "target_weight": 0.044,
+      "action": "HOLD",
+      "target_weight": 0.0381,
       "current_weight": 0.0373,
-      "notional_delta": 696.98,
-      "reason": "buying on mixed news flow \u2014 \"Elizabeth Warren Targets Trump, Big Tech Over 'Massive Tax Breaks' for AI and Data Centers: 'People... Are Worried About AI'\" \u00b7 underweight by 0.67% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on negative news flow \u2014 \"Bernie Sanders Warns AI Could Become Smarter Than Humans: 'Do Not Want to Wait Around'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.14%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 68.0 (buy), contribution 67.0",
+        "theme 'AI & Compute' score 61.5 (buy), contribution 60.5",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2070,16 +2045,16 @@
     {
       "symbol": "NVDA",
       "action": "HOLD",
-      "target_weight": 0.053,
+      "target_weight": 0.0467,
       "current_weight": 0.0481,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Trump Defends Data Centers at Ohio Rally: 'You Can't Just Turn Them Off. They'll Go to China'\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"Bernie Sanders Warns AI Could Become Smarter Than Humans: 'Do Not Want to Wait Around'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.75%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 68.0 (buy), contribution 80.7",
+        "theme 'AI & Compute' score 61.5 (buy), contribution 74.2",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2145,16 +2120,15 @@
     {
       "symbol": "PFE",
       "action": "BUY",
-      "target_weight": 0.0128,
+      "target_weight": 0.0132,
       "current_weight": 0.0036,
-      "notional_delta": 949.77,
-      "reason": "buying on FDA approval (positive) \u2014 \"Lilly's Jaypirca (pirtobrutinib), the first-and-only approved non-covalent BTK inhibitor, receives expanded indication from U.S. FDA for cer\" \u00b7 underweight by 0.92% vs target \u2014 add",
+      "notional_delta": 991.12,
+      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 0.96% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.17%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 37.8 (hold_small), contribution 50.5",
+        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 50.7",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
@@ -2168,12 +2142,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.19,
-      "reason": "exiting on FDA approval (positive) \u2014 \"Lilly's Jaypirca (pirtobrutinib), the first-and-only approved non-covalent BTK inhibitor, receives expanded indication from U.S. FDA for cer\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=9.42%",
         "theme=Biotech & Pharma",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
@@ -2183,17 +2156,14 @@
     },
     {
       "symbol": "RIVN",
-      "action": "HOLD",
-      "target_weight": 0.0206,
+      "action": "REDUCE",
+      "target_weight": 0.0089,
       "current_weight": 0.0178,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Trump tariffs a mixed bag for US auto industry\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -921.18,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.13%",
-        "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 45.6 (starter), contribution 40.9",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2203,14 +2173,14 @@
     {
       "symbol": "RTX",
       "action": "HOLD",
-      "target_weight": 0.031,
+      "target_weight": 0.029,
       "current_weight": 0.0331,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Lockheed Martin Keeps Raising Its Dividend as Pentagon Money Keeps Flowing\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.15%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 54.9 (starter), contribution 52.7",
+        "theme 'Defense & Aerospace' score 53.0 (starter), contribution 50.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2309,17 +2279,16 @@
     },
     {
       "symbol": "TSLA",
-      "action": "HOLD",
-      "target_weight": 0.0278,
+      "action": "REDUCE",
+      "target_weight": 0.012,
       "current_weight": 0.0239,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Trump tariffs a mixed bag for US auto industry\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1237.48,
+      "reason": "trimming on mixed news flow \u2014 \"Tesla Robotaxi's Nighttime Problem? Elon Musk Says It's 'Grey Kittens on Grey Tarmac'\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.19%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 45.6 (starter), contribution 55.2",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2346,16 +2315,15 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0117,
+      "target_weight": 0.012,
       "current_weight": 0.0034,
-      "notional_delta": 858.78,
-      "reason": "buying on FDA approval (positive) \u2014 \"Lilly's Jaypirca (pirtobrutinib), the first-and-only approved non-covalent BTK inhibitor, receives expanded indication from U.S. FDA for cer\" \u00b7 underweight by 0.83% vs target \u2014 add",
+      "notional_delta": 889.79,
+      "reason": "buying on positive news flow \u2014 \"Eli Lilly Just Announced Something Big. Here\u2019s What It Means for Investors.\" \u00b7 underweight by 0.86% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.44%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 37.8 (hold_small), contribution 46.1",
+        "theme 'Biotech & Pharma' score 38.0 (hold_small), contribution 46.2",
         "news_source=yahoo_rss",
-        "event=FDA approval",
         "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
@@ -2366,14 +2334,14 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.0181,
+      "target_weight": 0.0149,
       "current_weight": 0.0301,
-      "notional_delta": -1238.24,
-      "reason": "overweight by 1.20% vs target \u2014 trim",
+      "notional_delta": -1569.05,
+      "reason": "overweight by 1.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.03%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 44.2 (starter), contribution 44.3"
+        "theme 'Financials & Rates' score 41.2 (starter), contribution 41.3"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2419,10 +2387,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-13T10:42:11+00:00",
-      "v": 101485.45
-    },
     {
       "t": "2026-07-13T13:10:13+00:00",
       "v": 101488.37
@@ -4418,24 +4382,19 @@
     {
       "t": "2026-10-04T05:44:38+00:00",
       "v": 103377.61
+    },
+    {
+      "t": "2026-10-04T11:21:11+00:00",
+      "v": 103377.61
     }
   ],
   "breaking_news": [
-    {
-      "headline": "Google launches Project Suncatcher, a step towards AI data centers in space",
-      "summary": "The fridge-size satellite with AI chips on board is part of Project Suncatcher, the company's moonshot effort to put AI data centers in space and harness solar energy.",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/10/01/nx-s1-5983697/project-suncatcher-google-ai-data-center-space",
-      "published_utc": "2026-10-04T05:44:44+00:00",
-      "sentiment_score": 0.2,
-      "is_policy": false
-    },
     {
       "headline": "Breweries adapt as tastes in beer change",
       "summary": "The craft beer market is saturated and tastes are changing. Brewers are coming with innovative ways to attract customers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/01/nx-s1-5973297/breweries-adapt-as-tastes-in-beer-change",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4444,7 +4403,7 @@
       "summary": "After 32 years in Congress, Ohio's Sherrod Brown lost his Senate seat in 2024 as many working class voters turned out for Trump. Now Brown is counting on union voters to send him back to Washington.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/02/nx-s1-5981096/ohio-senate-sherrod-brown-labor-workers",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.2,
       "is_policy": true
     },
@@ -4453,7 +4412,7 @@
       "summary": "San Francisco leaders say AI-powered cameras helped drive a dramatic decline in car crime. We examine the evidence \u2014 and whether the city can keep its high-tech dragnet without sacrificing civil liberties.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/10/02/g-s1-146060/san-franciscos-car-crime-has-plunged-how-much-credit-does-flock-deserve",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4462,7 +4421,7 @@
       "summary": "Diesel hasn't always been more expensive than other gasoline. Then in 2004, a switch happened due to air quality standards, demand, and taxes. In this week's Indicator newsletter, we dig into diesel prices, what kind of fun people are buyin",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/10/02/nx-s1-5988075/why-is-diesel-more-expensive-than-regular-gas",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4471,7 +4430,7 @@
       "summary": "U.S. employers added 29,000 jobs in September as the unemployment rate inched up to 4.2%. Job gains for July and August were revised down by a total of 60,000 jobs, extending a lackluster run for the job market.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/02/nx-s1-5989140/jobs-labor-wages-federal-reserve",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4480,7 +4439,7 @@
       "summary": "The lawsuit says the prominent conservative podcaster falsely claimed the protesters were assaulting ICE officers during demonstrations at an ICE facility in Illinois last year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/02/nx-s1-5989413/benny-johnson-defamation-lawsuit-ice-protesters",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4489,16 +4448,25 @@
       "summary": "The U.S. economy added fewer jobs than expected last month and unemployment ticked up to 4.2%. NPR's Scott Simon talks to Betsey Stevenson, an economist at the University of Michigan.<br />",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/03/nx-s1-5989546/economist-betsey-stevenson-breaks-down-the-gender-gap-in-recent-hiring-reports",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Why has Brazil accused the US of election interference?",
-      "summary": "The Latin American country will vote for its next president, as Lula da Silva and Bolsonaro clash over sovereignty, security and ties with Washington.",
+      "headline": "She died covering war for Fox News. Her parents blame the network \u2014 and a star reporter",
+      "summary": "The family members of two Fox News journalists killed while covering the war in Ukraine are suing the network, saying it put getting the story ahead of its people.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/10/04/nx-s1-5737621/fox-news-ukraine-deaths",
+      "published_utc": "2026-10-04T11:21:16+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "US father and son arrested after 'gas station heroin' deaths",
+      "summary": "They are accused of selling at least one student derivatives of kratom, often called \"gas station heroin\" in the US.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/videos/c3eweld0nddeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c6qjnlk4r2jjo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4507,7 +4475,16 @@
       "summary": "The aircraft lost communication with flight controllers after significantly dropping in altitude, according to flight data.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cme3x85013llo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "What to know about Brazil's election pitting Lula against Fl\u00e1vio Bolsonaro",
+      "summary": "Polls suggest the election will be a closely run contest between the left-wing incumbent and his right-wing rival.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c6wyz0r2n0djo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4516,25 +4493,7 @@
       "summary": "More than 50 protests took place on Saturday after the government failed to get emergency legislation through parliament.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Russia hits second major bridge in Ukraine's capital Kyiv",
-      "summary": "The strike on the Pivnichnyi (Northern) Bridge comes after repeat attacks on another major bridge in Ukraine's capital.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c83vqxzdg1yko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Flydubai co-pilot attacked captain with axe, UAE official says",
-      "summary": "The man accused of trying to take over the Israel-bound jet is named as Hamam al-Hammami by several media outlets.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c61wv7lgex13o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4543,7 +4502,7 @@
       "summary": "Michael Kotlikoff described the allegations of a woman who says she was drugged and gang raped as \"deeply disturbing\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckly0leelnz4o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4552,7 +4511,25 @@
       "summary": "Pike's lawyers said the failure \"goes far beyond any one person\". Pike is in critical condition after surviving two lethal injections.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Australia investigating Flydubai co-pilot's links to country",
+      "summary": "State police and the country's security agency are looking into the co-pilot, who attempted to take control of a Flydubai plane travelling to Israel.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cxly4nym57q9o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-04T11:21:16+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Kyiv bridge hit in further Russian drone attack as German chancellor makes surprise visit",
+      "summary": "Unverified video shows a drone hitting the Northern Bridge as vehicles move across it, creating a large fireball.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/ckreyjzzzywqo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4561,7 +4538,7 @@
       "summary": "Restrictions are being put on products with high sugar, fat and salt content, but the meal deal lives on.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cmwyzye21463o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4570,7 +4547,7 @@
       "summary": "Several self-inflicted mistakes have cost the biggest sportswear brand on the planet in recent years.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c6je85jzk9y7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4579,7 +4556,7 @@
       "summary": "Cuban exiles in Florida are increasingly hopeful that regime change in Cuba is now on the horizon.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ckrerylrlg9vo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4588,16 +4565,7 @@
       "summary": "A growing number of people are opting out of these schemes due to cost-of-living pressures.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c68xk0ndqz8jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "US jobs market sees sharp slowdown ahead of midterm elections",
-      "summary": "Unemployment rose slightly as American employers paused hiring with midterm elections just a month away.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cm2d6gg0642yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-04T05:44:44+00:00",
+      "published_utc": "2026-10-04T11:21:16+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
