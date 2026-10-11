@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-11T19:30:51+00:00",
+  "generated_at_utc": "2026-10-11T23:07:43+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1037,
-  "last_success_utc": "2026-10-11T14:53:00+00:00",
+  "cycle_count": 1038,
+  "last_success_utc": "2026-10-11T19:30:51+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -599,14 +599,14 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 52.8,
-      "raw_score": 52.8,
-      "band": "starter",
-      "weight": 0.0788,
-      "confidence": 0.7,
+      "score": 58.8,
+      "raw_score": 58.8,
+      "band": "buy",
+      "weight": 0.1014,
+      "confidence": 0.8,
       "components": {
         "momentum": 45.8,
-        "sentiment": 70.0,
+        "sentiment": 90.0,
         "volume": 42.39,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -647,33 +647,17 @@
     {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
-      "score": 44.88,
-      "raw_score": 48.6,
+      "score": 49.88,
+      "raw_score": 53.6,
       "band": "starter",
-      "weight": 0.0596,
-      "confidence": 0.8,
+      "weight": 0.0767,
+      "confidence": 0.85,
       "components": {
         "momentum": 40.89,
-        "sentiment": 63.34,
+        "sentiment": 80.0,
         "volume": 41.23,
         "policy": 50.0,
         "volatility_penalty": 3.72
-      }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 44.73,
-      "raw_score": 49.25,
-      "band": "starter",
-      "weight": 0.0559,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 36.74,
-        "sentiment": 70.0,
-        "volume": 42.79,
-        "policy": 50.0,
-        "volatility_penalty": 4.52
       }
     },
     {
@@ -690,6 +674,22 @@
         "volume": 40.5,
         "policy": 55.0,
         "volatility_penalty": 3.28
+      }
+    },
+    {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 38.73,
+      "raw_score": 43.25,
+      "band": "hold_small",
+      "weight": 0.035,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 36.74,
+        "sentiment": 50.0,
+        "volume": 42.79,
+        "policy": 50.0,
+        "volatility_penalty": 4.52
       }
     },
     {
@@ -757,14 +757,14 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0188,
+      "target_weight": 0.0118,
       "current_weight": 0.014,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.08%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.7 (starter), contribution 35.5"
+        "theme 'Semiconductors (Broad)' score 38.7 (hold_small), contribution 29.5"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -800,14 +800,14 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0251,
+      "target_weight": 0.0325,
       "current_weight": 0.0278,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Earnings Volatility Watch: JPMorgan, Goldman Kick Off Q3 Season, But These 10 Stocks Are Priced For Bigger Swings\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Bank of America Earnings Preview: Options Market Signals a Muted Reaction\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.20%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.8 (starter), contribution 58.8",
+        "theme 'Financials & Rates' score 58.8 (buy), contribution 64.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -876,15 +876,15 @@
     },
     {
       "symbol": "F",
-      "action": "REDUCE",
-      "target_weight": 0.0172,
+      "action": "HOLD",
+      "target_weight": 0.0223,
       "current_weight": 0.0242,
-      "notional_delta": -731.3,
-      "reason": "overweight by 0.70% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 53.2"
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 58.2"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -938,15 +938,15 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0225,
+      "action": "HOLD",
+      "target_weight": 0.0287,
       "current_weight": 0.032,
-      "notional_delta": -996.45,
-      "reason": "overweight by 0.95% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.76%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 69.7"
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 74.7"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -972,7 +972,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0269,
       "notional_delta": -2815.6,
-      "reason": "exiting on mixed news flow \u2014 \"Earnings Volatility Watch: JPMorgan, Goldman Kick Off Q3 Season, But These 10 Stocks Are Priced For Bigger Swings\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Goldman Sachs Stock Has Dived Into a Bear Market: Will Earnings Change This?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.28%",
         "theme=Financials & Rates",
@@ -1099,14 +1099,14 @@
     {
       "symbol": "MS",
       "action": "HOLD",
-      "target_weight": 0.0228,
+      "target_weight": 0.0298,
       "current_weight": 0.0255,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Earnings Volatility Watch: JPMorgan, Goldman Kick Off Q3 Season, But These 10 Stocks Are Priced For Bigger Swings\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.18%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.8 (starter), contribution 53.4",
+        "theme 'Financials & Rates' score 58.8 (buy), contribution 59.4",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1131,16 +1131,14 @@
     {
       "symbol": "MU",
       "action": "HOLD",
-      "target_weight": 0.0163,
+      "target_weight": 0.0099,
       "current_weight": 0.0117,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"DRAM ETF Stuck in Bear Market: Top Catalysts for a Rebound in Memory Stocks\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.25%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.7 (starter), contribution 30.9",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Semiconductors (Broad)' score 38.7 (hold_small), contribution 24.9"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1288,10 +1286,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Rivian Stock Flashes Death Cross Pattern Despite Strong R2 Sales Growth\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.78%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1385,15 +1385,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
-      "target_weight": 0.02,
+      "action": "HOLD",
+      "target_weight": 0.0257,
       "current_weight": 0.0288,
-      "notional_delta": -925.4,
-      "reason": "trimming on positive news flow \u2014 \"This Week in TSLA: FSD's Europe Rebrand, Elon Musk Receives Medal From Trump and More\" \u00b7 overweight by 0.88% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Rivian Stock Flashes Death Cross Pattern Despite Strong R2 Sales Growth\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.50%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 62.0",
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 67.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1401,15 +1401,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "BUY",
-      "target_weight": 0.0208,
+      "action": "HOLD",
+      "target_weight": 0.0133,
       "current_weight": 0.0148,
-      "notional_delta": 626.03,
-      "reason": "buying on mixed news flow \u2014 \"David Tepper Once Said \u2018I Don\u2019t Trust Myself\u2019 on Nvidia\u2014Now Appaloosa Holds 1.5 Million Shares\" \u00b7 underweight by 0.60% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"David Tepper Once Said \u2018I Don\u2019t Trust Myself\u2019 on Nvidia\u2014Now Appaloosa Holds 1.5 Million Shares\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.59%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.7 (starter), contribution 39.3",
+        "theme 'Semiconductors (Broad)' score 38.7 (hold_small), contribution 33.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1433,15 +1433,15 @@
     },
     {
       "symbol": "WFC",
-      "action": "REDUCE",
-      "target_weight": 0.0308,
+      "action": "HOLD",
+      "target_weight": 0.0391,
       "current_weight": 0.0391,
-      "notional_delta": -867.19,
-      "reason": "trimming on mixed news flow \u2014 \"Earnings Volatility Watch: JPMorgan, Goldman Kick Off Q3 Season, But These 10 Stocks Are Priced For Bigger Swings\" \u00b7 overweight by 0.83% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Earnings Volatility Watch: JPMorgan, Goldman Kick Off Q3 Season, But These 10 Stocks Are Priced For Bigger Swings\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.38%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.8 (starter), contribution 72.1",
+        "theme 'Financials & Rates' score 58.8 (buy), contribution 78.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1537,14 +1537,14 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0188,
+      "target_weight": 0.0118,
       "current_weight": 0.014,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.08%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.7 (starter), contribution 35.5"
+        "theme 'Semiconductors (Broad)' score 38.7 (hold_small), contribution 29.5"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1589,14 +1589,14 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0251,
+      "target_weight": 0.0325,
       "current_weight": 0.0278,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Earnings Volatility Watch: JPMorgan, Goldman Kick Off Q3 Season, But These 10 Stocks Are Priced For Bigger Swings\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Bank of America Earnings Preview: Options Market Signals a Muted Reaction\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.20%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.8 (starter), contribution 58.8",
+        "theme 'Financials & Rates' score 58.8 (buy), contribution 64.8",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1680,15 +1680,15 @@
     },
     {
       "symbol": "F",
-      "action": "REDUCE",
-      "target_weight": 0.0172,
+      "action": "HOLD",
+      "target_weight": 0.0223,
       "current_weight": 0.0242,
-      "notional_delta": -731.3,
-      "reason": "overweight by 0.70% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.07%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 53.2"
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 58.2"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1754,15 +1754,15 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0225,
+      "action": "HOLD",
+      "target_weight": 0.0287,
       "current_weight": 0.032,
-      "notional_delta": -996.45,
-      "reason": "overweight by 0.95% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.76%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 69.7"
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 74.7"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1794,7 +1794,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0269,
       "notional_delta": -2815.6,
-      "reason": "exiting on mixed news flow \u2014 \"Earnings Volatility Watch: JPMorgan, Goldman Kick Off Q3 Season, But These 10 Stocks Are Priced For Bigger Swings\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Goldman Sachs Stock Has Dived Into a Bear Market: Will Earnings Change This?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.28%",
         "theme=Financials & Rates",
@@ -1948,14 +1948,14 @@
     {
       "symbol": "MS",
       "action": "HOLD",
-      "target_weight": 0.0228,
+      "target_weight": 0.0298,
       "current_weight": 0.0255,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Earnings Volatility Watch: JPMorgan, Goldman Kick Off Q3 Season, But These 10 Stocks Are Priced For Bigger Swings\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.18%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.8 (starter), contribution 53.4",
+        "theme 'Financials & Rates' score 58.8 (buy), contribution 59.4",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1986,16 +1986,14 @@
     {
       "symbol": "MU",
       "action": "HOLD",
-      "target_weight": 0.0163,
+      "target_weight": 0.0099,
       "current_weight": 0.0117,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"DRAM ETF Stuck in Bear Market: Top Catalysts for a Rebound in Memory Stocks\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.25%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.7 (starter), contribution 30.9",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme 'Semiconductors (Broad)' score 38.7 (hold_small), contribution 24.9"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2173,10 +2171,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Rivian Stock Flashes Death Cross Pattern Despite Strong R2 Sales Growth\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-2.78%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2291,15 +2291,15 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
-      "target_weight": 0.02,
+      "action": "HOLD",
+      "target_weight": 0.0257,
       "current_weight": 0.0288,
-      "notional_delta": -925.4,
-      "reason": "trimming on positive news flow \u2014 \"This Week in TSLA: FSD's Europe Rebrand, Elon Musk Receives Medal From Trump and More\" \u00b7 overweight by 0.88% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Rivian Stock Flashes Death Cross Pattern Despite Strong R2 Sales Growth\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.50%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 44.9 (starter), contribution 62.0",
+        "theme 'EV & Clean Transport' score 49.9 (starter), contribution 67.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2310,15 +2310,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "BUY",
-      "target_weight": 0.0208,
+      "action": "HOLD",
+      "target_weight": 0.0133,
       "current_weight": 0.0148,
-      "notional_delta": 626.03,
-      "reason": "buying on mixed news flow \u2014 \"David Tepper Once Said \u2018I Don\u2019t Trust Myself\u2019 on Nvidia\u2014Now Appaloosa Holds 1.5 Million Shares\" \u00b7 underweight by 0.60% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"David Tepper Once Said \u2018I Don\u2019t Trust Myself\u2019 on Nvidia\u2014Now Appaloosa Holds 1.5 Million Shares\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.59%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 44.7 (starter), contribution 39.3",
+        "theme 'Semiconductors (Broad)' score 38.7 (hold_small), contribution 33.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2348,15 +2348,15 @@
     },
     {
       "symbol": "WFC",
-      "action": "REDUCE",
-      "target_weight": 0.0308,
+      "action": "HOLD",
+      "target_weight": 0.0391,
       "current_weight": 0.0391,
-      "notional_delta": -867.19,
-      "reason": "trimming on mixed news flow \u2014 \"Earnings Volatility Watch: JPMorgan, Goldman Kick Off Q3 Season, But These 10 Stocks Are Priced For Bigger Swings\" \u00b7 overweight by 0.83% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Earnings Volatility Watch: JPMorgan, Goldman Kick Off Q3 Season, But These 10 Stocks Are Priced For Bigger Swings\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.38%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 52.8 (starter), contribution 72.1",
+        "theme 'Financials & Rates' score 58.8 (buy), contribution 78.1",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2405,10 +2405,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-15T21:12:14+00:00",
-      "v": 101409.52
-    },
     {
       "t": "2026-07-15T22:26:38+00:00",
       "v": 101394.63
@@ -4404,6 +4400,10 @@
     {
       "t": "2026-10-11T19:30:46+00:00",
       "v": 104841.52
+    },
+    {
+      "t": "2026-10-11T23:07:39+00:00",
+      "v": 104841.52
     }
   ],
   "breaking_news": [
@@ -4412,7 +4412,7 @@
       "summary": "As European defense spending takes off, just about half of the funding in Europe's defense tech industry is coming from American investors this year. One reason why: European investment firms have restrictions on how they can invest.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/10/09/nx-s1-5995606/why-american-investors-love-european-defense-startups",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4421,7 +4421,7 @@
       "summary": "Hurricane Isaias is this season's first Atlantic hurricane, and is on a path to hit the northern Gulf Coast. How is the oil industry preparing?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/09/nx-s1-5995417/hurricane-isaias-oil-refineries-diesel-gasoline-prices",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4430,7 +4430,7 @@
       "summary": "There's lots of debate over data centers and where they should be located. In a struggling rural town data center development can look a lot more attractive.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/09/nx-s1-5966615/despite-the-controversy-data-centers-could-be-attractive-to-struggling-rural-towns",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4439,7 +4439,7 @@
       "summary": "<em>Planet Money</em> traced many new beverage flavors to one laboratory that serves dozens of companies to see how new flavors are created and why we're seeing such an explosion of options right now.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/09/nx-s1-5991779/how-the-beverage-aisle-got-so-wild",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4448,7 +4448,7 @@
       "summary": "The three fired workers say OpenAI punished them for being outspoken about safety. The company disputes the claims and says they were fired over mishandling sensitive information.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/09/nx-s1-5996890/openai-safety-firings",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4457,7 +4457,7 @@
       "summary": "The prediction market company says it wants to prevent its platform from being abused by criminals. The company is facing mounting pressure over market manipulation and insider trading on the site.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/09/nx-s1-5996683/kalshi-fbi-sean-fern-money-laundering",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4466,7 +4466,7 @@
       "summary": "People who lose their jobs in this economy are taking longer to find new work. Nearly four in ten people exhaust their unemployment benefits before they land a new job.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/11/nx-s1-5995238/jobs-employment-economy-unemployment-benefits",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4475,25 +4475,16 @@
       "summary": "The move escalates Trump's fight with the press amid court battle over barring CNN, Politico and MS NOW from the White House.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/11/nx-s1-5997574/the-doj-is-investigating-5-tv-networks-for-suspending-pool-coverage-of-trump",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
     {
-      "headline": "Pope Leo to have surgery after lump found on lung",
-      "summary": "The 71-year-old pontiff said the nodule was identified \"at a very early stage\".",
+      "headline": "Poland stabbings driven by online glorification of violence, Tusk says",
+      "summary": "The PM was speaking after violent attacks at Polish schools this week left one dead and others injured.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c6m2dnngvw8xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:51+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Children among 139 dead after boat capsizes off Djibouti, UN says",
-      "summary": "The boat was travelling from Djibouti to Yemen with 305 people on board, when it capsized near the port town of Obock on Thursday night.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cwy7lxx60dg5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/ckp8gyd65z2go?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4502,16 +4493,7 @@
       "summary": "Rescuers moved the apes after their habitats were threatened by intense wildfires over the summer.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwvgde0m2d73o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:51+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Poland stabbings driven by online glorification of violence, Tusk says",
-      "summary": "The PM was speaking after violent attacks at Polish schools this week left one dead and others injured.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/ckp8gyd65z2go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4520,7 +4502,16 @@
       "summary": "Nepal is still trying to recover from catastrophic floods that hit less than two months ago, leaving thousands dead and missing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ck86zppejjw3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Dozens of gold prospectors killed in strikes on Egypt-Sudan border, rights group says",
+      "summary": "Neither Egypt nor Sudan has commented on the alleged strikes on an artisanal mining camp on Saturday.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cqy43vrk8wv8o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4529,16 +4520,25 @@
       "summary": "Police received credible information about possible attacks against Donald Tusk and his defence minister.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6n9rvynl5p5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Saudi capital airport hit by second Houthi strike in two days",
-      "summary": "The Yemeni group says it carried out attacks that killed 13 people in Riyadh over the weekend and targeted two airports and oil facilities.",
+      "headline": "One killed, 11 injured in second Houthi strike on Riyadh airport in two days",
+      "summary": "The Saudi capital has been hit by multiple attacks from the Iran-backed Yemeni group over the weekend.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr93znyk44e1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:51+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Trump's 'energy ceasefire' claim welcomed by Zelensky but Russia silent",
+      "summary": "Zelensky says Kyiv would support such a truce. Moscow has yet to comment.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c6pvg4jyz1m0o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4547,7 +4547,7 @@
       "summary": "Talking about salary, spending habits and debt can be some of dating's trickier conversations.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c8wyz69r0nnpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:50+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4556,7 +4556,7 @@
       "summary": "The Court of Appeal quashes the conviction of Christian Bittar, a former Deutsche Bank trader jailed in 2018.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cqgkvj10k6lno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:50+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4565,7 +4565,7 @@
       "summary": "The prime minister says restrictions on what workers can do after leaving roles have \"gone too far\".",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c63r5wx8z8wzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:50+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4574,7 +4574,7 @@
       "summary": "The stalwart of Britain's High Street has been sold to a Canadian billionaire family. What will that mean for you?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c63djxry8124o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:50+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4583,7 +4583,7 @@
       "summary": "It is the third time this week that Ukraine has targeted Russian tech giant Yandex, forcing the company to suspend its operations.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cw0k0g57mk3zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-11T19:30:50+00:00",
+      "published_utc": "2026-10-11T23:07:43+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
