@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-17T20:55:13+00:00",
+  "generated_at_utc": "2026-10-17T23:04:29+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1070,
-  "last_success_utc": "2026-10-17T18:26:09+00:00",
+  "cycle_count": 1071,
+  "last_success_utc": "2026-10-17T20:55:13+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -577,14 +577,14 @@
     {
       "key": "defense",
       "name": "Defense & Aerospace",
-      "score": 73.2,
-      "raw_score": 73.2,
+      "score": 73.06,
+      "raw_score": 73.06,
       "band": "strong_buy",
-      "weight": 0.1553,
+      "weight": 0.1551,
       "confidence": 1.0,
       "components": {
         "momentum": 73.77,
-        "sentiment": 90.47,
+        "sentiment": 90.0,
         "volume": 50.27,
         "policy": 65.0,
         "volatility_penalty": 0.0
@@ -612,8 +612,8 @@
       "score": 53.99,
       "raw_score": 53.99,
       "band": "starter",
-      "weight": 0.0821,
-      "confidence": 0.7,
+      "weight": 0.0797,
+      "confidence": 0.65,
       "components": {
         "momentum": 63.35,
         "sentiment": 50.0,
@@ -705,14 +705,14 @@
     {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 27.29,
-      "raw_score": 41.61,
+      "score": 23.2,
+      "raw_score": 37.52,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 1.0,
+      "confidence": 0.65,
       "components": {
         "momentum": 16.66,
-        "sentiment": 63.63,
+        "sentiment": 50.0,
         "volume": 54.27,
         "policy": 50.0,
         "volatility_penalty": 14.32
@@ -797,7 +797,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0041,
       "notional_delta": -424.04,
-      "reason": "exiting on positive news flow \u2014 \"USAF Doesn't Want Northrop Grumman's Stealth Drone\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Did CEO Succession Just Shift General Dynamics Stock Investment Narrative?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.56%",
         "theme=Defense & Aerospace",
@@ -837,17 +837,16 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.13,
-      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.26,
+      "reason": "exiting on mixed news flow \u2014 \"Top US Grocery Chains' Websites Remain Offline After a Major Cybersecurity Incident\" \u00b7 theme score 23.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-14.63%",
         "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity"
     },
@@ -916,17 +915,14 @@
     },
     {
       "symbol": "FTNT",
-      "action": "REDUCE",
-      "target_weight": 0.0063,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0127,
-      "notional_delta": -659.81,
-      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1319.63,
+      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-7.09%",
-        "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -936,7 +932,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0295,
       "notional_delta": -3071.93,
-      "reason": "exiting on positive news flow \u2014 \"USAF Doesn't Want Northrop Grumman's Stealth Drone\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Did CEO Succession Just Shift General Dynamics Stock Investment Narrative?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.84%",
         "theme=Defense & Aerospace",
@@ -996,10 +992,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0278,
+      "target_weight": 0.027,
       "current_weight": 0.0474,
-      "notional_delta": -2043.25,
-      "reason": "overweight by 1.96% vs target \u2014 trim",
+      "notional_delta": -2126.63,
+      "reason": "overweight by 2.04% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.06%",
         "theme=Consumer Discretionary",
@@ -1058,14 +1054,14 @@
     {
       "symbol": "LMT",
       "action": "BUY",
-      "target_weight": 0.0524,
+      "target_weight": 0.0523,
       "current_weight": 0.033,
-      "notional_delta": 2018.78,
-      "reason": "buying on positive news flow \u2014 \"USAF Doesn't Want Northrop Grumman's Stealth Drone\" \u00b7 underweight by 1.94% vs target \u2014 add",
+      "notional_delta": 2008.36,
+      "reason": "buying on positive news flow \u2014 \"Did CEO Succession Just Shift General Dynamics Stock Investment Narrative?\" \u00b7 underweight by 1.93% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.89%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 73.2 (strong_buy), contribution 85.0",
+        "theme 'Defense & Aerospace' score 73.1 (strong_buy), contribution 84.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1187,10 +1183,10 @@
     {
       "symbol": "NKE",
       "action": "REDUCE",
-      "target_weight": 0.0259,
+      "target_weight": 0.0251,
       "current_weight": 0.045,
-      "notional_delta": -1990.17,
-      "reason": "overweight by 1.91% vs target \u2014 trim",
+      "notional_delta": -2073.55,
+      "reason": "overweight by 1.99% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.16%",
         "theme=Consumer Discretionary",
@@ -1201,14 +1197,14 @@
     {
       "symbol": "NOC",
       "action": "BUY",
-      "target_weight": 0.0518,
+      "target_weight": 0.0517,
       "current_weight": 0.0,
-      "notional_delta": 5397.84,
-      "reason": "buying on positive news flow \u2014 \"Northrop Grumman (NOC) Is Down This Year and Trades Below Its History and Peers. Time to Buy the Dip?\" \u00b7 underweight by 5.18% vs target \u2014 add",
+      "notional_delta": 5387.42,
+      "reason": "buying on positive news flow \u2014 \"Did CEO Succession Just Shift General Dynamics Stock Investment Narrative?\" \u00b7 underweight by 5.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.08%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 73.2 (strong_buy), contribution 84.1",
+        "theme 'Defense & Aerospace' score 73.1 (strong_buy), contribution 83.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1231,17 +1227,14 @@
     },
     {
       "symbol": "OKTA",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.01,
-      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.02,
+      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-17.29%",
-        "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1262,17 +1255,16 @@
     },
     {
       "symbol": "PANW",
-      "action": "REDUCE",
-      "target_weight": 0.0035,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0069,
-      "notional_delta": -360.51,
-      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -721.02,
+      "reason": "exiting on mixed news flow \u2014 \"Top US Grocery Chains' Websites Remain Offline After a Major Cybersecurity Incident\" \u00b7 theme score 23.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-18.28%",
         "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1324,14 +1316,14 @@
     {
       "symbol": "RTX",
       "action": "BUY",
-      "target_weight": 0.0512,
+      "target_weight": 0.0511,
       "current_weight": 0.0304,
-      "notional_delta": 2170.81,
-      "reason": "buying on positive news flow \u2014 \"USAF Doesn't Want Northrop Grumman's Stealth Drone\" \u00b7 underweight by 2.08% vs target \u2014 add",
+      "notional_delta": 2160.39,
+      "reason": "buying on positive news flow \u2014 \"Did CEO Succession Just Shift General Dynamics Stock Investment Narrative?\" \u00b7 underweight by 2.07% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.20%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 73.2 (strong_buy), contribution 83.1",
+        "theme 'Defense & Aerospace' score 73.1 (strong_buy), contribution 82.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1356,10 +1348,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0284,
+      "target_weight": 0.0276,
       "current_weight": 0.0485,
-      "notional_delta": -2094.95,
-      "reason": "overweight by 2.01% vs target \u2014 trim",
+      "notional_delta": -2178.33,
+      "reason": "overweight by 2.09% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.19%",
         "theme=Consumer Discretionary",
@@ -1490,17 +1482,14 @@
     },
     {
       "symbol": "ZS",
-      "action": "REDUCE",
-      "target_weight": 0.0036,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0072,
-      "notional_delta": -375.69,
-      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -751.38,
+      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-4.75%",
-        "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     }
@@ -1598,7 +1587,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0041,
       "notional_delta": -424.04,
-      "reason": "exiting on positive news flow \u2014 \"USAF Doesn't Want Northrop Grumman's Stealth Drone\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Did CEO Succession Just Shift General Dynamics Stock Investment Narrative?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.56%",
         "theme=Defense & Aerospace",
@@ -1647,17 +1636,16 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.13,
-      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.26,
+      "reason": "exiting on mixed news flow \u2014 \"Top US Grocery Chains' Websites Remain Offline After a Major Cybersecurity Incident\" \u00b7 theme score 23.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-14.63%",
         "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1741,17 +1729,14 @@
     },
     {
       "symbol": "FTNT",
-      "action": "REDUCE",
-      "target_weight": 0.0063,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0127,
-      "notional_delta": -659.81,
-      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1319.63,
+      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-7.09%",
-        "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1764,7 +1749,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0295,
       "notional_delta": -3071.93,
-      "reason": "exiting on positive news flow \u2014 \"USAF Doesn't Want Northrop Grumman's Stealth Drone\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Did CEO Succession Just Shift General Dynamics Stock Investment Narrative?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.84%",
         "theme=Defense & Aerospace",
@@ -1836,10 +1821,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0278,
+      "target_weight": 0.027,
       "current_weight": 0.0474,
-      "notional_delta": -2043.25,
-      "reason": "overweight by 1.96% vs target \u2014 trim",
+      "notional_delta": -2126.63,
+      "reason": "overweight by 2.04% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.06%",
         "theme=Consumer Discretionary",
@@ -1910,14 +1895,14 @@
     {
       "symbol": "LMT",
       "action": "BUY",
-      "target_weight": 0.0524,
+      "target_weight": 0.0523,
       "current_weight": 0.033,
-      "notional_delta": 2018.78,
-      "reason": "buying on positive news flow \u2014 \"USAF Doesn't Want Northrop Grumman's Stealth Drone\" \u00b7 underweight by 1.94% vs target \u2014 add",
+      "notional_delta": 2008.36,
+      "reason": "buying on positive news flow \u2014 \"Did CEO Succession Just Shift General Dynamics Stock Investment Narrative?\" \u00b7 underweight by 1.93% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.89%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 73.2 (strong_buy), contribution 85.0",
+        "theme 'Defense & Aerospace' score 73.1 (strong_buy), contribution 84.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2066,10 +2051,10 @@
     {
       "symbol": "NKE",
       "action": "REDUCE",
-      "target_weight": 0.0259,
+      "target_weight": 0.0251,
       "current_weight": 0.045,
-      "notional_delta": -1990.17,
-      "reason": "overweight by 1.91% vs target \u2014 trim",
+      "notional_delta": -2073.55,
+      "reason": "overweight by 1.99% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.16%",
         "theme=Consumer Discretionary",
@@ -2083,14 +2068,14 @@
     {
       "symbol": "NOC",
       "action": "BUY",
-      "target_weight": 0.0518,
+      "target_weight": 0.0517,
       "current_weight": 0.0,
-      "notional_delta": 5397.84,
-      "reason": "buying on positive news flow \u2014 \"Northrop Grumman (NOC) Is Down This Year and Trades Below Its History and Peers. Time to Buy the Dip?\" \u00b7 underweight by 5.18% vs target \u2014 add",
+      "notional_delta": 5387.42,
+      "reason": "buying on positive news flow \u2014 \"Did CEO Succession Just Shift General Dynamics Stock Investment Narrative?\" \u00b7 underweight by 5.17% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-4.08%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 73.2 (strong_buy), contribution 84.1",
+        "theme 'Defense & Aerospace' score 73.1 (strong_buy), contribution 83.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2119,17 +2104,14 @@
     },
     {
       "symbol": "OKTA",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.01,
-      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.02,
+      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-17.29%",
-        "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2156,17 +2138,16 @@
     },
     {
       "symbol": "PANW",
-      "action": "REDUCE",
-      "target_weight": 0.0035,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0069,
-      "notional_delta": -360.51,
-      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -721.02,
+      "reason": "exiting on mixed news flow \u2014 \"Top US Grocery Chains' Websites Remain Offline After a Major Cybersecurity Incident\" \u00b7 theme score 23.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-18.28%",
         "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2230,14 +2211,14 @@
     {
       "symbol": "RTX",
       "action": "BUY",
-      "target_weight": 0.0512,
+      "target_weight": 0.0511,
       "current_weight": 0.0304,
-      "notional_delta": 2170.81,
-      "reason": "buying on positive news flow \u2014 \"USAF Doesn't Want Northrop Grumman's Stealth Drone\" \u00b7 underweight by 2.08% vs target \u2014 add",
+      "notional_delta": 2160.39,
+      "reason": "buying on positive news flow \u2014 \"Did CEO Succession Just Shift General Dynamics Stock Investment Narrative?\" \u00b7 underweight by 2.07% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.20%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 73.2 (strong_buy), contribution 83.1",
+        "theme 'Defense & Aerospace' score 73.1 (strong_buy), contribution 82.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2268,10 +2249,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0284,
+      "target_weight": 0.0276,
       "current_weight": 0.0485,
-      "notional_delta": -2094.95,
-      "reason": "overweight by 2.01% vs target \u2014 trim",
+      "notional_delta": -2178.33,
+      "reason": "overweight by 2.09% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.19%",
         "theme=Consumer Discretionary",
@@ -2429,17 +2410,14 @@
     },
     {
       "symbol": "ZS",
-      "action": "REDUCE",
-      "target_weight": 0.0036,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0072,
-      "notional_delta": -375.69,
-      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -751.38,
+      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-4.75%",
-        "theme=Cybersecurity",
-        "news_source=yahoo_rss",
-        "event=analyst upgrade",
-        "news_sentiment=+0.20"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2448,10 +2426,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-18T04:12:13+00:00",
-      "v": 99928.97
-    },
     {
       "t": "2026-07-18T06:25:55+00:00",
       "v": 99928.97
@@ -4447,6 +4421,10 @@
     {
       "t": "2026-10-17T20:55:08+00:00",
       "v": 104223.18
+    },
+    {
+      "t": "2026-10-17T23:04:26+00:00",
+      "v": 104223.18
     }
   ],
   "breaking_news": [
@@ -4455,7 +4433,7 @@
       "summary": "A federal judge ruled late Tuesday that President Trump cannot ban news organizations from covering him at the White House because he does not like the nature of their coverage - at least, not until the matter goes to a formal trial.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/14/nx-s1-6001398/white-house-media-ban",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -4464,7 +4442,7 @@
       "summary": "Free samples, high-pressure pitches and $50,000 bills: An NPR investigation reveals how a network of mall skincare stores systematically targeted older adults and people with disabilities across the U.S.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/14/nx-s1-5550974/skincare-scheme-mazal-group-investigation",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4473,7 +4451,7 @@
       "summary": "For years, customers have complained of aggressive sales tactics and charges at mall skincare stores. NPR investigated the business that connects many of them.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/14/nx-s1-6000621/mazal-group-investigation-documentary",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4482,7 +4460,7 @@
       "summary": "Consumer prices in September jumped 3.7% from a year ago.  The Social Security Administration said benefits will increase next year to help keep pace with the rising cost of living.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/14/nx-s1-6000593/inflation-consumer-prices-cpi-social-security-benefits",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4491,7 +4469,7 @@
       "summary": "Social Security benefits are set to get a boost to offset rising consumer prices. And, streamer Hasan Piker says the GOP's \"guilt-by-association politics\" won't drag Democrats down in the midterms.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/15/g-s1-148199/up-first-newsletter-inflation-social-security-ukraine-russia-yemen-saudi-arabia",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4500,7 +4478,7 @@
       "summary": "<em>The Atlantic</em> writer Josh Tyrangiel says Musk and Bezos each want to colonize the moon, mine its resources and launch thousands more satellites. He says their only real competition is each other.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/15/nx-s1-6002922/inside-the-race-between-elon-musk-and-jeff-bezos-for-control-of-outer-space",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4509,7 +4487,7 @@
       "summary": "Character.AI collected millions of users, making it a very appealing acquisition. Google took a unique route to \"acquiring\" it, hiring away its founders and licensing its technology. Now Character.AI is filing for bankruptcy. Here's what to",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/10/16/nx-s1-6001828/what-this-bankruptcy-says-about-ai-startups",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4518,53 +4496,8 @@
       "summary": "About a third of couples are willing to save money on cake and dessert, according to the wedding-planning site Zola.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/17/nx-s1-5976921/grocery-store-wedding-cakes",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Katie Zacharia leaving White House role less than five days into job",
-      "summary": "Her public debut as press secretary ended with a flurry of media criticism about her credentials and preparedness.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c32l4ekpvzl8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": true
-    },
-    {
-      "headline": "Pope discharged from hospital days after lung cancer surgery",
-      "summary": "The pontiff will give the traditional Angelus prayer and blessing in St Peter's Square on Sunday.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c5x2vkddrkrko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Rare pink diamond goes on display in France 100 years after amateur heist",
-      "summary": "The French royal jewel will be on public display for the first time since it was found hidden in an apple after a 1926 theft.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c61m4zkx47vlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Nursery owner in China jailed for life after hundreds of children poisoned",
-      "summary": "She and five staff members were found to have used the inedible paint in meals to make them look more appealing.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cqe9lx54g7x9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Brazil sees record fall in Amazon deforestation as key election looms",
-      "summary": "The Amazon rainforest is a crucial buffer against climate change - but deforestation had expanded under former president Jair Bolsonaro.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cqe8rzg6zl00o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
-      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -4572,7 +4505,7 @@
       "summary": "Brothers Jake and Callum Robinson and their friend Carter Rhoad were killed on a surfing trip in an apparent botched robbery.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c3kgqjkzw29wo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4581,7 +4514,43 @@
       "summary": "The 16-year-old suspect previously attended the primary school and had targeted a special educational needs classroom, police say.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cv98zw1k8kp3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Photos show luxury boat with 50m pool and water slides near Kim Jong Un's summer retreat",
+      "summary": "Satellite images give clues about how Kim spends his holidays - something far out of reach for most North Koreans.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cmy4xnyyg1lyo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-17T23:04:29+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "At least 17 dead in crush at Hindu festival event in India",
+      "summary": "Many more have been injured at an event in the Indian city of Kolkata to mark a Hindu festival.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c820vwq7qg2ko?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-17T23:04:29+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Anti-government protesters battle with police in Albania",
+      "summary": "There were violent clashes between demonstrators and riot police throughout Saturday in the capital Tirana.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/crwydey50xeno?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-17T23:04:29+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "European diplomats attacked by Israeli settlers in West Bank",
+      "summary": "The Israeli military condemns the violence but the prime minister's office says it is part of a \"smear\" campaign.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c962ydpmjm3zo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4590,16 +4559,25 @@
       "summary": "The US president temporarily ends many restrictions on Moscow recently passed by Congress over \"national security\" concerns.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
+    },
+    {
+      "headline": "Violent clashes, looting and buildings ablaze in France as over 1,000 arrested after protests",
+      "summary": "Disorder broke out in cities across the country on a day in which more than half a million joined cost of living protests.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c6d937wedj7jo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-17T23:04:29+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
     },
     {
       "headline": "How backlash against data centres could shape the US midterm elections",
       "summary": "Democrats and Republicans alike are coming out against data centre development, amid growing backlash across the US.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c0rezqpnekro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4608,7 +4586,7 @@
       "summary": "Apurv Patel is one of several people who say they were promised job opportunities that did not appear.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9j3dvezpdz0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4617,7 +4595,7 @@
       "summary": "Smells from rubbish dumps and industrial facilities are being more carefully monitored.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cr6240q1w136o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4626,7 +4604,7 @@
       "summary": "The culture secretary says the deal could affect free expression in the media and the variety of Britain's news landscape.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cm79pe5yej7no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T20:55:13+00:00",
+      "published_utc": "2026-10-17T23:04:29+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
