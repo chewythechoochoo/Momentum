@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-17T18:26:09+00:00",
+  "generated_at_utc": "2026-10-17T20:55:13+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1069,
-  "last_success_utc": "2026-10-17T15:54:55+00:00",
+  "cycle_count": 1070,
+  "last_success_utc": "2026-10-17T18:26:09+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -593,14 +593,14 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 60.93,
-      "raw_score": 64.81,
+      "score": 57.93,
+      "raw_score": 61.81,
       "band": "buy",
-      "weight": 0.1048,
-      "confidence": 0.75,
+      "weight": 0.0933,
+      "confidence": 0.7,
       "components": {
         "momentum": 62.83,
-        "sentiment": 80.0,
+        "sentiment": 70.0,
         "volume": 53.37,
         "policy": 50.0,
         "volatility_penalty": 3.88
@@ -625,33 +625,17 @@
     {
       "key": "financials",
       "name": "Financials & Rates",
-      "score": 49.39,
-      "raw_score": 49.39,
+      "score": 52.39,
+      "raw_score": 52.39,
       "band": "starter",
-      "weight": 0.0671,
-      "confidence": 0.65,
+      "weight": 0.0776,
+      "confidence": 0.7,
       "components": {
         "momentum": 31.58,
-        "sentiment": 60.0,
+        "sentiment": 70.0,
         "volume": 66.31,
         "policy": 55.0,
         "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 46.6,
-      "raw_score": 50.99,
-      "band": "starter",
-      "weight": 0.0702,
-      "confidence": 0.95,
-      "components": {
-        "momentum": 8.13,
-        "sentiment": 100.0,
-        "volume": 63.67,
-        "policy": 50.0,
-        "volatility_penalty": 4.39
       }
     },
     {
@@ -671,16 +655,32 @@
       }
     },
     {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 40.6,
+      "raw_score": 44.99,
+      "band": "starter",
+      "weight": 0.0455,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 8.13,
+        "sentiment": 80.0,
+        "volume": 63.67,
+        "policy": 50.0,
+        "volatility_penalty": 4.39
+      }
+    },
+    {
       "key": "ai_compute",
       "name": "AI & Compute",
-      "score": 37.85,
-      "raw_score": 41.43,
-      "band": "hold_small",
-      "weight": 0.0371,
+      "score": 34.85,
+      "raw_score": 38.43,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 20.24,
-        "sentiment": 60.0,
+        "sentiment": 50.0,
         "volume": 49.17,
         "policy": 55.0,
         "volatility_penalty": 3.58
@@ -689,30 +689,30 @@
     {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
-      "score": 36.29,
-      "raw_score": 40.07,
-      "band": "hold_small",
-      "weight": 0.0229,
-      "confidence": 0.65,
+      "score": 32.79,
+      "raw_score": 36.57,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 1.0,
       "components": {
         "momentum": 26.23,
-        "sentiment": 50.0,
+        "sentiment": 33.34,
         "volume": 47.86,
-        "policy": 50.0,
+        "policy": 65.0,
         "volatility_penalty": 3.77
       }
     },
     {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 23.2,
-      "raw_score": 37.52,
+      "score": 27.29,
+      "raw_score": 41.61,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.65,
+      "confidence": 1.0,
       "components": {
         "momentum": 16.66,
-        "sentiment": 50.0,
+        "sentiment": 63.63,
         "volume": 54.27,
         "policy": 50.0,
         "volatility_penalty": 14.32
@@ -723,31 +723,27 @@
     {
       "symbol": "AMAT",
       "action": "BUY",
-      "target_weight": 0.0218,
+      "target_weight": 0.014,
       "current_weight": 0.0034,
-      "notional_delta": 1921.92,
-      "reason": "buying on mixed news flow \u2014 \"Chip Stocks Endure Longest Losing Streak Since 2006 as CoreWeave Credit Concerns Mount: This Week on Wall Street\" \u00b7 underweight by 1.84% vs target \u2014 add",
+      "notional_delta": 1108.98,
+      "reason": "underweight by 1.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-9.44%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 42.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Semiconductors (Broad)' score 40.6 (starter), contribution 36.7"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "AMD",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -1.15,
-      "reason": "exiting on mixed news flow \u2014 \"SemiAnalysis Pots On X \"SHOCKING: We have confirmed that multiple Neoclouds have been refused access to GTC Berlin due to them adding AMD GP\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.58,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.37%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
@@ -769,24 +765,24 @@
     {
       "symbol": "ASML",
       "action": "BUY",
-      "target_weight": 0.0236,
+      "target_weight": 0.0153,
       "current_weight": 0.0038,
-      "notional_delta": 2063.37,
-      "reason": "underweight by 1.98% vs target \u2014 add",
+      "notional_delta": 1198.32,
+      "reason": "underweight by 1.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.94%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 46.2"
+        "theme 'Semiconductors (Broad)' score 40.6 (starter), contribution 40.2"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "AVGO",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.82,
-      "reason": "exiting on mixed news flow \u2014 \"Broadcom Stock Is Down 35% From Its Peak as AI Bubble Warnings Rise, but Analysts Stay Optimistic\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.41,
+      "reason": "trimming on mixed news flow \u2014 \"Broadcom Stock Is Down 35% From Its Peak as AI Bubble Warnings Rise, but Analysts Stay Optimistic\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.12%",
         "theme=AI & Compute",
@@ -841,16 +837,17 @@
     },
     {
       "symbol": "CRWD",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.26,
-      "reason": "exiting on mixed news flow \u2014 \"Chip Stocks Endure Longest Losing Streak Since 2006 as CoreWeave Credit Concerns Mount: This Week on Wall Street\" \u00b7 theme score 23.2 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.13,
+      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-14.63%",
         "theme=Cybersecurity",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
@@ -888,14 +885,16 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0095,
+      "target_weight": 0.0143,
       "current_weight": 0.0286,
-      "notional_delta": -1995.1,
-      "reason": "overweight by 1.91% vs target \u2014 trim",
+      "notional_delta": -1492.61,
+      "reason": "trimming on legal risk (negative) \u2014 \"Tesla Just Won in Court: Self-Driving Buyers Can\u2019t Sue as a Class\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.11%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 36.3 (hold_small), contribution 57.1"
+        "news_source=yahoo_rss",
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -917,14 +916,17 @@
     },
     {
       "symbol": "FTNT",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0063,
       "current_weight": 0.0127,
-      "notional_delta": -1319.63,
-      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -659.81,
+      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-7.09%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
@@ -946,28 +948,29 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.009,
+      "target_weight": 0.0108,
       "current_weight": 0.0217,
-      "notional_delta": -1318.68,
-      "reason": "overweight by 1.27% vs target \u2014 trim",
+      "notional_delta": -1128.34,
+      "reason": "trimming on legal risk (negative) \u2014 \"Tesla Just Won in Court: Self-Driving Buyers Can\u2019t Sue as a Class\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.09%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 36.3 (hold_small), contribution 54.0"
+        "news_source=yahoo_rss",
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "GOOGL",
       "action": "REDUCE",
-      "target_weight": 0.0113,
+      "target_weight": 0.0106,
       "current_weight": 0.0213,
-      "notional_delta": -1039.34,
-      "reason": "trimming on layoffs (negative) \u2014 \"Disney to Spend $60 Million a Year on Character.AI Talent After Its Own Layoffs as AI Startup Faces Bankruptcy\" \u00b7 overweight by 1.00% vs target \u2014 trim",
+      "notional_delta": -1108.53,
+      "reason": "trimming on layoffs (negative) \u2014 \"Disney to Spend $60 Million a Year on Character.AI Talent After Its Own Layoffs as AI Startup Faces Bankruptcy\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.49%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 37.9 (hold_small), contribution 40.4",
         "news_source=benzinga",
         "event=layoffs",
         "news_sentiment=-0.20"
@@ -976,15 +979,17 @@
     },
     {
       "symbol": "GS",
-      "action": "REDUCE",
-      "target_weight": 0.0197,
+      "action": "HOLD",
+      "target_weight": 0.0229,
       "current_weight": 0.0248,
-      "notional_delta": -533.23,
-      "reason": "overweight by 0.51% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Dell Stock Enters Bear Market as Analysts Remain Highly Bullish Despite AI Jitters\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.57%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 49.4 (starter), contribution 50.8"
+        "theme 'Financials & Rates' score 52.4 (starter), contribution 53.8",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
@@ -1004,15 +1009,15 @@
     },
     {
       "symbol": "JPM",
-      "action": "REDUCE",
-      "target_weight": 0.0244,
+      "action": "HOLD",
+      "target_weight": 0.0282,
       "current_weight": 0.0309,
-      "notional_delta": -679.57,
-      "reason": "trimming on positive news flow \u2014 \"Trump\u2019s $330 Million White House Ballroom Donor List Reveals Nvidia, Apple and Google Among Top Tech Contributors: Report (UPDATED)\" \u00b7 overweight by 0.65% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Trump\u2019s $330 Million White House Ballroom Donor List Reveals Nvidia, Apple and Google Among Top Tech Contributors: Report (UPDATED)\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.01%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 49.4 (starter), contribution 63.2",
+        "theme 'Financials & Rates' score 52.4 (starter), contribution 66.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1020,28 +1025,31 @@
     },
     {
       "symbol": "LCID",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.0,
+      "reason": "trimming on legal risk (negative) \u2014 \"Tesla Just Won in Court: Self-Driving Buyers Can\u2019t Sue as a Class\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-60.53%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=yahoo_rss",
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0396,
+      "target_weight": 0.0355,
       "current_weight": 0.0355,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"JD Vance Touts TrumpRx Drug Price Push, Trump Accounts as \u2018Economic Nationalism\u2019 Wins Ahead Of Midterms\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.51%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 60.9 (buy), contribution 79.9",
+        "theme 'Biotech & Pharma' score 57.9 (buy), contribution 76.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1069,12 +1077,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.35,
-      "reason": "exiting on mixed news flow \u2014 \"Chip Stocks Endure Longest Losing Streak Since 2006 as CoreWeave Credit Concerns Mount: This Week on Wall Street\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-18.40%",
-        "theme=Semiconductors (Broad)",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1094,14 +1100,13 @@
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.0119,
+      "target_weight": 0.012,
       "current_weight": 0.024,
-      "notional_delta": -1257.83,
-      "reason": "trimming on negative news flow \u2014 \"Nebius Stock Falls After Key Gartner Warning as Short Interest Nears 20%\" \u00b7 overweight by 1.21% vs target \u2014 trim",
+      "notional_delta": -1249.04,
+      "reason": "trimming on negative news flow \u2014 \"Riot Platforms, IREN, and MARA Drop Further as Bitcoin Miners Wrestle With the AI Headwinds\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.54%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 37.9 (hold_small), contribution 42.5",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1136,14 +1141,13 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.0138,
+      "target_weight": 0.0147,
       "current_weight": 0.0293,
-      "notional_delta": -1620.3,
-      "reason": "trimming on negative news flow \u2014 \"Nebius Stock Falls After Key Gartner Warning as Short Interest Nears 20%\" \u00b7 overweight by 1.55% vs target \u2014 trim",
+      "notional_delta": -1529.29,
+      "reason": "trimming on negative news flow \u2014 \"Riot Platforms, IREN, and MARA Drop Further as Bitcoin Miners Wrestle With the AI Headwinds\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.30%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 37.9 (hold_small), contribution 49.2",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1212,29 +1216,32 @@
     },
     {
       "symbol": "NVDA",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.37,
-      "reason": "exiting on positive news flow \u2014 \"The Moment Jensen Huang Realized Nvidia 'Won't Have to Die' Came After a Call From This CEO: 'For the Whole Time, 30 Years\u2026'\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.18,
+      "reason": "trimming on negative news flow \u2014 \"Riot Platforms, IREN, and MARA Drop Further as Bitcoin Miners Wrestle With the AI Headwinds\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-11.28%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "OKTA",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.02,
-      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.01,
+      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.29%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1255,30 +1262,31 @@
     },
     {
       "symbol": "PANW",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0035,
       "current_weight": 0.0069,
-      "notional_delta": -721.02,
-      "reason": "exiting on mixed news flow \u2014 \"Chip Stocks Endure Longest Losing Streak Since 2006 as CoreWeave Credit Concerns Mount: This Week on Wall Street\" \u00b7 theme score 23.2 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -360.51,
+      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-18.28%",
         "theme=Cybersecurity",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     },
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0381,
+      "target_weight": 0.0341,
       "current_weight": 0.0338,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"JD Vance Touts TrumpRx Drug Price Push, Trump Accounts as \u2018Economic Nationalism\u2019 Wins Ahead Of Midterms\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 60.9 (buy), contribution 76.9",
+        "theme 'Biotech & Pharma' score 57.9 (buy), contribution 73.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1299,14 +1307,17 @@
     },
     {
       "symbol": "RIVN",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0075,
       "current_weight": 0.0149,
-      "notional_delta": -1555.03,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -777.52,
+      "reason": "trimming on legal risk (negative) \u2014 \"Tesla Just Won in Court: Self-Driving Buyers Can\u2019t Sue as a Class\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.24%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=yahoo_rss",
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1390,45 +1401,44 @@
     },
     {
       "symbol": "SMCI",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.47,
-      "reason": "exiting on mixed news flow \u2014 \"Super Micro Finally Names a CFO, Nearly Two Years After an Accounting Review Prompted the Search\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.24,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-24.89%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "TSLA",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0035,
       "current_weight": 0.007,
-      "notional_delta": -728.6,
-      "reason": "exiting on mixed news flow \u2014 \"Semis And Bonds At Inflection Points; Bonds Become Correlated With AI Trade; Musk Shows Flying Roadster\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -364.3,
+      "reason": "trimming on legal risk (negative) \u2014 \"Tesla Just Won in Court: Self-Driving Buyers Can\u2019t Sue as a Class\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.12%",
         "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "TSM",
       "action": "BUY",
-      "target_weight": 0.0248,
+      "target_weight": 0.0162,
       "current_weight": 0.0041,
-      "notional_delta": 2158.74,
-      "reason": "buying on positive news flow \u2014 \"Consumer Tech (Oct 12-16): Big Banks Reports Earnings, Anthropic Revenue Jumps 45% & More\" \u00b7 underweight by 2.07% vs target \u2014 add",
+      "notional_delta": 1262.42,
+      "reason": "buying on positive news flow \u2014 \"Consumer Tech (Oct 12-16): Big Banks Reports Earnings, Anthropic Revenue Jumps 45% & More\" \u00b7 underweight by 1.21% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-5.18%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 48.6",
+        "theme 'Semiconductors (Broad)' score 40.6 (starter), contribution 42.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1437,28 +1447,28 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.027,
+      "target_weight": 0.0238,
       "current_weight": 0.0276,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 60.9 (buy), contribution 54.5"
+        "theme 'Biotech & Pharma' score 57.9 (buy), contribution 51.5"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.023,
+      "target_weight": 0.0265,
       "current_weight": 0.0315,
-      "notional_delta": -886.4,
-      "reason": "overweight by 0.85% vs target \u2014 trim",
+      "notional_delta": -521.62,
+      "reason": "overweight by 0.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.15%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 49.4 (starter), contribution 59.3"
+        "theme 'Financials & Rates' score 52.4 (starter), contribution 62.3"
       ],
       "theme_key": "financials"
     },
@@ -1480,14 +1490,17 @@
     },
     {
       "symbol": "ZS",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0036,
       "current_weight": 0.0072,
-      "notional_delta": -751.38,
-      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -375.69,
+      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.75%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity"
     }
@@ -1496,16 +1509,14 @@
     {
       "symbol": "AMAT",
       "action": "BUY",
-      "target_weight": 0.0218,
+      "target_weight": 0.014,
       "current_weight": 0.0034,
-      "notional_delta": 1921.92,
-      "reason": "buying on mixed news flow \u2014 \"Chip Stocks Endure Longest Losing Streak Since 2006 as CoreWeave Credit Concerns Mount: This Week on Wall Street\" \u00b7 underweight by 1.84% vs target \u2014 add",
+      "notional_delta": 1108.98,
+      "reason": "underweight by 1.06% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-9.44%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 42.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Semiconductors (Broad)' score 40.6 (starter), contribution 36.7"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1514,16 +1525,14 @@
     },
     {
       "symbol": "AMD",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -1.15,
-      "reason": "exiting on mixed news flow \u2014 \"SemiAnalysis Pots On X \"SHOCKING: We have confirmed that multiple Neoclouds have been refused access to GTC Berlin due to them adding AMD GP\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.58,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-15.37%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1551,14 +1560,14 @@
     {
       "symbol": "ASML",
       "action": "BUY",
-      "target_weight": 0.0236,
+      "target_weight": 0.0153,
       "current_weight": 0.0038,
-      "notional_delta": 2063.37,
-      "reason": "underweight by 1.98% vs target \u2014 add",
+      "notional_delta": 1198.32,
+      "reason": "underweight by 1.15% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-3.94%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 46.2"
+        "theme 'Semiconductors (Broad)' score 40.6 (starter), contribution 40.2"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1567,11 +1576,11 @@
     },
     {
       "symbol": "AVGO",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.82,
-      "reason": "exiting on mixed news flow \u2014 \"Broadcom Stock Is Down 35% From Its Peak as AI Bubble Warnings Rise, but Analysts Stay Optimistic\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.41,
+      "reason": "trimming on mixed news flow \u2014 \"Broadcom Stock Is Down 35% From Its Peak as AI Bubble Warnings Rise, but Analysts Stay Optimistic\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-13.12%",
         "theme=AI & Compute",
@@ -1638,16 +1647,17 @@
     },
     {
       "symbol": "CRWD",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.26,
-      "reason": "exiting on mixed news flow \u2014 \"Chip Stocks Endure Longest Losing Streak Since 2006 as CoreWeave Credit Concerns Mount: This Week on Wall Street\" \u00b7 theme score 23.2 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.13,
+      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-14.63%",
         "theme=Cybersecurity",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1694,14 +1704,16 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0095,
+      "target_weight": 0.0143,
       "current_weight": 0.0286,
-      "notional_delta": -1995.1,
-      "reason": "overweight by 1.91% vs target \u2014 trim",
+      "notional_delta": -1492.61,
+      "reason": "trimming on legal risk (negative) \u2014 \"Tesla Just Won in Court: Self-Driving Buyers Can\u2019t Sue as a Class\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.11%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 36.3 (hold_small), contribution 57.1"
+        "news_source=yahoo_rss",
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1729,14 +1741,17 @@
     },
     {
       "symbol": "FTNT",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0063,
       "current_weight": 0.0127,
-      "notional_delta": -1319.63,
-      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -659.81,
+      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-7.09%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1764,14 +1779,16 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.009,
+      "target_weight": 0.0108,
       "current_weight": 0.0217,
-      "notional_delta": -1318.68,
-      "reason": "overweight by 1.27% vs target \u2014 trim",
+      "notional_delta": -1128.34,
+      "reason": "trimming on legal risk (negative) \u2014 \"Tesla Just Won in Court: Self-Driving Buyers Can\u2019t Sue as a Class\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.09%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 36.3 (hold_small), contribution 54.0"
+        "news_source=yahoo_rss",
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1781,14 +1798,13 @@
     {
       "symbol": "GOOGL",
       "action": "REDUCE",
-      "target_weight": 0.0113,
+      "target_weight": 0.0106,
       "current_weight": 0.0213,
-      "notional_delta": -1039.34,
-      "reason": "trimming on layoffs (negative) \u2014 \"Disney to Spend $60 Million a Year on Character.AI Talent After Its Own Layoffs as AI Startup Faces Bankruptcy\" \u00b7 overweight by 1.00% vs target \u2014 trim",
+      "notional_delta": -1108.53,
+      "reason": "trimming on layoffs (negative) \u2014 \"Disney to Spend $60 Million a Year on Character.AI Talent After Its Own Layoffs as AI Startup Faces Bankruptcy\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.49%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 37.9 (hold_small), contribution 40.4",
         "news_source=benzinga",
         "event=layoffs",
         "news_sentiment=-0.20"
@@ -1800,15 +1816,17 @@
     },
     {
       "symbol": "GS",
-      "action": "REDUCE",
-      "target_weight": 0.0197,
+      "action": "HOLD",
+      "target_weight": 0.0229,
       "current_weight": 0.0248,
-      "notional_delta": -533.23,
-      "reason": "overweight by 0.51% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Dell Stock Enters Bear Market as Analysts Remain Highly Bullish Despite AI Jitters\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-5.57%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 49.4 (starter), contribution 50.8"
+        "theme 'Financials & Rates' score 52.4 (starter), contribution 53.8",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1834,15 +1852,15 @@
     },
     {
       "symbol": "JPM",
-      "action": "REDUCE",
-      "target_weight": 0.0244,
+      "action": "HOLD",
+      "target_weight": 0.0282,
       "current_weight": 0.0309,
-      "notional_delta": -679.57,
-      "reason": "trimming on positive news flow \u2014 \"Trump\u2019s $330 Million White House Ballroom Donor List Reveals Nvidia, Apple and Google Among Top Tech Contributors: Report (UPDATED)\" \u00b7 overweight by 0.65% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Trump\u2019s $330 Million White House Ballroom Donor List Reveals Nvidia, Apple and Google Among Top Tech Contributors: Report (UPDATED)\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.01%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 49.4 (starter), contribution 63.2",
+        "theme 'Financials & Rates' score 52.4 (starter), contribution 66.2",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1853,14 +1871,17 @@
     },
     {
       "symbol": "LCID",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -0.0,
+      "reason": "trimming on legal risk (negative) \u2014 \"Tesla Just Won in Court: Self-Driving Buyers Can\u2019t Sue as a Class\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-60.53%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=yahoo_rss",
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1870,14 +1891,14 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0396,
+      "target_weight": 0.0355,
       "current_weight": 0.0355,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"JD Vance Touts TrumpRx Drug Price Push, Trump Accounts as \u2018Economic Nationalism\u2019 Wins Ahead Of Midterms\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.51%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 60.9 (buy), contribution 79.9",
+        "theme 'Biotech & Pharma' score 57.9 (buy), contribution 76.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1911,12 +1932,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.35,
-      "reason": "exiting on mixed news flow \u2014 \"Chip Stocks Endure Longest Losing Streak Since 2006 as CoreWeave Credit Concerns Mount: This Week on Wall Street\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-18.40%",
-        "theme=Semiconductors (Broad)",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1942,14 +1961,13 @@
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.0119,
+      "target_weight": 0.012,
       "current_weight": 0.024,
-      "notional_delta": -1257.83,
-      "reason": "trimming on negative news flow \u2014 \"Nebius Stock Falls After Key Gartner Warning as Short Interest Nears 20%\" \u00b7 overweight by 1.21% vs target \u2014 trim",
+      "notional_delta": -1249.04,
+      "reason": "trimming on negative news flow \u2014 \"Riot Platforms, IREN, and MARA Drop Further as Bitcoin Miners Wrestle With the AI Headwinds\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.54%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 37.9 (hold_small), contribution 42.5",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1993,14 +2011,13 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.0138,
+      "target_weight": 0.0147,
       "current_weight": 0.0293,
-      "notional_delta": -1620.3,
-      "reason": "trimming on negative news flow \u2014 \"Nebius Stock Falls After Key Gartner Warning as Short Interest Nears 20%\" \u00b7 overweight by 1.55% vs target \u2014 trim",
+      "notional_delta": -1529.29,
+      "reason": "trimming on negative news flow \u2014 \"Riot Platforms, IREN, and MARA Drop Further as Bitcoin Miners Wrestle With the AI Headwinds\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.30%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 37.9 (hold_small), contribution 49.2",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -2084,16 +2101,16 @@
     },
     {
       "symbol": "NVDA",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.37,
-      "reason": "exiting on positive news flow \u2014 \"The Moment Jensen Huang Realized Nvidia 'Won't Have to Die' Came After a Call From This CEO: 'For the Whole Time, 30 Years\u2026'\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.18,
+      "reason": "trimming on negative news flow \u2014 \"Riot Platforms, IREN, and MARA Drop Further as Bitcoin Miners Wrestle With the AI Headwinds\" \u00b7 theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-11.28%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2102,14 +2119,17 @@
     },
     {
       "symbol": "OKTA",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.02,
-      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.01,
+      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.29%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2136,16 +2156,17 @@
     },
     {
       "symbol": "PANW",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0035,
       "current_weight": 0.0069,
-      "notional_delta": -721.02,
-      "reason": "exiting on mixed news flow \u2014 \"Chip Stocks Endure Longest Losing Streak Since 2006 as CoreWeave Credit Concerns Mount: This Week on Wall Street\" \u00b7 theme score 23.2 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -360.51,
+      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-18.28%",
         "theme=Cybersecurity",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2155,14 +2176,14 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0381,
+      "target_weight": 0.0341,
       "current_weight": 0.0338,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"JD Vance Touts TrumpRx Drug Price Push, Trump Accounts as \u2018Economic Nationalism\u2019 Wins Ahead Of Midterms\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 60.9 (buy), contribution 76.9",
+        "theme 'Biotech & Pharma' score 57.9 (buy), contribution 73.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2189,14 +2210,17 @@
     },
     {
       "symbol": "RIVN",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0075,
       "current_weight": 0.0149,
-      "notional_delta": -1555.03,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -777.52,
+      "reason": "trimming on legal risk (negative) \u2014 \"Tesla Just Won in Court: Self-Driving Buyers Can\u2019t Sue as a Class\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.24%",
-        "theme=EV & Clean Transport"
+        "theme=EV & Clean Transport",
+        "news_source=yahoo_rss",
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2298,16 +2322,14 @@
     },
     {
       "symbol": "SMCI",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.47,
-      "reason": "exiting on mixed news flow \u2014 \"Super Micro Finally Names a CFO, Nearly Two Years After an Accounting Review Prompted the Search\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -0.24,
+      "reason": "theme score 34.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-24.89%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2316,16 +2338,17 @@
     },
     {
       "symbol": "TSLA",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0035,
       "current_weight": 0.007,
-      "notional_delta": -728.6,
-      "reason": "exiting on mixed news flow \u2014 \"Semis And Bonds At Inflection Points; Bonds Become Correlated With AI Trade; Musk Shows Flying Roadster\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -364.3,
+      "reason": "trimming on legal risk (negative) \u2014 \"Tesla Just Won in Court: Self-Driving Buyers Can\u2019t Sue as a Class\" \u00b7 theme score 32.8 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.12%",
         "theme=EV & Clean Transport",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2335,14 +2358,14 @@
     {
       "symbol": "TSM",
       "action": "BUY",
-      "target_weight": 0.0248,
+      "target_weight": 0.0162,
       "current_weight": 0.0041,
-      "notional_delta": 2158.74,
-      "reason": "buying on positive news flow \u2014 \"Consumer Tech (Oct 12-16): Big Banks Reports Earnings, Anthropic Revenue Jumps 45% & More\" \u00b7 underweight by 2.07% vs target \u2014 add",
+      "notional_delta": 1262.42,
+      "reason": "buying on positive news flow \u2014 \"Consumer Tech (Oct 12-16): Big Banks Reports Earnings, Anthropic Revenue Jumps 45% & More\" \u00b7 underweight by 1.21% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-5.18%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 48.6",
+        "theme 'Semiconductors (Broad)' score 40.6 (starter), contribution 42.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2354,14 +2377,14 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.027,
+      "target_weight": 0.0238,
       "current_weight": 0.0276,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 60.9 (buy), contribution 54.5"
+        "theme 'Biotech & Pharma' score 57.9 (buy), contribution 51.5"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2371,14 +2394,14 @@
     {
       "symbol": "WFC",
       "action": "REDUCE",
-      "target_weight": 0.023,
+      "target_weight": 0.0265,
       "current_weight": 0.0315,
-      "notional_delta": -886.4,
-      "reason": "overweight by 0.85% vs target \u2014 trim",
+      "notional_delta": -521.62,
+      "reason": "overweight by 0.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.15%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 49.4 (starter), contribution 59.3"
+        "theme 'Financials & Rates' score 52.4 (starter), contribution 62.3"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2406,14 +2429,17 @@
     },
     {
       "symbol": "ZS",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0036,
       "current_weight": 0.0072,
-      "notional_delta": -751.38,
-      "reason": "theme score 23.2 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -375.69,
+      "reason": "trimming on analyst upgrade (positive) \u2014 \"Palo Alto Networks Fell Nearly 8% a Day After Citi Raised Its Target to $440. Here\u2019s Where the Stock Could Go by 2031\" \u00b7 theme score 27.3 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.75%",
-        "theme=Cybersecurity"
+        "theme=Cybersecurity",
+        "news_source=yahoo_rss",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2422,10 +2448,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-18T01:03:05+00:00",
-      "v": 99945.22
-    },
     {
       "t": "2026-07-18T04:12:13+00:00",
       "v": 99928.97
@@ -4421,6 +4443,10 @@
     {
       "t": "2026-10-17T18:26:04+00:00",
       "v": 104223.18
+    },
+    {
+      "t": "2026-10-17T20:55:08+00:00",
+      "v": 104223.18
     }
   ],
   "breaking_news": [
@@ -4429,7 +4455,7 @@
       "summary": "A federal judge ruled late Tuesday that President Trump cannot ban news organizations from covering him at the White House because he does not like the nature of their coverage - at least, not until the matter goes to a formal trial.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/14/nx-s1-6001398/white-house-media-ban",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -4438,7 +4464,7 @@
       "summary": "Free samples, high-pressure pitches and $50,000 bills: An NPR investigation reveals how a network of mall skincare stores systematically targeted older adults and people with disabilities across the U.S.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/14/nx-s1-5550974/skincare-scheme-mazal-group-investigation",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4447,7 +4473,7 @@
       "summary": "For years, customers have complained of aggressive sales tactics and charges at mall skincare stores. NPR investigated the business that connects many of them.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/14/nx-s1-6000621/mazal-group-investigation-documentary",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4456,7 +4482,7 @@
       "summary": "Consumer prices in September jumped 3.7% from a year ago.  The Social Security Administration said benefits will increase next year to help keep pace with the rising cost of living.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/14/nx-s1-6000593/inflation-consumer-prices-cpi-social-security-benefits",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4465,7 +4491,7 @@
       "summary": "Social Security benefits are set to get a boost to offset rising consumer prices. And, streamer Hasan Piker says the GOP's \"guilt-by-association politics\" won't drag Democrats down in the midterms.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/15/g-s1-148199/up-first-newsletter-inflation-social-security-ukraine-russia-yemen-saudi-arabia",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4474,7 +4500,7 @@
       "summary": "<em>The Atlantic</em> writer Josh Tyrangiel says Musk and Bezos each want to colonize the moon, mine its resources and launch thousands more satellites. He says their only real competition is each other.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/15/nx-s1-6002922/inside-the-race-between-elon-musk-and-jeff-bezos-for-control-of-outer-space",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4483,7 +4509,7 @@
       "summary": "Character.AI collected millions of users, making it a very appealing acquisition. Google took a unique route to \"acquiring\" it, hiring away its founders and licensing its technology. Now Character.AI is filing for bankruptcy. Here's what to",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/10/16/nx-s1-6001828/what-this-bankruptcy-says-about-ai-startups",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4492,7 +4518,7 @@
       "summary": "About a third of couples are willing to save money on cake and dessert, according to the wedding-planning site Zola.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/17/nx-s1-5976921/grocery-store-wedding-cakes",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4501,7 +4527,7 @@
       "summary": "Her public debut as press secretary ended with a flurry of media criticism about her credentials and preparedness.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c32l4ekpvzl8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4510,7 +4536,7 @@
       "summary": "The pontiff will give the traditional Angelus prayer and blessing in St Peter's Square on Sunday.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5x2vkddrkrko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4519,7 +4545,7 @@
       "summary": "The French royal jewel will be on public display for the first time since it was found hidden in an apple after a 1926 theft.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c61m4zkx47vlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4528,7 +4554,7 @@
       "summary": "She and five staff members were found to have used the inedible paint in meals to make them look more appealing.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqe9lx54g7x9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4537,7 +4563,7 @@
       "summary": "The Amazon rainforest is a crucial buffer against climate change - but deforestation had expanded under former president Jair Bolsonaro.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqe8rzg6zl00o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4546,7 +4572,7 @@
       "summary": "Brothers Jake and Callum Robinson and their friend Carter Rhoad were killed on a surfing trip in an apparent botched robbery.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c3kgqjkzw29wo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4555,7 +4581,7 @@
       "summary": "The 16-year-old suspect previously attended the primary school and had targeted a special educational needs classroom, police say.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cv98zw1k8kp3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4564,7 +4590,7 @@
       "summary": "The US president temporarily ends many restrictions on Moscow recently passed by Congress over \"national security\" concerns.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4573,7 +4599,7 @@
       "summary": "Democrats and Republicans alike are coming out against data centre development, amid growing backlash across the US.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c0rezqpnekro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4582,7 +4608,7 @@
       "summary": "Apurv Patel is one of several people who say they were promised job opportunities that did not appear.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9j3dvezpdz0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4591,7 +4617,7 @@
       "summary": "Smells from rubbish dumps and industrial facilities are being more carefully monitored.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cr6240q1w136o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4600,7 +4626,7 @@
       "summary": "The culture secretary says the deal could affect free expression in the media and the variety of Britain's news landscape.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cm79pe5yej7no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-17T18:26:09+00:00",
+      "published_utc": "2026-10-17T20:55:13+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
