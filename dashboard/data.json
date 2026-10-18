@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-18T17:18:23+00:00",
+  "generated_at_utc": "2026-10-18T19:29:46+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1076,
-  "last_success_utc": "2026-10-18T14:00:31+00:00",
+  "cycle_count": 1077,
+  "last_success_utc": "2026-10-18T17:18:23+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -559,34 +559,18 @@
   ],
   "themes": [
     {
-      "key": "oil_gas",
-      "name": "Oil & Gas",
-      "score": 80.2,
-      "raw_score": 80.2,
-      "band": "strong_buy",
-      "weight": 0.167,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 86.9,
-        "sentiment": 100.0,
-        "volume": 49.69,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 69.14,
-      "raw_score": 71.31,
+      "score": 68.64,
+      "raw_score": 70.81,
       "band": "buy",
-      "weight": 0.1471,
+      "weight": 0.1455,
       "confidence": 1.0,
       "components": {
         "momentum": 62.83,
         "sentiment": 100.0,
         "volume": 53.37,
-        "policy": 55.0,
+        "policy": 50.0,
         "volatility_penalty": 2.17
       }
     },
@@ -607,16 +591,32 @@
       }
     },
     {
+      "key": "oil_gas",
+      "name": "Oil & Gas",
+      "score": 64.7,
+      "raw_score": 64.7,
+      "band": "buy",
+      "weight": 0.1092,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 86.9,
+        "sentiment": 50.0,
+        "volume": 49.69,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 56.49,
-      "raw_score": 56.49,
+      "score": 57.45,
+      "raw_score": 57.45,
       "band": "buy",
-      "weight": 0.105,
+      "weight": 0.1082,
       "confidence": 1.0,
       "components": {
         "momentum": 63.35,
-        "sentiment": 58.34,
+        "sentiment": 61.54,
         "volume": 43.27,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -655,35 +655,35 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 38.2,
-      "raw_score": 41.93,
-      "band": "hold_small",
-      "weight": 0.0392,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 20.24,
-        "sentiment": 60.0,
-        "volume": 49.17,
-        "policy": 60.0,
-        "volatility_penalty": 3.74
-      }
-    },
-    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
       "score": 36.3,
       "raw_score": 40.07,
       "band": "hold_small",
-      "weight": 0.025,
-      "confidence": 0.8,
+      "weight": 0.0257,
+      "confidence": 0.85,
       "components": {
         "momentum": 26.23,
         "sentiment": 50.0,
         "volume": 47.86,
         "policy": 50.0,
         "volatility_penalty": 3.76
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 35.2,
+      "raw_score": 38.93,
+      "band": "hold_small",
+      "weight": 0.0212,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 20.24,
+        "sentiment": 50.0,
+        "volume": 49.17,
+        "policy": 60.0,
+        "volatility_penalty": 3.74
       }
     },
     {
@@ -815,17 +815,15 @@
     },
     {
       "symbol": "COP",
-      "action": "HOLD",
-      "target_weight": 0.0558,
+      "action": "REDUCE",
+      "target_weight": 0.0365,
       "current_weight": 0.0548,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"ExxonMobil Signals Massive Profit Boost From Rising Refining Margins\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1907.65,
+      "reason": "overweight by 1.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.97%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 80.2 (strong_buy), contribution 86.4",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Oil & Gas' score 64.7 (buy), contribution 70.9"
       ],
       "theme_key": "oil_gas"
     },
@@ -846,17 +844,17 @@
     },
     {
       "symbol": "CVX",
-      "action": "HOLD",
-      "target_weight": 0.056,
+      "action": "REDUCE",
+      "target_weight": 0.0366,
       "current_weight": 0.0537,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"ExxonMobil Signals Massive Profit Boost From Rising Refining Margins\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1780.76,
+      "reason": "trimming on mixed news flow \u2014 \"Dow Jones, Nasdaq 100, S&P 500 Outlook: Top Catalysts to Move US Stocks This Week\" \u00b7 overweight by 1.71% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.40%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 80.2 (strong_buy), contribution 86.6",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Oil & Gas' score 64.7 (buy), contribution 71.1",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "oil_gas"
     },
@@ -878,10 +876,10 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0104,
+      "target_weight": 0.0107,
       "current_weight": 0.0286,
-      "notional_delta": -1901.3,
-      "reason": "overweight by 1.82% vs target \u2014 trim",
+      "notional_delta": -1870.03,
+      "reason": "overweight by 1.79% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.11%",
         "theme=EV & Clean Transport",
@@ -934,10 +932,10 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0098,
+      "target_weight": 0.0101,
       "current_weight": 0.0217,
-      "notional_delta": -1235.3,
-      "reason": "overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -1204.03,
+      "reason": "overweight by 1.16% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.09%",
         "theme=EV & Clean Transport",
@@ -948,14 +946,14 @@
     {
       "symbol": "GOOGL",
       "action": "REDUCE",
-      "target_weight": 0.012,
+      "target_weight": 0.0065,
       "current_weight": 0.0213,
-      "notional_delta": -966.39,
-      "reason": "trimming on negative news flow \u2014 \"Chamath Palihapitiya Says 6% Treasury Yield Could \u2018Run Over\u2019 AI Businesses\" \u00b7 overweight by 0.93% vs target \u2014 trim",
+      "notional_delta": -1539.61,
+      "reason": "trimming on negative news flow \u2014 \"Chamath Palihapitiya Says 6% Treasury Yield Could \u2018Run Over\u2019 AI Businesses\" \u00b7 overweight by 1.48% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-3.49%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.2 (hold_small), contribution 40.9",
+        "theme 'AI & Compute' score 35.2 (hold_small), contribution 37.9",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -980,14 +978,14 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0355,
+      "target_weight": 0.0366,
       "current_weight": 0.0474,
-      "notional_delta": -1240.73,
-      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -1126.08,
+      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.08% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.06%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.5 (buy), contribution 72.0",
+        "theme 'Consumer Discretionary' score 57.5 (buy), contribution 73.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1025,14 +1023,14 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0551,
+      "target_weight": 0.0545,
       "current_weight": 0.0355,
-      "notional_delta": 2041.97,
-      "reason": "buying on positive news flow \u2014 \"Can Eli Lilly\u2019s (LLY) Growth Machine Keep Delivering?\" \u00b7 underweight by 1.96% vs target \u2014 add",
+      "notional_delta": 1979.44,
+      "reason": "buying on positive news flow \u2014 \"Another BioNTech Cancer Vaccine Just Hit a Major Setback. Is BNTX Stock Still a Buy?\" \u00b7 underweight by 1.90% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.51%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 69.1 (buy), contribution 86.4",
+        "theme 'Biotech & Pharma' score 68.6 (buy), contribution 85.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1087,14 +1085,14 @@
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.0126,
+      "target_weight": 0.0068,
       "current_weight": 0.024,
-      "notional_delta": -1184.88,
-      "reason": "trimming on positive news flow \u2014 \"iPhone Duo Preorders, AAPL Crosses $5 Trillion and More: This Week in Appleverse\" \u00b7 overweight by 1.14% vs target \u2014 trim",
+      "notional_delta": -1789.37,
+      "reason": "trimming on positive news flow \u2014 \"iPhone Duo Preorders, AAPL Crosses $5 Trillion and More: This Week in Appleverse\" \u00b7 overweight by 1.72% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.54%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.2 (hold_small), contribution 42.8",
+        "theme 'AI & Compute' score 35.2 (hold_small), contribution 39.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1106,7 +1104,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"European Union Regulators Recommend Approval For Eli Lilly Weight Loss Pill\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Another BioNTech Cancer Vaccine Just Hit a Major Setback. Is BNTX Stock Still a Buy?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=11.08%",
         "theme=Biotech & Pharma",
@@ -1131,14 +1129,14 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.0146,
+      "target_weight": 0.008,
       "current_weight": 0.0293,
-      "notional_delta": -1536.92,
-      "reason": "trimming on negative news flow \u2014 \"Chamath Palihapitiya Says 6% Treasury Yield Could \u2018Run Over\u2019 AI Businesses\" \u00b7 overweight by 1.47% vs target \u2014 trim",
+      "notional_delta": -2224.79,
+      "reason": "trimming on negative news flow \u2014 \"Chamath Palihapitiya Says 6% Treasury Yield Could \u2018Run Over\u2019 AI Businesses\" \u00b7 overweight by 2.13% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.30%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.2 (hold_small), contribution 49.7",
+        "theme 'AI & Compute' score 35.2 (hold_small), contribution 46.7",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1178,14 +1176,14 @@
     {
       "symbol": "NKE",
       "action": "REDUCE",
-      "target_weight": 0.0332,
+      "target_weight": 0.0342,
       "current_weight": 0.045,
-      "notional_delta": -1229.34,
-      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.18% vs target \u2014 trim",
+      "notional_delta": -1125.12,
+      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.08% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.16%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.5 (buy), contribution 67.3",
+        "theme 'Consumer Discretionary' score 57.5 (buy), contribution 68.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1239,12 +1237,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0379,
       "notional_delta": -3946.17,
-      "reason": "exiting on positive news flow \u2014 \"ExxonMobil Signals Massive Profit Boost From Rising Refining Margins\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=3.91%",
-        "theme=Oil & Gas",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Oil & Gas"
       ],
       "theme_key": "oil_gas"
     },
@@ -1266,14 +1262,14 @@
     {
       "symbol": "PFE",
       "action": "BUY",
-      "target_weight": 0.0531,
+      "target_weight": 0.0526,
       "current_weight": 0.0338,
-      "notional_delta": 2011.21,
-      "reason": "buying on positive news flow \u2014 \"European Union Regulators Recommend Approval For Eli Lilly Weight Loss Pill\" \u00b7 underweight by 1.93% vs target \u2014 add",
+      "notional_delta": 1959.1,
+      "reason": "buying on positive news flow \u2014 \"Another BioNTech Cancer Vaccine Just Hit a Major Setback. Is BNTX Stock Still a Buy?\" \u00b7 underweight by 1.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 69.1 (buy), contribution 83.4",
+        "theme 'Biotech & Pharma' score 68.6 (buy), contribution 82.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1285,7 +1281,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.21,
-      "reason": "exiting on positive news flow \u2014 \"European Union Regulators Recommend Approval For Eli Lilly Weight Loss Pill\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Another BioNTech Cancer Vaccine Just Hit a Major Setback. Is BNTX Stock Still a Buy?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=17.68%",
         "theme=Biotech & Pharma",
@@ -1340,14 +1336,14 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0363,
+      "target_weight": 0.0374,
       "current_weight": 0.0485,
-      "notional_delta": -1271.59,
-      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.22% vs target \u2014 trim",
+      "notional_delta": -1156.95,
+      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.11% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.19%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.5 (buy), contribution 73.7",
+        "theme 'Consumer Discretionary' score 57.5 (buy), contribution 74.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1376,12 +1372,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.7,
-      "reason": "exiting on positive news flow \u2014 \"ExxonMobil Signals Massive Profit Boost From Rising Refining Margins\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.00%",
-        "theme=Oil & Gas",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Oil & Gas"
       ],
       "theme_key": "oil_gas"
     },
@@ -1404,12 +1398,11 @@
       "target_weight": 0.0,
       "current_weight": 0.007,
       "notional_delta": -728.6,
-      "reason": "exiting on M&A (mixed) \u2014 \"This Week in TSLA: Roadster's Flying Debut, Cybercab Speeding in School Zones, SpaceX Merger and More\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Dow Jones, Nasdaq 100, S&P 500 Outlook: Top Catalysts to Move US Stocks This Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.12%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "event=M&A",
         "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport"
@@ -1430,14 +1423,14 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0389,
+      "target_weight": 0.0384,
       "current_weight": 0.0276,
-      "notional_delta": 1178.13,
-      "reason": "buying on positive news flow \u2014 \"European Union Regulators Recommend Approval For Eli Lilly Weight Loss Pill\" \u00b7 underweight by 1.13% vs target \u2014 add",
+      "notional_delta": 1126.02,
+      "reason": "buying on positive news flow \u2014 \"Another BioNTech Cancer Vaccine Just Hit a Major Setback. Is BNTX Stock Still a Buy?\" \u00b7 underweight by 1.08% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 69.1 (buy), contribution 61.0",
+        "theme 'Biotech & Pharma' score 68.6 (buy), contribution 60.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1459,17 +1452,17 @@
     },
     {
       "symbol": "XOM",
-      "action": "HOLD",
-      "target_weight": 0.0552,
+      "action": "REDUCE",
+      "target_weight": 0.036,
       "current_weight": 0.0518,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"ExxonMobil Signals Massive Profit Boost From Rising Refining Margins\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1642.78,
+      "reason": "trimming on mixed news flow \u2014 \"Dow Jones, Nasdaq 100, S&P 500 Outlook: Top Catalysts to Move US Stocks This Week\" \u00b7 overweight by 1.58% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.24%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 80.2 (strong_buy), contribution 85.4",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Oil & Gas' score 64.7 (buy), contribution 69.9",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "oil_gas"
     },
@@ -1604,17 +1597,15 @@
     },
     {
       "symbol": "COP",
-      "action": "HOLD",
-      "target_weight": 0.0558,
+      "action": "REDUCE",
+      "target_weight": 0.0365,
       "current_weight": 0.0548,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"ExxonMobil Signals Massive Profit Boost From Rising Refining Margins\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1907.65,
+      "reason": "overweight by 1.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.97%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 80.2 (strong_buy), contribution 86.4",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Oil & Gas' score 64.7 (buy), contribution 70.9"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1641,17 +1632,17 @@
     },
     {
       "symbol": "CVX",
-      "action": "HOLD",
-      "target_weight": 0.056,
+      "action": "REDUCE",
+      "target_weight": 0.0366,
       "current_weight": 0.0537,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"ExxonMobil Signals Massive Profit Boost From Rising Refining Margins\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1780.76,
+      "reason": "trimming on mixed news flow \u2014 \"Dow Jones, Nasdaq 100, S&P 500 Outlook: Top Catalysts to Move US Stocks This Week\" \u00b7 overweight by 1.71% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.40%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 80.2 (strong_buy), contribution 86.6",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Oil & Gas' score 64.7 (buy), contribution 71.1",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1679,10 +1670,10 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0104,
+      "target_weight": 0.0107,
       "current_weight": 0.0286,
-      "notional_delta": -1901.3,
-      "reason": "overweight by 1.82% vs target \u2014 trim",
+      "notional_delta": -1870.03,
+      "reason": "overweight by 1.79% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.11%",
         "theme=EV & Clean Transport",
@@ -1747,10 +1738,10 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0098,
+      "target_weight": 0.0101,
       "current_weight": 0.0217,
-      "notional_delta": -1235.3,
-      "reason": "overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -1204.03,
+      "reason": "overweight by 1.16% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.09%",
         "theme=EV & Clean Transport",
@@ -1764,14 +1755,14 @@
     {
       "symbol": "GOOGL",
       "action": "REDUCE",
-      "target_weight": 0.012,
+      "target_weight": 0.0065,
       "current_weight": 0.0213,
-      "notional_delta": -966.39,
-      "reason": "trimming on negative news flow \u2014 \"Chamath Palihapitiya Says 6% Treasury Yield Could \u2018Run Over\u2019 AI Businesses\" \u00b7 overweight by 0.93% vs target \u2014 trim",
+      "notional_delta": -1539.61,
+      "reason": "trimming on negative news flow \u2014 \"Chamath Palihapitiya Says 6% Treasury Yield Could \u2018Run Over\u2019 AI Businesses\" \u00b7 overweight by 1.48% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-3.49%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.2 (hold_small), contribution 40.9",
+        "theme 'AI & Compute' score 35.2 (hold_small), contribution 37.9",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1802,14 +1793,14 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0355,
+      "target_weight": 0.0366,
       "current_weight": 0.0474,
-      "notional_delta": -1240.73,
-      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.19% vs target \u2014 trim",
+      "notional_delta": -1126.08,
+      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.08% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.06%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.5 (buy), contribution 72.0",
+        "theme 'Consumer Discretionary' score 57.5 (buy), contribution 73.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1856,14 +1847,14 @@
     {
       "symbol": "LLY",
       "action": "BUY",
-      "target_weight": 0.0551,
+      "target_weight": 0.0545,
       "current_weight": 0.0355,
-      "notional_delta": 2041.97,
-      "reason": "buying on positive news flow \u2014 \"Can Eli Lilly\u2019s (LLY) Growth Machine Keep Delivering?\" \u00b7 underweight by 1.96% vs target \u2014 add",
+      "notional_delta": 1979.44,
+      "reason": "buying on positive news flow \u2014 \"Another BioNTech Cancer Vaccine Just Hit a Major Setback. Is BNTX Stock Still a Buy?\" \u00b7 underweight by 1.90% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.51%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 69.1 (buy), contribution 86.4",
+        "theme 'Biotech & Pharma' score 68.6 (buy), contribution 85.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1930,14 +1921,14 @@
     {
       "symbol": "META",
       "action": "REDUCE",
-      "target_weight": 0.0126,
+      "target_weight": 0.0068,
       "current_weight": 0.024,
-      "notional_delta": -1184.88,
-      "reason": "trimming on positive news flow \u2014 \"iPhone Duo Preorders, AAPL Crosses $5 Trillion and More: This Week in Appleverse\" \u00b7 overweight by 1.14% vs target \u2014 trim",
+      "notional_delta": -1789.37,
+      "reason": "trimming on positive news flow \u2014 \"iPhone Duo Preorders, AAPL Crosses $5 Trillion and More: This Week in Appleverse\" \u00b7 overweight by 1.72% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.54%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.2 (hold_small), contribution 42.8",
+        "theme 'AI & Compute' score 35.2 (hold_small), contribution 39.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1952,7 +1943,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on positive news flow \u2014 \"European Union Regulators Recommend Approval For Eli Lilly Weight Loss Pill\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Another BioNTech Cancer Vaccine Just Hit a Major Setback. Is BNTX Stock Still a Buy?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=11.08%",
         "theme=Biotech & Pharma",
@@ -1983,14 +1974,14 @@
     {
       "symbol": "MSFT",
       "action": "REDUCE",
-      "target_weight": 0.0146,
+      "target_weight": 0.008,
       "current_weight": 0.0293,
-      "notional_delta": -1536.92,
-      "reason": "trimming on negative news flow \u2014 \"Chamath Palihapitiya Says 6% Treasury Yield Could \u2018Run Over\u2019 AI Businesses\" \u00b7 overweight by 1.47% vs target \u2014 trim",
+      "notional_delta": -2224.79,
+      "reason": "trimming on negative news flow \u2014 \"Chamath Palihapitiya Says 6% Treasury Yield Could \u2018Run Over\u2019 AI Businesses\" \u00b7 overweight by 2.13% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.30%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 38.2 (hold_small), contribution 49.7",
+        "theme 'AI & Compute' score 35.2 (hold_small), contribution 46.7",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -2039,14 +2030,14 @@
     {
       "symbol": "NKE",
       "action": "REDUCE",
-      "target_weight": 0.0332,
+      "target_weight": 0.0342,
       "current_weight": 0.045,
-      "notional_delta": -1229.34,
-      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.18% vs target \u2014 trim",
+      "notional_delta": -1125.12,
+      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.08% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.16%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.5 (buy), contribution 67.3",
+        "theme 'Consumer Discretionary' score 57.5 (buy), contribution 68.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2112,12 +2103,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0379,
       "notional_delta": -3946.17,
-      "reason": "exiting on positive news flow \u2014 \"ExxonMobil Signals Massive Profit Boost From Rising Refining Margins\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=3.91%",
-        "theme=Oil & Gas",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Oil & Gas"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2145,14 +2134,14 @@
     {
       "symbol": "PFE",
       "action": "BUY",
-      "target_weight": 0.0531,
+      "target_weight": 0.0526,
       "current_weight": 0.0338,
-      "notional_delta": 2011.21,
-      "reason": "buying on positive news flow \u2014 \"European Union Regulators Recommend Approval For Eli Lilly Weight Loss Pill\" \u00b7 underweight by 1.93% vs target \u2014 add",
+      "notional_delta": 1959.1,
+      "reason": "buying on positive news flow \u2014 \"Another BioNTech Cancer Vaccine Just Hit a Major Setback. Is BNTX Stock Still a Buy?\" \u00b7 underweight by 1.88% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 69.1 (buy), contribution 83.4",
+        "theme 'Biotech & Pharma' score 68.6 (buy), contribution 82.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2167,7 +2156,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.21,
-      "reason": "exiting on positive news flow \u2014 \"European Union Regulators Recommend Approval For Eli Lilly Weight Loss Pill\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Another BioNTech Cancer Vaccine Just Hit a Major Setback. Is BNTX Stock Still a Buy?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=17.68%",
         "theme=Biotech & Pharma",
@@ -2234,14 +2223,14 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0363,
+      "target_weight": 0.0374,
       "current_weight": 0.0485,
-      "notional_delta": -1271.59,
-      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.22% vs target \u2014 trim",
+      "notional_delta": -1156.95,
+      "reason": "trimming on positive news flow \u2014 \"2 Retail Stocks to Buy Before the Holiday Shopping Season\" \u00b7 overweight by 1.11% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.19%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.5 (buy), contribution 73.7",
+        "theme 'Consumer Discretionary' score 57.5 (buy), contribution 74.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2276,12 +2265,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.7,
-      "reason": "exiting on positive news flow \u2014 \"ExxonMobil Signals Massive Profit Boost From Rising Refining Margins\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.00%",
-        "theme=Oil & Gas",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme=Oil & Gas"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2310,12 +2297,11 @@
       "target_weight": 0.0,
       "current_weight": 0.007,
       "notional_delta": -728.6,
-      "reason": "exiting on M&A (mixed) \u2014 \"This Week in TSLA: Roadster's Flying Debut, Cybercab Speeding in School Zones, SpaceX Merger and More\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Dow Jones, Nasdaq 100, S&P 500 Outlook: Top Catalysts to Move US Stocks This Week\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-4.12%",
         "theme=EV & Clean Transport",
         "news_source=benzinga",
-        "event=M&A",
         "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport",
@@ -2342,14 +2328,14 @@
     {
       "symbol": "VRTX",
       "action": "BUY",
-      "target_weight": 0.0389,
+      "target_weight": 0.0384,
       "current_weight": 0.0276,
-      "notional_delta": 1178.13,
-      "reason": "buying on positive news flow \u2014 \"European Union Regulators Recommend Approval For Eli Lilly Weight Loss Pill\" \u00b7 underweight by 1.13% vs target \u2014 add",
+      "notional_delta": 1126.02,
+      "reason": "buying on positive news flow \u2014 \"Another BioNTech Cancer Vaccine Just Hit a Major Setback. Is BNTX Stock Still a Buy?\" \u00b7 underweight by 1.08% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 69.1 (buy), contribution 61.0",
+        "theme 'Biotech & Pharma' score 68.6 (buy), contribution 60.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2377,17 +2363,17 @@
     },
     {
       "symbol": "XOM",
-      "action": "HOLD",
-      "target_weight": 0.0552,
+      "action": "REDUCE",
+      "target_weight": 0.036,
       "current_weight": 0.0518,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"ExxonMobil Signals Massive Profit Boost From Rising Refining Margins\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1642.78,
+      "reason": "trimming on mixed news flow \u2014 \"Dow Jones, Nasdaq 100, S&P 500 Outlook: Top Catalysts to Move US Stocks This Week\" \u00b7 overweight by 1.58% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.24%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 80.2 (strong_buy), contribution 85.4",
-        "news_source=yahoo_rss",
-        "news_sentiment=+0.20"
+        "theme 'Oil & Gas' score 64.7 (buy), contribution 69.9",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2412,10 +2398,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-18T13:54:25+00:00",
-      "v": 99928.89
-    },
     {
       "t": "2026-07-18T15:10:10+00:00",
       "v": 99928.89
@@ -4411,6 +4393,10 @@
     {
       "t": "2026-10-18T17:18:18+00:00",
       "v": 104223.18
+    },
+    {
+      "t": "2026-10-18T19:29:43+00:00",
+      "v": 104223.18
     }
   ],
   "breaking_news": [
@@ -4419,7 +4405,7 @@
       "summary": "Free samples, high-pressure pitches and $50,000 bills: An NPR investigation reveals how a network of mall skincare stores systematically targeted older adults and people with disabilities across the U.S.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/14/nx-s1-5550974/skincare-scheme-mazal-group-investigation",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:46+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4428,7 +4414,7 @@
       "summary": "For years, customers have complained of aggressive sales tactics and charges at mall skincare stores. NPR investigated the business that connects many of them.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/14/nx-s1-6000621/mazal-group-investigation-documentary",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4437,7 +4423,7 @@
       "summary": "Consumer prices in September jumped 3.7% from a year ago.  The Social Security Administration said benefits will increase next year to help keep pace with the rising cost of living.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/14/nx-s1-6000593/inflation-consumer-prices-cpi-social-security-benefits",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:46+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4446,7 +4432,7 @@
       "summary": "Social Security benefits are set to get a boost to offset rising consumer prices. And, streamer Hasan Piker says the GOP's \"guilt-by-association politics\" won't drag Democrats down in the midterms.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/15/g-s1-148199/up-first-newsletter-inflation-social-security-ukraine-russia-yemen-saudi-arabia",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:46+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4455,7 +4441,7 @@
       "summary": "<em>The Atlantic</em> writer Josh Tyrangiel says Musk and Bezos each want to colonize the moon, mine its resources and launch thousands more satellites. He says their only real competition is each other.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/15/nx-s1-6002922/inside-the-race-between-elon-musk-and-jeff-bezos-for-control-of-outer-space",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4464,7 +4450,7 @@
       "summary": "Character.AI collected millions of users, making it a very appealing acquisition. Google took a unique route to \"acquiring\" it, hiring away its founders and licensing its technology. Now Character.AI is filing for bankruptcy. Here's what to",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/10/16/nx-s1-6001828/what-this-bankruptcy-says-about-ai-startups",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4473,7 +4459,7 @@
       "summary": "About a third of couples are willing to save money on cake and dessert, according to the wedding-planning site Zola.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/17/nx-s1-5976921/grocery-store-wedding-cakes",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4482,7 +4468,7 @@
       "summary": "One of NPR's most gifted storytellers, his soft voice and vivid writing helped define the network's sound for a generation of Americans.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/18/nx-s1-5556931/noah-adams-all-things-considered-has-died",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:46+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4491,7 +4477,7 @@
       "summary": "Many more have been injured at an event in the Indian city of Kolkata to mark a Hindu festival.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c820vwq7qg2ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4500,7 +4486,7 @@
       "summary": "An expedition to a remote Pacific island hoping to uncover the American aviator's wreckage was on hold for three days.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cv70pxe5j90eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4509,7 +4495,7 @@
       "summary": "There were violent clashes between demonstrators and riot police throughout Saturday in the capital Tirana.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/crwydey50xeno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4518,7 +4504,7 @@
       "summary": "The US president temporarily ends many restrictions on Moscow recently passed by Congress over \"national security\" concerns.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4527,7 +4513,7 @@
       "summary": "The Israeli military condemns the violence but the prime minister's office says it is part of a \"smear\" campaign.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c962ydpmjm3zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4536,7 +4522,7 @@
       "summary": "BBC News hears from users, dealers, prison and recovery workers as the country battles with a deadly new drug epidemic.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cmx2wvyv5j17o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4545,7 +4531,7 @@
       "summary": "At least one person was killed in the strikes, which also hit a data centre used by Russia's equivalent of Facebook.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c3eweygrjzd7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4554,7 +4540,7 @@
       "summary": "About 1,800 people were arrested after nationwide protests saw outbreaks of violence and vandalism.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c574pdzl0k4no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4563,7 +4549,7 @@
       "summary": "Senior banking executives have told the BBC they expect to be \"on the menu\" in the chancellor's Budget tax later this month.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c32l4k2xdvrzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4572,7 +4558,7 @@
       "summary": "Zoey Darnbrough had no idea there was a distillery near her home - now she has a top tourism role there.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c6y8ln9831v3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4581,7 +4567,7 @@
       "summary": "Smells from rubbish dumps and industrial facilities are being more carefully monitored.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cr6240q1w136o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4590,7 +4576,7 @@
       "summary": "Engineer David Mummery has developed a tidal energy generator that he says can change lives for people living in coastal communities.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c8y56y6xg9n9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-18T17:18:23+00:00",
+      "published_utc": "2026-10-18T19:29:45+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
