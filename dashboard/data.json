@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-24T23:25:19+00:00",
+  "generated_at_utc": "2026-10-25T01:35:35+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1113,
-  "last_success_utc": "2026-10-24T21:16:04+00:00",
+  "cycle_count": 1114,
+  "last_success_utc": "2026-10-24T23:25:19+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -561,14 +561,14 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 75.25,
-      "raw_score": 75.25,
+      "score": 72.25,
+      "raw_score": 72.25,
       "band": "strong_buy",
-      "weight": 0.1389,
-      "confidence": 0.75,
+      "weight": 0.1307,
+      "confidence": 0.7,
       "components": {
         "momentum": 89.99,
-        "sentiment": 80.0,
+        "sentiment": 70.0,
         "volume": 51.25,
         "policy": 50.0,
         "volatility_penalty": 0.0
@@ -628,8 +628,8 @@
       "score": 50.26,
       "raw_score": 50.26,
       "band": "starter",
-      "weight": 0.0737,
-      "confidence": 0.75,
+      "weight": 0.0758,
+      "confidence": 0.8,
       "components": {
         "momentum": 57.05,
         "sentiment": 50.0,
@@ -641,14 +641,14 @@
     {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 49.2,
-      "raw_score": 63.81,
+      "score": 48.2,
+      "raw_score": 62.81,
       "band": "starter",
-      "weight": 0.0706,
-      "confidence": 0.75,
+      "weight": 0.0696,
+      "confidence": 0.8,
       "components": {
         "momentum": 90.85,
-        "sentiment": 40.0,
+        "sentiment": 36.66,
         "volume": 52.35,
         "policy": 50.0,
         "volatility_penalty": 14.61
@@ -660,14 +660,30 @@
       "score": 47.42,
       "raw_score": 50.24,
       "band": "starter",
-      "weight": 0.0654,
-      "confidence": 0.75,
+      "weight": 0.0635,
+      "confidence": 0.7,
       "components": {
         "momentum": 50.06,
         "sentiment": 50.0,
         "volume": 51.08,
         "policy": 50.0,
         "volatility_penalty": 2.82
+      }
+    },
+    {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 45.82,
+      "raw_score": 45.82,
+      "band": "starter",
+      "weight": 0.059,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 28.28,
+        "sentiment": 70.0,
+        "volume": 42.54,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
       }
     },
     {
@@ -700,22 +716,6 @@
         "volume": 50.26,
         "policy": 50.0,
         "volatility_penalty": 4.15
-      }
-    },
-    {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 40.32,
-      "raw_score": 40.32,
-      "band": "starter",
-      "weight": 0.0421,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 28.28,
-        "sentiment": 50.0,
-        "volume": 42.54,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
       }
     }
   ],
@@ -754,11 +754,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "exiting on mixed news flow \u2014 \"Celestica Stock Dips as the AI Trade Unwinds: Can Earnings Turn It Around?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Amazon Canada Collaborates with Royal Canadian Legion for 2026 National Poppy Campaign\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.57%",
         "theme=Consumer Discretionary",
-        "news_source=benzinga",
+        "news_source=fiscal.ai",
         "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary"
@@ -796,7 +796,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0469,
       "notional_delta": -4872.0,
-      "reason": "exiting on mixed news flow \u2014 \"Allegiant Travel to Purchase Six Boeing 737-8 Aircraft\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Boeing 777 Freighter Becomes World's Most Widely Operated Freighter\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.79%",
         "theme=Defense & Aerospace",
@@ -807,29 +807,29 @@
     },
     {
       "symbol": "BAC",
-      "action": "REDUCE",
-      "target_weight": 0.0132,
+      "action": "HOLD",
+      "target_weight": 0.0186,
       "current_weight": 0.0197,
-      "notional_delta": -680.12,
-      "reason": "overweight by 0.65% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.18%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 40.3 (starter), contribution 43.6"
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 49.1"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "COP",
-      "action": "HOLD",
-      "target_weight": 0.0442,
+      "action": "REDUCE",
+      "target_weight": 0.0415,
       "current_weight": 0.0482,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Chevron, Exxon, Shell and ConocoPhillips Hit Record Highs as Crude Rally Powers On Into Earnings\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -691.77,
+      "reason": "trimming on positive news flow \u2014 \"Chevron, Exxon, Shell and ConocoPhillips Hit Record Highs as Crude Rally Powers On Into Earnings\" \u00b7 overweight by 0.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=5.37%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 75.2 (strong_buy), contribution 70.3",
+        "theme 'Oil & Gas' score 72.2 (strong_buy), contribution 67.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -852,15 +852,15 @@
     },
     {
       "symbol": "CVX",
-      "action": "HOLD",
-      "target_weight": 0.0469,
+      "action": "REDUCE",
+      "target_weight": 0.0442,
       "current_weight": 0.0499,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"XLE, VDE, IXC ETFs Hit Record Highs as Inflows Jump as Brent Crude Targets $120\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -596.92,
+      "reason": "trimming on positive news flow \u2014 \"XLE, VDE, IXC ETFs Hit Record Highs as Inflows Jump as Brent Crude Targets $120\" \u00b7 overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=5.02%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 75.2 (strong_buy), contribution 74.7",
+        "theme 'Oil & Gas' score 72.2 (strong_buy), contribution 71.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -913,14 +913,14 @@
     {
       "symbol": "FTNT",
       "action": "REDUCE",
-      "target_weight": 0.0259,
+      "target_weight": 0.0256,
       "current_weight": 0.0313,
-      "notional_delta": -566.0,
-      "reason": "overweight by 0.54% vs target \u2014 trim",
+      "notional_delta": -597.19,
+      "reason": "overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.21%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.2 (starter), contribution 61.3"
+        "theme 'Cybersecurity' score 48.2 (starter), contribution 60.3"
       ],
       "theme_key": "cybersecurity"
     },
@@ -971,25 +971,28 @@
     },
     {
       "symbol": "GS",
-      "action": "REDUCE",
-      "target_weight": 0.0143,
+      "action": "HOLD",
+      "target_weight": 0.02,
       "current_weight": 0.0219,
-      "notional_delta": -785.53,
-      "reason": "overweight by 0.76% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on analyst upgrade (positive) \u2014 \"Goldman Sachs Upgrades CoreWeave to 'Buy'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.78%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 40.3 (starter), contribution 47.5"
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 53.0",
+        "news_source=fiscal.ai",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0248,
+      "target_weight": 0.0255,
       "current_weight": 0.0314,
-      "notional_delta": -688.57,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -615.78,
+      "reason": "overweight by 0.59% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.15%",
         "theme=Consumer Discretionary",
@@ -1003,12 +1006,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0249,
       "notional_delta": -2594.3,
-      "reason": "exiting on mixed news flow \u2014 \"JPMorgan Chase & Co. Reduces Holding in Vistry Group PLC Below Reporting Threshold\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.56%",
-        "theme=Financials & Rates",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials"
     },
@@ -1028,7 +1029,7 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0201,
+      "target_weight": 0.0195,
       "current_weight": 0.0229,
       "notional_delta": 0.0,
       "reason": "holding on trial data (mixed) \u2014 \"Lilly Announces Positive Phase 1 Data for Investigational ADC Sofetabart Mipitecan in Ovarian Cancer\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1076,10 +1077,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0238,
+      "target_weight": 0.0244,
       "current_weight": 0.0304,
-      "notional_delta": -686.85,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -624.45,
+      "reason": "overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.02%",
         "theme=Consumer Discretionary",
@@ -1120,15 +1121,15 @@
     },
     {
       "symbol": "MS",
-      "action": "REDUCE",
-      "target_weight": 0.0146,
+      "action": "HOLD",
+      "target_weight": 0.0204,
       "current_weight": 0.0223,
-      "notional_delta": -800.81,
-      "reason": "overweight by 0.77% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.21%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 40.3 (starter), contribution 48.4"
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 53.9"
       ],
       "theme_key": "financials"
     },
@@ -1251,15 +1252,15 @@
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0227,
+      "action": "REDUCE",
+      "target_weight": 0.0224,
       "current_weight": 0.0276,
-      "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Palo Alto CEO Nikesh Arora Warns Companies to Assume They Will Get \u2018Breached\u2019 and Fix Their \u2018Technology Debt\u2019 as AI Uncovers Critical Softwa\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -536.35,
+      "reason": "trimming on negative news flow \u2014 \"Palo Alto CEO Nikesh Arora Warns Companies to Assume They Will Get \u2018Breached\u2019 and Fix Their \u2018Technology Debt\u2019 as AI Uncovers Critical Softwa\" \u00b7 overweight by 0.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.15%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.2 (starter), contribution 53.8",
+        "theme 'Cybersecurity' score 48.2 (starter), contribution 52.8",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1268,7 +1269,7 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0199,
+      "target_weight": 0.0194,
       "current_weight": 0.0221,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1337,10 +1338,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0251,
+      "target_weight": 0.0258,
       "current_weight": 0.0324,
-      "notional_delta": -763.45,
-      "reason": "overweight by 0.73% vs target \u2014 trim",
+      "notional_delta": -690.66,
+      "reason": "overweight by 0.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.44%",
         "theme=Consumer Discretionary",
@@ -1367,14 +1368,14 @@
     {
       "symbol": "SLB",
       "action": "REDUCE",
-      "target_weight": 0.0478,
+      "target_weight": 0.045,
       "current_weight": 0.0537,
-      "notional_delta": -610.2,
-      "reason": "overweight by 0.59% vs target \u2014 trim",
+      "notional_delta": -901.36,
+      "reason": "overweight by 0.87% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 75.2 (strong_buy), contribution 76.1"
+        "theme 'Oil & Gas' score 72.2 (strong_buy), contribution 73.1"
       ],
       "theme_key": "oil_gas"
     },
@@ -1425,17 +1426,14 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0254,
+      "target_weight": 0.0246,
       "current_weight": 0.029,
       "notional_delta": 0.0,
-      "reason": "holding on trial data (mixed) \u2014 \"Vertex Pharmaceuticals Announces Publication of Phase 3 RAINIER Results for Povetacicept\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.66%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 47.4 (starter), contribution 69.9",
-        "news_source=fiscal.ai",
-        "event=trial data",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 47.4 (starter), contribution 69.9"
       ],
       "theme_key": "biotech"
     },
@@ -1469,15 +1467,17 @@
     },
     {
       "symbol": "ZS",
-      "action": "HOLD",
-      "target_weight": 0.0219,
+      "action": "REDUCE",
+      "target_weight": 0.0216,
       "current_weight": 0.0267,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -529.81,
+      "reason": "trimming on mixed news flow \u2014 \"Zscaler CEO Discusses Business Concerns Regarding PHP Vulnerability\" \u00b7 overweight by 0.51% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.07%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.2 (starter), contribution 51.9"
+        "theme 'Cybersecurity' score 48.2 (starter), contribution 50.9",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity"
     }
@@ -1523,11 +1523,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.05,
-      "reason": "exiting on mixed news flow \u2014 \"Celestica Stock Dips as the AI Trade Unwinds: Can Earnings Turn It Around?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Amazon Canada Collaborates with Royal Canadian Legion for 2026 National Poppy Campaign\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-5.57%",
         "theme=Consumer Discretionary",
-        "news_source=benzinga",
+        "news_source=fiscal.ai",
         "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary",
@@ -1574,7 +1574,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0469,
       "notional_delta": -4872.0,
-      "reason": "exiting on mixed news flow \u2014 \"Allegiant Travel to Purchase Six Boeing 737-8 Aircraft\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Boeing 777 Freighter Becomes World's Most Widely Operated Freighter\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.79%",
         "theme=Defense & Aerospace",
@@ -1588,15 +1588,15 @@
     },
     {
       "symbol": "BAC",
-      "action": "REDUCE",
-      "target_weight": 0.0132,
+      "action": "HOLD",
+      "target_weight": 0.0186,
       "current_weight": 0.0197,
-      "notional_delta": -680.12,
-      "reason": "overweight by 0.65% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.18%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 40.3 (starter), contribution 43.6"
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 49.1"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1605,15 +1605,15 @@
     },
     {
       "symbol": "COP",
-      "action": "HOLD",
-      "target_weight": 0.0442,
+      "action": "REDUCE",
+      "target_weight": 0.0415,
       "current_weight": 0.0482,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Chevron, Exxon, Shell and ConocoPhillips Hit Record Highs as Crude Rally Powers On Into Earnings\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -691.77,
+      "reason": "trimming on positive news flow \u2014 \"Chevron, Exxon, Shell and ConocoPhillips Hit Record Highs as Crude Rally Powers On Into Earnings\" \u00b7 overweight by 0.67% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=5.37%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 75.2 (strong_buy), contribution 70.3",
+        "theme 'Oil & Gas' score 72.2 (strong_buy), contribution 67.3",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1642,15 +1642,15 @@
     },
     {
       "symbol": "CVX",
-      "action": "HOLD",
-      "target_weight": 0.0469,
+      "action": "REDUCE",
+      "target_weight": 0.0442,
       "current_weight": 0.0499,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"XLE, VDE, IXC ETFs Hit Record Highs as Inflows Jump as Brent Crude Targets $120\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -596.92,
+      "reason": "trimming on positive news flow \u2014 \"XLE, VDE, IXC ETFs Hit Record Highs as Inflows Jump as Brent Crude Targets $120\" \u00b7 overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=5.02%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 75.2 (strong_buy), contribution 74.7",
+        "theme 'Oil & Gas' score 72.2 (strong_buy), contribution 71.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1715,14 +1715,14 @@
     {
       "symbol": "FTNT",
       "action": "REDUCE",
-      "target_weight": 0.0259,
+      "target_weight": 0.0256,
       "current_weight": 0.0313,
-      "notional_delta": -566.0,
-      "reason": "overweight by 0.54% vs target \u2014 trim",
+      "notional_delta": -597.19,
+      "reason": "overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.21%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.2 (starter), contribution 61.3"
+        "theme 'Cybersecurity' score 48.2 (starter), contribution 60.3"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1785,15 +1785,18 @@
     },
     {
       "symbol": "GS",
-      "action": "REDUCE",
-      "target_weight": 0.0143,
+      "action": "HOLD",
+      "target_weight": 0.02,
       "current_weight": 0.0219,
-      "notional_delta": -785.53,
-      "reason": "overweight by 0.76% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on analyst upgrade (positive) \u2014 \"Goldman Sachs Upgrades CoreWeave to 'Buy'\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.78%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 40.3 (starter), contribution 47.5"
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 53.0",
+        "news_source=fiscal.ai",
+        "event=analyst upgrade",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1803,10 +1806,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0248,
+      "target_weight": 0.0255,
       "current_weight": 0.0314,
-      "notional_delta": -688.57,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -615.78,
+      "reason": "overweight by 0.59% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.15%",
         "theme=Consumer Discretionary",
@@ -1823,12 +1826,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0249,
       "notional_delta": -2594.3,
-      "reason": "exiting on mixed news flow \u2014 \"JPMorgan Chase & Co. Reduces Holding in Vistry Group PLC Below Reporting Threshold\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.56%",
-        "theme=Financials & Rates",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1854,7 +1855,7 @@
     {
       "symbol": "LLY",
       "action": "HOLD",
-      "target_weight": 0.0201,
+      "target_weight": 0.0195,
       "current_weight": 0.0229,
       "notional_delta": 0.0,
       "reason": "holding on trial data (mixed) \u2014 \"Lilly Announces Positive Phase 1 Data for Investigational ADC Sofetabart Mipitecan in Ovarian Cancer\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1911,10 +1912,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0238,
+      "target_weight": 0.0244,
       "current_weight": 0.0304,
-      "notional_delta": -686.85,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -624.45,
+      "reason": "overweight by 0.60% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.02%",
         "theme=Consumer Discretionary",
@@ -1964,15 +1965,15 @@
     },
     {
       "symbol": "MS",
-      "action": "REDUCE",
-      "target_weight": 0.0146,
+      "action": "HOLD",
+      "target_weight": 0.0204,
       "current_weight": 0.0223,
-      "notional_delta": -800.81,
-      "reason": "overweight by 0.77% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.21%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 40.3 (starter), contribution 48.4"
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 53.9"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2122,15 +2123,15 @@
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0227,
+      "action": "REDUCE",
+      "target_weight": 0.0224,
       "current_weight": 0.0276,
-      "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Palo Alto CEO Nikesh Arora Warns Companies to Assume They Will Get \u2018Breached\u2019 and Fix Their \u2018Technology Debt\u2019 as AI Uncovers Critical Softwa\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -536.35,
+      "reason": "trimming on negative news flow \u2014 \"Palo Alto CEO Nikesh Arora Warns Companies to Assume They Will Get \u2018Breached\u2019 and Fix Their \u2018Technology Debt\u2019 as AI Uncovers Critical Softwa\" \u00b7 overweight by 0.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.15%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.2 (starter), contribution 53.8",
+        "theme 'Cybersecurity' score 48.2 (starter), contribution 52.8",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -2142,7 +2143,7 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0199,
+      "target_weight": 0.0194,
       "current_weight": 0.0221,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -2226,10 +2227,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0251,
+      "target_weight": 0.0258,
       "current_weight": 0.0324,
-      "notional_delta": -763.45,
-      "reason": "overweight by 0.73% vs target \u2014 trim",
+      "notional_delta": -690.66,
+      "reason": "overweight by 0.66% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=4.44%",
         "theme=Consumer Discretionary",
@@ -2262,14 +2263,14 @@
     {
       "symbol": "SLB",
       "action": "REDUCE",
-      "target_weight": 0.0478,
+      "target_weight": 0.045,
       "current_weight": 0.0537,
-      "notional_delta": -610.2,
-      "reason": "overweight by 0.59% vs target \u2014 trim",
+      "notional_delta": -901.36,
+      "reason": "overweight by 0.87% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.63%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 75.2 (strong_buy), contribution 76.1"
+        "theme 'Oil & Gas' score 72.2 (strong_buy), contribution 73.1"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2332,17 +2333,14 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0254,
+      "target_weight": 0.0246,
       "current_weight": 0.029,
       "notional_delta": 0.0,
-      "reason": "holding on trial data (mixed) \u2014 \"Vertex Pharmaceuticals Announces Publication of Phase 3 RAINIER Results for Povetacicept\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.66%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 47.4 (starter), contribution 69.9",
-        "news_source=fiscal.ai",
-        "event=trial data",
-        "news_sentiment=+0.00"
+        "theme 'Biotech & Pharma' score 47.4 (starter), contribution 69.9"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2385,15 +2383,17 @@
     },
     {
       "symbol": "ZS",
-      "action": "HOLD",
-      "target_weight": 0.0219,
+      "action": "REDUCE",
+      "target_weight": 0.0216,
       "current_weight": 0.0267,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -529.81,
+      "reason": "trimming on mixed news flow \u2014 \"Zscaler CEO Discusses Business Concerns Regarding PHP Vulnerability\" \u00b7 overweight by 0.51% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.07%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.2 (starter), contribution 51.9"
+        "theme 'Cybersecurity' score 48.2 (starter), contribution 50.9",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2402,10 +2402,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-20T23:43:26+00:00",
-      "v": 99293.57
-    },
     {
       "t": "2026-07-21T01:13:45+00:00",
       "v": 99331.37
@@ -4401,6 +4397,10 @@
     {
       "t": "2026-10-24T23:25:16+00:00",
       "v": 103988.27
+    },
+    {
+      "t": "2026-10-25T01:35:31+00:00",
+      "v": 103988.27
     }
   ],
   "breaking_news": [
@@ -4409,7 +4409,7 @@
       "summary": "A new analysis finds that the average renter household now needs 16 years to save for a down payment and closing costs. Rising rents and other costs have consumed a growing share of household budgets.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/22/nx-s1-6009378/down-payment-real-estate-affordability",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4418,7 +4418,7 @@
       "summary": "A drought-stricken region of northeast Spain has become a focus for American companies searching for locations to place their data centers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/22/nx-s1-5991641/ai-data-centers-spain-environmental-impact",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4427,7 +4427,7 @@
       "summary": "Sitting at a desk all day hurts. And it isn't good for us. Strategies to make it a little more comfortable, from eye muscle exercises to alleviate eye strain to a back pain-fighting body movement.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/22/nx-s1-6010506/5-simple-ways-to-relieve-the-aches-and-pains-of-sitting-at-a-desk-all-day",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4436,7 +4436,7 @@
       "summary": "Shoppers in the U.S. are willing to spend hundreds of dollars for a mahjong set. In the eastern Chinese city of Taixing, manufacturers can barely keep up with the demand.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/22/nx-s1-6000127/china-mahjong-tile-game-taixing-manufacturing",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4445,7 +4445,7 @@
       "summary": "Young candidates who rent or live with parents say their generation is \"in the thick\" of the country's housing affordability crisis. They argue this gives them new energy to solve it for everyone.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/23/nx-s1-5983813/gen-z-candidates-midterms-housing-affordability",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4454,7 +4454,7 @@
       "summary": "Social media sites aren't the biggest fans of people leaving via hyperlinks. In fact, Meta has made it subscription-worthy for a Facebook Page to post more than two hyperlinks per month. What's the rationale for companies want to keep you o",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/10/23/nx-s1-6012726/why-meta-is-charging-to-post-more-hyperlinks",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4463,7 +4463,7 @@
       "summary": "A management consultant is going viral after he started sharing cringe-worthy anonymous DMs employees get from bosses. Like, ones they get on their wedding day and worse.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/24/nx-s1-6012795/a-consultant-is-going-viral-for-exposing-the-cringe-worthy-dms-bosses-send-employees",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4472,7 +4472,7 @@
       "summary": "Sacha Pfeiffer visits Port Milwaukee to see how President Trump's tariffs have affected the flow of goods and impacted the regional economy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/24/nx-s1-6011193/trade-tariffs-cause-whiplash-at-port-milwaukee",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4481,7 +4481,7 @@
       "summary": "Three people - two women and one man - have been released, and one person remains in custody, garda\u00ed say.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cv0ld9571511o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4490,7 +4490,7 @@
       "summary": "The ex-wife of Donald Trump Jr, with whom she shares five children, announced in May that she had been diagnosed with breast cancer.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cm1dwzvn6227o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4499,7 +4499,7 @@
       "summary": "Nathan Gregory says the loss of childhood sweetheart Leanne \"is unimaginable for our family\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cm86z5n0yvy6o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4508,7 +4508,7 @@
       "summary": "Kaylub Giamanco has been hailed as a hero for killing a teenager who fatally shot three children and a teacher.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/crgj9ndwvj9jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4517,7 +4517,7 @@
       "summary": "Some 200 emergency personnel were deployed to fight the blaze at the Nazi dictator's Alpine residence in Germany.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr93zwjw1k4qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4526,7 +4526,7 @@
       "summary": "The crackdown follows the killing of two Israeli soldiers by two Palestinian gunmen on Friday - and comes just days ahead of Israel's election.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqd09k1k7532o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4535,7 +4535,7 @@
       "summary": "The slowed Starlink connections had affected the Ukraine's military and drone operations for a week.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwkg5md14j8go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4544,7 +4544,7 @@
       "summary": "Officials have so far managed to avoid a repeat of last weekend's rioting and looting as hundreds of thousands took part in demonstrations.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c95ynd587ynzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4553,7 +4553,7 @@
       "summary": "The assurance from the National Energy System Operator comes amid concern from its engineers about their ability to ensure adequate supply.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cmy56q2n1veqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4562,7 +4562,7 @@
       "summary": "The Your First Home scheme will offer government-backed loans for those buying new-builds in England.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c6n8dex0zeg9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4571,7 +4571,7 @@
       "summary": "Indian workers are being paid to film themselves at work and the footage is used to train AI.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ckvgyml6pdm9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4580,7 +4580,7 @@
       "summary": "From 30 October, tariffs will be eased on some products, including certain machinery, and placed on others, such as carpets.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c60qk573yzz8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-24T23:25:19+00:00",
+      "published_utc": "2026-10-25T01:35:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     }
