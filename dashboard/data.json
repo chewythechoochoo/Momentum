@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-25T06:51:44+00:00",
+  "generated_at_utc": "2026-10-25T12:18:38+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1115,
-  "last_success_utc": "2026-10-25T01:35:35+00:00",
+  "cycle_count": 1116,
+  "last_success_utc": "2026-10-25T06:51:44+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -577,16 +577,16 @@
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 60.59,
-      "raw_score": 66.24,
+      "score": 60.15,
+      "raw_score": 65.81,
       "band": "buy",
-      "weight": 0.1186,
+      "weight": 0.1172,
       "confidence": 1.0,
       "components": {
         "momentum": 63.47,
-        "sentiment": 85.72,
+        "sentiment": 82.61,
         "volume": 43.21,
-        "policy": 65.0,
+        "policy": 70.0,
         "volatility_penalty": 5.66
       }
     },
@@ -607,35 +607,19 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 52.44,
-      "raw_score": 56.29,
-      "band": "starter",
-      "weight": 0.0915,
-      "confidence": 1.0,
+      "key": "cybersecurity",
+      "name": "Cybersecurity",
+      "score": 55.74,
+      "raw_score": 66.81,
+      "band": "buy",
+      "weight": 0.0845,
+      "confidence": 0.65,
       "components": {
-        "momentum": 28.1,
-        "sentiment": 100.0,
-        "volume": 50.26,
+        "momentum": 90.85,
+        "sentiment": 50.0,
+        "volume": 52.35,
         "policy": 50.0,
-        "volatility_penalty": 3.85
-      }
-    },
-    {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 51.26,
-      "raw_score": 54.93,
-      "band": "starter",
-      "weight": 0.0788,
-      "confidence": 0.8,
-      "components": {
-        "momentum": 29.28,
-        "sentiment": 90.0,
-        "volume": 56.08,
-        "policy": 50.0,
-        "volatility_penalty": 3.67
+        "volatility_penalty": 11.07
       }
     },
     {
@@ -655,19 +639,19 @@
       }
     },
     {
-      "key": "cybersecurity",
-      "name": "Cybersecurity",
-      "score": 49.74,
-      "raw_score": 60.81,
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 48.26,
+      "raw_score": 51.93,
       "band": "starter",
-      "weight": 0.0701,
-      "confidence": 0.7,
+      "weight": 0.0678,
+      "confidence": 0.75,
       "components": {
-        "momentum": 90.85,
-        "sentiment": 30.0,
-        "volume": 52.35,
+        "momentum": 29.28,
+        "sentiment": 80.0,
+        "volume": 56.08,
         "policy": 50.0,
-        "volatility_penalty": 11.07
+        "volatility_penalty": 3.67
       }
     },
     {
@@ -684,6 +668,22 @@
         "volume": 51.08,
         "policy": 50.0,
         "volatility_penalty": 2.88
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 46.44,
+      "raw_score": 50.29,
+      "band": "starter",
+      "weight": 0.0715,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 28.1,
+        "sentiment": 80.0,
+        "volume": 50.26,
+        "policy": 50.0,
+        "volatility_penalty": 3.85
       }
     },
     {
@@ -705,14 +705,14 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 45.03,
-      "raw_score": 50.98,
+      "score": 42.03,
+      "raw_score": 47.98,
       "band": "starter",
-      "weight": 0.0584,
-      "confidence": 0.75,
+      "weight": 0.0483,
+      "confidence": 0.7,
       "components": {
         "momentum": 27.51,
-        "sentiment": 80.0,
+        "sentiment": 70.0,
         "volume": 54.88,
         "policy": 50.0,
         "volatility_penalty": 5.95
@@ -739,12 +739,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.12,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: SpaceX, Meta, Netflix\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-17.28%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
@@ -766,14 +764,14 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0141,
+      "target_weight": 0.0114,
       "current_weight": 0.01,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.13%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.0 (starter), contribution 36.7"
+        "theme 'Semiconductors (Broad)' score 42.0 (starter), contribution 33.7"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -838,14 +836,14 @@
     {
       "symbol": "CRWD",
       "action": "HOLD",
-      "target_weight": 0.0224,
+      "target_weight": 0.0272,
       "current_weight": 0.0232,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=8.43%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.7 (starter), contribution 53.2"
+        "theme 'Cybersecurity' score 55.7 (buy), contribution 59.2"
       ],
       "theme_key": "cybersecurity"
     },
@@ -883,14 +881,14 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0198,
+      "target_weight": 0.0167,
       "current_weight": 0.0,
-      "notional_delta": 2058.96,
-      "reason": "underweight by 1.98% vs target \u2014 add",
+      "notional_delta": 1736.59,
+      "reason": "underweight by 1.67% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 51.3 (starter), contribution 41.5"
+        "theme 'EV & Clean Transport' score 48.3 (starter), contribution 38.5"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -911,15 +909,15 @@
     },
     {
       "symbol": "FTNT",
-      "action": "REDUCE",
-      "target_weight": 0.0253,
+      "action": "HOLD",
+      "target_weight": 0.0303,
       "current_weight": 0.0313,
-      "notional_delta": -628.39,
-      "reason": "overweight by 0.60% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.21%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.7 (starter), contribution 60.0"
+        "theme 'Cybersecurity' score 55.7 (buy), contribution 66.0"
       ],
       "theme_key": "cybersecurity"
     },
@@ -939,17 +937,15 @@
     },
     {
       "symbol": "GM",
-      "action": "BUY",
-      "target_weight": 0.0209,
+      "action": "HOLD",
+      "target_weight": 0.0177,
       "current_weight": 0.0139,
-      "notional_delta": 727.38,
-      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls and Bears: SpaceX, Meta, Netflix\" \u00b7 underweight by 0.70% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-10.12%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 51.3 (starter), contribution 43.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 48.3 (starter), contribution 40.7"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -959,10 +955,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0094,
       "notional_delta": -974.96,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Peter Schiff Says Google Gemini Challenged Government\u2019s Case Against His Bank: \u2018Did Nothing Wrong\u2019\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.85%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1060,12 +1058,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.3,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: SpaceX, Meta, Netflix\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-28.86%",
-        "theme=Semiconductors (Broad)",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1089,12 +1085,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.46,
-      "reason": "exiting on mixed news flow \u2014 \"Safe Haven Trade: SCHD Outperforms VOO and QQQ as AI Bubble Fears Mount\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Peter Schiff Says Google Gemini Challenged Government\u2019s Case Against His Bank: \u2018Did Nothing Wrong\u2019\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-13.52%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1127,15 +1123,15 @@
     },
     {
       "symbol": "MSFT",
-      "action": "BUY",
-      "target_weight": 0.0289,
+      "action": "HOLD",
+      "target_weight": 0.0224,
       "current_weight": 0.0198,
-      "notional_delta": 949.77,
-      "reason": "buying on positive news flow \u2014 \"S&P 500 and Nasdaq 100 Slip as Strong Earnings Collide With AI Bubble Fears and $117 Oil\" \u00b7 underweight by 0.91% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"S&P 500 and Nasdaq 100 Slip as Strong Earnings Collide With AI Bubble Fears and $117 Oil\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.76%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.4 (starter), contribution 59.0",
+        "theme 'AI & Compute' score 46.4 (starter), contribution 53.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1144,14 +1140,14 @@
     {
       "symbol": "MU",
       "action": "HOLD",
-      "target_weight": 0.0191,
+      "target_weight": 0.0158,
       "current_weight": 0.0151,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"S&P 500 and Nasdaq 100 Slip as Strong Earnings Collide With AI Bubble Fears and $117 Oil\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.48%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.0 (starter), contribution 49.6",
+        "theme 'Semiconductors (Broad)' score 42.0 (starter), contribution 46.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1160,14 +1156,14 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.0419,
+      "target_weight": 0.0414,
       "current_weight": 0.0248,
-      "notional_delta": 1779.87,
-      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 1.71% vs target \u2014 add",
+      "notional_delta": 1727.88,
+      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 1.66% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.67%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 60.6 (buy), contribution 74.6",
+        "theme 'Clean Energy' score 60.1 (buy), contribution 74.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1202,15 +1198,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "BUY",
-      "target_weight": 0.0281,
+      "action": "HOLD",
+      "target_weight": 0.0218,
       "current_weight": 0.0187,
-      "notional_delta": 975.83,
-      "reason": "buying on positive news flow \u2014 \"S&P 500 and Nasdaq 100 Slip as Strong Earnings Collide With AI Bubble Fears and $117 Oil\" \u00b7 underweight by 0.94% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Apple, Peter Thiel and the iPhone Duo Set Up a High-Stakes Weekend for Investors: This Week in Appleverse\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.63%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.4 (starter), contribution 57.5",
+        "theme 'AI & Compute' score 46.4 (starter), contribution 51.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1244,17 +1240,15 @@
     },
     {
       "symbol": "PANW",
-      "action": "REDUCE",
-      "target_weight": 0.0223,
+      "action": "HOLD",
+      "target_weight": 0.0271,
       "current_weight": 0.0276,
-      "notional_delta": -546.75,
-      "reason": "trimming on negative news flow \u2014 \"Palo Alto CEO Nikesh Arora Warns Companies to Assume They Will Get \u2018Breached\u2019 and Fix Their \u2018Technology Debt\u2019 as AI Uncovers Critical Softwa\" \u00b7 overweight by 0.53% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.15%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.7 (starter), contribution 52.9",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "theme 'Cybersecurity' score 55.7 (buy), contribution 58.9"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1314,14 +1308,14 @@
     {
       "symbol": "RUN",
       "action": "BUY",
-      "target_weight": 0.0381,
+      "target_weight": 0.0376,
       "current_weight": 0.0325,
-      "notional_delta": 587.09,
-      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 0.56% vs target \u2014 add",
+      "notional_delta": 535.09,
+      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 0.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.32%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 60.6 (buy), contribution 67.8",
+        "theme 'Clean Energy' score 60.1 (buy), contribution 67.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1344,14 +1338,14 @@
     {
       "symbol": "SEDG",
       "action": "BUY",
-      "target_weight": 0.0387,
+      "target_weight": 0.0382,
       "current_weight": 0.0219,
-      "notional_delta": 1750.22,
-      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 1.68% vs target \u2014 add",
+      "notional_delta": 1698.22,
+      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 1.63% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.43%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 60.6 (buy), contribution 68.8",
+        "theme 'Clean Energy' score 60.1 (buy), contribution 68.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1373,29 +1367,29 @@
     },
     {
       "symbol": "SMCI",
-      "action": "BUY",
-      "target_weight": 0.0345,
+      "action": "HOLD",
+      "target_weight": 0.0273,
       "current_weight": 0.0256,
-      "notional_delta": 922.96,
-      "reason": "underweight by 0.89% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.4 (starter), contribution 70.5"
+        "theme 'AI & Compute' score 46.4 (starter), contribution 64.5"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "TSLA",
       "action": "HOLD",
-      "target_weight": 0.0381,
+      "target_weight": 0.0334,
       "current_weight": 0.0337,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"EXCLUSIVE: A SpaceX\u2013Tesla Merger Could Boost Passive ETF Demand, But ERShares\u2019 Joel Shulman Flags a Big Risk\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.68%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 51.3 (starter), contribution 79.8",
+        "theme 'EV & Clean Transport' score 48.3 (starter), contribution 76.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1403,15 +1397,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "BUY",
-      "target_weight": 0.0252,
+      "action": "HOLD",
+      "target_weight": 0.0211,
       "current_weight": 0.0186,
-      "notional_delta": 689.82,
-      "reason": "underweight by 0.66% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.93%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.0 (starter), contribution 65.4"
+        "theme 'Semiconductors (Broad)' score 42.0 (starter), contribution 62.4"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1496,12 +1490,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.12,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: SpaceX, Meta, Netflix\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-17.28%",
-        "theme=AI & Compute",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1529,14 +1521,14 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0141,
+      "target_weight": 0.0114,
       "current_weight": 0.01,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.13%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.0 (starter), contribution 36.7"
+        "theme 'Semiconductors (Broad)' score 42.0 (starter), contribution 33.7"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1616,14 +1608,14 @@
     {
       "symbol": "CRWD",
       "action": "HOLD",
-      "target_weight": 0.0224,
+      "target_weight": 0.0272,
       "current_weight": 0.0232,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=8.43%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.7 (starter), contribution 53.2"
+        "theme 'Cybersecurity' score 55.7 (buy), contribution 59.2"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1670,14 +1662,14 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0198,
+      "target_weight": 0.0167,
       "current_weight": 0.0,
-      "notional_delta": 2058.96,
-      "reason": "underweight by 1.98% vs target \u2014 add",
+      "notional_delta": 1736.59,
+      "reason": "underweight by 1.67% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.60%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 51.3 (starter), contribution 41.5"
+        "theme 'EV & Clean Transport' score 48.3 (starter), contribution 38.5"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1704,15 +1696,15 @@
     },
     {
       "symbol": "FTNT",
-      "action": "REDUCE",
-      "target_weight": 0.0253,
+      "action": "HOLD",
+      "target_weight": 0.0303,
       "current_weight": 0.0313,
-      "notional_delta": -628.39,
-      "reason": "overweight by 0.60% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.21%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.7 (starter), contribution 60.0"
+        "theme 'Cybersecurity' score 55.7 (buy), contribution 66.0"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1738,17 +1730,15 @@
     },
     {
       "symbol": "GM",
-      "action": "BUY",
-      "target_weight": 0.0209,
+      "action": "HOLD",
+      "target_weight": 0.0177,
       "current_weight": 0.0139,
-      "notional_delta": 727.38,
-      "reason": "buying on mixed news flow \u2014 \"Benzinga Bulls and Bears: SpaceX, Meta, Netflix\" \u00b7 underweight by 0.70% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-10.12%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 51.3 (starter), contribution 43.7",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'EV & Clean Transport' score 48.3 (starter), contribution 40.7"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1761,10 +1751,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0094,
       "notional_delta": -974.96,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Peter Schiff Says Google Gemini Challenged Government\u2019s Case Against His Bank: \u2018Did Nothing Wrong\u2019\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.85%",
-        "theme=AI & Compute"
+        "theme=AI & Compute",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1883,12 +1875,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.3,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: SpaceX, Meta, Netflix\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-28.86%",
-        "theme=Semiconductors (Broad)",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1918,12 +1908,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.46,
-      "reason": "exiting on mixed news flow \u2014 \"Safe Haven Trade: SCHD Outperforms VOO and QQQ as AI Bubble Fears Mount\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Peter Schiff Says Google Gemini Challenged Government\u2019s Case Against His Bank: \u2018Did Nothing Wrong\u2019\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-13.52%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1965,15 +1955,15 @@
     },
     {
       "symbol": "MSFT",
-      "action": "BUY",
-      "target_weight": 0.0289,
+      "action": "HOLD",
+      "target_weight": 0.0224,
       "current_weight": 0.0198,
-      "notional_delta": 949.77,
-      "reason": "buying on positive news flow \u2014 \"S&P 500 and Nasdaq 100 Slip as Strong Earnings Collide With AI Bubble Fears and $117 Oil\" \u00b7 underweight by 0.91% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"S&P 500 and Nasdaq 100 Slip as Strong Earnings Collide With AI Bubble Fears and $117 Oil\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.76%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.4 (starter), contribution 59.0",
+        "theme 'AI & Compute' score 46.4 (starter), contribution 53.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1985,14 +1975,14 @@
     {
       "symbol": "MU",
       "action": "HOLD",
-      "target_weight": 0.0191,
+      "target_weight": 0.0158,
       "current_weight": 0.0151,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"S&P 500 and Nasdaq 100 Slip as Strong Earnings Collide With AI Bubble Fears and $117 Oil\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.48%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.0 (starter), contribution 49.6",
+        "theme 'Semiconductors (Broad)' score 42.0 (starter), contribution 46.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2004,14 +1994,14 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.0419,
+      "target_weight": 0.0414,
       "current_weight": 0.0248,
-      "notional_delta": 1779.87,
-      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 1.71% vs target \u2014 add",
+      "notional_delta": 1727.88,
+      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 1.66% vs target \u2014 add",
       "factors": [
         "unrealized_pl=1.67%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 60.6 (buy), contribution 74.6",
+        "theme 'Clean Energy' score 60.1 (buy), contribution 74.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2055,15 +2045,15 @@
     },
     {
       "symbol": "NVDA",
-      "action": "BUY",
-      "target_weight": 0.0281,
+      "action": "HOLD",
+      "target_weight": 0.0218,
       "current_weight": 0.0187,
-      "notional_delta": 975.83,
-      "reason": "buying on positive news flow \u2014 \"S&P 500 and Nasdaq 100 Slip as Strong Earnings Collide With AI Bubble Fears and $117 Oil\" \u00b7 underweight by 0.94% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Apple, Peter Thiel and the iPhone Duo Set Up a High-Stakes Weekend for Investors: This Week in Appleverse\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.63%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.4 (starter), contribution 57.5",
+        "theme 'AI & Compute' score 46.4 (starter), contribution 51.5",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2106,17 +2096,15 @@
     },
     {
       "symbol": "PANW",
-      "action": "REDUCE",
-      "target_weight": 0.0223,
+      "action": "HOLD",
+      "target_weight": 0.0271,
       "current_weight": 0.0276,
-      "notional_delta": -546.75,
-      "reason": "trimming on negative news flow \u2014 \"Palo Alto CEO Nikesh Arora Warns Companies to Assume They Will Get \u2018Breached\u2019 and Fix Their \u2018Technology Debt\u2019 as AI Uncovers Critical Softwa\" \u00b7 overweight by 0.53% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=2.15%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 49.7 (starter), contribution 52.9",
-        "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "theme 'Cybersecurity' score 55.7 (buy), contribution 58.9"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2191,14 +2179,14 @@
     {
       "symbol": "RUN",
       "action": "BUY",
-      "target_weight": 0.0381,
+      "target_weight": 0.0376,
       "current_weight": 0.0325,
-      "notional_delta": 587.09,
-      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 0.56% vs target \u2014 add",
+      "notional_delta": 535.09,
+      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 0.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.32%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 60.6 (buy), contribution 67.8",
+        "theme 'Clean Energy' score 60.1 (buy), contribution 67.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2227,14 +2215,14 @@
     {
       "symbol": "SEDG",
       "action": "BUY",
-      "target_weight": 0.0387,
+      "target_weight": 0.0382,
       "current_weight": 0.0219,
-      "notional_delta": 1750.22,
-      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 1.68% vs target \u2014 add",
+      "notional_delta": 1698.22,
+      "reason": "buying on positive news flow \u2014 \"Buy NextEra Energy Stock to Tap Into Power Demand, Says Analyst. Plus, Bending Spoons and 3 More.\" \u00b7 underweight by 1.63% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.43%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 60.6 (buy), contribution 68.8",
+        "theme 'Clean Energy' score 60.1 (buy), contribution 68.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2262,15 +2250,15 @@
     },
     {
       "symbol": "SMCI",
-      "action": "BUY",
-      "target_weight": 0.0345,
+      "action": "HOLD",
+      "target_weight": 0.0273,
       "current_weight": 0.0256,
-      "notional_delta": 922.96,
-      "reason": "underweight by 0.89% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.71%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.4 (starter), contribution 70.5"
+        "theme 'AI & Compute' score 46.4 (starter), contribution 64.5"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2280,14 +2268,14 @@
     {
       "symbol": "TSLA",
       "action": "HOLD",
-      "target_weight": 0.0381,
+      "target_weight": 0.0334,
       "current_weight": 0.0337,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"EXCLUSIVE: A SpaceX\u2013Tesla Merger Could Boost Passive ETF Demand, But ERShares\u2019 Joel Shulman Flags a Big Risk\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.68%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 51.3 (starter), contribution 79.8",
+        "theme 'EV & Clean Transport' score 48.3 (starter), contribution 76.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2298,15 +2286,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "BUY",
-      "target_weight": 0.0252,
+      "action": "HOLD",
+      "target_weight": 0.0211,
       "current_weight": 0.0186,
-      "notional_delta": 689.82,
-      "reason": "underweight by 0.66% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.93%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 45.0 (starter), contribution 65.4"
+        "theme 'Semiconductors (Broad)' score 42.0 (starter), contribution 62.4"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2384,10 +2372,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-21T04:38:05+00:00",
-      "v": 99369.89
-    },
     {
       "t": "2026-07-21T07:24:30+00:00",
       "v": 99377.91
@@ -4383,6 +4367,10 @@
     {
       "t": "2026-10-25T06:51:38+00:00",
       "v": 103988.27
+    },
+    {
+      "t": "2026-10-25T12:18:35+00:00",
+      "v": 103988.27
     }
   ],
   "breaking_news": [
@@ -4391,7 +4379,7 @@
       "summary": "A new analysis finds that the average renter household now needs 16 years to save for a down payment and closing costs. Rising rents and other costs have consumed a growing share of household budgets.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/22/nx-s1-6009378/down-payment-real-estate-affordability",
-      "published_utc": "2026-10-25T06:51:44+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4400,7 +4388,7 @@
       "summary": "A drought-stricken region of northeast Spain has become a focus for American companies searching for locations to place their data centers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/22/nx-s1-5991641/ai-data-centers-spain-environmental-impact",
-      "published_utc": "2026-10-25T06:51:44+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4409,7 +4397,7 @@
       "summary": "Sitting at a desk all day hurts. And it isn't good for us. Strategies to make it a little more comfortable, from eye muscle exercises to alleviate eye strain to a back pain-fighting body movement.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/22/nx-s1-6010506/5-simple-ways-to-relieve-the-aches-and-pains-of-sitting-at-a-desk-all-day",
-      "published_utc": "2026-10-25T06:51:44+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4418,7 +4406,7 @@
       "summary": "Shoppers in the U.S. are willing to spend hundreds of dollars for a mahjong set. In the eastern Chinese city of Taixing, manufacturers can barely keep up with the demand.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/22/nx-s1-6000127/china-mahjong-tile-game-taixing-manufacturing",
-      "published_utc": "2026-10-25T06:51:44+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4427,7 +4415,7 @@
       "summary": "Young candidates who rent or live with parents say their generation is \"in the thick\" of the country's housing affordability crisis. They argue this gives them new energy to solve it for everyone.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/23/nx-s1-5983813/gen-z-candidates-midterms-housing-affordability",
-      "published_utc": "2026-10-25T06:51:44+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4436,7 +4424,7 @@
       "summary": "Social media sites aren't the biggest fans of people leaving via hyperlinks. In fact, Meta has made it subscription-worthy for a Facebook Page to post more than two hyperlinks per month. What's the rationale for companies want to keep you o",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/10/23/nx-s1-6012726/why-meta-is-charging-to-post-more-hyperlinks",
-      "published_utc": "2026-10-25T06:51:44+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4445,7 +4433,7 @@
       "summary": "A management consultant is going viral after he started sharing cringe-worthy anonymous DMs employees get from bosses. Like, ones they get on their wedding day and worse.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/24/nx-s1-6012795/a-consultant-is-going-viral-for-exposing-the-cringe-worthy-dms-bosses-send-employees",
-      "published_utc": "2026-10-25T06:51:44+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4454,16 +4442,16 @@
       "summary": "Sacha Pfeiffer visits Port Milwaukee to see how President Trump's tariffs have affected the flow of goods and impacted the regional economy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/24/nx-s1-6011193/trade-tariffs-cause-whiplash-at-port-milwaukee",
-      "published_utc": "2026-10-25T06:51:44+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Obama attacks Trump as he campaigns for Democrats ahead of midterm elections",
-      "summary": "Obama said the election was \"the last best chance to at least rein in some of the foolishness of this administration\".",
+      "headline": "El Salvador president says bodies found in Haiti are not those of hostages",
+      "summary": "Nayib Bukele says bodies delivered to soldiers are \"not our men\" amid search for Salvadorans abducted last week.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cmj6jwe1j1gjo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c8ly097zw1xwo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4472,7 +4460,7 @@
       "summary": "The ex-wife of Donald Trump Jr, with whom she shares five children, announced in May that she had been diagnosed with breast cancer.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cm1dwzvn6227o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4481,35 +4469,35 @@
       "summary": "Some 200 emergency personnel were deployed to fight the blaze at the Nazi dictator's Alpine residence in Germany.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr93zwjw1k4qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Gunmen kill at least 10 villagers and loot shops in northeast Nigeria",
+      "headline": "Gunmen kill at least 10 villagers and loot shops in north-east Nigeria",
       "summary": "Police are searching for other casualties, with officials warning the actual death toll could rise further.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cq1kdlm1ze7do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
     {
-      "headline": "Ukraine says Starlink connection 'now stable' after network limits",
-      "summary": "The slowed Starlink connections had affected the Ukraine's military and drone operations for a week.",
+      "headline": "Musk says SpaceX restricted Ukraine's Starlink connection as service restored",
+      "summary": "The tech billionaire accuses Ukraine of violating its terms of service by using the network for military activity.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cwkg5md14j8go?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Voters in Brazil to choose between Lula and Bolsonaro's son",
-      "summary": "Fl\u00e1vio Bolsonaro, the son of Brazil's imprisoned former president, is presenting a strong challenge to Lula, 80, who is seeking a fourth term in office.",
+      "headline": "Voters in Brazil head to polls as Lula goes up against Bolsonaro's son",
+      "summary": "Fl\u00e1vio Bolsonaro, the son of Brazil's imprisoned ex-president, is challenging Lula, who is seeking a fourth term in office.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cxp8g21j4648o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
-      "sentiment_score": 0.2,
+      "published_utc": "2026-10-25T12:18:38+00:00",
+      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4517,43 +4505,16 @@
       "summary": "The Israeli Defense Forces announces restrictions on the movement of Palestinian workers in the run-up to Tuesday's election.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6y93ylpl5p2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Almost 1,000 arrested as clashes follow another day of mass protests across France",
+      "headline": "More than 1,300 arrested as clashes follow another day of mass protests across France",
       "summary": "Hundreds of thousands took part in demonstrations in France, with protests also taking place in other European countries.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c95ynd587ynzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Earnings limit of up to \u00a3140K for first-time buyers loan scheme",
-      "summary": "The Your First Home scheme will offer government-backed loans for those buying new-builds in England.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/c6n8dex0zeg9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "White House lifts tariffs on some Canadian goods as midterm elections loom",
-      "summary": "From 30 October, tariffs will be eased on some products, including certain machinery, and placed on others, such as carpets.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/c60qk573yzz8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": true
-    },
-    {
-      "headline": "The Indian workers filming their work to train AI",
-      "summary": "Indian workers are being paid to film themselves at work and the footage is used to train AI.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/ckvgyml6pdm9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4562,7 +4523,34 @@
       "summary": "The chancellor will unveil AI spending aimed at shoring up the UK's defences in Wednesday's Budget.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cqdjv8xllvyyo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-25T06:51:43+00:00",
+      "published_utc": "2026-10-25T12:18:38+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "How does the UK state pension compare with other countries?",
+      "summary": "Do British pensioners have it better or worse than those in other countries?",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/c3gr84w85glyo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-25T12:18:38+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "The Indian workers filming their work to train AI",
+      "summary": "Indian workers are being paid to film themselves at work and the footage is used to train AI.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/ckvgyml6pdm9o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-25T12:18:38+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Are California voters about to impose 'world's first' tax on billionaires?",
+      "summary": "Voters are about to decide if the mega-rich among them should hand over billions of dollars to pay for improvements to healthcare.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/ck4g1jg4n9dno?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-10-25T12:18:38+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
