@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-01T19:37:39+00:00",
+  "generated_at_utc": "2026-11-01T23:08:51+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1152,
-  "last_success_utc": "2026-11-01T15:04:58+00:00",
+  "cycle_count": 1153,
+  "last_success_utc": "2026-11-01T19:37:39+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -586,14 +586,30 @@
       "score": 67.5,
       "raw_score": 71.72,
       "band": "buy",
-      "weight": 0.1346,
-      "confidence": 0.9,
+      "weight": 0.1381,
+      "confidence": 0.95,
       "components": {
         "momentum": 60.78,
         "sentiment": 100.0,
         "volume": 59.56,
         "policy": 55.0,
         "volatility_penalty": 4.23
+      }
+    },
+    {
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 64.62,
+      "raw_score": 68.65,
+      "band": "buy",
+      "weight": 0.1189,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 93.39,
+        "sentiment": 50.0,
+        "volume": 56.49,
+        "policy": 50.0,
+        "volatility_penalty": 4.03
       }
     },
     {
@@ -608,38 +624,6 @@
         "momentum": 79.38,
         "sentiment": 50.0,
         "volume": 50.94,
-        "policy": 50.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 58.62,
-      "raw_score": 62.65,
-      "band": "buy",
-      "weight": 0.0953,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 93.39,
-        "sentiment": 30.0,
-        "volume": 56.49,
-        "policy": 50.0,
-        "volatility_penalty": 4.03
-      }
-    },
-    {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 39.77,
-      "raw_score": 39.77,
-      "band": "hold_small",
-      "weight": 0.0413,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 44.66,
-        "sentiment": 30.0,
-        "volume": 39.52,
         "policy": 50.0,
         "volatility_penalty": 0.0
       }
@@ -661,6 +645,22 @@
       }
     },
     {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 36.77,
+      "raw_score": 36.77,
+      "band": "hold_small",
+      "weight": 0.0268,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 44.66,
+        "sentiment": 20.0,
+        "volume": 39.52,
+        "policy": 50.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
       "key": "ai_compute",
       "name": "AI & Compute",
       "score": 31.65,
@@ -674,6 +674,22 @@
         "volume": 63.76,
         "policy": 50.0,
         "volatility_penalty": 5.4
+      }
+    },
+    {
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 31.63,
+      "raw_score": 38.99,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 26.83,
+        "sentiment": 43.34,
+        "volume": 51.27,
+        "policy": 50.0,
+        "volatility_penalty": 7.36
       }
     },
     {
@@ -691,22 +707,6 @@
         "policy": 50.0,
         "volatility_penalty": 11.94
       }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 27.63,
-      "raw_score": 34.99,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 26.83,
-        "sentiment": 30.0,
-        "volume": 51.27,
-        "policy": 50.0,
-        "volatility_penalty": 7.36
-      }
     }
   ],
   "decisions": [
@@ -716,7 +716,7 @@
       "target_weight": 0.0042,
       "current_weight": 0.0084,
       "notional_delta": -447.46,
-      "reason": "theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.74%",
         "theme=Semiconductors (Broad)"
@@ -729,12 +729,12 @@
       "target_weight": 0.0038,
       "current_weight": 0.0076,
       "notional_delta": -401.79,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Warns \u2018Don\u2019t Assume the Worst Is Behind Us\u2019 After $1 Trillion Chip Stock Rout\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"SOXX: Top Semiconductor ETF Targets $400 as AI Bubble Worries Linger\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.81%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -759,7 +759,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.26,
-      "reason": "theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.51%",
         "theme=Semiconductors (Broad)"
@@ -772,12 +772,12 @@
       "target_weight": 0.0026,
       "current_weight": 0.0052,
       "notional_delta": -275.28,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Warns \u2018Don\u2019t Assume the Worst Is Behind Us\u2019 After $1 Trillion Chip Stock Rout\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"SOXX: Top Semiconductor ETF Targets $400 as AI Bubble Worries Linger\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.86%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -787,12 +787,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on earnings beat (positive) \u2014 \"How Earnings Beat Will Impact General Dynamics Stock Investors\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Cramer thinks Boeing\u2019s problems aren\u2019t going away soon, says buy GE\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.55%",
         "theme=Defense & Aerospace",
         "news_source=yahoo_rss",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
@@ -876,10 +875,10 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0462,
+      "target_weight": 0.0475,
       "current_weight": 0.0362,
-      "notional_delta": 1061.77,
-      "reason": "underweight by 1.00% vs target \u2014 add",
+      "notional_delta": 1199.68,
+      "reason": "underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.23%",
         "theme=EV & Clean Transport",
@@ -907,7 +906,7 @@
       "target_weight": 0.0521,
       "current_weight": 0.0524,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"General Dynamics (GD) Has Investors Asking A Bigger Question\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Cramer thinks Boeing\u2019s problems aren\u2019t going away soon, says buy GE\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.52%",
         "theme=Defense & Aerospace",
@@ -920,10 +919,10 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0441,
+      "target_weight": 0.0453,
       "current_weight": 0.0349,
-      "notional_delta": 979.46,
-      "reason": "buying on mixed news flow \u2014 \"This Week in TSLA: Elon Musk's Apple Mac Studio Jibe, Former Autopilot Lead's Vision-Only Criticism and More\" \u00b7 underweight by 0.92% vs target \u2014 add",
+      "notional_delta": 1106.76,
+      "reason": "buying on mixed news flow \u2014 \"This Week in TSLA: Elon Musk's Apple Mac Studio Jibe, Former Autopilot Lead's Vision-Only Criticism and More\" \u00b7 underweight by 1.04% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.87%",
         "theme=EV & Clean Transport",
@@ -951,16 +950,16 @@
     {
       "symbol": "GS",
       "action": "REDUCE",
-      "target_weight": 0.0135,
+      "target_weight": 0.0087,
       "current_weight": 0.0204,
-      "notional_delta": -731.79,
-      "reason": "trimming on mixed news flow \u2014 \"EXCLUSIVE: Former Goldman Sachs Analyst Turned Creator Says AI-Ready Workers Need More Than Prompting Skills \u2014 \u2018You Can\u2019t Outsource the Unde\" \u00b7 overweight by 0.69% vs target \u2014 trim",
+      "notional_delta": -1240.99,
+      "reason": "trimming on negative news flow \u2014 \"China EV Stocks Tumble: XPeng, Li Auto, BYD and Polestar Hit as Price War Bites\" \u00b7 overweight by 1.17% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 39.8 (hold_small), contribution 50.1",
+        "theme 'Financials & Rates' score 36.8 (hold_small), contribution 47.1",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials"
     },
@@ -980,14 +979,14 @@
     {
       "symbol": "JPM",
       "action": "REDUCE",
-      "target_weight": 0.0131,
+      "target_weight": 0.0085,
       "current_weight": 0.0203,
-      "notional_delta": -765.37,
-      "reason": "trimming on negative news flow \u2014 \"\u2018We Have About Four Years:\u2019 Raoul Pal Warns Investors to Get Ready Before AI Changes How Markets Work\" \u00b7 overweight by 0.72% vs target \u2014 trim",
+      "notional_delta": -1253.36,
+      "reason": "trimming on negative news flow \u2014 \"\u2018We Have About Four Years:\u2019 Raoul Pal Warns Investors to Get Ready Before AI Changes How Markets Work\" \u00b7 overweight by 1.18% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.08%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 39.8 (hold_small), contribution 48.8",
+        "theme 'Financials & Rates' score 36.8 (hold_small), contribution 45.8",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1009,14 +1008,14 @@
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.0345,
+      "target_weight": 0.0428,
       "current_weight": 0.0617,
-      "notional_delta": -2883.24,
-      "reason": "trimming on negative news flow \u2014 \"Lilly Endowment Inc. Proposes Sale of Eli Lilly Common Stock\" \u00b7 overweight by 2.72% vs target \u2014 trim",
+      "notional_delta": -2002.75,
+      "reason": "trimming on negative news flow \u2014 \"Lilly Endowment Inc. Proposes Sale of Eli Lilly Common Stock\" \u00b7 overweight by 1.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.78%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.6 (buy), contribution 66.5",
+        "theme 'Biotech & Pharma' score 64.6 (buy), contribution 72.5",
         "news_source=fiscal.ai",
         "news_sentiment=-0.20"
       ],
@@ -1028,13 +1027,12 @@
       "target_weight": 0.0536,
       "current_weight": 0.0513,
       "notional_delta": 0.0,
-      "reason": "holding on earnings beat (positive) \u2014 \"How Earnings Beat Will Impact General Dynamics Stock Investors\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Cramer thinks Boeing\u2019s problems aren\u2019t going away soon, says buy GE\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=18.74%",
         "theme=Defense & Aerospace",
         "theme 'Defense & Aerospace' score 74.5 (strong_buy), contribution 87.8",
         "news_source=yahoo_rss",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
@@ -1045,7 +1043,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.16,
-      "reason": "theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-26.07%",
         "theme=Semiconductors (Broad)"
@@ -1072,7 +1070,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.22,
-      "reason": "trimming on mixed news flow \u2014 \"$600B Tech Wipeout Meets $1.48T Margin Debt\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"AMD Stuck in Bear Market on Circular Investing Fears: Can Earnings Turn the Tide?\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.24%",
         "theme=AI & Compute",
@@ -1087,26 +1085,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0433,
       "notional_delta": -4596.22,
-      "reason": "exiting on mixed news flow \u2014 \"Earnings Volatility Watch: 10 Stocks Are Set to Swing More Than 10% This Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Tempus AI Earnings Ahead: Is TEM Set Up To Pop or Drop?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.71%",
         "theme=Biotech & Pharma",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0148,
+      "target_weight": 0.0096,
       "current_weight": 0.0227,
-      "notional_delta": -833.71,
-      "reason": "trimming on negative news flow \u2014 \"\u2018We Have About Four Years:\u2019 Raoul Pal Warns Investors to Get Ready Before AI Changes How Markets Work\" \u00b7 overweight by 0.79% vs target \u2014 trim",
+      "notional_delta": -1385.34,
+      "reason": "trimming on negative news flow \u2014 \"\u2018We Have About Four Years:\u2019 Raoul Pal Warns Investors to Get Ready Before AI Changes How Markets Work\" \u00b7 overweight by 1.31% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 39.8 (hold_small), contribution 55.0",
+        "theme 'Financials & Rates' score 36.8 (hold_small), contribution 52.0",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1133,12 +1131,12 @@
       "target_weight": 0.0045,
       "current_weight": 0.009,
       "notional_delta": -476.25,
-      "reason": "trimming on mixed news flow \u2014 \"Micron, SanDisk, and Western Digital Remain in Bear Territory, But Key Catalysts Remain Intact\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"SOXX: Top Semiconductor ETF Targets $400 as AI Bubble Worries Linger\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.80%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1178,12 +1176,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.17,
-      "reason": "exiting on earnings beat (positive) \u2014 \"How Earnings Beat Will Impact General Dynamics Stock Investors\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Cramer thinks Boeing\u2019s problems aren\u2019t going away soon, says buy GE\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.30%",
         "theme=Defense & Aerospace",
         "news_source=yahoo_rss",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
@@ -1194,12 +1191,12 @@
       "target_weight": 0.0019,
       "current_weight": 0.0039,
       "notional_delta": -205.52,
-      "reason": "trimming on mixed news flow \u2014 \"$600B Tech Wipeout Meets $1.48T Margin Debt\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"SOXX: Top Semiconductor ETF Targets $400 as AI Bubble Worries Linger\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.85%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1245,14 +1242,14 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0266,
+      "target_weight": 0.0338,
       "current_weight": 0.0451,
-      "notional_delta": -1957.27,
-      "reason": "overweight by 1.85% vs target \u2014 trim",
+      "notional_delta": -1193.47,
+      "reason": "overweight by 1.13% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.6 (buy), contribution 51.2"
+        "theme 'Biotech & Pharma' score 64.6 (buy), contribution 57.2"
       ],
       "theme_key": "biotech"
     },
@@ -1288,13 +1285,12 @@
       "target_weight": 0.0518,
       "current_weight": 0.0504,
       "notional_delta": 0.0,
-      "reason": "holding on earnings beat (positive) \u2014 \"How Earnings Beat Will Impact General Dynamics Stock Investors\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Cramer thinks Boeing\u2019s problems aren\u2019t going away soon, says buy GE\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.02%",
         "theme=Defense & Aerospace",
         "theme 'Defense & Aerospace' score 74.5 (strong_buy), contribution 84.7",
         "news_source=yahoo_rss",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense"
@@ -1370,10 +1366,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0442,
+      "target_weight": 0.0454,
       "current_weight": 0.0345,
-      "notional_delta": 1023.74,
-      "reason": "buying on mixed news flow \u2014 \"S&P 500, Dow Jones, and Nasdaq 100 Outlook: Top Drivers for US Stocks This Week\" \u00b7 underweight by 0.97% vs target \u2014 add",
+      "notional_delta": 1151.04,
+      "reason": "buying on mixed news flow \u2014 \"Elon Musk\u2019s Net Worth Takes a Hit as SpaceX Stock Dips on AI Bubble Jitters\" \u00b7 underweight by 1.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.90%",
         "theme=EV & Clean Transport",
@@ -1389,7 +1385,7 @@
       "target_weight": 0.0043,
       "current_weight": 0.0085,
       "notional_delta": -450.87,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Warns \u2018Don\u2019t Assume the Worst Is Behind Us\u2019 After $1 Trillion Chip Stock Rout\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Warns \u2018Don\u2019t Assume the Worst Is Behind Us\u2019 After $1 Trillion Chip Stock Rout\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-7.51%",
         "theme=Semiconductors (Broad)",
@@ -1401,14 +1397,16 @@
     {
       "symbol": "VRTX",
       "action": "REDUCE",
-      "target_weight": 0.0341,
+      "target_weight": 0.0423,
       "current_weight": 0.0573,
-      "notional_delta": -2464.11,
-      "reason": "overweight by 2.32% vs target \u2014 trim",
+      "notional_delta": -1594.23,
+      "reason": "trimming on positive news flow \u2014 \"Apple, Palantir On Deck Monday As AI Demand, iPhone Growth Face Test\" \u00b7 overweight by 1.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.92%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.6 (buy), contribution 65.8"
+        "theme 'Biotech & Pharma' score 64.6 (buy), contribution 71.8",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech"
     },
@@ -1460,7 +1458,7 @@
       "target_weight": 0.0042,
       "current_weight": 0.0084,
       "notional_delta": -447.46,
-      "reason": "theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.74%",
         "theme=Semiconductors (Broad)"
@@ -1476,12 +1474,12 @@
       "target_weight": 0.0038,
       "current_weight": 0.0076,
       "notional_delta": -401.79,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Warns \u2018Don\u2019t Assume the Worst Is Behind Us\u2019 After $1 Trillion Chip Stock Rout\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"SOXX: Top Semiconductor ETF Targets $400 as AI Bubble Worries Linger\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-9.81%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1512,7 +1510,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.26,
-      "reason": "theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.51%",
         "theme=Semiconductors (Broad)"
@@ -1528,12 +1526,12 @@
       "target_weight": 0.0026,
       "current_weight": 0.0052,
       "notional_delta": -275.28,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Warns \u2018Don\u2019t Assume the Worst Is Behind Us\u2019 After $1 Trillion Chip Stock Rout\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"SOXX: Top Semiconductor ETF Targets $400 as AI Bubble Worries Linger\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.86%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1546,12 +1544,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on earnings beat (positive) \u2014 \"How Earnings Beat Will Impact General Dynamics Stock Investors\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Cramer thinks Boeing\u2019s problems aren\u2019t going away soon, says buy GE\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.55%",
         "theme=Defense & Aerospace",
         "news_source=yahoo_rss",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
@@ -1653,10 +1650,10 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.0462,
+      "target_weight": 0.0475,
       "current_weight": 0.0362,
-      "notional_delta": 1061.77,
-      "reason": "underweight by 1.00% vs target \u2014 add",
+      "notional_delta": 1199.68,
+      "reason": "underweight by 1.13% vs target \u2014 add",
       "factors": [
         "unrealized_pl=4.23%",
         "theme=EV & Clean Transport",
@@ -1690,7 +1687,7 @@
       "target_weight": 0.0521,
       "current_weight": 0.0524,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"General Dynamics (GD) Has Investors Asking A Bigger Question\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Cramer thinks Boeing\u2019s problems aren\u2019t going away soon, says buy GE\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.52%",
         "theme=Defense & Aerospace",
@@ -1706,10 +1703,10 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.0441,
+      "target_weight": 0.0453,
       "current_weight": 0.0349,
-      "notional_delta": 979.46,
-      "reason": "buying on mixed news flow \u2014 \"This Week in TSLA: Elon Musk's Apple Mac Studio Jibe, Former Autopilot Lead's Vision-Only Criticism and More\" \u00b7 underweight by 0.92% vs target \u2014 add",
+      "notional_delta": 1106.76,
+      "reason": "buying on mixed news flow \u2014 \"This Week in TSLA: Elon Musk's Apple Mac Studio Jibe, Former Autopilot Lead's Vision-Only Criticism and More\" \u00b7 underweight by 1.04% vs target \u2014 add",
       "factors": [
         "unrealized_pl=9.87%",
         "theme=EV & Clean Transport",
@@ -1743,16 +1740,16 @@
     {
       "symbol": "GS",
       "action": "REDUCE",
-      "target_weight": 0.0135,
+      "target_weight": 0.0087,
       "current_weight": 0.0204,
-      "notional_delta": -731.79,
-      "reason": "trimming on mixed news flow \u2014 \"EXCLUSIVE: Former Goldman Sachs Analyst Turned Creator Says AI-Ready Workers Need More Than Prompting Skills \u2014 \u2018You Can\u2019t Outsource the Unde\" \u00b7 overweight by 0.69% vs target \u2014 trim",
+      "notional_delta": -1240.99,
+      "reason": "trimming on negative news flow \u2014 \"China EV Stocks Tumble: XPeng, Li Auto, BYD and Polestar Hit as Price War Bites\" \u00b7 overweight by 1.17% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 39.8 (hold_small), contribution 50.1",
+        "theme 'Financials & Rates' score 36.8 (hold_small), contribution 47.1",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1778,14 +1775,14 @@
     {
       "symbol": "JPM",
       "action": "REDUCE",
-      "target_weight": 0.0131,
+      "target_weight": 0.0085,
       "current_weight": 0.0203,
-      "notional_delta": -765.37,
-      "reason": "trimming on negative news flow \u2014 \"\u2018We Have About Four Years:\u2019 Raoul Pal Warns Investors to Get Ready Before AI Changes How Markets Work\" \u00b7 overweight by 0.72% vs target \u2014 trim",
+      "notional_delta": -1253.36,
+      "reason": "trimming on negative news flow \u2014 \"\u2018We Have About Four Years:\u2019 Raoul Pal Warns Investors to Get Ready Before AI Changes How Markets Work\" \u00b7 overweight by 1.18% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.08%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 39.8 (hold_small), contribution 48.8",
+        "theme 'Financials & Rates' score 36.8 (hold_small), contribution 45.8",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1813,14 +1810,14 @@
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.0345,
+      "target_weight": 0.0428,
       "current_weight": 0.0617,
-      "notional_delta": -2883.24,
-      "reason": "trimming on negative news flow \u2014 \"Lilly Endowment Inc. Proposes Sale of Eli Lilly Common Stock\" \u00b7 overweight by 2.72% vs target \u2014 trim",
+      "notional_delta": -2002.75,
+      "reason": "trimming on negative news flow \u2014 \"Lilly Endowment Inc. Proposes Sale of Eli Lilly Common Stock\" \u00b7 overweight by 1.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.78%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.6 (buy), contribution 66.5",
+        "theme 'Biotech & Pharma' score 64.6 (buy), contribution 72.5",
         "news_source=fiscal.ai",
         "news_sentiment=-0.20"
       ],
@@ -1835,13 +1832,12 @@
       "target_weight": 0.0536,
       "current_weight": 0.0513,
       "notional_delta": 0.0,
-      "reason": "holding on earnings beat (positive) \u2014 \"How Earnings Beat Will Impact General Dynamics Stock Investors\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Cramer thinks Boeing\u2019s problems aren\u2019t going away soon, says buy GE\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=18.74%",
         "theme=Defense & Aerospace",
         "theme 'Defense & Aerospace' score 74.5 (strong_buy), contribution 87.8",
         "news_source=yahoo_rss",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
@@ -1855,7 +1851,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.16,
-      "reason": "theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-26.07%",
         "theme=Semiconductors (Broad)"
@@ -1888,7 +1884,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.22,
-      "reason": "trimming on mixed news flow \u2014 \"$600B Tech Wipeout Meets $1.48T Margin Debt\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on mixed news flow \u2014 \"AMD Stuck in Bear Market on Circular Investing Fears: Can Earnings Turn the Tide?\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-17.24%",
         "theme=AI & Compute",
@@ -1906,12 +1902,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0433,
       "notional_delta": -4596.22,
-      "reason": "exiting on mixed news flow \u2014 \"Earnings Volatility Watch: 10 Stocks Are Set to Swing More Than 10% This Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"Tempus AI Earnings Ahead: Is TEM Set Up To Pop or Drop?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=1.71%",
         "theme=Biotech & Pharma",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1921,14 +1917,14 @@
     {
       "symbol": "MS",
       "action": "REDUCE",
-      "target_weight": 0.0148,
+      "target_weight": 0.0096,
       "current_weight": 0.0227,
-      "notional_delta": -833.71,
-      "reason": "trimming on negative news flow \u2014 \"\u2018We Have About Four Years:\u2019 Raoul Pal Warns Investors to Get Ready Before AI Changes How Markets Work\" \u00b7 overweight by 0.79% vs target \u2014 trim",
+      "notional_delta": -1385.34,
+      "reason": "trimming on negative news flow \u2014 \"\u2018We Have About Four Years:\u2019 Raoul Pal Warns Investors to Get Ready Before AI Changes How Markets Work\" \u00b7 overweight by 1.31% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-1.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 39.8 (hold_small), contribution 55.0",
+        "theme 'Financials & Rates' score 36.8 (hold_small), contribution 52.0",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1961,12 +1957,12 @@
       "target_weight": 0.0045,
       "current_weight": 0.009,
       "notional_delta": -476.25,
-      "reason": "trimming on mixed news flow \u2014 \"Micron, SanDisk, and Western Digital Remain in Bear Territory, But Key Catalysts Remain Intact\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"SOXX: Top Semiconductor ETF Targets $400 as AI Bubble Worries Linger\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.80%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2015,12 +2011,11 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.17,
-      "reason": "exiting on earnings beat (positive) \u2014 \"How Earnings Beat Will Impact General Dynamics Stock Investors\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Cramer thinks Boeing\u2019s problems aren\u2019t going away soon, says buy GE\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.30%",
         "theme=Defense & Aerospace",
         "news_source=yahoo_rss",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
@@ -2034,12 +2029,12 @@
       "target_weight": 0.0019,
       "current_weight": 0.0039,
       "notional_delta": -205.52,
-      "reason": "trimming on mixed news flow \u2014 \"$600B Tech Wipeout Meets $1.48T Margin Debt\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"SOXX: Top Semiconductor ETF Targets $400 as AI Bubble Worries Linger\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-0.85%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2097,14 +2092,14 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.0266,
+      "target_weight": 0.0338,
       "current_weight": 0.0451,
-      "notional_delta": -1957.27,
-      "reason": "overweight by 1.85% vs target \u2014 trim",
+      "notional_delta": -1193.47,
+      "reason": "overweight by 1.13% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.6 (buy), contribution 51.2"
+        "theme 'Biotech & Pharma' score 64.6 (buy), contribution 57.2"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2149,13 +2144,12 @@
       "target_weight": 0.0518,
       "current_weight": 0.0504,
       "notional_delta": 0.0,
-      "reason": "holding on earnings beat (positive) \u2014 \"How Earnings Beat Will Impact General Dynamics Stock Investors\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Cramer thinks Boeing\u2019s problems aren\u2019t going away soon, says buy GE\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.02%",
         "theme=Defense & Aerospace",
         "theme 'Defense & Aerospace' score 74.5 (strong_buy), contribution 84.7",
         "news_source=yahoo_rss",
-        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "defense",
@@ -2249,10 +2243,10 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.0442,
+      "target_weight": 0.0454,
       "current_weight": 0.0345,
-      "notional_delta": 1023.74,
-      "reason": "buying on mixed news flow \u2014 \"S&P 500, Dow Jones, and Nasdaq 100 Outlook: Top Drivers for US Stocks This Week\" \u00b7 underweight by 0.97% vs target \u2014 add",
+      "notional_delta": 1151.04,
+      "reason": "buying on mixed news flow \u2014 \"Elon Musk\u2019s Net Worth Takes a Hit as SpaceX Stock Dips on AI Bubble Jitters\" \u00b7 underweight by 1.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=0.90%",
         "theme=EV & Clean Transport",
@@ -2271,7 +2265,7 @@
       "target_weight": 0.0043,
       "current_weight": 0.0085,
       "notional_delta": -450.87,
-      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Warns \u2018Don\u2019t Assume the Worst Is Behind Us\u2019 After $1 Trillion Chip Stock Rout\" \u00b7 theme score 27.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on negative news flow \u2014 \"Jim Cramer Warns \u2018Don\u2019t Assume the Worst Is Behind Us\u2019 After $1 Trillion Chip Stock Rout\" \u00b7 theme score 31.6 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-7.51%",
         "theme=Semiconductors (Broad)",
@@ -2286,14 +2280,16 @@
     {
       "symbol": "VRTX",
       "action": "REDUCE",
-      "target_weight": 0.0341,
+      "target_weight": 0.0423,
       "current_weight": 0.0573,
-      "notional_delta": -2464.11,
-      "reason": "overweight by 2.32% vs target \u2014 trim",
+      "notional_delta": -1594.23,
+      "reason": "trimming on positive news flow \u2014 \"Apple, Palantir On Deck Monday As AI Demand, iPhone Growth Face Test\" \u00b7 overweight by 1.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.92%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 58.6 (buy), contribution 65.8"
+        "theme 'Biotech & Pharma' score 64.6 (buy), contribution 71.8",
+        "news_source=benzinga",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2351,10 +2347,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-23T23:44:00+00:00",
-      "v": 99838.87
-    },
     {
       "t": "2026-07-24T01:14:53+00:00",
       "v": 99882.92
@@ -4350,6 +4342,10 @@
     {
       "t": "2026-11-01T19:37:35+00:00",
       "v": 106083.05
+    },
+    {
+      "t": "2026-11-01T23:08:48+00:00",
+      "v": 106083.05
     }
   ],
   "breaking_news": [
@@ -4358,7 +4354,7 @@
       "summary": "It wasn't immediately clear the extent of the damage hackers might have been able to cause, and Binance had not explicitly confirmed that funds had been pilfered. The company said its teams are \"working around the clock\" to resolve the issu",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/30/nx-s1-6023109/binance-security-issue",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4367,7 +4363,7 @@
       "summary": "The world's biggest cryptocurrency exchange reported Thursday that approximately $6.3 billion was impacted in an apparent hack.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/30/g-s1-150902/blockchain-intelligence-firms-link-north-korea-to-6-3b-hack-on-binance",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4376,7 +4372,7 @@
       "summary": "More than $6 billion worth of cryptocurrencies were stolen from Binance, the world's biggest crypto exchange. It's the biggest cyber heist ever \u2014 and many suspect North Korea may be behind it.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/30/nx-s1-6023175/hackers-steal-over-6-billion-from-crypto-exchange-binance-in-staggering-heist",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4385,7 +4381,7 @@
       "summary": "Oil companies are reporting another quarter of sky-high profits as the war in Iran pushes up the price of oil \u2014 and prices at the pump.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/31/nx-s1-6008072/oil-company-profits-gasoline-diesel-prices",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4394,7 +4390,7 @@
       "summary": "Residents are fighting back against plans for a project that would span thousands of acres near the Monongahela National Forest and popular outdoor recreation, ski areas and dark sky sites.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/31/nx-s1-5992790/data-centers-west-virginia-skiing-dark-skies",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4403,7 +4399,7 @@
       "summary": "Here are five things to know about the massive hack of the crypto exchange Binance \u2014 from how it happened to what it means for the sector.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/31/nx-s1-6024426/binance-crypto-heist-cyber-criminals-north-korea",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4412,7 +4408,7 @@
       "summary": "There was a mixed Halloween bag of economic news this week. GDP growth is up, but so are prices.  For now at least, interest rates are staying the same.  What does that mean for the midterm elections?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/31/nx-s1-6022285/mixed-economic-forecast-weighs-heavy-ahead-of-midterms",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4421,16 +4417,7 @@
       "summary": "Saying the president was \"grasping at straws,\" a federal judge on Saturday threw out Donald Trump's $10 billion lawsuit against The Wall Street Journal and media mogul Rupert Murdoch over a story reporting on his ties to Jeffrey Epstein.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/01/nx-s1-6025342/judge-dismisses-trump-suit-against-wall-street-journal-epstein-letter",
-      "published_utc": "2026-11-01T19:37:39+00:00",
-      "sentiment_score": -0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Judge dismisses Trump's lawsuit against Wall Street Journal over Epstein birthday book",
-      "summary": "Trump had sued the media outlet after it published a letter to Epstein purportedly written and signed by the president as part of a birthday book.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cwr5yj2lj9myo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4439,16 +4426,16 @@
       "summary": "Thousands gathered in the heart of delhi, calling for the chief election commissioner to step down.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c60qk92dvlwgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
     {
-      "headline": "Democrat endorses Republican candidate in key Michigan Senate race as party spat escalates",
+      "headline": "Democrat endorses Republican candidate in key Michigan Senate race as party spat erupts",
       "summary": "Haley Stevens, who lost out on the Democratic Senate nomination to Abdul El-Sayed, endorses his opponent days before the vote.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c95ynzv88n68o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4457,25 +4444,7 @@
       "summary": "The new police unit is a security measure in response to last year's deadly shooting attack at a Hanukkah festival.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c9kgj7k7ry0ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "University of Cambridge scientist among those who died in Spanish train crash",
-      "summary": "Marta Shahbazi was an \"inspiring, talented and passionate scientist\", says the laboratory where she worked.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cq5ynzvkn1d8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Israeli strikes in Gaza kill eight including child, hospitals say",
-      "summary": "Five officers from the Hamas-run police have been killed in Khan Younis and three people, including a child, killed in Gaza City, officials say.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cmqln14rrzxvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4484,7 +4453,34 @@
       "summary": "The protests in cities across Germany - including Berlin, Hamburg and Frankfurt - came on the same day hundreds of thousands also protested in France.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "University of Cambridge scientist among those who died in Spanish train crash",
+      "summary": "Marta Shahbazi was an \"inspiring, talented and passionate scientist\", says the laboratory where she worked.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cq5ynzvkn1d8o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-01T23:08:51+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Israeli strikes in Gaza kill eight including child, hospitals say",
+      "summary": "Five officers from the Hamas-run police have been killed in Khan Younis and three people, including a child, killed in Gaza City, officials say.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cmqln14rrzxvo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-01T23:08:51+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire ends",
+      "summary": "A rare humanitarian ceasefire allowed civilians to evacuate the Russian-occupied city of Oleshky.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4493,7 +4489,7 @@
       "summary": "The cyber-attack, which the company describes as complex, is believed to be the largest ever of its kind.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4502,7 +4498,7 @@
       "summary": "The retail giant - which started life at a Wolverhampton market - is now at threat of collapse.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cw07304l5je7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4511,7 +4507,7 @@
       "summary": "Ian Thomas, who heads the City of London Corporation, tops the Black Powerlist in its 21st year.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c98rz4pxm4ymo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4520,7 +4516,7 @@
       "summary": "Cyber correspondent Joe Tidy explains more about what is suspected to be the biggest hack in history.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/videos/cv2d62e34rw5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4529,7 +4525,7 @@
       "summary": "Shares in Intel continue to fall while the tech-heavy Nasdaq opens at its lowest level in more than two months.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cvwy72e0n72yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-01T19:37:39+00:00",
+      "published_utc": "2026-11-01T23:08:51+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
