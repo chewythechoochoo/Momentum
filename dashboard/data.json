@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-31T22:36:39+00:00",
+  "generated_at_utc": "2026-11-01T01:28:30+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1148,
-  "last_success_utc": "2026-10-31T19:15:12+00:00",
+  "cycle_count": 1149,
+  "last_success_utc": "2026-10-31T22:36:39+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -551,33 +551,17 @@
     {
       "key": "defense",
       "name": "Defense & Aerospace",
-      "score": 72.21,
-      "raw_score": 72.21,
-      "band": "strong_buy",
-      "weight": 0.1383,
-      "confidence": 0.8,
+      "score": 66.21,
+      "raw_score": 66.21,
+      "band": "buy",
+      "weight": 0.1168,
+      "confidence": 0.7,
       "components": {
         "momentum": 67.36,
-        "sentiment": 90.0,
+        "sentiment": 70.0,
         "volume": 66.33,
         "policy": 50.0,
         "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "biotech",
-      "name": "Biotech & Pharma",
-      "score": 64.77,
-      "raw_score": 68.65,
-      "band": "buy",
-      "weight": 0.1127,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 93.39,
-        "sentiment": 50.0,
-        "volume": 56.49,
-        "policy": 50.0,
-        "volatility_penalty": 3.88
       }
     },
     {
@@ -615,65 +599,49 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 56.57,
-      "raw_score": 56.57,
+      "score": 59.57,
+      "raw_score": 59.57,
       "band": "buy",
-      "weight": 0.1052,
+      "weight": 0.1152,
       "confidence": 1.0,
       "components": {
         "momentum": 68.84,
-        "sentiment": 50.0,
+        "sentiment": 60.0,
         "volume": 45.17,
         "policy": 50.0,
         "volatility_penalty": 0.0
       }
     },
     {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 54.77,
-      "raw_score": 54.77,
-      "band": "starter",
-      "weight": 0.0868,
+      "key": "biotech",
+      "name": "Biotech & Pharma",
+      "score": 55.77,
+      "raw_score": 59.65,
+      "band": "buy",
+      "weight": 0.0897,
       "confidence": 0.75,
       "components": {
+        "momentum": 93.39,
+        "sentiment": 20.0,
+        "volume": 56.49,
+        "policy": 50.0,
+        "volatility_penalty": 3.88
+      }
+    },
+    {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 45.77,
+      "raw_score": 45.77,
+      "band": "starter",
+      "weight": 0.0571,
+      "confidence": 0.65,
+      "components": {
         "momentum": 44.66,
-        "sentiment": 80.0,
+        "sentiment": 50.0,
         "volume": 39.52,
         "policy": 50.0,
         "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "clean_energy",
-      "name": "Clean Energy",
-      "score": 39.85,
-      "raw_score": 46.63,
-      "band": "hold_small",
-      "weight": 0.0417,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 35.02,
-        "sentiment": 50.0,
-        "volume": 63.11,
-        "policy": 50.0,
-        "volatility_penalty": 6.78
-      }
-    },
-    {
-      "key": "cybersecurity",
-      "name": "Cybersecurity",
-      "score": 39.38,
-      "raw_score": 51.21,
-      "band": "hold_small",
-      "weight": 0.0417,
-      "confidence": 0.8,
-      "components": {
-        "momentum": 17.73,
-        "sentiment": 90.0,
-        "volume": 58.1,
-        "policy": 55.0,
-        "volatility_penalty": 11.83
       }
     },
     {
@@ -690,6 +658,38 @@
         "volume": 63.76,
         "policy": 55.0,
         "volatility_penalty": 5.36
+      }
+    },
+    {
+      "key": "clean_energy",
+      "name": "Clean Energy",
+      "score": 34.35,
+      "raw_score": 41.13,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.7,
+      "components": {
+        "momentum": 35.02,
+        "sentiment": 30.0,
+        "volume": 63.11,
+        "policy": 55.0,
+        "volatility_penalty": 6.78
+      }
+    },
+    {
+      "key": "cybersecurity",
+      "name": "Cybersecurity",
+      "score": 30.38,
+      "raw_score": 42.21,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 17.73,
+        "sentiment": 60.0,
+        "volume": 58.1,
+        "policy": 55.0,
+        "volatility_penalty": 11.83
       }
     },
     {
@@ -799,12 +799,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0301,
       "notional_delta": -3194.94,
-      "reason": "exiting on mixed news flow \u2014 \"JP Morgan Maintains Overweight on Bank of America, Lowers Price Target to $59.5\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.43%",
-        "theme=Financials & Rates",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials"
     },
@@ -824,17 +822,14 @@
     },
     {
       "symbol": "CRWD",
-      "action": "BUY",
-      "target_weight": 0.0142,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 1505.3,
-      "reason": "buying on mixed news flow \u2014 \"CrowdStrike Highlights Partner Ecosystem at Fal.Con Europe 2026\" \u00b7 underweight by 1.42% vs target \u2014 add",
+      "notional_delta": -0.54,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.37%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.4 (hold_small), contribution 41.3",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -853,16 +848,17 @@
     },
     {
       "symbol": "ENPH",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0011,
       "current_weight": 0.0022,
-      "notional_delta": -235.02,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: Carvana, Rivian, Amazon\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -117.51,
+      "reason": "trimming on policy tailwind (negative) \u2014 \"Enphase Energy Enters Agreement to Sell 45X Tax Credits\" \u00b7 theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-20.14%",
         "theme=Clean Energy",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=fiscal.ai",
+        "event=policy tailwind",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "clean_energy"
     },
@@ -882,31 +878,28 @@
     },
     {
       "symbol": "FSLR",
-      "action": "HOLD",
-      "target_weight": 0.0147,
+      "action": "REDUCE",
+      "target_weight": 0.0092,
       "current_weight": 0.0185,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"JP Morgan Maintains Overweight on First Solar, Lowers Price Target to $233\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -978.88,
+      "reason": "theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=1.33%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.9 (hold_small), contribution 51.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0457,
+      "target_weight": 0.0386,
       "current_weight": 0.0524,
-      "notional_delta": -707.73,
-      "reason": "trimming on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 overweight by 0.67% vs target \u2014 trim",
+      "notional_delta": -1460.92,
+      "reason": "trimming on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 overweight by 1.38% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=5.52%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 72.2 (strong_buy), contribution 83.0",
+        "theme 'Defense & Aerospace' score 66.2 (buy), contribution 77.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -945,15 +938,15 @@
     },
     {
       "symbol": "GS",
-      "action": "BUY",
-      "target_weight": 0.0284,
+      "action": "HOLD",
+      "target_weight": 0.0186,
       "current_weight": 0.0204,
-      "notional_delta": 848.85,
-      "reason": "underweight by 0.80% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 54.8 (starter), contribution 65.1"
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 56.1"
       ],
       "theme_key": "financials"
     },
@@ -972,15 +965,15 @@
     },
     {
       "symbol": "JPM",
-      "action": "BUY",
-      "target_weight": 0.0279,
+      "action": "HOLD",
+      "target_weight": 0.0182,
       "current_weight": 0.0203,
-      "notional_delta": 804.66,
-      "reason": "buying on mixed news flow \u2014 \"JPMorgan Chase & Co. Reports Change in Major Holding of Ashtead Technology Holdings\" \u00b7 underweight by 0.76% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"JPMorgan Chase & Co. Reports Change in Major Holding of Ashtead Technology Holdings\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.08%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 54.8 (starter), contribution 63.8",
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 54.8",
         "news_source=fiscal.ai",
         "news_sentiment=+0.00"
       ],
@@ -1002,30 +995,30 @@
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.0405,
+      "target_weight": 0.0327,
       "current_weight": 0.0617,
-      "notional_delta": -2246.75,
-      "reason": "trimming on mixed news flow \u2014 \"Eli Lilly CEO Dave Ricks Engages in Public Exchange Regarding Pharmaceutical Innovation\" \u00b7 overweight by 2.12% vs target \u2014 trim",
+      "notional_delta": -3074.19,
+      "reason": "trimming on negative news flow \u2014 \"Lilly Endowment Inc. Proposes Sale of Eli Lilly Common Stock\" \u00b7 overweight by 2.90% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.78%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 64.8 (buy), contribution 72.5",
+        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 63.5",
         "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "LMT",
-      "action": "HOLD",
-      "target_weight": 0.0472,
+      "action": "REDUCE",
+      "target_weight": 0.0399,
       "current_weight": 0.0513,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1208.27,
+      "reason": "trimming on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 overweight by 1.14% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=18.74%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 72.2 (strong_buy), contribution 85.7",
+        "theme 'Defense & Aerospace' score 66.2 (buy), contribution 79.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1047,14 +1040,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0364,
+      "target_weight": 0.0397,
       "current_weight": 0.0413,
       "notional_delta": 0.0,
       "reason": "holding on legal risk (negative) \u2014 \"US Judge Rules McDonald's Must Face McRib Lawsuit\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.6 (buy), contribution 63.5",
+        "theme 'Consumer Discretionary' score 59.6 (buy), contribution 66.5",
         "news_source=fiscal.ai",
         "event=legal risk",
         "news_sentiment=-0.20"
@@ -1091,15 +1084,15 @@
     },
     {
       "symbol": "MS",
-      "action": "BUY",
-      "target_weight": 0.0305,
+      "action": "HOLD",
+      "target_weight": 0.0203,
       "current_weight": 0.0227,
-      "notional_delta": 831.8,
-      "reason": "underweight by 0.78% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 54.8 (starter), contribution 70.0"
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 61.0"
       ],
       "theme_key": "financials"
     },
@@ -1137,28 +1130,29 @@
     {
       "symbol": "NEE",
       "action": "REDUCE",
-      "target_weight": 0.0166,
+      "target_weight": 0.0116,
       "current_weight": 0.0232,
-      "notional_delta": -700.65,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -1230.82,
+      "reason": "theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.39%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.9 (hold_small), contribution 57.8"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
     {
       "symbol": "NKE",
       "action": "HOLD",
-      "target_weight": 0.0345,
+      "target_weight": 0.0378,
       "current_weight": 0.0384,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Nike Announces Strategic Reduction in Jordan Retro Product Launches\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.91%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.6 (buy), contribution 60.4"
+        "theme 'Consumer Discretionary' score 59.6 (buy), contribution 63.4",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1195,15 +1189,14 @@
     },
     {
       "symbol": "OKTA",
-      "action": "HOLD",
-      "target_weight": 0.0142,
+      "action": "REDUCE",
+      "target_weight": 0.007,
       "current_weight": 0.0141,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -746.94,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.13%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.4 (hold_small), contribution 41.3"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1222,29 +1215,28 @@
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0132,
+      "action": "REDUCE",
+      "target_weight": 0.0074,
       "current_weight": 0.0147,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -780.69,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.44%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.4 (hold_small), contribution 38.5"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.032,
+      "target_weight": 0.0248,
       "current_weight": 0.0451,
-      "notional_delta": -1384.42,
-      "reason": "overweight by 1.31% vs target \u2014 trim",
+      "notional_delta": -2148.22,
+      "reason": "overweight by 2.03% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 64.8 (buy), contribution 57.2"
+        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 48.2"
       ],
       "theme_key": "biotech"
     },
@@ -1279,14 +1271,14 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0454,
+      "target_weight": 0.0383,
       "current_weight": 0.0504,
-      "notional_delta": -532.92,
-      "reason": "trimming on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 overweight by 0.50% vs target \u2014 trim",
+      "notional_delta": -1286.11,
+      "reason": "trimming on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 overweight by 1.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.02%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 72.2 (strong_buy), contribution 82.4",
+        "theme 'Defense & Aerospace' score 66.2 (buy), contribution 76.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1294,42 +1286,38 @@
     },
     {
       "symbol": "RUN",
-      "action": "HOLD",
-      "target_weight": 0.0104,
+      "action": "REDUCE",
+      "target_weight": 0.0063,
       "current_weight": 0.0126,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -667.24,
+      "reason": "theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=1.29%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.9 (hold_small), contribution 36.2"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0376,
       "current_weight": 0.0385,
       "notional_delta": 0.0,
-      "reason": "holding on buyback (mixed) \u2014 \"Starbucks Reports Fiscal Fourth-Quarter 2026 Results and Announces Share Buyback Plan\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.51%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.6 (buy), contribution 60.0",
-        "news_source=fiscal.ai",
-        "event=buyback",
-        "news_sentiment=+0.00"
+        "theme 'Consumer Discretionary' score 59.6 (buy), contribution 63.0"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "SEDG",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0012,
       "current_weight": 0.0024,
-      "notional_delta": -255.96,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -127.98,
+      "reason": "theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.58%",
         "theme=Clean Energy"
@@ -1393,14 +1381,14 @@
     {
       "symbol": "VRTX",
       "action": "REDUCE",
-      "target_weight": 0.0401,
+      "target_weight": 0.0323,
       "current_weight": 0.0573,
-      "notional_delta": -1827.62,
-      "reason": "overweight by 1.72% vs target \u2014 trim",
+      "notional_delta": -2655.06,
+      "reason": "overweight by 2.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.92%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 64.8 (buy), contribution 71.8"
+        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 62.8"
       ],
       "theme_key": "biotech"
     },
@@ -1410,12 +1398,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.68,
-      "reason": "exiting on positive news flow \u2014 \"JP Morgan Maintains Neutral on Wells Fargo, Raises Price Target to $92\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.81%",
-        "theme=Financials & Rates",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials"
     },
@@ -1437,11 +1423,11 @@
     },
     {
       "symbol": "ZS",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.13%",
         "theme=Cybersecurity"
@@ -1557,12 +1543,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0301,
       "notional_delta": -3194.94,
-      "reason": "exiting on mixed news flow \u2014 \"JP Morgan Maintains Overweight on Bank of America, Lowers Price Target to $59.5\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-1.43%",
-        "theme=Financials & Rates",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1588,17 +1572,14 @@
     },
     {
       "symbol": "CRWD",
-      "action": "BUY",
-      "target_weight": 0.0142,
+      "action": "REDUCE",
+      "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": 1505.3,
-      "reason": "buying on mixed news flow \u2014 \"CrowdStrike Highlights Partner Ecosystem at Fal.Con Europe 2026\" \u00b7 underweight by 1.42% vs target \u2014 add",
+      "notional_delta": -0.54,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.37%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.4 (hold_small), contribution 41.3",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1623,16 +1604,17 @@
     },
     {
       "symbol": "ENPH",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0011,
       "current_weight": 0.0022,
-      "notional_delta": -235.02,
-      "reason": "exiting on mixed news flow \u2014 \"Benzinga Bulls and Bears: Carvana, Rivian, Amazon\" \u00b7 no longer in target set \u2014 exit",
+      "notional_delta": -117.51,
+      "reason": "trimming on policy tailwind (negative) \u2014 \"Enphase Energy Enters Agreement to Sell 45X Tax Credits\" \u00b7 theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-20.14%",
         "theme=Clean Energy",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_source=fiscal.ai",
+        "event=policy tailwind",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1658,17 +1640,14 @@
     },
     {
       "symbol": "FSLR",
-      "action": "HOLD",
-      "target_weight": 0.0147,
+      "action": "REDUCE",
+      "target_weight": 0.0092,
       "current_weight": 0.0185,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"JP Morgan Maintains Overweight on First Solar, Lowers Price Target to $233\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -978.88,
+      "reason": "theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=1.33%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.9 (hold_small), contribution 51.1",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1678,14 +1657,14 @@
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0457,
+      "target_weight": 0.0386,
       "current_weight": 0.0524,
-      "notional_delta": -707.73,
-      "reason": "trimming on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 overweight by 0.67% vs target \u2014 trim",
+      "notional_delta": -1460.92,
+      "reason": "trimming on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 overweight by 1.38% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=5.52%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 72.2 (strong_buy), contribution 83.0",
+        "theme 'Defense & Aerospace' score 66.2 (buy), contribution 77.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1733,15 +1712,15 @@
     },
     {
       "symbol": "GS",
-      "action": "BUY",
-      "target_weight": 0.0284,
+      "action": "HOLD",
+      "target_weight": 0.0186,
       "current_weight": 0.0204,
-      "notional_delta": 848.85,
-      "reason": "underweight by 0.80% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.19%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 54.8 (starter), contribution 65.1"
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 56.1"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1766,15 +1745,15 @@
     },
     {
       "symbol": "JPM",
-      "action": "BUY",
-      "target_weight": 0.0279,
+      "action": "HOLD",
+      "target_weight": 0.0182,
       "current_weight": 0.0203,
-      "notional_delta": 804.66,
-      "reason": "buying on mixed news flow \u2014 \"JPMorgan Chase & Co. Reports Change in Major Holding of Ashtead Technology Holdings\" \u00b7 underweight by 0.76% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"JPMorgan Chase & Co. Reports Change in Major Holding of Ashtead Technology Holdings\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.08%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 54.8 (starter), contribution 63.8",
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 54.8",
         "news_source=fiscal.ai",
         "news_sentiment=+0.00"
       ],
@@ -1802,16 +1781,16 @@
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.0405,
+      "target_weight": 0.0327,
       "current_weight": 0.0617,
-      "notional_delta": -2246.75,
-      "reason": "trimming on mixed news flow \u2014 \"Eli Lilly CEO Dave Ricks Engages in Public Exchange Regarding Pharmaceutical Innovation\" \u00b7 overweight by 2.12% vs target \u2014 trim",
+      "notional_delta": -3074.19,
+      "reason": "trimming on negative news flow \u2014 \"Lilly Endowment Inc. Proposes Sale of Eli Lilly Common Stock\" \u00b7 overweight by 2.90% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.78%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 64.8 (buy), contribution 72.5",
+        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 63.5",
         "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1820,15 +1799,15 @@
     },
     {
       "symbol": "LMT",
-      "action": "HOLD",
-      "target_weight": 0.0472,
+      "action": "REDUCE",
+      "target_weight": 0.0399,
       "current_weight": 0.0513,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -1208.27,
+      "reason": "trimming on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 overweight by 1.14% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=18.74%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 72.2 (strong_buy), contribution 85.7",
+        "theme 'Defense & Aerospace' score 66.2 (buy), contribution 79.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1856,14 +1835,14 @@
     {
       "symbol": "MCD",
       "action": "HOLD",
-      "target_weight": 0.0364,
+      "target_weight": 0.0397,
       "current_weight": 0.0413,
       "notional_delta": 0.0,
       "reason": "holding on legal risk (negative) \u2014 \"US Judge Rules McDonald's Must Face McRib Lawsuit\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.00%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.6 (buy), contribution 63.5",
+        "theme 'Consumer Discretionary' score 59.6 (buy), contribution 66.5",
         "news_source=fiscal.ai",
         "event=legal risk",
         "news_sentiment=-0.20"
@@ -1909,15 +1888,15 @@
     },
     {
       "symbol": "MS",
-      "action": "BUY",
-      "target_weight": 0.0305,
+      "action": "HOLD",
+      "target_weight": 0.0203,
       "current_weight": 0.0227,
-      "notional_delta": 831.8,
-      "reason": "underweight by 0.78% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.68%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 54.8 (starter), contribution 70.0"
+        "theme 'Financials & Rates' score 45.8 (starter), contribution 61.0"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1964,14 +1943,13 @@
     {
       "symbol": "NEE",
       "action": "REDUCE",
-      "target_weight": 0.0166,
+      "target_weight": 0.0116,
       "current_weight": 0.0232,
-      "notional_delta": -700.65,
-      "reason": "overweight by 0.66% vs target \u2014 trim",
+      "notional_delta": -1230.82,
+      "reason": "theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=0.39%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.9 (hold_small), contribution 57.8"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1981,14 +1959,16 @@
     {
       "symbol": "NKE",
       "action": "HOLD",
-      "target_weight": 0.0345,
+      "target_weight": 0.0378,
       "current_weight": 0.0384,
       "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Nike Announces Strategic Reduction in Jordan Retro Product Launches\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.91%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.6 (buy), contribution 60.4"
+        "theme 'Consumer Discretionary' score 59.6 (buy), contribution 63.4",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2034,15 +2014,14 @@
     },
     {
       "symbol": "OKTA",
-      "action": "HOLD",
-      "target_weight": 0.0142,
+      "action": "REDUCE",
+      "target_weight": 0.007,
       "current_weight": 0.0141,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -746.94,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-5.13%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.4 (hold_small), contribution 41.3"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2067,15 +2046,14 @@
     },
     {
       "symbol": "PANW",
-      "action": "HOLD",
-      "target_weight": 0.0132,
+      "action": "REDUCE",
+      "target_weight": 0.0074,
       "current_weight": 0.0147,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -780.69,
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.44%",
-        "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 39.4 (hold_small), contribution 38.5"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2085,14 +2063,14 @@
     {
       "symbol": "PFE",
       "action": "REDUCE",
-      "target_weight": 0.032,
+      "target_weight": 0.0248,
       "current_weight": 0.0451,
-      "notional_delta": -1384.42,
-      "reason": "overweight by 1.31% vs target \u2014 trim",
+      "notional_delta": -2148.22,
+      "reason": "overweight by 2.03% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.26%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 64.8 (buy), contribution 57.2"
+        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 48.2"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2136,14 +2114,14 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0454,
+      "target_weight": 0.0383,
       "current_weight": 0.0504,
-      "notional_delta": -532.92,
-      "reason": "trimming on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 overweight by 0.50% vs target \u2014 trim",
+      "notional_delta": -1286.11,
+      "reason": "trimming on positive news flow \u2014 \"Defense Stocks Rebound Into Midterms As Drone Makers Lag\" \u00b7 overweight by 1.21% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.02%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 72.2 (strong_buy), contribution 82.4",
+        "theme 'Defense & Aerospace' score 66.2 (buy), contribution 76.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2154,15 +2132,14 @@
     },
     {
       "symbol": "RUN",
-      "action": "HOLD",
-      "target_weight": 0.0104,
+      "action": "REDUCE",
+      "target_weight": 0.0063,
       "current_weight": 0.0126,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -667.24,
+      "reason": "theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=1.29%",
-        "theme=Clean Energy",
-        "theme 'Clean Energy' score 39.9 (hold_small), contribution 36.2"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -2172,17 +2149,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0343,
+      "target_weight": 0.0376,
       "current_weight": 0.0385,
       "notional_delta": 0.0,
-      "reason": "holding on buyback (mixed) \u2014 \"Starbucks Reports Fiscal Fourth-Quarter 2026 Results and Announces Share Buyback Plan\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.51%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 56.6 (buy), contribution 60.0",
-        "news_source=fiscal.ai",
-        "event=buyback",
-        "news_sentiment=+0.00"
+        "theme 'Consumer Discretionary' score 59.6 (buy), contribution 63.0"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2191,11 +2165,11 @@
     },
     {
       "symbol": "SEDG",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0012,
       "current_weight": 0.0024,
-      "notional_delta": -255.96,
-      "reason": "no longer in target set \u2014 exit",
+      "notional_delta": -127.98,
+      "reason": "theme score 34.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-8.58%",
         "theme=Clean Energy"
@@ -2274,14 +2248,14 @@
     {
       "symbol": "VRTX",
       "action": "REDUCE",
-      "target_weight": 0.0401,
+      "target_weight": 0.0323,
       "current_weight": 0.0573,
-      "notional_delta": -1827.62,
-      "reason": "overweight by 1.72% vs target \u2014 trim",
+      "notional_delta": -2655.06,
+      "reason": "overweight by 2.50% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=6.92%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 64.8 (buy), contribution 71.8"
+        "theme 'Biotech & Pharma' score 55.8 (buy), contribution 62.8"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2294,12 +2268,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.68,
-      "reason": "exiting on positive news flow \u2014 \"JP Morgan Maintains Neutral on Wells Fargo, Raises Price Target to $92\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-0.81%",
-        "theme=Financials & Rates",
-        "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2327,11 +2299,11 @@
     },
     {
       "symbol": "ZS",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "theme score 30.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-1.13%",
         "theme=Cybersecurity"
@@ -2343,10 +2315,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-23T19:09:33+00:00",
-      "v": 99723.24
-    },
     {
       "t": "2026-07-23T20:33:24+00:00",
       "v": 99770.11
@@ -4342,6 +4310,10 @@
     {
       "t": "2026-10-31T22:36:36+00:00",
       "v": 106083.05
+    },
+    {
+      "t": "2026-11-01T01:28:25+00:00",
+      "v": 106083.05
     }
   ],
   "breaking_news": [
@@ -4350,7 +4322,7 @@
       "summary": "Anthropic gave a 94-page list of risk factors in its S-1 this week. Two of them stood out.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/10/30/nx-s1-6022515/the-two-most-interesting-risks-to-anthropic",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4359,7 +4331,7 @@
       "summary": "It wasn't immediately clear the extent of the damage hackers might have been able to cause, and Binance had not explicitly confirmed that funds had been pilfered. The company said its teams are \"working around the clock\" to resolve the issu",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/30/nx-s1-6023109/binance-security-issue",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4368,7 +4340,7 @@
       "summary": "The world's biggest cryptocurrency exchange reported Thursday that approximately $6.3 billion was impacted in an apparent hack.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/30/g-s1-150902/blockchain-intelligence-firms-link-north-korea-to-6-3b-hack-on-binance",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4377,7 +4349,7 @@
       "summary": "More than $6 billion worth of cryptocurrencies were stolen from Binance, the world's biggest crypto exchange. It's the biggest cyber heist ever \u2014 and many suspect North Korea may be behind it.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/30/nx-s1-6023175/hackers-steal-over-6-billion-from-crypto-exchange-binance-in-staggering-heist",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4386,7 +4358,7 @@
       "summary": "Oil companies are reporting another quarter of sky-high profits as the war in Iran pushes up the price of oil \u2014 and prices at the pump.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/31/nx-s1-6008072/oil-company-profits-gasoline-diesel-prices",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4395,7 +4367,7 @@
       "summary": "Residents are fighting back against plans for a project that would span thousands of acres near the Monongahela National Forest and popular outdoor recreation, ski areas and dark sky sites.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/31/nx-s1-5992790/data-centers-west-virginia-skiing-dark-skies",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4404,7 +4376,7 @@
       "summary": "Here are five things to know about the massive hack of the crypto exchange Binance \u2014 from how it happened to what it means for the sector.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/31/nx-s1-6024426/binance-crypto-heist-cyber-criminals-north-korea",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4413,25 +4385,16 @@
       "summary": "There was a mixed Halloween bag of economic news this week. GDP growth is up, but so are prices.  For now at least, interest rates are staying the same.  What does that mean for the midterm elections?",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/10/31/nx-s1-6022285/mixed-economic-forecast-weighs-heavy-ahead-of-midterms",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
     {
-      "headline": "Global nature talks reach deal but money remains an issue",
-      "summary": "Countries have been trying to get a global agreement to halt nature decline back on track.",
+      "headline": "More than 5,000 die from Ebola in DR Congo's deadliest outbreak",
+      "summary": "Government data shows that more than 10,000 people have contracted the rare virus.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cw1l32qyj8pqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
-      "sentiment_score": -0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Spain train disaster clouds S\u00e1nchez chances of re-election",
-      "summary": "The Spanish PM is hit by a succession of crises just weeks before a snap general election.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cmeweppr990qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cj5ynryyep2yo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4440,17 +4403,26 @@
       "summary": "The prime minister has previously emphasised military preparedness as central to his government's ambitions.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cmwyv2y7g9l8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "More than 5,000 die from Ebola in DR Congo's deadliest outbreak",
-      "summary": "Government data shows that more than 10,000 people have contracted the rare virus.",
+      "headline": "How the downfall of Serbia's Vu\u010di\u010b mirrored that of Hungary's Orb\u00e1n",
+      "summary": "Defeat for Serbia's Aleksandar Vu\u010di\u010b in last weekend's vote was a carbon copy of Viktor Orb\u00e1n's fall in Hungary.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cj5ynryyep2yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c893z699q401o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "India's opposition set to hold mega rally seeking election chief's resignation",
+      "summary": "It comes amid growing protests over a voter roll revision exercise feared to leave 130 million voters off rolls.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c60qk92dvlwgo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-01T01:28:30+00:00",
+      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -4458,7 +4430,7 @@
       "summary": "The Federal Bureau of Investigation (FBI) says North Korea was responsible for the hack.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4467,7 +4439,7 @@
       "summary": "More than 320,000 people demonstrated across France against the rising cost of living and poor public services, with clashes between some protesters and police.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/videos/ck0j0y87j303o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4476,7 +4448,7 @@
       "summary": "Oleshky residents had been without food, water and electricity, with many resorting to cooking garden weeds to survive.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqx2818elrnzo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4485,7 +4457,7 @@
       "summary": "One evacuated couple says they crossed minefields in Oleshky in search of food.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqglw3k7djp1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4494,7 +4466,7 @@
       "summary": "Nicola Shaw, who has led the company since 2022, will step down in January, it is announced.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ckzd623pldqgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     },
@@ -4503,7 +4475,7 @@
       "summary": "A new generation is embracing eye-catching patching and visible mends.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cmwy9qe5r1z3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4512,7 +4484,7 @@
       "summary": "Video games are good at triggering nostalgia, a key reason why classic games keep getting remade.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cm9qz428nnljo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4521,7 +4493,7 @@
       "summary": "The retail giant - which started life at a Wolverhampton market - is now at threat of collapse.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cw07304l5je7o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-10-31T22:36:39+00:00",
+      "published_utc": "2026-11-01T01:28:30+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
