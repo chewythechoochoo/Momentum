@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-08T15:05:24+00:00",
+  "generated_at_utc": "2026-11-08T19:38:55+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1179,
-  "last_success_utc": "2026-11-08T07:55:58+00:00",
+  "cycle_count": 1180,
+  "last_success_utc": "2026-11-08T15:05:24+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -549,6 +549,22 @@
   ],
   "themes": [
     {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 72.94,
+      "raw_score": 72.96,
+      "band": "strong_buy",
+      "weight": 0.1394,
+      "confidence": 0.8,
+      "components": {
+        "momentum": 72.19,
+        "sentiment": 90.0,
+        "volume": 60.42,
+        "policy": 50.0,
+        "volatility_penalty": 0.02
+      }
+    },
+    {
       "key": "clean_energy",
       "name": "Clean Energy",
       "score": 69.17,
@@ -567,33 +583,17 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 61.89,
-      "raw_score": 66.62,
+      "score": 63.23,
+      "raw_score": 67.97,
       "band": "buy",
-      "weight": 0.123,
+      "weight": 0.1274,
       "confidence": 1.0,
       "components": {
         "momentum": 57.29,
-        "sentiment": 86.66,
+        "sentiment": 89.47,
         "volume": 63.54,
-        "policy": 50.0,
+        "policy": 55.0,
         "volatility_penalty": 4.73
-      }
-    },
-    {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 60.94,
-      "raw_score": 60.96,
-      "band": "buy",
-      "weight": 0.1048,
-      "confidence": 0.75,
-      "components": {
-        "momentum": 72.19,
-        "sentiment": 50.0,
-        "volume": 60.42,
-        "policy": 50.0,
-        "volatility_penalty": 0.02
       }
     },
     {
@@ -613,29 +613,13 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 52.47,
-      "raw_score": 60.31,
-      "band": "starter",
-      "weight": 0.0847,
-      "confidence": 0.85,
-      "components": {
-        "momentum": 28.93,
-        "sentiment": 100.0,
-        "volume": 66.2,
-        "policy": 55.0,
-        "volatility_penalty": 7.84
-      }
-    },
-    {
       "key": "ev_clean_transport",
       "name": "EV & Clean Transport",
       "score": 46.58,
       "raw_score": 52.99,
       "band": "starter",
-      "weight": 0.0701,
-      "confidence": 0.95,
+      "weight": 0.0683,
+      "confidence": 0.9,
       "components": {
         "momentum": 53.66,
         "sentiment": 50.0,
@@ -658,6 +642,22 @@
         "volume": 62.61,
         "policy": 50.0,
         "volatility_penalty": 0.65
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 44.97,
+      "raw_score": 52.81,
+      "band": "starter",
+      "weight": 0.0649,
+      "confidence": 0.95,
+      "components": {
+        "momentum": 28.93,
+        "sentiment": 75.0,
+        "volume": 66.2,
+        "policy": 55.0,
+        "volatility_penalty": 7.84
       }
     },
     {
@@ -743,17 +743,17 @@
     },
     {
       "symbol": "AMZN",
-      "action": "REDUCE",
-      "target_weight": 0.0352,
+      "action": "HOLD",
+      "target_weight": 0.0467,
       "current_weight": 0.0515,
-      "notional_delta": -1682.36,
-      "reason": "trimming on mixed news flow \u2014 \"Analysts Question AAPL's Valuation, Apple's Margin Pressure and More:  This Week in Appleverse\" \u00b7 overweight by 1.63% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"EXCLUSIVE: Ollyball Brings Toy of the Year Success to \u2018Shark Tank\u2019 for Next Growth Phase \u2014 \u2018We Own a Category\u2019\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.59%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 60.9 (buy), contribution 72.0",
+        "theme 'Consumer Discretionary' score 72.9 (strong_buy), contribution 84.0",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -863,11 +863,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0025,
       "notional_delta": -260.82,
-      "reason": "exiting on positive news flow \u2014 \"Why Sunrun Stock Surged 33.4% This Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on earnings beat (positive) \u2014 \"NextEra Energy vs. Southern Company: Which Dividend Stock Is Better for Retirement?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.38%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
@@ -875,7 +876,7 @@
     {
       "symbol": "F",
       "action": "HOLD",
-      "target_weight": 0.0245,
+      "target_weight": 0.0239,
       "current_weight": 0.0283,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Ford Racing Introduces 2027 Mustang Dark Horse SC\" \u00b7 within 50bps of target \u2014 no trade",
@@ -894,12 +895,13 @@
       "target_weight": 0.0505,
       "current_weight": 0.0427,
       "notional_delta": 798.84,
-      "reason": "buying on positive news flow \u2014 \"Why Sunrun Stock Surged 33.4% This Week\" \u00b7 underweight by 0.78% vs target \u2014 add",
+      "reason": "buying on earnings beat (positive) \u2014 \"NextEra Energy vs. Southern Company: Which Dividend Stock Is Better for Retirement?\" \u00b7 underweight by 0.78% vs target \u2014 add",
       "factors": [
         "unrealized_pl=11.64%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 69.2 (buy), contribution 86.3",
         "news_source=yahoo_rss",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
@@ -921,10 +923,10 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0167,
+      "target_weight": 0.0163,
       "current_weight": 0.0234,
-      "notional_delta": -694.04,
-      "reason": "overweight by 0.67% vs target \u2014 trim",
+      "notional_delta": -735.21,
+      "reason": "overweight by 0.71% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.14%",
         "theme=EV & Clean Transport",
@@ -935,14 +937,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0296,
+      "target_weight": 0.0228,
       "current_weight": 0.0275,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.05%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.5 (starter), contribution 70.3"
+        "theme 'AI & Compute' score 45.0 (starter), contribution 62.8"
       ],
       "theme_key": "ai_compute"
     },
@@ -963,15 +965,15 @@
     },
     {
       "symbol": "HD",
-      "action": "REDUCE",
-      "target_weight": 0.0338,
+      "action": "HOLD",
+      "target_weight": 0.0451,
       "current_weight": 0.0486,
-      "notional_delta": -1518.87,
-      "reason": "overweight by 1.48% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.48%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 60.9 (buy), contribution 69.1"
+        "theme 'Consumer Discretionary' score 72.9 (strong_buy), contribution 81.1"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1045,15 +1047,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "REDUCE",
-      "target_weight": 0.0359,
+      "action": "HOLD",
+      "target_weight": 0.0475,
       "current_weight": 0.051,
-      "notional_delta": -1553.41,
-      "reason": "trimming on mixed news flow \u2014 \"McDonald's Executives to Speak at Sustainability LIVE: The US Summit\" \u00b7 overweight by 1.51% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"McDonald's Executives to Speak at Sustainability LIVE: The US Summit\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=9.04%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 60.9 (buy), contribution 73.4",
+        "theme 'Consumer Discretionary' score 72.9 (strong_buy), contribution 85.4",
         "news_source=fiscal.ai",
         "news_sentiment=+0.00"
       ],
@@ -1062,30 +1064,30 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0231,
+      "target_weight": 0.0172,
       "current_weight": 0.0212,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Consumer Tech (Oct 2-6): Big Earnings Dominate Headline, Meta, Google Face Political And Regulatory Pressure Over AI Expansion & More\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"Nebius Stock Ahead of Earnings: Options Traders Brace for a Big Move\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.66%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.5 (starter), contribution 54.8",
+        "theme 'AI & Compute' score 45.0 (starter), contribution 47.3",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "MRNA",
       "action": "HOLD",
-      "target_weight": 0.0416,
+      "target_weight": 0.0431,
       "current_weight": 0.0419,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.50%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 61.9 (buy), contribution 54.6",
+        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 55.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1109,16 +1111,16 @@
     {
       "symbol": "MSFT",
       "action": "HOLD",
-      "target_weight": 0.032,
+      "target_weight": 0.0249,
       "current_weight": 0.0283,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"CoreWeave and IREN Stocks Face Pressure as Microsoft Reassesses Its Computing Deals\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"CoreWeave Stock Is Eyeing Record Low Amid Insider Sales: Will It Rebound After Earnings?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.66%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.5 (starter), contribution 75.8",
+        "theme 'AI & Compute' score 45.0 (starter), contribution 68.3",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1143,12 +1145,13 @@
       "target_weight": 0.0494,
       "current_weight": 0.0429,
       "notional_delta": 670.01,
-      "reason": "buying on positive news flow \u2014 \"Why Sunrun Stock Surged 33.4% This Week\" \u00b7 underweight by 0.65% vs target \u2014 add",
+      "reason": "buying on earnings beat (positive) \u2014 \"NextEra Energy vs. Southern Company: Which Dividend Stock Is Better for Retirement?\" \u00b7 underweight by 0.65% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.13%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 69.2 (buy), contribution 84.5",
         "news_source=yahoo_rss",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
@@ -1186,7 +1189,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.31,
-      "reason": "exiting on positive news flow \u2014 \"Earnings Volatility Watch: CoreWeave Reports Into an AI Rally Test, and Options Expect a 21% Move\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"CoreWeave Stock Is Eyeing Record Low Amid Insider Sales: Will It Rebound After Earnings?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.21%",
         "theme=AI & Compute",
@@ -1237,14 +1240,14 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0387,
+      "target_weight": 0.0402,
       "current_weight": 0.0405,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 61.9 (buy), contribution 50.8",
+        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 52.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1268,7 +1271,7 @@
     {
       "symbol": "RIVN",
       "action": "HOLD",
-      "target_weight": 0.0289,
+      "target_weight": 0.0282,
       "current_weight": 0.0329,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1298,7 +1301,7 @@
       "target_weight": 0.0473,
       "current_weight": 0.04,
       "notional_delta": 756.03,
-      "reason": "buying on earnings beat (positive) \u2014 \"Earnings Beat Could Be A Game Changer For Sunrun Stock (RUN)\" \u00b7 underweight by 0.73% vs target \u2014 add",
+      "reason": "buying on earnings beat (positive) \u2014 \"NextEra Energy vs. Southern Company: Which Dividend Stock Is Better for Retirement?\" \u00b7 underweight by 0.73% vs target \u2014 add",
       "factors": [
         "unrealized_pl=22.03%",
         "theme=Clean Energy",
@@ -1328,11 +1331,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0023,
       "notional_delta": -234.33,
-      "reason": "exiting on positive news flow \u2014 \"Why Sunrun Stock Surged 33.4% This Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on earnings beat (positive) \u2014 \"NextEra Energy vs. Southern Company: Which Dividend Stock Is Better for Retirement?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-16.31%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy"
@@ -1395,14 +1399,14 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0427,
+      "target_weight": 0.0442,
       "current_weight": 0.0412,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.80%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 61.9 (buy), contribution 56.0",
+        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 57.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1493,17 +1497,17 @@
     },
     {
       "symbol": "AMZN",
-      "action": "REDUCE",
-      "target_weight": 0.0352,
+      "action": "HOLD",
+      "target_weight": 0.0467,
       "current_weight": 0.0515,
-      "notional_delta": -1682.36,
-      "reason": "trimming on mixed news flow \u2014 \"Analysts Question AAPL's Valuation, Apple's Margin Pressure and More:  This Week in Appleverse\" \u00b7 overweight by 1.63% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"EXCLUSIVE: Ollyball Brings Toy of the Year Success to \u2018Shark Tank\u2019 for Next Growth Phase \u2014 \u2018We Own a Category\u2019\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-3.59%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 60.9 (buy), contribution 72.0",
+        "theme 'Consumer Discretionary' score 72.9 (strong_buy), contribution 84.0",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1637,11 +1641,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0025,
       "notional_delta": -260.82,
-      "reason": "exiting on positive news flow \u2014 \"Why Sunrun Stock Surged 33.4% This Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on earnings beat (positive) \u2014 \"NextEra Energy vs. Southern Company: Which Dividend Stock Is Better for Retirement?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.38%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
@@ -1652,7 +1657,7 @@
     {
       "symbol": "F",
       "action": "HOLD",
-      "target_weight": 0.0245,
+      "target_weight": 0.0239,
       "current_weight": 0.0283,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Ford Racing Introduces 2027 Mustang Dark Horse SC\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1674,12 +1679,13 @@
       "target_weight": 0.0505,
       "current_weight": 0.0427,
       "notional_delta": 798.84,
-      "reason": "buying on positive news flow \u2014 \"Why Sunrun Stock Surged 33.4% This Week\" \u00b7 underweight by 0.78% vs target \u2014 add",
+      "reason": "buying on earnings beat (positive) \u2014 \"NextEra Energy vs. Southern Company: Which Dividend Stock Is Better for Retirement?\" \u00b7 underweight by 0.78% vs target \u2014 add",
       "factors": [
         "unrealized_pl=11.64%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 69.2 (buy), contribution 86.3",
         "news_source=yahoo_rss",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
@@ -1707,10 +1713,10 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0167,
+      "target_weight": 0.0163,
       "current_weight": 0.0234,
-      "notional_delta": -694.04,
-      "reason": "overweight by 0.67% vs target \u2014 trim",
+      "notional_delta": -735.21,
+      "reason": "overweight by 0.71% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.14%",
         "theme=EV & Clean Transport",
@@ -1724,14 +1730,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0296,
+      "target_weight": 0.0228,
       "current_weight": 0.0275,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.05%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.5 (starter), contribution 70.3"
+        "theme 'AI & Compute' score 45.0 (starter), contribution 62.8"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1758,15 +1764,15 @@
     },
     {
       "symbol": "HD",
-      "action": "REDUCE",
-      "target_weight": 0.0338,
+      "action": "HOLD",
+      "target_weight": 0.0451,
       "current_weight": 0.0486,
-      "notional_delta": -1518.87,
-      "reason": "overweight by 1.48% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.48%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 60.9 (buy), contribution 69.1"
+        "theme 'Consumer Discretionary' score 72.9 (strong_buy), contribution 81.1"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1858,15 +1864,15 @@
     },
     {
       "symbol": "MCD",
-      "action": "REDUCE",
-      "target_weight": 0.0359,
+      "action": "HOLD",
+      "target_weight": 0.0475,
       "current_weight": 0.051,
-      "notional_delta": -1553.41,
-      "reason": "trimming on mixed news flow \u2014 \"McDonald's Executives to Speak at Sustainability LIVE: The US Summit\" \u00b7 overweight by 1.51% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"McDonald's Executives to Speak at Sustainability LIVE: The US Summit\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=9.04%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 60.9 (buy), contribution 73.4",
+        "theme 'Consumer Discretionary' score 72.9 (strong_buy), contribution 85.4",
         "news_source=fiscal.ai",
         "news_sentiment=+0.00"
       ],
@@ -1878,16 +1884,16 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0231,
+      "target_weight": 0.0172,
       "current_weight": 0.0212,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Consumer Tech (Oct 2-6): Big Earnings Dominate Headline, Meta, Google Face Political And Regulatory Pressure Over AI Expansion & More\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on negative news flow \u2014 \"Nebius Stock Ahead of Earnings: Options Traders Brace for a Big Move\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.66%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.5 (starter), contribution 54.8",
+        "theme 'AI & Compute' score 45.0 (starter), contribution 47.3",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1897,14 +1903,14 @@
     {
       "symbol": "MRNA",
       "action": "HOLD",
-      "target_weight": 0.0416,
+      "target_weight": 0.0431,
       "current_weight": 0.0419,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.50%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 61.9 (buy), contribution 54.6",
+        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 55.9",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1934,16 +1940,16 @@
     {
       "symbol": "MSFT",
       "action": "HOLD",
-      "target_weight": 0.032,
+      "target_weight": 0.0249,
       "current_weight": 0.0283,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"CoreWeave and IREN Stocks Face Pressure as Microsoft Reassesses Its Computing Deals\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"CoreWeave Stock Is Eyeing Record Low Amid Insider Sales: Will It Rebound After Earnings?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.66%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 52.5 (starter), contribution 75.8",
+        "theme 'AI & Compute' score 45.0 (starter), contribution 68.3",
         "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1974,12 +1980,13 @@
       "target_weight": 0.0494,
       "current_weight": 0.0429,
       "notional_delta": 670.01,
-      "reason": "buying on positive news flow \u2014 \"Why Sunrun Stock Surged 33.4% This Week\" \u00b7 underweight by 0.65% vs target \u2014 add",
+      "reason": "buying on earnings beat (positive) \u2014 \"NextEra Energy vs. Southern Company: Which Dividend Stock Is Better for Retirement?\" \u00b7 underweight by 0.65% vs target \u2014 add",
       "factors": [
         "unrealized_pl=2.13%",
         "theme=Clean Energy",
         "theme 'Clean Energy' score 69.2 (buy), contribution 84.5",
         "news_source=yahoo_rss",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
@@ -2026,7 +2033,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.31,
-      "reason": "exiting on positive news flow \u2014 \"Earnings Volatility Watch: CoreWeave Reports Into an AI Rally Test, and Options Expect a 21% Move\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"CoreWeave Stock Is Eyeing Record Low Amid Insider Sales: Will It Rebound After Earnings?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.21%",
         "theme=AI & Compute",
@@ -2089,14 +2096,14 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0387,
+      "target_weight": 0.0402,
       "current_weight": 0.0405,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 61.9 (buy), contribution 50.8",
+        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 52.1",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2126,7 +2133,7 @@
     {
       "symbol": "RIVN",
       "action": "HOLD",
-      "target_weight": 0.0289,
+      "target_weight": 0.0282,
       "current_weight": 0.0329,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -2162,7 +2169,7 @@
       "target_weight": 0.0473,
       "current_weight": 0.04,
       "notional_delta": 756.03,
-      "reason": "buying on earnings beat (positive) \u2014 \"Earnings Beat Could Be A Game Changer For Sunrun Stock (RUN)\" \u00b7 underweight by 0.73% vs target \u2014 add",
+      "reason": "buying on earnings beat (positive) \u2014 \"NextEra Energy vs. Southern Company: Which Dividend Stock Is Better for Retirement?\" \u00b7 underweight by 0.73% vs target \u2014 add",
       "factors": [
         "unrealized_pl=22.03%",
         "theme=Clean Energy",
@@ -2198,11 +2205,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0023,
       "notional_delta": -234.33,
-      "reason": "exiting on positive news flow \u2014 \"Why Sunrun Stock Surged 33.4% This Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on earnings beat (positive) \u2014 \"NextEra Energy vs. Southern Company: Which Dividend Stock Is Better for Retirement?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-16.31%",
         "theme=Clean Energy",
         "news_source=yahoo_rss",
+        "event=earnings beat",
         "news_sentiment=+0.20"
       ],
       "theme_key": "clean_energy",
@@ -2280,14 +2288,14 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0427,
+      "target_weight": 0.0442,
       "current_weight": 0.0412,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.80%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 61.9 (buy), contribution 56.0",
+        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 57.3",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2351,10 +2359,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-25T22:09:01+00:00",
-      "v": 99922.37
-    },
     {
       "t": "2026-07-25T23:24:50+00:00",
       "v": 99922.37
@@ -4350,6 +4354,10 @@
     {
       "t": "2026-11-08T15:05:19+00:00",
       "v": 102912.29
+    },
+    {
+      "t": "2026-11-08T19:38:52+00:00",
+      "v": 102912.29
     }
   ],
   "breaking_news": [
@@ -4358,7 +4366,7 @@
       "summary": "Some Americans squeezed by high prices are relying more on their local libraries for things like books, streaming services and high-priced items like musical instruments and sewing machines.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/05/nx-s1-5992908/libraries-and-cost-of-living",
-      "published_utc": "2026-11-08T15:05:24+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4367,7 +4375,7 @@
       "summary": "A new report finds generational wealth is widening the divide between homebuyers and those priced out. The median age of first-time buyers also remains at a record high.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/05/nx-s1-6022491/real-estate-all-cash-offer",
-      "published_utc": "2026-11-08T15:05:24+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4376,7 +4384,7 @@
       "summary": "An invasive insect that's tough to detect and eliminate poses a multi-billion dollar threat to the agricultural economy \u2014 adding another stressor to farmers already stretched by high costs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/05/nx-s1-6018539/pasture-mealybugs-have-killed-off-huge-swaths-of-grasses-in-the-southeast",
-      "published_utc": "2026-11-08T15:05:24+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4385,7 +4393,7 @@
       "summary": "Shares sank, with the tech-heavy Nasdaq dropping over 5%, as investors reacted with fear that a Democratic Congress \u2014 and states across the country -\u2014 would crack down on AI and data centers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/05/nx-s1-6031987/stock-markets-ai-midterm-elections",
-      "published_utc": "2026-11-08T15:05:24+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4394,7 +4402,7 @@
       "summary": "Gold tends to go up when there's uncertainty in the economy. For a while, the price reflected that. But this week, it dropped from a nearly $5,600 in January to below $4,000. What's going on?",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/11/06/nx-s1-6030995/why-gold-prices-are-surprisingly-low",
-      "published_utc": "2026-11-08T15:05:24+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4403,7 +4411,7 @@
       "summary": "The U.S. job market improved last month, according to a report from the Labor Department Friday.  Employers added more jobs than forecasters had expected and the unemployment rate dipped to 4.1%.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/06/nx-s1-6030867/jobs-labor-market-economy-wages-inflation",
-      "published_utc": "2026-11-08T15:05:24+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4412,7 +4420,7 @@
       "summary": "Big losses by AI shares in stock markets after Democrats won the midterm elections have left investors shaken and wondering comes next.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/06/nx-s1-6032695/this-was-the-week-the-ai-trade-cracked-so-whats-next",
-      "published_utc": "2026-11-08T15:05:24+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4421,7 +4429,7 @@
       "summary": "One of the most polarizing vehicles to hit the road will soon be a thing of history. Tesla will wind down manufacturing of its Cybertruck at the company's Gigafactory Texas mid-next year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/06/nx-s1-6032607/the-cybertrucks-cause-of-death-insufficient-demand",
-      "published_utc": "2026-11-08T15:05:24+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4430,7 +4438,7 @@
       "summary": "Pope Leo travels to Uruguay just three weeks after having surgery for lung cancer.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c60e0001ve9wo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4439,34 +4447,7 @@
       "summary": "Santiago Pe\u00f1a was ousted due to a banking crisis which left millions of people unable to access their money.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c68jzzvjgdy9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "UK cannot 'cherry pick' EU single market deal, Barnier tells BBC",
-      "summary": "The former Brexit negotiator says EU countries would reject any British attempts to follow economic rules \"a la carte\".",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c9kgjj206nzpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "US offers $20m reward for information about Iran's nuclear programme",
-      "summary": "Donald Trump has repeatedly raised the prospect of renewing strikes against Iran's nuclear facilities.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c6d091ev3p0jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
-      "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Israel's president tasks opposition leader Eisenkot with forming government",
-      "summary": "Neither PM Benjamin Netanyahu's bloc nor that of his rival secured a majority in last week's election.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cmy8367lj5xlo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4475,7 +4456,7 @@
       "summary": "The national mood is low, and faith in politics even lower - with voters deserting the major parties at the polls.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cxr5yyg2nj9eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4484,16 +4465,43 @@
       "summary": "Saudi Arabia, which leads a coalition fighting the Houthis in Yemen, has not commented.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c65yn1v99ypmo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "What we know so far after Krakow gun attack",
-      "summary": "Six people were killed in a random shooting in Krakow's main square, and three bodies were later found at the home of the attacker.",
+      "headline": "Iran executes three men for 'armed unrest' after January protests",
+      "summary": "It is claimed Hassan Dioband, Hamid Kazemi and Reza Zanganeh were part of anti-government protests earlier this year.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/ckly0ex633ydo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-08T19:38:55+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Homes and temples glow across India to mark Diwali",
+      "summary": "Millions of Indians are marking the festival of lights with glowing lamps, fireworks and traditional sweets.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cm70pdwz122ro?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-08T19:38:55+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Seven dead and more than 100 injured after trains collide in Egypt",
+      "summary": "Several carriages derailed after two trains travelling in the same direction crashed outside the city of Giza.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cwvgr20mmmevo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-08T19:38:55+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Surgeon having lunch near Krakow shooting undoubtedly saved officer's life, colleague says",
+      "summary": "Further details have emerged about two police officers hailed for preventing a Polish gunman from killing more.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4502,7 +4510,7 @@
       "summary": "Musk said it was to make room for production of its Cybercabs - autonomous taxis without a driver.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cq1j33w7d232o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4511,7 +4519,7 @@
       "summary": "A post-Brexit deal on food standards has raised questions over the future naming of the classic British snack.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cm1dwwqrr1kvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4520,7 +4528,7 @@
       "summary": "Changes in the FTSE 100 and other indexes are not just for financial experts, they can affect our lives.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c33zdz2m1e2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4529,7 +4537,7 @@
       "summary": "Fears of more AI regulation appear to have sparked fear among investors, but  concerns about the industry have been growing for some time.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/crlykkzwwpydo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T15:05:23+00:00",
+      "published_utc": "2026-11-08T19:38:55+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     }
