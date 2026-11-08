@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-08T19:38:55+00:00",
+  "generated_at_utc": "2026-11-08T23:12:52+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1180,
-  "last_success_utc": "2026-11-08T15:05:24+00:00",
+  "cycle_count": 1181,
+  "last_success_utc": "2026-11-08T19:38:55+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -583,14 +583,14 @@
     {
       "key": "biotech",
       "name": "Biotech & Pharma",
-      "score": 63.23,
-      "raw_score": 67.97,
+      "score": 60.68,
+      "raw_score": 65.41,
       "band": "buy",
-      "weight": 0.1274,
+      "weight": 0.1189,
       "confidence": 1.0,
       "components": {
         "momentum": 57.29,
-        "sentiment": 89.47,
+        "sentiment": 80.95,
         "volume": 63.54,
         "policy": 55.0,
         "volatility_penalty": 4.73
@@ -618,8 +618,8 @@
       "score": 46.58,
       "raw_score": 52.99,
       "band": "starter",
-      "weight": 0.0683,
-      "confidence": 0.9,
+      "weight": 0.0647,
+      "confidence": 0.8,
       "components": {
         "momentum": 53.66,
         "sentiment": 50.0,
@@ -631,33 +631,17 @@
     {
       "key": "oil_gas",
       "name": "Oil & Gas",
-      "score": 45.95,
-      "raw_score": 46.6,
+      "score": 44.95,
+      "raw_score": 45.6,
       "band": "starter",
-      "weight": 0.0576,
-      "confidence": 0.65,
+      "weight": 0.0565,
+      "confidence": 0.7,
       "components": {
         "momentum": 27.69,
-        "sentiment": 60.0,
+        "sentiment": 56.66,
         "volume": 62.61,
         "policy": 50.0,
         "volatility_penalty": 0.65
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 44.97,
-      "raw_score": 52.81,
-      "band": "starter",
-      "weight": 0.0649,
-      "confidence": 0.95,
-      "components": {
-        "momentum": 28.93,
-        "sentiment": 75.0,
-        "volume": 66.2,
-        "policy": 55.0,
-        "volatility_penalty": 7.84
       }
     },
     {
@@ -677,16 +661,32 @@
       }
     },
     {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 40.47,
+      "raw_score": 48.31,
+      "band": "starter",
+      "weight": 0.0516,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 28.93,
+        "sentiment": 60.0,
+        "volume": 66.2,
+        "policy": 55.0,
+        "volatility_penalty": 7.84
+      }
+    },
+    {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 38.58,
-      "raw_score": 50.09,
+      "score": 35.58,
+      "raw_score": 47.09,
       "band": "hold_small",
-      "weight": 0.0363,
-      "confidence": 0.75,
+      "weight": 0.02,
+      "confidence": 0.7,
       "components": {
         "momentum": 20.0,
-        "sentiment": 80.0,
+        "sentiment": 70.0,
         "volume": 65.43,
         "policy": 50.0,
         "volatility_penalty": 11.51
@@ -713,14 +713,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.0101,
+      "target_weight": 0.0055,
       "current_weight": 0.0082,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Earnings Volatility Watch: CoreWeave Reports Into an AI Rally Test, and Options Expect a 21% Move\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 38.6 (hold_small), contribution 27.8",
+        "theme 'Semiconductors (Broad)' score 35.6 (hold_small), contribution 24.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -760,14 +760,14 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0126,
+      "target_weight": 0.007,
       "current_weight": 0.0106,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.45%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 38.6 (hold_small), contribution 34.7"
+        "theme 'Semiconductors (Broad)' score 35.6 (hold_small), contribution 31.7"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -817,14 +817,14 @@
     {
       "symbol": "COP",
       "action": "REDUCE",
-      "target_weight": 0.0191,
+      "target_weight": 0.0187,
       "current_weight": 0.0265,
-      "notional_delta": -761.44,
-      "reason": "overweight by 0.74% vs target \u2014 trim",
+      "notional_delta": -802.61,
+      "reason": "overweight by 0.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.93%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.0 (starter), contribution 34.9"
+        "theme 'Oil & Gas' score 45.0 (starter), contribution 33.9"
       ],
       "theme_key": "oil_gas"
     },
@@ -846,14 +846,14 @@
     {
       "symbol": "CVX",
       "action": "REDUCE",
-      "target_weight": 0.0189,
+      "target_weight": 0.0185,
       "current_weight": 0.026,
-      "notional_delta": -730.01,
-      "reason": "overweight by 0.71% vs target \u2014 trim",
+      "notional_delta": -771.18,
+      "reason": "overweight by 0.75% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-6.68%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.0 (starter), contribution 34.5"
+        "theme 'Oil & Gas' score 45.0 (starter), contribution 33.5"
       ],
       "theme_key": "oil_gas"
     },
@@ -875,11 +875,11 @@
     },
     {
       "symbol": "F",
-      "action": "HOLD",
-      "target_weight": 0.0239,
+      "action": "REDUCE",
+      "target_weight": 0.0226,
       "current_weight": 0.0283,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Ford Racing Introduces 2027 Mustang Dark Horse SC\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -590.3,
+      "reason": "trimming on mixed news flow \u2014 \"Ford Racing Introduces 2027 Mustang Dark Horse SC\" \u00b7 overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.53%",
         "theme=EV & Clean Transport",
@@ -923,10 +923,10 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0163,
+      "target_weight": 0.0154,
       "current_weight": 0.0234,
-      "notional_delta": -735.21,
-      "reason": "overweight by 0.71% vs target \u2014 trim",
+      "notional_delta": -827.83,
+      "reason": "overweight by 0.80% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.14%",
         "theme=EV & Clean Transport",
@@ -936,15 +936,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0228,
+      "action": "REDUCE",
+      "target_weight": 0.0182,
       "current_weight": 0.0275,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -954.79,
+      "reason": "overweight by 0.93% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.05%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 45.0 (starter), contribution 62.8"
+        "theme 'AI & Compute' score 40.5 (starter), contribution 58.3"
       ],
       "theme_key": "ai_compute"
     },
@@ -1063,15 +1063,15 @@
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0172,
+      "action": "REDUCE",
+      "target_weight": 0.0134,
       "current_weight": 0.0212,
-      "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Nebius Stock Ahead of Earnings: Options Traders Brace for a Big Move\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -798.71,
+      "reason": "trimming on negative news flow \u2014 \"Nebius Stock Ahead of Earnings: Options Traders Brace for a Big Move\" \u00b7 overweight by 0.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.66%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 45.0 (starter), contribution 47.3",
+        "theme 'AI & Compute' score 40.5 (starter), contribution 42.8",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1080,14 +1080,14 @@
     {
       "symbol": "MRNA",
       "action": "HOLD",
-      "target_weight": 0.0431,
+      "target_weight": 0.0402,
       "current_weight": 0.0419,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.50%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 55.9",
+        "theme 'Biotech & Pharma' score 60.7 (buy), contribution 53.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1110,15 +1110,15 @@
     },
     {
       "symbol": "MSFT",
-      "action": "HOLD",
-      "target_weight": 0.0249,
+      "action": "REDUCE",
+      "target_weight": 0.02,
       "current_weight": 0.0283,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"CoreWeave Stock Is Eyeing Record Low Amid Insider Sales: Will It Rebound After Earnings?\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -856.6,
+      "reason": "trimming on positive news flow \u2014 \"CoreWeave Stock Is Eyeing Record Low Amid Insider Sales: Will It Rebound After Earnings?\" \u00b7 overweight by 0.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.66%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 45.0 (starter), contribution 68.3",
+        "theme 'AI & Compute' score 40.5 (starter), contribution 63.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1130,12 +1130,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.08,
-      "reason": "exiting on positive news flow \u2014 \"DRAM ETF: Why It\u2019s Falling, and Outflows Are Rising Despite Strong Micron, SanDisk and Samsung Earnings\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Analysts Question AAPL's Valuation, Apple's Margin Pressure and More:  This Week in Appleverse\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-28.91%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1189,12 +1189,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.31,
-      "reason": "exiting on positive news flow \u2014 \"CoreWeave Stock Is Eyeing Record Low Amid Insider Sales: Will It Rebound After Earnings?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on legal risk (negative) \u2014 \"NVIDIA Board Initiates Independent Investigation Into Reported Foreign Intelligence Effort Targeting CEO Jensen Huang; Says Board Believes N\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.21%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1217,10 +1218,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.35,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"KKR, Constellation Energy On Deck Monday As Private Credit, Power Face Test\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.87%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1240,14 +1243,14 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0402,
+      "target_weight": 0.0374,
       "current_weight": 0.0405,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 52.1",
+        "theme 'Biotech & Pharma' score 60.7 (buy), contribution 49.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1270,11 +1273,11 @@
     },
     {
       "symbol": "RIVN",
-      "action": "HOLD",
-      "target_weight": 0.0282,
+      "action": "REDUCE",
+      "target_weight": 0.0267,
       "current_weight": 0.0329,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -639.13,
+      "reason": "overweight by 0.62% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.50%",
         "theme=EV & Clean Transport",
@@ -1385,28 +1388,28 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0135,
+      "target_weight": 0.0075,
       "current_weight": 0.0113,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.25%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 38.6 (hold_small), contribution 37.2"
+        "theme 'Semiconductors (Broad)' score 35.6 (hold_small), contribution 34.2"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0442,
+      "target_weight": 0.0413,
       "current_weight": 0.0412,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.80%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 57.3",
+        "theme 'Biotech & Pharma' score 60.7 (buy), contribution 54.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1429,14 +1432,14 @@
     {
       "symbol": "XOM",
       "action": "REDUCE",
-      "target_weight": 0.0197,
+      "target_weight": 0.0193,
       "current_weight": 0.0269,
-      "notional_delta": -743.21,
-      "reason": "trimming on contract win (positive) \u2014 \"ExxonMobil Awards Five-Year Contract to Dietsmann in Angola\" \u00b7 overweight by 0.72% vs target \u2014 trim",
+      "notional_delta": -784.37,
+      "reason": "trimming on contract win (positive) \u2014 \"ExxonMobil Awards Five-Year Contract to Dietsmann in Angola\" \u00b7 overweight by 0.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-6.76%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.0 (starter), contribution 36.0",
+        "theme 'Oil & Gas' score 45.0 (starter), contribution 35.0",
         "news_source=fiscal.ai",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -1461,14 +1464,14 @@
     {
       "symbol": "AMAT",
       "action": "HOLD",
-      "target_weight": 0.0101,
+      "target_weight": 0.0055,
       "current_weight": 0.0082,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Earnings Volatility Watch: CoreWeave Reports Into an AI Rally Test, and Options Expect a 21% Move\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.27%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 38.6 (hold_small), contribution 27.8",
+        "theme 'Semiconductors (Broad)' score 35.6 (hold_small), contribution 24.8",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1517,14 +1520,14 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0126,
+      "target_weight": 0.007,
       "current_weight": 0.0106,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.45%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 38.6 (hold_small), contribution 34.7"
+        "theme 'Semiconductors (Broad)' score 35.6 (hold_small), contribution 31.7"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1586,14 +1589,14 @@
     {
       "symbol": "COP",
       "action": "REDUCE",
-      "target_weight": 0.0191,
+      "target_weight": 0.0187,
       "current_weight": 0.0265,
-      "notional_delta": -761.44,
-      "reason": "overweight by 0.74% vs target \u2014 trim",
+      "notional_delta": -802.61,
+      "reason": "overweight by 0.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.93%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.0 (starter), contribution 34.9"
+        "theme 'Oil & Gas' score 45.0 (starter), contribution 33.9"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1621,14 +1624,14 @@
     {
       "symbol": "CVX",
       "action": "REDUCE",
-      "target_weight": 0.0189,
+      "target_weight": 0.0185,
       "current_weight": 0.026,
-      "notional_delta": -730.01,
-      "reason": "overweight by 0.71% vs target \u2014 trim",
+      "notional_delta": -771.18,
+      "reason": "overweight by 0.75% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-6.68%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.0 (starter), contribution 34.5"
+        "theme 'Oil & Gas' score 45.0 (starter), contribution 33.5"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1656,11 +1659,11 @@
     },
     {
       "symbol": "F",
-      "action": "HOLD",
-      "target_weight": 0.0239,
+      "action": "REDUCE",
+      "target_weight": 0.0226,
       "current_weight": 0.0283,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Ford Racing Introduces 2027 Mustang Dark Horse SC\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -590.3,
+      "reason": "trimming on mixed news flow \u2014 \"Ford Racing Introduces 2027 Mustang Dark Horse SC\" \u00b7 overweight by 0.57% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.53%",
         "theme=EV & Clean Transport",
@@ -1713,10 +1716,10 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0163,
+      "target_weight": 0.0154,
       "current_weight": 0.0234,
-      "notional_delta": -735.21,
-      "reason": "overweight by 0.71% vs target \u2014 trim",
+      "notional_delta": -827.83,
+      "reason": "overweight by 0.80% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.14%",
         "theme=EV & Clean Transport",
@@ -1729,15 +1732,15 @@
     },
     {
       "symbol": "GOOGL",
-      "action": "HOLD",
-      "target_weight": 0.0228,
+      "action": "REDUCE",
+      "target_weight": 0.0182,
       "current_weight": 0.0275,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -954.79,
+      "reason": "overweight by 0.93% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.05%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 45.0 (starter), contribution 62.8"
+        "theme 'AI & Compute' score 40.5 (starter), contribution 58.3"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1883,15 +1886,15 @@
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0172,
+      "action": "REDUCE",
+      "target_weight": 0.0134,
       "current_weight": 0.0212,
-      "notional_delta": 0.0,
-      "reason": "holding on negative news flow \u2014 \"Nebius Stock Ahead of Earnings: Options Traders Brace for a Big Move\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -798.71,
+      "reason": "trimming on negative news flow \u2014 \"Nebius Stock Ahead of Earnings: Options Traders Brace for a Big Move\" \u00b7 overweight by 0.78% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.66%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 45.0 (starter), contribution 47.3",
+        "theme 'AI & Compute' score 40.5 (starter), contribution 42.8",
         "news_source=benzinga",
         "news_sentiment=-0.20"
       ],
@@ -1903,14 +1906,14 @@
     {
       "symbol": "MRNA",
       "action": "HOLD",
-      "target_weight": 0.0431,
+      "target_weight": 0.0402,
       "current_weight": 0.0419,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.50%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 55.9",
+        "theme 'Biotech & Pharma' score 60.7 (buy), contribution 53.4",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1939,15 +1942,15 @@
     },
     {
       "symbol": "MSFT",
-      "action": "HOLD",
-      "target_weight": 0.0249,
+      "action": "REDUCE",
+      "target_weight": 0.02,
       "current_weight": 0.0283,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"CoreWeave Stock Is Eyeing Record Low Amid Insider Sales: Will It Rebound After Earnings?\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -856.6,
+      "reason": "trimming on positive news flow \u2014 \"CoreWeave Stock Is Eyeing Record Low Amid Insider Sales: Will It Rebound After Earnings?\" \u00b7 overweight by 0.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-2.66%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 45.0 (starter), contribution 68.3",
+        "theme 'AI & Compute' score 40.5 (starter), contribution 63.9",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1962,12 +1965,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.08,
-      "reason": "exiting on positive news flow \u2014 \"DRAM ETF: Why It\u2019s Falling, and Outflows Are Rising Despite Strong Micron, SanDisk and Samsung Earnings\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Analysts Question AAPL's Valuation, Apple's Margin Pressure and More:  This Week in Appleverse\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-28.91%",
         "theme=Semiconductors (Broad)",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2033,12 +2036,13 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.31,
-      "reason": "exiting on positive news flow \u2014 \"CoreWeave Stock Is Eyeing Record Low Amid Insider Sales: Will It Rebound After Earnings?\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on legal risk (negative) \u2014 \"NVIDIA Board Initiates Independent Investigation Into Reported Foreign Intelligence Effort Targeting CEO Jensen Huang; Says Board Believes N\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=2.21%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2067,10 +2071,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.35,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on negative news flow \u2014 \"KKR, Constellation Energy On Deck Monday As Private Credit, Power Face Test\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.87%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=benzinga",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2096,14 +2102,14 @@
     {
       "symbol": "PFE",
       "action": "HOLD",
-      "target_weight": 0.0402,
+      "target_weight": 0.0374,
       "current_weight": 0.0405,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.40%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 52.1",
+        "theme 'Biotech & Pharma' score 60.7 (buy), contribution 49.6",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2132,11 +2138,11 @@
     },
     {
       "symbol": "RIVN",
-      "action": "HOLD",
-      "target_weight": 0.0282,
+      "action": "REDUCE",
+      "target_weight": 0.0267,
       "current_weight": 0.0329,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -639.13,
+      "reason": "overweight by 0.62% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=3.50%",
         "theme=EV & Clean Transport",
@@ -2271,14 +2277,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0135,
+      "target_weight": 0.0075,
       "current_weight": 0.0113,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.25%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 38.6 (hold_small), contribution 37.2"
+        "theme 'Semiconductors (Broad)' score 35.6 (hold_small), contribution 34.2"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2288,14 +2294,14 @@
     {
       "symbol": "VRTX",
       "action": "HOLD",
-      "target_weight": 0.0442,
+      "target_weight": 0.0413,
       "current_weight": 0.0412,
       "notional_delta": 0.0,
       "reason": "holding on positive news flow \u2014 \"Eli Lilly Just Raised Its 2026 Revenue Forecast by $5.5 Billion. Is the Stock Still a Buy?\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=3.80%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 63.2 (buy), contribution 57.3",
+        "theme 'Biotech & Pharma' score 60.7 (buy), contribution 54.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2324,14 +2330,14 @@
     {
       "symbol": "XOM",
       "action": "REDUCE",
-      "target_weight": 0.0197,
+      "target_weight": 0.0193,
       "current_weight": 0.0269,
-      "notional_delta": -743.21,
-      "reason": "trimming on contract win (positive) \u2014 \"ExxonMobil Awards Five-Year Contract to Dietsmann in Angola\" \u00b7 overweight by 0.72% vs target \u2014 trim",
+      "notional_delta": -784.37,
+      "reason": "trimming on contract win (positive) \u2014 \"ExxonMobil Awards Five-Year Contract to Dietsmann in Angola\" \u00b7 overweight by 0.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-6.76%",
         "theme=Oil & Gas",
-        "theme 'Oil & Gas' score 46.0 (starter), contribution 36.0",
+        "theme 'Oil & Gas' score 45.0 (starter), contribution 35.0",
         "news_source=fiscal.ai",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -2359,10 +2365,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-25T23:24:50+00:00",
-      "v": 99922.37
-    },
     {
       "t": "2026-07-26T01:11:24+00:00",
       "v": 99922.37
@@ -4358,6 +4360,10 @@
     {
       "t": "2026-11-08T19:38:52+00:00",
       "v": 102912.29
+    },
+    {
+      "t": "2026-11-08T23:12:48+00:00",
+      "v": 102912.29
     }
   ],
   "breaking_news": [
@@ -4366,7 +4372,7 @@
       "summary": "Some Americans squeezed by high prices are relying more on their local libraries for things like books, streaming services and high-priced items like musical instruments and sewing machines.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/05/nx-s1-5992908/libraries-and-cost-of-living",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4375,7 +4381,7 @@
       "summary": "A new report finds generational wealth is widening the divide between homebuyers and those priced out. The median age of first-time buyers also remains at a record high.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/05/nx-s1-6022491/real-estate-all-cash-offer",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4384,7 +4390,7 @@
       "summary": "An invasive insect that's tough to detect and eliminate poses a multi-billion dollar threat to the agricultural economy \u2014 adding another stressor to farmers already stretched by high costs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/05/nx-s1-6018539/pasture-mealybugs-have-killed-off-huge-swaths-of-grasses-in-the-southeast",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4393,7 +4399,7 @@
       "summary": "Shares sank, with the tech-heavy Nasdaq dropping over 5%, as investors reacted with fear that a Democratic Congress \u2014 and states across the country -\u2014 would crack down on AI and data centers.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/05/nx-s1-6031987/stock-markets-ai-midterm-elections",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4402,7 +4408,7 @@
       "summary": "Gold tends to go up when there's uncertainty in the economy. For a while, the price reflected that. But this week, it dropped from a nearly $5,600 in January to below $4,000. What's going on?",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/11/06/nx-s1-6030995/why-gold-prices-are-surprisingly-low",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4411,7 +4417,7 @@
       "summary": "The U.S. job market improved last month, according to a report from the Labor Department Friday.  Employers added more jobs than forecasters had expected and the unemployment rate dipped to 4.1%.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/06/nx-s1-6030867/jobs-labor-market-economy-wages-inflation",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4420,7 +4426,7 @@
       "summary": "Big losses by AI shares in stock markets after Democrats won the midterm elections have left investors shaken and wondering comes next.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/06/nx-s1-6032695/this-was-the-week-the-ai-trade-cracked-so-whats-next",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4429,7 +4435,7 @@
       "summary": "One of the most polarizing vehicles to hit the road will soon be a thing of history. Tesla will wind down manufacturing of its Cybertruck at the company's Gigafactory Texas mid-next year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/06/nx-s1-6032607/the-cybertrucks-cause-of-death-insufficient-demand",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4438,7 +4444,7 @@
       "summary": "Pope Leo travels to Uruguay just three weeks after having surgery for lung cancer.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c60e0001ve9wo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4447,7 +4453,7 @@
       "summary": "Santiago Pe\u00f1a was ousted due to a banking crisis which left millions of people unable to access their money.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c68jzzvjgdy9o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4456,7 +4462,7 @@
       "summary": "The national mood is low, and faith in politics even lower - with voters deserting the major parties at the polls.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cxr5yyg2nj9eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4465,7 +4471,7 @@
       "summary": "Saudi Arabia, which leads a coalition fighting the Houthis in Yemen, has not commented.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c65yn1v99ypmo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4474,7 +4480,7 @@
       "summary": "It is claimed Hassan Dioband, Hamid Kazemi and Reza Zanganeh were part of anti-government protests earlier this year.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckly0ex633ydo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4483,7 +4489,7 @@
       "summary": "Millions of Indians are marking the festival of lights with glowing lamps, fireworks and traditional sweets.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cm70pdwz122ro?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4492,7 +4498,7 @@
       "summary": "Several carriages derailed after two trains travelling in the same direction crashed outside the city of Giza.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwvgr20mmmevo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4501,7 +4507,7 @@
       "summary": "Further details have emerged about two police officers hailed for preventing a Polish gunman from killing more.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4510,7 +4516,7 @@
       "summary": "Musk said it was to make room for production of its Cybercabs - autonomous taxis without a driver.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cq1j33w7d232o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4519,7 +4525,7 @@
       "summary": "A post-Brexit deal on food standards has raised questions over the future naming of the classic British snack.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cm1dwwqrr1kvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4528,7 +4534,7 @@
       "summary": "Changes in the FTSE 100 and other indexes are not just for financial experts, they can affect our lives.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c33zdz2m1e2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4537,7 +4543,7 @@
       "summary": "Fears of more AI regulation appear to have sparked fear among investors, but  concerns about the industry have been growing for some time.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/crlykkzwwpydo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-08T19:38:55+00:00",
+      "published_utc": "2026-11-08T23:12:52+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     }
