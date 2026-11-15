@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-14T23:21:14+00:00",
+  "generated_at_utc": "2026-11-15T02:55:49+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1203,
-  "last_success_utc": "2026-11-14T19:27:34+00:00",
+  "cycle_count": 1204,
+  "last_success_utc": "2026-11-14T23:21:14+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -581,6 +581,22 @@
       }
     },
     {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 61.92,
+      "raw_score": 62.05,
+      "band": "buy",
+      "weight": 0.1077,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 63.26,
+        "sentiment": 80.0,
+        "volume": 38.73,
+        "policy": 50.0,
+        "volatility_penalty": 0.13
+      }
+    },
+    {
       "key": "financials",
       "name": "Financials & Rates",
       "score": 56.5,
@@ -597,35 +613,19 @@
       }
     },
     {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 52.92,
-      "raw_score": 53.05,
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 46.71,
+      "raw_score": 59.21,
       "band": "starter",
-      "weight": 0.0768,
-      "confidence": 0.65,
+      "weight": 0.0633,
+      "confidence": 0.75,
       "components": {
-        "momentum": 63.26,
-        "sentiment": 50.0,
-        "volume": 38.73,
+        "momentum": 51.47,
+        "sentiment": 80.0,
+        "volume": 48.09,
         "policy": 50.0,
-        "volatility_penalty": 0.13
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 47.94,
-      "raw_score": 56.99,
-      "band": "starter",
-      "weight": 0.0765,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 42.79,
-        "sentiment": 75.0,
-        "volume": 61.87,
-        "policy": 50.0,
-        "volatility_penalty": 9.04
+        "volatility_penalty": 12.5
       }
     },
     {
@@ -634,8 +634,8 @@
       "score": 46.43,
       "raw_score": 51.51,
       "band": "starter",
-      "weight": 0.0589,
-      "confidence": 0.65,
+      "weight": 0.0625,
+      "confidence": 0.75,
       "components": {
         "momentum": 59.93,
         "sentiment": 50.0,
@@ -645,19 +645,19 @@
       }
     },
     {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 43.71,
-      "raw_score": 56.21,
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 45.44,
+      "raw_score": 54.49,
       "band": "starter",
-      "weight": 0.053,
-      "confidence": 0.7,
+      "weight": 0.0681,
+      "confidence": 1.0,
       "components": {
-        "momentum": 51.47,
-        "sentiment": 70.0,
-        "volume": 48.09,
+        "momentum": 42.79,
+        "sentiment": 66.66,
+        "volume": 61.87,
         "policy": 50.0,
-        "volatility_penalty": 12.5
+        "volatility_penalty": 9.04
       }
     },
     {
@@ -713,14 +713,16 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0165,
+      "target_weight": 0.0198,
       "current_weight": 0.0257,
-      "notional_delta": -942.95,
-      "reason": "overweight by 0.92% vs target \u2014 trim",
+      "notional_delta": -603.39,
+      "reason": "trimming on mixed news flow \u2014 \"Wall Street Analysts Update Ratings and Price Targets for Applied Materials\" \u00b7 overweight by 0.59% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.37%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 43.7 (starter), contribution 62.3"
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 65.3",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -742,28 +744,30 @@
     {
       "symbol": "AMZN",
       "action": "REDUCE",
-      "target_weight": 0.0271,
+      "target_weight": 0.0377,
       "current_weight": 0.0435,
-      "notional_delta": -1683.97,
-      "reason": "overweight by 1.64% vs target \u2014 trim",
+      "notional_delta": -593.27,
+      "reason": "trimming on positive news flow \u2014 \"AWS Launches First Infrastructure Region in Chile\" \u00b7 overweight by 0.58% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.85%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.9 (starter), contribution 57.1"
+        "theme 'Consumer Discretionary' score 61.9 (buy), contribution 66.1",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0183,
+      "action": "HOLD",
+      "target_weight": 0.0218,
       "current_weight": 0.0233,
-      "notional_delta": -514.9,
-      "reason": "trimming on guidance raise (positive) \u2014 \"UBS Reiterates Buy Rating and Raises Price Target for ASML\" \u00b7 overweight by 0.50% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on guidance raise (positive) \u2014 \"UBS Reiterates Buy Rating and Raises Price Target for ASML\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.73%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 43.7 (starter), contribution 69.1",
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 72.1",
         "news_source=fiscal.ai",
         "event=guidance raise",
         "news_sentiment=+0.20"
@@ -773,14 +777,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.027,
+      "target_weight": 0.0241,
       "current_weight": 0.0242,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"NVDA, AMD, CRWV and More: 5 Stocks Investors Couldn\u2019t Stop Buzzing About This Week\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.9 (starter), contribution 71.8",
+        "theme 'AI & Compute' score 45.4 (starter), contribution 69.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -952,14 +956,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0249,
+      "target_weight": 0.0221,
       "current_weight": 0.0216,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.81%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.9 (starter), contribution 66.1"
+        "theme 'AI & Compute' score 45.4 (starter), contribution 63.6"
       ],
       "theme_key": "ai_compute"
     },
@@ -979,15 +983,15 @@
     },
     {
       "symbol": "HD",
-      "action": "REDUCE",
-      "target_weight": 0.0258,
+      "action": "HOLD",
+      "target_weight": 0.0361,
       "current_weight": 0.0357,
-      "notional_delta": -1013.57,
-      "reason": "overweight by 0.99% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.87%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.9 (starter), contribution 54.3"
+        "theme 'Consumer Discretionary' score 61.9 (buy), contribution 63.3"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -997,13 +1001,11 @@
       "target_weight": 0.0294,
       "current_weight": 0.0319,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"JPMorgan Chase Declares Dividends on Series II, OO, and PP Preferred Stock\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.73%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 56.5 (buy), contribution 60.9",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 56.5 (buy), contribution 60.9"
       ],
       "theme_key": "financials"
     },
@@ -1025,14 +1027,17 @@
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.0229,
+      "target_weight": 0.0243,
       "current_weight": 0.0323,
-      "notional_delta": -965.87,
-      "reason": "overweight by 0.94% vs target \u2014 trim",
+      "notional_delta": -821.82,
+      "reason": "trimming on trial data (mixed) \u2014 \"Eli Lilly Presents New Clinical Data for Cardiometabolic Portfolio at ObesityWeek 2026\" \u00b7 overweight by 0.80% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 46.4 (starter), contribution 68.2"
+        "theme 'Biotech & Pharma' score 46.4 (starter), contribution 68.2",
+        "news_source=fiscal.ai",
+        "event=trial data",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
     },
@@ -1072,24 +1077,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0502,
       "notional_delta": -5161.61,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"McDonald's Australia Celebrates McHappy Day\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=7.25%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0246,
+      "target_weight": 0.0219,
       "current_weight": 0.0218,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Italian Data Protection Authority Fines Meta \u20ac805 Million\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.02%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.9 (starter), contribution 65.3",
+        "theme 'AI & Compute' score 45.4 (starter), contribution 62.8",
         "news_source=fiscal.ai",
         "news_sentiment=+0.00"
       ],
@@ -1260,11 +1267,11 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.014,
+      "action": "HOLD",
+      "target_weight": 0.0149,
       "current_weight": 0.0195,
-      "notional_delta": -565.81,
-      "reason": "trimming on mixed news flow \u2014 \"Pfizer GLP-1 Medications Included in China's National Health Insurance\" \u00b7 overweight by 0.55% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Pfizer GLP-1 Medications Included in China's National Health Insurance\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.89%",
         "theme=Biotech & Pharma",
@@ -1277,10 +1284,10 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.022,
+      "target_weight": 0.0233,
       "current_weight": 0.0,
-      "notional_delta": 2263.47,
-      "reason": "underweight by 2.20% vs target \u2014 add",
+      "notional_delta": 2397.23,
+      "reason": "underweight by 2.33% vs target \u2014 add",
       "factors": [
         "unrealized_pl=42.20%",
         "theme=Biotech & Pharma",
@@ -1336,14 +1343,14 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0239,
+      "target_weight": 0.0339,
       "current_weight": 0.0401,
-      "notional_delta": -1663.94,
-      "reason": "trimming on mixed news flow \u2014 \"What Is Next for Jensen Huang? His Top Options After Leaving Nvidia\" \u00b7 overweight by 1.62% vs target \u2014 trim",
+      "notional_delta": -634.97,
+      "reason": "trimming on mixed news flow \u2014 \"What Is Next for Jensen Huang? His Top Options After Leaving Nvidia\" \u00b7 overweight by 0.62% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.62%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.9 (starter), contribution 50.4",
+        "theme 'Consumer Discretionary' score 61.9 (buy), contribution 59.4",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1411,15 +1418,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0182,
+      "action": "HOLD",
+      "target_weight": 0.0217,
       "current_weight": 0.0235,
-      "notional_delta": -543.0,
-      "reason": "overweight by 0.53% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.24%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 43.7 (starter), contribution 68.7"
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 71.7"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1429,10 +1436,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0187,
       "notional_delta": -1925.56,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Vertex Pharmaceuticals Announces Management Participation in Upcoming Investor Conferences\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.01%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech"
     },
@@ -1469,14 +1478,16 @@
     {
       "symbol": "AMAT",
       "action": "REDUCE",
-      "target_weight": 0.0165,
+      "target_weight": 0.0198,
       "current_weight": 0.0257,
-      "notional_delta": -942.95,
-      "reason": "overweight by 0.92% vs target \u2014 trim",
+      "notional_delta": -603.39,
+      "reason": "trimming on mixed news flow \u2014 \"Wall Street Analysts Update Ratings and Price Targets for Applied Materials\" \u00b7 overweight by 0.59% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.37%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 43.7 (starter), contribution 62.3"
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 65.3",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1504,14 +1515,16 @@
     {
       "symbol": "AMZN",
       "action": "REDUCE",
-      "target_weight": 0.0271,
+      "target_weight": 0.0377,
       "current_weight": 0.0435,
-      "notional_delta": -1683.97,
-      "reason": "overweight by 1.64% vs target \u2014 trim",
+      "notional_delta": -593.27,
+      "reason": "trimming on positive news flow \u2014 \"AWS Launches First Infrastructure Region in Chile\" \u00b7 overweight by 0.58% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.85%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.9 (starter), contribution 57.1"
+        "theme 'Consumer Discretionary' score 61.9 (buy), contribution 66.1",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1520,15 +1533,15 @@
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0183,
+      "action": "HOLD",
+      "target_weight": 0.0218,
       "current_weight": 0.0233,
-      "notional_delta": -514.9,
-      "reason": "trimming on guidance raise (positive) \u2014 \"UBS Reiterates Buy Rating and Raises Price Target for ASML\" \u00b7 overweight by 0.50% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on guidance raise (positive) \u2014 \"UBS Reiterates Buy Rating and Raises Price Target for ASML\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.73%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 43.7 (starter), contribution 69.1",
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 72.1",
         "news_source=fiscal.ai",
         "event=guidance raise",
         "news_sentiment=+0.20"
@@ -1541,14 +1554,14 @@
     {
       "symbol": "AVGO",
       "action": "HOLD",
-      "target_weight": 0.027,
+      "target_weight": 0.0241,
       "current_weight": 0.0242,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"NVDA, AMD, CRWV and More: 5 Stocks Investors Couldn\u2019t Stop Buzzing About This Week\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.9 (starter), contribution 71.8",
+        "theme 'AI & Compute' score 45.4 (starter), contribution 69.3",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1756,14 +1769,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0249,
+      "target_weight": 0.0221,
       "current_weight": 0.0216,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.81%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.9 (starter), contribution 66.1"
+        "theme 'AI & Compute' score 45.4 (starter), contribution 63.6"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1789,15 +1802,15 @@
     },
     {
       "symbol": "HD",
-      "action": "REDUCE",
-      "target_weight": 0.0258,
+      "action": "HOLD",
+      "target_weight": 0.0361,
       "current_weight": 0.0357,
-      "notional_delta": -1013.57,
-      "reason": "overweight by 0.99% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=5.87%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.9 (starter), contribution 54.3"
+        "theme 'Consumer Discretionary' score 61.9 (buy), contribution 63.3"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1810,13 +1823,11 @@
       "target_weight": 0.0294,
       "current_weight": 0.0319,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"JPMorgan Chase Declares Dividends on Series II, OO, and PP Preferred Stock\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.73%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 56.5 (buy), contribution 60.9",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 56.5 (buy), contribution 60.9"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1844,14 +1855,17 @@
     {
       "symbol": "LLY",
       "action": "REDUCE",
-      "target_weight": 0.0229,
+      "target_weight": 0.0243,
       "current_weight": 0.0323,
-      "notional_delta": -965.87,
-      "reason": "overweight by 0.94% vs target \u2014 trim",
+      "notional_delta": -821.82,
+      "reason": "trimming on trial data (mixed) \u2014 \"Eli Lilly Presents New Clinical Data for Cardiometabolic Portfolio at ObesityWeek 2026\" \u00b7 overweight by 0.80% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=2.02%",
         "theme=Biotech & Pharma",
-        "theme 'Biotech & Pharma' score 46.4 (starter), contribution 68.2"
+        "theme 'Biotech & Pharma' score 46.4 (starter), contribution 68.2",
+        "news_source=fiscal.ai",
+        "event=trial data",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1900,10 +1914,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0502,
       "notional_delta": -5161.61,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"McDonald's Australia Celebrates McHappy Day\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=7.25%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1913,14 +1929,14 @@
     {
       "symbol": "META",
       "action": "HOLD",
-      "target_weight": 0.0246,
+      "target_weight": 0.0219,
       "current_weight": 0.0218,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Italian Data Protection Authority Fines Meta \u20ac805 Million\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.02%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 47.9 (starter), contribution 65.3",
+        "theme 'AI & Compute' score 45.4 (starter), contribution 62.8",
         "news_source=fiscal.ai",
         "news_sentiment=+0.00"
       ],
@@ -2127,11 +2143,11 @@
     },
     {
       "symbol": "PFE",
-      "action": "REDUCE",
-      "target_weight": 0.014,
+      "action": "HOLD",
+      "target_weight": 0.0149,
       "current_weight": 0.0195,
-      "notional_delta": -565.81,
-      "reason": "trimming on mixed news flow \u2014 \"Pfizer GLP-1 Medications Included in China's National Health Insurance\" \u00b7 overweight by 0.55% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"Pfizer GLP-1 Medications Included in China's National Health Insurance\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.89%",
         "theme=Biotech & Pharma",
@@ -2147,10 +2163,10 @@
     {
       "symbol": "REGN",
       "action": "BUY",
-      "target_weight": 0.022,
+      "target_weight": 0.0233,
       "current_weight": 0.0,
-      "notional_delta": 2263.47,
-      "reason": "underweight by 2.20% vs target \u2014 add",
+      "notional_delta": 2397.23,
+      "reason": "underweight by 2.33% vs target \u2014 add",
       "factors": [
         "unrealized_pl=42.20%",
         "theme=Biotech & Pharma",
@@ -2218,14 +2234,14 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0239,
+      "target_weight": 0.0339,
       "current_weight": 0.0401,
-      "notional_delta": -1663.94,
-      "reason": "trimming on mixed news flow \u2014 \"What Is Next for Jensen Huang? His Top Options After Leaving Nvidia\" \u00b7 overweight by 1.62% vs target \u2014 trim",
+      "notional_delta": -634.97,
+      "reason": "trimming on mixed news flow \u2014 \"What Is Next for Jensen Huang? His Top Options After Leaving Nvidia\" \u00b7 overweight by 0.62% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.62%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 52.9 (starter), contribution 50.4",
+        "theme 'Consumer Discretionary' score 61.9 (buy), contribution 59.4",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2308,15 +2324,15 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
-      "target_weight": 0.0182,
+      "action": "HOLD",
+      "target_weight": 0.0217,
       "current_weight": 0.0235,
-      "notional_delta": -543.0,
-      "reason": "overweight by 0.53% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.24%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 43.7 (starter), contribution 68.7"
+        "theme 'Semiconductors (Broad)' score 46.7 (starter), contribution 71.7"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2329,10 +2345,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0187,
       "notional_delta": -1925.56,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Vertex Pharmaceuticals Announces Management Participation in Upcoming Investor Conferences\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=0.01%",
-        "theme=Biotech & Pharma"
+        "theme=Biotech & Pharma",
+        "news_source=fiscal.ai",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2375,10 +2393,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-27T20:18:55+00:00",
-      "v": 99498.97
-    },
     {
       "t": "2026-07-27T21:34:33+00:00",
       "v": 99472.6
@@ -4374,6 +4388,10 @@
     {
       "t": "2026-11-14T23:21:12+00:00",
       "v": 102896.39
+    },
+    {
+      "t": "2026-11-15T02:55:45+00:00",
+      "v": 102896.39
     }
   ],
   "breaking_news": [
@@ -4382,7 +4400,7 @@
       "summary": "Existing homes sales in October declined 8.8% from a year earlier, according to the National Association of Realtors.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/12/nx-s1-6038940/punch-in-the-gut-homes-sales-fall-to-their-lowest-in-16-years",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4391,7 +4409,7 @@
       "summary": "The chip giant Nvidia announced that CEO Jensen Huang was stepping down following allegations that he'd had extramarital affairs, including one with a woman suspected of being a Chinese spy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/12/nx-s1-6038865/ceo-jensen-huang-resigns-from-chip-giant-nvidia",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4400,7 +4418,7 @@
       "summary": "Early Friday, after Outlook had been down for more than 12 hours, Microsoft reported \"marginal success.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/12/nx-s1-6039343/outlook-down-widespread-outage-microsoft-email",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4409,7 +4427,7 @@
       "summary": "As it races to develop its new massive rocket, the space launch company is preparing to retire NASA's main ride to the International Space Station.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/13/nx-s1-6039312/spacex-nasa-starship-iss-dragon-falcon-musk",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4418,7 +4436,7 @@
       "summary": "Europe bet big on American defense technology and they're now paying the price. Years-long backlogs are underway due to production delays and the U.S. own military needs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/11/13/nx-s1-6039196/does-europe-regret-its-bet-on-u-s-defense",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4427,7 +4445,7 @@
       "summary": "NPR's Scott Detrow talks with Dylan Patel of the AI and semiconductor research firm SemiAnalysis about Jensen Huang's departure from Nvidia, and whether it opens up the field for Nvidia's competitors.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/13/nx-s1-6040264/is-there-an-opening-for-nvidias-competitors-now-that-jensen-huang-is-out",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4436,7 +4454,7 @@
       "summary": "A pair economists argue in a new book that people are more creative and productive when they work together in person. But it's not enough for employers to simply order workers back to the office.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/14/nx-s1-6040158/these-economists-say-in-person-work-boosts-creativity-but-office-mandates-fall-short",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4445,7 +4463,7 @@
       "summary": "The U.S. Commerce Department is under scrutiny for clearing Chinese companies to handle Nvidia chips, despite national security concerns from cabinet officials and U.S. intelligence agencies.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/14/nx-s1-6040379/commerce-department-under-pressure-for-delaying-export-controls-on-nvidia-chips",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4454,7 +4472,7 @@
       "summary": "The 52-year-old general\u2019s provocative posts and military threats have fuelled rumours of a dynastic succession.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cmlydy0xw45wo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4463,7 +4481,7 @@
       "summary": "Trump will discuss the \"reduction of nuclear weapons\" during the unprecedented talks, a spokeswoman says.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4472,7 +4490,7 @@
       "summary": "Sotheby's says it will work with the heirs of a family who had previously owned the artwork to try and reach a solution.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cmwy05gg75lvo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4481,7 +4499,7 @@
       "summary": "Front-runner Carmelle emerges victorious with her women's empowerment anthem Sobra-Sobra.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqrlgnx9dx6eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4490,7 +4508,7 @@
       "summary": "SpaceX has performed the historic catch using mechanical arms nicknamed \"chopsticks\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/videos/cwlym2gy3y3eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4499,7 +4517,7 @@
       "summary": "The social media giant is accused of not informing 20 million users it had access to their photos.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwn83gxemk35o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4508,7 +4526,7 @@
       "summary": "The US has not confirmed the Ukrainian president's comments - a US official told the BBC \"many ideas continue to be discussed\".",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4517,17 +4535,8 @@
       "summary": "The US government is trying to find out whether the chaos was caused by \"incompetence\" or faulty equipment.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6wy9lynq4qno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Burnham says 'win-win' deal can be agreed between UK and EU",
-      "summary": "The prime minister says the deal could be \"more like the Brexit people thought they were voting for\" in 2016.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cm2l5n07l87vo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
-      "sentiment_score": 0.0,
       "is_policy": false
     },
     {
@@ -4535,7 +4544,7 @@
       "summary": "Huang abruptly quit on Thursday as head of one of the world's most valuable companies after revelations of alleged extramarital affairs.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": true
     },
@@ -4544,7 +4553,7 @@
       "summary": "Knowing how much heat your home loses is important before installing a new heating system.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cqy43zk3kk04o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4553,7 +4562,16 @@
       "summary": "Experts warn that using AI to enhance property images can go too far and mislead prospective buyers.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cm62y0wrnz9zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-14T23:21:14+00:00",
+      "published_utc": "2026-11-15T02:55:49+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Pressure grows on Trump's Commerce Secretary Lutnick in fallout from Nvidia scandal",
+      "summary": "Scott Bessent told CNBC that several government agencies \"were in favour of putting Megaspeed on the entity list for months\".",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-15T02:55:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
