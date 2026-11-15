@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-15T17:27:50+00:00",
+  "generated_at_utc": "2026-11-15T22:03:06+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1206,
-  "last_success_utc": "2026-11-15T10:43:39+00:00",
+  "cycle_count": 1207,
+  "last_success_utc": "2026-11-15T17:27:50+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -567,14 +567,14 @@
     {
       "key": "consumer_discretionary",
       "name": "Consumer Discretionary",
-      "score": 64.83,
-      "raw_score": 65.05,
+      "score": 67.83,
+      "raw_score": 68.05,
       "band": "buy",
-      "weight": 0.1195,
-      "confidence": 0.8,
+      "weight": 0.1392,
+      "confidence": 0.95,
       "components": {
         "momentum": 63.26,
-        "sentiment": 90.0,
+        "sentiment": 100.0,
         "volume": 38.73,
         "policy": 50.0,
         "volatility_penalty": 0.22
@@ -602,8 +602,8 @@
       "score": 51.42,
       "raw_score": 51.87,
       "band": "starter",
-      "weight": 0.0727,
-      "confidence": 0.65,
+      "weight": 0.0749,
+      "confidence": 0.7,
       "components": {
         "momentum": 67.15,
         "sentiment": 50.0,
@@ -613,51 +613,35 @@
       }
     },
     {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 49.58,
-      "raw_score": 62.21,
-      "band": "starter",
-      "weight": 0.0737,
-      "confidence": 0.8,
-      "components": {
-        "momentum": 51.47,
-        "sentiment": 90.0,
-        "volume": 48.09,
-        "policy": 50.0,
-        "volatility_penalty": 12.63
-      }
-    },
-    {
       "key": "cybersecurity",
       "name": "Cybersecurity",
-      "score": 47.22,
-      "raw_score": 58.95,
+      "score": 50.22,
+      "raw_score": 61.95,
       "band": "starter",
-      "weight": 0.0667,
-      "confidence": 0.8,
+      "weight": 0.0799,
+      "confidence": 0.9,
       "components": {
         "momentum": 51.46,
-        "sentiment": 90.0,
+        "sentiment": 100.0,
         "volume": 31.83,
         "policy": 50.0,
         "volatility_penalty": 11.73
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 47.0,
-      "raw_score": 54.58,
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 46.58,
+      "raw_score": 59.21,
       "band": "starter",
-      "weight": 0.066,
-      "confidence": 0.8,
+      "weight": 0.0629,
+      "confidence": 0.75,
       "components": {
-        "momentum": 35.69,
-        "sentiment": 90.0,
-        "volume": 41.52,
+        "momentum": 51.47,
+        "sentiment": 80.0,
+        "volume": 48.09,
         "policy": 50.0,
-        "volatility_penalty": 7.58
+        "volatility_penalty": 12.63
       }
     },
     {
@@ -677,50 +661,66 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 42.68,
-      "raw_score": 51.63,
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 44.0,
+      "raw_score": 51.58,
       "band": "starter",
-      "weight": 0.0589,
-      "confidence": 1.0,
+      "weight": 0.0554,
+      "confidence": 0.75,
       "components": {
-        "momentum": 42.79,
-        "sentiment": 57.14,
-        "volume": 61.87,
+        "momentum": 35.69,
+        "sentiment": 80.0,
+        "volume": 41.52,
         "policy": 50.0,
-        "volatility_penalty": 8.95
+        "volatility_penalty": 7.58
       }
     },
     {
       "key": "clean_energy",
       "name": "Clean Energy",
-      "score": 42.33,
-      "raw_score": 52.46,
+      "score": 41.33,
+      "raw_score": 51.46,
       "band": "starter",
-      "weight": 0.0578,
+      "weight": 0.0544,
       "confidence": 1.0,
       "components": {
         "momentum": 25.09,
         "sentiment": 80.95,
         "volume": 40.67,
-        "policy": 100.0,
+        "policy": 90.0,
         "volatility_penalty": 10.12
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 40.54,
+      "raw_score": 49.49,
+      "band": "starter",
+      "weight": 0.0518,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 42.79,
+        "sentiment": 50.0,
+        "volume": 61.87,
+        "policy": 50.0,
+        "volatility_penalty": 8.95
       }
     }
   ],
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "HOLD",
-      "target_weight": 0.023,
+      "action": "REDUCE",
+      "target_weight": 0.0196,
       "current_weight": 0.0257,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"CrowdStrike To Rally Around 21%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -623.97,
+      "reason": "trimming on positive news flow \u2014 \"CrowdStrike To Rally Around 21%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 overweight by 0.61% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.37%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.6 (starter), contribution 68.0",
+        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 65.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -741,15 +741,15 @@
     },
     {
       "symbol": "AMZN",
-      "action": "HOLD",
-      "target_weight": 0.0418,
+      "action": "BUY",
+      "target_weight": 0.0486,
       "current_weight": 0.0435,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"AWS Launches First Infrastructure Region in Chile\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 528.3,
+      "reason": "buying on positive news flow \u2014 \"AWS Launches First Infrastructure Region in Chile\" \u00b7 underweight by 0.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.85%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.8 (buy), contribution 69.1",
+        "theme 'Consumer Discretionary' score 67.8 (buy), contribution 72.1",
         "news_source=fiscal.ai",
         "news_sentiment=+0.20"
       ],
@@ -758,31 +758,28 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0254,
+      "target_weight": 0.0217,
       "current_weight": 0.0233,
       "notional_delta": 0.0,
-      "reason": "holding on guidance raise (positive) \u2014 \"UBS Reiterates Buy Rating and Raises Price Target for ASML\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.73%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.6 (starter), contribution 75.0",
-        "news_source=fiscal.ai",
-        "event=guidance raise",
-        "news_sentiment=+0.20"
+        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 72.0"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "AVGO",
-      "action": "HOLD",
-      "target_weight": 0.0209,
+      "action": "REDUCE",
+      "target_weight": 0.0184,
       "current_weight": 0.0242,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -593.34,
+      "reason": "overweight by 0.58% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 42.7 (starter), contribution 66.3"
+        "theme 'AI & Compute' score 40.5 (starter), contribution 64.2"
       ],
       "theme_key": "ai_compute"
     },
@@ -832,15 +829,15 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.0233,
+      "action": "HOLD",
+      "target_weight": 0.0278,
       "current_weight": 0.0309,
-      "notional_delta": -784.99,
-      "reason": "trimming on positive news flow \u2014 \"CrowdStrike To Rally Around 21%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 overweight by 0.76% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"CrowdStrike To Rally Around 21%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.14%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.2 (starter), contribution 67.4",
+        "theme 'Cybersecurity' score 50.2 (starter), contribution 70.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -868,7 +865,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0023,
       "notional_delta": -238.87,
-      "reason": "exiting on positive news flow \u2014 \"Retirees Should Put These 4 High-Yield Utility Stocks on Their Buy List for Next Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Why Investors Should Own Businesses That Can Win Under Any Administration\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-18.84%",
         "theme=Clean Energy",
@@ -880,28 +877,28 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.017,
+      "target_weight": 0.014,
       "current_weight": 0.008,
-      "notional_delta": 922.91,
-      "reason": "underweight by 0.90% vs target \u2014 add",
+      "notional_delta": 614.22,
+      "reason": "underweight by 0.60% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-5.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.0 (starter), contribution 42.5"
+        "theme 'EV & Clean Transport' score 44.0 (starter), contribution 39.5"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "FSLR",
-      "action": "BUY",
-      "target_weight": 0.0186,
+      "action": "HOLD",
+      "target_weight": 0.0175,
       "current_weight": 0.0131,
-      "notional_delta": 566.24,
-      "reason": "buying on positive news flow \u2014 \"Retirees Should Put These 4 High-Yield Utility Stocks on Their Buy List for Next Week\" \u00b7 underweight by 0.55% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Why Investors Should Own Businesses That Can Win Under Any Administration\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.67%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.3 (starter), contribution 38.5",
+        "theme 'Clean Energy' score 41.3 (starter), contribution 37.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -909,25 +906,25 @@
     },
     {
       "symbol": "FTNT",
-      "action": "REDUCE",
-      "target_weight": 0.022,
+      "action": "HOLD",
+      "target_weight": 0.0264,
       "current_weight": 0.0288,
-      "notional_delta": -694.71,
-      "reason": "overweight by 0.68% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.2 (starter), contribution 63.8"
+        "theme 'Cybersecurity' score 50.2 (starter), contribution 66.8"
       ],
       "theme_key": "cybersecurity"
     },
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0226,
+      "target_weight": 0.0233,
       "current_weight": 0.0408,
-      "notional_delta": -1870.7,
-      "reason": "overweight by 1.82% vs target \u2014 trim",
+      "notional_delta": -1798.67,
+      "reason": "overweight by 1.75% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.37%",
         "theme=Defense & Aerospace",
@@ -938,28 +935,28 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.02,
+      "target_weight": 0.0167,
       "current_weight": 0.0076,
-      "notional_delta": 1270.82,
-      "reason": "underweight by 1.24% vs target \u2014 add",
+      "notional_delta": 931.26,
+      "reason": "underweight by 0.91% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.0 (starter), contribution 49.9"
+        "theme 'EV & Clean Transport' score 44.0 (starter), contribution 46.9"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0191,
+      "target_weight": 0.0168,
       "current_weight": 0.0216,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Consumer Tech (Nov 9-13): Jensen Resigns From Nvidia Amid Affair Controvery, Microsoft Faces Massive Outage & More\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Anthropic IPO Is Coming Up: Top Companies Set to Benefit if ANT Stock Jumps\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.81%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 42.7 (starter), contribution 60.7",
+        "theme 'AI & Compute' score 40.5 (starter), contribution 58.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -983,15 +980,15 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.04,
+      "action": "BUY",
+      "target_weight": 0.0466,
       "current_weight": 0.0357,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Walmart Stock Forms a Golden Cross as Valuation Worries Linger Ahead of Earnings\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 1126.67,
+      "reason": "buying on mixed news flow \u2014 \"Target, Home Depot, TJX, and Lowe\u2019s Report Earnings as Their Stock Recoveries Stall\" \u00b7 underweight by 1.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.87%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.8 (buy), contribution 66.2",
+        "theme 'Consumer Discretionary' score 67.8 (buy), contribution 69.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1044,10 +1041,10 @@
     {
       "symbol": "LMT",
       "action": "REDUCE",
-      "target_weight": 0.0242,
+      "target_weight": 0.0249,
       "current_weight": 0.0432,
-      "notional_delta": -1957.09,
-      "reason": "overweight by 1.90% vs target \u2014 trim",
+      "notional_delta": -1885.06,
+      "reason": "overweight by 1.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.69%",
         "theme=Defense & Aerospace",
@@ -1085,15 +1082,15 @@
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0189,
+      "action": "REDUCE",
+      "target_weight": 0.0166,
       "current_weight": 0.0218,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Meta Faces $887 Million Fine in Italy as Regulator Says Facebook Accessed Users\u2019 Photos Without Consent\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -533.74,
+      "reason": "trimming on mixed news flow \u2014 \"Meta Faces $887 Million Fine in Italy as Regulator Says Facebook Accessed Users\u2019 Photos Without Consent\" \u00b7 overweight by 0.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.02%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 42.7 (starter), contribution 59.8",
+        "theme 'AI & Compute' score 40.5 (starter), contribution 57.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1157,14 +1154,14 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.026,
+      "target_weight": 0.0246,
       "current_weight": 0.0182,
-      "notional_delta": 801.51,
-      "reason": "buying on positive news flow \u2014 \"Retirees Should Put These 4 High-Yield Utility Stocks on Their Buy List for Next Week\" \u00b7 underweight by 0.78% vs target \u2014 add",
+      "notional_delta": 657.45,
+      "reason": "buying on positive news flow \u2014 \"Why Investors Should Own Businesses That Can Win Under Any Administration\" \u00b7 underweight by 0.64% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.11%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.3 (starter), contribution 53.7",
+        "theme 'Clean Energy' score 41.3 (starter), contribution 52.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1202,12 +1199,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.27,
-      "reason": "exiting on positive news flow \u2014 \"Earnings Volatility Watch: Nvidia Stock Could Swing 9% Without Jensen Huang, Yet This Newly Listed Tech Name Is Priced For 21.7%\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Anthropic IPO Is Coming Up: Top Companies Set to Benefit if ANT Stock Jumps\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.82%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute"
     },
@@ -1242,15 +1239,15 @@
     },
     {
       "symbol": "PANW",
-      "action": "REDUCE",
-      "target_weight": 0.0213,
+      "action": "HOLD",
+      "target_weight": 0.0256,
       "current_weight": 0.0284,
-      "notional_delta": -735.21,
-      "reason": "trimming on positive news flow \u2014 \"Earnings Volatility Watch: Nvidia Stock Could Swing 9% Without Jensen Huang, Yet This Newly Listed Tech Name Is Priced For 21.7%\" \u00b7 overweight by 0.71% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Earnings Volatility Watch: Nvidia Stock Could Swing 9% Without Jensen Huang, Yet This Newly Listed Tech Name Is Priced For 21.7%\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.69%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.2 (starter), contribution 61.7",
+        "theme 'Cybersecurity' score 50.2 (starter), contribution 64.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1300,28 +1297,30 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0258,
+      "target_weight": 0.0266,
       "current_weight": 0.0455,
-      "notional_delta": -2022.78,
-      "reason": "overweight by 1.97% vs target \u2014 trim",
+      "notional_delta": -1940.46,
+      "reason": "trimming on mixed news flow \u2014 \"Top Stocks to Watch After Weekend Chaos At US Airports\" \u00b7 overweight by 1.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.72%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 51.4 (starter), contribution 64.7"
+        "theme 'Defense & Aerospace' score 51.4 (starter), contribution 64.7",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "RUN",
       "action": "HOLD",
-      "target_weight": 0.0132,
+      "target_weight": 0.0123,
       "current_weight": 0.0092,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Why Sunrun\u2019s (RUN) Battery Network Matters as Subscriber Additions Fall\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Why Investors Should Own Businesses That Can Win Under Any Administration\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=4.86%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.3 (starter), contribution 27.2",
+        "theme 'Clean Energy' score 41.3 (starter), contribution 26.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1330,16 +1329,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0377,
+      "target_weight": 0.044,
       "current_weight": 0.0401,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"What Is Next for Jensen Huang? His Top Options After Leaving Nvidia\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.62%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.8 (buy), contribution 62.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Consumer Discretionary' score 67.8 (buy), contribution 65.4"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1349,7 +1346,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0103,
       "notional_delta": -1055.09,
-      "reason": "exiting on positive news flow \u2014 \"Retirees Should Put These 4 High-Yield Utility Stocks on Their Buy List for Next Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Why Investors Should Own Businesses That Can Win Under Any Administration\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.73%",
         "theme=Clean Energy",
@@ -1391,14 +1388,14 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.029,
+      "target_weight": 0.0247,
       "current_weight": 0.0152,
-      "notional_delta": 1421.89,
-      "reason": "buying on positive news flow \u2014 \"Dan Ives Says Nvidia Turmoil Could Hand Big Tech an Unexpected AI Advantage as Hyperscalers Gain, Dismisses \u2018Blue Tidal Wave\u2019 Reaction\" \u00b7 underweight by 1.38% vs target \u2014 add",
+      "notional_delta": 979.44,
+      "reason": "buying on positive news flow \u2014 \"Dan Ives Says Nvidia Turmoil Could Hand Big Tech an Unexpected AI Advantage as Hyperscalers Gain, Dismisses \u2018Blue Tidal Wave\u2019 Reaction\" \u00b7 underweight by 0.95% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.51%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.0 (starter), contribution 72.6",
+        "theme 'EV & Clean Transport' score 44.0 (starter), contribution 69.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1407,14 +1404,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0253,
+      "target_weight": 0.0216,
       "current_weight": 0.0235,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Consumer Tech (Nov 9-13): Jensen Resigns From Nvidia Amid Affair Controvery, Microsoft Faces Massive Outage & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.24%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.6 (starter), contribution 74.7",
+        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 71.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1467,15 +1464,15 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "HOLD",
-      "target_weight": 0.023,
+      "action": "REDUCE",
+      "target_weight": 0.0196,
       "current_weight": 0.0257,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"CrowdStrike To Rally Around 21%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -623.97,
+      "reason": "trimming on positive news flow \u2014 \"CrowdStrike To Rally Around 21%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 overweight by 0.61% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.37%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.6 (starter), contribution 68.0",
+        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 65.0",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1502,15 +1499,15 @@
     },
     {
       "symbol": "AMZN",
-      "action": "HOLD",
-      "target_weight": 0.0418,
+      "action": "BUY",
+      "target_weight": 0.0486,
       "current_weight": 0.0435,
-      "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"AWS Launches First Infrastructure Region in Chile\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 528.3,
+      "reason": "buying on positive news flow \u2014 \"AWS Launches First Infrastructure Region in Chile\" \u00b7 underweight by 0.51% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.85%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.8 (buy), contribution 69.1",
+        "theme 'Consumer Discretionary' score 67.8 (buy), contribution 72.1",
         "news_source=fiscal.ai",
         "news_sentiment=+0.20"
       ],
@@ -1522,17 +1519,14 @@
     {
       "symbol": "ASML",
       "action": "HOLD",
-      "target_weight": 0.0254,
+      "target_weight": 0.0217,
       "current_weight": 0.0233,
       "notional_delta": 0.0,
-      "reason": "holding on guidance raise (positive) \u2014 \"UBS Reiterates Buy Rating and Raises Price Target for ASML\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.73%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.6 (starter), contribution 75.0",
-        "news_source=fiscal.ai",
-        "event=guidance raise",
-        "news_sentiment=+0.20"
+        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 72.0"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1541,15 +1535,15 @@
     },
     {
       "symbol": "AVGO",
-      "action": "HOLD",
-      "target_weight": 0.0209,
+      "action": "REDUCE",
+      "target_weight": 0.0184,
       "current_weight": 0.0242,
-      "notional_delta": 0.0,
-      "reason": "within 50bps of target \u2014 no trade",
+      "notional_delta": -593.34,
+      "reason": "overweight by 0.58% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.90%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 42.7 (starter), contribution 66.3"
+        "theme 'AI & Compute' score 40.5 (starter), contribution 64.2"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1611,15 +1605,15 @@
     },
     {
       "symbol": "CRWD",
-      "action": "REDUCE",
-      "target_weight": 0.0233,
+      "action": "HOLD",
+      "target_weight": 0.0278,
       "current_weight": 0.0309,
-      "notional_delta": -784.99,
-      "reason": "trimming on positive news flow \u2014 \"CrowdStrike To Rally Around 21%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 overweight by 0.76% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"CrowdStrike To Rally Around 21%? Here Are 10 Top Analyst Forecasts For Friday\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.14%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.2 (starter), contribution 67.4",
+        "theme 'Cybersecurity' score 50.2 (starter), contribution 70.4",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -1653,7 +1647,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0023,
       "notional_delta": -238.87,
-      "reason": "exiting on positive news flow \u2014 \"Retirees Should Put These 4 High-Yield Utility Stocks on Their Buy List for Next Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Why Investors Should Own Businesses That Can Win Under Any Administration\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-18.84%",
         "theme=Clean Energy",
@@ -1668,14 +1662,14 @@
     {
       "symbol": "F",
       "action": "BUY",
-      "target_weight": 0.017,
+      "target_weight": 0.014,
       "current_weight": 0.008,
-      "notional_delta": 922.91,
-      "reason": "underweight by 0.90% vs target \u2014 add",
+      "notional_delta": 614.22,
+      "reason": "underweight by 0.60% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-5.20%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.0 (starter), contribution 42.5"
+        "theme 'EV & Clean Transport' score 44.0 (starter), contribution 39.5"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1684,15 +1678,15 @@
     },
     {
       "symbol": "FSLR",
-      "action": "BUY",
-      "target_weight": 0.0186,
+      "action": "HOLD",
+      "target_weight": 0.0175,
       "current_weight": 0.0131,
-      "notional_delta": 566.24,
-      "reason": "buying on positive news flow \u2014 \"Retirees Should Put These 4 High-Yield Utility Stocks on Their Buy List for Next Week\" \u00b7 underweight by 0.55% vs target \u2014 add",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Why Investors Should Own Businesses That Can Win Under Any Administration\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.67%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.3 (starter), contribution 38.5",
+        "theme 'Clean Energy' score 41.3 (starter), contribution 37.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1703,15 +1697,15 @@
     },
     {
       "symbol": "FTNT",
-      "action": "REDUCE",
-      "target_weight": 0.022,
+      "action": "HOLD",
+      "target_weight": 0.0264,
       "current_weight": 0.0288,
-      "notional_delta": -694.71,
-      "reason": "overweight by 0.68% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.15%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.2 (starter), contribution 63.8"
+        "theme 'Cybersecurity' score 50.2 (starter), contribution 66.8"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1721,10 +1715,10 @@
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0226,
+      "target_weight": 0.0233,
       "current_weight": 0.0408,
-      "notional_delta": -1870.7,
-      "reason": "overweight by 1.82% vs target \u2014 trim",
+      "notional_delta": -1798.67,
+      "reason": "overweight by 1.75% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.37%",
         "theme=Defense & Aerospace",
@@ -1738,14 +1732,14 @@
     {
       "symbol": "GM",
       "action": "BUY",
-      "target_weight": 0.02,
+      "target_weight": 0.0167,
       "current_weight": 0.0076,
-      "notional_delta": 1270.82,
-      "reason": "underweight by 1.24% vs target \u2014 add",
+      "notional_delta": 931.26,
+      "reason": "underweight by 0.91% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-2.90%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.0 (starter), contribution 49.9"
+        "theme 'EV & Clean Transport' score 44.0 (starter), contribution 46.9"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1755,14 +1749,14 @@
     {
       "symbol": "GOOGL",
       "action": "HOLD",
-      "target_weight": 0.0191,
+      "target_weight": 0.0168,
       "current_weight": 0.0216,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Consumer Tech (Nov 9-13): Jensen Resigns From Nvidia Amid Affair Controvery, Microsoft Faces Massive Outage & More\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on mixed news flow \u2014 \"Anthropic IPO Is Coming Up: Top Companies Set to Benefit if ANT Stock Jumps\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.81%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 42.7 (starter), contribution 60.7",
+        "theme 'AI & Compute' score 40.5 (starter), contribution 58.5",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1792,15 +1786,15 @@
     },
     {
       "symbol": "HD",
-      "action": "HOLD",
-      "target_weight": 0.04,
+      "action": "BUY",
+      "target_weight": 0.0466,
       "current_weight": 0.0357,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Walmart Stock Forms a Golden Cross as Valuation Worries Linger Ahead of Earnings\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": 1126.67,
+      "reason": "buying on mixed news flow \u2014 \"Target, Home Depot, TJX, and Lowe\u2019s Report Earnings as Their Stock Recoveries Stall\" \u00b7 underweight by 1.09% vs target \u2014 add",
       "factors": [
         "unrealized_pl=5.87%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.8 (buy), contribution 66.2",
+        "theme 'Consumer Discretionary' score 67.8 (buy), contribution 69.2",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -1865,10 +1859,10 @@
     {
       "symbol": "LMT",
       "action": "REDUCE",
-      "target_weight": 0.0242,
+      "target_weight": 0.0249,
       "current_weight": 0.0432,
-      "notional_delta": -1957.09,
-      "reason": "overweight by 1.90% vs target \u2014 trim",
+      "notional_delta": -1885.06,
+      "reason": "overweight by 1.83% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=8.69%",
         "theme=Defense & Aerospace",
@@ -1915,15 +1909,15 @@
     },
     {
       "symbol": "META",
-      "action": "HOLD",
-      "target_weight": 0.0189,
+      "action": "REDUCE",
+      "target_weight": 0.0166,
       "current_weight": 0.0218,
-      "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Meta Faces $887 Million Fine in Italy as Regulator Says Facebook Accessed Users\u2019 Photos Without Consent\" \u00b7 within 50bps of target \u2014 no trade",
+      "notional_delta": -533.74,
+      "reason": "trimming on mixed news flow \u2014 \"Meta Faces $887 Million Fine in Italy as Regulator Says Facebook Accessed Users\u2019 Photos Without Consent\" \u00b7 overweight by 0.52% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.02%",
         "theme=AI & Compute",
-        "theme 'AI & Compute' score 42.7 (starter), contribution 59.8",
+        "theme 'AI & Compute' score 40.5 (starter), contribution 57.6",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2002,14 +1996,14 @@
     {
       "symbol": "NEE",
       "action": "BUY",
-      "target_weight": 0.026,
+      "target_weight": 0.0246,
       "current_weight": 0.0182,
-      "notional_delta": 801.51,
-      "reason": "buying on positive news flow \u2014 \"Retirees Should Put These 4 High-Yield Utility Stocks on Their Buy List for Next Week\" \u00b7 underweight by 0.78% vs target \u2014 add",
+      "notional_delta": 657.45,
+      "reason": "buying on positive news flow \u2014 \"Why Investors Should Own Businesses That Can Win Under Any Administration\" \u00b7 underweight by 0.64% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-1.11%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.3 (starter), contribution 53.7",
+        "theme 'Clean Energy' score 41.3 (starter), contribution 52.7",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2056,12 +2050,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.27,
-      "reason": "exiting on positive news flow \u2014 \"Earnings Volatility Watch: Nvidia Stock Could Swing 9% Without Jensen Huang, Yet This Newly Listed Tech Name Is Priced For 21.7%\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"Anthropic IPO Is Coming Up: Top Companies Set to Benefit if ANT Stock Jumps\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.82%",
         "theme=AI & Compute",
         "news_source=benzinga",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2105,15 +2099,15 @@
     },
     {
       "symbol": "PANW",
-      "action": "REDUCE",
-      "target_weight": 0.0213,
+      "action": "HOLD",
+      "target_weight": 0.0256,
       "current_weight": 0.0284,
-      "notional_delta": -735.21,
-      "reason": "trimming on positive news flow \u2014 \"Earnings Volatility Watch: Nvidia Stock Could Swing 9% Without Jensen Huang, Yet This Newly Listed Tech Name Is Priced For 21.7%\" \u00b7 overweight by 0.71% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"Earnings Volatility Watch: Nvidia Stock Could Swing 9% Without Jensen Huang, Yet This Newly Listed Tech Name Is Priced For 21.7%\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-0.69%",
         "theme=Cybersecurity",
-        "theme 'Cybersecurity' score 47.2 (starter), contribution 61.7",
+        "theme 'Cybersecurity' score 50.2 (starter), contribution 64.7",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2175,14 +2169,16 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0258,
+      "target_weight": 0.0266,
       "current_weight": 0.0455,
-      "notional_delta": -2022.78,
-      "reason": "overweight by 1.97% vs target \u2014 trim",
+      "notional_delta": -1940.46,
+      "reason": "trimming on mixed news flow \u2014 \"Top Stocks to Watch After Weekend Chaos At US Airports\" \u00b7 overweight by 1.89% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.72%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 51.4 (starter), contribution 64.7"
+        "theme 'Defense & Aerospace' score 51.4 (starter), contribution 64.7",
+        "news_source=benzinga",
+        "news_sentiment=+0.00"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2192,14 +2188,14 @@
     {
       "symbol": "RUN",
       "action": "HOLD",
-      "target_weight": 0.0132,
+      "target_weight": 0.0123,
       "current_weight": 0.0092,
       "notional_delta": 0.0,
-      "reason": "holding on positive news flow \u2014 \"Why Sunrun\u2019s (RUN) Battery Network Matters as Subscriber Additions Fall\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "holding on positive news flow \u2014 \"Why Investors Should Own Businesses That Can Win Under Any Administration\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=4.86%",
         "theme=Clean Energy",
-        "theme 'Clean Energy' score 42.3 (starter), contribution 27.2",
+        "theme 'Clean Energy' score 41.3 (starter), contribution 26.2",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2211,16 +2207,14 @@
     {
       "symbol": "SBUX",
       "action": "HOLD",
-      "target_weight": 0.0377,
+      "target_weight": 0.044,
       "current_weight": 0.0401,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"What Is Next for Jensen Huang? His Top Options After Leaving Nvidia\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=0.62%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 64.8 (buy), contribution 62.4",
-        "news_source=benzinga",
-        "news_sentiment=+0.00"
+        "theme 'Consumer Discretionary' score 67.8 (buy), contribution 65.4"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2233,7 +2227,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0103,
       "notional_delta": -1055.09,
-      "reason": "exiting on positive news flow \u2014 \"Retirees Should Put These 4 High-Yield Utility Stocks on Their Buy List for Next Week\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Why Investors Should Own Businesses That Can Win Under Any Administration\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.73%",
         "theme=Clean Energy",
@@ -2284,14 +2278,14 @@
     {
       "symbol": "TSLA",
       "action": "BUY",
-      "target_weight": 0.029,
+      "target_weight": 0.0247,
       "current_weight": 0.0152,
-      "notional_delta": 1421.89,
-      "reason": "buying on positive news flow \u2014 \"Dan Ives Says Nvidia Turmoil Could Hand Big Tech an Unexpected AI Advantage as Hyperscalers Gain, Dismisses \u2018Blue Tidal Wave\u2019 Reaction\" \u00b7 underweight by 1.38% vs target \u2014 add",
+      "notional_delta": 979.44,
+      "reason": "buying on positive news flow \u2014 \"Dan Ives Says Nvidia Turmoil Could Hand Big Tech an Unexpected AI Advantage as Hyperscalers Gain, Dismisses \u2018Blue Tidal Wave\u2019 Reaction\" \u00b7 underweight by 0.95% vs target \u2014 add",
       "factors": [
         "unrealized_pl=-0.51%",
         "theme=EV & Clean Transport",
-        "theme 'EV & Clean Transport' score 47.0 (starter), contribution 72.6",
+        "theme 'EV & Clean Transport' score 44.0 (starter), contribution 69.6",
         "news_source=benzinga",
         "news_sentiment=+0.20"
       ],
@@ -2303,14 +2297,14 @@
     {
       "symbol": "TSM",
       "action": "HOLD",
-      "target_weight": 0.0253,
+      "target_weight": 0.0216,
       "current_weight": 0.0235,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Consumer Tech (Nov 9-13): Jensen Resigns From Nvidia Amid Affair Controvery, Microsoft Faces Massive Outage & More\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=1.24%",
         "theme=Semiconductors (Broad)",
-        "theme 'Semiconductors (Broad)' score 49.6 (starter), contribution 74.7",
+        "theme 'Semiconductors (Broad)' score 46.6 (starter), contribution 71.7",
         "news_source=benzinga",
         "news_sentiment=+0.00"
       ],
@@ -2373,10 +2367,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-27T23:50:53+00:00",
-      "v": 99405.59
-    },
     {
       "t": "2026-07-28T01:58:59+00:00",
       "v": 99302.86
@@ -4372,6 +4362,10 @@
     {
       "t": "2026-11-15T17:27:46+00:00",
       "v": 102896.39
+    },
+    {
+      "t": "2026-11-15T22:03:04+00:00",
+      "v": 102896.39
     }
   ],
   "breaking_news": [
@@ -4380,7 +4374,7 @@
       "summary": "Existing homes sales in October declined 8.8% from a year earlier, according to the National Association of Realtors.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/12/nx-s1-6038940/punch-in-the-gut-homes-sales-fall-to-their-lowest-in-16-years",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4389,7 +4383,7 @@
       "summary": "The chip giant Nvidia announced that CEO Jensen Huang was stepping down following allegations that he'd had extramarital affairs, including one with a woman suspected of being a Chinese spy.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/12/nx-s1-6038865/ceo-jensen-huang-resigns-from-chip-giant-nvidia",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4398,7 +4392,7 @@
       "summary": "Early Friday, after Outlook had been down for more than 12 hours, Microsoft reported \"marginal success.\"",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/12/nx-s1-6039343/outlook-down-widespread-outage-microsoft-email",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4407,7 +4401,7 @@
       "summary": "As it races to develop its new massive rocket, the space launch company is preparing to retire NASA's main ride to the International Space Station.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/13/nx-s1-6039312/spacex-nasa-starship-iss-dragon-falcon-musk",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4416,7 +4410,7 @@
       "summary": "Europe bet big on American defense technology and they're now paying the price. Years-long backlogs are underway due to production delays and the U.S. own military needs.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/11/13/nx-s1-6039196/does-europe-regret-its-bet-on-u-s-defense",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4425,7 +4419,7 @@
       "summary": "NPR's Scott Detrow talks with Dylan Patel of the AI and semiconductor research firm SemiAnalysis about Jensen Huang's departure from Nvidia, and whether it opens up the field for Nvidia's competitors.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/13/nx-s1-6040264/is-there-an-opening-for-nvidias-competitors-now-that-jensen-huang-is-out",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4434,7 +4428,7 @@
       "summary": "A pair economists argue in a new book that people are more creative and productive when they work together in person. But it's not enough for employers to simply order workers back to the office.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/14/nx-s1-6040158/these-economists-say-in-person-work-boosts-creativity-but-office-mandates-fall-short",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4443,52 +4437,16 @@
       "summary": "The U.S. Commerce Department is under scrutiny for clearing Chinese companies to handle Nvidia chips, despite national security concerns from cabinet officials and U.S. intelligence agencies.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/14/nx-s1-6040379/commerce-department-under-pressure-for-delaying-export-controls-on-nvidia-chips",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Judge blocks Trump closure of 'Trash Island' Washington DC golf course on Sunday",
-      "summary": "The temporary order is part of a months-long challenge to the US president's plans to upgrade East Potomac Golf Links into a championship course.",
+      "headline": "Clothing factories shut in Bangladesh as workers strike over pay",
+      "summary": "Workers are striking over demands for a minimum wage of 30,000 taka (\u00a3182) a month.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c6j9mn7l14y0o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
-      "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Fifth Canadian soldier dies from injuries caused by large fire at military base",
-      "summary": "Pte William Douglas Dal Bianco died from his injuries on Friday, a month after a fire that tore through CFB Wainwright.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cmrlgn4x2xw8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Czechs rally against plan to switch funding of public media",
-      "summary": "Protesters say the move will stifle media freedom, while the coalition government insists broadcasters need to cut costs.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cm8e0knr7604o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
-      "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Israel kills Hamas commander in strike on Gaza camp, officials say",
-      "summary": "Both Hamas and IDF officials confirm the death of Samir Abu Younis, commander of the Rafah Brigade.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cqrkg4r6mg7xo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "South Korea's top scorer in tax accountancy exam admits cheating",
-      "summary": "Han Won-seok, 34, confessed to using a hidden camera and AI to get a near-perfect mark on the significant test.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/ckvg2ezvpe08o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cx5y1pzr9604o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4497,7 +4455,7 @@
       "summary": "The attack on funeral at a Greek Orthodox church killed nine and injured 34 others last month.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c3rrg9xgqlwpo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4506,7 +4464,43 @@
       "summary": "It marks the second attack on the country in three days and comes as the US and Iran remain locked in a stand-off over the Strait of Hormuz.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqn4e2py48kwo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Czechs rally against plan to switch funding of public media",
+      "summary": "Protesters say the move will stifle media freedom, while the government insists broadcasters need to cut costs.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cm8e0knr7604o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-15T22:03:06+00:00",
+      "sentiment_score": 0.2,
+      "is_policy": false
+    },
+    {
+      "headline": "Pope Leo rides in helicopter cockpit during Peru trip",
+      "summary": "The Pope took to the skies before arriving in Cusco on the penultimate day of his Latin America tour.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/videos/c6pw4rl00lrjo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-15T22:03:06+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "South Korea's top scorer in tax accountancy exam admits cheating",
+      "summary": "Han Won-seok, 34, confessed to using a hidden camera and AI to get a near-perfect mark on the significant test.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/ckvg2ezvpe08o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-15T22:03:06+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history'",
+      "summary": "The Ukrainian president says the slowed-down internet is making it difficult to stop Russian attacks.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/c6m25zg88k45o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4515,7 +4509,7 @@
       "summary": "Microsoft says it is continuing to restore services including Outlook and Teams following a global outage.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4524,7 +4518,7 @@
       "summary": "Experts warn that using AI to enhance property images can go too far and mislead prospective buyers.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cm62y0wrnz9zo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4533,7 +4527,7 @@
       "summary": "Knowing how much heat your home loses is important before installing a new heating system.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cqy43zk3kk04o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4542,7 +4536,7 @@
       "summary": "Efforts to address the underlying problem with Outlook, Teams and Copilot are complete, the tech firm says.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4551,7 +4545,7 @@
       "summary": "The scandal has cast a spotlight on Singapore's success as a chip hub - and a location for alleged illicit trade.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ck1exevgql4qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-15T17:27:50+00:00",
+      "published_utc": "2026-11-15T22:03:06+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
