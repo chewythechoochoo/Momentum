@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-21T18:17:49+00:00",
+  "generated_at_utc": "2026-11-21T23:29:08+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1226,
-  "last_success_utc": "2026-11-21T11:45:34+00:00",
+  "cycle_count": 1227,
+  "last_success_utc": "2026-11-21T18:17:49+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -549,13 +549,29 @@
   ],
   "themes": [
     {
+      "key": "consumer_discretionary",
+      "name": "Consumer Discretionary",
+      "score": 50.95,
+      "raw_score": 51.76,
+      "band": "starter",
+      "weight": 0.0865,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 33.65,
+        "sentiment": 72.72,
+        "volume": 57.43,
+        "policy": 50.0,
+        "volatility_penalty": 0.81
+      }
+    },
+    {
       "key": "financials",
       "name": "Financials & Rates",
       "score": 50.38,
       "raw_score": 50.38,
       "band": "starter",
-      "weight": 0.0846,
-      "confidence": 1.0,
+      "weight": 0.0804,
+      "confidence": 0.9,
       "components": {
         "momentum": 7.21,
         "sentiment": 100.0,
@@ -583,33 +599,17 @@
     {
       "key": "defense",
       "name": "Defense & Aerospace",
-      "score": 44.23,
-      "raw_score": 44.68,
-      "band": "starter",
-      "weight": 0.0609,
-      "confidence": 0.9,
+      "score": 39.52,
+      "raw_score": 39.96,
+      "band": "hold_small",
+      "weight": 0.0401,
+      "confidence": 0.7,
       "components": {
         "momentum": 15.04,
-        "sentiment": 85.72,
+        "sentiment": 70.0,
         "volume": 39.74,
         "policy": 50.0,
         "volatility_penalty": 0.44
-      }
-    },
-    {
-      "key": "consumer_discretionary",
-      "name": "Consumer Discretionary",
-      "score": 44.14,
-      "raw_score": 44.95,
-      "band": "starter",
-      "weight": 0.0526,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 33.65,
-        "sentiment": 50.0,
-        "volume": 57.43,
-        "policy": 50.0,
-        "volatility_penalty": 0.81
       }
     },
     {
@@ -619,7 +619,7 @@
       "raw_score": 38.94,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.7,
+      "confidence": 0.65,
       "components": {
         "momentum": 26.5,
         "sentiment": 50.0,
@@ -635,7 +635,7 @@
       "raw_score": 44.3,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.8,
+      "confidence": 0.65,
       "components": {
         "momentum": 33.07,
         "sentiment": 50.0,
@@ -645,19 +645,51 @@
       }
     },
     {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 21.12,
-      "raw_score": 31.2,
+      "key": "semiconductors_ex_ai",
+      "name": "Semiconductors (Broad)",
+      "score": 27.14,
+      "raw_score": 41.02,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.9,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 0.0,
+        "sentiment": 83.34,
+        "volume": 55.11,
+        "policy": 50.0,
+        "volatility_penalty": 13.89
+      }
+    },
+    {
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 24.12,
+      "raw_score": 34.2,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.65,
       "components": {
         "momentum": 2.29,
-        "sentiment": 50.0,
+        "sentiment": 60.0,
         "volume": 51.44,
         "policy": 50.0,
         "volatility_penalty": 10.08
+      }
+    },
+    {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 21.56,
+      "raw_score": 29.73,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.65,
+      "components": {
+        "momentum": 9.8,
+        "sentiment": 40.0,
+        "volume": 44.08,
+        "policy": 50.0,
+        "volatility_penalty": 8.17
       }
     },
     {
@@ -667,7 +699,7 @@
       "raw_score": 31.14,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.75,
+      "confidence": 0.65,
       "components": {
         "momentum": 8.31,
         "sentiment": 50.0,
@@ -675,51 +707,21 @@
         "policy": 50.0,
         "volatility_penalty": 11.2
       }
-    },
-    {
-      "key": "semiconductors_ex_ai",
-      "name": "Semiconductors (Broad)",
-      "score": 17.14,
-      "raw_score": 31.02,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.65,
-      "components": {
-        "momentum": 0.0,
-        "sentiment": 50.0,
-        "volume": 55.11,
-        "policy": 50.0,
-        "volatility_penalty": 13.89
-      }
-    },
-    {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 17.06,
-      "raw_score": 25.23,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.85,
-      "components": {
-        "momentum": 9.8,
-        "sentiment": 25.0,
-        "volume": 44.08,
-        "policy": 50.0,
-        "volatility_penalty": 8.17
-      }
     }
   ],
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0014,
       "current_weight": 0.0028,
-      "notional_delta": -269.11,
-      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -134.55,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Just Hit Its Lowest Price Since May. I'd Buy More Now.\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-18.04%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -729,25 +731,27 @@
       "target_weight": 0.0,
       "current_weight": 0.0426,
       "notional_delta": -4100.49,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Nike to give every 2027 high school valedictorian custom Air Force 1s \u2014 a $3M+ gift sparked by Mississippi's Scott Colom\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.50%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "ASML",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": -253.5,
-      "reason": "exiting on mixed news flow \u2014 \"ASML Faces Potential Revenue Risk from U.S. Export Policy\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -126.75,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Just Hit Its Lowest Price Since May. I'd Buy More Now.\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-16.50%",
         "theme=Semiconductors (Broad)",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -757,12 +761,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.62,
-      "reason": "exiting on mixed news flow \u2014 \"Alphabet Reportedly Bypassing Broadcom for HBM Procurement\" \u00b7 theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-13.92%",
-        "theme=AI & Compute",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
@@ -772,29 +774,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.52,
-      "reason": "exiting on layoffs (negative) \u2014 \"Boeing Considers Additional Layoffs Amid 737 Max Production Delays\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"US DOT Watchdog to Audit FAA Oversight of Boeing\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.75%",
         "theme=Defense & Aerospace",
         "news_source=fiscal.ai",
-        "event=layoffs",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "defense"
     },
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0277,
+      "target_weight": 0.0263,
       "current_weight": 0.0235,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Bank of America Strategists Warn of Potential 'Doom Loop' Risk\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.18%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 50.4 (starter), contribution 46.9",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 50.4 (starter), contribution 46.9"
       ],
       "theme_key": "financials"
     },
@@ -820,13 +819,10 @@
       "target_weight": 0.0046,
       "current_weight": 0.0092,
       "notional_delta": -443.03,
-      "reason": "trimming on M&A (mixed) \u2014 \"CrowdStrike in Talks to Acquire Zscaler\" \u00b7 theme score 31.4 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.93%",
-        "theme=Cybersecurity",
-        "news_source=fiscal.ai",
-        "event=M&A",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -852,13 +848,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0019,
       "notional_delta": -179.86,
-      "reason": "exiting on layoffs (mixed) \u2014 \"Enphase Energy Announces Workforce Reduction and Relocation Strategy\" \u00b7 theme score 19.9 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-38.88%",
-        "theme=Clean Energy",
-        "news_source=fiscal.ai",
-        "event=layoffs",
-        "news_sentiment=+0.00"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
@@ -868,7 +861,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0214,
       "notional_delta": -2055.76,
-      "reason": "exiting on legal risk (negative) \u2014 \"Ford and Other Automakers Sue New Jersey Over Warranty and Recall Repair Law\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on legal risk (negative) \u2014 \"Ford and Other Automakers Sue New Jersey Over Warranty and Recall Repair Law\" \u00b7 theme score 21.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-3.18%",
         "theme=EV & Clean Transport",
@@ -884,12 +877,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0112,
       "notional_delta": -1081.87,
-      "reason": "exiting on mixed news flow \u2014 \"First Solar CEO Testifies Before House Select Committee on China\" \u00b7 theme score 19.9 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-25.07%",
-        "theme=Clean Energy",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy"
     },
@@ -899,28 +890,24 @@
       "target_weight": 0.0019,
       "current_weight": 0.0038,
       "notional_delta": -180.9,
-      "reason": "trimming on mixed news flow \u2014 \"Fortinet Announces New AI-Enabled OT Security Platform and Inline AI Security Service\" \u00b7 theme score 31.4 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.54%",
-        "theme=Cybersecurity",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0203,
+      "target_weight": 0.0134,
       "current_weight": 0.0309,
-      "notional_delta": -1019.42,
-      "reason": "trimming on positive news flow \u2014 \"SIG Maintains Buy Rating and $455 Price Target for General Dynamics\" \u00b7 overweight by 1.06% vs target \u2014 trim",
+      "notional_delta": -1683.02,
+      "reason": "overweight by 1.75% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.10%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 38.7",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 39.5 (hold_small), contribution 34.0"
       ],
       "theme_key": "defense"
     },
@@ -930,12 +917,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0166,
       "notional_delta": -1597.08,
-      "reason": "exiting on positive news flow \u2014 \"Morgan Stanley Maintains Buy Rating and $95 Price Target for General Motors\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-3.57%",
-        "theme=EV & Clean Transport",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -945,7 +930,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.15,
-      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.02%",
         "theme=AI & Compute"
@@ -955,7 +940,7 @@
     {
       "symbol": "GS",
       "action": "HOLD",
-      "target_weight": 0.0285,
+      "target_weight": 0.027,
       "current_weight": 0.026,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -969,21 +954,23 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0166,
+      "target_weight": 0.0275,
       "current_weight": 0.0398,
-      "notional_delta": -2235.66,
-      "reason": "overweight by 2.32% vs target \u2014 trim",
+      "notional_delta": -1187.37,
+      "reason": "trimming on positive news flow \u2014 \"Nike to give every 2027 high school valedictorian custom Air Force 1s \u2014 a $3M+ gift sparked by Mississippi's Scott Colom\" \u00b7 overweight by 1.23% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.73%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 44.1 (starter), contribution 41.3"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 48.1",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0284,
+      "target_weight": 0.027,
       "current_weight": 0.0263,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"JPMorgan Chase & Co. Discloses Increased Voting Rights in Ceres Power\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1002,12 +989,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on negative news flow \u2014 \"Fifth Circuit Denies Rehearing in Lucid Group's Texas Direct Sales Challenge\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-68.47%",
-        "theme=EV & Clean Transport",
-        "news_source=fiscal.ai",
-        "news_sentiment=-0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -1027,14 +1012,14 @@
     {
       "symbol": "LMT",
       "action": "REDUCE",
-      "target_weight": 0.0182,
+      "target_weight": 0.0117,
       "current_weight": 0.0286,
-      "notional_delta": -995.71,
-      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin Receives $1.53 Billion U.S. Navy Contract Modification\" \u00b7 overweight by 1.04% vs target \u2014 trim",
+      "notional_delta": -1620.83,
+      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin Receives $1.53 Billion U.S. Navy Contract Modification\" \u00b7 overweight by 1.69% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.51%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 34.6",
+        "theme 'Defense & Aerospace' score 39.5 (hold_small), contribution 29.9",
         "news_source=fiscal.ai",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -1043,28 +1028,32 @@
     },
     {
       "symbol": "LRCX",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.24,
-      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.12,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Just Hit Its Lowest Price Since May. I'd Buy More Now.\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-43.34%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0206,
+      "target_weight": 0.0332,
       "current_weight": 0.0452,
-      "notional_delta": -2362.75,
-      "reason": "overweight by 2.46% vs target \u2014 trim",
+      "notional_delta": -1150.96,
+      "reason": "trimming on positive news flow \u2014 \"Nike to give every 2027 high school valedictorian custom Air Force 1s \u2014 a $3M+ gift sparked by Mississippi's Scott Colom\" \u00b7 overweight by 1.20% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.49%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 44.1 (starter), contribution 51.3"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 58.1",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1074,7 +1063,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0102,
       "notional_delta": -979.72,
-      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.58%",
         "theme=AI & Compute"
@@ -1087,12 +1076,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on mixed news flow \u2014 \"Moderna Legal Representative Participates in AI Governance Series\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 33.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-25.20%",
-        "theme=Biotech & Pharma",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech"
     },
@@ -1117,7 +1104,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0135,
       "notional_delta": -1298.44,
-      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-4.80%",
         "theme=AI & Compute"
@@ -1126,14 +1113,16 @@
     },
     {
       "symbol": "MU",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.07,
-      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.04,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Just Hit Its Lowest Price Since May. I'd Buy More Now.\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-38.75%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1158,12 +1147,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.09,
-      "reason": "exiting on mixed news flow \u2014 \"NIKE, Inc. Schedules Second Quarter Fiscal 2027 Earnings Release\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Nike to give every 2027 high school valedictorian custom Air Force 1s \u2014 a $3M+ gift sparked by Mississippi's Scott Colom\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-16.00%",
         "theme=Consumer Discretionary",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1186,7 +1175,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.1,
-      "reason": "exiting on positive news flow \u2014 \"Vertiv Launches ATLAS Lab to Validate NVIDIA AI Infrastructure\" \u00b7 theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on positive news flow \u2014 \"Vertiv Launches ATLAS Lab to Validate NVIDIA AI Infrastructure\" \u00b7 theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-17.11%",
         "theme=AI & Compute",
@@ -1268,7 +1257,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0156,
       "notional_delta": -1500.14,
-      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-6.23%",
         "theme=EV & Clean Transport"
@@ -1278,16 +1267,14 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0224,
+      "target_weight": 0.015,
       "current_weight": 0.0323,
-      "notional_delta": -955.63,
-      "reason": "trimming on positive news flow \u2014 \"Frequentis Receives FAA Approval for Digital-Tower System with RTX Cooperation\" \u00b7 overweight by 0.99% vs target \u2014 trim",
+      "notional_delta": -1667.32,
+      "reason": "overweight by 1.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.40%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 42.8",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 39.5 (hold_small), contribution 38.1"
       ],
       "theme_key": "defense"
     },
@@ -1307,14 +1294,16 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0154,
+      "target_weight": 0.0258,
       "current_weight": 0.0383,
-      "notional_delta": -2199.82,
-      "reason": "overweight by 2.29% vs target \u2014 trim",
+      "notional_delta": -1199.62,
+      "reason": "trimming on positive news flow \u2014 \"Nike to give every 2027 high school valedictorian custom Air Force 1s \u2014 a $3M+ gift sparked by Mississippi's Scott Colom\" \u00b7 overweight by 1.25% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.24%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 44.1 (starter), contribution 38.3"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 45.1",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary"
     },
@@ -1352,7 +1341,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.06,
-      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-38.09%",
         "theme=AI & Compute"
@@ -1365,25 +1354,25 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.04,
-      "reason": "exiting on mixed news flow \u2014 \"Tesla Opens First Retail Location in Argentina\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-11.83%",
-        "theme=EV & Clean Transport",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "TSM",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.06,
-      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.03,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Just Hit Its Lowest Price Since May. I'd Buy More Now.\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-21.94%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1451,14 +1440,16 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0014,
       "current_weight": 0.0028,
-      "notional_delta": -269.11,
-      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -134.55,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Just Hit Its Lowest Price Since May. I'd Buy More Now.\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-18.04%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1471,10 +1462,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0426,
       "notional_delta": -4100.49,
-      "reason": "no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Nike to give every 2027 high school valedictorian custom Air Force 1s \u2014 a $3M+ gift sparked by Mississippi's Scott Colom\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.50%",
-        "theme=Consumer Discretionary"
+        "theme=Consumer Discretionary",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1483,16 +1476,16 @@
     },
     {
       "symbol": "ASML",
-      "action": "SELL",
-      "target_weight": 0.0,
+      "action": "REDUCE",
+      "target_weight": 0.0013,
       "current_weight": 0.0026,
-      "notional_delta": -253.5,
-      "reason": "exiting on mixed news flow \u2014 \"ASML Faces Potential Revenue Risk from U.S. Export Policy\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -126.75,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Just Hit Its Lowest Price Since May. I'd Buy More Now.\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-16.50%",
         "theme=Semiconductors (Broad)",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1505,12 +1498,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.62,
-      "reason": "exiting on mixed news flow \u2014 \"Alphabet Reportedly Bypassing Broadcom for HBM Procurement\" \u00b7 theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-13.92%",
-        "theme=AI & Compute",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1523,13 +1514,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.52,
-      "reason": "exiting on layoffs (negative) \u2014 \"Boeing Considers Additional Layoffs Amid 737 Max Production Delays\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on mixed news flow \u2014 \"US DOT Watchdog to Audit FAA Oversight of Boeing\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-10.75%",
         "theme=Defense & Aerospace",
         "news_source=fiscal.ai",
-        "event=layoffs",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1539,16 +1529,14 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0277,
+      "target_weight": 0.0263,
       "current_weight": 0.0235,
       "notional_delta": 0.0,
-      "reason": "holding on mixed news flow \u2014 \"Bank of America Strategists Warn of Potential 'Doom Loop' Risk\" \u00b7 within 50bps of target \u2014 no trade",
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.18%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 50.4 (starter), contribution 46.9",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme 'Financials & Rates' score 50.4 (starter), contribution 46.9"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1580,13 +1568,10 @@
       "target_weight": 0.0046,
       "current_weight": 0.0092,
       "notional_delta": -443.03,
-      "reason": "trimming on M&A (mixed) \u2014 \"CrowdStrike in Talks to Acquire Zscaler\" \u00b7 theme score 31.4 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.93%",
-        "theme=Cybersecurity",
-        "news_source=fiscal.ai",
-        "event=M&A",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1618,13 +1603,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0019,
       "notional_delta": -179.86,
-      "reason": "exiting on layoffs (mixed) \u2014 \"Enphase Energy Announces Workforce Reduction and Relocation Strategy\" \u00b7 theme score 19.9 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-38.88%",
-        "theme=Clean Energy",
-        "news_source=fiscal.ai",
-        "event=layoffs",
-        "news_sentiment=+0.00"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1637,7 +1619,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0214,
       "notional_delta": -2055.76,
-      "reason": "exiting on legal risk (negative) \u2014 \"Ford and Other Automakers Sue New Jersey Over Warranty and Recall Repair Law\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on legal risk (negative) \u2014 \"Ford and Other Automakers Sue New Jersey Over Warranty and Recall Repair Law\" \u00b7 theme score 21.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-3.18%",
         "theme=EV & Clean Transport",
@@ -1656,12 +1638,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0112,
       "notional_delta": -1081.87,
-      "reason": "exiting on mixed news flow \u2014 \"First Solar CEO Testifies Before House Select Committee on China\" \u00b7 theme score 19.9 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-25.07%",
-        "theme=Clean Energy",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Clean Energy"
       ],
       "theme_key": "clean_energy",
       "executed": false,
@@ -1674,12 +1654,10 @@
       "target_weight": 0.0019,
       "current_weight": 0.0038,
       "notional_delta": -180.9,
-      "reason": "trimming on mixed news flow \u2014 \"Fortinet Announces New AI-Enabled OT Security Platform and Inline AI Security Service\" \u00b7 theme score 31.4 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-2.54%",
-        "theme=Cybersecurity",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -1689,16 +1667,14 @@
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0203,
+      "target_weight": 0.0134,
       "current_weight": 0.0309,
-      "notional_delta": -1019.42,
-      "reason": "trimming on positive news flow \u2014 \"SIG Maintains Buy Rating and $455 Price Target for General Dynamics\" \u00b7 overweight by 1.06% vs target \u2014 trim",
+      "notional_delta": -1683.02,
+      "reason": "overweight by 1.75% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.10%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 38.7",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 39.5 (hold_small), contribution 34.0"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -1711,12 +1687,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0166,
       "notional_delta": -1597.08,
-      "reason": "exiting on positive news flow \u2014 \"Morgan Stanley Maintains Buy Rating and $95 Price Target for General Motors\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-3.57%",
-        "theme=EV & Clean Transport",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1729,7 +1703,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.15,
-      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.02%",
         "theme=AI & Compute"
@@ -1742,7 +1716,7 @@
     {
       "symbol": "GS",
       "action": "HOLD",
-      "target_weight": 0.0285,
+      "target_weight": 0.027,
       "current_weight": 0.026,
       "notional_delta": 0.0,
       "reason": "within 50bps of target \u2014 no trade",
@@ -1759,14 +1733,16 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0166,
+      "target_weight": 0.0275,
       "current_weight": 0.0398,
-      "notional_delta": -2235.66,
-      "reason": "overweight by 2.32% vs target \u2014 trim",
+      "notional_delta": -1187.37,
+      "reason": "trimming on positive news flow \u2014 \"Nike to give every 2027 high school valedictorian custom Air Force 1s \u2014 a $3M+ gift sparked by Mississippi's Scott Colom\" \u00b7 overweight by 1.23% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.73%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 44.1 (starter), contribution 41.3"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 48.1",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1776,7 +1752,7 @@
     {
       "symbol": "JPM",
       "action": "HOLD",
-      "target_weight": 0.0284,
+      "target_weight": 0.027,
       "current_weight": 0.0263,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"JPMorgan Chase & Co. Discloses Increased Voting Rights in Ceres Power\" \u00b7 within 50bps of target \u2014 no trade",
@@ -1798,12 +1774,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "exiting on negative news flow \u2014 \"Fifth Circuit Denies Rehearing in Lucid Group's Texas Direct Sales Challenge\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-68.47%",
-        "theme=EV & Clean Transport",
-        "news_source=fiscal.ai",
-        "news_sentiment=-0.20"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1829,14 +1803,14 @@
     {
       "symbol": "LMT",
       "action": "REDUCE",
-      "target_weight": 0.0182,
+      "target_weight": 0.0117,
       "current_weight": 0.0286,
-      "notional_delta": -995.71,
-      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin Receives $1.53 Billion U.S. Navy Contract Modification\" \u00b7 overweight by 1.04% vs target \u2014 trim",
+      "notional_delta": -1620.83,
+      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin Receives $1.53 Billion U.S. Navy Contract Modification\" \u00b7 overweight by 1.69% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.51%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 34.6",
+        "theme 'Defense & Aerospace' score 39.5 (hold_small), contribution 29.9",
         "news_source=fiscal.ai",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -1848,14 +1822,16 @@
     },
     {
       "symbol": "LRCX",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.24,
-      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.12,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Just Hit Its Lowest Price Since May. I'd Buy More Now.\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-43.34%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1865,14 +1841,16 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0206,
+      "target_weight": 0.0332,
       "current_weight": 0.0452,
-      "notional_delta": -2362.75,
-      "reason": "overweight by 2.46% vs target \u2014 trim",
+      "notional_delta": -1150.96,
+      "reason": "trimming on positive news flow \u2014 \"Nike to give every 2027 high school valedictorian custom Air Force 1s \u2014 a $3M+ gift sparked by Mississippi's Scott Colom\" \u00b7 overweight by 1.20% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.49%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 44.1 (starter), contribution 51.3"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 58.1",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1885,7 +1863,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0102,
       "notional_delta": -979.72,
-      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.58%",
         "theme=AI & Compute"
@@ -1901,12 +1879,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.02,
-      "reason": "trimming on mixed news flow \u2014 \"Moderna Legal Representative Participates in AI Governance Series\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 33.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-25.20%",
-        "theme=Biotech & Pharma",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -1937,7 +1913,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0135,
       "notional_delta": -1298.44,
-      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-4.80%",
         "theme=AI & Compute"
@@ -1949,14 +1925,16 @@
     },
     {
       "symbol": "MU",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.07,
-      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.04,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Just Hit Its Lowest Price Since May. I'd Buy More Now.\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-38.75%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1987,12 +1965,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.09,
-      "reason": "exiting on mixed news flow \u2014 \"NIKE, Inc. Schedules Second Quarter Fiscal 2027 Earnings Release\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "exiting on positive news flow \u2014 \"Nike to give every 2027 high school valedictorian custom Air Force 1s \u2014 a $3M+ gift sparked by Mississippi's Scott Colom\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-16.00%",
         "theme=Consumer Discretionary",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2021,7 +1999,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.1,
-      "reason": "exiting on positive news flow \u2014 \"Vertiv Launches ATLAS Lab to Validate NVIDIA AI Infrastructure\" \u00b7 theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on positive news flow \u2014 \"Vertiv Launches ATLAS Lab to Validate NVIDIA AI Infrastructure\" \u00b7 theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-17.11%",
         "theme=AI & Compute",
@@ -2121,7 +2099,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0156,
       "notional_delta": -1500.14,
-      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-6.23%",
         "theme=EV & Clean Transport"
@@ -2134,16 +2112,14 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.0224,
+      "target_weight": 0.015,
       "current_weight": 0.0323,
-      "notional_delta": -955.63,
-      "reason": "trimming on positive news flow \u2014 \"Frequentis Receives FAA Approval for Digital-Tower System with RTX Cooperation\" \u00b7 overweight by 0.99% vs target \u2014 trim",
+      "notional_delta": -1667.32,
+      "reason": "overweight by 1.73% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.40%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 42.8",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme 'Defense & Aerospace' score 39.5 (hold_small), contribution 38.1"
       ],
       "theme_key": "defense",
       "executed": false,
@@ -2169,14 +2145,16 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0154,
+      "target_weight": 0.0258,
       "current_weight": 0.0383,
-      "notional_delta": -2199.82,
-      "reason": "overweight by 2.29% vs target \u2014 trim",
+      "notional_delta": -1199.62,
+      "reason": "trimming on positive news flow \u2014 \"Nike to give every 2027 high school valedictorian custom Air Force 1s \u2014 a $3M+ gift sparked by Mississippi's Scott Colom\" \u00b7 overweight by 1.25% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.24%",
         "theme=Consumer Discretionary",
-        "theme 'Consumer Discretionary' score 44.1 (starter), contribution 38.3"
+        "theme 'Consumer Discretionary' score 51.0 (starter), contribution 45.1",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -2223,7 +2201,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.06,
-      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 24.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-38.09%",
         "theme=AI & Compute"
@@ -2239,12 +2217,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.04,
-      "reason": "exiting on mixed news flow \u2014 \"Tesla Opens First Retail Location in Argentina\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.6 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-11.83%",
-        "theme=EV & Clean Transport",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=EV & Clean Transport"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2253,14 +2229,16 @@
     },
     {
       "symbol": "TSM",
-      "action": "SELL",
+      "action": "REDUCE",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.06,
-      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
+      "notional_delta": -0.03,
+      "reason": "trimming on positive news flow \u2014 \"Micron Stock Just Hit Its Lowest Price Since May. I'd Buy More Now.\" \u00b7 theme score 27.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-21.94%",
-        "theme=Semiconductors (Broad)"
+        "theme=Semiconductors (Broad)",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2341,10 +2319,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-29T17:55:06+00:00",
-      "v": 99062.84
-    },
     {
       "t": "2026-07-29T19:38:55+00:00",
       "v": 98605.98
@@ -4340,6 +4314,10 @@
     {
       "t": "2026-11-21T18:17:47+00:00",
       "v": 96173.82
+    },
+    {
+      "t": "2026-11-21T23:29:04+00:00",
+      "v": 96173.82
     }
   ],
   "breaking_news": [
@@ -4348,7 +4326,7 @@
       "summary": "Shares in the AI juggernaut Anthropic are now trading on the stock market. They debuted Thursday, after a record-breaking IPO.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/19/nx-s1-6042560/ai-giant-anthropics-shares-pop-in-debut-after-blockbuster-ipo",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4357,7 +4335,7 @@
       "summary": "President Trump has made billions of dollars in his second term \u2014 most of it in cryptocurrencies. Democrats are vowing to probe his businesses as they gear up to take over Congress next year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/nx-s1-6038969/trump-crypto-profits-corruption-meme-coin-world-liberty-explainer",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -4366,7 +4344,7 @@
       "summary": "Anthropic's initial public offering was a success for shareholders, including its founders. But there were also protests about whether the company can be a responsible steward of AI technology.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/nx-s1-6047539/critics-are-worried-about-anthropics-influence-after-first-day-of-public-trading",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4375,7 +4353,7 @@
       "summary": "In a week of outages, we're thinking about the rising threat of AI-powered cyberattacks. But sometimes, it's not the most sophisticated attack that's concerning, but the easy targets buried in old software.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/11/20/nx-s1-6047750/just-how-vulnerable-are-we-to-cyberattacks",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4384,7 +4362,7 @@
       "summary": "The giant steel plant in Middletown, Ohio planned to switch away from using coke, a refined form of coal. The switch would have cut hazardous air pollution -- and greenhouse gas emissions. But that plan has changed under President Trump",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/nx-s1-5860971/trumps-impact-on-ohio-steel-plant",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4393,7 +4371,7 @@
       "summary": "AI stocks have hefty market values and have a much bigger impact on the market's direction. They were responsible for Wall Street's big gains this year and are now behind the big slide for the market.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/g-s1-154797/nasdaq-sp500-stock-market-ai-sink-negative",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4402,7 +4380,7 @@
       "summary": "AI stocks \u2014 and the broader markets \u2014 got pummeled this week, raising major concerns about the financial system and the wider economy. Here's what to know.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/21/nx-s1-6048729/ai-stock-markets-anthropic-nvidia",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4411,7 +4389,16 @@
       "summary": "Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Lock of former US President George Washington's hair sells for $4,000",
+      "summary": "The hair was given as a sign of friendship shortly before Washington's death in 1799, according to a descendent of its former owner.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cwe9k23dpz0do?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4420,7 +4407,7 @@
       "summary": "The 30-year-old LA resident was convicted of arson leading to wildfires that killed 12 people and destroyed more than 6,800 buildings.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c64gn0gy8rj3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4429,25 +4416,7 @@
       "summary": "The Russian embassy in Denmark has denied the allegation, which has led to Russia's defence attach\u00e9 being expelled.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cmde1lj4yjxno?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "French police officers sentenced for beating of music producer Michel Zecler",
-      "summary": "The court has upheld the 2020 beating of the black music producer as an aggravated circumstance of racism.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/ck9d7e9wvvweo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:49+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Mexican drug lord on FBI's 10 most wanted list arrested in shoot-out",
-      "summary": "Fausto Isidro \"Chapo Idisro\" Meza Flores, who is accused of drug trafficking and torture, is detained after gun fight with authorities.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/ckz749ey0r75o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4456,7 +4425,16 @@
       "summary": "The National Crime Information Center database is used by federal and local law enforcement to share information.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvze7de86pk3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Mexican drug lord on FBI's 10 most wanted list arrested in shoot-out",
+      "summary": "Fausto Isidro \"Chapo Idisro\" Meza Flores, who is accused of drug trafficking and torture, is detained after gun fight with authorities.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/ckz749ey0r75o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4465,7 +4443,16 @@
       "summary": "Countries from nearly 200 countries are in a deadlock to try and get a new global climate agreement.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Russia-bound ship attacked in Gulf of Finland",
+      "summary": "Finnish defence forces say that Ukraine was likely behind the drone attack on the vessel.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4474,7 +4461,7 @@
       "summary": "Ukraine's president says Kyiv acted after 109 separate Russian aerial attacks on bridges in Ukraine.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6wy0qj7w5zqo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:49+00:00",
+      "published_utc": "2026-11-21T23:29:08+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4483,7 +4470,7 @@
       "summary": "Eating at your desk? The dos and don'ts of lunch at work",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cwp8g4092zglo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:48+00:00",
+      "published_utc": "2026-11-21T23:29:07+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4492,7 +4479,7 @@
       "summary": "People stocking up on long-life food drove retail sales higher October, according to official data.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ck053mzy2qqeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:48+00:00",
+      "published_utc": "2026-11-21T23:29:07+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4501,7 +4488,7 @@
       "summary": "Would AI be a good judge of whether you should get a mortgage, car loan or mobile phone contract?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:48+00:00",
+      "published_utc": "2026-11-21T23:29:07+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4510,17 +4497,8 @@
       "summary": "The mammoth figure surpasses every video game launch and single-day film box office record.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:48+00:00",
+      "published_utc": "2026-11-21T23:29:07+00:00",
       "sentiment_score": 0.2,
-      "is_policy": false
-    },
-    {
-      "headline": "Trump threatens ban on US firms building AI data centres overseas",
-      "summary": "The US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T18:17:48+00:00",
-      "sentiment_score": -0.2,
       "is_policy": false
     }
   ],
