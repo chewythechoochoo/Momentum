@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-21T11:45:34+00:00",
+  "generated_at_utc": "2026-11-21T18:17:49+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1225,
-  "last_success_utc": "2026-11-21T03:34:10+00:00",
+  "cycle_count": 1226,
+  "last_success_utc": "2026-11-21T11:45:34+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -549,16 +549,48 @@
   ],
   "themes": [
     {
+      "key": "financials",
+      "name": "Financials & Rates",
+      "score": 50.38,
+      "raw_score": 50.38,
+      "band": "starter",
+      "weight": 0.0846,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 7.21,
+        "sentiment": 100.0,
+        "volume": 57.47,
+        "policy": 60.0,
+        "volatility_penalty": 0.0
+      }
+    },
+    {
+      "key": "oil_gas",
+      "name": "Oil & Gas",
+      "score": 45.43,
+      "raw_score": 45.47,
+      "band": "starter",
+      "weight": 0.0681,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 12.23,
+        "sentiment": 85.72,
+        "volume": 49.32,
+        "policy": 50.0,
+        "volatility_penalty": 0.04
+      }
+    },
+    {
       "key": "defense",
       "name": "Defense & Aerospace",
-      "score": 44.77,
-      "raw_score": 45.21,
+      "score": 44.23,
+      "raw_score": 44.68,
       "band": "starter",
-      "weight": 0.0626,
+      "weight": 0.0609,
       "confidence": 0.9,
       "components": {
         "momentum": 15.04,
-        "sentiment": 87.5,
+        "sentiment": 85.72,
         "volume": 39.74,
         "policy": 50.0,
         "volatility_penalty": 0.44
@@ -570,8 +602,8 @@
       "score": 44.14,
       "raw_score": 44.95,
       "band": "starter",
-      "weight": 0.0542,
-      "confidence": 0.7,
+      "weight": 0.0526,
+      "confidence": 0.65,
       "components": {
         "momentum": 33.65,
         "sentiment": 50.0,
@@ -581,45 +613,13 @@
       }
     },
     {
-      "key": "financials",
-      "name": "Financials & Rates",
-      "score": 42.38,
-      "raw_score": 42.38,
-      "band": "starter",
-      "weight": 0.0579,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 7.21,
-        "sentiment": 75.0,
-        "volume": 57.47,
-        "policy": 55.0,
-        "volatility_penalty": 0.0
-      }
-    },
-    {
-      "key": "oil_gas",
-      "name": "Oil & Gas",
-      "score": 34.71,
-      "raw_score": 34.76,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.7,
-      "components": {
-        "momentum": 12.23,
-        "sentiment": 50.0,
-        "volume": 49.32,
-        "policy": 50.0,
-        "volatility_penalty": 0.04
-      }
-    },
-    {
       "key": "biotech",
       "name": "Biotech & Pharma",
       "score": 33.9,
       "raw_score": 38.94,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.8,
+      "confidence": 0.7,
       "components": {
         "momentum": 26.5,
         "sentiment": 50.0,
@@ -645,83 +645,81 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 30.06,
-      "raw_score": 38.23,
+      "key": "ai_compute",
+      "name": "AI & Compute",
+      "score": 21.12,
+      "raw_score": 31.2,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 0.9,
       "components": {
-        "momentum": 9.8,
-        "sentiment": 66.66,
-        "volume": 44.08,
-        "policy": 55.0,
-        "volatility_penalty": 8.17
+        "momentum": 2.29,
+        "sentiment": 50.0,
+        "volume": 51.44,
+        "policy": 50.0,
+        "volatility_penalty": 10.08
+      }
+    },
+    {
+      "key": "clean_energy",
+      "name": "Clean Energy",
+      "score": 19.94,
+      "raw_score": 31.14,
+      "band": "exit_or_avoid",
+      "weight": 0.0,
+      "confidence": 0.75,
+      "components": {
+        "momentum": 8.31,
+        "sentiment": 50.0,
+        "volume": 39.06,
+        "policy": 50.0,
+        "volatility_penalty": 11.2
       }
     },
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 29.14,
-      "raw_score": 43.02,
+      "score": 17.14,
+      "raw_score": 31.02,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.8,
+      "confidence": 0.65,
       "components": {
         "momentum": 0.0,
-        "sentiment": 90.0,
+        "sentiment": 50.0,
         "volume": 55.11,
         "policy": 50.0,
         "volatility_penalty": 13.89
       }
     },
     {
-      "key": "clean_energy",
-      "name": "Clean Energy",
-      "score": 20.44,
-      "raw_score": 31.64,
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 17.06,
+      "raw_score": 25.23,
       "band": "exit_or_avoid",
       "weight": 0.0,
-      "confidence": 0.8,
+      "confidence": 0.85,
       "components": {
-        "momentum": 8.31,
-        "sentiment": 50.0,
-        "volume": 39.06,
-        "policy": 55.0,
-        "volatility_penalty": 11.2
-      }
-    },
-    {
-      "key": "ai_compute",
-      "name": "AI & Compute",
-      "score": 16.12,
-      "raw_score": 26.21,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 0.95,
-      "components": {
-        "momentum": 2.29,
-        "sentiment": 33.34,
-        "volume": 51.44,
+        "momentum": 9.8,
+        "sentiment": 25.0,
+        "volume": 44.08,
         "policy": 50.0,
-        "volatility_penalty": 10.08
+        "volatility_penalty": 8.17
       }
     }
   ],
   "decisions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0028,
-      "notional_delta": -134.55,
-      "reason": "trimming on mixed news flow \u2014 \"Daiwa Securities Adjusts Price Target on Applied Materials\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -269.11,
+      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-18.04%",
-        "theme=Semiconductors (Broad)",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -731,22 +729,20 @@
       "target_weight": 0.0,
       "current_weight": 0.0426,
       "notional_delta": -4100.49,
-      "reason": "exiting on mixed news flow \u2014 \"ScaleCapacity Enters Multi-Year Strategic Collaboration Agreement with AWS\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.50%",
-        "theme=Consumer Discretionary",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary"
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0013,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0026,
-      "notional_delta": -126.75,
-      "reason": "trimming on mixed news flow \u2014 \"ASML Faces Potential Revenue Risk from U.S. Export Policy\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -253.5,
+      "reason": "exiting on mixed news flow \u2014 \"ASML Faces Potential Revenue Risk from U.S. Export Policy\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-16.50%",
         "theme=Semiconductors (Broad)",
@@ -761,7 +757,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.62,
-      "reason": "exiting on mixed news flow \u2014 \"Alphabet Reportedly Bypassing Broadcom for HBM Procurement\" \u00b7 theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Alphabet Reportedly Bypassing Broadcom for HBM Procurement\" \u00b7 theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-13.92%",
         "theme=AI & Compute",
@@ -789,14 +785,14 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0189,
+      "target_weight": 0.0277,
       "current_weight": 0.0235,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Bank of America Strategists Warn of Potential 'Doom Loop' Risk\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.18%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 42.4 (starter), contribution 38.9",
+        "theme 'Financials & Rates' score 50.4 (starter), contribution 46.9",
         "news_source=fiscal.ai",
         "news_sentiment=+0.00"
       ],
@@ -804,16 +800,17 @@
     },
     {
       "symbol": "COP",
-      "action": "REDUCE",
-      "target_weight": 0.0135,
+      "action": "HOLD",
+      "target_weight": 0.0236,
       "current_weight": 0.027,
-      "notional_delta": -1297.63,
-      "reason": "trimming on mixed news flow \u2014 \"Johnson Rice Adjusts Price Target on ConocoPhillips to $150 From $135\" \u00b7 theme score 34.7 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"TechnipFMC Deepens ExxonMobil Ties With Guyana Longtail Awards\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.56%",
         "theme=Oil & Gas",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme 'Oil & Gas' score 45.4 (starter), contribution 43.5",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -835,17 +832,17 @@
     },
     {
       "symbol": "CVX",
-      "action": "REDUCE",
-      "target_weight": 0.0124,
+      "action": "HOLD",
+      "target_weight": 0.0224,
       "current_weight": 0.0247,
-      "notional_delta": -1189.01,
-      "reason": "trimming on partnership (mixed) \u2014 \"Seismic Research Vessel Commences Operations for Chevron-HELLENiQ ENERGY Joint Venture\" \u00b7 theme score 34.7 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"TechnipFMC Deepens ExxonMobil Ties With Guyana Longtail Awards\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.53%",
         "theme=Oil & Gas",
-        "news_source=fiscal.ai",
-        "event=partnership",
-        "news_sentiment=+0.00"
+        "theme 'Oil & Gas' score 45.4 (starter), contribution 41.4",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -855,7 +852,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0019,
       "notional_delta": -179.86,
-      "reason": "exiting on layoffs (mixed) \u2014 \"Enphase Energy Announces Workforce Reduction and Relocation Strategy\" \u00b7 theme score 20.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on layoffs (mixed) \u2014 \"Enphase Energy Announces Workforce Reduction and Relocation Strategy\" \u00b7 theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-38.88%",
         "theme=Clean Energy",
@@ -867,16 +864,17 @@
     },
     {
       "symbol": "F",
-      "action": "REDUCE",
-      "target_weight": 0.0107,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0214,
-      "notional_delta": -1027.88,
-      "reason": "trimming on mixed news flow \u2014 \"Ford Relaunches Oakville Assembly Complex for Super Duty Production\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2055.76,
+      "reason": "exiting on legal risk (negative) \u2014 \"Ford and Other Automakers Sue New Jersey Over Warranty and Recall Repair Law\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-3.18%",
         "theme=EV & Clean Transport",
         "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport"
     },
@@ -886,7 +884,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0112,
       "notional_delta": -1081.87,
-      "reason": "exiting on mixed news flow \u2014 \"First Solar CEO Testifies Before House Select Committee on China\" \u00b7 theme score 20.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"First Solar CEO Testifies Before House Select Committee on China\" \u00b7 theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-25.07%",
         "theme=Clean Energy",
@@ -913,14 +911,14 @@
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0209,
+      "target_weight": 0.0203,
       "current_weight": 0.0309,
-      "notional_delta": -961.71,
-      "reason": "trimming on positive news flow \u2014 \"SIG Maintains Buy Rating and $455 Price Target for General Dynamics\" \u00b7 overweight by 1.00% vs target \u2014 trim",
+      "notional_delta": -1019.42,
+      "reason": "trimming on positive news flow \u2014 \"SIG Maintains Buy Rating and $455 Price Target for General Dynamics\" \u00b7 overweight by 1.06% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.10%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.8 (starter), contribution 39.3",
+        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 38.7",
         "news_source=fiscal.ai",
         "news_sentiment=+0.20"
       ],
@@ -928,11 +926,11 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0083,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0166,
-      "notional_delta": -798.54,
-      "reason": "trimming on positive news flow \u2014 \"Morgan Stanley Maintains Buy Rating and $95 Price Target for General Motors\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1597.08,
+      "reason": "exiting on positive news flow \u2014 \"Morgan Stanley Maintains Buy Rating and $95 Price Target for General Motors\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-3.57%",
         "theme=EV & Clean Transport",
@@ -947,7 +945,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.15,
-      "reason": "theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.02%",
         "theme=AI & Compute"
@@ -956,27 +954,25 @@
     },
     {
       "symbol": "GS",
-      "action": "REDUCE",
-      "target_weight": 0.0195,
+      "action": "HOLD",
+      "target_weight": 0.0285,
       "current_weight": 0.026,
-      "notional_delta": -624.67,
-      "reason": "trimming on positive news flow \u2014 \"Goldman Sachs Updates Investment Outlook for India and China\" \u00b7 overweight by 0.65% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-11.70%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 42.4 (starter), contribution 40.2",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 50.4 (starter), contribution 48.2"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0171,
+      "target_weight": 0.0166,
       "current_weight": 0.0398,
-      "notional_delta": -2187.57,
-      "reason": "overweight by 2.27% vs target \u2014 trim",
+      "notional_delta": -2235.66,
+      "reason": "overweight by 2.32% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.73%",
         "theme=Consumer Discretionary",
@@ -986,28 +982,27 @@
     },
     {
       "symbol": "JPM",
-      "action": "REDUCE",
-      "target_weight": 0.0195,
+      "action": "HOLD",
+      "target_weight": 0.0284,
       "current_weight": 0.0263,
-      "notional_delta": -656.03,
-      "reason": "trimming on analyst downgrade (negative) \u2014 \"JPMorgan Downgrades Scout24 Amid AI Risk Concerns\" \u00b7 overweight by 0.68% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"JPMorgan Chase & Co. Discloses Increased Voting Rights in Ceres Power\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.98%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 42.4 (starter), contribution 40.1",
+        "theme 'Financials & Rates' score 50.4 (starter), contribution 48.1",
         "news_source=fiscal.ai",
-        "event=analyst downgrade",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "LCID",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.0,
-      "reason": "trimming on negative news flow \u2014 \"Fifth Circuit Denies Rehearing in Lucid Group's Texas Direct Sales Challenge\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.01,
+      "reason": "exiting on negative news flow \u2014 \"Fifth Circuit Denies Rehearing in Lucid Group's Texas Direct Sales Challenge\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-68.47%",
         "theme=EV & Clean Transport",
@@ -1032,14 +1027,14 @@
     {
       "symbol": "LMT",
       "action": "REDUCE",
-      "target_weight": 0.0187,
+      "target_weight": 0.0182,
       "current_weight": 0.0286,
-      "notional_delta": -947.62,
-      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin Receives $1.53 Billion U.S. Navy Contract Modification\" \u00b7 overweight by 0.99% vs target \u2014 trim",
+      "notional_delta": -995.71,
+      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin Receives $1.53 Billion U.S. Navy Contract Modification\" \u00b7 overweight by 1.04% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.51%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.8 (starter), contribution 35.2",
+        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 34.6",
         "news_source=fiscal.ai",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -1048,11 +1043,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.12,
-      "reason": "theme score 29.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.24,
+      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-43.34%",
         "theme=Semiconductors (Broad)"
@@ -1062,10 +1057,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0213,
+      "target_weight": 0.0206,
       "current_weight": 0.0452,
-      "notional_delta": -2295.42,
-      "reason": "overweight by 2.39% vs target \u2014 trim",
+      "notional_delta": -2362.75,
+      "reason": "overweight by 2.46% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.49%",
         "theme=Consumer Discretionary",
@@ -1079,7 +1074,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0102,
       "notional_delta": -979.72,
-      "reason": "theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.58%",
         "theme=AI & Compute"
@@ -1122,27 +1117,23 @@
       "target_weight": 0.0,
       "current_weight": 0.0135,
       "notional_delta": -1298.44,
-      "reason": "exiting on mixed news flow \u2014 \"Danaher Collaborates with Microsoft to Advance AI-Powered Scientific Instrument Connectivity\" \u00b7 theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-4.80%",
-        "theme=AI & Compute",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute"
     },
     {
       "symbol": "MU",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.04,
-      "reason": "trimming on positive news flow \u2014 \"Purpose Investments Launches Purpose Micron (MU) Yield Shares ETF\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.07,
+      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-38.75%",
-        "theme=Semiconductors (Broad)",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1152,7 +1143,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "exiting on mixed news flow \u2014 \"NextEra Energy Reports $20 Million in Customer Savings from AI-Driven Grid Optimization\" \u00b7 theme score 20.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"NextEra Energy Reports $20 Million in Customer Savings from AI-Driven Grid Optimization\" \u00b7 theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-5.60%",
         "theme=Clean Energy",
@@ -1195,12 +1186,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.1,
-      "reason": "exiting on negative news flow \u2014 \"NVIDIA Subject to Congressional Probe Regarding China Sales\" \u00b7 theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on positive news flow \u2014 \"Vertiv Launches ATLAS Lab to Validate NVIDIA AI Infrastructure\" \u00b7 theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-17.11%",
         "theme=AI & Compute",
         "news_source=fiscal.ai",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute"
     },
@@ -1219,14 +1210,16 @@
     },
     {
       "symbol": "OXY",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.14,
-      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.27,
+      "reason": "exiting on positive news flow \u2014 \"TechnipFMC Deepens ExxonMobil Ties With Guyana Longtail Awards\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.30%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1236,12 +1229,10 @@
       "target_weight": 0.0049,
       "current_weight": 0.0099,
       "notional_delta": -474.23,
-      "reason": "trimming on mixed news flow \u2014 \"Palo Alto Networks Announces Participation in Barclays 2026 Global Technology Conference\" \u00b7 theme score 31.4 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.12%",
-        "theme=Cybersecurity",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity"
     },
@@ -1264,22 +1255,20 @@
       "target_weight": 0.005,
       "current_weight": 0.01,
       "notional_delta": -480.55,
-      "reason": "trimming on mixed news flow \u2014 \"Argus Research Adjusts Price Target on Regeneron Pharmaceuticals to $1,050\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 33.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.34%",
-        "theme=Biotech & Pharma",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech"
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
-      "target_weight": 0.0078,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0156,
-      "notional_delta": -750.07,
-      "reason": "theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1500.14,
+      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-6.23%",
         "theme=EV & Clean Transport"
@@ -1289,14 +1278,14 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.023,
+      "target_weight": 0.0224,
       "current_weight": 0.0323,
-      "notional_delta": -897.93,
-      "reason": "trimming on positive news flow \u2014 \"Frequentis Receives FAA Approval for Digital-Tower System with RTX Cooperation\" \u00b7 overweight by 0.93% vs target \u2014 trim",
+      "notional_delta": -955.63,
+      "reason": "trimming on positive news flow \u2014 \"Frequentis Receives FAA Approval for Digital-Tower System with RTX Cooperation\" \u00b7 overweight by 0.99% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.40%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.8 (starter), contribution 43.3",
+        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 42.8",
         "news_source=fiscal.ai",
         "news_sentiment=+0.20"
       ],
@@ -1308,7 +1297,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 20.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-19.80%",
         "theme=Clean Energy"
@@ -1318,10 +1307,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0159,
+      "target_weight": 0.0154,
       "current_weight": 0.0383,
-      "notional_delta": -2151.74,
-      "reason": "overweight by 2.24% vs target \u2014 trim",
+      "notional_delta": -2199.82,
+      "reason": "overweight by 2.29% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.24%",
         "theme=Consumer Discretionary",
@@ -1335,7 +1324,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0084,
       "notional_delta": -808.24,
-      "reason": "theme score 20.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-31.62%",
         "theme=Clean Energy"
@@ -1344,14 +1333,16 @@
     },
     {
       "symbol": "SLB",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.06,
-      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.12,
+      "reason": "exiting on positive news flow \u2014 \"TechnipFMC Deepens ExxonMobil Ties With Guyana Longtail Awards\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.33%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1361,7 +1352,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.06,
-      "reason": "theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-38.09%",
         "theme=AI & Compute"
@@ -1370,32 +1361,29 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.02,
-      "reason": "trimming on FDA approval (positive) \u2014 \"Tesla Receives Regulatory Approval for Assisted Driving in Italy\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.04,
+      "reason": "exiting on mixed news flow \u2014 \"Tesla Opens First Retail Location in Argentina\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-11.83%",
         "theme=EV & Clean Transport",
         "news_source=fiscal.ai",
-        "event=FDA approval",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport"
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.03,
-      "reason": "trimming on mixed news flow \u2014 \"TSMC Subsidiary Invests in Anthropic\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.06,
+      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-21.94%",
-        "theme=Semiconductors (Broad)",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai"
     },
@@ -1420,25 +1408,26 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.06,
-      "reason": "exiting on positive news flow \u2014 \"Wells Fargo Maintains Buy Rating on CoreWeave\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.74%",
-        "theme=Financials & Rates",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials"
     },
     {
       "symbol": "XOM",
-      "action": "REDUCE",
-      "target_weight": 0.0121,
+      "action": "HOLD",
+      "target_weight": 0.0221,
       "current_weight": 0.0242,
-      "notional_delta": -1165.08,
-      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"TechnipFMC Deepens ExxonMobil Ties With Guyana Longtail Awards\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.55%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "theme 'Oil & Gas' score 45.4 (starter), contribution 40.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas"
     },
@@ -1448,11 +1437,12 @@
       "target_weight": 0.0055,
       "current_weight": 0.011,
       "notional_delta": -531.12,
-      "reason": "trimming on mixed news flow \u2014 \"Zscaler Collaborates with Anthropic and Mistral to Enhance AI Security\" \u00b7 theme score 31.4 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on M&A (mixed) \u2014 \"Reports of Potential Acquisition of Zscaler by CrowdStrike\" \u00b7 theme score 31.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.04%",
         "theme=Cybersecurity",
         "news_source=fiscal.ai",
+        "event=M&A",
         "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity"
@@ -1461,16 +1451,14 @@
   "executions": [
     {
       "symbol": "AMAT",
-      "action": "REDUCE",
-      "target_weight": 0.0014,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0028,
-      "notional_delta": -134.55,
-      "reason": "trimming on mixed news flow \u2014 \"Daiwa Securities Adjusts Price Target on Applied Materials\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -269.11,
+      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-18.04%",
-        "theme=Semiconductors (Broad)",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1483,12 +1471,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0426,
       "notional_delta": -4100.49,
-      "reason": "exiting on mixed news flow \u2014 \"ScaleCapacity Enters Multi-Year Strategic Collaboration Agreement with AWS\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-7.50%",
-        "theme=Consumer Discretionary",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Consumer Discretionary"
       ],
       "theme_key": "consumer_discretionary",
       "executed": false,
@@ -1497,11 +1483,11 @@
     },
     {
       "symbol": "ASML",
-      "action": "REDUCE",
-      "target_weight": 0.0013,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0026,
-      "notional_delta": -126.75,
-      "reason": "trimming on mixed news flow \u2014 \"ASML Faces Potential Revenue Risk from U.S. Export Policy\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -253.5,
+      "reason": "exiting on mixed news flow \u2014 \"ASML Faces Potential Revenue Risk from U.S. Export Policy\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-16.50%",
         "theme=Semiconductors (Broad)",
@@ -1519,7 +1505,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.62,
-      "reason": "exiting on mixed news flow \u2014 \"Alphabet Reportedly Bypassing Broadcom for HBM Procurement\" \u00b7 theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"Alphabet Reportedly Bypassing Broadcom for HBM Procurement\" \u00b7 theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-13.92%",
         "theme=AI & Compute",
@@ -1553,14 +1539,14 @@
     {
       "symbol": "BAC",
       "action": "HOLD",
-      "target_weight": 0.0189,
+      "target_weight": 0.0277,
       "current_weight": 0.0235,
       "notional_delta": 0.0,
       "reason": "holding on mixed news flow \u2014 \"Bank of America Strategists Warn of Potential 'Doom Loop' Risk\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-4.18%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 42.4 (starter), contribution 38.9",
+        "theme 'Financials & Rates' score 50.4 (starter), contribution 46.9",
         "news_source=fiscal.ai",
         "news_sentiment=+0.00"
       ],
@@ -1571,16 +1557,17 @@
     },
     {
       "symbol": "COP",
-      "action": "REDUCE",
-      "target_weight": 0.0135,
+      "action": "HOLD",
+      "target_weight": 0.0236,
       "current_weight": 0.027,
-      "notional_delta": -1297.63,
-      "reason": "trimming on mixed news flow \u2014 \"Johnson Rice Adjusts Price Target on ConocoPhillips to $150 From $135\" \u00b7 theme score 34.7 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"TechnipFMC Deepens ExxonMobil Ties With Guyana Longtail Awards\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-1.56%",
         "theme=Oil & Gas",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme 'Oil & Gas' score 45.4 (starter), contribution 43.5",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1608,17 +1595,17 @@
     },
     {
       "symbol": "CVX",
-      "action": "REDUCE",
-      "target_weight": 0.0124,
+      "action": "HOLD",
+      "target_weight": 0.0224,
       "current_weight": 0.0247,
-      "notional_delta": -1189.01,
-      "reason": "trimming on partnership (mixed) \u2014 \"Seismic Research Vessel Commences Operations for Chevron-HELLENiQ ENERGY Joint Venture\" \u00b7 theme score 34.7 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"TechnipFMC Deepens ExxonMobil Ties With Guyana Longtail Awards\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.53%",
         "theme=Oil & Gas",
-        "news_source=fiscal.ai",
-        "event=partnership",
-        "news_sentiment=+0.00"
+        "theme 'Oil & Gas' score 45.4 (starter), contribution 41.4",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -1631,7 +1618,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0019,
       "notional_delta": -179.86,
-      "reason": "exiting on layoffs (mixed) \u2014 \"Enphase Energy Announces Workforce Reduction and Relocation Strategy\" \u00b7 theme score 20.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on layoffs (mixed) \u2014 \"Enphase Energy Announces Workforce Reduction and Relocation Strategy\" \u00b7 theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-38.88%",
         "theme=Clean Energy",
@@ -1646,16 +1633,17 @@
     },
     {
       "symbol": "F",
-      "action": "REDUCE",
-      "target_weight": 0.0107,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0214,
-      "notional_delta": -1027.88,
-      "reason": "trimming on mixed news flow \u2014 \"Ford Relaunches Oakville Assembly Complex for Super Duty Production\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -2055.76,
+      "reason": "exiting on legal risk (negative) \u2014 \"Ford and Other Automakers Sue New Jersey Over Warranty and Recall Repair Law\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-3.18%",
         "theme=EV & Clean Transport",
         "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "event=legal risk",
+        "news_sentiment=-0.20"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -1668,7 +1656,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0112,
       "notional_delta": -1081.87,
-      "reason": "exiting on mixed news flow \u2014 \"First Solar CEO Testifies Before House Select Committee on China\" \u00b7 theme score 20.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"First Solar CEO Testifies Before House Select Committee on China\" \u00b7 theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-25.07%",
         "theme=Clean Energy",
@@ -1701,14 +1689,14 @@
     {
       "symbol": "GD",
       "action": "REDUCE",
-      "target_weight": 0.0209,
+      "target_weight": 0.0203,
       "current_weight": 0.0309,
-      "notional_delta": -961.71,
-      "reason": "trimming on positive news flow \u2014 \"SIG Maintains Buy Rating and $455 Price Target for General Dynamics\" \u00b7 overweight by 1.00% vs target \u2014 trim",
+      "notional_delta": -1019.42,
+      "reason": "trimming on positive news flow \u2014 \"SIG Maintains Buy Rating and $455 Price Target for General Dynamics\" \u00b7 overweight by 1.06% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-5.10%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.8 (starter), contribution 39.3",
+        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 38.7",
         "news_source=fiscal.ai",
         "news_sentiment=+0.20"
       ],
@@ -1719,11 +1707,11 @@
     },
     {
       "symbol": "GM",
-      "action": "REDUCE",
-      "target_weight": 0.0083,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0166,
-      "notional_delta": -798.54,
-      "reason": "trimming on positive news flow \u2014 \"Morgan Stanley Maintains Buy Rating and $95 Price Target for General Motors\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1597.08,
+      "reason": "exiting on positive news flow \u2014 \"Morgan Stanley Maintains Buy Rating and $95 Price Target for General Motors\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-3.57%",
         "theme=EV & Clean Transport",
@@ -1741,7 +1729,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.15,
-      "reason": "theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.02%",
         "theme=AI & Compute"
@@ -1753,17 +1741,15 @@
     },
     {
       "symbol": "GS",
-      "action": "REDUCE",
-      "target_weight": 0.0195,
+      "action": "HOLD",
+      "target_weight": 0.0285,
       "current_weight": 0.026,
-      "notional_delta": -624.67,
-      "reason": "trimming on positive news flow \u2014 \"Goldman Sachs Updates Investment Outlook for India and China\" \u00b7 overweight by 0.65% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-11.70%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 42.4 (starter), contribution 40.2",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme 'Financials & Rates' score 50.4 (starter), contribution 48.2"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1773,10 +1759,10 @@
     {
       "symbol": "HD",
       "action": "REDUCE",
-      "target_weight": 0.0171,
+      "target_weight": 0.0166,
       "current_weight": 0.0398,
-      "notional_delta": -2187.57,
-      "reason": "overweight by 2.27% vs target \u2014 trim",
+      "notional_delta": -2235.66,
+      "reason": "overweight by 2.32% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=0.73%",
         "theme=Consumer Discretionary",
@@ -1789,18 +1775,17 @@
     },
     {
       "symbol": "JPM",
-      "action": "REDUCE",
-      "target_weight": 0.0195,
+      "action": "HOLD",
+      "target_weight": 0.0284,
       "current_weight": 0.0263,
-      "notional_delta": -656.03,
-      "reason": "trimming on analyst downgrade (negative) \u2014 \"JPMorgan Downgrades Scout24 Amid AI Risk Concerns\" \u00b7 overweight by 0.68% vs target \u2014 trim",
+      "notional_delta": 0.0,
+      "reason": "holding on mixed news flow \u2014 \"JPMorgan Chase & Co. Discloses Increased Voting Rights in Ceres Power\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-6.98%",
         "theme=Financials & Rates",
-        "theme 'Financials & Rates' score 42.4 (starter), contribution 40.1",
+        "theme 'Financials & Rates' score 50.4 (starter), contribution 48.1",
         "news_source=fiscal.ai",
-        "event=analyst downgrade",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -1809,11 +1794,11 @@
     },
     {
       "symbol": "LCID",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.0,
-      "reason": "trimming on negative news flow \u2014 \"Fifth Circuit Denies Rehearing in Lucid Group's Texas Direct Sales Challenge\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.01,
+      "reason": "exiting on negative news flow \u2014 \"Fifth Circuit Denies Rehearing in Lucid Group's Texas Direct Sales Challenge\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-68.47%",
         "theme=EV & Clean Transport",
@@ -1844,14 +1829,14 @@
     {
       "symbol": "LMT",
       "action": "REDUCE",
-      "target_weight": 0.0187,
+      "target_weight": 0.0182,
       "current_weight": 0.0286,
-      "notional_delta": -947.62,
-      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin Receives $1.53 Billion U.S. Navy Contract Modification\" \u00b7 overweight by 0.99% vs target \u2014 trim",
+      "notional_delta": -995.71,
+      "reason": "trimming on contract win (positive) \u2014 \"Lockheed Martin Receives $1.53 Billion U.S. Navy Contract Modification\" \u00b7 overweight by 1.04% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-0.51%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.8 (starter), contribution 35.2",
+        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 34.6",
         "news_source=fiscal.ai",
         "event=contract win",
         "news_sentiment=+0.20"
@@ -1863,11 +1848,11 @@
     },
     {
       "symbol": "LRCX",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.12,
-      "reason": "theme score 29.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.24,
+      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-43.34%",
         "theme=Semiconductors (Broad)"
@@ -1880,10 +1865,10 @@
     {
       "symbol": "MCD",
       "action": "REDUCE",
-      "target_weight": 0.0213,
+      "target_weight": 0.0206,
       "current_weight": 0.0452,
-      "notional_delta": -2295.42,
-      "reason": "overweight by 2.39% vs target \u2014 trim",
+      "notional_delta": -2362.75,
+      "reason": "overweight by 2.46% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=1.49%",
         "theme=Consumer Discretionary",
@@ -1900,7 +1885,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0102,
       "notional_delta": -979.72,
-      "reason": "theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-12.58%",
         "theme=AI & Compute"
@@ -1952,12 +1937,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0135,
       "notional_delta": -1298.44,
-      "reason": "exiting on mixed news flow \u2014 \"Danaher Collaborates with Microsoft to Advance AI-Powered Scientific Instrument Connectivity\" \u00b7 theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-4.80%",
-        "theme=AI & Compute",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=AI & Compute"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -1966,16 +1949,14 @@
     },
     {
       "symbol": "MU",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.04,
-      "reason": "trimming on positive news flow \u2014 \"Purpose Investments Launches Purpose Micron (MU) Yield Shares ETF\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.07,
+      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-38.75%",
-        "theme=Semiconductors (Broad)",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -1988,7 +1969,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.09,
-      "reason": "exiting on mixed news flow \u2014 \"NextEra Energy Reports $20 Million in Customer Savings from AI-Driven Grid Optimization\" \u00b7 theme score 20.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on mixed news flow \u2014 \"NextEra Energy Reports $20 Million in Customer Savings from AI-Driven Grid Optimization\" \u00b7 theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-5.60%",
         "theme=Clean Energy",
@@ -2040,12 +2021,12 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.1,
-      "reason": "exiting on negative news flow \u2014 \"NVIDIA Subject to Congressional Probe Regarding China Sales\" \u00b7 theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "exiting on positive news flow \u2014 \"Vertiv Launches ATLAS Lab to Validate NVIDIA AI Infrastructure\" \u00b7 theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-17.11%",
         "theme=AI & Compute",
         "news_source=fiscal.ai",
-        "news_sentiment=-0.20"
+        "news_sentiment=+0.20"
       ],
       "theme_key": "ai_compute",
       "executed": false,
@@ -2070,14 +2051,16 @@
     },
     {
       "symbol": "OXY",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.14,
-      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.27,
+      "reason": "exiting on positive news flow \u2014 \"TechnipFMC Deepens ExxonMobil Ties With Guyana Longtail Awards\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.30%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2090,12 +2073,10 @@
       "target_weight": 0.0049,
       "current_weight": 0.0099,
       "notional_delta": -474.23,
-      "reason": "trimming on mixed news flow \u2014 \"Palo Alto Networks Announces Participation in Barclays 2026 Global Technology Conference\" \u00b7 theme score 31.4 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 31.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-4.12%",
-        "theme=Cybersecurity",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Cybersecurity"
       ],
       "theme_key": "cybersecurity",
       "executed": false,
@@ -2124,12 +2105,10 @@
       "target_weight": 0.005,
       "current_weight": 0.01,
       "notional_delta": -480.55,
-      "reason": "trimming on mixed news flow \u2014 \"Argus Research Adjusts Price Target on Regeneron Pharmaceuticals to $1,050\" \u00b7 theme score 33.9 < reduce threshold 35 \u2014 halve position",
+      "reason": "theme score 33.9 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.34%",
-        "theme=Biotech & Pharma",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Biotech & Pharma"
       ],
       "theme_key": "biotech",
       "executed": false,
@@ -2138,11 +2117,11 @@
     },
     {
       "symbol": "RIVN",
-      "action": "REDUCE",
-      "target_weight": 0.0078,
+      "action": "SELL",
+      "target_weight": 0.0,
       "current_weight": 0.0156,
-      "notional_delta": -750.07,
-      "reason": "theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1500.14,
+      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-6.23%",
         "theme=EV & Clean Transport"
@@ -2155,14 +2134,14 @@
     {
       "symbol": "RTX",
       "action": "REDUCE",
-      "target_weight": 0.023,
+      "target_weight": 0.0224,
       "current_weight": 0.0323,
-      "notional_delta": -897.93,
-      "reason": "trimming on positive news flow \u2014 \"Frequentis Receives FAA Approval for Digital-Tower System with RTX Cooperation\" \u00b7 overweight by 0.93% vs target \u2014 trim",
+      "notional_delta": -955.63,
+      "reason": "trimming on positive news flow \u2014 \"Frequentis Receives FAA Approval for Digital-Tower System with RTX Cooperation\" \u00b7 overweight by 0.99% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.40%",
         "theme=Defense & Aerospace",
-        "theme 'Defense & Aerospace' score 44.8 (starter), contribution 43.3",
+        "theme 'Defense & Aerospace' score 44.2 (starter), contribution 42.8",
         "news_source=fiscal.ai",
         "news_sentiment=+0.20"
       ],
@@ -2177,7 +2156,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.01,
-      "reason": "theme score 20.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-19.80%",
         "theme=Clean Energy"
@@ -2190,10 +2169,10 @@
     {
       "symbol": "SBUX",
       "action": "REDUCE",
-      "target_weight": 0.0159,
+      "target_weight": 0.0154,
       "current_weight": 0.0383,
-      "notional_delta": -2151.74,
-      "reason": "overweight by 2.24% vs target \u2014 trim",
+      "notional_delta": -2199.82,
+      "reason": "overweight by 2.29% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-4.24%",
         "theme=Consumer Discretionary",
@@ -2210,7 +2189,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0084,
       "notional_delta": -808.24,
-      "reason": "theme score 20.4 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 19.9 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-31.62%",
         "theme=Clean Energy"
@@ -2222,14 +2201,16 @@
     },
     {
       "symbol": "SLB",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.06,
-      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.12,
+      "reason": "exiting on positive news flow \u2014 \"TechnipFMC Deepens ExxonMobil Ties With Guyana Longtail Awards\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-8.33%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2242,7 +2223,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -1.06,
-      "reason": "theme score 16.1 < exit threshold 25 \u2014 fully exit",
+      "reason": "theme score 21.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-38.09%",
         "theme=AI & Compute"
@@ -2254,17 +2235,16 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.02,
-      "reason": "trimming on FDA approval (positive) \u2014 \"Tesla Receives Regulatory Approval for Assisted Driving in Italy\" \u00b7 theme score 30.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.04,
+      "reason": "exiting on mixed news flow \u2014 \"Tesla Opens First Retail Location in Argentina\" \u00b7 theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-11.83%",
         "theme=EV & Clean Transport",
         "news_source=fiscal.ai",
-        "event=FDA approval",
-        "news_sentiment=+0.20"
+        "news_sentiment=+0.00"
       ],
       "theme_key": "ev_clean_transport",
       "executed": false,
@@ -2273,16 +2253,14 @@
     },
     {
       "symbol": "TSM",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.03,
-      "reason": "trimming on mixed news flow \u2014 \"TSMC Subsidiary Invests in Anthropic\" \u00b7 theme score 29.1 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.06,
+      "reason": "theme score 17.1 < exit threshold 25 \u2014 fully exit",
       "factors": [
         "unrealized_pl=-21.94%",
-        "theme=Semiconductors (Broad)",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.00"
+        "theme=Semiconductors (Broad)"
       ],
       "theme_key": "semiconductors_ex_ai",
       "executed": false,
@@ -2313,12 +2291,10 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.06,
-      "reason": "exiting on positive news flow \u2014 \"Wells Fargo Maintains Buy Rating on CoreWeave\" \u00b7 no longer in target set \u2014 exit",
+      "reason": "no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-6.74%",
-        "theme=Financials & Rates",
-        "news_source=fiscal.ai",
-        "news_sentiment=+0.20"
+        "theme=Financials & Rates"
       ],
       "theme_key": "financials",
       "executed": false,
@@ -2327,14 +2303,17 @@
     },
     {
       "symbol": "XOM",
-      "action": "REDUCE",
-      "target_weight": 0.0121,
+      "action": "HOLD",
+      "target_weight": 0.0221,
       "current_weight": 0.0242,
-      "notional_delta": -1165.08,
-      "reason": "theme score 34.7 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": 0.0,
+      "reason": "holding on positive news flow \u2014 \"TechnipFMC Deepens ExxonMobil Ties With Guyana Longtail Awards\" \u00b7 within 50bps of target \u2014 no trade",
       "factors": [
         "unrealized_pl=-2.55%",
-        "theme=Oil & Gas"
+        "theme=Oil & Gas",
+        "theme 'Oil & Gas' score 45.4 (starter), contribution 40.8",
+        "news_source=yahoo_rss",
+        "news_sentiment=+0.20"
       ],
       "theme_key": "oil_gas",
       "executed": false,
@@ -2347,11 +2326,12 @@
       "target_weight": 0.0055,
       "current_weight": 0.011,
       "notional_delta": -531.12,
-      "reason": "trimming on mixed news flow \u2014 \"Zscaler Collaborates with Anthropic and Mistral to Enhance AI Security\" \u00b7 theme score 31.4 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on M&A (mixed) \u2014 \"Reports of Potential Acquisition of Zscaler by CrowdStrike\" \u00b7 theme score 31.4 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-3.04%",
         "theme=Cybersecurity",
         "news_source=fiscal.ai",
+        "event=M&A",
         "news_sentiment=+0.00"
       ],
       "theme_key": "cybersecurity",
@@ -2361,10 +2341,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-29T16:37:21+00:00",
-      "v": 98938.67
-    },
     {
       "t": "2026-07-29T17:55:06+00:00",
       "v": 99062.84
@@ -4360,6 +4336,10 @@
     {
       "t": "2026-11-21T11:45:31+00:00",
       "v": 96173.82
+    },
+    {
+      "t": "2026-11-21T18:17:47+00:00",
+      "v": 96173.82
     }
   ],
   "breaking_news": [
@@ -4368,7 +4348,7 @@
       "summary": "Shares in the AI juggernaut Anthropic are now trading on the stock market. They debuted Thursday, after a record-breaking IPO.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/19/nx-s1-6042560/ai-giant-anthropics-shares-pop-in-debut-after-blockbuster-ipo",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4377,7 +4357,7 @@
       "summary": "President Trump has made billions of dollars in his second term \u2014 most of it in cryptocurrencies. Democrats are vowing to probe his businesses as they gear up to take over Congress next year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/nx-s1-6038969/trump-crypto-profits-corruption-meme-coin-world-liberty-explainer",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -4386,7 +4366,7 @@
       "summary": "Anthropic's initial public offering was a success for shareholders, including its founders. But there were also protests about whether the company can be a responsible steward of AI technology.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/nx-s1-6047539/critics-are-worried-about-anthropics-influence-after-first-day-of-public-trading",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4395,7 +4375,7 @@
       "summary": "In a week of outages, we're thinking about the rising threat of AI-powered cyberattacks. But sometimes, it's not the most sophisticated attack that's concerning, but the easy targets buried in old software.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/11/20/nx-s1-6047750/just-how-vulnerable-are-we-to-cyberattacks",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4404,7 +4384,7 @@
       "summary": "The giant steel plant in Middletown, Ohio planned to switch away from using coke, a refined form of coal. The switch would have cut hazardous air pollution -- and greenhouse gas emissions. But that plan has changed under President Trump",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/nx-s1-5860971/trumps-impact-on-ohio-steel-plant",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4413,16 +4393,7 @@
       "summary": "AI stocks have hefty market values and have a much bigger impact on the market's direction. They were responsible for Wall Street's big gains this year and are now behind the big slide for the market.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/g-s1-154797/nasdaq-sp500-stock-market-ai-sink-negative",
-      "published_utc": "2026-11-21T11:45:34+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Anthropic says it will put humanity first. Will its IPO change that?",
-      "summary": "Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested.",
-      "source": "NPR Business",
-      "url": "https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4431,25 +4402,16 @@
       "summary": "AI stocks \u2014 and the broader markets \u2014 got pummeled this week, raising major concerns about the financial system and the wider economy. Here's what to know.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/21/nx-s1-6048729/ai-stock-markets-anthropic-nvidia",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "In a year of AI solving maths problems, Anthropic may have just solved the biggest",
-      "summary": "A mathematician at Anthropic says he used an AI to prove the famed Riemann hypothesis, though verification will take some time.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/c6pqr2g7w059o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Deal with EU not dependent on tuition fees agreement, Miliband says",
-      "summary": "Brussels sources had previously suggested the bloc might not apply the wider deal until fees were lowered for EU students in Britain.",
-      "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cm9w9p4geke8o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "headline": "Anthropic says it will put humanity first. Will its IPO change that?",
+      "summary": "Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested.",
+      "source": "NPR Business",
+      "url": "https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4458,7 +4420,16 @@
       "summary": "The 30-year-old LA resident was convicted of arson leading to wildfires that killed 12 people and destroyed more than 6,800 buildings.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c64gn0gy8rj3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:49+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
+      "summary": "The Russian embassy in Denmark has denied the allegation, which has led to Russia's defence attach\u00e9 being expelled.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cmde1lj4yjxno?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4467,7 +4438,16 @@
       "summary": "The court has upheld the 2020 beating of the black music producer as an aggravated circumstance of racism.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/ck9d7e9wvvweo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:49+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Mexican drug lord on FBI's 10 most wanted list arrested in shoot-out",
+      "summary": "Fausto Isidro \"Chapo Idisro\" Meza Flores, who is accused of drug trafficking and torture, is detained after gun fight with authorities.",
+      "source": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/ckz749ey0r75o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4476,7 +4456,7 @@
       "summary": "The National Crime Information Center database is used by federal and local law enforcement to share information.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cvze7de86pk3o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4485,16 +4465,16 @@
       "summary": "Countries from nearly 200 countries are in a deadlock to try and get a new global climate agreement.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "Zelensky says Putin is a 'killer' after Trump calls Russian leader a friend",
-      "summary": "Earlier this week, Trump greeted Putin ahead of a meeting in China and said the pair have a \"great relationship\".",
+      "headline": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
+      "summary": "Ukraine's president says Kyiv acted after 109 separate Russian aerial attacks on bridges in Ukraine.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cxnv4zvmdy0jo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c6wy0qj7w5zqo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-21T18:17:49+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4503,7 +4483,7 @@
       "summary": "Eating at your desk? The dos and don'ts of lunch at work",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cwp8g4092zglo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:48+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4512,7 +4492,7 @@
       "summary": "People stocking up on long-life food drove retail sales higher October, according to official data.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/ck053mzy2qqeo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:48+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4521,7 +4501,7 @@
       "summary": "Would AI be a good judge of whether you should get a mortgage, car loan or mobile phone contract?",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:48+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4530,7 +4510,7 @@
       "summary": "The mammoth figure surpasses every video game launch and single-day film box office record.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:48+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4539,7 +4519,7 @@
       "summary": "The US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time.",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-21T11:45:34+00:00",
+      "published_utc": "2026-11-21T18:17:48+00:00",
       "sentiment_score": -0.2,
       "is_policy": false
     }
