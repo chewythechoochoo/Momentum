@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-22T19:30:05+00:00",
+  "generated_at_utc": "2026-11-23T00:27:35+00:00",
   "mode": "PAPER",
   "endpoint": "alpaca-paper",
-  "cycle_count": 1230,
-  "last_success_utc": "2026-11-22T11:57:47+00:00",
+  "cycle_count": 1231,
+  "last_success_utc": "2026-11-22T19:30:05+00:00",
   "market_open": false,
   "config": {
     "weights": {
@@ -597,6 +597,22 @@
       }
     },
     {
+      "key": "ev_clean_transport",
+      "name": "EV & Clean Transport",
+      "score": 36.15,
+      "raw_score": 44.4,
+      "band": "hold_small",
+      "weight": 0.0269,
+      "confidence": 1.0,
+      "components": {
+        "momentum": 9.8,
+        "sentiment": 88.89,
+        "volume": 44.08,
+        "policy": 50.0,
+        "volatility_penalty": 8.25
+      }
+    },
+    {
       "key": "oil_gas",
       "name": "Oil & Gas",
       "score": 34.6,
@@ -629,22 +645,6 @@
       }
     },
     {
-      "key": "ev_clean_transport",
-      "name": "EV & Clean Transport",
-      "score": 33.48,
-      "raw_score": 41.73,
-      "band": "exit_or_avoid",
-      "weight": 0.0,
-      "confidence": 1.0,
-      "components": {
-        "momentum": 9.8,
-        "sentiment": 80.0,
-        "volume": 44.08,
-        "policy": 50.0,
-        "volatility_penalty": 8.25
-      }
-    },
-    {
       "key": "defense",
       "name": "Defense & Aerospace",
       "score": 33.47,
@@ -663,14 +663,14 @@
     {
       "key": "semiconductors_ex_ai",
       "name": "Semiconductors (Broad)",
-      "score": 28.62,
-      "raw_score": 42.77,
+      "score": 28.08,
+      "raw_score": 42.24,
       "band": "exit_or_avoid",
       "weight": 0.0,
       "confidence": 1.0,
       "components": {
         "momentum": 0.0,
-        "sentiment": 87.5,
+        "sentiment": 85.72,
         "volume": 55.11,
         "policy": 55.0,
         "volatility_penalty": 14.15
@@ -716,7 +716,7 @@
       "target_weight": 0.0014,
       "current_weight": 0.0028,
       "notional_delta": -134.55,
-      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-18.04%",
         "theme=Semiconductors (Broad)",
@@ -744,7 +744,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -126.75,
-      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-16.50%",
         "theme=Semiconductors (Broad)",
@@ -852,13 +852,14 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0107,
+      "target_weight": 0.0102,
       "current_weight": 0.0214,
-      "notional_delta": -1027.88,
-      "reason": "trimming on positive news flow \u2014 \"Top bank resets Tesla stock target, yet standalone value is alarming\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1074.79,
+      "reason": "trimming on positive news flow \u2014 \"Ford Motor vs. General Motors: Which Automotive Stock Is a Better Buy for 2027?\" \u00b7 overweight by 1.12% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-3.18%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 36.1 (hold_small), contribution 42.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -908,13 +909,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0083,
+      "target_weight": 0.0087,
       "current_weight": 0.0166,
-      "notional_delta": -798.54,
-      "reason": "trimming on positive news flow \u2014 \"Top bank resets Tesla stock target, yet standalone value is alarming\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -760.36,
+      "reason": "trimming on positive news flow \u2014 \"Should You Buy Tesla or SpaceX Stock Before Their Potential Merger?\" \u00b7 overweight by 0.79% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-3.57%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 36.1 (hold_small), contribution 35.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -975,11 +977,11 @@
     },
     {
       "symbol": "LCID",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.0,
-      "reason": "trimming on positive news flow \u2014 \"Top bank resets Tesla stock target, yet standalone value is alarming\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.01,
+      "reason": "exiting on positive news flow \u2014 \"Should You Buy Tesla or SpaceX Stock Before Their Potential Merger?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-68.47%",
         "theme=EV & Clean Transport",
@@ -1023,7 +1025,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.12,
-      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-43.34%",
         "theme=Semiconductors (Broad)",
@@ -1110,7 +1112,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.04,
-      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-38.75%",
         "theme=Semiconductors (Broad)",
@@ -1255,13 +1257,14 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0078,
+      "target_weight": 0.008,
       "current_weight": 0.0156,
-      "notional_delta": -750.07,
-      "reason": "trimming on positive news flow \u2014 \"Top bank resets Tesla stock target, yet standalone value is alarming\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -730.75,
+      "reason": "trimming on positive news flow \u2014 \"Should You Buy Tesla or SpaceX Stock Before Their Potential Merger?\" \u00b7 overweight by 0.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-6.23%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 36.1 (hold_small), contribution 32.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1355,11 +1358,11 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.02,
-      "reason": "trimming on positive news flow \u2014 \"Top bank resets Tesla stock target, yet standalone value is alarming\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.04,
+      "reason": "exiting on positive news flow \u2014 \"Should You Buy Tesla or SpaceX Stock Before Their Potential Merger?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.83%",
         "theme=EV & Clean Transport",
@@ -1374,7 +1377,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-21.94%",
         "theme=Semiconductors (Broad)",
@@ -1450,7 +1453,7 @@
       "target_weight": 0.0014,
       "current_weight": 0.0028,
       "notional_delta": -134.55,
-      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-18.04%",
         "theme=Semiconductors (Broad)",
@@ -1484,7 +1487,7 @@
       "target_weight": 0.0013,
       "current_weight": 0.0026,
       "notional_delta": -126.75,
-      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-16.50%",
         "theme=Semiconductors (Broad)",
@@ -1616,13 +1619,14 @@
     {
       "symbol": "F",
       "action": "REDUCE",
-      "target_weight": 0.0107,
+      "target_weight": 0.0102,
       "current_weight": 0.0214,
-      "notional_delta": -1027.88,
-      "reason": "trimming on positive news flow \u2014 \"Top bank resets Tesla stock target, yet standalone value is alarming\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -1074.79,
+      "reason": "trimming on positive news flow \u2014 \"Ford Motor vs. General Motors: Which Automotive Stock Is a Better Buy for 2027?\" \u00b7 overweight by 1.12% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-3.18%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 36.1 (hold_small), contribution 42.0",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1684,13 +1688,14 @@
     {
       "symbol": "GM",
       "action": "REDUCE",
-      "target_weight": 0.0083,
+      "target_weight": 0.0087,
       "current_weight": 0.0166,
-      "notional_delta": -798.54,
-      "reason": "trimming on positive news flow \u2014 \"Top bank resets Tesla stock target, yet standalone value is alarming\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -760.36,
+      "reason": "trimming on positive news flow \u2014 \"Should You Buy Tesla or SpaceX Stock Before Their Potential Merger?\" \u00b7 overweight by 0.79% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-3.57%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 36.1 (hold_small), contribution 35.5",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -1766,11 +1771,11 @@
     },
     {
       "symbol": "LCID",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.0,
-      "reason": "trimming on positive news flow \u2014 \"Top bank resets Tesla stock target, yet standalone value is alarming\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.01,
+      "reason": "exiting on positive news flow \u2014 \"Should You Buy Tesla or SpaceX Stock Before Their Potential Merger?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-68.47%",
         "theme=EV & Clean Transport",
@@ -1823,7 +1828,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.12,
-      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-43.34%",
         "theme=Semiconductors (Broad)",
@@ -1928,7 +1933,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.04,
-      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-38.75%",
         "theme=Semiconductors (Broad)",
@@ -2103,13 +2108,14 @@
     {
       "symbol": "RIVN",
       "action": "REDUCE",
-      "target_weight": 0.0078,
+      "target_weight": 0.008,
       "current_weight": 0.0156,
-      "notional_delta": -750.07,
-      "reason": "trimming on positive news flow \u2014 \"Top bank resets Tesla stock target, yet standalone value is alarming\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -730.75,
+      "reason": "trimming on positive news flow \u2014 \"Should You Buy Tesla or SpaceX Stock Before Their Potential Merger?\" \u00b7 overweight by 0.76% vs target \u2014 trim",
       "factors": [
         "unrealized_pl=-6.23%",
         "theme=EV & Clean Transport",
+        "theme 'EV & Clean Transport' score 36.1 (hold_small), contribution 32.8",
         "news_source=yahoo_rss",
         "news_sentiment=+0.20"
       ],
@@ -2224,11 +2230,11 @@
     },
     {
       "symbol": "TSLA",
-      "action": "REDUCE",
+      "action": "SELL",
       "target_weight": 0.0,
       "current_weight": 0.0,
-      "notional_delta": -0.02,
-      "reason": "trimming on positive news flow \u2014 \"Top bank resets Tesla stock target, yet standalone value is alarming\" \u00b7 theme score 33.5 < reduce threshold 35 \u2014 halve position",
+      "notional_delta": -0.04,
+      "reason": "exiting on positive news flow \u2014 \"Should You Buy Tesla or SpaceX Stock Before Their Potential Merger?\" \u00b7 no longer in target set \u2014 exit",
       "factors": [
         "unrealized_pl=-11.83%",
         "theme=EV & Clean Transport",
@@ -2246,7 +2252,7 @@
       "target_weight": 0.0,
       "current_weight": 0.0,
       "notional_delta": -0.03,
-      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.6 < reduce threshold 35 \u2014 halve position",
+      "reason": "trimming on positive news flow \u2014 \"Micron Technology vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?\" \u00b7 theme score 28.1 < reduce threshold 35 \u2014 halve position",
       "factors": [
         "unrealized_pl=-21.94%",
         "theme=Semiconductors (Broad)",
@@ -2331,10 +2337,6 @@
     }
   ],
   "equity_history": [
-    {
-      "t": "2026-07-29T22:43:47+00:00",
-      "v": 98603.06
-    },
     {
       "t": "2026-07-29T23:48:17+00:00",
       "v": 98764.63
@@ -4330,6 +4332,10 @@
     {
       "t": "2026-11-22T19:29:57+00:00",
       "v": 96173.82
+    },
+    {
+      "t": "2026-11-23T00:27:31+00:00",
+      "v": 96173.82
     }
   ],
   "breaking_news": [
@@ -4338,7 +4344,7 @@
       "summary": "President Trump has made billions of dollars in his second term \u2014 most of it in cryptocurrencies. Democrats are vowing to probe his businesses as they gear up to take over Congress next year.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/nx-s1-6038969/trump-crypto-profits-corruption-meme-coin-world-liberty-explainer",
-      "published_utc": "2026-11-22T19:30:05+00:00",
+      "published_utc": "2026-11-23T00:27:35+00:00",
       "sentiment_score": -0.2,
       "is_policy": true
     },
@@ -4347,7 +4353,7 @@
       "summary": "Anthropic's initial public offering was a success for shareholders, including its founders. But there were also protests about whether the company can be a responsible steward of AI technology.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/nx-s1-6047539/critics-are-worried-about-anthropics-influence-after-first-day-of-public-trading",
-      "published_utc": "2026-11-22T19:30:05+00:00",
+      "published_utc": "2026-11-23T00:27:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4356,7 +4362,7 @@
       "summary": "In a week of outages, we're thinking about the rising threat of AI-powered cyberattacks. But sometimes, it's not the most sophisticated attack that's concerning, but the easy targets buried in old software.",
       "source": "NPR Business",
       "url": "https://www.npr.org/sections/planet-money/2026/11/20/nx-s1-6047750/just-how-vulnerable-are-we-to-cyberattacks",
-      "published_utc": "2026-11-22T19:30:05+00:00",
+      "published_utc": "2026-11-23T00:27:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4365,7 +4371,7 @@
       "summary": "The giant steel plant in Middletown, Ohio planned to switch away from using coke, a refined form of coal. The switch would have cut hazardous air pollution -- and greenhouse gas emissions. But that plan has changed under President Trump",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/nx-s1-5860971/trumps-impact-on-ohio-steel-plant",
-      "published_utc": "2026-11-22T19:30:05+00:00",
+      "published_utc": "2026-11-23T00:27:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4374,7 +4380,7 @@
       "summary": "AI stocks have hefty market values and have a much bigger impact on the market's direction. They were responsible for Wall Street's big gains this year and are now behind the big slide for the market.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/20/g-s1-154797/nasdaq-sp500-stock-market-ai-sink-negative",
-      "published_utc": "2026-11-22T19:30:05+00:00",
+      "published_utc": "2026-11-23T00:27:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4383,7 +4389,7 @@
       "summary": "AI stocks \u2014 and the broader markets \u2014 got pummeled this week, raising major concerns about the financial system and the wider economy. Here's what to know.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/21/nx-s1-6048729/ai-stock-markets-anthropic-nvidia",
-      "published_utc": "2026-11-22T19:30:05+00:00",
+      "published_utc": "2026-11-23T00:27:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4392,7 +4398,7 @@
       "summary": "Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety",
-      "published_utc": "2026-11-22T19:30:05+00:00",
+      "published_utc": "2026-11-23T00:27:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4401,17 +4407,17 @@
       "summary": "America's fastest-growing source of funding for small businesses is also one of the least regulated. One man has waged a long, lonely fight to recoup its punishing cost.",
       "source": "NPR Business",
       "url": "https://www.npr.org/2026/11/22/nx-s1-5752261/small-business-loan-merchant-cash-advance",
-      "published_utc": "2026-11-22T19:30:05+00:00",
+      "published_utc": "2026-11-23T00:27:35+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
-      "headline": "US Army to detonate tonnes of unstable explosives in Iowa despite court order",
-      "summary": "The Army says \"swift action\" is necessary to protect its personnel and nearby communities around its ammunition plant in Iowa.",
+      "headline": "Democrats win largest House majority since 1992 after flipping North Carolina seat",
+      "summary": "Democrats have now won at least 258 seats in the midterms compared to Republicans, who hold at least 173 seats.",
       "source": "BBC World",
-      "url": "https://www.bbc.co.uk/news/articles/cvglrx764gdxo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
-      "sentiment_score": 0.0,
+      "url": "https://www.bbc.co.uk/news/articles/c6vg29g7dlyno?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-23T00:27:34+00:00",
+      "sentiment_score": 0.2,
       "is_policy": false
     },
     {
@@ -4419,7 +4425,7 @@
       "summary": "At least three people were killed and many more feared dead after a fire at a confectionary factory.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cw8dvg5pgm0eo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
+      "published_utc": "2026-11-23T00:27:34+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4428,7 +4434,7 @@
       "summary": "Choi Kyo-jin admits last-minute measures to stop AI-assisted cheating during the college entrance exam caused chaos.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cw3dgk29d37no?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
+      "published_utc": "2026-11-23T00:27:34+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4437,7 +4443,7 @@
       "summary": "Finnish defence forces say that Ukraine was likely behind the drone strike on Saturday. Kyiv has yet to comment.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
+      "published_utc": "2026-11-23T00:27:34+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4446,7 +4452,7 @@
       "summary": "The BBC's Sarah Rainsford reports from the scene of a collapsed residential building in Ukraine's Kyiv region.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/videos/cre3dvd1k9y1o?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
+      "published_utc": "2026-11-23T00:27:34+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
@@ -4455,52 +4461,34 @@
       "summary": "Libya's eastern government says the ship had stopped for fuel and supplies on its way back to Russia.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
+      "published_utc": "2026-11-23T00:27:34+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "What's next after no deal at COP31 climate talks?",
-      "summary": "The COP31 climate summit in Turkey has formally come to an end after countries failed to agree a deal.",
+      "summary": "The talks have been the longest-running in the summit's history, with negotiations breaking down two days after they had been due to end.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/videos/cr1ewge81q4qo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
+      "published_utc": "2026-11-23T00:27:34+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     },
     {
       "headline": "COP31 fails to reach major climate deal as talks expose deep divisions",
-      "summary": "The talks fail to make breakthrough on tackling climate change after a row about mentioning fossil fuels.",
+      "summary": "The talks fail to make a breakthrough on tackling climate change after a row about mentioning fossil fuels.",
       "source": "BBC World",
       "url": "https://www.bbc.co.uk/news/articles/cqwy06zrd26lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
+      "published_utc": "2026-11-23T00:27:34+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
     {
-      "headline": "MP criticises Guernsey and Jersey company ownership register plans",
-      "summary": "Sir Andrew Mitchell says access should be easier for people tackling financial crime.",
+      "headline": "Faisal Islam: This cost-cutting UK-EU deal doesn't mean lower prices will follow",
+      "summary": "The trade deal is unlikely lower food prices for shoppers, but should boost the economy more than other post-Brexit agreements.",
       "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/cqkgmy2nxy4lo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Tech stock sell-off drags markets down as Anthropic shares slide",
-      "summary": "Pressures weighed on US markets, with the S&amp;P 500 and the Dow Jones Industrial Average pushed into correction territory.",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
-      "sentiment_score": 0.0,
-      "is_policy": false
-    },
-    {
-      "headline": "Should AI be judging our credit worthiness?",
-      "summary": "Would AI be a good judge of whether you should get a mortgage, car loan or mobile phone contract?",
-      "source": "BBC Business",
-      "url": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cm1wr029evnqo?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-23T00:27:34+00:00",
       "sentiment_score": 0.2,
       "is_policy": false
     },
@@ -4509,7 +4497,25 @@
       "summary": "In a statement to Italian media, his family remember him as \"the greatest jeweller of our time\".",
       "source": "BBC Business",
       "url": "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo?at_medium=RSS&at_campaign=rss",
-      "published_utc": "2026-11-22T19:30:02+00:00",
+      "published_utc": "2026-11-23T00:27:34+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
+      "summary": "AI employees in the industry's epicentre - San Francisco - worry that the sector is overheated.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-23T00:27:34+00:00",
+      "sentiment_score": 0.0,
+      "is_policy": false
+    },
+    {
+      "headline": "Can AI really help spot Black Friday deals? We put it to the test",
+      "summary": "We put four AI models to the test to see if they could save us money on a new TV.",
+      "source": "BBC Business",
+      "url": "https://www.bbc.co.uk/news/articles/cw8dv4jmnle2o?at_medium=RSS&at_campaign=rss",
+      "published_utc": "2026-11-23T00:27:34+00:00",
       "sentiment_score": 0.0,
       "is_policy": false
     }
